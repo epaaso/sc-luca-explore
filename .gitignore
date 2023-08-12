@@ -1,0 +1,3 @@
+*.sqlite
+.ipynb_checkpoints/**
+surgeries/**
