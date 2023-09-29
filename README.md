@@ -26,4 +26,5 @@ apt install libgraphviz-dev
 apt install graphviz
 pip install graphviz
 pip install networkx
+pip install pygraphviz
 ```
