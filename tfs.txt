@@ -1,0 +1,10 @@
+Airway epithelium
+Alveolar epithelium
+Blood vessels
+Fibroblast lineage
+Lymphatic EC
+Lymphoid
+Mesothelium
+Myeloid
+Smooth muscle
+Unknown

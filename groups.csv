@@ -1,0 +1,2701 @@
+Level_2_transfered_label,sample,0
+Airway epithelium,P4_normal_adjacent_UKIM-V-2,56
+Airway epithelium,P4_tumor_primary_UKIM-V-2,20
+Airway epithelium,P5_normal_adjacent_UKIM-V-2,57
+Airway epithelium,P5_tumor_primary_UKIM-V-2,35
+Airway epithelium,P6_normal_adjacent_UKIM-V-2,27
+Airway epithelium,P6_tumor_primary_UKIM-V-2,210
+Airway epithelium,P7_normal_adjacent_UKIM-V-2,115
+Airway epithelium,P7_tumor_primary_UKIM-V-2,99
+Airway epithelium,P8_normal_adjacent_UKIM-V-2,76
+Airway epithelium,P8_tumor_primary_UKIM-V-2,59
+Airway epithelium,P9_normal_adjacent_UKIM-V-2,9
+Airway epithelium,P9_tumor_primary_UKIM-V-2,13
+Airway epithelium,P10_normal_adjacent_UKIM-V-2,315
+Airway epithelium,P10_tumor_primary_UKIM-V-2,95
+Airway epithelium,P11_normal_adjacent_UKIM-V-2,49
+Airway epithelium,P11_tumor_primary_UKIM-V-2,540
+Airway epithelium,P12_normal_adjacent_UKIM-V-2,86
+Airway epithelium,P12_tumor_primary_UKIM-V-2,450
+Airway epithelium,P13_normal_adjacent_UKIM-V-2,62
+Airway epithelium,P13_tumor_primary_UKIM-V-2,46
+Airway epithelium,P14_normal_adjacent_UKIM-V-2,104
+Airway epithelium,P14_tumor_primary_UKIM-V-2,320
+Airway epithelium,P15_normal_adjacent_UKIM-V-2,71
+Airway epithelium,P15_tumor_primary_UKIM-V-2,32
+Airway epithelium,P16_normal_adjacent_UKIM-V-2,105
+Airway epithelium,P16_tumor_primary_UKIM-V-2,456
+Airway epithelium,P17_normal_adjacent_UKIM-V-2,16
+Airway epithelium,P17_tumor_primary_UKIM-V-2,55
+Alveolar epithelium,P4_normal_adjacent_UKIM-V-2,25
+Alveolar epithelium,P4_tumor_primary_UKIM-V-2,97
+Alveolar epithelium,P5_normal_adjacent_UKIM-V-2,31
+Alveolar epithelium,P5_tumor_primary_UKIM-V-2,12
+Alveolar epithelium,P6_normal_adjacent_UKIM-V-2,7
+Alveolar epithelium,P6_tumor_primary_UKIM-V-2,7
+Alveolar epithelium,P7_normal_adjacent_UKIM-V-2,20
+Alveolar epithelium,P7_tumor_primary_UKIM-V-2,108
+Alveolar epithelium,P8_normal_adjacent_UKIM-V-2,69
+Alveolar epithelium,P8_tumor_primary_UKIM-V-2,3
+Alveolar epithelium,P9_normal_adjacent_UKIM-V-2,236
+Alveolar epithelium,P9_tumor_primary_UKIM-V-2,772
+Alveolar epithelium,P10_normal_adjacent_UKIM-V-2,58
+Alveolar epithelium,P10_tumor_primary_UKIM-V-2,442
+Alveolar epithelium,P11_normal_adjacent_UKIM-V-2,39
+Alveolar epithelium,P11_tumor_primary_UKIM-V-2,25
+Alveolar epithelium,P12_normal_adjacent_UKIM-V-2,3
+Alveolar epithelium,P12_tumor_primary_UKIM-V-2,0
+Alveolar epithelium,P13_normal_adjacent_UKIM-V-2,16
+Alveolar epithelium,P13_tumor_primary_UKIM-V-2,75
+Alveolar epithelium,P14_normal_adjacent_UKIM-V-2,42
+Alveolar epithelium,P14_tumor_primary_UKIM-V-2,175
+Alveolar epithelium,P15_normal_adjacent_UKIM-V-2,37
+Alveolar epithelium,P15_tumor_primary_UKIM-V-2,456
+Alveolar epithelium,P16_normal_adjacent_UKIM-V-2,22
+Alveolar epithelium,P16_tumor_primary_UKIM-V-2,104
+Alveolar epithelium,P17_normal_adjacent_UKIM-V-2,4
+Alveolar epithelium,P17_tumor_primary_UKIM-V-2,2
+Blood vessels,P4_normal_adjacent_UKIM-V-2,12
+Blood vessels,P4_tumor_primary_UKIM-V-2,4
+Blood vessels,P5_normal_adjacent_UKIM-V-2,23
+Blood vessels,P5_tumor_primary_UKIM-V-2,4
+Blood vessels,P6_normal_adjacent_UKIM-V-2,12
+Blood vessels,P6_tumor_primary_UKIM-V-2,17
+Blood vessels,P7_normal_adjacent_UKIM-V-2,21
+Blood vessels,P7_tumor_primary_UKIM-V-2,4
+Blood vessels,P8_normal_adjacent_UKIM-V-2,24
+Blood vessels,P8_tumor_primary_UKIM-V-2,2
+Blood vessels,P9_normal_adjacent_UKIM-V-2,12
+Blood vessels,P9_tumor_primary_UKIM-V-2,19
+Blood vessels,P10_normal_adjacent_UKIM-V-2,61
+Blood vessels,P10_tumor_primary_UKIM-V-2,31
+Blood vessels,P11_normal_adjacent_UKIM-V-2,19
+Blood vessels,P11_tumor_primary_UKIM-V-2,1
+Blood vessels,P12_normal_adjacent_UKIM-V-2,24
+Blood vessels,P12_tumor_primary_UKIM-V-2,4
+Blood vessels,P13_normal_adjacent_UKIM-V-2,20
+Blood vessels,P13_tumor_primary_UKIM-V-2,15
+Blood vessels,P14_normal_adjacent_UKIM-V-2,35
+Blood vessels,P14_tumor_primary_UKIM-V-2,31
+Blood vessels,P15_normal_adjacent_UKIM-V-2,46
+Blood vessels,P15_tumor_primary_UKIM-V-2,13
+Blood vessels,P16_normal_adjacent_UKIM-V-2,58
+Blood vessels,P16_tumor_primary_UKIM-V-2,4
+Blood vessels,P17_normal_adjacent_UKIM-V-2,13
+Blood vessels,P17_tumor_primary_UKIM-V-2,5
+Fibroblast lineage,P4_normal_adjacent_UKIM-V-2,1
+Fibroblast lineage,P4_tumor_primary_UKIM-V-2,6
+Fibroblast lineage,P5_normal_adjacent_UKIM-V-2,3
+Fibroblast lineage,P5_tumor_primary_UKIM-V-2,2
+Fibroblast lineage,P6_normal_adjacent_UKIM-V-2,2
+Fibroblast lineage,P6_tumor_primary_UKIM-V-2,19
+Fibroblast lineage,P7_normal_adjacent_UKIM-V-2,5
+Fibroblast lineage,P7_tumor_primary_UKIM-V-2,2
+Fibroblast lineage,P8_normal_adjacent_UKIM-V-2,2
+Fibroblast lineage,P8_tumor_primary_UKIM-V-2,0
+Fibroblast lineage,P9_normal_adjacent_UKIM-V-2,10
+Fibroblast lineage,P9_tumor_primary_UKIM-V-2,26
+Fibroblast lineage,P10_normal_adjacent_UKIM-V-2,6
+Fibroblast lineage,P10_tumor_primary_UKIM-V-2,10
+Fibroblast lineage,P11_normal_adjacent_UKIM-V-2,1
+Fibroblast lineage,P11_tumor_primary_UKIM-V-2,5
+Fibroblast lineage,P12_normal_adjacent_UKIM-V-2,11
+Fibroblast lineage,P12_tumor_primary_UKIM-V-2,19
+Fibroblast lineage,P13_normal_adjacent_UKIM-V-2,7
+Fibroblast lineage,P13_tumor_primary_UKIM-V-2,6
+Fibroblast lineage,P14_normal_adjacent_UKIM-V-2,4
+Fibroblast lineage,P14_tumor_primary_UKIM-V-2,9
+Fibroblast lineage,P15_normal_adjacent_UKIM-V-2,6
+Fibroblast lineage,P15_tumor_primary_UKIM-V-2,42
+Fibroblast lineage,P16_normal_adjacent_UKIM-V-2,11
+Fibroblast lineage,P16_tumor_primary_UKIM-V-2,2
+Fibroblast lineage,P17_normal_adjacent_UKIM-V-2,4
+Fibroblast lineage,P17_tumor_primary_UKIM-V-2,37
+Lymphatic EC,P4_normal_adjacent_UKIM-V-2,0
+Lymphatic EC,P4_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P5_normal_adjacent_UKIM-V-2,1
+Lymphatic EC,P5_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P6_normal_adjacent_UKIM-V-2,5
+Lymphatic EC,P6_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P7_normal_adjacent_UKIM-V-2,7
+Lymphatic EC,P7_tumor_primary_UKIM-V-2,1
+Lymphatic EC,P8_normal_adjacent_UKIM-V-2,1
+Lymphatic EC,P8_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P9_normal_adjacent_UKIM-V-2,6
+Lymphatic EC,P9_tumor_primary_UKIM-V-2,1
+Lymphatic EC,P10_normal_adjacent_UKIM-V-2,4
+Lymphatic EC,P10_tumor_primary_UKIM-V-2,1
+Lymphatic EC,P11_normal_adjacent_UKIM-V-2,1
+Lymphatic EC,P11_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P12_normal_adjacent_UKIM-V-2,8
+Lymphatic EC,P12_tumor_primary_UKIM-V-2,3
+Lymphatic EC,P13_normal_adjacent_UKIM-V-2,6
+Lymphatic EC,P13_tumor_primary_UKIM-V-2,0
+Lymphatic EC,P14_normal_adjacent_UKIM-V-2,8
+Lymphatic EC,P14_tumor_primary_UKIM-V-2,5
+Lymphatic EC,P15_normal_adjacent_UKIM-V-2,10
+Lymphatic EC,P15_tumor_primary_UKIM-V-2,1
+Lymphatic EC,P16_normal_adjacent_UKIM-V-2,7
+Lymphatic EC,P16_tumor_primary_UKIM-V-2,2
+Lymphatic EC,P17_normal_adjacent_UKIM-V-2,5
+Lymphatic EC,P17_tumor_primary_UKIM-V-2,0
+Lymphoid,P4_normal_adjacent_UKIM-V-2,606
+Lymphoid,P4_tumor_primary_UKIM-V-2,1233
+Lymphoid,P5_normal_adjacent_UKIM-V-2,1977
+Lymphoid,P5_tumor_primary_UKIM-V-2,1704
+Lymphoid,P6_normal_adjacent_UKIM-V-2,1703
+Lymphoid,P6_tumor_primary_UKIM-V-2,1294
+Lymphoid,P7_normal_adjacent_UKIM-V-2,2336
+Lymphoid,P7_tumor_primary_UKIM-V-2,1512
+Lymphoid,P8_normal_adjacent_UKIM-V-2,824
+Lymphoid,P8_tumor_primary_UKIM-V-2,290
+Lymphoid,P9_normal_adjacent_UKIM-V-2,1384
+Lymphoid,P9_tumor_primary_UKIM-V-2,3991
+Lymphoid,P10_normal_adjacent_UKIM-V-2,3928
+Lymphoid,P10_tumor_primary_UKIM-V-2,3925
+Lymphoid,P11_normal_adjacent_UKIM-V-2,3060
+Lymphoid,P11_tumor_primary_UKIM-V-2,3221
+Lymphoid,P12_normal_adjacent_UKIM-V-2,1262
+Lymphoid,P12_tumor_primary_UKIM-V-2,6286
+Lymphoid,P13_normal_adjacent_UKIM-V-2,914
+Lymphoid,P13_tumor_primary_UKIM-V-2,4263
+Lymphoid,P14_normal_adjacent_UKIM-V-2,2749
+Lymphoid,P14_tumor_primary_UKIM-V-2,3533
+Lymphoid,P15_normal_adjacent_UKIM-V-2,1420
+Lymphoid,P15_tumor_primary_UKIM-V-2,2173
+Lymphoid,P16_normal_adjacent_UKIM-V-2,2491
+Lymphoid,P16_tumor_primary_UKIM-V-2,1608
+Lymphoid,P17_normal_adjacent_UKIM-V-2,298
+Lymphoid,P17_tumor_primary_UKIM-V-2,1217
+Mesothelium,P4_normal_adjacent_UKIM-V-2,0
+Mesothelium,P4_tumor_primary_UKIM-V-2,0
+Mesothelium,P5_normal_adjacent_UKIM-V-2,0
+Mesothelium,P5_tumor_primary_UKIM-V-2,0
+Mesothelium,P6_normal_adjacent_UKIM-V-2,25
+Mesothelium,P6_tumor_primary_UKIM-V-2,5
+Mesothelium,P7_normal_adjacent_UKIM-V-2,0
+Mesothelium,P7_tumor_primary_UKIM-V-2,2
+Mesothelium,P8_normal_adjacent_UKIM-V-2,0
+Mesothelium,P8_tumor_primary_UKIM-V-2,0
+Mesothelium,P9_normal_adjacent_UKIM-V-2,0
+Mesothelium,P9_tumor_primary_UKIM-V-2,0
+Mesothelium,P10_normal_adjacent_UKIM-V-2,9
+Mesothelium,P10_tumor_primary_UKIM-V-2,10
+Mesothelium,P11_normal_adjacent_UKIM-V-2,0
+Mesothelium,P11_tumor_primary_UKIM-V-2,0
+Mesothelium,P12_normal_adjacent_UKIM-V-2,4
+Mesothelium,P12_tumor_primary_UKIM-V-2,0
+Mesothelium,P13_normal_adjacent_UKIM-V-2,0
+Mesothelium,P13_tumor_primary_UKIM-V-2,0
+Mesothelium,P14_normal_adjacent_UKIM-V-2,0
+Mesothelium,P14_tumor_primary_UKIM-V-2,1
+Mesothelium,P15_normal_adjacent_UKIM-V-2,0
+Mesothelium,P15_tumor_primary_UKIM-V-2,0
+Mesothelium,P16_normal_adjacent_UKIM-V-2,17
+Mesothelium,P16_tumor_primary_UKIM-V-2,0
+Mesothelium,P17_normal_adjacent_UKIM-V-2,4
+Mesothelium,P17_tumor_primary_UKIM-V-2,1
+Myeloid,P4_normal_adjacent_UKIM-V-2,1856
+Myeloid,P4_tumor_primary_UKIM-V-2,613
+Myeloid,P5_normal_adjacent_UKIM-V-2,1558
+Myeloid,P5_tumor_primary_UKIM-V-2,684
+Myeloid,P6_normal_adjacent_UKIM-V-2,3120
+Myeloid,P6_tumor_primary_UKIM-V-2,4687
+Myeloid,P7_normal_adjacent_UKIM-V-2,2038
+Myeloid,P7_tumor_primary_UKIM-V-2,946
+Myeloid,P8_normal_adjacent_UKIM-V-2,2153
+Myeloid,P8_tumor_primary_UKIM-V-2,606
+Myeloid,P9_normal_adjacent_UKIM-V-2,1763
+Myeloid,P9_tumor_primary_UKIM-V-2,1085
+Myeloid,P10_normal_adjacent_UKIM-V-2,6341
+Myeloid,P10_tumor_primary_UKIM-V-2,3380
+Myeloid,P11_normal_adjacent_UKIM-V-2,1637
+Myeloid,P11_tumor_primary_UKIM-V-2,1157
+Myeloid,P12_normal_adjacent_UKIM-V-2,1341
+Myeloid,P12_tumor_primary_UKIM-V-2,448
+Myeloid,P13_normal_adjacent_UKIM-V-2,1870
+Myeloid,P13_tumor_primary_UKIM-V-2,2549
+Myeloid,P14_normal_adjacent_UKIM-V-2,1686
+Myeloid,P14_tumor_primary_UKIM-V-2,1827
+Myeloid,P15_normal_adjacent_UKIM-V-2,2394
+Myeloid,P15_tumor_primary_UKIM-V-2,1009
+Myeloid,P16_normal_adjacent_UKIM-V-2,1794
+Myeloid,P16_tumor_primary_UKIM-V-2,1499
+Myeloid,P17_normal_adjacent_UKIM-V-2,1824
+Myeloid,P17_tumor_primary_UKIM-V-2,2424
+Smooth muscle,P4_normal_adjacent_UKIM-V-2,1
+Smooth muscle,P4_tumor_primary_UKIM-V-2,1
+Smooth muscle,P5_normal_adjacent_UKIM-V-2,0
+Smooth muscle,P5_tumor_primary_UKIM-V-2,0
+Smooth muscle,P6_normal_adjacent_UKIM-V-2,0
+Smooth muscle,P6_tumor_primary_UKIM-V-2,0
+Smooth muscle,P7_normal_adjacent_UKIM-V-2,1
+Smooth muscle,P7_tumor_primary_UKIM-V-2,0
+Smooth muscle,P8_normal_adjacent_UKIM-V-2,1
+Smooth muscle,P8_tumor_primary_UKIM-V-2,0
+Smooth muscle,P9_normal_adjacent_UKIM-V-2,1
+Smooth muscle,P9_tumor_primary_UKIM-V-2,1
+Smooth muscle,P10_normal_adjacent_UKIM-V-2,0
+Smooth muscle,P10_tumor_primary_UKIM-V-2,1
+Smooth muscle,P11_normal_adjacent_UKIM-V-2,0
+Smooth muscle,P11_tumor_primary_UKIM-V-2,1
+Smooth muscle,P12_normal_adjacent_UKIM-V-2,1
+Smooth muscle,P12_tumor_primary_UKIM-V-2,1
+Smooth muscle,P13_normal_adjacent_UKIM-V-2,2
+Smooth muscle,P13_tumor_primary_UKIM-V-2,4
+Smooth muscle,P14_normal_adjacent_UKIM-V-2,3
+Smooth muscle,P14_tumor_primary_UKIM-V-2,1
+Smooth muscle,P15_normal_adjacent_UKIM-V-2,2
+Smooth muscle,P15_tumor_primary_UKIM-V-2,1
+Smooth muscle,P16_normal_adjacent_UKIM-V-2,4
+Smooth muscle,P16_tumor_primary_UKIM-V-2,0
+Smooth muscle,P17_normal_adjacent_UKIM-V-2,0
+Smooth muscle,P17_tumor_primary_UKIM-V-2,0
+Unknown,P4_normal_adjacent_UKIM-V-2,22
+Unknown,P4_tumor_primary_UKIM-V-2,115
+Unknown,P5_normal_adjacent_UKIM-V-2,15
+Unknown,P5_tumor_primary_UKIM-V-2,40
+Unknown,P6_normal_adjacent_UKIM-V-2,46
+Unknown,P6_tumor_primary_UKIM-V-2,147
+Unknown,P7_normal_adjacent_UKIM-V-2,17
+Unknown,P7_tumor_primary_UKIM-V-2,202
+Unknown,P8_normal_adjacent_UKIM-V-2,16
+Unknown,P8_tumor_primary_UKIM-V-2,13
+Unknown,P9_normal_adjacent_UKIM-V-2,135
+Unknown,P9_tumor_primary_UKIM-V-2,320
+Unknown,P10_normal_adjacent_UKIM-V-2,144
+Unknown,P10_tumor_primary_UKIM-V-2,143
+Unknown,P11_normal_adjacent_UKIM-V-2,34
+Unknown,P11_tumor_primary_UKIM-V-2,663
+Unknown,P12_normal_adjacent_UKIM-V-2,68
+Unknown,P12_tumor_primary_UKIM-V-2,83
+Unknown,P13_normal_adjacent_UKIM-V-2,24
+Unknown,P13_tumor_primary_UKIM-V-2,133
+Unknown,P14_normal_adjacent_UKIM-V-2,36
+Unknown,P14_tumor_primary_UKIM-V-2,861
+Unknown,P15_normal_adjacent_UKIM-V-2,46
+Unknown,P15_tumor_primary_UKIM-V-2,197
+Unknown,P16_normal_adjacent_UKIM-V-2,42
+Unknown,P16_tumor_primary_UKIM-V-2,588
+Unknown,P17_normal_adjacent_UKIM-V-2,11
+Unknown,P17_tumor_primary_UKIM-V-2,53
+Airway epithelium,p1t1_Zilionis,295
+Airway epithelium,p1t2_Zilionis,321
+Airway epithelium,p1t3_Zilionis,164
+Airway epithelium,p1t4_Zilionis,196
+Airway epithelium,p2t1_Zilionis,33
+Airway epithelium,p2t2_Zilionis,24
+Airway epithelium,p3t1_Zilionis,111
+Airway epithelium,p3t2_Zilionis,129
+Airway epithelium,p3t3_Zilionis,145
+Airway epithelium,p4t1_Zilionis,2
+Airway epithelium,p4t2_Zilionis,1
+Airway epithelium,p4t3_Zilionis,3
+Airway epithelium,p5t1_Zilionis,19
+Airway epithelium,p5t2_Zilionis,29
+Airway epithelium,p6t1_Zilionis,44
+Airway epithelium,p6t2_Zilionis,33
+Airway epithelium,p7t1_Zilionis,177
+Airway epithelium,p7t2_Zilionis,148
+Alveolar epithelium,p1t1_Zilionis,22
+Alveolar epithelium,p1t2_Zilionis,22
+Alveolar epithelium,p1t3_Zilionis,7
+Alveolar epithelium,p1t4_Zilionis,12
+Alveolar epithelium,p2t1_Zilionis,0
+Alveolar epithelium,p2t2_Zilionis,1
+Alveolar epithelium,p3t1_Zilionis,70
+Alveolar epithelium,p3t2_Zilionis,52
+Alveolar epithelium,p3t3_Zilionis,65
+Alveolar epithelium,p4t1_Zilionis,42
+Alveolar epithelium,p4t2_Zilionis,52
+Alveolar epithelium,p4t3_Zilionis,53
+Alveolar epithelium,p5t1_Zilionis,229
+Alveolar epithelium,p5t2_Zilionis,205
+Alveolar epithelium,p6t1_Zilionis,26
+Alveolar epithelium,p6t2_Zilionis,22
+Alveolar epithelium,p7t1_Zilionis,38
+Alveolar epithelium,p7t2_Zilionis,30
+Blood vessels,p1t1_Zilionis,16
+Blood vessels,p1t2_Zilionis,14
+Blood vessels,p1t3_Zilionis,9
+Blood vessels,p1t4_Zilionis,3
+Blood vessels,p2t1_Zilionis,1
+Blood vessels,p2t2_Zilionis,1
+Blood vessels,p3t1_Zilionis,49
+Blood vessels,p3t2_Zilionis,37
+Blood vessels,p3t3_Zilionis,63
+Blood vessels,p4t1_Zilionis,3
+Blood vessels,p4t2_Zilionis,3
+Blood vessels,p4t3_Zilionis,1
+Blood vessels,p5t1_Zilionis,21
+Blood vessels,p5t2_Zilionis,38
+Blood vessels,p6t1_Zilionis,35
+Blood vessels,p6t2_Zilionis,23
+Blood vessels,p7t1_Zilionis,19
+Blood vessels,p7t2_Zilionis,25
+Fibroblast lineage,p1t1_Zilionis,77
+Fibroblast lineage,p1t2_Zilionis,82
+Fibroblast lineage,p1t3_Zilionis,32
+Fibroblast lineage,p1t4_Zilionis,37
+Fibroblast lineage,p2t1_Zilionis,7
+Fibroblast lineage,p2t2_Zilionis,5
+Fibroblast lineage,p3t1_Zilionis,58
+Fibroblast lineage,p3t2_Zilionis,56
+Fibroblast lineage,p3t3_Zilionis,53
+Fibroblast lineage,p4t1_Zilionis,1
+Fibroblast lineage,p4t2_Zilionis,2
+Fibroblast lineage,p4t3_Zilionis,1
+Fibroblast lineage,p5t1_Zilionis,50
+Fibroblast lineage,p5t2_Zilionis,58
+Fibroblast lineage,p6t1_Zilionis,21
+Fibroblast lineage,p6t2_Zilionis,28
+Fibroblast lineage,p7t1_Zilionis,25
+Fibroblast lineage,p7t2_Zilionis,26
+Lymphatic EC,p1t1_Zilionis,1
+Lymphatic EC,p1t2_Zilionis,0
+Lymphatic EC,p1t3_Zilionis,1
+Lymphatic EC,p1t4_Zilionis,5
+Lymphatic EC,p2t1_Zilionis,0
+Lymphatic EC,p2t2_Zilionis,0
+Lymphatic EC,p3t1_Zilionis,2
+Lymphatic EC,p3t2_Zilionis,1
+Lymphatic EC,p3t3_Zilionis,0
+Lymphatic EC,p4t1_Zilionis,0
+Lymphatic EC,p4t2_Zilionis,0
+Lymphatic EC,p4t3_Zilionis,1
+Lymphatic EC,p5t1_Zilionis,0
+Lymphatic EC,p5t2_Zilionis,0
+Lymphatic EC,p6t1_Zilionis,0
+Lymphatic EC,p6t2_Zilionis,0
+Lymphatic EC,p7t1_Zilionis,0
+Lymphatic EC,p7t2_Zilionis,0
+Lymphoid,p1t1_Zilionis,715
+Lymphoid,p1t2_Zilionis,814
+Lymphoid,p1t3_Zilionis,470
+Lymphoid,p1t4_Zilionis,510
+Lymphoid,p2t1_Zilionis,102
+Lymphoid,p2t2_Zilionis,82
+Lymphoid,p3t1_Zilionis,1866
+Lymphoid,p3t2_Zilionis,1985
+Lymphoid,p3t3_Zilionis,1733
+Lymphoid,p4t1_Zilionis,1116
+Lymphoid,p4t2_Zilionis,958
+Lymphoid,p4t3_Zilionis,1209
+Lymphoid,p5t1_Zilionis,282
+Lymphoid,p5t2_Zilionis,1080
+Lymphoid,p6t1_Zilionis,1787
+Lymphoid,p6t2_Zilionis,1619
+Lymphoid,p7t1_Zilionis,415
+Lymphoid,p7t2_Zilionis,372
+Myeloid,p1t1_Zilionis,864
+Myeloid,p1t2_Zilionis,955
+Myeloid,p1t3_Zilionis,478
+Myeloid,p1t4_Zilionis,543
+Myeloid,p2t1_Zilionis,43
+Myeloid,p2t2_Zilionis,39
+Myeloid,p3t1_Zilionis,485
+Myeloid,p3t2_Zilionis,550
+Myeloid,p3t3_Zilionis,585
+Myeloid,p4t1_Zilionis,182
+Myeloid,p4t2_Zilionis,220
+Myeloid,p4t3_Zilionis,257
+Myeloid,p5t1_Zilionis,398
+Myeloid,p5t2_Zilionis,469
+Myeloid,p6t1_Zilionis,492
+Myeloid,p6t2_Zilionis,397
+Myeloid,p7t1_Zilionis,1667
+Myeloid,p7t2_Zilionis,1487
+Smooth muscle,p1t1_Zilionis,3
+Smooth muscle,p1t2_Zilionis,2
+Smooth muscle,p1t3_Zilionis,1
+Smooth muscle,p1t4_Zilionis,0
+Smooth muscle,p2t1_Zilionis,0
+Smooth muscle,p2t2_Zilionis,2
+Smooth muscle,p3t1_Zilionis,4
+Smooth muscle,p3t2_Zilionis,6
+Smooth muscle,p3t3_Zilionis,7
+Smooth muscle,p4t1_Zilionis,3
+Smooth muscle,p4t2_Zilionis,1
+Smooth muscle,p4t3_Zilionis,1
+Smooth muscle,p5t1_Zilionis,10
+Smooth muscle,p5t2_Zilionis,15
+Smooth muscle,p6t1_Zilionis,2
+Smooth muscle,p6t2_Zilionis,5
+Smooth muscle,p7t1_Zilionis,2
+Smooth muscle,p7t2_Zilionis,1
+Submucosal Gland,p1t1_Zilionis,0
+Submucosal Gland,p1t2_Zilionis,0
+Submucosal Gland,p1t3_Zilionis,0
+Submucosal Gland,p1t4_Zilionis,0
+Submucosal Gland,p2t1_Zilionis,0
+Submucosal Gland,p2t2_Zilionis,0
+Submucosal Gland,p3t1_Zilionis,0
+Submucosal Gland,p3t2_Zilionis,1
+Submucosal Gland,p3t3_Zilionis,0
+Submucosal Gland,p4t1_Zilionis,0
+Submucosal Gland,p4t2_Zilionis,0
+Submucosal Gland,p4t3_Zilionis,0
+Submucosal Gland,p5t1_Zilionis,0
+Submucosal Gland,p5t2_Zilionis,0
+Submucosal Gland,p6t1_Zilionis,0
+Submucosal Gland,p6t2_Zilionis,0
+Submucosal Gland,p7t1_Zilionis,0
+Submucosal Gland,p7t2_Zilionis,0
+Unknown,p1t1_Zilionis,40
+Unknown,p1t2_Zilionis,43
+Unknown,p1t3_Zilionis,20
+Unknown,p1t4_Zilionis,26
+Unknown,p2t1_Zilionis,14
+Unknown,p2t2_Zilionis,12
+Unknown,p3t1_Zilionis,37
+Unknown,p3t2_Zilionis,57
+Unknown,p3t3_Zilionis,60
+Unknown,p4t1_Zilionis,17
+Unknown,p4t2_Zilionis,18
+Unknown,p4t3_Zilionis,21
+Unknown,p5t1_Zilionis,99
+Unknown,p5t2_Zilionis,140
+Unknown,p6t1_Zilionis,64
+Unknown,p6t2_Zilionis,68
+Unknown,p7t1_Zilionis,118
+Unknown,p7t2_Zilionis,114
+Airway epithelium,GSM4453576_Wu,3490
+Airway epithelium,GSM4453577_Wu,220
+Airway epithelium,GSM4453578_Wu,7639
+Airway epithelium,GSM4453579_Wu,731
+Airway epithelium,GSM4453580_Wu,104
+Airway epithelium,GSM4453581_Wu,2301
+Airway epithelium,GSM4453582_Wu,159
+Airway epithelium,GSM4453583_Wu,165
+Airway epithelium,GSM4453584_Wu,260
+Airway epithelium,GSM4453585_Wu,2474
+Airway epithelium,GSM4453586_Wu,4
+Airway epithelium,GSM4453587_Wu,51
+Airway epithelium,GSM4453588_Wu,78
+Airway epithelium,GSM4453589_Wu,1333
+Airway epithelium,GSM4453590_Wu,2772
+Airway epithelium,GSM4453591_Wu,721
+Airway epithelium,GSM4453592_Wu,8579
+Airway epithelium,GSM4453593_Wu,1332
+Airway epithelium,GSM4453594_Wu,207
+Airway epithelium,GSM4453595_Wu,316
+Airway epithelium,GSM4453596_Wu,1192
+Airway epithelium,GSM4453597_Wu,148
+Airway epithelium,GSM4453598_Wu,1657
+Airway epithelium,GSM4453599_Wu,9
+Airway epithelium,GSM4453600_Wu,3589
+Airway epithelium,GSM4453601_Wu,35
+Airway epithelium,GSM4453602_Wu,21
+Airway epithelium,GSM4453603_Wu,635
+Airway epithelium,GSM4453604_Wu,108
+Airway epithelium,GSM4453605_Wu,28
+Airway epithelium,GSM4453606_Wu,336
+Airway epithelium,GSM4453607_Wu,128
+Airway epithelium,GSM4453608_Wu,182
+Airway epithelium,GSM4453609_Wu,264
+Airway epithelium,GSM4453610_Wu,43
+Airway epithelium,GSM4453611_Wu,177
+Airway epithelium,GSM4453612_Wu,8
+Airway epithelium,GSM4453613_Wu,83
+Airway epithelium,GSM4453614_Wu,36
+Airway epithelium,GSM4453615_Wu,302
+Airway epithelium,GSM4453616_Wu,5616
+Airway epithelium,GSM4453617_Wu,15
+Alveolar epithelium,GSM4453576_Wu,0
+Alveolar epithelium,GSM4453577_Wu,4
+Alveolar epithelium,GSM4453578_Wu,2
+Alveolar epithelium,GSM4453579_Wu,0
+Alveolar epithelium,GSM4453580_Wu,1012
+Alveolar epithelium,GSM4453581_Wu,0
+Alveolar epithelium,GSM4453582_Wu,62
+Alveolar epithelium,GSM4453583_Wu,262
+Alveolar epithelium,GSM4453584_Wu,994
+Alveolar epithelium,GSM4453585_Wu,0
+Alveolar epithelium,GSM4453586_Wu,1
+Alveolar epithelium,GSM4453587_Wu,375
+Alveolar epithelium,GSM4453588_Wu,6
+Alveolar epithelium,GSM4453589_Wu,0
+Alveolar epithelium,GSM4453590_Wu,2
+Alveolar epithelium,GSM4453591_Wu,11
+Alveolar epithelium,GSM4453592_Wu,0
+Alveolar epithelium,GSM4453593_Wu,42
+Alveolar epithelium,GSM4453594_Wu,0
+Alveolar epithelium,GSM4453595_Wu,2
+Alveolar epithelium,GSM4453596_Wu,23
+Alveolar epithelium,GSM4453597_Wu,0
+Alveolar epithelium,GSM4453598_Wu,1
+Alveolar epithelium,GSM4453599_Wu,16
+Alveolar epithelium,GSM4453600_Wu,0
+Alveolar epithelium,GSM4453601_Wu,0
+Alveolar epithelium,GSM4453602_Wu,0
+Alveolar epithelium,GSM4453603_Wu,12
+Alveolar epithelium,GSM4453604_Wu,1
+Alveolar epithelium,GSM4453605_Wu,50
+Alveolar epithelium,GSM4453606_Wu,0
+Alveolar epithelium,GSM4453607_Wu,69
+Alveolar epithelium,GSM4453608_Wu,5
+Alveolar epithelium,GSM4453609_Wu,16
+Alveolar epithelium,GSM4453610_Wu,627
+Alveolar epithelium,GSM4453611_Wu,0
+Alveolar epithelium,GSM4453612_Wu,0
+Alveolar epithelium,GSM4453613_Wu,21
+Alveolar epithelium,GSM4453614_Wu,330
+Alveolar epithelium,GSM4453615_Wu,0
+Alveolar epithelium,GSM4453616_Wu,2
+Alveolar epithelium,GSM4453617_Wu,2
+Blood vessels,GSM4453576_Wu,125
+Blood vessels,GSM4453577_Wu,2
+Blood vessels,GSM4453578_Wu,11
+Blood vessels,GSM4453579_Wu,54
+Blood vessels,GSM4453580_Wu,17
+Blood vessels,GSM4453581_Wu,17
+Blood vessels,GSM4453582_Wu,9
+Blood vessels,GSM4453583_Wu,2
+Blood vessels,GSM4453584_Wu,284
+Blood vessels,GSM4453585_Wu,39
+Blood vessels,GSM4453586_Wu,10
+Blood vessels,GSM4453587_Wu,23
+Blood vessels,GSM4453588_Wu,2
+Blood vessels,GSM4453589_Wu,28
+Blood vessels,GSM4453590_Wu,29
+Blood vessels,GSM4453591_Wu,7
+Blood vessels,GSM4453592_Wu,4
+Blood vessels,GSM4453593_Wu,251
+Blood vessels,GSM4453594_Wu,11
+Blood vessels,GSM4453595_Wu,1
+Blood vessels,GSM4453596_Wu,8
+Blood vessels,GSM4453597_Wu,0
+Blood vessels,GSM4453598_Wu,10
+Blood vessels,GSM4453599_Wu,1
+Blood vessels,GSM4453600_Wu,96
+Blood vessels,GSM4453601_Wu,2
+Blood vessels,GSM4453602_Wu,0
+Blood vessels,GSM4453603_Wu,10
+Blood vessels,GSM4453604_Wu,0
+Blood vessels,GSM4453605_Wu,0
+Blood vessels,GSM4453606_Wu,1
+Blood vessels,GSM4453607_Wu,1
+Blood vessels,GSM4453608_Wu,0
+Blood vessels,GSM4453609_Wu,4
+Blood vessels,GSM4453610_Wu,1
+Blood vessels,GSM4453611_Wu,0
+Blood vessels,GSM4453612_Wu,0
+Blood vessels,GSM4453613_Wu,0
+Blood vessels,GSM4453614_Wu,4
+Blood vessels,GSM4453615_Wu,1
+Blood vessels,GSM4453616_Wu,17
+Blood vessels,GSM4453617_Wu,2
+Fibroblast lineage,GSM4453576_Wu,166
+Fibroblast lineage,GSM4453577_Wu,0
+Fibroblast lineage,GSM4453578_Wu,23
+Fibroblast lineage,GSM4453579_Wu,1202
+Fibroblast lineage,GSM4453580_Wu,6
+Fibroblast lineage,GSM4453581_Wu,92
+Fibroblast lineage,GSM4453582_Wu,37
+Fibroblast lineage,GSM4453583_Wu,34
+Fibroblast lineage,GSM4453584_Wu,417
+Fibroblast lineage,GSM4453585_Wu,513
+Fibroblast lineage,GSM4453586_Wu,53
+Fibroblast lineage,GSM4453587_Wu,22
+Fibroblast lineage,GSM4453588_Wu,20
+Fibroblast lineage,GSM4453589_Wu,28
+Fibroblast lineage,GSM4453590_Wu,10
+Fibroblast lineage,GSM4453591_Wu,23
+Fibroblast lineage,GSM4453592_Wu,29
+Fibroblast lineage,GSM4453593_Wu,148
+Fibroblast lineage,GSM4453594_Wu,2
+Fibroblast lineage,GSM4453595_Wu,0
+Fibroblast lineage,GSM4453596_Wu,2
+Fibroblast lineage,GSM4453597_Wu,42
+Fibroblast lineage,GSM4453598_Wu,167
+Fibroblast lineage,GSM4453599_Wu,6
+Fibroblast lineage,GSM4453600_Wu,211
+Fibroblast lineage,GSM4453601_Wu,15
+Fibroblast lineage,GSM4453602_Wu,0
+Fibroblast lineage,GSM4453603_Wu,103
+Fibroblast lineage,GSM4453604_Wu,209
+Fibroblast lineage,GSM4453605_Wu,1
+Fibroblast lineage,GSM4453606_Wu,1
+Fibroblast lineage,GSM4453607_Wu,0
+Fibroblast lineage,GSM4453608_Wu,0
+Fibroblast lineage,GSM4453609_Wu,1
+Fibroblast lineage,GSM4453610_Wu,1
+Fibroblast lineage,GSM4453611_Wu,7
+Fibroblast lineage,GSM4453612_Wu,7
+Fibroblast lineage,GSM4453613_Wu,3
+Fibroblast lineage,GSM4453614_Wu,0
+Fibroblast lineage,GSM4453615_Wu,5
+Fibroblast lineage,GSM4453616_Wu,175
+Fibroblast lineage,GSM4453617_Wu,1
+Lymphatic EC,GSM4453576_Wu,1
+Lymphatic EC,GSM4453577_Wu,0
+Lymphatic EC,GSM4453578_Wu,0
+Lymphatic EC,GSM4453579_Wu,0
+Lymphatic EC,GSM4453580_Wu,0
+Lymphatic EC,GSM4453581_Wu,0
+Lymphatic EC,GSM4453582_Wu,0
+Lymphatic EC,GSM4453583_Wu,0
+Lymphatic EC,GSM4453584_Wu,11
+Lymphatic EC,GSM4453585_Wu,1
+Lymphatic EC,GSM4453586_Wu,0
+Lymphatic EC,GSM4453587_Wu,0
+Lymphatic EC,GSM4453588_Wu,0
+Lymphatic EC,GSM4453589_Wu,0
+Lymphatic EC,GSM4453590_Wu,0
+Lymphatic EC,GSM4453591_Wu,0
+Lymphatic EC,GSM4453592_Wu,0
+Lymphatic EC,GSM4453593_Wu,1
+Lymphatic EC,GSM4453594_Wu,0
+Lymphatic EC,GSM4453595_Wu,0
+Lymphatic EC,GSM4453596_Wu,0
+Lymphatic EC,GSM4453597_Wu,0
+Lymphatic EC,GSM4453598_Wu,0
+Lymphatic EC,GSM4453599_Wu,0
+Lymphatic EC,GSM4453600_Wu,0
+Lymphatic EC,GSM4453601_Wu,0
+Lymphatic EC,GSM4453602_Wu,0
+Lymphatic EC,GSM4453603_Wu,0
+Lymphatic EC,GSM4453604_Wu,0
+Lymphatic EC,GSM4453605_Wu,0
+Lymphatic EC,GSM4453606_Wu,0
+Lymphatic EC,GSM4453607_Wu,0
+Lymphatic EC,GSM4453608_Wu,0
+Lymphatic EC,GSM4453609_Wu,0
+Lymphatic EC,GSM4453610_Wu,0
+Lymphatic EC,GSM4453611_Wu,0
+Lymphatic EC,GSM4453612_Wu,0
+Lymphatic EC,GSM4453613_Wu,0
+Lymphatic EC,GSM4453614_Wu,0
+Lymphatic EC,GSM4453615_Wu,0
+Lymphatic EC,GSM4453616_Wu,0
+Lymphatic EC,GSM4453617_Wu,0
+Lymphoid,GSM4453576_Wu,374
+Lymphoid,GSM4453577_Wu,4
+Lymphoid,GSM4453578_Wu,21
+Lymphoid,GSM4453579_Wu,669
+Lymphoid,GSM4453580_Wu,88
+Lymphoid,GSM4453581_Wu,78
+Lymphoid,GSM4453582_Wu,1821
+Lymphoid,GSM4453583_Wu,205
+Lymphoid,GSM4453584_Wu,201
+Lymphoid,GSM4453585_Wu,200
+Lymphoid,GSM4453586_Wu,94
+Lymphoid,GSM4453587_Wu,151
+Lymphoid,GSM4453588_Wu,335
+Lymphoid,GSM4453589_Wu,123
+Lymphoid,GSM4453590_Wu,58
+Lymphoid,GSM4453591_Wu,6
+Lymphoid,GSM4453592_Wu,15
+Lymphoid,GSM4453593_Wu,107
+Lymphoid,GSM4453594_Wu,64
+Lymphoid,GSM4453595_Wu,10
+Lymphoid,GSM4453596_Wu,112
+Lymphoid,GSM4453597_Wu,247
+Lymphoid,GSM4453598_Wu,185
+Lymphoid,GSM4453599_Wu,137
+Lymphoid,GSM4453600_Wu,2
+Lymphoid,GSM4453601_Wu,75
+Lymphoid,GSM4453602_Wu,53
+Lymphoid,GSM4453603_Wu,179
+Lymphoid,GSM4453604_Wu,3
+Lymphoid,GSM4453605_Wu,4
+Lymphoid,GSM4453606_Wu,17
+Lymphoid,GSM4453607_Wu,116
+Lymphoid,GSM4453608_Wu,1
+Lymphoid,GSM4453609_Wu,39
+Lymphoid,GSM4453610_Wu,25
+Lymphoid,GSM4453611_Wu,3
+Lymphoid,GSM4453612_Wu,64
+Lymphoid,GSM4453613_Wu,148
+Lymphoid,GSM4453614_Wu,428
+Lymphoid,GSM4453615_Wu,450
+Lymphoid,GSM4453616_Wu,10
+Lymphoid,GSM4453617_Wu,434
+Mesothelium,GSM4453576_Wu,0
+Mesothelium,GSM4453577_Wu,0
+Mesothelium,GSM4453578_Wu,0
+Mesothelium,GSM4453579_Wu,0
+Mesothelium,GSM4453580_Wu,0
+Mesothelium,GSM4453581_Wu,0
+Mesothelium,GSM4453582_Wu,2
+Mesothelium,GSM4453583_Wu,0
+Mesothelium,GSM4453584_Wu,0
+Mesothelium,GSM4453585_Wu,0
+Mesothelium,GSM4453586_Wu,0
+Mesothelium,GSM4453587_Wu,0
+Mesothelium,GSM4453588_Wu,0
+Mesothelium,GSM4453589_Wu,0
+Mesothelium,GSM4453590_Wu,0
+Mesothelium,GSM4453591_Wu,0
+Mesothelium,GSM4453592_Wu,0
+Mesothelium,GSM4453593_Wu,0
+Mesothelium,GSM4453594_Wu,0
+Mesothelium,GSM4453595_Wu,0
+Mesothelium,GSM4453596_Wu,0
+Mesothelium,GSM4453597_Wu,0
+Mesothelium,GSM4453598_Wu,0
+Mesothelium,GSM4453599_Wu,0
+Mesothelium,GSM4453600_Wu,0
+Mesothelium,GSM4453601_Wu,0
+Mesothelium,GSM4453602_Wu,0
+Mesothelium,GSM4453603_Wu,0
+Mesothelium,GSM4453604_Wu,0
+Mesothelium,GSM4453605_Wu,0
+Mesothelium,GSM4453606_Wu,0
+Mesothelium,GSM4453607_Wu,0
+Mesothelium,GSM4453608_Wu,0
+Mesothelium,GSM4453609_Wu,0
+Mesothelium,GSM4453610_Wu,0
+Mesothelium,GSM4453611_Wu,0
+Mesothelium,GSM4453612_Wu,0
+Mesothelium,GSM4453613_Wu,0
+Mesothelium,GSM4453614_Wu,0
+Mesothelium,GSM4453615_Wu,0
+Mesothelium,GSM4453616_Wu,0
+Mesothelium,GSM4453617_Wu,0
+Myeloid,GSM4453576_Wu,790
+Myeloid,GSM4453577_Wu,16
+Myeloid,GSM4453578_Wu,90
+Myeloid,GSM4453579_Wu,1497
+Myeloid,GSM4453580_Wu,610
+Myeloid,GSM4453581_Wu,382
+Myeloid,GSM4453582_Wu,790
+Myeloid,GSM4453583_Wu,570
+Myeloid,GSM4453584_Wu,266
+Myeloid,GSM4453585_Wu,320
+Myeloid,GSM4453586_Wu,233
+Myeloid,GSM4453587_Wu,189
+Myeloid,GSM4453588_Wu,396
+Myeloid,GSM4453589_Wu,193
+Myeloid,GSM4453590_Wu,333
+Myeloid,GSM4453591_Wu,146
+Myeloid,GSM4453592_Wu,12
+Myeloid,GSM4453593_Wu,498
+Myeloid,GSM4453594_Wu,149
+Myeloid,GSM4453595_Wu,16
+Myeloid,GSM4453596_Wu,64
+Myeloid,GSM4453597_Wu,167
+Myeloid,GSM4453598_Wu,224
+Myeloid,GSM4453599_Wu,121
+Myeloid,GSM4453600_Wu,61
+Myeloid,GSM4453601_Wu,132
+Myeloid,GSM4453602_Wu,282
+Myeloid,GSM4453603_Wu,1344
+Myeloid,GSM4453604_Wu,119
+Myeloid,GSM4453605_Wu,153
+Myeloid,GSM4453606_Wu,24
+Myeloid,GSM4453607_Wu,75
+Myeloid,GSM4453608_Wu,31
+Myeloid,GSM4453609_Wu,489
+Myeloid,GSM4453610_Wu,150
+Myeloid,GSM4453611_Wu,168
+Myeloid,GSM4453612_Wu,2392
+Myeloid,GSM4453613_Wu,962
+Myeloid,GSM4453614_Wu,832
+Myeloid,GSM4453615_Wu,273
+Myeloid,GSM4453616_Wu,161
+Myeloid,GSM4453617_Wu,142
+Smooth muscle,GSM4453576_Wu,20
+Smooth muscle,GSM4453577_Wu,0
+Smooth muscle,GSM4453578_Wu,2
+Smooth muscle,GSM4453579_Wu,20
+Smooth muscle,GSM4453580_Wu,1
+Smooth muscle,GSM4453581_Wu,2
+Smooth muscle,GSM4453582_Wu,4
+Smooth muscle,GSM4453583_Wu,4
+Smooth muscle,GSM4453584_Wu,28
+Smooth muscle,GSM4453585_Wu,24
+Smooth muscle,GSM4453586_Wu,0
+Smooth muscle,GSM4453587_Wu,3
+Smooth muscle,GSM4453588_Wu,2
+Smooth muscle,GSM4453589_Wu,1
+Smooth muscle,GSM4453590_Wu,0
+Smooth muscle,GSM4453591_Wu,0
+Smooth muscle,GSM4453592_Wu,13
+Smooth muscle,GSM4453593_Wu,130
+Smooth muscle,GSM4453594_Wu,0
+Smooth muscle,GSM4453595_Wu,1
+Smooth muscle,GSM4453596_Wu,5
+Smooth muscle,GSM4453597_Wu,0
+Smooth muscle,GSM4453598_Wu,0
+Smooth muscle,GSM4453599_Wu,0
+Smooth muscle,GSM4453600_Wu,2
+Smooth muscle,GSM4453601_Wu,0
+Smooth muscle,GSM4453602_Wu,0
+Smooth muscle,GSM4453603_Wu,2
+Smooth muscle,GSM4453604_Wu,0
+Smooth muscle,GSM4453605_Wu,0
+Smooth muscle,GSM4453606_Wu,0
+Smooth muscle,GSM4453607_Wu,0
+Smooth muscle,GSM4453608_Wu,0
+Smooth muscle,GSM4453609_Wu,0
+Smooth muscle,GSM4453610_Wu,0
+Smooth muscle,GSM4453611_Wu,1
+Smooth muscle,GSM4453612_Wu,0
+Smooth muscle,GSM4453613_Wu,0
+Smooth muscle,GSM4453614_Wu,0
+Smooth muscle,GSM4453615_Wu,2
+Smooth muscle,GSM4453616_Wu,48
+Smooth muscle,GSM4453617_Wu,0
+Submucosal Gland,GSM4453576_Wu,0
+Submucosal Gland,GSM4453577_Wu,0
+Submucosal Gland,GSM4453578_Wu,0
+Submucosal Gland,GSM4453579_Wu,0
+Submucosal Gland,GSM4453580_Wu,0
+Submucosal Gland,GSM4453581_Wu,0
+Submucosal Gland,GSM4453582_Wu,0
+Submucosal Gland,GSM4453583_Wu,0
+Submucosal Gland,GSM4453584_Wu,0
+Submucosal Gland,GSM4453585_Wu,0
+Submucosal Gland,GSM4453586_Wu,0
+Submucosal Gland,GSM4453587_Wu,0
+Submucosal Gland,GSM4453588_Wu,0
+Submucosal Gland,GSM4453589_Wu,2
+Submucosal Gland,GSM4453590_Wu,0
+Submucosal Gland,GSM4453591_Wu,0
+Submucosal Gland,GSM4453592_Wu,0
+Submucosal Gland,GSM4453593_Wu,0
+Submucosal Gland,GSM4453594_Wu,0
+Submucosal Gland,GSM4453595_Wu,0
+Submucosal Gland,GSM4453596_Wu,0
+Submucosal Gland,GSM4453597_Wu,0
+Submucosal Gland,GSM4453598_Wu,0
+Submucosal Gland,GSM4453599_Wu,0
+Submucosal Gland,GSM4453600_Wu,0
+Submucosal Gland,GSM4453601_Wu,0
+Submucosal Gland,GSM4453602_Wu,0
+Submucosal Gland,GSM4453603_Wu,0
+Submucosal Gland,GSM4453604_Wu,0
+Submucosal Gland,GSM4453605_Wu,0
+Submucosal Gland,GSM4453606_Wu,0
+Submucosal Gland,GSM4453607_Wu,0
+Submucosal Gland,GSM4453608_Wu,0
+Submucosal Gland,GSM4453609_Wu,0
+Submucosal Gland,GSM4453610_Wu,0
+Submucosal Gland,GSM4453611_Wu,0
+Submucosal Gland,GSM4453612_Wu,0
+Submucosal Gland,GSM4453613_Wu,0
+Submucosal Gland,GSM4453614_Wu,0
+Submucosal Gland,GSM4453615_Wu,3
+Submucosal Gland,GSM4453616_Wu,0
+Submucosal Gland,GSM4453617_Wu,0
+Unknown,GSM4453576_Wu,350
+Unknown,GSM4453577_Wu,60
+Unknown,GSM4453578_Wu,41
+Unknown,GSM4453579_Wu,352
+Unknown,GSM4453580_Wu,606
+Unknown,GSM4453581_Wu,192
+Unknown,GSM4453582_Wu,122
+Unknown,GSM4453583_Wu,91
+Unknown,GSM4453584_Wu,1057
+Unknown,GSM4453585_Wu,169
+Unknown,GSM4453586_Wu,174
+Unknown,GSM4453587_Wu,70
+Unknown,GSM4453588_Wu,95
+Unknown,GSM4453589_Wu,86
+Unknown,GSM4453590_Wu,224
+Unknown,GSM4453591_Wu,229
+Unknown,GSM4453592_Wu,48
+Unknown,GSM4453593_Wu,780
+Unknown,GSM4453594_Wu,3
+Unknown,GSM4453595_Wu,83
+Unknown,GSM4453596_Wu,562
+Unknown,GSM4453597_Wu,10
+Unknown,GSM4453598_Wu,143
+Unknown,GSM4453599_Wu,72
+Unknown,GSM4453600_Wu,66
+Unknown,GSM4453601_Wu,19
+Unknown,GSM4453602_Wu,2
+Unknown,GSM4453603_Wu,76
+Unknown,GSM4453604_Wu,529
+Unknown,GSM4453605_Wu,506
+Unknown,GSM4453606_Wu,8
+Unknown,GSM4453607_Wu,201
+Unknown,GSM4453608_Wu,131
+Unknown,GSM4453609_Wu,154
+Unknown,GSM4453610_Wu,231
+Unknown,GSM4453611_Wu,12
+Unknown,GSM4453612_Wu,13
+Unknown,GSM4453613_Wu,127
+Unknown,GSM4453614_Wu,263
+Unknown,GSM4453615_Wu,24
+Unknown,GSM4453616_Wu,191
+Unknown,GSM4453617_Wu,235
+Airway epithelium,P1_normal_adjacent_UKIM-V,33
+Airway epithelium,P1_tumor_primary_UKIM-V,125
+Airway epithelium,P2_normal_adjacent_UKIM-V,130
+Airway epithelium,P2_tumor_primary_UKIM-V,2654
+Airway epithelium,P3_normal_adjacent_UKIM-V,48
+Airway epithelium,P3_tumor_primary_UKIM-V,74
+Alveolar epithelium,P1_normal_adjacent_UKIM-V,22
+Alveolar epithelium,P1_tumor_primary_UKIM-V,8
+Alveolar epithelium,P2_normal_adjacent_UKIM-V,36
+Alveolar epithelium,P2_tumor_primary_UKIM-V,16
+Alveolar epithelium,P3_normal_adjacent_UKIM-V,58
+Alveolar epithelium,P3_tumor_primary_UKIM-V,66
+Blood vessels,P1_normal_adjacent_UKIM-V,8
+Blood vessels,P1_tumor_primary_UKIM-V,1
+Blood vessels,P2_normal_adjacent_UKIM-V,34
+Blood vessels,P2_tumor_primary_UKIM-V,10
+Blood vessels,P3_normal_adjacent_UKIM-V,13
+Blood vessels,P3_tumor_primary_UKIM-V,11
+Fibroblast lineage,P1_normal_adjacent_UKIM-V,1
+Fibroblast lineage,P1_tumor_primary_UKIM-V,14
+Fibroblast lineage,P2_normal_adjacent_UKIM-V,43
+Fibroblast lineage,P2_tumor_primary_UKIM-V,26
+Fibroblast lineage,P3_normal_adjacent_UKIM-V,19
+Fibroblast lineage,P3_tumor_primary_UKIM-V,16
+Lymphatic EC,P1_normal_adjacent_UKIM-V,0
+Lymphatic EC,P1_tumor_primary_UKIM-V,0
+Lymphatic EC,P2_normal_adjacent_UKIM-V,10
+Lymphatic EC,P2_tumor_primary_UKIM-V,0
+Lymphatic EC,P3_normal_adjacent_UKIM-V,8
+Lymphatic EC,P3_tumor_primary_UKIM-V,1
+Lymphoid,P1_normal_adjacent_UKIM-V,1475
+Lymphoid,P1_tumor_primary_UKIM-V,482
+Lymphoid,P2_normal_adjacent_UKIM-V,2302
+Lymphoid,P2_tumor_primary_UKIM-V,1626
+Lymphoid,P3_normal_adjacent_UKIM-V,1053
+Lymphoid,P3_tumor_primary_UKIM-V,2085
+Mesothelium,P1_normal_adjacent_UKIM-V,0
+Mesothelium,P1_tumor_primary_UKIM-V,0
+Mesothelium,P2_normal_adjacent_UKIM-V,0
+Mesothelium,P2_tumor_primary_UKIM-V,4
+Mesothelium,P3_normal_adjacent_UKIM-V,0
+Mesothelium,P3_tumor_primary_UKIM-V,2
+Myeloid,P1_normal_adjacent_UKIM-V,542
+Myeloid,P1_tumor_primary_UKIM-V,115
+Myeloid,P2_normal_adjacent_UKIM-V,3167
+Myeloid,P2_tumor_primary_UKIM-V,3887
+Myeloid,P3_normal_adjacent_UKIM-V,2048
+Myeloid,P3_tumor_primary_UKIM-V,1838
+Smooth muscle,P1_normal_adjacent_UKIM-V,0
+Smooth muscle,P1_tumor_primary_UKIM-V,4
+Smooth muscle,P2_normal_adjacent_UKIM-V,2
+Smooth muscle,P2_tumor_primary_UKIM-V,1
+Smooth muscle,P3_normal_adjacent_UKIM-V,1
+Smooth muscle,P3_tumor_primary_UKIM-V,0
+Submucosal Gland,P1_normal_adjacent_UKIM-V,0
+Submucosal Gland,P1_tumor_primary_UKIM-V,0
+Submucosal Gland,P2_normal_adjacent_UKIM-V,0
+Submucosal Gland,P2_tumor_primary_UKIM-V,0
+Submucosal Gland,P3_normal_adjacent_UKIM-V,0
+Submucosal Gland,P3_tumor_primary_UKIM-V,2
+Unknown,P1_normal_adjacent_UKIM-V,12
+Unknown,P1_tumor_primary_UKIM-V,15
+Unknown,P2_normal_adjacent_UKIM-V,159
+Unknown,P2_tumor_primary_UKIM-V,340
+Unknown,P3_normal_adjacent_UKIM-V,34
+Unknown,P3_tumor_primary_UKIM-V,324
+Airway epithelium,LT_S01_Maynard,0
+Airway epithelium,LT_S02_Maynard,0
+Airway epithelium,LT_S03_Maynard,3
+Airway epithelium,LT_S05_Maynard,0
+Airway epithelium,LT_S07_Maynard,5
+Airway epithelium,LT_S08_Maynard,4
+Airway epithelium,LT_S11_Maynard,23
+Airway epithelium,LT_S13_Maynard,1
+Airway epithelium,LT_S14_Maynard,0
+Airway epithelium,LT_S16_Maynard,0
+Airway epithelium,LT_S21_Maynard,788
+Airway epithelium,LT_S23_Maynard,1
+Airway epithelium,LT_S28_Maynard,2
+Airway epithelium,LT_S34_Maynard,4
+Airway epithelium,LT_S41_Maynard,0
+Airway epithelium,LT_S42_Maynard,1
+Airway epithelium,LT_S43_Maynard,1
+Airway epithelium,LT_S45_Maynard,1
+Airway epithelium,LT_S47_Maynard,46
+Airway epithelium,LT_S48_Maynard,14
+Airway epithelium,LT_S49_Maynard,5
+Airway epithelium,LT_S50_Maynard,2
+Airway epithelium,LT_S51_Maynard,42
+Airway epithelium,LT_S52_Maynard,1
+Airway epithelium,LT_S53_Maynard,4
+Airway epithelium,LT_S54_Maynard,0
+Airway epithelium,LT_S55_Maynard,3
+Airway epithelium,LT_S56_Maynard,359
+Airway epithelium,LT_S57_Maynard,29
+Airway epithelium,LT_S58_Maynard,3
+Airway epithelium,LT_S63_Maynard,427
+Airway epithelium,LT_S65_Maynard,3
+Airway epithelium,LT_S66_Maynard,41
+Airway epithelium,LT_S67_Maynard,2
+Airway epithelium,LT_S69_Maynard,141
+Airway epithelium,LT_S71_Maynard,8
+Airway epithelium,LT_S72_Maynard,1
+Airway epithelium,LT_S74_Maynard,35
+Airway epithelium,LT_S75_Maynard,18
+Airway epithelium,LT_S78_Maynard,11
+Airway epithelium,LT_S79_Maynard,33
+Airway epithelium,LT_S80_Maynard,2
+Airway epithelium,LT_S81_Maynard,14
+Airway epithelium,LT_S82_Maynard,12
+Alveolar epithelium,LT_S01_Maynard,0
+Alveolar epithelium,LT_S02_Maynard,0
+Alveolar epithelium,LT_S03_Maynard,0
+Alveolar epithelium,LT_S05_Maynard,0
+Alveolar epithelium,LT_S07_Maynard,1
+Alveolar epithelium,LT_S08_Maynard,2
+Alveolar epithelium,LT_S11_Maynard,21
+Alveolar epithelium,LT_S13_Maynard,0
+Alveolar epithelium,LT_S14_Maynard,0
+Alveolar epithelium,LT_S16_Maynard,1
+Alveolar epithelium,LT_S21_Maynard,0
+Alveolar epithelium,LT_S23_Maynard,0
+Alveolar epithelium,LT_S28_Maynard,0
+Alveolar epithelium,LT_S34_Maynard,2
+Alveolar epithelium,LT_S41_Maynard,0
+Alveolar epithelium,LT_S42_Maynard,1
+Alveolar epithelium,LT_S43_Maynard,3
+Alveolar epithelium,LT_S45_Maynard,0
+Alveolar epithelium,LT_S47_Maynard,2
+Alveolar epithelium,LT_S48_Maynard,0
+Alveolar epithelium,LT_S49_Maynard,0
+Alveolar epithelium,LT_S50_Maynard,7
+Alveolar epithelium,LT_S51_Maynard,12
+Alveolar epithelium,LT_S52_Maynard,12
+Alveolar epithelium,LT_S53_Maynard,0
+Alveolar epithelium,LT_S54_Maynard,0
+Alveolar epithelium,LT_S55_Maynard,0
+Alveolar epithelium,LT_S56_Maynard,0
+Alveolar epithelium,LT_S57_Maynard,381
+Alveolar epithelium,LT_S58_Maynard,63
+Alveolar epithelium,LT_S63_Maynard,5
+Alveolar epithelium,LT_S65_Maynard,87
+Alveolar epithelium,LT_S66_Maynard,190
+Alveolar epithelium,LT_S67_Maynard,29
+Alveolar epithelium,LT_S69_Maynard,0
+Alveolar epithelium,LT_S71_Maynard,117
+Alveolar epithelium,LT_S72_Maynard,8
+Alveolar epithelium,LT_S74_Maynard,6
+Alveolar epithelium,LT_S75_Maynard,0
+Alveolar epithelium,LT_S78_Maynard,103
+Alveolar epithelium,LT_S79_Maynard,30
+Alveolar epithelium,LT_S80_Maynard,11
+Alveolar epithelium,LT_S81_Maynard,0
+Alveolar epithelium,LT_S82_Maynard,12
+Blood vessels,LT_S01_Maynard,0
+Blood vessels,LT_S02_Maynard,3
+Blood vessels,LT_S03_Maynard,0
+Blood vessels,LT_S05_Maynard,0
+Blood vessels,LT_S07_Maynard,0
+Blood vessels,LT_S08_Maynard,0
+Blood vessels,LT_S11_Maynard,2
+Blood vessels,LT_S13_Maynard,0
+Blood vessels,LT_S14_Maynard,0
+Blood vessels,LT_S16_Maynard,0
+Blood vessels,LT_S21_Maynard,0
+Blood vessels,LT_S23_Maynard,0
+Blood vessels,LT_S28_Maynard,0
+Blood vessels,LT_S34_Maynard,51
+Blood vessels,LT_S41_Maynard,0
+Blood vessels,LT_S42_Maynard,0
+Blood vessels,LT_S43_Maynard,0
+Blood vessels,LT_S45_Maynard,0
+Blood vessels,LT_S47_Maynard,19
+Blood vessels,LT_S48_Maynard,2
+Blood vessels,LT_S49_Maynard,0
+Blood vessels,LT_S50_Maynard,1
+Blood vessels,LT_S51_Maynard,0
+Blood vessels,LT_S52_Maynard,0
+Blood vessels,LT_S53_Maynard,8
+Blood vessels,LT_S54_Maynard,0
+Blood vessels,LT_S55_Maynard,14
+Blood vessels,LT_S56_Maynard,1
+Blood vessels,LT_S57_Maynard,87
+Blood vessels,LT_S58_Maynard,12
+Blood vessels,LT_S63_Maynard,19
+Blood vessels,LT_S65_Maynard,52
+Blood vessels,LT_S66_Maynard,60
+Blood vessels,LT_S67_Maynard,0
+Blood vessels,LT_S69_Maynard,3
+Blood vessels,LT_S71_Maynard,73
+Blood vessels,LT_S72_Maynard,23
+Blood vessels,LT_S74_Maynard,17
+Blood vessels,LT_S75_Maynard,47
+Blood vessels,LT_S78_Maynard,82
+Blood vessels,LT_S79_Maynard,59
+Blood vessels,LT_S80_Maynard,121
+Blood vessels,LT_S81_Maynard,87
+Blood vessels,LT_S82_Maynard,7
+Fibroblast lineage,LT_S01_Maynard,27
+Fibroblast lineage,LT_S02_Maynard,12
+Fibroblast lineage,LT_S03_Maynard,1
+Fibroblast lineage,LT_S05_Maynard,0
+Fibroblast lineage,LT_S07_Maynard,0
+Fibroblast lineage,LT_S08_Maynard,0
+Fibroblast lineage,LT_S11_Maynard,3
+Fibroblast lineage,LT_S13_Maynard,0
+Fibroblast lineage,LT_S14_Maynard,0
+Fibroblast lineage,LT_S16_Maynard,0
+Fibroblast lineage,LT_S21_Maynard,0
+Fibroblast lineage,LT_S23_Maynard,0
+Fibroblast lineage,LT_S28_Maynard,0
+Fibroblast lineage,LT_S34_Maynard,127
+Fibroblast lineage,LT_S41_Maynard,6
+Fibroblast lineage,LT_S42_Maynard,0
+Fibroblast lineage,LT_S43_Maynard,0
+Fibroblast lineage,LT_S45_Maynard,0
+Fibroblast lineage,LT_S47_Maynard,3
+Fibroblast lineage,LT_S48_Maynard,23
+Fibroblast lineage,LT_S49_Maynard,8
+Fibroblast lineage,LT_S50_Maynard,2
+Fibroblast lineage,LT_S51_Maynard,0
+Fibroblast lineage,LT_S52_Maynard,60
+Fibroblast lineage,LT_S53_Maynard,40
+Fibroblast lineage,LT_S54_Maynard,6
+Fibroblast lineage,LT_S55_Maynard,109
+Fibroblast lineage,LT_S56_Maynard,0
+Fibroblast lineage,LT_S57_Maynard,312
+Fibroblast lineage,LT_S58_Maynard,12
+Fibroblast lineage,LT_S63_Maynard,29
+Fibroblast lineage,LT_S65_Maynard,107
+Fibroblast lineage,LT_S66_Maynard,166
+Fibroblast lineage,LT_S67_Maynard,1
+Fibroblast lineage,LT_S69_Maynard,7
+Fibroblast lineage,LT_S71_Maynard,284
+Fibroblast lineage,LT_S72_Maynard,283
+Fibroblast lineage,LT_S74_Maynard,97
+Fibroblast lineage,LT_S75_Maynard,3
+Fibroblast lineage,LT_S78_Maynard,19
+Fibroblast lineage,LT_S79_Maynard,29
+Fibroblast lineage,LT_S80_Maynard,15
+Fibroblast lineage,LT_S81_Maynard,20
+Fibroblast lineage,LT_S82_Maynard,279
+Lymphatic EC,LT_S01_Maynard,0
+Lymphatic EC,LT_S02_Maynard,0
+Lymphatic EC,LT_S03_Maynard,0
+Lymphatic EC,LT_S05_Maynard,0
+Lymphatic EC,LT_S07_Maynard,0
+Lymphatic EC,LT_S08_Maynard,0
+Lymphatic EC,LT_S11_Maynard,0
+Lymphatic EC,LT_S13_Maynard,0
+Lymphatic EC,LT_S14_Maynard,0
+Lymphatic EC,LT_S16_Maynard,1
+Lymphatic EC,LT_S21_Maynard,0
+Lymphatic EC,LT_S23_Maynard,0
+Lymphatic EC,LT_S28_Maynard,0
+Lymphatic EC,LT_S34_Maynard,0
+Lymphatic EC,LT_S41_Maynard,0
+Lymphatic EC,LT_S42_Maynard,0
+Lymphatic EC,LT_S43_Maynard,0
+Lymphatic EC,LT_S45_Maynard,0
+Lymphatic EC,LT_S47_Maynard,0
+Lymphatic EC,LT_S48_Maynard,0
+Lymphatic EC,LT_S49_Maynard,1
+Lymphatic EC,LT_S50_Maynard,0
+Lymphatic EC,LT_S51_Maynard,0
+Lymphatic EC,LT_S52_Maynard,0
+Lymphatic EC,LT_S53_Maynard,0
+Lymphatic EC,LT_S54_Maynard,0
+Lymphatic EC,LT_S55_Maynard,4
+Lymphatic EC,LT_S56_Maynard,0
+Lymphatic EC,LT_S57_Maynard,1
+Lymphatic EC,LT_S58_Maynard,0
+Lymphatic EC,LT_S63_Maynard,3
+Lymphatic EC,LT_S65_Maynard,8
+Lymphatic EC,LT_S66_Maynard,2
+Lymphatic EC,LT_S67_Maynard,0
+Lymphatic EC,LT_S69_Maynard,0
+Lymphatic EC,LT_S71_Maynard,8
+Lymphatic EC,LT_S72_Maynard,2
+Lymphatic EC,LT_S74_Maynard,0
+Lymphatic EC,LT_S75_Maynard,0
+Lymphatic EC,LT_S78_Maynard,2
+Lymphatic EC,LT_S79_Maynard,12
+Lymphatic EC,LT_S80_Maynard,8
+Lymphatic EC,LT_S81_Maynard,1
+Lymphatic EC,LT_S82_Maynard,2
+Lymphoid,LT_S01_Maynard,0
+Lymphoid,LT_S02_Maynard,0
+Lymphoid,LT_S03_Maynard,1
+Lymphoid,LT_S05_Maynard,0
+Lymphoid,LT_S07_Maynard,3
+Lymphoid,LT_S08_Maynard,2
+Lymphoid,LT_S11_Maynard,21
+Lymphoid,LT_S13_Maynard,5
+Lymphoid,LT_S14_Maynard,57
+Lymphoid,LT_S16_Maynard,109
+Lymphoid,LT_S21_Maynard,177
+Lymphoid,LT_S23_Maynard,341
+Lymphoid,LT_S28_Maynard,376
+Lymphoid,LT_S34_Maynard,13
+Lymphoid,LT_S41_Maynard,12
+Lymphoid,LT_S42_Maynard,85
+Lymphoid,LT_S43_Maynard,9
+Lymphoid,LT_S45_Maynard,94
+Lymphoid,LT_S47_Maynard,126
+Lymphoid,LT_S48_Maynard,2
+Lymphoid,LT_S49_Maynard,71
+Lymphoid,LT_S50_Maynard,11
+Lymphoid,LT_S51_Maynard,1
+Lymphoid,LT_S52_Maynard,39
+Lymphoid,LT_S53_Maynard,70
+Lymphoid,LT_S54_Maynard,3
+Lymphoid,LT_S55_Maynard,373
+Lymphoid,LT_S56_Maynard,8
+Lymphoid,LT_S57_Maynard,183
+Lymphoid,LT_S58_Maynard,226
+Lymphoid,LT_S63_Maynard,224
+Lymphoid,LT_S65_Maynard,193
+Lymphoid,LT_S66_Maynard,361
+Lymphoid,LT_S67_Maynard,17
+Lymphoid,LT_S69_Maynard,236
+Lymphoid,LT_S71_Maynard,305
+Lymphoid,LT_S72_Maynard,98
+Lymphoid,LT_S74_Maynard,386
+Lymphoid,LT_S75_Maynard,56
+Lymphoid,LT_S78_Maynard,68
+Lymphoid,LT_S79_Maynard,359
+Lymphoid,LT_S80_Maynard,609
+Lymphoid,LT_S81_Maynard,320
+Lymphoid,LT_S82_Maynard,232
+Mesothelium,LT_S01_Maynard,0
+Mesothelium,LT_S02_Maynard,0
+Mesothelium,LT_S03_Maynard,0
+Mesothelium,LT_S05_Maynard,0
+Mesothelium,LT_S07_Maynard,0
+Mesothelium,LT_S08_Maynard,0
+Mesothelium,LT_S11_Maynard,0
+Mesothelium,LT_S13_Maynard,0
+Mesothelium,LT_S14_Maynard,0
+Mesothelium,LT_S16_Maynard,0
+Mesothelium,LT_S21_Maynard,1
+Mesothelium,LT_S23_Maynard,1
+Mesothelium,LT_S28_Maynard,0
+Mesothelium,LT_S34_Maynard,13
+Mesothelium,LT_S41_Maynard,0
+Mesothelium,LT_S42_Maynard,0
+Mesothelium,LT_S43_Maynard,0
+Mesothelium,LT_S45_Maynard,0
+Mesothelium,LT_S47_Maynard,0
+Mesothelium,LT_S48_Maynard,0
+Mesothelium,LT_S49_Maynard,0
+Mesothelium,LT_S50_Maynard,0
+Mesothelium,LT_S51_Maynard,0
+Mesothelium,LT_S52_Maynard,0
+Mesothelium,LT_S53_Maynard,0
+Mesothelium,LT_S54_Maynard,0
+Mesothelium,LT_S55_Maynard,0
+Mesothelium,LT_S56_Maynard,0
+Mesothelium,LT_S57_Maynard,0
+Mesothelium,LT_S58_Maynard,0
+Mesothelium,LT_S63_Maynard,0
+Mesothelium,LT_S65_Maynard,3
+Mesothelium,LT_S66_Maynard,0
+Mesothelium,LT_S67_Maynard,0
+Mesothelium,LT_S69_Maynard,0
+Mesothelium,LT_S71_Maynard,0
+Mesothelium,LT_S72_Maynard,0
+Mesothelium,LT_S74_Maynard,0
+Mesothelium,LT_S75_Maynard,0
+Mesothelium,LT_S78_Maynard,0
+Mesothelium,LT_S79_Maynard,0
+Mesothelium,LT_S80_Maynard,0
+Mesothelium,LT_S81_Maynard,0
+Mesothelium,LT_S82_Maynard,0
+Myeloid,LT_S01_Maynard,11
+Myeloid,LT_S02_Maynard,12
+Myeloid,LT_S03_Maynard,189
+Myeloid,LT_S05_Maynard,12
+Myeloid,LT_S07_Maynard,121
+Myeloid,LT_S08_Maynard,11
+Myeloid,LT_S11_Maynard,11
+Myeloid,LT_S13_Maynard,1
+Myeloid,LT_S14_Maynard,0
+Myeloid,LT_S16_Maynard,2
+Myeloid,LT_S21_Maynard,348
+Myeloid,LT_S23_Maynard,44
+Myeloid,LT_S28_Maynard,0
+Myeloid,LT_S34_Maynard,293
+Myeloid,LT_S41_Maynard,8
+Myeloid,LT_S42_Maynard,0
+Myeloid,LT_S43_Maynard,22
+Myeloid,LT_S45_Maynard,1
+Myeloid,LT_S47_Maynard,321
+Myeloid,LT_S48_Maynard,4
+Myeloid,LT_S49_Maynard,296
+Myeloid,LT_S50_Maynard,267
+Myeloid,LT_S51_Maynard,135
+Myeloid,LT_S52_Maynard,111
+Myeloid,LT_S53_Maynard,313
+Myeloid,LT_S54_Maynard,177
+Myeloid,LT_S55_Maynard,46
+Myeloid,LT_S56_Maynard,80
+Myeloid,LT_S57_Maynard,285
+Myeloid,LT_S58_Maynard,404
+Myeloid,LT_S63_Maynard,231
+Myeloid,LT_S65_Maynard,133
+Myeloid,LT_S66_Maynard,333
+Myeloid,LT_S67_Maynard,24
+Myeloid,LT_S69_Maynard,155
+Myeloid,LT_S71_Maynard,163
+Myeloid,LT_S72_Maynard,331
+Myeloid,LT_S74_Maynard,92
+Myeloid,LT_S75_Maynard,513
+Myeloid,LT_S78_Maynard,123
+Myeloid,LT_S79_Maynard,151
+Myeloid,LT_S80_Maynard,203
+Myeloid,LT_S81_Maynard,78
+Myeloid,LT_S82_Maynard,183
+Smooth muscle,LT_S01_Maynard,1
+Smooth muscle,LT_S02_Maynard,0
+Smooth muscle,LT_S03_Maynard,0
+Smooth muscle,LT_S05_Maynard,0
+Smooth muscle,LT_S07_Maynard,0
+Smooth muscle,LT_S08_Maynard,0
+Smooth muscle,LT_S11_Maynard,0
+Smooth muscle,LT_S13_Maynard,0
+Smooth muscle,LT_S14_Maynard,0
+Smooth muscle,LT_S16_Maynard,0
+Smooth muscle,LT_S21_Maynard,0
+Smooth muscle,LT_S23_Maynard,0
+Smooth muscle,LT_S28_Maynard,0
+Smooth muscle,LT_S34_Maynard,8
+Smooth muscle,LT_S41_Maynard,0
+Smooth muscle,LT_S42_Maynard,0
+Smooth muscle,LT_S43_Maynard,0
+Smooth muscle,LT_S45_Maynard,0
+Smooth muscle,LT_S47_Maynard,1
+Smooth muscle,LT_S48_Maynard,2
+Smooth muscle,LT_S49_Maynard,0
+Smooth muscle,LT_S50_Maynard,2
+Smooth muscle,LT_S51_Maynard,0
+Smooth muscle,LT_S52_Maynard,2
+Smooth muscle,LT_S53_Maynard,1
+Smooth muscle,LT_S54_Maynard,0
+Smooth muscle,LT_S55_Maynard,15
+Smooth muscle,LT_S56_Maynard,0
+Smooth muscle,LT_S57_Maynard,16
+Smooth muscle,LT_S58_Maynard,2
+Smooth muscle,LT_S63_Maynard,18
+Smooth muscle,LT_S65_Maynard,3
+Smooth muscle,LT_S66_Maynard,23
+Smooth muscle,LT_S67_Maynard,0
+Smooth muscle,LT_S69_Maynard,2
+Smooth muscle,LT_S71_Maynard,46
+Smooth muscle,LT_S72_Maynard,4
+Smooth muscle,LT_S74_Maynard,24
+Smooth muscle,LT_S75_Maynard,2
+Smooth muscle,LT_S78_Maynard,3
+Smooth muscle,LT_S79_Maynard,6
+Smooth muscle,LT_S80_Maynard,9
+Smooth muscle,LT_S81_Maynard,45
+Smooth muscle,LT_S82_Maynard,2
+Submucosal Gland,LT_S01_Maynard,0
+Submucosal Gland,LT_S02_Maynard,0
+Submucosal Gland,LT_S03_Maynard,0
+Submucosal Gland,LT_S05_Maynard,0
+Submucosal Gland,LT_S07_Maynard,0
+Submucosal Gland,LT_S08_Maynard,0
+Submucosal Gland,LT_S11_Maynard,0
+Submucosal Gland,LT_S13_Maynard,0
+Submucosal Gland,LT_S14_Maynard,0
+Submucosal Gland,LT_S16_Maynard,0
+Submucosal Gland,LT_S21_Maynard,0
+Submucosal Gland,LT_S23_Maynard,0
+Submucosal Gland,LT_S28_Maynard,0
+Submucosal Gland,LT_S34_Maynard,0
+Submucosal Gland,LT_S41_Maynard,0
+Submucosal Gland,LT_S42_Maynard,0
+Submucosal Gland,LT_S43_Maynard,0
+Submucosal Gland,LT_S45_Maynard,0
+Submucosal Gland,LT_S47_Maynard,0
+Submucosal Gland,LT_S48_Maynard,0
+Submucosal Gland,LT_S49_Maynard,0
+Submucosal Gland,LT_S50_Maynard,0
+Submucosal Gland,LT_S51_Maynard,0
+Submucosal Gland,LT_S52_Maynard,0
+Submucosal Gland,LT_S53_Maynard,0
+Submucosal Gland,LT_S54_Maynard,0
+Submucosal Gland,LT_S55_Maynard,0
+Submucosal Gland,LT_S56_Maynard,1
+Submucosal Gland,LT_S57_Maynard,0
+Submucosal Gland,LT_S58_Maynard,0
+Submucosal Gland,LT_S63_Maynard,0
+Submucosal Gland,LT_S65_Maynard,0
+Submucosal Gland,LT_S66_Maynard,0
+Submucosal Gland,LT_S67_Maynard,0
+Submucosal Gland,LT_S69_Maynard,0
+Submucosal Gland,LT_S71_Maynard,0
+Submucosal Gland,LT_S72_Maynard,0
+Submucosal Gland,LT_S74_Maynard,0
+Submucosal Gland,LT_S75_Maynard,0
+Submucosal Gland,LT_S78_Maynard,0
+Submucosal Gland,LT_S79_Maynard,0
+Submucosal Gland,LT_S80_Maynard,0
+Submucosal Gland,LT_S81_Maynard,0
+Submucosal Gland,LT_S82_Maynard,0
+Unknown,LT_S01_Maynard,5
+Unknown,LT_S02_Maynard,0
+Unknown,LT_S03_Maynard,5
+Unknown,LT_S05_Maynard,1
+Unknown,LT_S07_Maynard,12
+Unknown,LT_S08_Maynard,48
+Unknown,LT_S11_Maynard,94
+Unknown,LT_S13_Maynard,2
+Unknown,LT_S14_Maynard,0
+Unknown,LT_S16_Maynard,0
+Unknown,LT_S21_Maynard,182
+Unknown,LT_S23_Maynard,0
+Unknown,LT_S28_Maynard,1
+Unknown,LT_S34_Maynard,56
+Unknown,LT_S41_Maynard,36
+Unknown,LT_S42_Maynard,4
+Unknown,LT_S43_Maynard,0
+Unknown,LT_S45_Maynard,6
+Unknown,LT_S47_Maynard,196
+Unknown,LT_S48_Maynard,23
+Unknown,LT_S49_Maynard,15
+Unknown,LT_S50_Maynard,40
+Unknown,LT_S51_Maynard,14
+Unknown,LT_S52_Maynard,14
+Unknown,LT_S53_Maynard,78
+Unknown,LT_S54_Maynard,1
+Unknown,LT_S55_Maynard,16
+Unknown,LT_S56_Maynard,21
+Unknown,LT_S57_Maynard,161
+Unknown,LT_S58_Maynard,39
+Unknown,LT_S63_Maynard,233
+Unknown,LT_S65_Maynard,3
+Unknown,LT_S66_Maynard,121
+Unknown,LT_S67_Maynard,18
+Unknown,LT_S69_Maynard,132
+Unknown,LT_S71_Maynard,61
+Unknown,LT_S72_Maynard,22
+Unknown,LT_S74_Maynard,62
+Unknown,LT_S75_Maynard,26
+Unknown,LT_S78_Maynard,10
+Unknown,LT_S79_Maynard,33
+Unknown,LT_S80_Maynard,11
+Unknown,LT_S81_Maynard,122
+Unknown,LT_S82_Maynard,101
+Airway epithelium,GSM3516662_Laughney,31
+Airway epithelium,GSM3516663_Laughney,41
+Airway epithelium,GSM3516664_Laughney,1
+Airway epithelium,GSM3516665_Laughney,11
+Airway epithelium,GSM3516666_Laughney,49
+Airway epithelium,GSM3516667_Laughney,56
+Airway epithelium,GSM3516668_Laughney,14
+Airway epithelium,GSM3516669_Laughney,304
+Airway epithelium,GSM3516670_Laughney,115
+Airway epithelium,GSM3516671_Laughney,398
+Airway epithelium,GSM3516672_Laughney,11
+Airway epithelium,GSM3516673_Laughney,97
+Airway epithelium,GSM3516674_Laughney,6
+Airway epithelium,GSM3516675_Laughney,9
+Airway epithelium,GSM3516676_Laughney,48
+Airway epithelium,GSM3516677_Laughney,4
+Airway epithelium,GSM3516678_Laughney,6
+Alveolar epithelium,GSM3516662_Laughney,37
+Alveolar epithelium,GSM3516663_Laughney,12
+Alveolar epithelium,GSM3516664_Laughney,305
+Alveolar epithelium,GSM3516665_Laughney,83
+Alveolar epithelium,GSM3516666_Laughney,49
+Alveolar epithelium,GSM3516667_Laughney,4
+Alveolar epithelium,GSM3516668_Laughney,33
+Alveolar epithelium,GSM3516669_Laughney,4
+Alveolar epithelium,GSM3516670_Laughney,3
+Alveolar epithelium,GSM3516671_Laughney,18
+Alveolar epithelium,GSM3516672_Laughney,20
+Alveolar epithelium,GSM3516673_Laughney,32
+Alveolar epithelium,GSM3516674_Laughney,93
+Alveolar epithelium,GSM3516675_Laughney,122
+Alveolar epithelium,GSM3516676_Laughney,207
+Alveolar epithelium,GSM3516677_Laughney,0
+Alveolar epithelium,GSM3516678_Laughney,8
+Blood vessels,GSM3516662_Laughney,3
+Blood vessels,GSM3516663_Laughney,1
+Blood vessels,GSM3516664_Laughney,5
+Blood vessels,GSM3516665_Laughney,49
+Blood vessels,GSM3516666_Laughney,19
+Blood vessels,GSM3516667_Laughney,3
+Blood vessels,GSM3516668_Laughney,1
+Blood vessels,GSM3516669_Laughney,19
+Blood vessels,GSM3516670_Laughney,1
+Blood vessels,GSM3516671_Laughney,7
+Blood vessels,GSM3516672_Laughney,44
+Blood vessels,GSM3516673_Laughney,16
+Blood vessels,GSM3516674_Laughney,0
+Blood vessels,GSM3516675_Laughney,0
+Blood vessels,GSM3516676_Laughney,1
+Blood vessels,GSM3516677_Laughney,14
+Blood vessels,GSM3516678_Laughney,1
+Fibroblast lineage,GSM3516662_Laughney,2
+Fibroblast lineage,GSM3516663_Laughney,1
+Fibroblast lineage,GSM3516664_Laughney,9
+Fibroblast lineage,GSM3516665_Laughney,242
+Fibroblast lineage,GSM3516666_Laughney,8
+Fibroblast lineage,GSM3516667_Laughney,24
+Fibroblast lineage,GSM3516668_Laughney,3
+Fibroblast lineage,GSM3516669_Laughney,21
+Fibroblast lineage,GSM3516670_Laughney,3
+Fibroblast lineage,GSM3516671_Laughney,5
+Fibroblast lineage,GSM3516672_Laughney,74
+Fibroblast lineage,GSM3516673_Laughney,4
+Fibroblast lineage,GSM3516674_Laughney,0
+Fibroblast lineage,GSM3516675_Laughney,0
+Fibroblast lineage,GSM3516676_Laughney,4
+Fibroblast lineage,GSM3516677_Laughney,1
+Fibroblast lineage,GSM3516678_Laughney,0
+Lymphatic EC,GSM3516662_Laughney,0
+Lymphatic EC,GSM3516663_Laughney,0
+Lymphatic EC,GSM3516664_Laughney,0
+Lymphatic EC,GSM3516665_Laughney,0
+Lymphatic EC,GSM3516666_Laughney,0
+Lymphatic EC,GSM3516667_Laughney,2
+Lymphatic EC,GSM3516668_Laughney,0
+Lymphatic EC,GSM3516669_Laughney,0
+Lymphatic EC,GSM3516670_Laughney,0
+Lymphatic EC,GSM3516671_Laughney,0
+Lymphatic EC,GSM3516672_Laughney,10
+Lymphatic EC,GSM3516673_Laughney,1
+Lymphatic EC,GSM3516674_Laughney,0
+Lymphatic EC,GSM3516675_Laughney,0
+Lymphatic EC,GSM3516676_Laughney,2
+Lymphatic EC,GSM3516677_Laughney,1
+Lymphatic EC,GSM3516678_Laughney,0
+Lymphoid,GSM3516662_Laughney,14
+Lymphoid,GSM3516663_Laughney,3035
+Lymphoid,GSM3516664_Laughney,123
+Lymphoid,GSM3516665_Laughney,978
+Lymphoid,GSM3516666_Laughney,1001
+Lymphoid,GSM3516667_Laughney,2834
+Lymphoid,GSM3516668_Laughney,13
+Lymphoid,GSM3516669_Laughney,70
+Lymphoid,GSM3516670_Laughney,253
+Lymphoid,GSM3516671_Laughney,73
+Lymphoid,GSM3516672_Laughney,2516
+Lymphoid,GSM3516673_Laughney,1233
+Lymphoid,GSM3516674_Laughney,49
+Lymphoid,GSM3516675_Laughney,1676
+Lymphoid,GSM3516676_Laughney,1819
+Lymphoid,GSM3516677_Laughney,1884
+Lymphoid,GSM3516678_Laughney,258
+Mesothelium,GSM3516662_Laughney,0
+Mesothelium,GSM3516663_Laughney,0
+Mesothelium,GSM3516664_Laughney,0
+Mesothelium,GSM3516665_Laughney,0
+Mesothelium,GSM3516666_Laughney,0
+Mesothelium,GSM3516667_Laughney,0
+Mesothelium,GSM3516668_Laughney,0
+Mesothelium,GSM3516669_Laughney,0
+Mesothelium,GSM3516670_Laughney,0
+Mesothelium,GSM3516671_Laughney,0
+Mesothelium,GSM3516672_Laughney,1
+Mesothelium,GSM3516673_Laughney,0
+Mesothelium,GSM3516674_Laughney,0
+Mesothelium,GSM3516675_Laughney,0
+Mesothelium,GSM3516676_Laughney,0
+Mesothelium,GSM3516677_Laughney,0
+Mesothelium,GSM3516678_Laughney,0
+Myeloid,GSM3516662_Laughney,49
+Myeloid,GSM3516663_Laughney,544
+Myeloid,GSM3516664_Laughney,215
+Myeloid,GSM3516665_Laughney,1122
+Myeloid,GSM3516666_Laughney,1069
+Myeloid,GSM3516667_Laughney,232
+Myeloid,GSM3516668_Laughney,424
+Myeloid,GSM3516669_Laughney,239
+Myeloid,GSM3516670_Laughney,107
+Myeloid,GSM3516671_Laughney,97
+Myeloid,GSM3516672_Laughney,438
+Myeloid,GSM3516673_Laughney,1930
+Myeloid,GSM3516674_Laughney,55
+Myeloid,GSM3516675_Laughney,405
+Myeloid,GSM3516676_Laughney,618
+Myeloid,GSM3516677_Laughney,221
+Myeloid,GSM3516678_Laughney,43
+Smooth muscle,GSM3516662_Laughney,0
+Smooth muscle,GSM3516663_Laughney,2
+Smooth muscle,GSM3516664_Laughney,0
+Smooth muscle,GSM3516665_Laughney,18
+Smooth muscle,GSM3516666_Laughney,4
+Smooth muscle,GSM3516667_Laughney,0
+Smooth muscle,GSM3516668_Laughney,1
+Smooth muscle,GSM3516669_Laughney,6
+Smooth muscle,GSM3516670_Laughney,4
+Smooth muscle,GSM3516671_Laughney,2
+Smooth muscle,GSM3516672_Laughney,8
+Smooth muscle,GSM3516673_Laughney,0
+Smooth muscle,GSM3516674_Laughney,0
+Smooth muscle,GSM3516675_Laughney,0
+Smooth muscle,GSM3516676_Laughney,0
+Smooth muscle,GSM3516677_Laughney,8
+Smooth muscle,GSM3516678_Laughney,0
+Unknown,GSM3516662_Laughney,52
+Unknown,GSM3516663_Laughney,39
+Unknown,GSM3516664_Laughney,257
+Unknown,GSM3516665_Laughney,149
+Unknown,GSM3516666_Laughney,3
+Unknown,GSM3516667_Laughney,20
+Unknown,GSM3516668_Laughney,54
+Unknown,GSM3516669_Laughney,46
+Unknown,GSM3516670_Laughney,27
+Unknown,GSM3516671_Laughney,312
+Unknown,GSM3516672_Laughney,80
+Unknown,GSM3516673_Laughney,5
+Unknown,GSM3516674_Laughney,79
+Unknown,GSM3516675_Laughney,2
+Unknown,GSM3516676_Laughney,9
+Unknown,GSM3516677_Laughney,15
+Unknown,GSM3516678_Laughney,18
+Airway epithelium,1247_Lambrechts,2
+Airway epithelium,BT1A_Lambrechts,58
+Airway epithelium,BT1B_Lambrechts,60
+Airway epithelium,BT1C_Lambrechts,35
+Airway epithelium,BT2A_Lambrechts,88
+Airway epithelium,BT2B_Lambrechts,90
+Airway epithelium,BT1249_Lambrechts,12
+Alveolar epithelium,1247_Lambrechts,70
+Alveolar epithelium,BT1A_Lambrechts,3
+Alveolar epithelium,BT1B_Lambrechts,2
+Alveolar epithelium,BT1C_Lambrechts,9
+Alveolar epithelium,BT2A_Lambrechts,5
+Alveolar epithelium,BT2B_Lambrechts,42
+Alveolar epithelium,BT1249_Lambrechts,0
+Blood vessels,1247_Lambrechts,31
+Blood vessels,BT1A_Lambrechts,0
+Blood vessels,BT1B_Lambrechts,0
+Blood vessels,BT1C_Lambrechts,4
+Blood vessels,BT2A_Lambrechts,2
+Blood vessels,BT2B_Lambrechts,13
+Blood vessels,BT1249_Lambrechts,0
+Fibroblast lineage,1247_Lambrechts,11
+Fibroblast lineage,BT1A_Lambrechts,4
+Fibroblast lineage,BT1B_Lambrechts,0
+Fibroblast lineage,BT1C_Lambrechts,5
+Fibroblast lineage,BT2A_Lambrechts,20
+Fibroblast lineage,BT2B_Lambrechts,73
+Fibroblast lineage,BT1249_Lambrechts,38
+Lymphatic EC,1247_Lambrechts,0
+Lymphatic EC,BT1A_Lambrechts,0
+Lymphatic EC,BT1B_Lambrechts,0
+Lymphatic EC,BT1C_Lambrechts,0
+Lymphatic EC,BT2A_Lambrechts,2
+Lymphatic EC,BT2B_Lambrechts,6
+Lymphatic EC,BT1249_Lambrechts,0
+Lymphoid,1247_Lambrechts,122
+Lymphoid,BT1A_Lambrechts,244
+Lymphoid,BT1B_Lambrechts,218
+Lymphoid,BT1C_Lambrechts,397
+Lymphoid,BT2A_Lambrechts,288
+Lymphoid,BT2B_Lambrechts,858
+Lymphoid,BT1249_Lambrechts,24
+Mesothelium,1247_Lambrechts,1
+Mesothelium,BT1A_Lambrechts,0
+Mesothelium,BT1B_Lambrechts,0
+Mesothelium,BT1C_Lambrechts,0
+Mesothelium,BT2A_Lambrechts,0
+Mesothelium,BT2B_Lambrechts,0
+Mesothelium,BT1249_Lambrechts,0
+Myeloid,1247_Lambrechts,105
+Myeloid,BT1A_Lambrechts,98
+Myeloid,BT1B_Lambrechts,102
+Myeloid,BT1C_Lambrechts,179
+Myeloid,BT2A_Lambrechts,181
+Myeloid,BT2B_Lambrechts,435
+Myeloid,BT1249_Lambrechts,30
+Smooth muscle,1247_Lambrechts,0
+Smooth muscle,BT1A_Lambrechts,0
+Smooth muscle,BT1B_Lambrechts,0
+Smooth muscle,BT1C_Lambrechts,1
+Smooth muscle,BT2A_Lambrechts,1
+Smooth muscle,BT2B_Lambrechts,3
+Smooth muscle,BT1249_Lambrechts,2
+Unknown,1247_Lambrechts,1
+Unknown,BT1A_Lambrechts,5
+Unknown,BT1B_Lambrechts,0
+Unknown,BT1C_Lambrechts,4
+Unknown,BT2A_Lambrechts,29
+Unknown,BT2B_Lambrechts,44
+Unknown,BT1249_Lambrechts,6
+Airway epithelium,LUAD1_He,87
+Airway epithelium,LUAD2_He,768
+Airway epithelium,LUAD3_He,1084
+Airway epithelium,LUAD4_He,940
+Airway epithelium,LUAD5_He,49
+Airway epithelium,N1_He,1709
+Airway epithelium,N2_He,169
+Airway epithelium,N3_He,3891
+Airway epithelium,N4_He,763
+Airway epithelium,N5_He,354
+Alveolar epithelium,LUAD1_He,442
+Alveolar epithelium,LUAD2_He,539
+Alveolar epithelium,LUAD3_He,155
+Alveolar epithelium,LUAD4_He,1693
+Alveolar epithelium,LUAD5_He,187
+Alveolar epithelium,N1_He,242
+Alveolar epithelium,N2_He,427
+Alveolar epithelium,N3_He,57
+Alveolar epithelium,N4_He,7218
+Alveolar epithelium,N5_He,382
+Blood vessels,LUAD1_He,186
+Blood vessels,LUAD2_He,395
+Blood vessels,LUAD3_He,290
+Blood vessels,LUAD4_He,371
+Blood vessels,LUAD5_He,160
+Blood vessels,N1_He,93
+Blood vessels,N2_He,55
+Blood vessels,N3_He,126
+Blood vessels,N4_He,211
+Blood vessels,N5_He,104
+Fibroblast lineage,LUAD1_He,92
+Fibroblast lineage,LUAD2_He,83
+Fibroblast lineage,LUAD3_He,209
+Fibroblast lineage,LUAD4_He,414
+Fibroblast lineage,LUAD5_He,54
+Fibroblast lineage,N1_He,306
+Fibroblast lineage,N2_He,100
+Fibroblast lineage,N3_He,77
+Fibroblast lineage,N4_He,144
+Fibroblast lineage,N5_He,75
+Lymphatic EC,LUAD1_He,48
+Lymphatic EC,LUAD2_He,56
+Lymphatic EC,LUAD3_He,86
+Lymphatic EC,LUAD4_He,44
+Lymphatic EC,LUAD5_He,9
+Lymphatic EC,N1_He,8
+Lymphatic EC,N2_He,3
+Lymphatic EC,N3_He,46
+Lymphatic EC,N4_He,32
+Lymphatic EC,N5_He,3
+Lymphoid,LUAD1_He,3736
+Lymphoid,LUAD2_He,2992
+Lymphoid,LUAD3_He,2919
+Lymphoid,LUAD4_He,2617
+Lymphoid,LUAD5_He,4258
+Lymphoid,N1_He,2018
+Lymphoid,N2_He,4547
+Lymphoid,N3_He,1507
+Lymphoid,N4_He,1510
+Lymphoid,N5_He,6683
+Mesothelium,LUAD1_He,0
+Mesothelium,LUAD2_He,1
+Mesothelium,LUAD3_He,88
+Mesothelium,LUAD4_He,104
+Mesothelium,LUAD5_He,0
+Mesothelium,N1_He,0
+Mesothelium,N2_He,0
+Mesothelium,N3_He,0
+Mesothelium,N4_He,0
+Mesothelium,N5_He,0
+Myeloid,LUAD1_He,8494
+Myeloid,LUAD2_He,5228
+Myeloid,LUAD3_He,6521
+Myeloid,LUAD4_He,4455
+Myeloid,LUAD5_He,2506
+Myeloid,N1_He,8103
+Myeloid,N2_He,5124
+Myeloid,N3_He,1991
+Myeloid,N4_He,2562
+Myeloid,N5_He,2269
+Smooth muscle,LUAD1_He,14
+Smooth muscle,LUAD2_He,4
+Smooth muscle,LUAD3_He,8
+Smooth muscle,LUAD4_He,16
+Smooth muscle,LUAD5_He,1
+Smooth muscle,N1_He,14
+Smooth muscle,N2_He,2
+Smooth muscle,N3_He,15
+Smooth muscle,N4_He,8
+Smooth muscle,N5_He,34
+Submucosal Gland,LUAD1_He,0
+Submucosal Gland,LUAD2_He,0
+Submucosal Gland,LUAD3_He,0
+Submucosal Gland,LUAD4_He,0
+Submucosal Gland,LUAD5_He,0
+Submucosal Gland,N1_He,0
+Submucosal Gland,N2_He,0
+Submucosal Gland,N3_He,1
+Submucosal Gland,N4_He,0
+Submucosal Gland,N5_He,0
+Unknown,LUAD1_He,169
+Unknown,LUAD2_He,167
+Unknown,LUAD3_He,167
+Unknown,LUAD4_He,384
+Unknown,LUAD5_He,51
+Unknown,N1_He,1284
+Unknown,N2_He,500
+Unknown,N3_He,2038
+Unknown,N4_He,3239
+Unknown,N5_He,227
+Airway epithelium,BRONCHO_11_Kim,99
+Airway epithelium,BRONCHO_58_Kim,28
+Airway epithelium,EBUS_06_Kim,437
+Airway epithelium,EBUS_10_Kim,26
+Airway epithelium,EBUS_12_Kim,53
+Airway epithelium,EBUS_13_Kim,14
+Airway epithelium,EBUS_15_Kim,6
+Airway epithelium,EBUS_19_Kim,5
+Airway epithelium,EBUS_28_Kim,1267
+Airway epithelium,EBUS_49_Kim,34
+Airway epithelium,EBUS_51_Kim,170
+Airway epithelium,EFFUSION_06_Kim,51
+Airway epithelium,EFFUSION_11_Kim,9
+Airway epithelium,EFFUSION_12_Kim,0
+Airway epithelium,EFFUSION_13_Kim,1
+Airway epithelium,EFFUSION_64_Kim,1
+Airway epithelium,LN_01_Kim,0
+Airway epithelium,LN_02_Kim,0
+Airway epithelium,LN_03_Kim,0
+Airway epithelium,LN_04_Kim,0
+Airway epithelium,LN_05_Kim,0
+Airway epithelium,LN_06_Kim,0
+Airway epithelium,LN_07_Kim,0
+Airway epithelium,LN_08_Kim,0
+Airway epithelium,LN_11_Kim,0
+Airway epithelium,LN_12_Kim,0
+Airway epithelium,LUNG_N01_Kim,33
+Airway epithelium,LUNG_N06_Kim,60
+Airway epithelium,LUNG_N08_Kim,84
+Airway epithelium,LUNG_N09_Kim,27
+Airway epithelium,LUNG_N18_Kim,210
+Airway epithelium,LUNG_N19_Kim,14
+Airway epithelium,LUNG_N20_Kim,53
+Airway epithelium,LUNG_N28_Kim,1
+Airway epithelium,LUNG_N30_Kim,214
+Airway epithelium,LUNG_N31_Kim,207
+Airway epithelium,LUNG_N34_Kim,122
+Airway epithelium,LUNG_T06_Kim,24
+Airway epithelium,LUNG_T08_Kim,5
+Airway epithelium,LUNG_T09_Kim,3
+Airway epithelium,LUNG_T18_Kim,532
+Airway epithelium,LUNG_T19_Kim,40
+Airway epithelium,LUNG_T20_Kim,14
+Airway epithelium,LUNG_T25_Kim,10
+Airway epithelium,LUNG_T28_Kim,268
+Airway epithelium,LUNG_T30_Kim,63
+Airway epithelium,LUNG_T31_Kim,39
+Airway epithelium,LUNG_T34_Kim,47
+Airway epithelium,NS_02_Kim,49
+Airway epithelium,NS_03_Kim,467
+Airway epithelium,NS_04_Kim,514
+Airway epithelium,NS_06_Kim,3
+Airway epithelium,NS_07_Kim,4670
+Airway epithelium,NS_12_Kim,117
+Airway epithelium,NS_13_Kim,0
+Airway epithelium,NS_16_Kim,13
+Airway epithelium,NS_17_Kim,431
+Airway epithelium,NS_19_Kim,473
+Alveolar epithelium,BRONCHO_11_Kim,2
+Alveolar epithelium,BRONCHO_58_Kim,309
+Alveolar epithelium,EBUS_06_Kim,195
+Alveolar epithelium,EBUS_10_Kim,162
+Alveolar epithelium,EBUS_12_Kim,15
+Alveolar epithelium,EBUS_13_Kim,0
+Alveolar epithelium,EBUS_15_Kim,133
+Alveolar epithelium,EBUS_19_Kim,103
+Alveolar epithelium,EBUS_28_Kim,1782
+Alveolar epithelium,EBUS_49_Kim,13
+Alveolar epithelium,EBUS_51_Kim,404
+Alveolar epithelium,EFFUSION_06_Kim,27
+Alveolar epithelium,EFFUSION_11_Kim,9
+Alveolar epithelium,EFFUSION_12_Kim,3
+Alveolar epithelium,EFFUSION_13_Kim,0
+Alveolar epithelium,EFFUSION_64_Kim,2
+Alveolar epithelium,LN_01_Kim,0
+Alveolar epithelium,LN_02_Kim,0
+Alveolar epithelium,LN_03_Kim,0
+Alveolar epithelium,LN_04_Kim,0
+Alveolar epithelium,LN_05_Kim,0
+Alveolar epithelium,LN_06_Kim,0
+Alveolar epithelium,LN_07_Kim,0
+Alveolar epithelium,LN_08_Kim,0
+Alveolar epithelium,LN_11_Kim,0
+Alveolar epithelium,LN_12_Kim,0
+Alveolar epithelium,LUNG_N01_Kim,154
+Alveolar epithelium,LUNG_N06_Kim,110
+Alveolar epithelium,LUNG_N08_Kim,196
+Alveolar epithelium,LUNG_N09_Kim,348
+Alveolar epithelium,LUNG_N18_Kim,168
+Alveolar epithelium,LUNG_N19_Kim,153
+Alveolar epithelium,LUNG_N20_Kim,235
+Alveolar epithelium,LUNG_N28_Kim,221
+Alveolar epithelium,LUNG_N30_Kim,106
+Alveolar epithelium,LUNG_N31_Kim,333
+Alveolar epithelium,LUNG_N34_Kim,502
+Alveolar epithelium,LUNG_T06_Kim,71
+Alveolar epithelium,LUNG_T08_Kim,17
+Alveolar epithelium,LUNG_T09_Kim,108
+Alveolar epithelium,LUNG_T18_Kim,6
+Alveolar epithelium,LUNG_T19_Kim,170
+Alveolar epithelium,LUNG_T20_Kim,325
+Alveolar epithelium,LUNG_T25_Kim,163
+Alveolar epithelium,LUNG_T28_Kim,386
+Alveolar epithelium,LUNG_T30_Kim,739
+Alveolar epithelium,LUNG_T31_Kim,137
+Alveolar epithelium,LUNG_T34_Kim,1873
+Alveolar epithelium,NS_02_Kim,8
+Alveolar epithelium,NS_03_Kim,362
+Alveolar epithelium,NS_04_Kim,14
+Alveolar epithelium,NS_06_Kim,42
+Alveolar epithelium,NS_07_Kim,15
+Alveolar epithelium,NS_12_Kim,1629
+Alveolar epithelium,NS_13_Kim,1289
+Alveolar epithelium,NS_16_Kim,27
+Alveolar epithelium,NS_17_Kim,0
+Alveolar epithelium,NS_19_Kim,3
+Blood vessels,BRONCHO_11_Kim,2
+Blood vessels,BRONCHO_58_Kim,12
+Blood vessels,EBUS_06_Kim,2
+Blood vessels,EBUS_10_Kim,0
+Blood vessels,EBUS_12_Kim,1
+Blood vessels,EBUS_13_Kim,0
+Blood vessels,EBUS_15_Kim,0
+Blood vessels,EBUS_19_Kim,2
+Blood vessels,EBUS_28_Kim,5
+Blood vessels,EBUS_49_Kim,0
+Blood vessels,EBUS_51_Kim,0
+Blood vessels,EFFUSION_06_Kim,0
+Blood vessels,EFFUSION_11_Kim,0
+Blood vessels,EFFUSION_12_Kim,0
+Blood vessels,EFFUSION_13_Kim,0
+Blood vessels,EFFUSION_64_Kim,0
+Blood vessels,LN_01_Kim,1
+Blood vessels,LN_02_Kim,1
+Blood vessels,LN_03_Kim,0
+Blood vessels,LN_04_Kim,0
+Blood vessels,LN_05_Kim,0
+Blood vessels,LN_06_Kim,0
+Blood vessels,LN_07_Kim,2
+Blood vessels,LN_08_Kim,1
+Blood vessels,LN_11_Kim,3
+Blood vessels,LN_12_Kim,1
+Blood vessels,LUNG_N01_Kim,30
+Blood vessels,LUNG_N06_Kim,6
+Blood vessels,LUNG_N08_Kim,107
+Blood vessels,LUNG_N09_Kim,46
+Blood vessels,LUNG_N18_Kim,131
+Blood vessels,LUNG_N19_Kim,369
+Blood vessels,LUNG_N20_Kim,59
+Blood vessels,LUNG_N28_Kim,6
+Blood vessels,LUNG_N30_Kim,108
+Blood vessels,LUNG_N31_Kim,106
+Blood vessels,LUNG_N34_Kim,61
+Blood vessels,LUNG_T06_Kim,51
+Blood vessels,LUNG_T08_Kim,9
+Blood vessels,LUNG_T09_Kim,25
+Blood vessels,LUNG_T18_Kim,16
+Blood vessels,LUNG_T19_Kim,147
+Blood vessels,LUNG_T20_Kim,2
+Blood vessels,LUNG_T25_Kim,29
+Blood vessels,LUNG_T28_Kim,19
+Blood vessels,LUNG_T30_Kim,149
+Blood vessels,LUNG_T31_Kim,90
+Blood vessels,LUNG_T34_Kim,16
+Blood vessels,NS_02_Kim,0
+Blood vessels,NS_03_Kim,6
+Blood vessels,NS_04_Kim,52
+Blood vessels,NS_06_Kim,3
+Blood vessels,NS_07_Kim,24
+Blood vessels,NS_12_Kim,15
+Blood vessels,NS_13_Kim,4
+Blood vessels,NS_16_Kim,4
+Blood vessels,NS_17_Kim,17
+Blood vessels,NS_19_Kim,25
+Fibroblast lineage,BRONCHO_11_Kim,3
+Fibroblast lineage,BRONCHO_58_Kim,63
+Fibroblast lineage,EBUS_06_Kim,0
+Fibroblast lineage,EBUS_10_Kim,6
+Fibroblast lineage,EBUS_12_Kim,13
+Fibroblast lineage,EBUS_13_Kim,0
+Fibroblast lineage,EBUS_15_Kim,0
+Fibroblast lineage,EBUS_19_Kim,2
+Fibroblast lineage,EBUS_28_Kim,9
+Fibroblast lineage,EBUS_49_Kim,1
+Fibroblast lineage,EBUS_51_Kim,0
+Fibroblast lineage,EFFUSION_06_Kim,0
+Fibroblast lineage,EFFUSION_11_Kim,0
+Fibroblast lineage,EFFUSION_12_Kim,0
+Fibroblast lineage,EFFUSION_13_Kim,0
+Fibroblast lineage,EFFUSION_64_Kim,0
+Fibroblast lineage,LN_01_Kim,1
+Fibroblast lineage,LN_02_Kim,2
+Fibroblast lineage,LN_03_Kim,1
+Fibroblast lineage,LN_04_Kim,2
+Fibroblast lineage,LN_05_Kim,10
+Fibroblast lineage,LN_06_Kim,1
+Fibroblast lineage,LN_07_Kim,2
+Fibroblast lineage,LN_08_Kim,3
+Fibroblast lineage,LN_11_Kim,1
+Fibroblast lineage,LN_12_Kim,8
+Fibroblast lineage,LUNG_N01_Kim,13
+Fibroblast lineage,LUNG_N06_Kim,9
+Fibroblast lineage,LUNG_N08_Kim,17
+Fibroblast lineage,LUNG_N09_Kim,46
+Fibroblast lineage,LUNG_N18_Kim,142
+Fibroblast lineage,LUNG_N19_Kim,63
+Fibroblast lineage,LUNG_N20_Kim,12
+Fibroblast lineage,LUNG_N28_Kim,10
+Fibroblast lineage,LUNG_N30_Kim,211
+Fibroblast lineage,LUNG_N31_Kim,798
+Fibroblast lineage,LUNG_N34_Kim,157
+Fibroblast lineage,LUNG_T06_Kim,419
+Fibroblast lineage,LUNG_T08_Kim,198
+Fibroblast lineage,LUNG_T09_Kim,15
+Fibroblast lineage,LUNG_T18_Kim,139
+Fibroblast lineage,LUNG_T19_Kim,97
+Fibroblast lineage,LUNG_T20_Kim,14
+Fibroblast lineage,LUNG_T25_Kim,20
+Fibroblast lineage,LUNG_T28_Kim,35
+Fibroblast lineage,LUNG_T30_Kim,67
+Fibroblast lineage,LUNG_T31_Kim,434
+Fibroblast lineage,LUNG_T34_Kim,22
+Fibroblast lineage,NS_02_Kim,3
+Fibroblast lineage,NS_03_Kim,2
+Fibroblast lineage,NS_04_Kim,54
+Fibroblast lineage,NS_06_Kim,25
+Fibroblast lineage,NS_07_Kim,14
+Fibroblast lineage,NS_12_Kim,13
+Fibroblast lineage,NS_13_Kim,7
+Fibroblast lineage,NS_16_Kim,8
+Fibroblast lineage,NS_17_Kim,30
+Fibroblast lineage,NS_19_Kim,98
+Lymphatic EC,BRONCHO_11_Kim,3
+Lymphatic EC,BRONCHO_58_Kim,1
+Lymphatic EC,EBUS_06_Kim,0
+Lymphatic EC,EBUS_10_Kim,5
+Lymphatic EC,EBUS_12_Kim,0
+Lymphatic EC,EBUS_13_Kim,2
+Lymphatic EC,EBUS_15_Kim,0
+Lymphatic EC,EBUS_19_Kim,0
+Lymphatic EC,EBUS_28_Kim,0
+Lymphatic EC,EBUS_49_Kim,0
+Lymphatic EC,EBUS_51_Kim,0
+Lymphatic EC,EFFUSION_06_Kim,0
+Lymphatic EC,EFFUSION_11_Kim,0
+Lymphatic EC,EFFUSION_12_Kim,0
+Lymphatic EC,EFFUSION_13_Kim,0
+Lymphatic EC,EFFUSION_64_Kim,0
+Lymphatic EC,LN_01_Kim,1
+Lymphatic EC,LN_02_Kim,0
+Lymphatic EC,LN_03_Kim,0
+Lymphatic EC,LN_04_Kim,0
+Lymphatic EC,LN_05_Kim,2
+Lymphatic EC,LN_06_Kim,2
+Lymphatic EC,LN_07_Kim,8
+Lymphatic EC,LN_08_Kim,6
+Lymphatic EC,LN_11_Kim,4
+Lymphatic EC,LN_12_Kim,1
+Lymphatic EC,LUNG_N01_Kim,2
+Lymphatic EC,LUNG_N06_Kim,3
+Lymphatic EC,LUNG_N08_Kim,2
+Lymphatic EC,LUNG_N09_Kim,6
+Lymphatic EC,LUNG_N18_Kim,38
+Lymphatic EC,LUNG_N19_Kim,2
+Lymphatic EC,LUNG_N20_Kim,9
+Lymphatic EC,LUNG_N28_Kim,5
+Lymphatic EC,LUNG_N30_Kim,70
+Lymphatic EC,LUNG_N31_Kim,66
+Lymphatic EC,LUNG_N34_Kim,21
+Lymphatic EC,LUNG_T06_Kim,2
+Lymphatic EC,LUNG_T08_Kim,4
+Lymphatic EC,LUNG_T09_Kim,1
+Lymphatic EC,LUNG_T18_Kim,3
+Lymphatic EC,LUNG_T19_Kim,7
+Lymphatic EC,LUNG_T20_Kim,1
+Lymphatic EC,LUNG_T25_Kim,2
+Lymphatic EC,LUNG_T28_Kim,9
+Lymphatic EC,LUNG_T30_Kim,2
+Lymphatic EC,LUNG_T31_Kim,47
+Lymphatic EC,LUNG_T34_Kim,3
+Lymphatic EC,NS_02_Kim,0
+Lymphatic EC,NS_03_Kim,1
+Lymphatic EC,NS_04_Kim,0
+Lymphatic EC,NS_06_Kim,0
+Lymphatic EC,NS_07_Kim,0
+Lymphatic EC,NS_12_Kim,0
+Lymphatic EC,NS_13_Kim,0
+Lymphatic EC,NS_16_Kim,0
+Lymphatic EC,NS_17_Kim,0
+Lymphatic EC,NS_19_Kim,0
+Lymphoid,BRONCHO_11_Kim,2222
+Lymphoid,BRONCHO_58_Kim,1693
+Lymphoid,EBUS_06_Kim,728
+Lymphoid,EBUS_10_Kim,3873
+Lymphoid,EBUS_12_Kim,499
+Lymphoid,EBUS_13_Kim,3024
+Lymphoid,EBUS_15_Kim,518
+Lymphoid,EBUS_19_Kim,1509
+Lymphoid,EBUS_28_Kim,240
+Lymphoid,EBUS_49_Kim,1313
+Lymphoid,EBUS_51_Kim,1242
+Lymphoid,EFFUSION_06_Kim,3742
+Lymphoid,EFFUSION_11_Kim,2046
+Lymphoid,EFFUSION_12_Kim,2880
+Lymphoid,EFFUSION_13_Kim,4178
+Lymphoid,EFFUSION_64_Kim,3704
+Lymphoid,LN_01_Kim,3489
+Lymphoid,LN_02_Kim,3030
+Lymphoid,LN_03_Kim,2879
+Lymphoid,LN_04_Kim,3007
+Lymphoid,LN_05_Kim,3037
+Lymphoid,LN_06_Kim,2819
+Lymphoid,LN_07_Kim,5493
+Lymphoid,LN_08_Kim,4199
+Lymphoid,LN_11_Kim,3581
+Lymphoid,LN_12_Kim,4127
+Lymphoid,LUNG_N01_Kim,1373
+Lymphoid,LUNG_N06_Kim,1291
+Lymphoid,LUNG_N08_Kim,1494
+Lymphoid,LUNG_N09_Kim,749
+Lymphoid,LUNG_N18_Kim,1713
+Lymphoid,LUNG_N19_Kim,1874
+Lymphoid,LUNG_N20_Kim,1685
+Lymphoid,LUNG_N28_Kim,2290
+Lymphoid,LUNG_N30_Kim,2115
+Lymphoid,LUNG_N31_Kim,1262
+Lymphoid,LUNG_N34_Kim,2452
+Lymphoid,LUNG_T06_Kim,2055
+Lymphoid,LUNG_T08_Kim,3115
+Lymphoid,LUNG_T09_Kim,2126
+Lymphoid,LUNG_T18_Kim,1359
+Lymphoid,LUNG_T19_Kim,2138
+Lymphoid,LUNG_T20_Kim,2470
+Lymphoid,LUNG_T25_Kim,3283
+Lymphoid,LUNG_T28_Kim,2189
+Lymphoid,LUNG_T30_Kim,1532
+Lymphoid,LUNG_T31_Kim,4029
+Lymphoid,LUNG_T34_Kim,403
+Lymphoid,NS_02_Kim,1109
+Lymphoid,NS_03_Kim,157
+Lymphoid,NS_04_Kim,133
+Lymphoid,NS_06_Kim,393
+Lymphoid,NS_07_Kim,231
+Lymphoid,NS_12_Kim,24
+Lymphoid,NS_13_Kim,2416
+Lymphoid,NS_16_Kim,622
+Lymphoid,NS_17_Kim,481
+Lymphoid,NS_19_Kim,439
+Mesothelium,BRONCHO_11_Kim,0
+Mesothelium,BRONCHO_58_Kim,0
+Mesothelium,EBUS_06_Kim,0
+Mesothelium,EBUS_10_Kim,0
+Mesothelium,EBUS_12_Kim,0
+Mesothelium,EBUS_13_Kim,0
+Mesothelium,EBUS_15_Kim,0
+Mesothelium,EBUS_19_Kim,0
+Mesothelium,EBUS_28_Kim,0
+Mesothelium,EBUS_49_Kim,0
+Mesothelium,EBUS_51_Kim,0
+Mesothelium,EFFUSION_06_Kim,19
+Mesothelium,EFFUSION_11_Kim,0
+Mesothelium,EFFUSION_12_Kim,1
+Mesothelium,EFFUSION_13_Kim,12
+Mesothelium,EFFUSION_64_Kim,0
+Mesothelium,LN_01_Kim,0
+Mesothelium,LN_02_Kim,0
+Mesothelium,LN_03_Kim,0
+Mesothelium,LN_04_Kim,0
+Mesothelium,LN_05_Kim,0
+Mesothelium,LN_06_Kim,0
+Mesothelium,LN_07_Kim,0
+Mesothelium,LN_08_Kim,0
+Mesothelium,LN_11_Kim,0
+Mesothelium,LN_12_Kim,0
+Mesothelium,LUNG_N01_Kim,0
+Mesothelium,LUNG_N06_Kim,0
+Mesothelium,LUNG_N08_Kim,0
+Mesothelium,LUNG_N09_Kim,0
+Mesothelium,LUNG_N18_Kim,17
+Mesothelium,LUNG_N19_Kim,0
+Mesothelium,LUNG_N20_Kim,0
+Mesothelium,LUNG_N28_Kim,0
+Mesothelium,LUNG_N30_Kim,0
+Mesothelium,LUNG_N31_Kim,17
+Mesothelium,LUNG_N34_Kim,4
+Mesothelium,LUNG_T06_Kim,1
+Mesothelium,LUNG_T08_Kim,0
+Mesothelium,LUNG_T09_Kim,0
+Mesothelium,LUNG_T18_Kim,0
+Mesothelium,LUNG_T19_Kim,0
+Mesothelium,LUNG_T20_Kim,0
+Mesothelium,LUNG_T25_Kim,0
+Mesothelium,LUNG_T28_Kim,11
+Mesothelium,LUNG_T30_Kim,0
+Mesothelium,LUNG_T31_Kim,5
+Mesothelium,LUNG_T34_Kim,1
+Mesothelium,NS_02_Kim,0
+Mesothelium,NS_03_Kim,0
+Mesothelium,NS_04_Kim,0
+Mesothelium,NS_06_Kim,0
+Mesothelium,NS_07_Kim,0
+Mesothelium,NS_12_Kim,0
+Mesothelium,NS_13_Kim,0
+Mesothelium,NS_16_Kim,0
+Mesothelium,NS_17_Kim,0
+Mesothelium,NS_19_Kim,0
+Myeloid,BRONCHO_11_Kim,733
+Myeloid,BRONCHO_58_Kim,509
+Myeloid,EBUS_06_Kim,383
+Myeloid,EBUS_10_Kim,802
+Myeloid,EBUS_12_Kim,2305
+Myeloid,EBUS_13_Kim,138
+Myeloid,EBUS_15_Kim,306
+Myeloid,EBUS_19_Kim,346
+Myeloid,EBUS_28_Kim,160
+Myeloid,EBUS_49_Kim,263
+Myeloid,EBUS_51_Kim,720
+Myeloid,EFFUSION_06_Kim,913
+Myeloid,EFFUSION_11_Kim,802
+Myeloid,EFFUSION_12_Kim,1298
+Myeloid,EFFUSION_13_Kim,209
+Myeloid,EFFUSION_64_Kim,88
+Myeloid,LN_01_Kim,114
+Myeloid,LN_02_Kim,123
+Myeloid,LN_03_Kim,116
+Myeloid,LN_04_Kim,67
+Myeloid,LN_05_Kim,32
+Myeloid,LN_06_Kim,100
+Myeloid,LN_07_Kim,144
+Myeloid,LN_08_Kim,140
+Myeloid,LN_11_Kim,153
+Myeloid,LN_12_Kim,344
+Myeloid,LUNG_N01_Kim,1554
+Myeloid,LUNG_N06_Kim,1309
+Myeloid,LUNG_N08_Kim,1437
+Myeloid,LUNG_N09_Kim,1261
+Myeloid,LUNG_N18_Kim,2132
+Myeloid,LUNG_N19_Kim,1335
+Myeloid,LUNG_N20_Kim,3713
+Myeloid,LUNG_N28_Kim,849
+Myeloid,LUNG_N30_Kim,1011
+Myeloid,LUNG_N31_Kim,1398
+Myeloid,LUNG_N34_Kim,1824
+Myeloid,LUNG_T06_Kim,665
+Myeloid,LUNG_T08_Kim,344
+Myeloid,LUNG_T09_Kim,1487
+Myeloid,LUNG_T18_Kim,1104
+Myeloid,LUNG_T19_Kim,1604
+Myeloid,LUNG_T20_Kim,999
+Myeloid,LUNG_T25_Kim,778
+Myeloid,LUNG_T28_Kim,1150
+Myeloid,LUNG_T30_Kim,1441
+Myeloid,LUNG_T31_Kim,518
+Myeloid,LUNG_T34_Kim,339
+Myeloid,NS_02_Kim,900
+Myeloid,NS_03_Kim,101
+Myeloid,NS_04_Kim,340
+Myeloid,NS_06_Kim,420
+Myeloid,NS_07_Kim,294
+Myeloid,NS_12_Kim,292
+Myeloid,NS_13_Kim,993
+Myeloid,NS_16_Kim,178
+Myeloid,NS_17_Kim,655
+Myeloid,NS_19_Kim,1894
+Smooth muscle,BRONCHO_11_Kim,0
+Smooth muscle,BRONCHO_58_Kim,11
+Smooth muscle,EBUS_06_Kim,0
+Smooth muscle,EBUS_10_Kim,0
+Smooth muscle,EBUS_12_Kim,0
+Smooth muscle,EBUS_13_Kim,3
+Smooth muscle,EBUS_15_Kim,1
+Smooth muscle,EBUS_19_Kim,2
+Smooth muscle,EBUS_28_Kim,1
+Smooth muscle,EBUS_49_Kim,0
+Smooth muscle,EBUS_51_Kim,0
+Smooth muscle,EFFUSION_06_Kim,0
+Smooth muscle,EFFUSION_11_Kim,0
+Smooth muscle,EFFUSION_12_Kim,0
+Smooth muscle,EFFUSION_13_Kim,0
+Smooth muscle,EFFUSION_64_Kim,0
+Smooth muscle,LN_01_Kim,1
+Smooth muscle,LN_02_Kim,0
+Smooth muscle,LN_03_Kim,0
+Smooth muscle,LN_04_Kim,0
+Smooth muscle,LN_05_Kim,1
+Smooth muscle,LN_06_Kim,0
+Smooth muscle,LN_07_Kim,2
+Smooth muscle,LN_08_Kim,2
+Smooth muscle,LN_11_Kim,0
+Smooth muscle,LN_12_Kim,2
+Smooth muscle,LUNG_N01_Kim,3
+Smooth muscle,LUNG_N06_Kim,0
+Smooth muscle,LUNG_N08_Kim,1
+Smooth muscle,LUNG_N09_Kim,6
+Smooth muscle,LUNG_N18_Kim,14
+Smooth muscle,LUNG_N19_Kim,15
+Smooth muscle,LUNG_N20_Kim,3
+Smooth muscle,LUNG_N28_Kim,2
+Smooth muscle,LUNG_N30_Kim,11
+Smooth muscle,LUNG_N31_Kim,11
+Smooth muscle,LUNG_N34_Kim,12
+Smooth muscle,LUNG_T06_Kim,30
+Smooth muscle,LUNG_T08_Kim,1
+Smooth muscle,LUNG_T09_Kim,4
+Smooth muscle,LUNG_T18_Kim,30
+Smooth muscle,LUNG_T19_Kim,8
+Smooth muscle,LUNG_T20_Kim,3
+Smooth muscle,LUNG_T25_Kim,0
+Smooth muscle,LUNG_T28_Kim,9
+Smooth muscle,LUNG_T30_Kim,3
+Smooth muscle,LUNG_T31_Kim,25
+Smooth muscle,LUNG_T34_Kim,3
+Smooth muscle,NS_02_Kim,37
+Smooth muscle,NS_03_Kim,1
+Smooth muscle,NS_04_Kim,16
+Smooth muscle,NS_06_Kim,40
+Smooth muscle,NS_07_Kim,13
+Smooth muscle,NS_12_Kim,7
+Smooth muscle,NS_13_Kim,13
+Smooth muscle,NS_16_Kim,92
+Smooth muscle,NS_17_Kim,55
+Smooth muscle,NS_19_Kim,25
+Submucosal Gland,BRONCHO_11_Kim,0
+Submucosal Gland,BRONCHO_58_Kim,0
+Submucosal Gland,EBUS_06_Kim,1
+Submucosal Gland,EBUS_10_Kim,0
+Submucosal Gland,EBUS_12_Kim,0
+Submucosal Gland,EBUS_13_Kim,0
+Submucosal Gland,EBUS_15_Kim,0
+Submucosal Gland,EBUS_19_Kim,0
+Submucosal Gland,EBUS_28_Kim,0
+Submucosal Gland,EBUS_49_Kim,0
+Submucosal Gland,EBUS_51_Kim,0
+Submucosal Gland,EFFUSION_06_Kim,0
+Submucosal Gland,EFFUSION_11_Kim,0
+Submucosal Gland,EFFUSION_12_Kim,0
+Submucosal Gland,EFFUSION_13_Kim,0
+Submucosal Gland,EFFUSION_64_Kim,0
+Submucosal Gland,LN_01_Kim,0
+Submucosal Gland,LN_02_Kim,0
+Submucosal Gland,LN_03_Kim,0
+Submucosal Gland,LN_04_Kim,0
+Submucosal Gland,LN_05_Kim,0
+Submucosal Gland,LN_06_Kim,0
+Submucosal Gland,LN_07_Kim,0
+Submucosal Gland,LN_08_Kim,0
+Submucosal Gland,LN_11_Kim,0
+Submucosal Gland,LN_12_Kim,0
+Submucosal Gland,LUNG_N01_Kim,0
+Submucosal Gland,LUNG_N06_Kim,0
+Submucosal Gland,LUNG_N08_Kim,0
+Submucosal Gland,LUNG_N09_Kim,0
+Submucosal Gland,LUNG_N18_Kim,0
+Submucosal Gland,LUNG_N19_Kim,0
+Submucosal Gland,LUNG_N20_Kim,0
+Submucosal Gland,LUNG_N28_Kim,0
+Submucosal Gland,LUNG_N30_Kim,0
+Submucosal Gland,LUNG_N31_Kim,0
+Submucosal Gland,LUNG_N34_Kim,0
+Submucosal Gland,LUNG_T06_Kim,0
+Submucosal Gland,LUNG_T08_Kim,0
+Submucosal Gland,LUNG_T09_Kim,0
+Submucosal Gland,LUNG_T18_Kim,0
+Submucosal Gland,LUNG_T19_Kim,0
+Submucosal Gland,LUNG_T20_Kim,0
+Submucosal Gland,LUNG_T25_Kim,0
+Submucosal Gland,LUNG_T28_Kim,0
+Submucosal Gland,LUNG_T30_Kim,0
+Submucosal Gland,LUNG_T31_Kim,0
+Submucosal Gland,LUNG_T34_Kim,0
+Submucosal Gland,NS_02_Kim,0
+Submucosal Gland,NS_03_Kim,0
+Submucosal Gland,NS_04_Kim,0
+Submucosal Gland,NS_06_Kim,0
+Submucosal Gland,NS_07_Kim,1
+Submucosal Gland,NS_12_Kim,0
+Submucosal Gland,NS_13_Kim,0
+Submucosal Gland,NS_16_Kim,0
+Submucosal Gland,NS_17_Kim,17
+Submucosal Gland,NS_19_Kim,0
+Unknown,BRONCHO_11_Kim,78
+Unknown,BRONCHO_58_Kim,70
+Unknown,EBUS_06_Kim,439
+Unknown,EBUS_10_Kim,94
+Unknown,EBUS_12_Kim,73
+Unknown,EBUS_13_Kim,262
+Unknown,EBUS_15_Kim,61
+Unknown,EBUS_19_Kim,57
+Unknown,EBUS_28_Kim,1409
+Unknown,EBUS_49_Kim,83
+Unknown,EBUS_51_Kim,639
+Unknown,EFFUSION_06_Kim,69
+Unknown,EFFUSION_11_Kim,58
+Unknown,EFFUSION_12_Kim,21
+Unknown,EFFUSION_13_Kim,6
+Unknown,EFFUSION_64_Kim,14
+Unknown,LN_01_Kim,9
+Unknown,LN_02_Kim,3
+Unknown,LN_03_Kim,10
+Unknown,LN_04_Kim,1
+Unknown,LN_05_Kim,3
+Unknown,LN_06_Kim,6
+Unknown,LN_07_Kim,14
+Unknown,LN_08_Kim,9
+Unknown,LN_11_Kim,6
+Unknown,LN_12_Kim,16
+Unknown,LUNG_N01_Kim,13
+Unknown,LUNG_N06_Kim,6
+Unknown,LUNG_N08_Kim,18
+Unknown,LUNG_N09_Kim,9
+Unknown,LUNG_N18_Kim,26
+Unknown,LUNG_N19_Kim,27
+Unknown,LUNG_N20_Kim,28
+Unknown,LUNG_N28_Kim,12
+Unknown,LUNG_N30_Kim,28
+Unknown,LUNG_N31_Kim,32
+Unknown,LUNG_N34_Kim,43
+Unknown,LUNG_T06_Kim,95
+Unknown,LUNG_T08_Kim,35
+Unknown,LUNG_T09_Kim,12
+Unknown,LUNG_T18_Kim,449
+Unknown,LUNG_T19_Kim,115
+Unknown,LUNG_T20_Kim,118
+Unknown,LUNG_T25_Kim,52
+Unknown,LUNG_T28_Kim,462
+Unknown,LUNG_T30_Kim,90
+Unknown,LUNG_T31_Kim,106
+Unknown,LUNG_T34_Kim,536
+Unknown,NS_02_Kim,159
+Unknown,NS_03_Kim,1651
+Unknown,NS_04_Kim,430
+Unknown,NS_06_Kim,86
+Unknown,NS_07_Kim,454
+Unknown,NS_12_Kim,694
+Unknown,NS_13_Kim,85
+Unknown,NS_16_Kim,334
+Unknown,NS_17_Kim,482
+Unknown,NS_19_Kim,273
+Airway epithelium,patient_32_tumor_primary_Goveia,15
+Airway epithelium,patient_40_normal_adjacent_Goveia,3
+Airway epithelium,patient_40_tumor_primary_Goveia,88
+Airway epithelium,patient_41_normal_adjacent_Goveia,9
+Airway epithelium,patient_41_tumor_primary_Goveia,1320
+Airway epithelium,patient_42_normal_adjacent_Goveia,6
+Airway epithelium,patient_42_tumor_primary_Goveia,2
+Airway epithelium,patient_45_normal_adjacent_Goveia,32
+Airway epithelium,patient_45_tumor_primary_Goveia,413
+Airway epithelium,patient_46_normal_adjacent_Goveia,10
+Airway epithelium,patient_46_tumor_primary_Goveia,701
+Airway epithelium,patient_50_normal_adjacent_Goveia,3
+Airway epithelium,patient_50_tumor_primary_Goveia,74
+Alveolar epithelium,patient_32_tumor_primary_Goveia,32
+Alveolar epithelium,patient_40_normal_adjacent_Goveia,11
+Alveolar epithelium,patient_40_tumor_primary_Goveia,144
+Alveolar epithelium,patient_41_normal_adjacent_Goveia,7
+Alveolar epithelium,patient_41_tumor_primary_Goveia,592
+Alveolar epithelium,patient_42_normal_adjacent_Goveia,90
+Alveolar epithelium,patient_42_tumor_primary_Goveia,3
+Alveolar epithelium,patient_45_normal_adjacent_Goveia,1
+Alveolar epithelium,patient_45_tumor_primary_Goveia,176
+Alveolar epithelium,patient_46_normal_adjacent_Goveia,315
+Alveolar epithelium,patient_46_tumor_primary_Goveia,624
+Alveolar epithelium,patient_50_normal_adjacent_Goveia,51
+Alveolar epithelium,patient_50_tumor_primary_Goveia,253
+Blood vessels,patient_32_tumor_primary_Goveia,3744
+Blood vessels,patient_40_normal_adjacent_Goveia,1667
+Blood vessels,patient_40_tumor_primary_Goveia,3249
+Blood vessels,patient_41_normal_adjacent_Goveia,442
+Blood vessels,patient_41_tumor_primary_Goveia,3728
+Blood vessels,patient_42_normal_adjacent_Goveia,970
+Blood vessels,patient_42_tumor_primary_Goveia,96
+Blood vessels,patient_45_normal_adjacent_Goveia,308
+Blood vessels,patient_45_tumor_primary_Goveia,2682
+Blood vessels,patient_46_normal_adjacent_Goveia,603
+Blood vessels,patient_46_tumor_primary_Goveia,954
+Blood vessels,patient_50_normal_adjacent_Goveia,949
+Blood vessels,patient_50_tumor_primary_Goveia,1246
+Fibroblast lineage,patient_32_tumor_primary_Goveia,31
+Fibroblast lineage,patient_40_normal_adjacent_Goveia,2
+Fibroblast lineage,patient_40_tumor_primary_Goveia,26
+Fibroblast lineage,patient_41_normal_adjacent_Goveia,0
+Fibroblast lineage,patient_41_tumor_primary_Goveia,190
+Fibroblast lineage,patient_42_normal_adjacent_Goveia,4
+Fibroblast lineage,patient_42_tumor_primary_Goveia,14
+Fibroblast lineage,patient_45_normal_adjacent_Goveia,3
+Fibroblast lineage,patient_45_tumor_primary_Goveia,115
+Fibroblast lineage,patient_46_normal_adjacent_Goveia,34
+Fibroblast lineage,patient_46_tumor_primary_Goveia,117
+Fibroblast lineage,patient_50_normal_adjacent_Goveia,9
+Fibroblast lineage,patient_50_tumor_primary_Goveia,41
+Lymphatic EC,patient_32_tumor_primary_Goveia,940
+Lymphatic EC,patient_40_normal_adjacent_Goveia,184
+Lymphatic EC,patient_40_tumor_primary_Goveia,88
+Lymphatic EC,patient_41_normal_adjacent_Goveia,96
+Lymphatic EC,patient_41_tumor_primary_Goveia,142
+Lymphatic EC,patient_42_normal_adjacent_Goveia,570
+Lymphatic EC,patient_42_tumor_primary_Goveia,25
+Lymphatic EC,patient_45_normal_adjacent_Goveia,155
+Lymphatic EC,patient_45_tumor_primary_Goveia,105
+Lymphatic EC,patient_46_normal_adjacent_Goveia,215
+Lymphatic EC,patient_46_tumor_primary_Goveia,183
+Lymphatic EC,patient_50_normal_adjacent_Goveia,135
+Lymphatic EC,patient_50_tumor_primary_Goveia,328
+Lymphoid,patient_32_tumor_primary_Goveia,2
+Lymphoid,patient_40_normal_adjacent_Goveia,125
+Lymphoid,patient_40_tumor_primary_Goveia,396
+Lymphoid,patient_41_normal_adjacent_Goveia,91
+Lymphoid,patient_41_tumor_primary_Goveia,602
+Lymphoid,patient_42_normal_adjacent_Goveia,449
+Lymphoid,patient_42_tumor_primary_Goveia,442
+Lymphoid,patient_45_normal_adjacent_Goveia,48
+Lymphoid,patient_45_tumor_primary_Goveia,239
+Lymphoid,patient_46_normal_adjacent_Goveia,32
+Lymphoid,patient_46_tumor_primary_Goveia,409
+Lymphoid,patient_50_normal_adjacent_Goveia,241
+Lymphoid,patient_50_tumor_primary_Goveia,181
+Mesothelium,patient_32_tumor_primary_Goveia,0
+Mesothelium,patient_40_normal_adjacent_Goveia,0
+Mesothelium,patient_40_tumor_primary_Goveia,0
+Mesothelium,patient_41_normal_adjacent_Goveia,0
+Mesothelium,patient_41_tumor_primary_Goveia,0
+Mesothelium,patient_42_normal_adjacent_Goveia,0
+Mesothelium,patient_42_tumor_primary_Goveia,0
+Mesothelium,patient_45_normal_adjacent_Goveia,0
+Mesothelium,patient_45_tumor_primary_Goveia,0
+Mesothelium,patient_46_normal_adjacent_Goveia,5
+Mesothelium,patient_46_tumor_primary_Goveia,2
+Mesothelium,patient_50_normal_adjacent_Goveia,0
+Mesothelium,patient_50_tumor_primary_Goveia,0
+Myeloid,patient_32_tumor_primary_Goveia,0
+Myeloid,patient_40_normal_adjacent_Goveia,2836
+Myeloid,patient_40_tumor_primary_Goveia,888
+Myeloid,patient_41_normal_adjacent_Goveia,1322
+Myeloid,patient_41_tumor_primary_Goveia,295
+Myeloid,patient_42_normal_adjacent_Goveia,1351
+Myeloid,patient_42_tumor_primary_Goveia,1578
+Myeloid,patient_45_normal_adjacent_Goveia,1138
+Myeloid,patient_45_tumor_primary_Goveia,423
+Myeloid,patient_46_normal_adjacent_Goveia,2614
+Myeloid,patient_46_tumor_primary_Goveia,108
+Myeloid,patient_50_normal_adjacent_Goveia,1565
+Myeloid,patient_50_tumor_primary_Goveia,655
+Smooth muscle,patient_32_tumor_primary_Goveia,7
+Smooth muscle,patient_40_normal_adjacent_Goveia,3
+Smooth muscle,patient_40_tumor_primary_Goveia,3
+Smooth muscle,patient_41_normal_adjacent_Goveia,0
+Smooth muscle,patient_41_tumor_primary_Goveia,8
+Smooth muscle,patient_42_normal_adjacent_Goveia,5
+Smooth muscle,patient_42_tumor_primary_Goveia,1
+Smooth muscle,patient_45_normal_adjacent_Goveia,0
+Smooth muscle,patient_45_tumor_primary_Goveia,27
+Smooth muscle,patient_46_normal_adjacent_Goveia,1
+Smooth muscle,patient_46_tumor_primary_Goveia,31
+Smooth muscle,patient_50_normal_adjacent_Goveia,0
+Smooth muscle,patient_50_tumor_primary_Goveia,7
+Unknown,patient_32_tumor_primary_Goveia,59
+Unknown,patient_40_normal_adjacent_Goveia,192
+Unknown,patient_40_tumor_primary_Goveia,182
+Unknown,patient_41_normal_adjacent_Goveia,141
+Unknown,patient_41_tumor_primary_Goveia,606
+Unknown,patient_42_normal_adjacent_Goveia,42
+Unknown,patient_42_tumor_primary_Goveia,54
+Unknown,patient_45_normal_adjacent_Goveia,35
+Unknown,patient_45_tumor_primary_Goveia,1207
+Unknown,patient_46_normal_adjacent_Goveia,48
+Unknown,patient_46_tumor_primary_Goveia,1272
+Unknown,patient_50_normal_adjacent_Goveia,18
+Unknown,patient_50_tumor_primary_Goveia,596
+Airway epithelium,NSCLC-1_Chen,1
+Airway epithelium,NSCLC-2_Chen,5
+Airway epithelium,NSCLC-3_Chen,17
+Airway epithelium,NSCLC-4_Chen,9
+Airway epithelium,NSCLC-5_Chen,41
+Airway epithelium,NSCLC-6_Chen,160
+Airway epithelium,NSCLC-7_Chen,120
+Airway epithelium,NSCLC-8_Chen,2222
+Airway epithelium,NSCLC-9_Chen,162
+Airway epithelium,NSCLC-10_Chen,150
+Airway epithelium,NSCLC-11_Chen,206
+Alveolar epithelium,NSCLC-1_Chen,2
+Alveolar epithelium,NSCLC-2_Chen,58
+Alveolar epithelium,NSCLC-3_Chen,22
+Alveolar epithelium,NSCLC-4_Chen,11
+Alveolar epithelium,NSCLC-5_Chen,29
+Alveolar epithelium,NSCLC-6_Chen,245
+Alveolar epithelium,NSCLC-7_Chen,0
+Alveolar epithelium,NSCLC-8_Chen,870
+Alveolar epithelium,NSCLC-9_Chen,327
+Alveolar epithelium,NSCLC-10_Chen,1397
+Alveolar epithelium,NSCLC-11_Chen,131
+Blood vessels,NSCLC-1_Chen,288
+Blood vessels,NSCLC-2_Chen,86
+Blood vessels,NSCLC-3_Chen,62
+Blood vessels,NSCLC-4_Chen,5
+Blood vessels,NSCLC-5_Chen,1
+Blood vessels,NSCLC-6_Chen,217
+Blood vessels,NSCLC-7_Chen,45
+Blood vessels,NSCLC-8_Chen,19
+Blood vessels,NSCLC-9_Chen,8088
+Blood vessels,NSCLC-10_Chen,52
+Blood vessels,NSCLC-11_Chen,141
+Fibroblast lineage,NSCLC-1_Chen,10
+Fibroblast lineage,NSCLC-2_Chen,328
+Fibroblast lineage,NSCLC-3_Chen,111
+Fibroblast lineage,NSCLC-4_Chen,32
+Fibroblast lineage,NSCLC-5_Chen,22
+Fibroblast lineage,NSCLC-6_Chen,77
+Fibroblast lineage,NSCLC-7_Chen,182
+Fibroblast lineage,NSCLC-8_Chen,16
+Fibroblast lineage,NSCLC-9_Chen,3
+Fibroblast lineage,NSCLC-10_Chen,21
+Fibroblast lineage,NSCLC-11_Chen,452
+Lymphatic EC,NSCLC-1_Chen,0
+Lymphatic EC,NSCLC-2_Chen,9
+Lymphatic EC,NSCLC-3_Chen,0
+Lymphatic EC,NSCLC-4_Chen,0
+Lymphatic EC,NSCLC-5_Chen,1
+Lymphatic EC,NSCLC-6_Chen,6
+Lymphatic EC,NSCLC-7_Chen,21
+Lymphatic EC,NSCLC-8_Chen,5
+Lymphatic EC,NSCLC-9_Chen,0
+Lymphatic EC,NSCLC-10_Chen,3
+Lymphatic EC,NSCLC-11_Chen,5
+Lymphoid,NSCLC-1_Chen,1910
+Lymphoid,NSCLC-2_Chen,4024
+Lymphoid,NSCLC-3_Chen,11921
+Lymphoid,NSCLC-4_Chen,5439
+Lymphoid,NSCLC-5_Chen,11847
+Lymphoid,NSCLC-6_Chen,3743
+Lymphoid,NSCLC-7_Chen,5405
+Lymphoid,NSCLC-8_Chen,3501
+Lymphoid,NSCLC-9_Chen,134
+Lymphoid,NSCLC-10_Chen,16358
+Lymphoid,NSCLC-11_Chen,10167
+Mesothelium,NSCLC-1_Chen,0
+Mesothelium,NSCLC-2_Chen,0
+Mesothelium,NSCLC-3_Chen,0
+Mesothelium,NSCLC-4_Chen,0
+Mesothelium,NSCLC-5_Chen,0
+Mesothelium,NSCLC-6_Chen,5
+Mesothelium,NSCLC-7_Chen,0
+Mesothelium,NSCLC-8_Chen,0
+Mesothelium,NSCLC-9_Chen,0
+Mesothelium,NSCLC-10_Chen,0
+Mesothelium,NSCLC-11_Chen,1
+Myeloid,NSCLC-1_Chen,84
+Myeloid,NSCLC-2_Chen,696
+Myeloid,NSCLC-3_Chen,349
+Myeloid,NSCLC-4_Chen,113
+Myeloid,NSCLC-5_Chen,244
+Myeloid,NSCLC-6_Chen,8919
+Myeloid,NSCLC-7_Chen,5520
+Myeloid,NSCLC-8_Chen,7295
+Myeloid,NSCLC-9_Chen,3
+Myeloid,NSCLC-10_Chen,1822
+Myeloid,NSCLC-11_Chen,5794
+Smooth muscle,NSCLC-1_Chen,4
+Smooth muscle,NSCLC-2_Chen,37
+Smooth muscle,NSCLC-3_Chen,8
+Smooth muscle,NSCLC-4_Chen,7
+Smooth muscle,NSCLC-5_Chen,0
+Smooth muscle,NSCLC-6_Chen,4
+Smooth muscle,NSCLC-7_Chen,56
+Smooth muscle,NSCLC-8_Chen,3
+Smooth muscle,NSCLC-9_Chen,0
+Smooth muscle,NSCLC-10_Chen,3
+Smooth muscle,NSCLC-11_Chen,14
+Unknown,NSCLC-1_Chen,26
+Unknown,NSCLC-2_Chen,183
+Unknown,NSCLC-3_Chen,94
+Unknown,NSCLC-4_Chen,91
+Unknown,NSCLC-5_Chen,188
+Unknown,NSCLC-6_Chen,472
+Unknown,NSCLC-7_Chen,596
+Unknown,NSCLC-8_Chen,2384
+Unknown,NSCLC-9_Chen,997
+Unknown,NSCLC-10_Chen,1459
+Unknown,NSCLC-11_Chen,2874

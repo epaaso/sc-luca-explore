@@ -1,0 +1,10 @@
+ID	NO CANCER	tissue type	instrument model	Extraction protocol (química)	Healthy	Conditions
+Adams_Kaminski_2020_COPD	TRUE	distal lung parenchyma	Illumina HiSeq 4000	10X  3’ v2	TRUE	codf,fibrosis,healthy
+Guo_Zhang_2018_NSCLC	TRUE	lung (just Tcells)	Illumina HiSeq 4000, Illumina HiSeq 2500	Smart-seq2	TRUE	blood,tumor,normal adjacent
+Habermann_Kropski_2020_pulmonary-fibrosis	TRUE	lung	Illumina NextSeq 500, Illumina HiSeq 4000,Illumina NovaSeq 6000	10x  3’ v2, 10x  5’ v2	TRUE	'ILD', 'IPF', 'NSIP', 'Sarcoidosis', 'cHP', 'healthy_control'
+Madissoon_Meyer_2020_pulmonary-fibrosis	TRUE	lung	Ilumina HiSeq4000	10x  3' v2	TRUE	0h,24h,72h
+Maier_Merad_2020_NSCLC	TRUE	lung (CD45+)	NextSeq, NovaSeq 6000	Smart-seq2	TRUE
+Mayr_Schiller_2020_pulmonary-fibrosis	TRUE	lung	NA	Drop-seq	TRUE	healthy_control,pulmonary fibrosis
+Reyfman_Misharin_2018_pulmonary-fibrosis	TRUE	lung	NA	10x 3' v2	TRUE	'Cryobiopsy', 'HP', 'IPF', 'Myositis', 'SSc-ILD', 'healthy_control'
+Travaglini_Krasnow_2020_Lung_10x	TRUE	lung	NovaSeq 6000	10x  3' v2	TRUE
+Vieira_Teichmann_2019_asthma	TRUE	lung	Hiseq 4000	10x 3’ v2, Smart-seq2, Drop-seq	TRUE
