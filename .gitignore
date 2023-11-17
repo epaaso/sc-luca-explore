@@ -1,3 +1,4 @@
 *.sqlite
 .ipynb_checkpoints/**
 surgeries/**
+out/
