@@ -58,7 +58,4 @@ Rscript -e "update.packages(ask=FALSE, repos='https://cran.itam.mx/')"
 Rscript -e "install.packages(c('devtools', 'gam', 'RColorBrewer', 'BiocManager', 'IRkernel'), repos='https://cran.itam.mx/')"
 Rscript -e "IRkernel::installspec(user = FALSE)"
 Rscript -e "devtools::install_github('MatteoBlla/PsiNorm')"
-
-
-
 ```
