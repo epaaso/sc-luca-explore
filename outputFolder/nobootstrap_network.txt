@@ -1,27 +1,52 @@
 Regulator	Target	MI
-Lymphatic EC	Lymphoid	0.13802146954268935
-Lymphatic EC	Blood vessels	0.3077533555134151
-Lymphatic EC	Myeloid	0.1278399701682078
-Lymphoid	Alveolar epithelium	0.11788348473805144
-Lymphoid	Myeloid	0.16642290070739918
-Unknown	Airway epithelium	0.25825610349905226
-Alveolar epithelium	Lymphoid	0.11788348473804966
-Alveolar epithelium	Blood vessels	0.11217491432772686
-Alveolar epithelium	Myeloid	0.14360077717544684
-Blood vessels	Lymphatic EC	0.31754621766894875
-Blood vessels	Unknown	0.1141596803759013
-Blood vessels	Smooth muscle	0.20982317237860837
-Blood vessels	Myeloid	0.15537926284824977
-Blood vessels	Fibroblast lineage	0.33143285437030556
-Smooth muscle	Blood vessels	0.21865325753019427
-Smooth muscle	Fibroblast lineage	0.31209773010369624
-Airway epithelium	Unknown	0.26459699693217953
-Airway epithelium	Fibroblast lineage	0.11427326064715526
-Myeloid	Lymphatic EC	0.11150309418237025
-Myeloid	Lymphoid	0.16642290070739918
-Myeloid	Alveolar epithelium	0.14233236932889337
-Myeloid	Blood vessels	0.15188744778653884
-Myeloid	Airway epithelium	0.11276921361163339
-Fibroblast lineage	Blood vessels	0.32143671967369514
-Fibroblast lineage	Smooth muscle	0.29974056965219287
-Fibroblast lineage	Airway epithelium	0.11089648450483391
+Unknown_Normal	Blood vessels_Normal	0.13729032075046277
+Unknown_Normal	Alveolar epithelium_Normal	0.15087458331136805
+Unknown_Normal	Airway epithelium_Normal	0.27317302965124224
+Unknown_Normal	Myeloid_Normal	0.11268837095216266
+Lymphoid_Normal	Lymphatic EC_Normal	0.13135248070988936
+Lymphoid_Normal	Alveolar epithelium_Normal	0.12084733653222024
+Lymphoid_Normal	Myeloid_Normal	0.3299500184928439
+Unknown_Tumor	Airway epithelium_Tumor	0.4032493118654852
+Unknown_Tumor	Lymphoid_Tumor	0.21191695815766298
+Unknown_Tumor	Blood vessels_Tumor	0.128240965469125
+Unknown_Tumor	Myeloid_Tumor	0.12884472701797467
+Unknown_Tumor	Alveolar epithelium_Tumor	0.2429406610238436
+Smooth muscle_Normal	Blood vessels_Normal	0.22976999360673034
+Smooth muscle_Normal	Unknown_Normal	0.10828121971910143
+Smooth muscle_Normal	Fibroblast lineage_Normal	0.3019502664281477
+Alveolar epithelium_Normal	Blood vessels_Normal	0.15420069543083859
+Alveolar epithelium_Normal	Unknown_Normal	0.15470476116272636
+Alveolar epithelium_Normal	Lymphoid_Normal	0.12498129189228901
+Alveolar epithelium_Normal	Airway epithelium_Normal	0.14889140080620678
+Alveolar epithelium_Normal	Myeloid_Normal	0.21031878135248583
+Alveolar epithelium_Tumor	Unknown_Tumor	0.22335838384857531
+Fibroblast lineage_Normal	Blood vessels_Normal	0.2903647141468948
+Fibroblast lineage_Normal	Smooth muscle_Normal	0.308383785094386
+Airway epithelium_Tumor	Lymphoid_Tumor	0.2339649849830483
+Airway epithelium_Tumor	Myeloid_Tumor	0.12884472701797467
+Airway epithelium_Tumor	Unknown_Tumor	0.374396566685256
+Blood vessels_Normal	Unknown_Normal	0.12463461378838314
+Blood vessels_Normal	Lymphatic EC_Normal	0.2807555750225097
+Blood vessels_Normal	Smooth muscle_Normal	0.23556375399043628
+Blood vessels_Normal	Alveolar epithelium_Normal	0.14815227951966037
+Blood vessels_Normal	Fibroblast lineage_Normal	0.3289425506333288
+Blood vessels_Normal	Myeloid_Normal	0.1697324862552767
+Lymphoid_Tumor	Airway epithelium_Tumor	0.23198558670413139
+Lymphoid_Tumor	Myeloid_Tumor	0.20349737744704655
+Lymphoid_Tumor	Unknown_Tumor	0.22649525723291575
+Myeloid_Tumor	Airway epithelium_Tumor	0.12884472701797467
+Myeloid_Tumor	Lymphoid_Tumor	0.21868368259740034
+Myeloid_Tumor	Unknown_Tumor	0.12884472701797467
+Myeloid_Tumor	Myeloid_Normal	0.24781177023561618
+Lymphatic EC_Normal	Blood vessels_Normal	0.2675718688112303
+Lymphatic EC_Normal	Lymphoid_Normal	0.11784063894691332
+Lymphatic EC_Normal	Myeloid_Normal	0.15063464952270866
+Airway epithelium_Normal	Unknown_Normal	0.2695671294429811
+Airway epithelium_Normal	Alveolar epithelium_Normal	0.16703179855562045
+Airway epithelium_Normal	Myeloid_Normal	0.10996649083392906
+Myeloid_Normal	Blood vessels_Normal	0.14709118677992095
+Myeloid_Normal	Myeloid_Tumor	0.2561944909003051
+Myeloid_Normal	Lymphoid_Normal	0.3299500184928439
+Myeloid_Normal	Lymphatic EC_Normal	0.14424313938878885
+Myeloid_Normal	Alveolar epithelium_Normal	0.21031878135248583
+Myeloid_Normal	Airway epithelium_Normal	0.11933742430921157

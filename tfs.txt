@@ -1,10 +1,19 @@
-Airway epithelium
-Alveolar epithelium
-Blood vessels
-Fibroblast lineage
-Lymphatic EC
-Lymphoid
-Mesothelium
-Myeloid
-Smooth muscle
-Unknown
+Airway epithelium_Normal
+Airway epithelium_Tumor
+Alveolar epithelium_Normal
+Alveolar epithelium_Tumor
+Blood vessels_Normal
+Blood vessels_Tumor
+Fibroblast lineage_Normal
+Fibroblast lineage_Tumor
+Lymphatic EC_Normal
+Lymphatic EC_Tumor
+Lymphoid_Normal
+Lymphoid_Tumor
+Mesothelium_Normal
+Myeloid_Normal
+Myeloid_Tumor
+Smooth muscle_Normal
+Smooth muscle_Tumor
+Unknown_Normal
+Unknown_Tumor

@@ -60,4 +60,7 @@ RUN Rscript -e "install.packages(c('stringr'), repos='https://cran.itam.mx/')"
 # JAVA for networks
 RUN apt install default-jre
 
+# Papermill to generalize notebooks
+RUN pip install papermill==2.5.0
+
 RUN apt-get clean -y && apt-get autoremove -y
