@@ -9,7 +9,7 @@ RUN apt update && apt install -y --no-install-recommends nano npm nodejs gfortra
 RUN pip install scarches==0.5.9
 
 # For notebooks
-RUN pip install jupyterlab==3.2.4
+RUN pip install jupyterlab==4.0.10 jupyterlab-git ipywidgets
 RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/host_home'" >> ~/.bashrc
 
 # For visualizing and builidng networks
@@ -46,7 +46,6 @@ RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1 ikarus==0.0.3 Cython
 WORKDIR ~
 RUN git clone https://github.com/cvanelteren/forceatlas2
 RUN cd forceatlas2 && echo "from forceatlas2 import *" >> fa2/__init__.py && pip install .
-RUN pip install ipywidgets==8.1.1
 
 # For scFusion
 RUN wget https://github.com/alexdobin/STAR/raw/2.7.10b/bin/Linux_x86_64_static/STAR
@@ -63,4 +62,8 @@ RUN apt install default-jre
 # Papermill to generalize notebooks
 RUN pip install papermill==2.5.0
 
+# Gprofiler for GO enrichment
+RUN pip install gprofiler-official==1.0.0
+
+# Clean for puny space savings
 RUN apt-get clean -y && apt-get autoremove -y
