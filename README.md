@@ -4,6 +4,10 @@ For building coabundance networks.
 
 We are basing ourselves on the wonderful work by [Salcher, Sturm, Horvath et al. 2022](https://pubmed.ncbi.nlm.nih.gov/36368318/)
 
+The workflow for getting from the raw AnnData files to the the coabundance graphs is this one:
+
+![ScRNAseq Workflow](Workflow.png "scRNA-seq Workflow")
+
 ## Troubleshooting
 
 Due to the long training and annealing times, jlab sometimes cannot connect.
