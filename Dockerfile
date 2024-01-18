@@ -16,7 +16,7 @@ RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/hos
 RUN apt install -y --no-install-recommends libgraphviz-dev graphviz
 RUN pip install pygraphviz==1.11 networkx==3.1
 
-# For R
+# R from source is better for portability
 RUN wget https://cran.rstudio.com/src/base/R-4/R-4.3.1.tar.gz
 RUN tar xvfz R-4.3.1.tar.gz && rm R-4.3.1.tar.gz
 WORKDIR R-4.3.1
@@ -42,12 +42,18 @@ RUN Rscript -e "BiocManager::install(c('sparseMatrixStats', 'SparseArray', 'Dela
 RUN Rscript -e "devtools::install_github('MatteoBlla/PsiNorm')"
 
 # Other pip packages
-RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1 ikarus==0.0.3 Cython==0.29.33 tables==3.9.1 infercnvpy==0.4.3
+RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1
+
+# Ikarus with sparse matrix handling
+RUN pip install git+https://github.com/epaaso/ikarus.git
+
+# InferCNV for tumor annotation
+RUN pip install Cython==0.29.33 tables==3.9.1 infercnvpy==0.4.3
 WORKDIR ~
 RUN git clone https://github.com/cvanelteren/forceatlas2
 RUN cd forceatlas2 && echo "from forceatlas2 import *" >> fa2/__init__.py && pip install .
 
-# For scFusion
+# For scFusion super lengthy tumor annotation
 RUN wget https://github.com/alexdobin/STAR/raw/2.7.10b/bin/Linux_x86_64_static/STAR
 RUN mv STAR /usr/bin && chmod +x STAR
 
