@@ -11,6 +11,10 @@ import numpy
 
 import GEOparse
 
+from typing import Optional
+import anndata as ad
+import numpy as np
+
 def remove_repeated_var_inds(adata_tmp):
     '''
     Remove the cols with repeated indices of an AnnData object
@@ -222,3 +226,66 @@ def download_parallel(args):
     with ThreadPool(cpus -1 ) as pool:
         for result in pool.imap_unordered(download_url, args):
             print('url:', result[0], 'time (s):', result[1])
+
+
+def rank_genes_group(
+    adata: ad.AnnData,
+    group_name: str,
+    n_genes: int = 20,
+    gene_symbols: Optional[str] = None,
+    key: Optional[str] = 'rank_genes_groups',
+    fontsize: int = 8,
+    titlesize: int = 10,
+    show: Optional[bool] = None,
+    ax: Optional[plt.Axes] = None,
+    **kwds,
+):
+    if n_genes < 1:
+        raise ValueError(
+            "Specifying a negative number for n_genes has not been implemented for "
+            f"this plot. Received n_genes={n_genes}."
+        )
+
+    reference = str(adata.uns[key]['params']['reference'])
+    # group_names = adata.uns[key]['names'].dtype.names if groups is None else groups
+
+    ymin = np.Inf
+    ymax = -np.Inf
+    gene_names = adata.uns[key]['names'][group_name][:n_genes]
+    scores = adata.uns[key]['scores'][group_name][:n_genes]
+    
+    ymin = np.min(scores)
+    ymax = np.max(scores)
+    ymax += 0.3 * (ymax - ymin)
+
+    ax = ax if ax else plt.subplot(111)
+    ax.set_ylim(ymin, ymax)
+
+    ax.set_xlim(-0.9, n_genes - 0.1)
+
+    # Mapping to gene_symbols
+    if gene_symbols is not None:
+        if adata.raw is not None and adata.uns[key]['params']['use_raw']:
+            gene_names = adata.raw.var[gene_symbols][gene_names]
+        else:
+            gene_names = adata.var[gene_symbols][gene_names]
+
+    # Making labels
+    for ig, gene_name in enumerate(gene_names):
+        ax.text(
+            ig,
+            scores[ig],
+            gene_name,
+            rotation='vertical',
+            verticalalignment='bottom',
+            horizontalalignment='center',
+            fontsize=fontsize
+        )
+
+    ax.set_title('{} vs. {}'.format(group_name, reference),
+                fontsize=titlesize)
+
+    if show:
+        plt.show()
+
+    return ax
