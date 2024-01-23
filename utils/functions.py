@@ -11,9 +11,10 @@ import numpy
 
 import GEOparse
 
-from typing import Optional
+from typing import Optional, List, Union
 import anndata as ad
 import numpy as np
+from scanpy.pl import rank_genes_groups_violin
 
 def remove_repeated_var_inds(adata_tmp):
     '''
@@ -233,6 +234,7 @@ def rank_genes_group(
     group_name: str,
     n_genes: int = 20,
     gene_symbols: Optional[str] = None,
+    gene_names: List[str] = None,
     key: Optional[str] = 'rank_genes_groups',
     fontsize: int = 8,
     titlesize: int = 10,
@@ -251,8 +253,15 @@ def rank_genes_group(
 
     ymin = np.Inf
     ymax = -np.Inf
-    gene_names = adata.uns[key]['names'][group_name][:n_genes]
-    scores = adata.uns[key]['scores'][group_name][:n_genes]
+    try:
+        gene_names[0]
+        gene_mask = np.isin(adata.uns[key]['names'][group_name], gene_names)
+        scores = adata.uns[key]['scores'][group_name][gene_mask]
+    except Exception as e:
+        gene_names = adata.uns[key]['names'][group_name][:n_genes]
+        scores = adata.uns[key]['scores'][group_name][:n_genes]
+    
+        
     
     ymin = np.min(scores)
     ymax = np.max(scores)
@@ -265,10 +274,7 @@ def rank_genes_group(
 
     # Mapping to gene_symbols
     if gene_symbols is not None:
-        if adata.raw is not None and adata.uns[key]['params']['use_raw']:
-            gene_names = adata.raw.var[gene_symbols][gene_names]
-        else:
-            gene_names = adata.var[gene_symbols][gene_names]
+        gene_names = adata.var[gene_symbols][gene_names]
 
     # Making labels
     for ig, gene_name in enumerate(gene_names):
@@ -284,8 +290,62 @@ def rank_genes_group(
 
     ax.set_title('{} vs. {}'.format(group_name, reference),
                 fontsize=titlesize)
+    ax.set_xticklabels([])
+    ax.set_ylabel('score')
+    ax.set_xlabel('genes')
 
     if show:
         plt.show()
 
     return ax
+
+def violin_genes_pval(adata: ad.AnnData, cluster: Union[str, List[str]], genes: List[str],
+                      key: str = 'rank_genes_groups', p_threshold: float = 0.05,
+                      gene_symbols: str = 'feature_name') -> None:
+    """
+    Plots a violin plot for the specified genes and annotates the plots with p-values
+    indicating the statistical significance of the difference in gene expression
+    across the specified cluster groups. The function requires that
+    `sc.tl.rank_genes_groups` has already been run on the AnnData object with the
+    specified key.
+
+    Parameters:
+    adata (anndata.AnnData): The annotated data matrix.
+    cluster (str or List[str]): Cluster or list of clusters for which to plot the violin plots.
+    genes (List[str]): List of gene names for which to plot the violin plots.
+    key (str, optional): Key under which to look for the rank_genes_groups results in adata.uns.
+    p_threshold (float, optional): Threshold for statistical significance.
+    gene_symbols (str, optional): Column in adata.var DataFrame that stores gene symbols.
+
+    Returns:
+    None: This function does not return any value.
+    """
+    
+    # Get the gene indices that match the gene symbols
+    ens_genes = adata.var.index[adata.var[gene_symbols].isin(genes)]
+
+    # Create the violin plot
+    ax = rank_genes_groups_violin(adata, split=False, use_raw=False, show=False,
+                                        groups=cluster, gene_symbols=gene_symbols,
+                                        gene_names=genes)
+
+    # Build a dictionary of gene names to their p-values
+    significance_dict = {gene: pval for gene, pval in 
+                         zip(adata.uns[key]['names'][cluster],
+                             adata.uns[key]['pvals'][cluster])
+                         if gene in ens_genes}
+    
+    # Annotate the violin plot with p-values
+    i = 0
+    for gene, pval in significance_dict.items():
+        color = 'red' if pval < p_threshold else 'black'
+        pval = round(pval,3)
+        ylim = ax[0].get_ylim()[1]
+        yrange = ylim - ax[0].get_ylim()[0]
+        
+        # Annotate the plot with the p-value for each gene
+        ax[0].text(i, ylim - yrange*0.05, f'{pval}', ha='center', va='bottom', color=color)
+        i += 1
+    
+    # Show the plot
+    plt.show()
