@@ -327,7 +327,7 @@ def violin_genes_pval(adata: ad.AnnData, cluster: Union[str, List[str]], genes: 
     # Create the violin plot
     ax = rank_genes_groups_violin(adata, split=False, use_raw=False, show=False,
                                         groups=cluster, gene_symbols=gene_symbols,
-                                        gene_names=genes)
+                                        gene_names=genes, key=key)
 
     # Build a dictionary of gene names to their p-values
     significance_dict = {gene: pval for gene, pval in 
