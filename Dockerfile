@@ -68,8 +68,8 @@ RUN apt install default-jre
 # Papermill to generalize notebooks
 RUN pip install papermill==2.5.0
 
-# Gprofiler for GO enrichment
-RUN pip install gprofiler-official==1.0.0
+# Gprofiler for GO enrichment and GSEApy for enrichment agaisnt other databses
+RUN pip install gprofiler-official==1.0.0 gseapy==1.1.1
 
 # Clean for puny space savings
 RUN apt-get clean -y && apt-get autoremove -y
