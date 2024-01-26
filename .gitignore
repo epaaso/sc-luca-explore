@@ -6,3 +6,4 @@ out/
 **.pyc
 **/*.gmt
 **/*.npz
+nb_tumorUMAP/gseapy_gsea/gseapy.gene_set.prerank.report.csv
