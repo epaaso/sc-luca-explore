@@ -5,5 +5,7 @@ surgeries/**
 out/
 **.pyc
 **/*.gmt
-**/*.npz
+**.npz
+**.npz.npy
+**.npy
 nb_tumorUMAP/gseapy_gsea/gseapy.gene_set.prerank.report.csv
