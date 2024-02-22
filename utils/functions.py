@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 
 import GEOparse
 
+import networkx as nx
+
 from typing import Optional, List, Union, Literal, Tuple, Dict
 import anndata as ad
 from scanpy.pl import rank_genes_groups_violin
@@ -615,6 +617,113 @@ def bar_genes_pval(adata: ad.AnnData, group_names: List[str]=None,
         i += 1  # Increment the position for the next gene
     
     # Show the plot
+    if show:
+        plt.show()
+
+    return ax
+
+
+def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, float]],
+                            num_cells: Dict[str, int] = {}, max_width: float = 8,
+                            max_radius: float = 0.05, label_fontsize: float = 6,
+                            legend_fontsize: float = 7, spring_force: float = 1,
+                            figsize: Tuple[int, int] = (12, 8), show: bool = True) -> plt.Axes:
+    """
+    Draws a network graph with nodes represented by pie charts indicating various functions,
+    and edges thickness based on a specified metric (e.g., Mutual Information, MI).
+
+    Parameters:
+    - G (nx.Graph): A NetworkX graph object.
+    - node_pie_data (Dict[str, Dict[str, float]]): A dictionary mapping node identifiers to 
+      another dictionary of function names and their corresponding values.
+    - num_cells (Dict[str, int], optional): A dictionary mapping function names to cell counts.
+    - max_width (float, optional): Maximum width for graph edges.
+    - max_radius (float, optional): Maximum radius for node pie charts.
+    - label_fontsize (float, optional): Font size for node labels.
+    - legend_fontsize (float, optional): Font size for the legend.
+    - spring_force (float, optional): The spring force parameter for the network layout.
+    - figsize (Tuple[int, int], optional): Figure size for the plot.
+    - show (bool, optional): If True, display the plot. Otherwise, the plot is not shown.
+
+    Returns:
+    matplotlib.axes.Axes: The Axes object containing the plot.
+    """
+    # Assuming you have a dynamic number of functions, determine the colormap
+    cmap = plt.cm.tab20  # Choose a colormap
+    cmap2 = plt.cm.tab20b
+    # cmap.extend(plt.cm.tab20b)
+    all_functions = set(func for data in node_pie_data.values() for func in data.keys())
+    num_functions = len(all_functions)
+    
+    # Generate a color for each function by evenly spacing across the colormap
+    colors = cmap(np.linspace(0, 1, num_functions//2))
+    add = num_functions % 2
+    colors2 = cmap2(np.linspace(0, 1, num_functions//2 + add))
+    colors = np.vstack([colors, colors2])
+    
+    # Check if we have no expressed values and put it in the end of the functs if they
+    no_expr = [x for x in all_functions if x in ['NO UNDEREXPRESSION','NO OVEREXPRESSION']]
+    no_expr  = None if len(no_expr) == 0 else no_expr[0]
+    if no_expr:
+        all_functions.remove(no_expr)
+        sorted_functions = sorted(all_functions).append(no_expr)
+    else:
+        sorted_functions = sorted(all_functions)
+        
+    
+    # Create a dictionary to map each function to its color        
+    function_to_color = {func: color for func, color in zip(sorted(all_functions), colors)}
+    if no_expr:
+        function_to_color[no_expr] = plt.cm.gray(0.0)
+
+    # Normalize the cells nums to a respectable radius
+    function_to_radius = {}
+    if len(num_cells) > 0:
+        max_cells = max(num_cells.values())
+        function_to_radius = {func: max_radius*num/max_cells 
+                              for func, num in num_cells.items()}
+        
+    
+    fig, ax = plt.subplots(figsize=figsize)  # Example size, adjust as needed
+    # Draw the network
+    pos = nx.spring_layout(G)
+    # Get edge weights and scale them as desired for visualization
+    edge_weights = [max_width*float(G[u][v]['MI']) for u, v in G.edges()]
+
+    # Draw edges with thickness based on the 'weight' attribute
+    nx.draw_networkx_edges(G, pos, width=edge_weights, ax=ax)
+    
+    # For each node, draw the pie chart with colors mapped by function
+    for node, data in node_pie_data.items():
+        try:
+            pos[node]
+        except KeyError:
+            continue
+        sizes = [ abs(size) for size in data.values() ]
+        labels = list(data.keys())
+        pie_colors = [function_to_color[label] for label in labels]
+        pie_radius = function_to_radius[node]
+        
+        x, y = pos[node]
+        
+        ax.pie(sizes, colors=pie_colors, radius=pie_radius, center=(x, y),
+                wedgeprops=dict(edgecolor='w'))
+    
+    # Add labels for each node next to them
+    for node, (x, y) in pos.items():
+        ax.text(x, y + 0.07, s=node, horizontalalignment='center',
+                 verticalalignment='center', fontsize=label_fontsize)
+    
+    # Legend
+    legend_handles = [plt.Line2D([0], [0], marker='o', color='w', label=func,
+                                 markerfacecolor=color, markersize=5)
+                      for func, color in function_to_color.items()]
+    
+    ax.legend(handles=legend_handles, bbox_to_anchor=(1.05, 1),
+               loc='upper left', title="Functions", fontsize = legend_fontsize)
+    ax.axis('equal')
+    ax.set_xticks([])
+    ax.set_yticks([])
     if show:
         plt.show()
 
