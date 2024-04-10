@@ -17,6 +17,11 @@ import networkx as nx
 from typing import Optional, List, Union, Literal, Tuple, Dict
 import anndata as ad
 from scanpy.pl import rank_genes_groups_violin
+from scipy.stats import linregress
+
+
+from mpl_toolkits.mplot3d import Axes3D
+from scipy import stats
 
 def remove_repeated_var_inds(adata_tmp):
     '''
@@ -728,3 +733,203 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
         plt.show()
 
     return ax
+
+
+def plot_scatter_2genes(adata, gene_a: str, gene_b: str, symbol_feature:str = 'feature_name',
+                        color_feature:str = None, scale:str=None, title:str = None, 
+                        cutoff_a: int = 0, cutoff_b:int = 0) -> plt.Axes:
+    
+    
+    if not symbol_feature:
+        gene_a_ens = gene_a
+        gene_b_ens = gene_b
+    else:
+        gene_a_ens = adata.var.index[adata.var[symbol_feature] == gene_a]
+        gene_b_ens = adata.var.index[adata.var[symbol_feature] == gene_b]
+    
+    # Extract expression values for GeneA and GeneB
+    gene_a_expression = adata[:, gene_a_ens].X.toarray().ravel()
+    gene_b_expression = adata[:, gene_b_ens].X.toarray().ravel()
+    
+    mask_cutoff = np.logical_and(gene_a_expression > cutoff_a, gene_b_expression > cutoff_b)
+    gene_a_expression = gene_a_expression[mask_cutoff]
+    gene_b_expression = gene_b_expression[mask_cutoff]
+    adata = adata[mask_cutoff]
+    
+    
+    if scale == 'log':
+        # If not shifted by 1 to many 0s and no linear regresssion is possible
+        gene_a_expression = np.log(gene_a_expression)
+        gene_b_expression = np.log(gene_b_expression)
+        
+    try:
+        all_feats = adata.obs[color_feature].unique()
+        cmap = plt.cm.tab10
+        colors = cmap(np.linspace(0, 1, len(all_feats)))
+        function_to_color = {func: color for func, color in zip(sorted(all_feats), colors)}
+        point_colors = [function_to_color[label] for label in adata.obs[color_feature]]
+    except KeyError:
+        colors = 'blue'
+        
+    # Fit a linear trend line
+    try:
+        slope, intercept, r_value, p_value, std_err = linregress(gene_a_expression, gene_b_expression)
+        line = slope * gene_a_expression + intercept
+    except Exception as e:
+        print(f'Will not plot {title} because {e}')
+        return None
+
+    # Create a figure and ax object
+    fig, ax = plt.subplots(figsize=(10, 6))
+    
+    # Create a scatter plot on the ax
+    if isinstance(colors, str):
+        # Plot all data points in blue if there's no specific color feature
+        ax.scatter(gene_a_expression, gene_b_expression, color='blue')
+    else:
+        # If there are specific colors for different categories
+        for i, color_val in enumerate(adata.obs[color_feature].unique()):
+            # Create mask for current category
+            mask = adata.obs[color_feature] == color_val
+            # Extract relevant expressions for current category
+            gene_a_expression_cat = gene_a_expression[mask]
+            gene_b_expression_cat = gene_b_expression[mask]
+
+            # Scatter plot for current category
+            ax.scatter(gene_a_expression_cat, gene_b_expression_cat, alpha=0.5, color=point_colors[i], label=color_val)
+
+    # scatter = ax.scatter(gene_a_expression, gene_b_expression, alpha=0.5, color=point_colors)
+
+    # Plot the linear trend line on the ax
+    ax.plot(gene_a_expression, line, 'r', label=f'fitted line (p={p_value:.2e}, $r^2$={r_value**2:.5f}) slope={slope:.2f}')
+    # Displaying the legend outside the plot
+    
+    # ax.set_yscale('log')
+    # ax.set_xscale('log')
+
+    # Label the axes
+    ax.set_xlabel(f'{gene_a} mRNA level', fontsize=27)
+    ax.set_ylabel(f'{gene_b} mRNA level', fontsize=27)
+    ax.tick_params(axis='both', which='major', labelsize=20)
+    # ax.set_title(f'{gene_a} vs {gene_b} expression with linear trend in {title}:{len(gene_a_expression)} samples', fontsize=19)
+    ax.legend(loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0., fontsize=18)
+
+    # Return the ax object for further modification
+    return ax
+
+
+def plot_scatter_3genes(adata, gene_a: str, gene_b: str, gene_c: str, symbol_feature:str = 'feature_name',
+                        color_feature:str = None, scale:str=None, title:str = None, 
+                        cutoff_a: int = 0, cutoff_b:int = 0) -> plt.Axes:
+    if not symbol_feature:
+        gene_a_ens = gene_a
+        gene_b_ens = gene_b
+        gene_c_ens = gene_c
+    else:
+        gene_a_ens = adata.var.index[adata.var[symbol_feature] == gene_a]
+        gene_b_ens = adata.var.index[adata.var[symbol_feature] == gene_b]
+        gene_c_ens = adata.var.index[adata.var[symbol_feature] == gene_c]
+    
+    # Extract expression values for GeneA and GeneB
+    gene_a_expression = adata[:, gene_a_ens].X.toarray().ravel()
+    gene_b_expression = adata[:, gene_b_ens].X.toarray().ravel()
+    gene_c_expression = adata[:, gene_c_ens].X.toarray().ravel()
+    
+    mask_cutoff = np.logical_and(gene_a_expression > cutoff_a, gene_b_expression > cutoff_b)
+    mask_cutoff = np.logical_and(mask_cutoff, gene_c_expression > 0)
+    gene_a_expression = gene_a_expression[mask_cutoff]
+    gene_b_expression = gene_b_expression[mask_cutoff]
+    gene_c_expression = gene_c_expression[mask_cutoff]
+    adata = adata[mask_cutoff]
+    
+    
+    if scale == 'log':
+        # If not shifted by 1 to many 0s and no linear regresssion is possible
+        gene_a_expression = np.log(gene_a_expression)
+        gene_b_expression = np.log(gene_b_expression)
+        gene_c_expression = np.log(gene_c_expression)
+    try:
+        colors = adata.obs[color_feature].unique()
+        cmap = plt.cm.tab10
+        colors = cmap(np.linspace(0, 1, len(colors)))
+    except KeyError:
+        colors = 'blue'
+
+
+    x = gene_a_expression
+    y = gene_b_expression
+    z = gene_c_expression
+
+    # Fit a linear model (plane) to the data
+    # We need to add a column of ones to x and y to include an intercept in the model
+    XYZ = np.column_stack((x, y, np.ones(x.shape)))
+    coeffs, res, _, _ = np.linalg.lstsq(XYZ, z, rcond=None)  # Solves for Ax = b, where A = XYZ, and b = z
+    res = res[0]
+    total_var = np.sum((np.mean(z) - z)**2)
+    r2 = 1- (res/total_var)
+
+    # Create a meshgrid of x and y values to plot the plane
+    xx, yy = np.meshgrid(np.linspace(min(x), max(x), 10), np.linspace(min(y), max(y), 10))
+    zz = coeffs[0] * xx + coeffs[1] * yy + coeffs[2]
+
+    # Plot
+    fig = plt.figure(figsize=(15, 6))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Scatter plot of the data points
+    ax.scatter(x, y, z, color='b', label='Data points')
+
+    # Plot the plane
+    ax.plot_surface(xx, yy, zz, color='r', alpha=0.5, rstride=100, cstride=100, label='Trend plane')
+
+    ax.set_xlabel(f'{gene_a} mRNA level', fontsize=14)
+    ax.set_ylabel(f'{gene_b} mRNA level', fontsize=14)
+    ax.set_zlabel(f'{gene_c} mRNA level', fontsize=14)
+    ax.tick_params(axis='both', which='major', labelsize=8)
+    # ax.set_title(f'Scatter plot of {gene_a} and {gene_b} vs {gene_c} expression with linear trend in {title}:{len(gene_a_expression)} samples')
+
+    # Since plt.legend does not support 3D plots directly, workaround to create a legend for the plane
+    plane_patch = plt.Line2D([0], [0], linestyle="none", c='r', alpha=0.5, marker = 'o')
+    ax.legend([plane_patch], [f'{gene_a}={coeffs[0]:.3f}, {gene_b}={coeffs[1]:.3f}, Intercept={coeffs[2]:.3f}, R^2={r2:3f}'], numpoints = 1, fontsize=10)
+
+    ax.view_init(elev=15, azim=-13)  # Example angles: elev is elevation, azim is azimuth
+    # fig.tight_layout()
+    return ax, fig
+
+    
+def line_regress_genes(adata, gene_a: str, gene_b: str, symbol_feature:str = 'feature_name',
+                        scale:str=None, title:str = None, 
+                        cutoff_a: int = 0, cutoff_b:int = 0) -> plt.Axes:
+    
+    
+    if not symbol_feature:
+        gene_a_ens = gene_a
+        gene_b_ens = gene_b
+    else:
+        gene_a_ens = adata.var.index[adata.var[symbol_feature] == gene_a]
+        gene_b_ens = adata.var.index[adata.var[symbol_feature] == gene_b]
+    
+    # Extract expression values for GeneA and GeneB
+    gene_a_expression = adata[:, gene_a_ens].X.toarray().ravel()
+    gene_b_expression = adata[:, gene_b_ens].X.toarray().ravel()
+    
+    mask_cutoff = np.logical_and(gene_a_expression > cutoff_a, gene_b_expression > cutoff_b)
+    gene_a_expression = gene_a_expression[mask_cutoff]
+    gene_b_expression = gene_b_expression[mask_cutoff]
+    adata = adata[mask_cutoff]
+    
+    
+    if scale == 'log':
+        # If not shifted by 1 to many 0s and no linear regresssion is possible
+        gene_a_expression = np.log(gene_a_expression)
+        gene_b_expression = np.log(gene_b_expression)
+        
+    # Fit a linear trend line
+    try:
+        slope, intercept, r_value, p_value, std_err = linregress(gene_a_expression, gene_b_expression)
+        line = slope * gene_a_expression + intercept
+        print(f'Scatter plot of {gene_a} vs {gene_b} expression with linear trend in {title}:{len(gene_a_expression)} cells')
+        return slope, intercept, r_value, p_value
+        
+    except Exception as e:
+        print(f'Will not plot {title} because {e}')
