@@ -241,62 +241,82 @@ def rank_genes_group(
     group_name: str,
     n_genes: int = 20,
     gene_symbols: Optional[str] = None,
-    gene_names: List[str] = None,
-    key: Optional[str] = 'rank_genes_groups',
+    gene_names: Optional[List[str]] = None,
+    key: str = 'rank_genes_groups',
     fontsize: int = 8,
     titlesize: int = 10,
     show: Optional[bool] = None,
     ax: Optional[plt.Axes] = None,
     **kwds,
-):
+) -> plt.Axes:
+    """
+    Visualizes the ranking of genes for a specified group from an AnnData object.
+
+    Parameters:
+        adata: ad.AnnData
+            The AnnData object containing the dataset and analysis results.
+        group_name: str
+            The name of the group for which to rank genes.
+        n_genes: int, optional
+            The number of top genes to display (default is 20).
+        gene_symbols: Optional[str], optional
+            The key in adata.var where alternative gene symbols are stored.
+        gene_names: Optional[List[str]], optional
+            Explicit list of gene names to use for plotting.
+        key: str, optional
+            The key in adata.uns where the ranking is stored (default is 'rank_genes_groups').
+        fontsize: int, optional
+            Font size for gene names (default is 8).
+        titlesize: int, optional
+            Font size for the title (default is 10).
+        show: Optional[bool], optional
+            If True, show the plot immediately.
+        ax: Optional[plt.Axes], optional
+            A matplotlib axes object to plot on. If None, a new figure is created.
+        **kwds:
+            Additional keyword arguments to pass to plotting functions.
+
+    Returns:
+        plt.Axes:
+            The matplotlib axes with the plot.
+
+    Raises:
+        ValueError:
+            If n_genes is less than 1.
+    """
     if n_genes < 1:
-        raise ValueError(
-            "Specifying a negative number for n_genes has not been implemented for "
-            f"this plot. Received n_genes={n_genes}."
-        )
+        raise ValueError(f"n_genes must be positive; received n_genes={n_genes}.")
 
     reference = str(adata.uns[key]['params']['reference'])
-    # group_names = adata.uns[key]['names'].dtype.names if groups is None else groups
 
-    ymin = np.Inf
-    ymax = -np.Inf
     try:
-        gene_names[0]
+        gene_names = gene_names if gene_names is not None else adata.uns[key]['names'][group_name][:n_genes]
         gene_mask = np.isin(adata.uns[key]['names'][group_name], gene_names)
         scores = adata.uns[key]['scores'][group_name][gene_mask]
     except Exception as e:
-        gene_names = adata.uns[key]['names'][group_name][:n_genes]
         scores = adata.uns[key]['scores'][group_name][:n_genes]
-    
-        
-    
+
     ymin = np.min(scores)
     ymax = np.max(scores)
     ymax += 0.3 * (ymax - ymin)
 
-    ax = ax if ax else plt.subplot(111)
+    ax = ax if ax is not None else plt.subplot(111)
     ax.set_ylim(ymin, ymax)
-
     ax.set_xlim(-0.9, n_genes - 0.1)
 
-    # Mapping to gene_symbols
-    if gene_symbols is not None:
-        gene_names = adata.var[gene_symbols][gene_names]
+    if gene_symbols:
+        gene_names = adata.var[gene_symbols].loc[gene_names].tolist()
 
-    # Making labels
     for ig, gene_name in enumerate(gene_names):
         ax.text(
-            ig,
-            scores[ig],
-            gene_name,
+            ig, scores[ig], gene_name,
             rotation='vertical',
             verticalalignment='bottom',
             horizontalalignment='center',
             fontsize=fontsize
         )
 
-    ax.set_title('{} vs. {}'.format(group_name, reference),
-                fontsize=titlesize)
+    ax.set_title(f'{group_name} vs. {reference}', fontsize=titlesize)
     ax.set_xticklabels([])
     ax.set_ylabel('score')
     ax.set_xlabel('genes')
@@ -629,7 +649,7 @@ def bar_genes_pval(adata: ad.AnnData, group_names: List[str]=None,
 
 
 def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, float]],
-                            num_cells: Dict[str, int] = {}, max_width: float = 8,
+                            num_cells: Dict[str, int] = {}, weight_key:str = 'MI', max_width: float = 8,
                             max_radius: float = 0.05, label_fontsize: float = 6,
                             legend_fontsize: float = 7, spring_force: float = 1,
                             figsize: Tuple[int, int] = (12, 8), show: bool = True) -> plt.Axes:
@@ -642,6 +662,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     - node_pie_data (Dict[str, Dict[str, float]]): A dictionary mapping node identifiers to 
       another dictionary of function names and their corresponding values.
     - num_cells (Dict[str, int], optional): A dictionary mapping function names to cell counts.
+    - weight_key (str, optional): The name of the key for the edge weights
     - max_width (float, optional): Maximum width for graph edges.
     - max_radius (float, optional): Maximum radius for node pie charts.
     - label_fontsize (float, optional): Font size for node labels.
@@ -693,7 +714,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     # Draw the network
     pos = nx.spring_layout(G)
     # Get edge weights and scale them as desired for visualization
-    edge_weights = [max_width*float(G[u][v]['MI']) for u, v in G.edges()]
+    edge_weights = [max_width*float(G[u][v][weight_key]) for u, v in G.edges()]
 
     # Draw edges with thickness based on the 'weight' attribute
     nx.draw_networkx_edges(G, pos, width=edge_weights, ax=ax)
@@ -866,7 +887,23 @@ def plot_scatter_3genes(adata, gene_a: str, gene_b: str, gene_c: str, symbol_fea
     coeffs, res, _, _ = np.linalg.lstsq(XYZ, z, rcond=None)  # Solves for Ax = b, where A = XYZ, and b = z
     res = res[0]
     total_var = np.sum((np.mean(z) - z)**2)
-    r2 = 1- (res/total_var)
+    r2 = 1 - (res/ total_var)
+
+    # Calculate residual variance (sigma squared)
+    residuals = z - XYZ @ coeffs
+    dof = len(z) - len(coeffs)  # degrees of freedom
+    residual_variance = residuals.T @ residuals / dof
+
+    # Calculate standard errors of coefficients
+    XtX_inv = np.linalg.inv(XYZ.T @ XYZ)
+    standard_errors = np.sqrt(np.diag(XtX_inv * residual_variance))
+    
+    # Calculate t-statistics
+    t_stats = coeffs / standard_errors
+    
+    # Calculate p-values
+    p_values = [2 * (1 - stats.t.cdf(np.abs(t), dof)) for t in t_stats]
+    print(p_values)
 
     # Create a meshgrid of x and y values to plot the plane
     xx, yy = np.meshgrid(np.linspace(min(x), max(x), 10), np.linspace(min(y), max(y), 10))
@@ -890,8 +927,9 @@ def plot_scatter_3genes(adata, gene_a: str, gene_b: str, gene_c: str, symbol_fea
 
     # Since plt.legend does not support 3D plots directly, workaround to create a legend for the plane
     plane_patch = plt.Line2D([0], [0], linestyle="none", c='r', alpha=0.5, marker = 'o')
-    ax.legend([plane_patch], [f'{gene_a}={coeffs[0]:.3f}, {gene_b}={coeffs[1]:.3f}, Intercept={coeffs[2]:.3f}, R^2={r2:3f}'], numpoints = 1, fontsize=10)
-
+    gene_a = 'KMT2D'
+    ax.legend([plane_patch], [f'$m_{{{gene_a}}}$={coeffs[0]:.2f}, $m_{{{gene_b}}}$={coeffs[1]:.2f}, $R^2$={r2:.3f}'], numpoints = 1, fontsize=10)
+#Intercept={coeffs[2]:.3f},
     ax.view_init(elev=15, azim=-13)  # Example angles: elev is elevation, azim is azimuth
     # fig.tight_layout()
     return ax, fig

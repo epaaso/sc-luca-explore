@@ -1,4 +1,3 @@
-Regulator	Target	MI
 Fibroblast peribronchial	Fibroblast alveolar	0.16102125662190225
 Fibroblast peribronchial	Smooth muscle cell	0.1591264263151837
 Fibroblast peribronchial	Tumor cells LUSC mitotic	0.1483261722270246
