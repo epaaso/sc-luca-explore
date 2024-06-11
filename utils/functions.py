@@ -4,6 +4,7 @@ import urllib.request
 import time
 from multiprocessing import cpu_count
 from multiprocessing.pool import ThreadPool
+import multiprocessing
 
 import numpy as np
 import scipy as sp
@@ -14,8 +15,9 @@ import GEOparse
 
 import networkx as nx
 
-from typing import Optional, List, Union, Literal, Tuple, Dict
+from typing import Optional, List, Union, Literal, Tuple, Dict, Iterable
 import anndata as ad
+from scanpy.tl import rank_genes_groups
 from scanpy.pl import rank_genes_groups_violin
 from scipy.stats import linregress
 
@@ -235,6 +237,68 @@ def download_parallel(args):
         for result in pool.imap_unordered(download_url, args):
             print('url:', result[0], 'time (s):', result[1])
 
+
+def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
+                   method:str='wilcoxon', use_raw:bool=False, parallel:bool=True ):
+
+    key = f'{group1}_vs_{group2}'
+    adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata
+    rank_genes_groups(adata_temp, groupby=groupby, groups=[group1], reference=group2,
+                      method=method, use_raw=use_raw, key_added=key)
+
+    current_scores = adata_temp.uns[key]['scores'][group1]
+
+    return key, {
+        'scores': current_scores,
+        'names': adata_temp.uns[key]['names'][group1],
+        'pvals': adata_temp.uns[key]['pvals'][group1],
+        'logfoldchanges': adata_temp.uns[key]['logfoldchanges'][group1],
+        'pvals_adj': adata_temp.uns[key]['pvals_adj'][group1]
+    }
+
+
+def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str, 
+                               groups: Union[Literal['all'], Iterable[str]] = 'all', 
+                               use_raw: Optional[bool] = None,
+                               method: Optional[Literal['logreg', 't-test', 'wilcoxon', 't-test_overestim_var']] = 'wilcoxon',
+                               parallel: bool = True,
+                               n_jobs: int = 2):
+    """
+    Perform pairwise comparison of marker genes between specified groups. Expects log data.
+
+    Parameters:
+    - adata: AnnData object containing the data.
+    - groupby: The key for the observations grouping to consider.
+    - groups: List of groups to include in pairwise comparisons.
+    - method: The statistical method to use for the test ('t-test', 'wilcoxon', etc.).
+    - n_jobs: Number of jobs to run in parallel. -1 means using all processors.
+
+    Returns:
+    - Returns a dict for all pairwise groups and its statistics
+    """
+
+    pairwise_results = {}
+    summary_stats = {}
+    results = []
+
+    comparisons = [(group1, group2) for group1 in groups for group2 in groups if group1 != group2]
+    print(comparisons)
+
+    if parallel:
+        with multiprocessing.Pool(n_jobs) as pool:
+            results = pool.starmap(compare_groups, [(adata, groupby, group1, group2, method, use_raw) for group1, group2 in comparisons])
+    else:
+        for comparison in comparisons:
+            group1, group2 = comparison
+            results.append(compare_groups(adata, groupby, group1, group2, method, use_raw, parallel))
+
+    for key, result in results:
+        pairwise_results[key] = result
+
+    return pairwise_results
+
+
+# def 
 
 def rank_genes_group(
     adata: ad.AnnData,

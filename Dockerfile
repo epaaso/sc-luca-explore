@@ -9,7 +9,7 @@ RUN apt update && apt install -y --no-install-recommends nano npm nodejs gfortra
 RUN pip install scarches==0.5.9
 
 # For notebooks
-RUN pip install jupyterlab==4.0.10 jupyterlab-git ipywidgets
+RUN pip install jupyterlab==4.2.6 jupyterlab-git ipywidgets
 RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/host_home'" >> ~/.bashrc
 
 # For visualizing and builidng networks
@@ -54,13 +54,13 @@ RUN git clone https://github.com/cvanelteren/forceatlas2
 RUN cd forceatlas2 && echo "from forceatlas2 import *" >> fa2/__init__.py && pip install .
 
 # For scFusion super lengthy tumor annotation
+WORKDIR ~
 RUN wget https://github.com/alexdobin/STAR/raw/2.7.10b/bin/Linux_x86_64_static/STAR
 RUN mv STAR /usr/bin && chmod +x STAR
 
 RUN apt install -y --no-install-recommends samtools bedtools
 RUN pip install pyensembl==2.2.9 tensorflow=2.15.0 keras=2.15.0
 RUN Rscript -e "install.packages(c('stringr'), repos='https://cran.itam.mx/')"
-
 
 # JAVA for networks
 RUN apt install default-jre
