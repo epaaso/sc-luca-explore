@@ -1,0 +1,90 @@
+Fibroblast peribronchial	Pericyte	0.32342418555603336
+Monocyte non-classical	B cell	0.30950519293930334
+Tumor cells LUAD mitotic	Tumor cells LUAD	0.4260933540106495
+T cell CD8 effector memory	B cell	0.3244100968376169
+T cell CD8 effector memory	T cell CD8 activated	0.3584804057590665
+T cell CD8 effector memory	T cell CD8 naive	0.4811124755008871
+T cell CD8 effector memory	Monocyte non-classical	0.3108086628019322
+T cell CD8 effector memory	NK cell	0.7331520084338528
+T cell CD8 effector memory	T cell NK-like	0.4358511912413223
+T cell CD8 effector memory	T cell regulatory	0.5179398642209105
+T cell CD8 effector memory	T cell CD4	0.7129388426868459
+T cell CD8 effector memory	T cell CD8 terminally exhausted	0.5230884345208451
+B cell	Monocyte non-classical	0.3169774816464015
+B cell	NK cell	0.43244656827965144
+B cell	T cell regulatory	0.4497831667005303
+B cell	T cell CD4	0.5404399323980926
+B cell	T cell CD8 effector memory	0.3244100968376178
+B cell	T cell CD8 terminally exhausted	0.3849061993916756
+NK cell dividing	T cell regulatory	0.3728693083603418
+T cell CD8 naive	NK cell	0.4701882323691233
+T cell CD8 naive	T cell NK-like	0.4925532185329513
+T cell CD8 naive	T cell regulatory	0.42566018160926866
+T cell CD8 naive	T cell CD4	0.5280689970885151
+T cell CD8 naive	T cell CD8 effector memory	0.481112475500888
+Alveolar cell type 2	transitional club/AT2	0.3261305350765511
+transitional club/AT2	Alveolar cell type 2	0.3910392393714677
+Mast cell	Plasma cell	0.378758128542807
+Mast cell	cDC2	0.3535799612619712
+Macrophage	Macrophage alveolar	0.4345998517134868
+Macrophage	cDC2	0.4501854999992747
+Macrophage	Monocyte classical	0.423359452436578
+Macrophage	myeloid dividing	0.4620081609749809
+myeloid dividing	Macrophage	0.4620081609749809
+Tumor cells LUSC mitotic	Tumor cells LUSC	0.7332531029258824
+T cell CD8 dividing	T cell CD8 terminally exhausted	0.36594101633593246
+Tumor cells LUSC	Tumor cells LUSC mitotic	0.7332531029258824
+T cell regulatory	B cell	0.4497831667005294
+T cell regulatory	T cell CD8 activated	0.4144944388045131
+T cell regulatory	T cell CD8 naive	0.41737386628202033
+T cell regulatory	NK cell	0.5317451617692455
+T cell regulatory	T cell NK-like	0.33944223281629693
+T cell regulatory	T cell CD4	0.609751757494104
+T cell regulatory	T cell CD8 effector memory	0.5179398642209114
+T cell regulatory	T cell CD8 terminally exhausted	0.5154126956988101
+T cell NK-like	T cell CD8 naive	0.4925532185329513
+T cell NK-like	NK cell	0.4794121017847828
+T cell NK-like	T cell regulatory	0.40980507877315686
+T cell NK-like	T cell CD4	0.4281156963747783
+T cell NK-like	T cell CD8 effector memory	0.43490062419956965
+T cell CD4	B cell	0.4815082470217784
+T cell CD4	T cell CD8 activated	0.30474117383519594
+T cell CD4	T cell CD8 naive	0.5280689970885151
+T cell CD4	NK cell	0.6140310390200217
+T cell CD4	T cell NK-like	0.4057758354648935
+T cell CD4	T cell regulatory	0.609751757494104
+T cell CD4	T cell CD8 effector memory	0.7129388426868459
+T cell CD4	T cell CD8 terminally exhausted	0.3898433286245062
+T cell CD8 terminally exhausted	B cell	0.3826735730607278
+T cell CD8 terminally exhausted	T cell CD8 dividing	0.36594101633593246
+T cell CD8 terminally exhausted	NK cell	0.3859067320692291
+T cell CD8 terminally exhausted	T cell NK-like	0.30896432300513066
+T cell CD8 terminally exhausted	T cell regulatory	0.5154126956988101
+T cell CD8 terminally exhausted	T cell CD4	0.3981296439517541
+T cell CD8 terminally exhausted	T cell CD8 effector memory	0.561365957561097
+Plasma cell	Mast cell	0.3787581285428061
+Monocyte classical	Macrophage alveolar	0.4033290687694344
+Monocyte classical	cDC2	0.317262300513117
+Monocyte classical	Macrophage	0.423359452436578
+T cell CD8 activated	NK cell	0.48931472048998614
+T cell CD8 activated	T cell regulatory	0.3505683094417895
+T cell CD8 activated	T cell CD4	0.30474117383519594
+T cell CD8 activated	T cell CD8 effector memory	0.36676672108631525
+T cell CD8 activated	pDC	0.3062909701228582
+Macrophage alveolar	Macrophage	0.317262300513117
+Macrophage alveolar	Monocyte classical	0.3436187919699787
+Tumor cells LUAD	Tumor cells LUAD mitotic	0.4260933540106495
+NK cell	B cell	0.3207107225717838
+NK cell	T cell CD8 activated	0.36543454662120967
+NK cell	cDC1	0.3159986799346699
+NK cell	T cell CD8 naive	0.48726735030861734
+NK cell	T cell NK-like	0.4201677108204884
+NK cell	T cell regulatory	0.5215490212890517
+NK cell	T cell CD4	0.6748316943937498
+NK cell	T cell CD8 effector memory	0.6728736204370738
+NK cell	T cell CD8 terminally exhausted	0.3859067320692291
+cDC2	Monocyte non-classical	0.3303726873266668
+cDC2	Mast cell	0.3535799612619712
+cDC2	Macrophage	0.4501854999992747
+cDC2	Monocyte classical	0.317262300513117
+cDC2	myeloid dividing	0.34680478455385577

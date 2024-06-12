@@ -716,6 +716,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
                             num_cells: Dict[str, int] = {}, weight_key:str = 'MI', max_width: float = 8,
                             max_radius: float = 0.05, label_fontsize: float = 6,
                             legend_fontsize: float = 7, spring_force: float = 1,
+                            scale: float = 1,
                             figsize: Tuple[int, int] = (12, 8), show: bool = True) -> plt.Axes:
     """
     Draws a network graph with nodes represented by pie charts indicating various functions,
@@ -732,6 +733,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     - label_fontsize (float, optional): Font size for node labels.
     - legend_fontsize (float, optional): Font size for the legend.
     - spring_force (float, optional): The spring force parameter for the network layout.
+    - scale (float, optional): Scale factor for positions. If scale is None, no rescaling is performed.
     - figsize (Tuple[int, int], optional): Figure size for the plot.
     - show (bool, optional): If True, display the plot. Otherwise, the plot is not shown.
 
@@ -776,7 +778,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     
     fig, ax = plt.subplots(figsize=figsize)  # Example size, adjust as needed
     # Draw the network
-    pos = nx.spring_layout(G)
+    pos = nx.spring_layout(G, k=spring_force, scale=scale)
     # Get edge weights and scale them as desired for visualization
     edge_weights = [max_width*float(G[u][v][weight_key]) for u, v in G.edges()]
 
@@ -802,7 +804,8 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     # Add labels for each node next to them
     for node, (x, y) in pos.items():
         ax.text(x, y + 0.07, s=node, horizontalalignment='center',
-                 verticalalignment='center', fontsize=label_fontsize)
+                verticalalignment='center', fontsize=label_fontsize,
+                color='red', fontweight='bold')
     
     # Legend
     legend_handles = [plt.Line2D([0], [0], marker='o', color='w', label=func,
@@ -817,7 +820,7 @@ def functional_network_plot(G: nx.Graph, node_pie_data: Dict[str, Dict[str, floa
     if show:
         plt.show()
 
-    return ax
+    return fig, ax
 
 
 def plot_scatter_2genes(adata, gene_a: str, gene_b: str, symbol_feature:str = 'feature_name',
