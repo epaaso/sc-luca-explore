@@ -1,0 +1,51 @@
+Alveolar cell type 1
+Alveolar cell type 2
+B cell
+B cell dividing
+Ciliated
+Club
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Mesothelial
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+ROS1+ healthy epithelial
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+Tumor cells LUAD
+Tumor cells LUAD EMT
+Tumor cells LUAD MSLN
+Tumor cells LUAD NE
+Tumor cells LUAD mitotic
+Tumor cells LUSC
+Tumor cells LUSC mitotic
+Tumor cells NSCLC mixed
+cDC1
+cDC2
+myeloid dividing
+pDC
+stromal dividing
+transitional club/AT2

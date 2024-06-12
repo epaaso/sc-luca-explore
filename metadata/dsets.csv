@@ -1,0 +1,14 @@
+disease,id,input_adata,min_counts,max_counts,min_genes,max_genes,max_pct_mito,batch_key,run_solo,no_cancer_or_filter,chem,assembly,Names,Annots,study,doi,stage,disease
+0,Chen_Zhang_2020_NSCLC,data/12_input_adatas/Chen_Zhang_2020_NSCLC.h5ad,600,30000,250,10000,20,sample,True,False,10x-3'-v2,GRCh8,Chen,True,Chen_Zhang_2020,10.1186/s13059-020-02064-6,I-III,NSCLC
+1,Goveia_Carmeliet_2020_NSCLC,data/12_input_adatas/goveia_carmeliet_2020_nsclc.h5ad,600,30000,250,10000,20,sample,True,False,10x-3'-v2,GRCh8,Goveia,True,Goveia_Carmeliet_2020,10.1016/j.ccell.2019.12.001,I-II,NSCLC
+2,Kim_Lee_2020_LUAD,data/12_input_adatas/Kim_Lee_2020_LUAD.h5ad,1000,35000,300,10000,20,sample,True,False,10x-3'-v2,GRCh8,Kim,True,Kim_Lee_2020,10.1038/s41467-020-16164-1,I-II-III-IV,Adeno
+3,He_Fan_2021_LUAD,data/12_input_adatas/He_Fan_2021_LUAD.h5ad,600,30000,250,10000,20,sample,True,False,10x-3'-v2,GRCh8?,He,True,He_Fan_2021,10.1038/s41388-020-01528-0,I-II,Adeno
+4,Lambrechts_2018_LUAD_6149v1,data/12_input_adatas/lambrechts_2018_luad_6149v1.h5ad,600,30000,200,10000,15,sample,True,False,10x-3'-v1,hg19,Lambrechts,True,Lambrechts_Thienpont_2018,10.1038/s41591-018-0096-5,I-II-III,NSCLC
+5,Lambrechts_2018_LUAD_6149v2,data/12_input_adatas/lambrechts_2018_luad_6149v2.h5ad,600,30000,250,10000,20,sample,True,False,10x-3'-v2,,Lambrechts,True,Lambrechts_Thienpont_2018,10.1038/s41591-018-0096-5,I-II-III,NSCLC
+6,Lambrechts_2018_LUAD_6653,data/12_input_adatas/lambrechts_2018_luad_6653.h5ad,1200,40000,250,10000,20,sample,True,False,,,Lambrechts,True,Lambrechts_Thienpont_2018,10.1038/s41591-018-0096-5,I-II-III,NSCLC
+7,Laughney_Massague_2020_NSCLC,data/12_input_adatas/laughney_massague_2020_nsclc.h5ad,1800,40000,500,10000,20,sample,True,False,10x-3'-v2,GRCh8,Laughney,True,Laughney_Massague_2020,10.1038/s41591-019-0750-6,I-II-IV,Adeno
+8,Maynard_Bivona_2020_NSCLC,data/12_input_adatas/maynard2020.h5ad,20000,20000000,600,20000,30,sample,False,False,,,Maynard,True,Maynard_Bivona_2020,10.1016/j.cell.2020.07.017,I-III-IV
+9,UKIM-V,data/12_input_adatas/batch1_3patients.h5ad,2000,100000,200,8000,30,sample,True,False,,,UKIM-V,True,UKIM-V,10.1101/2022.05.09.491204,I-II-III-IV,NSCLC
+10,Wu_Zhou_2021_NSCLC,data/12_input_adatas/wu_zhou_2021_nsclc.h5ad,600,30000,300,10000,30,sample,True,False,,,Wu,True,Wu_Zhou_2021,10.1038/s41467-021-22801-0,III-IV,NSCLC
+11,Zilionis_Klein_2019_NSCLC,data/12_input_adatas/zilionis_klein_2019_nsclc.h5ad,600,30000,200,10000,20,sample,True,False,,,Zilionis,True,Zilionis_Klein_2019,10.1016/j.immuni.2019.03.009,I-II-III-IV,NSCLC
+12,UKIM-V-2,data/11_own_datasets/batch2/h5ad_raw/ukim_v_batch2.h5ad,1000,60000,200,8000,30,sample,True,False,,,UKIM-V-2,True,,I-II-III-IV,NSCLC
