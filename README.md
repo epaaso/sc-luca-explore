@@ -16,7 +16,10 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
 - *nb_infercnv* Runs InferCNV on every sample. This infers from transcripts plcaes in the chromosmes where there sould be copy number variations
 - *nb_DE* Extracts marker genes from (TODO) hardoced cell annotations. It aslo enriches for Hallmark gene ontologies
 - *nb_tumorUMAP* Notebook to check th tumor predictions, It has the DE part integrated. `Tumor_Annot.ipyn` contains explanations of the methods used.
+
 - *outputARACNE* has all the files for the generation and the output of the networks by ARACNE but alos functionally enriched
+- *metadata* contains info about the studies used and data about the groups
+- *utils* contians cutsom plotting and analyiss functions
 
 ## Troubleshooting
 
