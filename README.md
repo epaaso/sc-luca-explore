@@ -8,6 +8,16 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
 
 ![ScRNAseq Workflow](Workflow.png "scRNA-seq Workflow")
 
+## Folder structure
+
+- *nb_filter* Filters the the cells and genes by predefined quality control metrics
+- *nb_annot* Annotates tissue from every study with Lunga Atlas reference maps
+- *nb_ikarus* Runs the ikarus prediction for every sample. A prediciton that uses alog regression and network projection to predict tumor cells
+- *nb_infercnv* Runs InferCNV on every sample. This infers from transcripts plcaes in the chromosmes where there sould be copy number variations
+- *nb_DE* Extracts marker genes from (TODO) hardoced cell annotations. It aslo enriches for Hallmark gene ontologies
+- *nb_tumorUMAP* Notebook to check th tumor predictions, It has the DE part integrated. `Tumor_Annot.ipyn` contains explanations of the methods used.
+- *outputARACNE* has all the files for the generation and the output of the networks by ARACNE but alos functionally enriched
+
 ## Troubleshooting
 
 Due to the long training and annealing times, jlab sometimes cannot connect.
