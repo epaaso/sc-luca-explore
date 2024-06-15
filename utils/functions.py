@@ -1,5 +1,7 @@
 import warnings
 
+from typing import Optional, List, Union, Literal, Tuple, Dict, Iterable
+
 import urllib.request
 import time
 from multiprocessing import cpu_count
@@ -7,23 +9,23 @@ from multiprocessing.pool import ThreadPool
 import multiprocessing
 
 import numpy as np
+
 import scipy as sp
+from scipy import stats
+from scipy.stats import linregress
+
 import pandas as pd
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 import GEOparse
 
 import networkx as nx
 
-from typing import Optional, List, Union, Literal, Tuple, Dict, Iterable
 import anndata as ad
 from scanpy.tl import rank_genes_groups
 from scanpy.pl import rank_genes_groups_violin
-from scipy.stats import linregress
 
-
-from mpl_toolkits.mplot3d import Axes3D
-from scipy import stats
 
 def remove_repeated_var_inds(adata_tmp):
     '''
@@ -239,10 +241,17 @@ def download_parallel(args):
 
 
 def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
-                   method:str='wilcoxon', use_raw:bool=False, parallel:bool=True ):
+                   method:str='wilcoxon', use_raw:bool=False, parallel:bool=False):
 
     key = f'{group1}_vs_{group2}'
+    if parallel:
+        print(f'Started copying {key}')
+    else:
+        print(f'Comparing {key}')        
     adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata
+    if parallel:
+        print(f'Ended copying {key}')
+        
     rank_genes_groups(adata_temp, groupby=groupby, groups=[group1], reference=group2,
                       method=method, use_raw=use_raw, key_added=key)
 
@@ -261,7 +270,7 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
                                groups: Union[Literal['all'], Iterable[str]] = 'all', 
                                use_raw: Optional[bool] = None,
                                method: Optional[Literal['logreg', 't-test', 'wilcoxon', 't-test_overestim_var']] = 'wilcoxon',
-                               parallel: bool = True,
+                               parallel: bool = False,
                                n_jobs: int = 2):
     """
     Perform pairwise comparison of marker genes between specified groups. Expects log data.

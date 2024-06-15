@@ -1,0 +1,3673 @@
+cell_type_tumor,sample,0
+Alveolar cell type 1,Chen_Zhang_2020_NSCLC-4,0
+Alveolar cell type 1,Chen_Zhang_2020_NSCLC-5,1
+Alveolar cell type 1,Chen_Zhang_2020_NSCLC-8,53
+Alveolar cell type 1,Chen_Zhang_2020_NSCLC-9,0
+Alveolar cell type 1,Chen_Zhang_2020_NSCLC-10,56
+Alveolar cell type 1,Guo_Zhang_2018_P0617_TTC,0
+Alveolar cell type 1,Guo_Zhang_2018_P0617_TTH,0
+Alveolar cell type 1,Guo_Zhang_2018_P0617_TTR,0
+Alveolar cell type 1,Guo_Zhang_2018_P0729_TTC,0
+Alveolar cell type 1,Guo_Zhang_2018_P0729_TTH,0
+Alveolar cell type 1,Guo_Zhang_2018_P0913_TTC,0
+Alveolar cell type 1,Guo_Zhang_2018_P0913_TTH,0
+Alveolar cell type 1,Guo_Zhang_2018_P0913_TTR,0
+Alveolar cell type 1,Guo_Zhang_2018_P0913_TTY,0
+Alveolar cell type 1,Kim_Lee_2020_LUNG_T28,2
+Alveolar cell type 1,Kim_Lee_2020_LUNG_T31,4
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Alveolar cell type 1,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Alveolar cell type 1,Maynard_Bivona_2020_LT_S74,0
+Alveolar cell type 1,UKIM-V-2_P7_tumor_primary,0
+Alveolar cell type 1,UKIM-V-2_P11_tumor_primary,1
+Alveolar cell type 1,UKIM-V-2_P12_tumor_primary,1
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453576,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453577,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453578,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453579,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453580,1
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453581,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453582,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453583,1
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453584,2
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453585,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453586,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453587,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453588,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453589,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453590,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453591,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453592,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453593,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453594,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453595,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453596,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453597,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453598,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453599,1
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453600,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453601,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453602,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453603,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453604,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453605,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453606,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453607,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453608,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453609,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453610,13
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453611,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453612,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453613,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453614,1
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453615,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453616,0
+Alveolar cell type 1,Wu_Zhou_2021_GSM4453617,0
+Alveolar cell type 1,Zilionis_Klein_2019_p2t1,0
+Alveolar cell type 1,Zilionis_Klein_2019_p2t2,0
+Alveolar cell type 1,Zilionis_Klein_2019_p7t1,0
+Alveolar cell type 1,Zilionis_Klein_2019_p7t2,0
+Alveolar cell type 2,Chen_Zhang_2020_NSCLC-4,2
+Alveolar cell type 2,Chen_Zhang_2020_NSCLC-5,6
+Alveolar cell type 2,Chen_Zhang_2020_NSCLC-8,350
+Alveolar cell type 2,Chen_Zhang_2020_NSCLC-9,27
+Alveolar cell type 2,Chen_Zhang_2020_NSCLC-10,587
+Alveolar cell type 2,Guo_Zhang_2018_P0617_TTC,0
+Alveolar cell type 2,Guo_Zhang_2018_P0617_TTH,0
+Alveolar cell type 2,Guo_Zhang_2018_P0617_TTR,0
+Alveolar cell type 2,Guo_Zhang_2018_P0729_TTC,0
+Alveolar cell type 2,Guo_Zhang_2018_P0729_TTH,0
+Alveolar cell type 2,Guo_Zhang_2018_P0913_TTC,0
+Alveolar cell type 2,Guo_Zhang_2018_P0913_TTH,0
+Alveolar cell type 2,Guo_Zhang_2018_P0913_TTR,0
+Alveolar cell type 2,Guo_Zhang_2018_P0913_TTY,0
+Alveolar cell type 2,Kim_Lee_2020_LUNG_T28,168
+Alveolar cell type 2,Kim_Lee_2020_LUNG_T31,72
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6149v2_BT1290,18
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6149v2_BT1291,3
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6149v2_BT1292,3
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6653_scrBT1430m,7
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6653_scrBT1431m,12
+Alveolar cell type 2,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Alveolar cell type 2,Maynard_Bivona_2020_LT_S74,5
+Alveolar cell type 2,UKIM-V-2_P7_tumor_primary,4
+Alveolar cell type 2,UKIM-V-2_P11_tumor_primary,2
+Alveolar cell type 2,UKIM-V-2_P12_tumor_primary,2
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453576,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453577,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453578,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453579,1
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453580,99
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453581,1
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453582,51
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453583,212
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453584,8
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453585,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453586,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453587,282
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453588,4
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453589,1
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453590,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453591,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453592,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453593,3
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453594,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453595,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453596,2
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453597,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453598,1
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453599,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453600,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453601,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453602,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453603,1
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453604,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453605,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453606,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453607,4
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453608,3
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453609,3
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453610,319
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453611,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453612,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453613,19
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453614,173
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453615,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453616,0
+Alveolar cell type 2,Wu_Zhou_2021_GSM4453617,0
+Alveolar cell type 2,Zilionis_Klein_2019_p2t1,0
+Alveolar cell type 2,Zilionis_Klein_2019_p2t2,0
+Alveolar cell type 2,Zilionis_Klein_2019_p7t1,24
+Alveolar cell type 2,Zilionis_Klein_2019_p7t2,28
+B cell,Chen_Zhang_2020_NSCLC-4,295
+B cell,Chen_Zhang_2020_NSCLC-5,1572
+B cell,Chen_Zhang_2020_NSCLC-8,147
+B cell,Chen_Zhang_2020_NSCLC-9,0
+B cell,Chen_Zhang_2020_NSCLC-10,1128
+B cell,Guo_Zhang_2018_P0617_TTC,0
+B cell,Guo_Zhang_2018_P0617_TTH,0
+B cell,Guo_Zhang_2018_P0617_TTR,0
+B cell,Guo_Zhang_2018_P0729_TTC,0
+B cell,Guo_Zhang_2018_P0729_TTH,0
+B cell,Guo_Zhang_2018_P0913_TTC,0
+B cell,Guo_Zhang_2018_P0913_TTH,0
+B cell,Guo_Zhang_2018_P0913_TTR,0
+B cell,Guo_Zhang_2018_P0913_TTY,0
+B cell,Kim_Lee_2020_LUNG_T28,241
+B cell,Kim_Lee_2020_LUNG_T31,22
+B cell,Lambrechts_Thienpont_2018_6149v2_BT1290,225
+B cell,Lambrechts_Thienpont_2018_6149v2_BT1291,146
+B cell,Lambrechts_Thienpont_2018_6149v2_BT1292,92
+B cell,Lambrechts_Thienpont_2018_6653_scrBT1430m,167
+B cell,Lambrechts_Thienpont_2018_6653_scrBT1431m,685
+B cell,Lambrechts_Thienpont_2018_6653_scrBT1432m,110
+B cell,Maynard_Bivona_2020_LT_S74,32
+B cell,UKIM-V-2_P7_tumor_primary,69
+B cell,UKIM-V-2_P11_tumor_primary,129
+B cell,UKIM-V-2_P12_tumor_primary,451
+B cell,Wu_Zhou_2021_GSM4453576,0
+B cell,Wu_Zhou_2021_GSM4453577,2
+B cell,Wu_Zhou_2021_GSM4453578,0
+B cell,Wu_Zhou_2021_GSM4453579,0
+B cell,Wu_Zhou_2021_GSM4453580,2
+B cell,Wu_Zhou_2021_GSM4453581,8
+B cell,Wu_Zhou_2021_GSM4453582,112
+B cell,Wu_Zhou_2021_GSM4453583,57
+B cell,Wu_Zhou_2021_GSM4453584,0
+B cell,Wu_Zhou_2021_GSM4453585,1
+B cell,Wu_Zhou_2021_GSM4453586,6
+B cell,Wu_Zhou_2021_GSM4453587,51
+B cell,Wu_Zhou_2021_GSM4453588,139
+B cell,Wu_Zhou_2021_GSM4453589,0
+B cell,Wu_Zhou_2021_GSM4453590,0
+B cell,Wu_Zhou_2021_GSM4453591,0
+B cell,Wu_Zhou_2021_GSM4453592,0
+B cell,Wu_Zhou_2021_GSM4453593,1
+B cell,Wu_Zhou_2021_GSM4453594,12
+B cell,Wu_Zhou_2021_GSM4453595,0
+B cell,Wu_Zhou_2021_GSM4453596,1
+B cell,Wu_Zhou_2021_GSM4453597,1
+B cell,Wu_Zhou_2021_GSM4453598,1
+B cell,Wu_Zhou_2021_GSM4453599,5
+B cell,Wu_Zhou_2021_GSM4453600,0
+B cell,Wu_Zhou_2021_GSM4453601,19
+B cell,Wu_Zhou_2021_GSM4453602,0
+B cell,Wu_Zhou_2021_GSM4453603,2
+B cell,Wu_Zhou_2021_GSM4453604,0
+B cell,Wu_Zhou_2021_GSM4453605,0
+B cell,Wu_Zhou_2021_GSM4453606,0
+B cell,Wu_Zhou_2021_GSM4453607,24
+B cell,Wu_Zhou_2021_GSM4453608,0
+B cell,Wu_Zhou_2021_GSM4453609,0
+B cell,Wu_Zhou_2021_GSM4453610,5
+B cell,Wu_Zhou_2021_GSM4453611,2
+B cell,Wu_Zhou_2021_GSM4453612,0
+B cell,Wu_Zhou_2021_GSM4453613,8
+B cell,Wu_Zhou_2021_GSM4453614,20
+B cell,Wu_Zhou_2021_GSM4453615,50
+B cell,Wu_Zhou_2021_GSM4453616,0
+B cell,Wu_Zhou_2021_GSM4453617,7
+B cell,Zilionis_Klein_2019_p2t1,14
+B cell,Zilionis_Klein_2019_p2t2,7
+B cell,Zilionis_Klein_2019_p7t1,39
+B cell,Zilionis_Klein_2019_p7t2,37
+B cell dividing,Chen_Zhang_2020_NSCLC-4,4
+B cell dividing,Chen_Zhang_2020_NSCLC-5,42
+B cell dividing,Chen_Zhang_2020_NSCLC-8,0
+B cell dividing,Chen_Zhang_2020_NSCLC-9,0
+B cell dividing,Chen_Zhang_2020_NSCLC-10,5
+B cell dividing,Guo_Zhang_2018_P0617_TTC,0
+B cell dividing,Guo_Zhang_2018_P0617_TTH,0
+B cell dividing,Guo_Zhang_2018_P0617_TTR,0
+B cell dividing,Guo_Zhang_2018_P0729_TTC,0
+B cell dividing,Guo_Zhang_2018_P0729_TTH,0
+B cell dividing,Guo_Zhang_2018_P0913_TTC,0
+B cell dividing,Guo_Zhang_2018_P0913_TTH,0
+B cell dividing,Guo_Zhang_2018_P0913_TTR,0
+B cell dividing,Guo_Zhang_2018_P0913_TTY,0
+B cell dividing,Kim_Lee_2020_LUNG_T28,3
+B cell dividing,Kim_Lee_2020_LUNG_T31,0
+B cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,2
+B cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+B cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+B cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,11
+B cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,17
+B cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,4
+B cell dividing,Maynard_Bivona_2020_LT_S74,0
+B cell dividing,UKIM-V-2_P7_tumor_primary,0
+B cell dividing,UKIM-V-2_P11_tumor_primary,0
+B cell dividing,UKIM-V-2_P12_tumor_primary,6
+B cell dividing,Wu_Zhou_2021_GSM4453576,0
+B cell dividing,Wu_Zhou_2021_GSM4453577,1
+B cell dividing,Wu_Zhou_2021_GSM4453578,0
+B cell dividing,Wu_Zhou_2021_GSM4453579,0
+B cell dividing,Wu_Zhou_2021_GSM4453580,0
+B cell dividing,Wu_Zhou_2021_GSM4453581,0
+B cell dividing,Wu_Zhou_2021_GSM4453582,0
+B cell dividing,Wu_Zhou_2021_GSM4453583,0
+B cell dividing,Wu_Zhou_2021_GSM4453584,0
+B cell dividing,Wu_Zhou_2021_GSM4453585,1
+B cell dividing,Wu_Zhou_2021_GSM4453586,0
+B cell dividing,Wu_Zhou_2021_GSM4453587,1
+B cell dividing,Wu_Zhou_2021_GSM4453588,11
+B cell dividing,Wu_Zhou_2021_GSM4453589,0
+B cell dividing,Wu_Zhou_2021_GSM4453590,0
+B cell dividing,Wu_Zhou_2021_GSM4453591,0
+B cell dividing,Wu_Zhou_2021_GSM4453592,0
+B cell dividing,Wu_Zhou_2021_GSM4453593,0
+B cell dividing,Wu_Zhou_2021_GSM4453594,0
+B cell dividing,Wu_Zhou_2021_GSM4453595,0
+B cell dividing,Wu_Zhou_2021_GSM4453596,0
+B cell dividing,Wu_Zhou_2021_GSM4453597,0
+B cell dividing,Wu_Zhou_2021_GSM4453598,0
+B cell dividing,Wu_Zhou_2021_GSM4453599,0
+B cell dividing,Wu_Zhou_2021_GSM4453600,0
+B cell dividing,Wu_Zhou_2021_GSM4453601,0
+B cell dividing,Wu_Zhou_2021_GSM4453602,0
+B cell dividing,Wu_Zhou_2021_GSM4453603,0
+B cell dividing,Wu_Zhou_2021_GSM4453604,0
+B cell dividing,Wu_Zhou_2021_GSM4453605,0
+B cell dividing,Wu_Zhou_2021_GSM4453606,0
+B cell dividing,Wu_Zhou_2021_GSM4453607,0
+B cell dividing,Wu_Zhou_2021_GSM4453608,0
+B cell dividing,Wu_Zhou_2021_GSM4453609,0
+B cell dividing,Wu_Zhou_2021_GSM4453610,0
+B cell dividing,Wu_Zhou_2021_GSM4453611,0
+B cell dividing,Wu_Zhou_2021_GSM4453612,0
+B cell dividing,Wu_Zhou_2021_GSM4453613,0
+B cell dividing,Wu_Zhou_2021_GSM4453614,2
+B cell dividing,Wu_Zhou_2021_GSM4453615,0
+B cell dividing,Wu_Zhou_2021_GSM4453616,0
+B cell dividing,Wu_Zhou_2021_GSM4453617,1
+B cell dividing,Zilionis_Klein_2019_p2t1,0
+B cell dividing,Zilionis_Klein_2019_p2t2,0
+B cell dividing,Zilionis_Klein_2019_p7t1,0
+B cell dividing,Zilionis_Klein_2019_p7t2,0
+Ciliated,Chen_Zhang_2020_NSCLC-4,1
+Ciliated,Chen_Zhang_2020_NSCLC-5,4
+Ciliated,Chen_Zhang_2020_NSCLC-8,61
+Ciliated,Chen_Zhang_2020_NSCLC-9,0
+Ciliated,Chen_Zhang_2020_NSCLC-10,5
+Ciliated,Guo_Zhang_2018_P0617_TTC,0
+Ciliated,Guo_Zhang_2018_P0617_TTH,0
+Ciliated,Guo_Zhang_2018_P0617_TTR,0
+Ciliated,Guo_Zhang_2018_P0729_TTC,0
+Ciliated,Guo_Zhang_2018_P0729_TTH,0
+Ciliated,Guo_Zhang_2018_P0913_TTC,0
+Ciliated,Guo_Zhang_2018_P0913_TTH,0
+Ciliated,Guo_Zhang_2018_P0913_TTR,0
+Ciliated,Guo_Zhang_2018_P0913_TTY,0
+Ciliated,Kim_Lee_2020_LUNG_T28,6
+Ciliated,Kim_Lee_2020_LUNG_T31,13
+Ciliated,Lambrechts_Thienpont_2018_6149v2_BT1290,12
+Ciliated,Lambrechts_Thienpont_2018_6149v2_BT1291,6
+Ciliated,Lambrechts_Thienpont_2018_6149v2_BT1292,5
+Ciliated,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Ciliated,Lambrechts_Thienpont_2018_6653_scrBT1431m,2
+Ciliated,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Ciliated,Maynard_Bivona_2020_LT_S74,0
+Ciliated,UKIM-V-2_P7_tumor_primary,21
+Ciliated,UKIM-V-2_P11_tumor_primary,1
+Ciliated,UKIM-V-2_P12_tumor_primary,3
+Ciliated,Wu_Zhou_2021_GSM4453576,6
+Ciliated,Wu_Zhou_2021_GSM4453577,1
+Ciliated,Wu_Zhou_2021_GSM4453578,2
+Ciliated,Wu_Zhou_2021_GSM4453579,1
+Ciliated,Wu_Zhou_2021_GSM4453580,8
+Ciliated,Wu_Zhou_2021_GSM4453581,293
+Ciliated,Wu_Zhou_2021_GSM4453582,5
+Ciliated,Wu_Zhou_2021_GSM4453583,0
+Ciliated,Wu_Zhou_2021_GSM4453584,0
+Ciliated,Wu_Zhou_2021_GSM4453585,0
+Ciliated,Wu_Zhou_2021_GSM4453586,0
+Ciliated,Wu_Zhou_2021_GSM4453587,0
+Ciliated,Wu_Zhou_2021_GSM4453588,0
+Ciliated,Wu_Zhou_2021_GSM4453589,54
+Ciliated,Wu_Zhou_2021_GSM4453590,1
+Ciliated,Wu_Zhou_2021_GSM4453591,0
+Ciliated,Wu_Zhou_2021_GSM4453592,0
+Ciliated,Wu_Zhou_2021_GSM4453593,116
+Ciliated,Wu_Zhou_2021_GSM4453594,73
+Ciliated,Wu_Zhou_2021_GSM4453595,1
+Ciliated,Wu_Zhou_2021_GSM4453596,0
+Ciliated,Wu_Zhou_2021_GSM4453597,0
+Ciliated,Wu_Zhou_2021_GSM4453598,9
+Ciliated,Wu_Zhou_2021_GSM4453599,0
+Ciliated,Wu_Zhou_2021_GSM4453600,0
+Ciliated,Wu_Zhou_2021_GSM4453601,1
+Ciliated,Wu_Zhou_2021_GSM4453602,0
+Ciliated,Wu_Zhou_2021_GSM4453603,0
+Ciliated,Wu_Zhou_2021_GSM4453604,0
+Ciliated,Wu_Zhou_2021_GSM4453605,12
+Ciliated,Wu_Zhou_2021_GSM4453606,0
+Ciliated,Wu_Zhou_2021_GSM4453607,20
+Ciliated,Wu_Zhou_2021_GSM4453608,1
+Ciliated,Wu_Zhou_2021_GSM4453609,0
+Ciliated,Wu_Zhou_2021_GSM4453610,2
+Ciliated,Wu_Zhou_2021_GSM4453611,0
+Ciliated,Wu_Zhou_2021_GSM4453612,0
+Ciliated,Wu_Zhou_2021_GSM4453613,4
+Ciliated,Wu_Zhou_2021_GSM4453614,1
+Ciliated,Wu_Zhou_2021_GSM4453615,168
+Ciliated,Wu_Zhou_2021_GSM4453616,35
+Ciliated,Wu_Zhou_2021_GSM4453617,0
+Ciliated,Zilionis_Klein_2019_p2t1,0
+Ciliated,Zilionis_Klein_2019_p2t2,0
+Ciliated,Zilionis_Klein_2019_p7t1,0
+Ciliated,Zilionis_Klein_2019_p7t2,0
+Club,Chen_Zhang_2020_NSCLC-4,0
+Club,Chen_Zhang_2020_NSCLC-5,3
+Club,Chen_Zhang_2020_NSCLC-8,1
+Club,Chen_Zhang_2020_NSCLC-9,0
+Club,Chen_Zhang_2020_NSCLC-10,21
+Club,Guo_Zhang_2018_P0617_TTC,0
+Club,Guo_Zhang_2018_P0617_TTH,0
+Club,Guo_Zhang_2018_P0617_TTR,0
+Club,Guo_Zhang_2018_P0729_TTC,0
+Club,Guo_Zhang_2018_P0729_TTH,0
+Club,Guo_Zhang_2018_P0913_TTC,0
+Club,Guo_Zhang_2018_P0913_TTH,0
+Club,Guo_Zhang_2018_P0913_TTR,0
+Club,Guo_Zhang_2018_P0913_TTY,0
+Club,Kim_Lee_2020_LUNG_T28,5
+Club,Kim_Lee_2020_LUNG_T31,2
+Club,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Club,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Club,Lambrechts_Thienpont_2018_6149v2_BT1292,1
+Club,Lambrechts_Thienpont_2018_6653_scrBT1430m,4
+Club,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Club,Lambrechts_Thienpont_2018_6653_scrBT1432m,1
+Club,Maynard_Bivona_2020_LT_S74,0
+Club,UKIM-V-2_P7_tumor_primary,4
+Club,UKIM-V-2_P11_tumor_primary,1
+Club,UKIM-V-2_P12_tumor_primary,0
+Club,Wu_Zhou_2021_GSM4453576,3
+Club,Wu_Zhou_2021_GSM4453577,0
+Club,Wu_Zhou_2021_GSM4453578,0
+Club,Wu_Zhou_2021_GSM4453579,2
+Club,Wu_Zhou_2021_GSM4453580,7
+Club,Wu_Zhou_2021_GSM4453581,114
+Club,Wu_Zhou_2021_GSM4453582,3
+Club,Wu_Zhou_2021_GSM4453583,0
+Club,Wu_Zhou_2021_GSM4453584,9
+Club,Wu_Zhou_2021_GSM4453585,1
+Club,Wu_Zhou_2021_GSM4453586,0
+Club,Wu_Zhou_2021_GSM4453587,0
+Club,Wu_Zhou_2021_GSM4453588,0
+Club,Wu_Zhou_2021_GSM4453589,20
+Club,Wu_Zhou_2021_GSM4453590,12
+Club,Wu_Zhou_2021_GSM4453591,0
+Club,Wu_Zhou_2021_GSM4453592,0
+Club,Wu_Zhou_2021_GSM4453593,43
+Club,Wu_Zhou_2021_GSM4453594,10
+Club,Wu_Zhou_2021_GSM4453595,0
+Club,Wu_Zhou_2021_GSM4453596,4
+Club,Wu_Zhou_2021_GSM4453597,0
+Club,Wu_Zhou_2021_GSM4453598,7
+Club,Wu_Zhou_2021_GSM4453599,0
+Club,Wu_Zhou_2021_GSM4453600,0
+Club,Wu_Zhou_2021_GSM4453601,0
+Club,Wu_Zhou_2021_GSM4453602,0
+Club,Wu_Zhou_2021_GSM4453603,0
+Club,Wu_Zhou_2021_GSM4453604,0
+Club,Wu_Zhou_2021_GSM4453605,2
+Club,Wu_Zhou_2021_GSM4453606,0
+Club,Wu_Zhou_2021_GSM4453607,0
+Club,Wu_Zhou_2021_GSM4453608,0
+Club,Wu_Zhou_2021_GSM4453609,0
+Club,Wu_Zhou_2021_GSM4453610,0
+Club,Wu_Zhou_2021_GSM4453611,0
+Club,Wu_Zhou_2021_GSM4453612,0
+Club,Wu_Zhou_2021_GSM4453613,1
+Club,Wu_Zhou_2021_GSM4453614,0
+Club,Wu_Zhou_2021_GSM4453615,20
+Club,Wu_Zhou_2021_GSM4453616,2
+Club,Wu_Zhou_2021_GSM4453617,0
+Club,Zilionis_Klein_2019_p2t1,0
+Club,Zilionis_Klein_2019_p2t2,0
+Club,Zilionis_Klein_2019_p7t1,0
+Club,Zilionis_Klein_2019_p7t2,0
+DC mature,Chen_Zhang_2020_NSCLC-4,1
+DC mature,Chen_Zhang_2020_NSCLC-5,5
+DC mature,Chen_Zhang_2020_NSCLC-8,31
+DC mature,Chen_Zhang_2020_NSCLC-9,0
+DC mature,Chen_Zhang_2020_NSCLC-10,20
+DC mature,Guo_Zhang_2018_P0617_TTC,0
+DC mature,Guo_Zhang_2018_P0617_TTH,0
+DC mature,Guo_Zhang_2018_P0617_TTR,0
+DC mature,Guo_Zhang_2018_P0729_TTC,0
+DC mature,Guo_Zhang_2018_P0729_TTH,0
+DC mature,Guo_Zhang_2018_P0913_TTC,0
+DC mature,Guo_Zhang_2018_P0913_TTH,0
+DC mature,Guo_Zhang_2018_P0913_TTR,0
+DC mature,Guo_Zhang_2018_P0913_TTY,0
+DC mature,Kim_Lee_2020_LUNG_T28,0
+DC mature,Kim_Lee_2020_LUNG_T31,6
+DC mature,Lambrechts_Thienpont_2018_6149v2_BT1290,1
+DC mature,Lambrechts_Thienpont_2018_6149v2_BT1291,2
+DC mature,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+DC mature,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+DC mature,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+DC mature,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+DC mature,Maynard_Bivona_2020_LT_S74,2
+DC mature,UKIM-V-2_P7_tumor_primary,2
+DC mature,UKIM-V-2_P11_tumor_primary,2
+DC mature,UKIM-V-2_P12_tumor_primary,2
+DC mature,Wu_Zhou_2021_GSM4453576,3
+DC mature,Wu_Zhou_2021_GSM4453577,0
+DC mature,Wu_Zhou_2021_GSM4453578,1
+DC mature,Wu_Zhou_2021_GSM4453579,1
+DC mature,Wu_Zhou_2021_GSM4453580,1
+DC mature,Wu_Zhou_2021_GSM4453581,1
+DC mature,Wu_Zhou_2021_GSM4453582,22
+DC mature,Wu_Zhou_2021_GSM4453583,4
+DC mature,Wu_Zhou_2021_GSM4453584,8
+DC mature,Wu_Zhou_2021_GSM4453585,4
+DC mature,Wu_Zhou_2021_GSM4453586,1
+DC mature,Wu_Zhou_2021_GSM4453587,3
+DC mature,Wu_Zhou_2021_GSM4453588,24
+DC mature,Wu_Zhou_2021_GSM4453589,0
+DC mature,Wu_Zhou_2021_GSM4453590,0
+DC mature,Wu_Zhou_2021_GSM4453591,0
+DC mature,Wu_Zhou_2021_GSM4453592,0
+DC mature,Wu_Zhou_2021_GSM4453593,1
+DC mature,Wu_Zhou_2021_GSM4453594,4
+DC mature,Wu_Zhou_2021_GSM4453595,0
+DC mature,Wu_Zhou_2021_GSM4453596,2
+DC mature,Wu_Zhou_2021_GSM4453597,1
+DC mature,Wu_Zhou_2021_GSM4453598,1
+DC mature,Wu_Zhou_2021_GSM4453599,2
+DC mature,Wu_Zhou_2021_GSM4453600,0
+DC mature,Wu_Zhou_2021_GSM4453601,1
+DC mature,Wu_Zhou_2021_GSM4453602,2
+DC mature,Wu_Zhou_2021_GSM4453603,0
+DC mature,Wu_Zhou_2021_GSM4453604,0
+DC mature,Wu_Zhou_2021_GSM4453605,0
+DC mature,Wu_Zhou_2021_GSM4453606,0
+DC mature,Wu_Zhou_2021_GSM4453607,1
+DC mature,Wu_Zhou_2021_GSM4453608,0
+DC mature,Wu_Zhou_2021_GSM4453609,0
+DC mature,Wu_Zhou_2021_GSM4453610,1
+DC mature,Wu_Zhou_2021_GSM4453611,1
+DC mature,Wu_Zhou_2021_GSM4453612,10
+DC mature,Wu_Zhou_2021_GSM4453613,0
+DC mature,Wu_Zhou_2021_GSM4453614,3
+DC mature,Wu_Zhou_2021_GSM4453615,1
+DC mature,Wu_Zhou_2021_GSM4453616,3
+DC mature,Wu_Zhou_2021_GSM4453617,0
+DC mature,Zilionis_Klein_2019_p2t1,0
+DC mature,Zilionis_Klein_2019_p2t2,0
+DC mature,Zilionis_Klein_2019_p7t1,3
+DC mature,Zilionis_Klein_2019_p7t2,6
+Endothelial cell arterial,Chen_Zhang_2020_NSCLC-4,0
+Endothelial cell arterial,Chen_Zhang_2020_NSCLC-5,0
+Endothelial cell arterial,Chen_Zhang_2020_NSCLC-8,0
+Endothelial cell arterial,Chen_Zhang_2020_NSCLC-9,0
+Endothelial cell arterial,Chen_Zhang_2020_NSCLC-10,0
+Endothelial cell arterial,Guo_Zhang_2018_P0617_TTC,0
+Endothelial cell arterial,Guo_Zhang_2018_P0617_TTH,0
+Endothelial cell arterial,Guo_Zhang_2018_P0617_TTR,0
+Endothelial cell arterial,Guo_Zhang_2018_P0729_TTC,0
+Endothelial cell arterial,Guo_Zhang_2018_P0729_TTH,0
+Endothelial cell arterial,Guo_Zhang_2018_P0913_TTC,0
+Endothelial cell arterial,Guo_Zhang_2018_P0913_TTH,0
+Endothelial cell arterial,Guo_Zhang_2018_P0913_TTR,0
+Endothelial cell arterial,Guo_Zhang_2018_P0913_TTY,0
+Endothelial cell arterial,Kim_Lee_2020_LUNG_T28,0
+Endothelial cell arterial,Kim_Lee_2020_LUNG_T31,2
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6149v2_BT1290,3
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6149v2_BT1291,10
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Endothelial cell arterial,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Endothelial cell arterial,Maynard_Bivona_2020_LT_S74,0
+Endothelial cell arterial,UKIM-V-2_P7_tumor_primary,0
+Endothelial cell arterial,UKIM-V-2_P11_tumor_primary,0
+Endothelial cell arterial,UKIM-V-2_P12_tumor_primary,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453576,1
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453577,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453578,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453579,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453580,1
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453581,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453582,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453583,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453584,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453585,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453586,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453587,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453588,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453589,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453590,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453591,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453592,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453593,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453594,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453595,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453596,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453597,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453598,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453599,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453600,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453601,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453602,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453603,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453604,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453605,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453606,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453607,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453608,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453609,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453610,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453611,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453612,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453613,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453614,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453615,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453616,0
+Endothelial cell arterial,Wu_Zhou_2021_GSM4453617,0
+Endothelial cell arterial,Zilionis_Klein_2019_p2t1,0
+Endothelial cell arterial,Zilionis_Klein_2019_p2t2,0
+Endothelial cell arterial,Zilionis_Klein_2019_p7t1,0
+Endothelial cell arterial,Zilionis_Klein_2019_p7t2,0
+Endothelial cell capillary,Chen_Zhang_2020_NSCLC-4,0
+Endothelial cell capillary,Chen_Zhang_2020_NSCLC-5,0
+Endothelial cell capillary,Chen_Zhang_2020_NSCLC-8,1
+Endothelial cell capillary,Chen_Zhang_2020_NSCLC-9,0
+Endothelial cell capillary,Chen_Zhang_2020_NSCLC-10,10
+Endothelial cell capillary,Guo_Zhang_2018_P0617_TTC,0
+Endothelial cell capillary,Guo_Zhang_2018_P0617_TTH,0
+Endothelial cell capillary,Guo_Zhang_2018_P0617_TTR,0
+Endothelial cell capillary,Guo_Zhang_2018_P0729_TTC,0
+Endothelial cell capillary,Guo_Zhang_2018_P0729_TTH,0
+Endothelial cell capillary,Guo_Zhang_2018_P0913_TTC,0
+Endothelial cell capillary,Guo_Zhang_2018_P0913_TTH,0
+Endothelial cell capillary,Guo_Zhang_2018_P0913_TTR,0
+Endothelial cell capillary,Guo_Zhang_2018_P0913_TTY,0
+Endothelial cell capillary,Kim_Lee_2020_LUNG_T28,3
+Endothelial cell capillary,Kim_Lee_2020_LUNG_T31,3
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6149v2_BT1290,2
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6149v2_BT1291,2
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Endothelial cell capillary,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Endothelial cell capillary,Maynard_Bivona_2020_LT_S74,4
+Endothelial cell capillary,UKIM-V-2_P7_tumor_primary,3
+Endothelial cell capillary,UKIM-V-2_P11_tumor_primary,0
+Endothelial cell capillary,UKIM-V-2_P12_tumor_primary,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453576,3
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453577,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453578,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453579,2
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453580,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453581,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453582,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453583,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453584,15
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453585,2
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453586,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453587,1
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453588,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453589,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453590,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453591,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453592,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453593,3
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453594,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453595,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453596,2
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453597,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453598,1
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453599,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453600,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453601,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453602,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453603,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453604,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453605,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453606,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453607,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453608,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453609,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453610,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453611,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453612,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453613,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453614,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453615,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453616,0
+Endothelial cell capillary,Wu_Zhou_2021_GSM4453617,0
+Endothelial cell capillary,Zilionis_Klein_2019_p2t1,0
+Endothelial cell capillary,Zilionis_Klein_2019_p2t2,0
+Endothelial cell capillary,Zilionis_Klein_2019_p7t1,1
+Endothelial cell capillary,Zilionis_Klein_2019_p7t2,0
+Endothelial cell lymphatic,Chen_Zhang_2020_NSCLC-4,0
+Endothelial cell lymphatic,Chen_Zhang_2020_NSCLC-5,1
+Endothelial cell lymphatic,Chen_Zhang_2020_NSCLC-8,4
+Endothelial cell lymphatic,Chen_Zhang_2020_NSCLC-9,0
+Endothelial cell lymphatic,Chen_Zhang_2020_NSCLC-10,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0617_TTC,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0617_TTH,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0617_TTR,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0729_TTC,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0729_TTH,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0913_TTC,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0913_TTH,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0913_TTR,0
+Endothelial cell lymphatic,Guo_Zhang_2018_P0913_TTY,0
+Endothelial cell lymphatic,Kim_Lee_2020_LUNG_T28,9
+Endothelial cell lymphatic,Kim_Lee_2020_LUNG_T31,36
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6149v2_BT1290,3
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6149v2_BT1291,3
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6149v2_BT1292,1
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Endothelial cell lymphatic,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Endothelial cell lymphatic,Maynard_Bivona_2020_LT_S74,0
+Endothelial cell lymphatic,UKIM-V-2_P7_tumor_primary,1
+Endothelial cell lymphatic,UKIM-V-2_P11_tumor_primary,0
+Endothelial cell lymphatic,UKIM-V-2_P12_tumor_primary,3
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453576,1
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453577,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453578,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453579,1
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453580,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453581,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453582,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453583,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453584,7
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453585,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453586,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453587,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453588,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453589,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453590,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453591,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453592,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453593,2
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453594,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453595,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453596,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453597,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453598,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453599,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453600,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453601,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453602,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453603,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453604,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453605,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453606,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453607,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453608,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453609,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453610,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453611,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453612,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453613,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453614,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453615,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453616,0
+Endothelial cell lymphatic,Wu_Zhou_2021_GSM4453617,0
+Endothelial cell lymphatic,Zilionis_Klein_2019_p2t1,0
+Endothelial cell lymphatic,Zilionis_Klein_2019_p2t2,0
+Endothelial cell lymphatic,Zilionis_Klein_2019_p7t1,0
+Endothelial cell lymphatic,Zilionis_Klein_2019_p7t2,0
+Endothelial cell venous,Chen_Zhang_2020_NSCLC-4,0
+Endothelial cell venous,Chen_Zhang_2020_NSCLC-5,0
+Endothelial cell venous,Chen_Zhang_2020_NSCLC-8,18
+Endothelial cell venous,Chen_Zhang_2020_NSCLC-9,0
+Endothelial cell venous,Chen_Zhang_2020_NSCLC-10,26
+Endothelial cell venous,Guo_Zhang_2018_P0617_TTC,0
+Endothelial cell venous,Guo_Zhang_2018_P0617_TTH,0
+Endothelial cell venous,Guo_Zhang_2018_P0617_TTR,0
+Endothelial cell venous,Guo_Zhang_2018_P0729_TTC,0
+Endothelial cell venous,Guo_Zhang_2018_P0729_TTH,0
+Endothelial cell venous,Guo_Zhang_2018_P0913_TTC,0
+Endothelial cell venous,Guo_Zhang_2018_P0913_TTH,0
+Endothelial cell venous,Guo_Zhang_2018_P0913_TTR,0
+Endothelial cell venous,Guo_Zhang_2018_P0913_TTY,0
+Endothelial cell venous,Kim_Lee_2020_LUNG_T28,12
+Endothelial cell venous,Kim_Lee_2020_LUNG_T31,70
+Endothelial cell venous,Lambrechts_Thienpont_2018_6149v2_BT1290,117
+Endothelial cell venous,Lambrechts_Thienpont_2018_6149v2_BT1291,110
+Endothelial cell venous,Lambrechts_Thienpont_2018_6149v2_BT1292,6
+Endothelial cell venous,Lambrechts_Thienpont_2018_6653_scrBT1430m,2
+Endothelial cell venous,Lambrechts_Thienpont_2018_6653_scrBT1431m,22
+Endothelial cell venous,Lambrechts_Thienpont_2018_6653_scrBT1432m,1
+Endothelial cell venous,Maynard_Bivona_2020_LT_S74,13
+Endothelial cell venous,UKIM-V-2_P7_tumor_primary,1
+Endothelial cell venous,UKIM-V-2_P11_tumor_primary,1
+Endothelial cell venous,UKIM-V-2_P12_tumor_primary,3
+Endothelial cell venous,Wu_Zhou_2021_GSM4453576,106
+Endothelial cell venous,Wu_Zhou_2021_GSM4453577,2
+Endothelial cell venous,Wu_Zhou_2021_GSM4453578,9
+Endothelial cell venous,Wu_Zhou_2021_GSM4453579,47
+Endothelial cell venous,Wu_Zhou_2021_GSM4453580,15
+Endothelial cell venous,Wu_Zhou_2021_GSM4453581,14
+Endothelial cell venous,Wu_Zhou_2021_GSM4453582,5
+Endothelial cell venous,Wu_Zhou_2021_GSM4453583,2
+Endothelial cell venous,Wu_Zhou_2021_GSM4453584,224
+Endothelial cell venous,Wu_Zhou_2021_GSM4453585,32
+Endothelial cell venous,Wu_Zhou_2021_GSM4453586,9
+Endothelial cell venous,Wu_Zhou_2021_GSM4453587,13
+Endothelial cell venous,Wu_Zhou_2021_GSM4453588,2
+Endothelial cell venous,Wu_Zhou_2021_GSM4453589,25
+Endothelial cell venous,Wu_Zhou_2021_GSM4453590,22
+Endothelial cell venous,Wu_Zhou_2021_GSM4453591,7
+Endothelial cell venous,Wu_Zhou_2021_GSM4453592,4
+Endothelial cell venous,Wu_Zhou_2021_GSM4453593,196
+Endothelial cell venous,Wu_Zhou_2021_GSM4453594,7
+Endothelial cell venous,Wu_Zhou_2021_GSM4453595,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453596,5
+Endothelial cell venous,Wu_Zhou_2021_GSM4453597,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453598,7
+Endothelial cell venous,Wu_Zhou_2021_GSM4453599,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453600,78
+Endothelial cell venous,Wu_Zhou_2021_GSM4453601,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453602,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453603,10
+Endothelial cell venous,Wu_Zhou_2021_GSM4453604,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453605,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453606,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453607,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453608,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453609,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453610,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453611,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453612,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453613,1
+Endothelial cell venous,Wu_Zhou_2021_GSM4453614,3
+Endothelial cell venous,Wu_Zhou_2021_GSM4453615,0
+Endothelial cell venous,Wu_Zhou_2021_GSM4453616,14
+Endothelial cell venous,Wu_Zhou_2021_GSM4453617,0
+Endothelial cell venous,Zilionis_Klein_2019_p2t1,1
+Endothelial cell venous,Zilionis_Klein_2019_p2t2,0
+Endothelial cell venous,Zilionis_Klein_2019_p7t1,16
+Endothelial cell venous,Zilionis_Klein_2019_p7t2,17
+Fibroblast adventitial,Chen_Zhang_2020_NSCLC-4,0
+Fibroblast adventitial,Chen_Zhang_2020_NSCLC-5,12
+Fibroblast adventitial,Chen_Zhang_2020_NSCLC-8,1
+Fibroblast adventitial,Chen_Zhang_2020_NSCLC-9,0
+Fibroblast adventitial,Chen_Zhang_2020_NSCLC-10,0
+Fibroblast adventitial,Guo_Zhang_2018_P0617_TTC,0
+Fibroblast adventitial,Guo_Zhang_2018_P0617_TTH,0
+Fibroblast adventitial,Guo_Zhang_2018_P0617_TTR,0
+Fibroblast adventitial,Guo_Zhang_2018_P0729_TTC,0
+Fibroblast adventitial,Guo_Zhang_2018_P0729_TTH,0
+Fibroblast adventitial,Guo_Zhang_2018_P0913_TTC,0
+Fibroblast adventitial,Guo_Zhang_2018_P0913_TTH,0
+Fibroblast adventitial,Guo_Zhang_2018_P0913_TTR,0
+Fibroblast adventitial,Guo_Zhang_2018_P0913_TTY,0
+Fibroblast adventitial,Kim_Lee_2020_LUNG_T28,5
+Fibroblast adventitial,Kim_Lee_2020_LUNG_T31,243
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6149v2_BT1290,2
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6149v2_BT1291,6
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6653_scrBT1430m,1
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6653_scrBT1431m,2
+Fibroblast adventitial,Lambrechts_Thienpont_2018_6653_scrBT1432m,1
+Fibroblast adventitial,Maynard_Bivona_2020_LT_S74,1
+Fibroblast adventitial,UKIM-V-2_P7_tumor_primary,2
+Fibroblast adventitial,UKIM-V-2_P11_tumor_primary,0
+Fibroblast adventitial,UKIM-V-2_P12_tumor_primary,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453576,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453577,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453578,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453579,2
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453580,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453581,13
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453582,1
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453583,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453584,3
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453585,2
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453586,1
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453587,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453588,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453589,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453590,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453591,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453592,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453593,1
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453594,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453595,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453596,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453597,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453598,7
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453599,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453600,3
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453601,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453602,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453603,1
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453604,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453605,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453606,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453607,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453608,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453609,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453610,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453611,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453612,2
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453613,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453614,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453615,1
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453616,0
+Fibroblast adventitial,Wu_Zhou_2021_GSM4453617,0
+Fibroblast adventitial,Zilionis_Klein_2019_p2t1,0
+Fibroblast adventitial,Zilionis_Klein_2019_p2t2,3
+Fibroblast adventitial,Zilionis_Klein_2019_p7t1,0
+Fibroblast adventitial,Zilionis_Klein_2019_p7t2,0
+Fibroblast alveolar,Chen_Zhang_2020_NSCLC-4,1
+Fibroblast alveolar,Chen_Zhang_2020_NSCLC-5,0
+Fibroblast alveolar,Chen_Zhang_2020_NSCLC-8,0
+Fibroblast alveolar,Chen_Zhang_2020_NSCLC-9,0
+Fibroblast alveolar,Chen_Zhang_2020_NSCLC-10,3
+Fibroblast alveolar,Guo_Zhang_2018_P0617_TTC,0
+Fibroblast alveolar,Guo_Zhang_2018_P0617_TTH,0
+Fibroblast alveolar,Guo_Zhang_2018_P0617_TTR,0
+Fibroblast alveolar,Guo_Zhang_2018_P0729_TTC,0
+Fibroblast alveolar,Guo_Zhang_2018_P0729_TTH,0
+Fibroblast alveolar,Guo_Zhang_2018_P0913_TTC,0
+Fibroblast alveolar,Guo_Zhang_2018_P0913_TTH,0
+Fibroblast alveolar,Guo_Zhang_2018_P0913_TTR,0
+Fibroblast alveolar,Guo_Zhang_2018_P0913_TTY,0
+Fibroblast alveolar,Kim_Lee_2020_LUNG_T28,4
+Fibroblast alveolar,Kim_Lee_2020_LUNG_T31,45
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6149v2_BT1290,61
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6149v2_BT1291,36
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6653_scrBT1431m,2
+Fibroblast alveolar,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Fibroblast alveolar,Maynard_Bivona_2020_LT_S74,0
+Fibroblast alveolar,UKIM-V-2_P7_tumor_primary,0
+Fibroblast alveolar,UKIM-V-2_P11_tumor_primary,0
+Fibroblast alveolar,UKIM-V-2_P12_tumor_primary,1
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453576,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453577,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453578,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453579,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453580,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453581,3
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453582,5
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453583,26
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453584,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453585,2
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453586,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453587,3
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453588,1
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453589,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453590,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453591,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453592,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453593,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453594,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453595,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453596,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453597,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453598,1
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453599,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453600,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453601,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453602,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453603,9
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453604,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453605,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453606,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453607,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453608,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453609,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453610,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453611,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453612,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453613,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453614,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453615,1
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453616,0
+Fibroblast alveolar,Wu_Zhou_2021_GSM4453617,0
+Fibroblast alveolar,Zilionis_Klein_2019_p2t1,0
+Fibroblast alveolar,Zilionis_Klein_2019_p2t2,0
+Fibroblast alveolar,Zilionis_Klein_2019_p7t1,1
+Fibroblast alveolar,Zilionis_Klein_2019_p7t2,2
+Fibroblast peribronchial,Chen_Zhang_2020_NSCLC-4,11
+Fibroblast peribronchial,Chen_Zhang_2020_NSCLC-5,6
+Fibroblast peribronchial,Chen_Zhang_2020_NSCLC-8,3
+Fibroblast peribronchial,Chen_Zhang_2020_NSCLC-9,1
+Fibroblast peribronchial,Chen_Zhang_2020_NSCLC-10,8
+Fibroblast peribronchial,Guo_Zhang_2018_P0617_TTC,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0617_TTH,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0617_TTR,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0729_TTC,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0729_TTH,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0913_TTC,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0913_TTH,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0913_TTR,0
+Fibroblast peribronchial,Guo_Zhang_2018_P0913_TTY,0
+Fibroblast peribronchial,Kim_Lee_2020_LUNG_T28,20
+Fibroblast peribronchial,Kim_Lee_2020_LUNG_T31,62
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6149v2_BT1290,56
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6149v2_BT1291,77
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6149v2_BT1292,11
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6653_scrBT1430m,4
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Fibroblast peribronchial,Lambrechts_Thienpont_2018_6653_scrBT1432m,6
+Fibroblast peribronchial,Maynard_Bivona_2020_LT_S74,10
+Fibroblast peribronchial,UKIM-V-2_P7_tumor_primary,0
+Fibroblast peribronchial,UKIM-V-2_P11_tumor_primary,2
+Fibroblast peribronchial,UKIM-V-2_P12_tumor_primary,11
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453576,109
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453577,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453578,14
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453579,837
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453580,5
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453581,27
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453582,23
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453583,4
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453584,307
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453585,412
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453586,33
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453587,13
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453588,11
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453589,26
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453590,5
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453591,11
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453592,10
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453593,103
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453594,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453595,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453596,1
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453597,27
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453598,136
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453599,3
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453600,114
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453601,8
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453602,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453603,68
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453604,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453605,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453606,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453607,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453608,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453609,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453610,1
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453611,3
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453612,4
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453613,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453614,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453615,0
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453616,143
+Fibroblast peribronchial,Wu_Zhou_2021_GSM4453617,0
+Fibroblast peribronchial,Zilionis_Klein_2019_p2t1,1
+Fibroblast peribronchial,Zilionis_Klein_2019_p2t2,2
+Fibroblast peribronchial,Zilionis_Klein_2019_p7t1,9
+Fibroblast peribronchial,Zilionis_Klein_2019_p7t2,6
+Macrophage,Chen_Zhang_2020_NSCLC-4,43
+Macrophage,Chen_Zhang_2020_NSCLC-5,90
+Macrophage,Chen_Zhang_2020_NSCLC-8,2117
+Macrophage,Chen_Zhang_2020_NSCLC-9,1
+Macrophage,Chen_Zhang_2020_NSCLC-10,586
+Macrophage,Guo_Zhang_2018_P0617_TTC,0
+Macrophage,Guo_Zhang_2018_P0617_TTH,0
+Macrophage,Guo_Zhang_2018_P0617_TTR,0
+Macrophage,Guo_Zhang_2018_P0729_TTC,0
+Macrophage,Guo_Zhang_2018_P0729_TTH,0
+Macrophage,Guo_Zhang_2018_P0913_TTC,0
+Macrophage,Guo_Zhang_2018_P0913_TTH,0
+Macrophage,Guo_Zhang_2018_P0913_TTR,0
+Macrophage,Guo_Zhang_2018_P0913_TTY,0
+Macrophage,Kim_Lee_2020_LUNG_T28,553
+Macrophage,Kim_Lee_2020_LUNG_T31,183
+Macrophage,Lambrechts_Thienpont_2018_6149v2_BT1290,518
+Macrophage,Lambrechts_Thienpont_2018_6149v2_BT1291,277
+Macrophage,Lambrechts_Thienpont_2018_6149v2_BT1292,364
+Macrophage,Lambrechts_Thienpont_2018_6653_scrBT1430m,82
+Macrophage,Lambrechts_Thienpont_2018_6653_scrBT1431m,64
+Macrophage,Lambrechts_Thienpont_2018_6653_scrBT1432m,32
+Macrophage,Maynard_Bivona_2020_LT_S74,38
+Macrophage,UKIM-V-2_P7_tumor_primary,128
+Macrophage,UKIM-V-2_P11_tumor_primary,500
+Macrophage,UKIM-V-2_P12_tumor_primary,215
+Macrophage,Wu_Zhou_2021_GSM4453576,587
+Macrophage,Wu_Zhou_2021_GSM4453577,8
+Macrophage,Wu_Zhou_2021_GSM4453578,29
+Macrophage,Wu_Zhou_2021_GSM4453579,1004
+Macrophage,Wu_Zhou_2021_GSM4453580,290
+Macrophage,Wu_Zhou_2021_GSM4453581,143
+Macrophage,Wu_Zhou_2021_GSM4453582,272
+Macrophage,Wu_Zhou_2021_GSM4453583,273
+Macrophage,Wu_Zhou_2021_GSM4453584,146
+Macrophage,Wu_Zhou_2021_GSM4453585,163
+Macrophage,Wu_Zhou_2021_GSM4453586,128
+Macrophage,Wu_Zhou_2021_GSM4453587,42
+Macrophage,Wu_Zhou_2021_GSM4453588,172
+Macrophage,Wu_Zhou_2021_GSM4453589,113
+Macrophage,Wu_Zhou_2021_GSM4453590,49
+Macrophage,Wu_Zhou_2021_GSM4453591,69
+Macrophage,Wu_Zhou_2021_GSM4453592,6
+Macrophage,Wu_Zhou_2021_GSM4453593,300
+Macrophage,Wu_Zhou_2021_GSM4453594,7
+Macrophage,Wu_Zhou_2021_GSM4453595,9
+Macrophage,Wu_Zhou_2021_GSM4453596,33
+Macrophage,Wu_Zhou_2021_GSM4453597,70
+Macrophage,Wu_Zhou_2021_GSM4453598,103
+Macrophage,Wu_Zhou_2021_GSM4453599,36
+Macrophage,Wu_Zhou_2021_GSM4453600,21
+Macrophage,Wu_Zhou_2021_GSM4453601,8
+Macrophage,Wu_Zhou_2021_GSM4453602,40
+Macrophage,Wu_Zhou_2021_GSM4453603,607
+Macrophage,Wu_Zhou_2021_GSM4453604,63
+Macrophage,Wu_Zhou_2021_GSM4453605,133
+Macrophage,Wu_Zhou_2021_GSM4453606,19
+Macrophage,Wu_Zhou_2021_GSM4453607,32
+Macrophage,Wu_Zhou_2021_GSM4453608,24
+Macrophage,Wu_Zhou_2021_GSM4453609,202
+Macrophage,Wu_Zhou_2021_GSM4453610,45
+Macrophage,Wu_Zhou_2021_GSM4453611,22
+Macrophage,Wu_Zhou_2021_GSM4453612,1039
+Macrophage,Wu_Zhou_2021_GSM4453613,401
+Macrophage,Wu_Zhou_2021_GSM4453614,238
+Macrophage,Wu_Zhou_2021_GSM4453615,8
+Macrophage,Wu_Zhou_2021_GSM4453616,116
+Macrophage,Wu_Zhou_2021_GSM4453617,54
+Macrophage,Zilionis_Klein_2019_p2t1,9
+Macrophage,Zilionis_Klein_2019_p2t2,9
+Macrophage,Zilionis_Klein_2019_p7t1,297
+Macrophage,Zilionis_Klein_2019_p7t2,369
+Macrophage alveolar,Chen_Zhang_2020_NSCLC-4,6
+Macrophage alveolar,Chen_Zhang_2020_NSCLC-5,15
+Macrophage alveolar,Chen_Zhang_2020_NSCLC-8,1523
+Macrophage alveolar,Chen_Zhang_2020_NSCLC-9,0
+Macrophage alveolar,Chen_Zhang_2020_NSCLC-10,134
+Macrophage alveolar,Guo_Zhang_2018_P0617_TTC,0
+Macrophage alveolar,Guo_Zhang_2018_P0617_TTH,0
+Macrophage alveolar,Guo_Zhang_2018_P0617_TTR,1
+Macrophage alveolar,Guo_Zhang_2018_P0729_TTC,0
+Macrophage alveolar,Guo_Zhang_2018_P0729_TTH,1
+Macrophage alveolar,Guo_Zhang_2018_P0913_TTC,0
+Macrophage alveolar,Guo_Zhang_2018_P0913_TTH,0
+Macrophage alveolar,Guo_Zhang_2018_P0913_TTR,0
+Macrophage alveolar,Guo_Zhang_2018_P0913_TTY,0
+Macrophage alveolar,Kim_Lee_2020_LUNG_T28,108
+Macrophage alveolar,Kim_Lee_2020_LUNG_T31,40
+Macrophage alveolar,Lambrechts_Thienpont_2018_6149v2_BT1290,35
+Macrophage alveolar,Lambrechts_Thienpont_2018_6149v2_BT1291,22
+Macrophage alveolar,Lambrechts_Thienpont_2018_6149v2_BT1292,38
+Macrophage alveolar,Lambrechts_Thienpont_2018_6653_scrBT1430m,1
+Macrophage alveolar,Lambrechts_Thienpont_2018_6653_scrBT1431m,8
+Macrophage alveolar,Lambrechts_Thienpont_2018_6653_scrBT1432m,2
+Macrophage alveolar,Maynard_Bivona_2020_LT_S74,0
+Macrophage alveolar,UKIM-V-2_P7_tumor_primary,279
+Macrophage alveolar,UKIM-V-2_P11_tumor_primary,17
+Macrophage alveolar,UKIM-V-2_P12_tumor_primary,13
+Macrophage alveolar,Wu_Zhou_2021_GSM4453576,7
+Macrophage alveolar,Wu_Zhou_2021_GSM4453577,0
+Macrophage alveolar,Wu_Zhou_2021_GSM4453578,2
+Macrophage alveolar,Wu_Zhou_2021_GSM4453579,13
+Macrophage alveolar,Wu_Zhou_2021_GSM4453580,15
+Macrophage alveolar,Wu_Zhou_2021_GSM4453581,26
+Macrophage alveolar,Wu_Zhou_2021_GSM4453582,9
+Macrophage alveolar,Wu_Zhou_2021_GSM4453583,20
+Macrophage alveolar,Wu_Zhou_2021_GSM4453584,6
+Macrophage alveolar,Wu_Zhou_2021_GSM4453585,7
+Macrophage alveolar,Wu_Zhou_2021_GSM4453586,7
+Macrophage alveolar,Wu_Zhou_2021_GSM4453587,8
+Macrophage alveolar,Wu_Zhou_2021_GSM4453588,16
+Macrophage alveolar,Wu_Zhou_2021_GSM4453589,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453590,58
+Macrophage alveolar,Wu_Zhou_2021_GSM4453591,30
+Macrophage alveolar,Wu_Zhou_2021_GSM4453592,3
+Macrophage alveolar,Wu_Zhou_2021_GSM4453593,43
+Macrophage alveolar,Wu_Zhou_2021_GSM4453594,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453595,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453596,4
+Macrophage alveolar,Wu_Zhou_2021_GSM4453597,11
+Macrophage alveolar,Wu_Zhou_2021_GSM4453598,15
+Macrophage alveolar,Wu_Zhou_2021_GSM4453599,8
+Macrophage alveolar,Wu_Zhou_2021_GSM4453600,11
+Macrophage alveolar,Wu_Zhou_2021_GSM4453601,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453602,13
+Macrophage alveolar,Wu_Zhou_2021_GSM4453603,50
+Macrophage alveolar,Wu_Zhou_2021_GSM4453604,2
+Macrophage alveolar,Wu_Zhou_2021_GSM4453605,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453606,0
+Macrophage alveolar,Wu_Zhou_2021_GSM4453607,3
+Macrophage alveolar,Wu_Zhou_2021_GSM4453608,1
+Macrophage alveolar,Wu_Zhou_2021_GSM4453609,6
+Macrophage alveolar,Wu_Zhou_2021_GSM4453610,9
+Macrophage alveolar,Wu_Zhou_2021_GSM4453611,6
+Macrophage alveolar,Wu_Zhou_2021_GSM4453612,53
+Macrophage alveolar,Wu_Zhou_2021_GSM4453613,26
+Macrophage alveolar,Wu_Zhou_2021_GSM4453614,47
+Macrophage alveolar,Wu_Zhou_2021_GSM4453615,0
+Macrophage alveolar,Wu_Zhou_2021_GSM4453616,4
+Macrophage alveolar,Wu_Zhou_2021_GSM4453617,5
+Macrophage alveolar,Zilionis_Klein_2019_p2t1,1
+Macrophage alveolar,Zilionis_Klein_2019_p2t2,5
+Macrophage alveolar,Zilionis_Klein_2019_p7t1,203
+Macrophage alveolar,Zilionis_Klein_2019_p7t2,201
+Mast cell,Chen_Zhang_2020_NSCLC-4,19
+Mast cell,Chen_Zhang_2020_NSCLC-5,16
+Mast cell,Chen_Zhang_2020_NSCLC-8,178
+Mast cell,Chen_Zhang_2020_NSCLC-9,0
+Mast cell,Chen_Zhang_2020_NSCLC-10,166
+Mast cell,Guo_Zhang_2018_P0617_TTC,0
+Mast cell,Guo_Zhang_2018_P0617_TTH,0
+Mast cell,Guo_Zhang_2018_P0617_TTR,0
+Mast cell,Guo_Zhang_2018_P0729_TTC,0
+Mast cell,Guo_Zhang_2018_P0729_TTH,0
+Mast cell,Guo_Zhang_2018_P0913_TTC,0
+Mast cell,Guo_Zhang_2018_P0913_TTH,0
+Mast cell,Guo_Zhang_2018_P0913_TTR,0
+Mast cell,Guo_Zhang_2018_P0913_TTY,0
+Mast cell,Kim_Lee_2020_LUNG_T28,148
+Mast cell,Kim_Lee_2020_LUNG_T31,103
+Mast cell,Lambrechts_Thienpont_2018_6149v2_BT1290,63
+Mast cell,Lambrechts_Thienpont_2018_6149v2_BT1291,50
+Mast cell,Lambrechts_Thienpont_2018_6149v2_BT1292,30
+Mast cell,Lambrechts_Thienpont_2018_6653_scrBT1430m,24
+Mast cell,Lambrechts_Thienpont_2018_6653_scrBT1431m,41
+Mast cell,Lambrechts_Thienpont_2018_6653_scrBT1432m,3
+Mast cell,Maynard_Bivona_2020_LT_S74,12
+Mast cell,UKIM-V-2_P7_tumor_primary,10
+Mast cell,UKIM-V-2_P11_tumor_primary,15
+Mast cell,UKIM-V-2_P12_tumor_primary,19
+Mast cell,Wu_Zhou_2021_GSM4453576,10
+Mast cell,Wu_Zhou_2021_GSM4453577,7
+Mast cell,Wu_Zhou_2021_GSM4453578,2
+Mast cell,Wu_Zhou_2021_GSM4453579,18
+Mast cell,Wu_Zhou_2021_GSM4453580,0
+Mast cell,Wu_Zhou_2021_GSM4453581,0
+Mast cell,Wu_Zhou_2021_GSM4453582,76
+Mast cell,Wu_Zhou_2021_GSM4453583,74
+Mast cell,Wu_Zhou_2021_GSM4453584,10
+Mast cell,Wu_Zhou_2021_GSM4453585,3
+Mast cell,Wu_Zhou_2021_GSM4453586,0
+Mast cell,Wu_Zhou_2021_GSM4453587,41
+Mast cell,Wu_Zhou_2021_GSM4453588,13
+Mast cell,Wu_Zhou_2021_GSM4453589,13
+Mast cell,Wu_Zhou_2021_GSM4453590,1
+Mast cell,Wu_Zhou_2021_GSM4453591,1
+Mast cell,Wu_Zhou_2021_GSM4453592,0
+Mast cell,Wu_Zhou_2021_GSM4453593,0
+Mast cell,Wu_Zhou_2021_GSM4453594,7
+Mast cell,Wu_Zhou_2021_GSM4453595,0
+Mast cell,Wu_Zhou_2021_GSM4453596,1
+Mast cell,Wu_Zhou_2021_GSM4453597,10
+Mast cell,Wu_Zhou_2021_GSM4453598,19
+Mast cell,Wu_Zhou_2021_GSM4453599,31
+Mast cell,Wu_Zhou_2021_GSM4453600,0
+Mast cell,Wu_Zhou_2021_GSM4453601,8
+Mast cell,Wu_Zhou_2021_GSM4453602,5
+Mast cell,Wu_Zhou_2021_GSM4453603,89
+Mast cell,Wu_Zhou_2021_GSM4453604,0
+Mast cell,Wu_Zhou_2021_GSM4453605,0
+Mast cell,Wu_Zhou_2021_GSM4453606,0
+Mast cell,Wu_Zhou_2021_GSM4453607,7
+Mast cell,Wu_Zhou_2021_GSM4453608,2
+Mast cell,Wu_Zhou_2021_GSM4453609,0
+Mast cell,Wu_Zhou_2021_GSM4453610,56
+Mast cell,Wu_Zhou_2021_GSM4453611,1
+Mast cell,Wu_Zhou_2021_GSM4453612,19
+Mast cell,Wu_Zhou_2021_GSM4453613,28
+Mast cell,Wu_Zhou_2021_GSM4453614,16
+Mast cell,Wu_Zhou_2021_GSM4453615,51
+Mast cell,Wu_Zhou_2021_GSM4453616,2
+Mast cell,Wu_Zhou_2021_GSM4453617,5
+Mast cell,Zilionis_Klein_2019_p2t1,2
+Mast cell,Zilionis_Klein_2019_p2t2,4
+Mast cell,Zilionis_Klein_2019_p7t1,72
+Mast cell,Zilionis_Klein_2019_p7t2,71
+Mesothelial,Chen_Zhang_2020_NSCLC-4,0
+Mesothelial,Chen_Zhang_2020_NSCLC-5,0
+Mesothelial,Chen_Zhang_2020_NSCLC-8,2
+Mesothelial,Chen_Zhang_2020_NSCLC-9,0
+Mesothelial,Chen_Zhang_2020_NSCLC-10,0
+Mesothelial,Guo_Zhang_2018_P0617_TTC,0
+Mesothelial,Guo_Zhang_2018_P0617_TTH,0
+Mesothelial,Guo_Zhang_2018_P0617_TTR,0
+Mesothelial,Guo_Zhang_2018_P0729_TTC,0
+Mesothelial,Guo_Zhang_2018_P0729_TTH,0
+Mesothelial,Guo_Zhang_2018_P0913_TTC,0
+Mesothelial,Guo_Zhang_2018_P0913_TTH,0
+Mesothelial,Guo_Zhang_2018_P0913_TTR,0
+Mesothelial,Guo_Zhang_2018_P0913_TTY,0
+Mesothelial,Kim_Lee_2020_LUNG_T28,9
+Mesothelial,Kim_Lee_2020_LUNG_T31,5
+Mesothelial,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Mesothelial,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Mesothelial,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Mesothelial,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Mesothelial,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Mesothelial,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Mesothelial,Maynard_Bivona_2020_LT_S74,0
+Mesothelial,UKIM-V-2_P7_tumor_primary,2
+Mesothelial,UKIM-V-2_P11_tumor_primary,0
+Mesothelial,UKIM-V-2_P12_tumor_primary,0
+Mesothelial,Wu_Zhou_2021_GSM4453576,0
+Mesothelial,Wu_Zhou_2021_GSM4453577,0
+Mesothelial,Wu_Zhou_2021_GSM4453578,0
+Mesothelial,Wu_Zhou_2021_GSM4453579,0
+Mesothelial,Wu_Zhou_2021_GSM4453580,0
+Mesothelial,Wu_Zhou_2021_GSM4453581,0
+Mesothelial,Wu_Zhou_2021_GSM4453582,1
+Mesothelial,Wu_Zhou_2021_GSM4453583,0
+Mesothelial,Wu_Zhou_2021_GSM4453584,1
+Mesothelial,Wu_Zhou_2021_GSM4453585,0
+Mesothelial,Wu_Zhou_2021_GSM4453586,1
+Mesothelial,Wu_Zhou_2021_GSM4453587,0
+Mesothelial,Wu_Zhou_2021_GSM4453588,0
+Mesothelial,Wu_Zhou_2021_GSM4453589,0
+Mesothelial,Wu_Zhou_2021_GSM4453590,0
+Mesothelial,Wu_Zhou_2021_GSM4453591,0
+Mesothelial,Wu_Zhou_2021_GSM4453592,0
+Mesothelial,Wu_Zhou_2021_GSM4453593,0
+Mesothelial,Wu_Zhou_2021_GSM4453594,0
+Mesothelial,Wu_Zhou_2021_GSM4453595,0
+Mesothelial,Wu_Zhou_2021_GSM4453596,0
+Mesothelial,Wu_Zhou_2021_GSM4453597,0
+Mesothelial,Wu_Zhou_2021_GSM4453598,0
+Mesothelial,Wu_Zhou_2021_GSM4453599,0
+Mesothelial,Wu_Zhou_2021_GSM4453600,1
+Mesothelial,Wu_Zhou_2021_GSM4453601,0
+Mesothelial,Wu_Zhou_2021_GSM4453602,0
+Mesothelial,Wu_Zhou_2021_GSM4453603,1
+Mesothelial,Wu_Zhou_2021_GSM4453604,0
+Mesothelial,Wu_Zhou_2021_GSM4453605,0
+Mesothelial,Wu_Zhou_2021_GSM4453606,0
+Mesothelial,Wu_Zhou_2021_GSM4453607,0
+Mesothelial,Wu_Zhou_2021_GSM4453608,0
+Mesothelial,Wu_Zhou_2021_GSM4453609,0
+Mesothelial,Wu_Zhou_2021_GSM4453610,0
+Mesothelial,Wu_Zhou_2021_GSM4453611,0
+Mesothelial,Wu_Zhou_2021_GSM4453612,0
+Mesothelial,Wu_Zhou_2021_GSM4453613,1
+Mesothelial,Wu_Zhou_2021_GSM4453614,0
+Mesothelial,Wu_Zhou_2021_GSM4453615,0
+Mesothelial,Wu_Zhou_2021_GSM4453616,0
+Mesothelial,Wu_Zhou_2021_GSM4453617,0
+Mesothelial,Zilionis_Klein_2019_p2t1,0
+Mesothelial,Zilionis_Klein_2019_p2t2,0
+Mesothelial,Zilionis_Klein_2019_p7t1,0
+Mesothelial,Zilionis_Klein_2019_p7t2,0
+Monocyte classical,Chen_Zhang_2020_NSCLC-4,5
+Monocyte classical,Chen_Zhang_2020_NSCLC-5,32
+Monocyte classical,Chen_Zhang_2020_NSCLC-8,247
+Monocyte classical,Chen_Zhang_2020_NSCLC-9,3
+Monocyte classical,Chen_Zhang_2020_NSCLC-10,146
+Monocyte classical,Guo_Zhang_2018_P0617_TTC,0
+Monocyte classical,Guo_Zhang_2018_P0617_TTH,0
+Monocyte classical,Guo_Zhang_2018_P0617_TTR,0
+Monocyte classical,Guo_Zhang_2018_P0729_TTC,0
+Monocyte classical,Guo_Zhang_2018_P0729_TTH,2
+Monocyte classical,Guo_Zhang_2018_P0913_TTC,0
+Monocyte classical,Guo_Zhang_2018_P0913_TTH,0
+Monocyte classical,Guo_Zhang_2018_P0913_TTR,0
+Monocyte classical,Guo_Zhang_2018_P0913_TTY,0
+Monocyte classical,Kim_Lee_2020_LUNG_T28,93
+Monocyte classical,Kim_Lee_2020_LUNG_T31,31
+Monocyte classical,Lambrechts_Thienpont_2018_6149v2_BT1290,98
+Monocyte classical,Lambrechts_Thienpont_2018_6149v2_BT1291,84
+Monocyte classical,Lambrechts_Thienpont_2018_6149v2_BT1292,116
+Monocyte classical,Lambrechts_Thienpont_2018_6653_scrBT1430m,43
+Monocyte classical,Lambrechts_Thienpont_2018_6653_scrBT1431m,29
+Monocyte classical,Lambrechts_Thienpont_2018_6653_scrBT1432m,5
+Monocyte classical,Maynard_Bivona_2020_LT_S74,27
+Monocyte classical,UKIM-V-2_P7_tumor_primary,64
+Monocyte classical,UKIM-V-2_P11_tumor_primary,74
+Monocyte classical,UKIM-V-2_P12_tumor_primary,54
+Monocyte classical,Wu_Zhou_2021_GSM4453576,34
+Monocyte classical,Wu_Zhou_2021_GSM4453577,0
+Monocyte classical,Wu_Zhou_2021_GSM4453578,17
+Monocyte classical,Wu_Zhou_2021_GSM4453579,59
+Monocyte classical,Wu_Zhou_2021_GSM4453580,109
+Monocyte classical,Wu_Zhou_2021_GSM4453581,130
+Monocyte classical,Wu_Zhou_2021_GSM4453582,185
+Monocyte classical,Wu_Zhou_2021_GSM4453583,24
+Monocyte classical,Wu_Zhou_2021_GSM4453584,13
+Monocyte classical,Wu_Zhou_2021_GSM4453585,36
+Monocyte classical,Wu_Zhou_2021_GSM4453586,48
+Monocyte classical,Wu_Zhou_2021_GSM4453587,18
+Monocyte classical,Wu_Zhou_2021_GSM4453588,34
+Monocyte classical,Wu_Zhou_2021_GSM4453589,6
+Monocyte classical,Wu_Zhou_2021_GSM4453590,139
+Monocyte classical,Wu_Zhou_2021_GSM4453591,22
+Monocyte classical,Wu_Zhou_2021_GSM4453592,0
+Monocyte classical,Wu_Zhou_2021_GSM4453593,45
+Monocyte classical,Wu_Zhou_2021_GSM4453594,42
+Monocyte classical,Wu_Zhou_2021_GSM4453595,1
+Monocyte classical,Wu_Zhou_2021_GSM4453596,2
+Monocyte classical,Wu_Zhou_2021_GSM4453597,16
+Monocyte classical,Wu_Zhou_2021_GSM4453598,18
+Monocyte classical,Wu_Zhou_2021_GSM4453599,8
+Monocyte classical,Wu_Zhou_2021_GSM4453600,13
+Monocyte classical,Wu_Zhou_2021_GSM4453601,3
+Monocyte classical,Wu_Zhou_2021_GSM4453602,38
+Monocyte classical,Wu_Zhou_2021_GSM4453603,94
+Monocyte classical,Wu_Zhou_2021_GSM4453604,14
+Monocyte classical,Wu_Zhou_2021_GSM4453605,5
+Monocyte classical,Wu_Zhou_2021_GSM4453606,3
+Monocyte classical,Wu_Zhou_2021_GSM4453607,6
+Monocyte classical,Wu_Zhou_2021_GSM4453608,1
+Monocyte classical,Wu_Zhou_2021_GSM4453609,142
+Monocyte classical,Wu_Zhou_2021_GSM4453610,6
+Monocyte classical,Wu_Zhou_2021_GSM4453611,54
+Monocyte classical,Wu_Zhou_2021_GSM4453612,110
+Monocyte classical,Wu_Zhou_2021_GSM4453613,196
+Monocyte classical,Wu_Zhou_2021_GSM4453614,37
+Monocyte classical,Wu_Zhou_2021_GSM4453615,70
+Monocyte classical,Wu_Zhou_2021_GSM4453616,4
+Monocyte classical,Wu_Zhou_2021_GSM4453617,26
+Monocyte classical,Zilionis_Klein_2019_p2t1,13
+Monocyte classical,Zilionis_Klein_2019_p2t2,6
+Monocyte classical,Zilionis_Klein_2019_p7t1,217
+Monocyte classical,Zilionis_Klein_2019_p7t2,242
+Monocyte non-classical,Chen_Zhang_2020_NSCLC-4,0
+Monocyte non-classical,Chen_Zhang_2020_NSCLC-5,0
+Monocyte non-classical,Chen_Zhang_2020_NSCLC-8,9
+Monocyte non-classical,Chen_Zhang_2020_NSCLC-9,0
+Monocyte non-classical,Chen_Zhang_2020_NSCLC-10,12
+Monocyte non-classical,Guo_Zhang_2018_P0617_TTC,0
+Monocyte non-classical,Guo_Zhang_2018_P0617_TTH,0
+Monocyte non-classical,Guo_Zhang_2018_P0617_TTR,0
+Monocyte non-classical,Guo_Zhang_2018_P0729_TTC,0
+Monocyte non-classical,Guo_Zhang_2018_P0729_TTH,0
+Monocyte non-classical,Guo_Zhang_2018_P0913_TTC,0
+Monocyte non-classical,Guo_Zhang_2018_P0913_TTH,0
+Monocyte non-classical,Guo_Zhang_2018_P0913_TTR,0
+Monocyte non-classical,Guo_Zhang_2018_P0913_TTY,0
+Monocyte non-classical,Kim_Lee_2020_LUNG_T28,3
+Monocyte non-classical,Kim_Lee_2020_LUNG_T31,1
+Monocyte non-classical,Lambrechts_Thienpont_2018_6149v2_BT1290,9
+Monocyte non-classical,Lambrechts_Thienpont_2018_6149v2_BT1291,10
+Monocyte non-classical,Lambrechts_Thienpont_2018_6149v2_BT1292,6
+Monocyte non-classical,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Monocyte non-classical,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Monocyte non-classical,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Monocyte non-classical,Maynard_Bivona_2020_LT_S74,1
+Monocyte non-classical,UKIM-V-2_P7_tumor_primary,14
+Monocyte non-classical,UKIM-V-2_P11_tumor_primary,3
+Monocyte non-classical,UKIM-V-2_P12_tumor_primary,5
+Monocyte non-classical,Wu_Zhou_2021_GSM4453576,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453577,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453578,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453579,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453580,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453581,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453582,7
+Monocyte non-classical,Wu_Zhou_2021_GSM4453583,1
+Monocyte non-classical,Wu_Zhou_2021_GSM4453584,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453585,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453586,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453587,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453588,1
+Monocyte non-classical,Wu_Zhou_2021_GSM4453589,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453590,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453591,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453592,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453593,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453594,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453595,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453596,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453597,1
+Monocyte non-classical,Wu_Zhou_2021_GSM4453598,1
+Monocyte non-classical,Wu_Zhou_2021_GSM4453599,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453600,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453601,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453602,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453603,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453604,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453605,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453606,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453607,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453608,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453609,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453610,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453611,1
+Monocyte non-classical,Wu_Zhou_2021_GSM4453612,5
+Monocyte non-classical,Wu_Zhou_2021_GSM4453613,17
+Monocyte non-classical,Wu_Zhou_2021_GSM4453614,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453615,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453616,0
+Monocyte non-classical,Wu_Zhou_2021_GSM4453617,0
+Monocyte non-classical,Zilionis_Klein_2019_p2t1,1
+Monocyte non-classical,Zilionis_Klein_2019_p2t2,0
+Monocyte non-classical,Zilionis_Klein_2019_p7t1,1
+Monocyte non-classical,Zilionis_Klein_2019_p7t2,0
+NK cell,Chen_Zhang_2020_NSCLC-4,208
+NK cell,Chen_Zhang_2020_NSCLC-5,201
+NK cell,Chen_Zhang_2020_NSCLC-8,621
+NK cell,Chen_Zhang_2020_NSCLC-9,0
+NK cell,Chen_Zhang_2020_NSCLC-10,407
+NK cell,Guo_Zhang_2018_P0617_TTC,1
+NK cell,Guo_Zhang_2018_P0617_TTH,0
+NK cell,Guo_Zhang_2018_P0617_TTR,0
+NK cell,Guo_Zhang_2018_P0729_TTC,10
+NK cell,Guo_Zhang_2018_P0729_TTH,2
+NK cell,Guo_Zhang_2018_P0913_TTC,21
+NK cell,Guo_Zhang_2018_P0913_TTH,0
+NK cell,Guo_Zhang_2018_P0913_TTR,0
+NK cell,Guo_Zhang_2018_P0913_TTY,0
+NK cell,Kim_Lee_2020_LUNG_T28,114
+NK cell,Kim_Lee_2020_LUNG_T31,251
+NK cell,Lambrechts_Thienpont_2018_6149v2_BT1290,88
+NK cell,Lambrechts_Thienpont_2018_6149v2_BT1291,96
+NK cell,Lambrechts_Thienpont_2018_6149v2_BT1292,48
+NK cell,Lambrechts_Thienpont_2018_6653_scrBT1430m,103
+NK cell,Lambrechts_Thienpont_2018_6653_scrBT1431m,51
+NK cell,Lambrechts_Thienpont_2018_6653_scrBT1432m,39
+NK cell,Maynard_Bivona_2020_LT_S74,28
+NK cell,UKIM-V-2_P7_tumor_primary,365
+NK cell,UKIM-V-2_P11_tumor_primary,446
+NK cell,UKIM-V-2_P12_tumor_primary,748
+NK cell,Wu_Zhou_2021_GSM4453576,1
+NK cell,Wu_Zhou_2021_GSM4453577,0
+NK cell,Wu_Zhou_2021_GSM4453578,0
+NK cell,Wu_Zhou_2021_GSM4453579,3
+NK cell,Wu_Zhou_2021_GSM4453580,0
+NK cell,Wu_Zhou_2021_GSM4453581,5
+NK cell,Wu_Zhou_2021_GSM4453582,35
+NK cell,Wu_Zhou_2021_GSM4453583,1
+NK cell,Wu_Zhou_2021_GSM4453584,2
+NK cell,Wu_Zhou_2021_GSM4453585,1
+NK cell,Wu_Zhou_2021_GSM4453586,5
+NK cell,Wu_Zhou_2021_GSM4453587,10
+NK cell,Wu_Zhou_2021_GSM4453588,2
+NK cell,Wu_Zhou_2021_GSM4453589,0
+NK cell,Wu_Zhou_2021_GSM4453590,0
+NK cell,Wu_Zhou_2021_GSM4453591,0
+NK cell,Wu_Zhou_2021_GSM4453592,0
+NK cell,Wu_Zhou_2021_GSM4453593,1
+NK cell,Wu_Zhou_2021_GSM4453594,7
+NK cell,Wu_Zhou_2021_GSM4453595,0
+NK cell,Wu_Zhou_2021_GSM4453596,0
+NK cell,Wu_Zhou_2021_GSM4453597,31
+NK cell,Wu_Zhou_2021_GSM4453598,0
+NK cell,Wu_Zhou_2021_GSM4453599,2
+NK cell,Wu_Zhou_2021_GSM4453600,0
+NK cell,Wu_Zhou_2021_GSM4453601,4
+NK cell,Wu_Zhou_2021_GSM4453602,4
+NK cell,Wu_Zhou_2021_GSM4453603,1
+NK cell,Wu_Zhou_2021_GSM4453604,0
+NK cell,Wu_Zhou_2021_GSM4453605,0
+NK cell,Wu_Zhou_2021_GSM4453606,0
+NK cell,Wu_Zhou_2021_GSM4453607,2
+NK cell,Wu_Zhou_2021_GSM4453608,0
+NK cell,Wu_Zhou_2021_GSM4453609,1
+NK cell,Wu_Zhou_2021_GSM4453610,0
+NK cell,Wu_Zhou_2021_GSM4453611,0
+NK cell,Wu_Zhou_2021_GSM4453612,4
+NK cell,Wu_Zhou_2021_GSM4453613,26
+NK cell,Wu_Zhou_2021_GSM4453614,2
+NK cell,Wu_Zhou_2021_GSM4453615,38
+NK cell,Wu_Zhou_2021_GSM4453616,0
+NK cell,Wu_Zhou_2021_GSM4453617,8
+NK cell,Zilionis_Klein_2019_p2t1,0
+NK cell,Zilionis_Klein_2019_p2t2,2
+NK cell,Zilionis_Klein_2019_p7t1,17
+NK cell,Zilionis_Klein_2019_p7t2,16
+NK cell dividing,Chen_Zhang_2020_NSCLC-4,1
+NK cell dividing,Chen_Zhang_2020_NSCLC-5,10
+NK cell dividing,Chen_Zhang_2020_NSCLC-8,17
+NK cell dividing,Chen_Zhang_2020_NSCLC-9,1
+NK cell dividing,Chen_Zhang_2020_NSCLC-10,9
+NK cell dividing,Guo_Zhang_2018_P0617_TTC,0
+NK cell dividing,Guo_Zhang_2018_P0617_TTH,0
+NK cell dividing,Guo_Zhang_2018_P0617_TTR,0
+NK cell dividing,Guo_Zhang_2018_P0729_TTC,0
+NK cell dividing,Guo_Zhang_2018_P0729_TTH,0
+NK cell dividing,Guo_Zhang_2018_P0913_TTC,0
+NK cell dividing,Guo_Zhang_2018_P0913_TTH,0
+NK cell dividing,Guo_Zhang_2018_P0913_TTR,0
+NK cell dividing,Guo_Zhang_2018_P0913_TTY,0
+NK cell dividing,Kim_Lee_2020_LUNG_T28,1
+NK cell dividing,Kim_Lee_2020_LUNG_T31,8
+NK cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,1
+NK cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,3
+NK cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+NK cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,4
+NK cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+NK cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,4
+NK cell dividing,Maynard_Bivona_2020_LT_S74,2
+NK cell dividing,UKIM-V-2_P7_tumor_primary,3
+NK cell dividing,UKIM-V-2_P11_tumor_primary,4
+NK cell dividing,UKIM-V-2_P12_tumor_primary,14
+NK cell dividing,Wu_Zhou_2021_GSM4453576,2
+NK cell dividing,Wu_Zhou_2021_GSM4453577,0
+NK cell dividing,Wu_Zhou_2021_GSM4453578,0
+NK cell dividing,Wu_Zhou_2021_GSM4453579,2
+NK cell dividing,Wu_Zhou_2021_GSM4453580,0
+NK cell dividing,Wu_Zhou_2021_GSM4453581,2
+NK cell dividing,Wu_Zhou_2021_GSM4453582,1
+NK cell dividing,Wu_Zhou_2021_GSM4453583,0
+NK cell dividing,Wu_Zhou_2021_GSM4453584,0
+NK cell dividing,Wu_Zhou_2021_GSM4453585,0
+NK cell dividing,Wu_Zhou_2021_GSM4453586,1
+NK cell dividing,Wu_Zhou_2021_GSM4453587,0
+NK cell dividing,Wu_Zhou_2021_GSM4453588,0
+NK cell dividing,Wu_Zhou_2021_GSM4453589,1
+NK cell dividing,Wu_Zhou_2021_GSM4453590,0
+NK cell dividing,Wu_Zhou_2021_GSM4453591,0
+NK cell dividing,Wu_Zhou_2021_GSM4453592,0
+NK cell dividing,Wu_Zhou_2021_GSM4453593,0
+NK cell dividing,Wu_Zhou_2021_GSM4453594,0
+NK cell dividing,Wu_Zhou_2021_GSM4453595,0
+NK cell dividing,Wu_Zhou_2021_GSM4453596,0
+NK cell dividing,Wu_Zhou_2021_GSM4453597,0
+NK cell dividing,Wu_Zhou_2021_GSM4453598,0
+NK cell dividing,Wu_Zhou_2021_GSM4453599,0
+NK cell dividing,Wu_Zhou_2021_GSM4453600,0
+NK cell dividing,Wu_Zhou_2021_GSM4453601,0
+NK cell dividing,Wu_Zhou_2021_GSM4453602,0
+NK cell dividing,Wu_Zhou_2021_GSM4453603,0
+NK cell dividing,Wu_Zhou_2021_GSM4453604,1
+NK cell dividing,Wu_Zhou_2021_GSM4453605,0
+NK cell dividing,Wu_Zhou_2021_GSM4453606,0
+NK cell dividing,Wu_Zhou_2021_GSM4453607,0
+NK cell dividing,Wu_Zhou_2021_GSM4453608,0
+NK cell dividing,Wu_Zhou_2021_GSM4453609,0
+NK cell dividing,Wu_Zhou_2021_GSM4453610,0
+NK cell dividing,Wu_Zhou_2021_GSM4453611,0
+NK cell dividing,Wu_Zhou_2021_GSM4453612,0
+NK cell dividing,Wu_Zhou_2021_GSM4453613,1
+NK cell dividing,Wu_Zhou_2021_GSM4453614,0
+NK cell dividing,Wu_Zhou_2021_GSM4453615,0
+NK cell dividing,Wu_Zhou_2021_GSM4453616,0
+NK cell dividing,Wu_Zhou_2021_GSM4453617,0
+NK cell dividing,Zilionis_Klein_2019_p2t1,0
+NK cell dividing,Zilionis_Klein_2019_p2t2,0
+NK cell dividing,Zilionis_Klein_2019_p7t1,0
+NK cell dividing,Zilionis_Klein_2019_p7t2,1
+Neutrophils,Chen_Zhang_2020_NSCLC-4,0
+Neutrophils,Chen_Zhang_2020_NSCLC-5,1
+Neutrophils,Chen_Zhang_2020_NSCLC-8,2
+Neutrophils,Chen_Zhang_2020_NSCLC-9,0
+Neutrophils,Chen_Zhang_2020_NSCLC-10,3
+Neutrophils,Guo_Zhang_2018_P0617_TTC,0
+Neutrophils,Guo_Zhang_2018_P0617_TTH,0
+Neutrophils,Guo_Zhang_2018_P0617_TTR,0
+Neutrophils,Guo_Zhang_2018_P0729_TTC,0
+Neutrophils,Guo_Zhang_2018_P0729_TTH,0
+Neutrophils,Guo_Zhang_2018_P0913_TTC,0
+Neutrophils,Guo_Zhang_2018_P0913_TTH,0
+Neutrophils,Guo_Zhang_2018_P0913_TTR,0
+Neutrophils,Guo_Zhang_2018_P0913_TTY,0
+Neutrophils,Kim_Lee_2020_LUNG_T28,0
+Neutrophils,Kim_Lee_2020_LUNG_T31,0
+Neutrophils,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Neutrophils,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Neutrophils,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Neutrophils,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Neutrophils,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Neutrophils,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Neutrophils,Maynard_Bivona_2020_LT_S74,0
+Neutrophils,UKIM-V-2_P7_tumor_primary,177
+Neutrophils,UKIM-V-2_P11_tumor_primary,60
+Neutrophils,UKIM-V-2_P12_tumor_primary,28
+Neutrophils,Wu_Zhou_2021_GSM4453576,0
+Neutrophils,Wu_Zhou_2021_GSM4453577,0
+Neutrophils,Wu_Zhou_2021_GSM4453578,0
+Neutrophils,Wu_Zhou_2021_GSM4453579,10
+Neutrophils,Wu_Zhou_2021_GSM4453580,0
+Neutrophils,Wu_Zhou_2021_GSM4453581,8
+Neutrophils,Wu_Zhou_2021_GSM4453582,6
+Neutrophils,Wu_Zhou_2021_GSM4453583,4
+Neutrophils,Wu_Zhou_2021_GSM4453584,1
+Neutrophils,Wu_Zhou_2021_GSM4453585,0
+Neutrophils,Wu_Zhou_2021_GSM4453586,2
+Neutrophils,Wu_Zhou_2021_GSM4453587,0
+Neutrophils,Wu_Zhou_2021_GSM4453588,0
+Neutrophils,Wu_Zhou_2021_GSM4453589,0
+Neutrophils,Wu_Zhou_2021_GSM4453590,7
+Neutrophils,Wu_Zhou_2021_GSM4453591,0
+Neutrophils,Wu_Zhou_2021_GSM4453592,0
+Neutrophils,Wu_Zhou_2021_GSM4453593,0
+Neutrophils,Wu_Zhou_2021_GSM4453594,73
+Neutrophils,Wu_Zhou_2021_GSM4453595,0
+Neutrophils,Wu_Zhou_2021_GSM4453596,0
+Neutrophils,Wu_Zhou_2021_GSM4453597,29
+Neutrophils,Wu_Zhou_2021_GSM4453598,0
+Neutrophils,Wu_Zhou_2021_GSM4453599,7
+Neutrophils,Wu_Zhou_2021_GSM4453600,1
+Neutrophils,Wu_Zhou_2021_GSM4453601,98
+Neutrophils,Wu_Zhou_2021_GSM4453602,118
+Neutrophils,Wu_Zhou_2021_GSM4453603,0
+Neutrophils,Wu_Zhou_2021_GSM4453604,0
+Neutrophils,Wu_Zhou_2021_GSM4453605,0
+Neutrophils,Wu_Zhou_2021_GSM4453606,0
+Neutrophils,Wu_Zhou_2021_GSM4453607,0
+Neutrophils,Wu_Zhou_2021_GSM4453608,0
+Neutrophils,Wu_Zhou_2021_GSM4453609,31
+Neutrophils,Wu_Zhou_2021_GSM4453610,0
+Neutrophils,Wu_Zhou_2021_GSM4453611,53
+Neutrophils,Wu_Zhou_2021_GSM4453612,590
+Neutrophils,Wu_Zhou_2021_GSM4453613,0
+Neutrophils,Wu_Zhou_2021_GSM4453614,2
+Neutrophils,Wu_Zhou_2021_GSM4453615,83
+Neutrophils,Wu_Zhou_2021_GSM4453616,0
+Neutrophils,Wu_Zhou_2021_GSM4453617,19
+Neutrophils,Zilionis_Klein_2019_p2t1,7
+Neutrophils,Zilionis_Klein_2019_p2t2,7
+Neutrophils,Zilionis_Klein_2019_p7t1,362
+Neutrophils,Zilionis_Klein_2019_p7t2,229
+Pericyte,Chen_Zhang_2020_NSCLC-4,1
+Pericyte,Chen_Zhang_2020_NSCLC-5,0
+Pericyte,Chen_Zhang_2020_NSCLC-8,0
+Pericyte,Chen_Zhang_2020_NSCLC-9,0
+Pericyte,Chen_Zhang_2020_NSCLC-10,0
+Pericyte,Guo_Zhang_2018_P0617_TTC,0
+Pericyte,Guo_Zhang_2018_P0617_TTH,0
+Pericyte,Guo_Zhang_2018_P0617_TTR,0
+Pericyte,Guo_Zhang_2018_P0729_TTC,0
+Pericyte,Guo_Zhang_2018_P0729_TTH,0
+Pericyte,Guo_Zhang_2018_P0913_TTC,0
+Pericyte,Guo_Zhang_2018_P0913_TTH,0
+Pericyte,Guo_Zhang_2018_P0913_TTR,0
+Pericyte,Guo_Zhang_2018_P0913_TTY,0
+Pericyte,Kim_Lee_2020_LUNG_T28,5
+Pericyte,Kim_Lee_2020_LUNG_T31,7
+Pericyte,Lambrechts_Thienpont_2018_6149v2_BT1290,36
+Pericyte,Lambrechts_Thienpont_2018_6149v2_BT1291,51
+Pericyte,Lambrechts_Thienpont_2018_6149v2_BT1292,12
+Pericyte,Lambrechts_Thienpont_2018_6653_scrBT1430m,4
+Pericyte,Lambrechts_Thienpont_2018_6653_scrBT1431m,5
+Pericyte,Lambrechts_Thienpont_2018_6653_scrBT1432m,1
+Pericyte,Maynard_Bivona_2020_LT_S74,91
+Pericyte,UKIM-V-2_P7_tumor_primary,0
+Pericyte,UKIM-V-2_P11_tumor_primary,1
+Pericyte,UKIM-V-2_P12_tumor_primary,7
+Pericyte,Wu_Zhou_2021_GSM4453576,54
+Pericyte,Wu_Zhou_2021_GSM4453577,0
+Pericyte,Wu_Zhou_2021_GSM4453578,6
+Pericyte,Wu_Zhou_2021_GSM4453579,196
+Pericyte,Wu_Zhou_2021_GSM4453580,1
+Pericyte,Wu_Zhou_2021_GSM4453581,6
+Pericyte,Wu_Zhou_2021_GSM4453582,8
+Pericyte,Wu_Zhou_2021_GSM4453583,1
+Pericyte,Wu_Zhou_2021_GSM4453584,49
+Pericyte,Wu_Zhou_2021_GSM4453585,36
+Pericyte,Wu_Zhou_2021_GSM4453586,3
+Pericyte,Wu_Zhou_2021_GSM4453587,3
+Pericyte,Wu_Zhou_2021_GSM4453588,5
+Pericyte,Wu_Zhou_2021_GSM4453589,2
+Pericyte,Wu_Zhou_2021_GSM4453590,1
+Pericyte,Wu_Zhou_2021_GSM4453591,3
+Pericyte,Wu_Zhou_2021_GSM4453592,21
+Pericyte,Wu_Zhou_2021_GSM4453593,121
+Pericyte,Wu_Zhou_2021_GSM4453594,0
+Pericyte,Wu_Zhou_2021_GSM4453595,0
+Pericyte,Wu_Zhou_2021_GSM4453596,9
+Pericyte,Wu_Zhou_2021_GSM4453597,3
+Pericyte,Wu_Zhou_2021_GSM4453598,2
+Pericyte,Wu_Zhou_2021_GSM4453599,1
+Pericyte,Wu_Zhou_2021_GSM4453600,19
+Pericyte,Wu_Zhou_2021_GSM4453601,0
+Pericyte,Wu_Zhou_2021_GSM4453602,0
+Pericyte,Wu_Zhou_2021_GSM4453603,5
+Pericyte,Wu_Zhou_2021_GSM4453604,0
+Pericyte,Wu_Zhou_2021_GSM4453605,0
+Pericyte,Wu_Zhou_2021_GSM4453606,1
+Pericyte,Wu_Zhou_2021_GSM4453607,0
+Pericyte,Wu_Zhou_2021_GSM4453608,1
+Pericyte,Wu_Zhou_2021_GSM4453609,0
+Pericyte,Wu_Zhou_2021_GSM4453610,0
+Pericyte,Wu_Zhou_2021_GSM4453611,2
+Pericyte,Wu_Zhou_2021_GSM4453612,0
+Pericyte,Wu_Zhou_2021_GSM4453613,0
+Pericyte,Wu_Zhou_2021_GSM4453614,0
+Pericyte,Wu_Zhou_2021_GSM4453615,0
+Pericyte,Wu_Zhou_2021_GSM4453616,66
+Pericyte,Wu_Zhou_2021_GSM4453617,0
+Pericyte,Zilionis_Klein_2019_p2t1,1
+Pericyte,Zilionis_Klein_2019_p2t2,0
+Pericyte,Zilionis_Klein_2019_p7t1,1
+Pericyte,Zilionis_Klein_2019_p7t2,6
+Plasma cell,Chen_Zhang_2020_NSCLC-4,239
+Plasma cell,Chen_Zhang_2020_NSCLC-5,569
+Plasma cell,Chen_Zhang_2020_NSCLC-8,17
+Plasma cell,Chen_Zhang_2020_NSCLC-9,46
+Plasma cell,Chen_Zhang_2020_NSCLC-10,855
+Plasma cell,Guo_Zhang_2018_P0617_TTC,0
+Plasma cell,Guo_Zhang_2018_P0617_TTH,0
+Plasma cell,Guo_Zhang_2018_P0617_TTR,0
+Plasma cell,Guo_Zhang_2018_P0729_TTC,0
+Plasma cell,Guo_Zhang_2018_P0729_TTH,0
+Plasma cell,Guo_Zhang_2018_P0913_TTC,0
+Plasma cell,Guo_Zhang_2018_P0913_TTH,0
+Plasma cell,Guo_Zhang_2018_P0913_TTR,0
+Plasma cell,Guo_Zhang_2018_P0913_TTY,0
+Plasma cell,Kim_Lee_2020_LUNG_T28,253
+Plasma cell,Kim_Lee_2020_LUNG_T31,251
+Plasma cell,Lambrechts_Thienpont_2018_6149v2_BT1290,27
+Plasma cell,Lambrechts_Thienpont_2018_6149v2_BT1291,69
+Plasma cell,Lambrechts_Thienpont_2018_6149v2_BT1292,12
+Plasma cell,Lambrechts_Thienpont_2018_6653_scrBT1430m,96
+Plasma cell,Lambrechts_Thienpont_2018_6653_scrBT1431m,75
+Plasma cell,Lambrechts_Thienpont_2018_6653_scrBT1432m,77
+Plasma cell,Maynard_Bivona_2020_LT_S74,169
+Plasma cell,UKIM-V-2_P7_tumor_primary,2
+Plasma cell,UKIM-V-2_P11_tumor_primary,222
+Plasma cell,UKIM-V-2_P12_tumor_primary,409
+Plasma cell,Wu_Zhou_2021_GSM4453576,162
+Plasma cell,Wu_Zhou_2021_GSM4453577,0
+Plasma cell,Wu_Zhou_2021_GSM4453578,5
+Plasma cell,Wu_Zhou_2021_GSM4453579,311
+Plasma cell,Wu_Zhou_2021_GSM4453580,69
+Plasma cell,Wu_Zhou_2021_GSM4453581,44
+Plasma cell,Wu_Zhou_2021_GSM4453582,565
+Plasma cell,Wu_Zhou_2021_GSM4453583,72
+Plasma cell,Wu_Zhou_2021_GSM4453584,132
+Plasma cell,Wu_Zhou_2021_GSM4453585,77
+Plasma cell,Wu_Zhou_2021_GSM4453586,24
+Plasma cell,Wu_Zhou_2021_GSM4453587,50
+Plasma cell,Wu_Zhou_2021_GSM4453588,85
+Plasma cell,Wu_Zhou_2021_GSM4453589,86
+Plasma cell,Wu_Zhou_2021_GSM4453590,28
+Plasma cell,Wu_Zhou_2021_GSM4453591,3
+Plasma cell,Wu_Zhou_2021_GSM4453592,14
+Plasma cell,Wu_Zhou_2021_GSM4453593,16
+Plasma cell,Wu_Zhou_2021_GSM4453594,2
+Plasma cell,Wu_Zhou_2021_GSM4453595,8
+Plasma cell,Wu_Zhou_2021_GSM4453596,78
+Plasma cell,Wu_Zhou_2021_GSM4453597,0
+Plasma cell,Wu_Zhou_2021_GSM4453598,98
+Plasma cell,Wu_Zhou_2021_GSM4453599,52
+Plasma cell,Wu_Zhou_2021_GSM4453600,0
+Plasma cell,Wu_Zhou_2021_GSM4453601,6
+Plasma cell,Wu_Zhou_2021_GSM4453602,3
+Plasma cell,Wu_Zhou_2021_GSM4453603,93
+Plasma cell,Wu_Zhou_2021_GSM4453604,0
+Plasma cell,Wu_Zhou_2021_GSM4453605,0
+Plasma cell,Wu_Zhou_2021_GSM4453606,11
+Plasma cell,Wu_Zhou_2021_GSM4453607,6
+Plasma cell,Wu_Zhou_2021_GSM4453608,0
+Plasma cell,Wu_Zhou_2021_GSM4453609,23
+Plasma cell,Wu_Zhou_2021_GSM4453610,2
+Plasma cell,Wu_Zhou_2021_GSM4453611,3
+Plasma cell,Wu_Zhou_2021_GSM4453612,24
+Plasma cell,Wu_Zhou_2021_GSM4453613,5
+Plasma cell,Wu_Zhou_2021_GSM4453614,155
+Plasma cell,Wu_Zhou_2021_GSM4453615,25
+Plasma cell,Wu_Zhou_2021_GSM4453616,6
+Plasma cell,Wu_Zhou_2021_GSM4453617,55
+Plasma cell,Zilionis_Klein_2019_p2t1,25
+Plasma cell,Zilionis_Klein_2019_p2t2,27
+Plasma cell,Zilionis_Klein_2019_p7t1,80
+Plasma cell,Zilionis_Klein_2019_p7t2,93
+Plasma cell dividing,Chen_Zhang_2020_NSCLC-4,0
+Plasma cell dividing,Chen_Zhang_2020_NSCLC-5,7
+Plasma cell dividing,Chen_Zhang_2020_NSCLC-8,1
+Plasma cell dividing,Chen_Zhang_2020_NSCLC-9,0
+Plasma cell dividing,Chen_Zhang_2020_NSCLC-10,112
+Plasma cell dividing,Guo_Zhang_2018_P0617_TTC,0
+Plasma cell dividing,Guo_Zhang_2018_P0617_TTH,0
+Plasma cell dividing,Guo_Zhang_2018_P0617_TTR,0
+Plasma cell dividing,Guo_Zhang_2018_P0729_TTC,0
+Plasma cell dividing,Guo_Zhang_2018_P0729_TTH,0
+Plasma cell dividing,Guo_Zhang_2018_P0913_TTC,0
+Plasma cell dividing,Guo_Zhang_2018_P0913_TTH,0
+Plasma cell dividing,Guo_Zhang_2018_P0913_TTR,0
+Plasma cell dividing,Guo_Zhang_2018_P0913_TTY,0
+Plasma cell dividing,Kim_Lee_2020_LUNG_T28,9
+Plasma cell dividing,Kim_Lee_2020_LUNG_T31,1
+Plasma cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,2
+Plasma cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Plasma cell dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,1
+Plasma cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Plasma cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,3
+Plasma cell dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Plasma cell dividing,Maynard_Bivona_2020_LT_S74,2
+Plasma cell dividing,UKIM-V-2_P7_tumor_primary,0
+Plasma cell dividing,UKIM-V-2_P11_tumor_primary,5
+Plasma cell dividing,UKIM-V-2_P12_tumor_primary,1
+Plasma cell dividing,Wu_Zhou_2021_GSM4453576,1
+Plasma cell dividing,Wu_Zhou_2021_GSM4453577,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453578,1
+Plasma cell dividing,Wu_Zhou_2021_GSM4453579,2
+Plasma cell dividing,Wu_Zhou_2021_GSM4453580,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453581,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453582,4
+Plasma cell dividing,Wu_Zhou_2021_GSM4453583,1
+Plasma cell dividing,Wu_Zhou_2021_GSM4453584,1
+Plasma cell dividing,Wu_Zhou_2021_GSM4453585,5
+Plasma cell dividing,Wu_Zhou_2021_GSM4453586,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453587,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453588,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453589,2
+Plasma cell dividing,Wu_Zhou_2021_GSM4453590,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453591,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453592,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453593,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453594,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453595,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453596,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453597,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453598,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453599,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453600,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453601,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453602,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453603,4
+Plasma cell dividing,Wu_Zhou_2021_GSM4453604,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453605,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453606,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453607,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453608,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453609,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453610,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453611,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453612,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453613,2
+Plasma cell dividing,Wu_Zhou_2021_GSM4453614,14
+Plasma cell dividing,Wu_Zhou_2021_GSM4453615,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453616,0
+Plasma cell dividing,Wu_Zhou_2021_GSM4453617,0
+Plasma cell dividing,Zilionis_Klein_2019_p2t1,0
+Plasma cell dividing,Zilionis_Klein_2019_p2t2,0
+Plasma cell dividing,Zilionis_Klein_2019_p7t1,0
+Plasma cell dividing,Zilionis_Klein_2019_p7t2,1
+ROS1+ healthy epithelial,Chen_Zhang_2020_NSCLC-4,0
+ROS1+ healthy epithelial,Chen_Zhang_2020_NSCLC-5,0
+ROS1+ healthy epithelial,Chen_Zhang_2020_NSCLC-8,12
+ROS1+ healthy epithelial,Chen_Zhang_2020_NSCLC-9,0
+ROS1+ healthy epithelial,Chen_Zhang_2020_NSCLC-10,9
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0617_TTC,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0617_TTH,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0617_TTR,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0729_TTC,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0729_TTH,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0913_TTC,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0913_TTH,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0913_TTR,0
+ROS1+ healthy epithelial,Guo_Zhang_2018_P0913_TTY,0
+ROS1+ healthy epithelial,Kim_Lee_2020_LUNG_T28,0
+ROS1+ healthy epithelial,Kim_Lee_2020_LUNG_T31,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+ROS1+ healthy epithelial,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+ROS1+ healthy epithelial,Maynard_Bivona_2020_LT_S74,0
+ROS1+ healthy epithelial,UKIM-V-2_P7_tumor_primary,2
+ROS1+ healthy epithelial,UKIM-V-2_P11_tumor_primary,1
+ROS1+ healthy epithelial,UKIM-V-2_P12_tumor_primary,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453576,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453577,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453578,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453579,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453580,2
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453581,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453582,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453583,1
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453584,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453585,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453586,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453587,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453588,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453589,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453590,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453591,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453592,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453593,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453594,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453595,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453596,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453597,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453598,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453599,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453600,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453601,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453602,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453603,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453604,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453605,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453606,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453607,1
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453608,1
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453609,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453610,1
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453611,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453612,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453613,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453614,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453615,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453616,0
+ROS1+ healthy epithelial,Wu_Zhou_2021_GSM4453617,0
+ROS1+ healthy epithelial,Zilionis_Klein_2019_p2t1,0
+ROS1+ healthy epithelial,Zilionis_Klein_2019_p2t2,0
+ROS1+ healthy epithelial,Zilionis_Klein_2019_p7t1,0
+ROS1+ healthy epithelial,Zilionis_Klein_2019_p7t2,0
+Smooth muscle cell,Chen_Zhang_2020_NSCLC-4,1
+Smooth muscle cell,Chen_Zhang_2020_NSCLC-5,0
+Smooth muscle cell,Chen_Zhang_2020_NSCLC-8,2
+Smooth muscle cell,Chen_Zhang_2020_NSCLC-9,0
+Smooth muscle cell,Chen_Zhang_2020_NSCLC-10,0
+Smooth muscle cell,Guo_Zhang_2018_P0617_TTC,0
+Smooth muscle cell,Guo_Zhang_2018_P0617_TTH,0
+Smooth muscle cell,Guo_Zhang_2018_P0617_TTR,0
+Smooth muscle cell,Guo_Zhang_2018_P0729_TTC,0
+Smooth muscle cell,Guo_Zhang_2018_P0729_TTH,0
+Smooth muscle cell,Guo_Zhang_2018_P0913_TTC,0
+Smooth muscle cell,Guo_Zhang_2018_P0913_TTH,0
+Smooth muscle cell,Guo_Zhang_2018_P0913_TTR,0
+Smooth muscle cell,Guo_Zhang_2018_P0913_TTY,0
+Smooth muscle cell,Kim_Lee_2020_LUNG_T28,7
+Smooth muscle cell,Kim_Lee_2020_LUNG_T31,31
+Smooth muscle cell,Lambrechts_Thienpont_2018_6149v2_BT1290,10
+Smooth muscle cell,Lambrechts_Thienpont_2018_6149v2_BT1291,6
+Smooth muscle cell,Lambrechts_Thienpont_2018_6149v2_BT1292,1
+Smooth muscle cell,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Smooth muscle cell,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Smooth muscle cell,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Smooth muscle cell,Maynard_Bivona_2020_LT_S74,22
+Smooth muscle cell,UKIM-V-2_P7_tumor_primary,0
+Smooth muscle cell,UKIM-V-2_P11_tumor_primary,0
+Smooth muscle cell,UKIM-V-2_P12_tumor_primary,1
+Smooth muscle cell,Wu_Zhou_2021_GSM4453576,2
+Smooth muscle cell,Wu_Zhou_2021_GSM4453577,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453578,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453579,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453580,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453581,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453582,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453583,3
+Smooth muscle cell,Wu_Zhou_2021_GSM4453584,5
+Smooth muscle cell,Wu_Zhou_2021_GSM4453585,5
+Smooth muscle cell,Wu_Zhou_2021_GSM4453586,2
+Smooth muscle cell,Wu_Zhou_2021_GSM4453587,2
+Smooth muscle cell,Wu_Zhou_2021_GSM4453588,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453589,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453590,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453591,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453592,1
+Smooth muscle cell,Wu_Zhou_2021_GSM4453593,6
+Smooth muscle cell,Wu_Zhou_2021_GSM4453594,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453595,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453596,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453597,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453598,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453599,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453600,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453601,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453602,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453603,1
+Smooth muscle cell,Wu_Zhou_2021_GSM4453604,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453605,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453606,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453607,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453608,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453609,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453610,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453611,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453612,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453613,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453614,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453615,0
+Smooth muscle cell,Wu_Zhou_2021_GSM4453616,5
+Smooth muscle cell,Wu_Zhou_2021_GSM4453617,0
+Smooth muscle cell,Zilionis_Klein_2019_p2t1,0
+Smooth muscle cell,Zilionis_Klein_2019_p2t2,0
+Smooth muscle cell,Zilionis_Klein_2019_p7t1,2
+Smooth muscle cell,Zilionis_Klein_2019_p7t2,0
+T cell CD4,Chen_Zhang_2020_NSCLC-4,1314
+T cell CD4,Chen_Zhang_2020_NSCLC-5,1354
+T cell CD4,Chen_Zhang_2020_NSCLC-8,1085
+T cell CD4,Chen_Zhang_2020_NSCLC-9,16
+T cell CD4,Chen_Zhang_2020_NSCLC-10,2629
+T cell CD4,Guo_Zhang_2018_P0617_TTC,28
+T cell CD4,Guo_Zhang_2018_P0617_TTH,132
+T cell CD4,Guo_Zhang_2018_P0617_TTR,112
+T cell CD4,Guo_Zhang_2018_P0729_TTC,16
+T cell CD4,Guo_Zhang_2018_P0729_TTH,26
+T cell CD4,Guo_Zhang_2018_P0913_TTC,9
+T cell CD4,Guo_Zhang_2018_P0913_TTH,98
+T cell CD4,Guo_Zhang_2018_P0913_TTR,128
+T cell CD4,Guo_Zhang_2018_P0913_TTY,63
+T cell CD4,Kim_Lee_2020_LUNG_T28,485
+T cell CD4,Kim_Lee_2020_LUNG_T31,941
+T cell CD4,Lambrechts_Thienpont_2018_6149v2_BT1290,373
+T cell CD4,Lambrechts_Thienpont_2018_6149v2_BT1291,335
+T cell CD4,Lambrechts_Thienpont_2018_6149v2_BT1292,325
+T cell CD4,Lambrechts_Thienpont_2018_6653_scrBT1430m,238
+T cell CD4,Lambrechts_Thienpont_2018_6653_scrBT1431m,710
+T cell CD4,Lambrechts_Thienpont_2018_6653_scrBT1432m,213
+T cell CD4,Maynard_Bivona_2020_LT_S74,65
+T cell CD4,UKIM-V-2_P7_tumor_primary,570
+T cell CD4,UKIM-V-2_P11_tumor_primary,926
+T cell CD4,UKIM-V-2_P12_tumor_primary,1314
+T cell CD4,Wu_Zhou_2021_GSM4453576,1
+T cell CD4,Wu_Zhou_2021_GSM4453577,1
+T cell CD4,Wu_Zhou_2021_GSM4453578,0
+T cell CD4,Wu_Zhou_2021_GSM4453579,10
+T cell CD4,Wu_Zhou_2021_GSM4453580,4
+T cell CD4,Wu_Zhou_2021_GSM4453581,3
+T cell CD4,Wu_Zhou_2021_GSM4453582,101
+T cell CD4,Wu_Zhou_2021_GSM4453583,27
+T cell CD4,Wu_Zhou_2021_GSM4453584,4
+T cell CD4,Wu_Zhou_2021_GSM4453585,3
+T cell CD4,Wu_Zhou_2021_GSM4453586,6
+T cell CD4,Wu_Zhou_2021_GSM4453587,5
+T cell CD4,Wu_Zhou_2021_GSM4453588,28
+T cell CD4,Wu_Zhou_2021_GSM4453589,0
+T cell CD4,Wu_Zhou_2021_GSM4453590,0
+T cell CD4,Wu_Zhou_2021_GSM4453591,0
+T cell CD4,Wu_Zhou_2021_GSM4453592,0
+T cell CD4,Wu_Zhou_2021_GSM4453593,7
+T cell CD4,Wu_Zhou_2021_GSM4453594,17
+T cell CD4,Wu_Zhou_2021_GSM4453595,1
+T cell CD4,Wu_Zhou_2021_GSM4453596,1
+T cell CD4,Wu_Zhou_2021_GSM4453597,59
+T cell CD4,Wu_Zhou_2021_GSM4453598,5
+T cell CD4,Wu_Zhou_2021_GSM4453599,26
+T cell CD4,Wu_Zhou_2021_GSM4453600,1
+T cell CD4,Wu_Zhou_2021_GSM4453601,22
+T cell CD4,Wu_Zhou_2021_GSM4453602,13
+T cell CD4,Wu_Zhou_2021_GSM4453603,21
+T cell CD4,Wu_Zhou_2021_GSM4453604,1
+T cell CD4,Wu_Zhou_2021_GSM4453605,1
+T cell CD4,Wu_Zhou_2021_GSM4453606,1
+T cell CD4,Wu_Zhou_2021_GSM4453607,61
+T cell CD4,Wu_Zhou_2021_GSM4453608,0
+T cell CD4,Wu_Zhou_2021_GSM4453609,1
+T cell CD4,Wu_Zhou_2021_GSM4453610,10
+T cell CD4,Wu_Zhou_2021_GSM4453611,0
+T cell CD4,Wu_Zhou_2021_GSM4453612,3
+T cell CD4,Wu_Zhou_2021_GSM4453613,30
+T cell CD4,Wu_Zhou_2021_GSM4453614,32
+T cell CD4,Wu_Zhou_2021_GSM4453615,159
+T cell CD4,Wu_Zhou_2021_GSM4453616,0
+T cell CD4,Wu_Zhou_2021_GSM4453617,70
+T cell CD4,Zilionis_Klein_2019_p2t1,25
+T cell CD4,Zilionis_Klein_2019_p2t2,19
+T cell CD4,Zilionis_Klein_2019_p7t1,103
+T cell CD4,Zilionis_Klein_2019_p7t2,73
+T cell CD4 dividing,Chen_Zhang_2020_NSCLC-4,23
+T cell CD4 dividing,Chen_Zhang_2020_NSCLC-5,34
+T cell CD4 dividing,Chen_Zhang_2020_NSCLC-8,28
+T cell CD4 dividing,Chen_Zhang_2020_NSCLC-9,12
+T cell CD4 dividing,Chen_Zhang_2020_NSCLC-10,194
+T cell CD4 dividing,Guo_Zhang_2018_P0617_TTC,0
+T cell CD4 dividing,Guo_Zhang_2018_P0617_TTH,0
+T cell CD4 dividing,Guo_Zhang_2018_P0617_TTR,1
+T cell CD4 dividing,Guo_Zhang_2018_P0729_TTC,0
+T cell CD4 dividing,Guo_Zhang_2018_P0729_TTH,1
+T cell CD4 dividing,Guo_Zhang_2018_P0913_TTC,0
+T cell CD4 dividing,Guo_Zhang_2018_P0913_TTH,0
+T cell CD4 dividing,Guo_Zhang_2018_P0913_TTR,11
+T cell CD4 dividing,Guo_Zhang_2018_P0913_TTY,2
+T cell CD4 dividing,Kim_Lee_2020_LUNG_T28,7
+T cell CD4 dividing,Kim_Lee_2020_LUNG_T31,14
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,7
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,6
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,3
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,1
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+T cell CD4 dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,5
+T cell CD4 dividing,Maynard_Bivona_2020_LT_S74,0
+T cell CD4 dividing,UKIM-V-2_P7_tumor_primary,2
+T cell CD4 dividing,UKIM-V-2_P11_tumor_primary,16
+T cell CD4 dividing,UKIM-V-2_P12_tumor_primary,17
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453576,13
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453577,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453578,4
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453579,78
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453580,8
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453581,7
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453582,50
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453583,8
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453584,10
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453585,8
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453586,2
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453587,4
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453588,4
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453589,4
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453590,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453591,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453592,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453593,7
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453594,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453595,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453596,6
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453597,5
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453598,2
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453599,2
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453600,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453601,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453602,2
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453603,3
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453604,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453605,2
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453606,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453607,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453608,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453609,5
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453610,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453611,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453612,0
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453613,8
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453614,27
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453615,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453616,1
+T cell CD4 dividing,Wu_Zhou_2021_GSM4453617,18
+T cell CD4 dividing,Zilionis_Klein_2019_p2t1,0
+T cell CD4 dividing,Zilionis_Klein_2019_p2t2,0
+T cell CD4 dividing,Zilionis_Klein_2019_p7t1,0
+T cell CD4 dividing,Zilionis_Klein_2019_p7t2,7
+T cell CD8 activated,Chen_Zhang_2020_NSCLC-4,85
+T cell CD8 activated,Chen_Zhang_2020_NSCLC-5,39
+T cell CD8 activated,Chen_Zhang_2020_NSCLC-8,19
+T cell CD8 activated,Chen_Zhang_2020_NSCLC-9,0
+T cell CD8 activated,Chen_Zhang_2020_NSCLC-10,168
+T cell CD8 activated,Guo_Zhang_2018_P0617_TTC,0
+T cell CD8 activated,Guo_Zhang_2018_P0617_TTH,1
+T cell CD8 activated,Guo_Zhang_2018_P0617_TTR,0
+T cell CD8 activated,Guo_Zhang_2018_P0729_TTC,0
+T cell CD8 activated,Guo_Zhang_2018_P0729_TTH,0
+T cell CD8 activated,Guo_Zhang_2018_P0913_TTC,0
+T cell CD8 activated,Guo_Zhang_2018_P0913_TTH,0
+T cell CD8 activated,Guo_Zhang_2018_P0913_TTR,0
+T cell CD8 activated,Guo_Zhang_2018_P0913_TTY,0
+T cell CD8 activated,Kim_Lee_2020_LUNG_T28,25
+T cell CD8 activated,Kim_Lee_2020_LUNG_T31,208
+T cell CD8 activated,Lambrechts_Thienpont_2018_6149v2_BT1290,5
+T cell CD8 activated,Lambrechts_Thienpont_2018_6149v2_BT1291,4
+T cell CD8 activated,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+T cell CD8 activated,Lambrechts_Thienpont_2018_6653_scrBT1430m,3
+T cell CD8 activated,Lambrechts_Thienpont_2018_6653_scrBT1431m,3
+T cell CD8 activated,Lambrechts_Thienpont_2018_6653_scrBT1432m,2
+T cell CD8 activated,Maynard_Bivona_2020_LT_S74,1
+T cell CD8 activated,UKIM-V-2_P7_tumor_primary,7
+T cell CD8 activated,UKIM-V-2_P11_tumor_primary,16
+T cell CD8 activated,UKIM-V-2_P12_tumor_primary,44
+T cell CD8 activated,Wu_Zhou_2021_GSM4453576,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453577,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453578,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453579,1
+T cell CD8 activated,Wu_Zhou_2021_GSM4453580,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453581,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453582,4
+T cell CD8 activated,Wu_Zhou_2021_GSM4453583,2
+T cell CD8 activated,Wu_Zhou_2021_GSM4453584,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453585,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453586,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453587,1
+T cell CD8 activated,Wu_Zhou_2021_GSM4453588,3
+T cell CD8 activated,Wu_Zhou_2021_GSM4453589,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453590,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453591,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453592,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453593,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453594,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453595,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453596,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453597,8
+T cell CD8 activated,Wu_Zhou_2021_GSM4453598,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453599,1
+T cell CD8 activated,Wu_Zhou_2021_GSM4453600,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453601,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453602,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453603,1
+T cell CD8 activated,Wu_Zhou_2021_GSM4453604,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453605,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453606,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453607,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453608,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453609,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453610,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453611,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453612,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453613,1
+T cell CD8 activated,Wu_Zhou_2021_GSM4453614,13
+T cell CD8 activated,Wu_Zhou_2021_GSM4453615,7
+T cell CD8 activated,Wu_Zhou_2021_GSM4453616,0
+T cell CD8 activated,Wu_Zhou_2021_GSM4453617,1
+T cell CD8 activated,Zilionis_Klein_2019_p2t1,3
+T cell CD8 activated,Zilionis_Klein_2019_p2t2,1
+T cell CD8 activated,Zilionis_Klein_2019_p7t1,20
+T cell CD8 activated,Zilionis_Klein_2019_p7t2,16
+T cell CD8 dividing,Chen_Zhang_2020_NSCLC-4,16
+T cell CD8 dividing,Chen_Zhang_2020_NSCLC-5,57
+T cell CD8 dividing,Chen_Zhang_2020_NSCLC-8,21
+T cell CD8 dividing,Chen_Zhang_2020_NSCLC-9,0
+T cell CD8 dividing,Chen_Zhang_2020_NSCLC-10,247
+T cell CD8 dividing,Guo_Zhang_2018_P0617_TTC,6
+T cell CD8 dividing,Guo_Zhang_2018_P0617_TTH,0
+T cell CD8 dividing,Guo_Zhang_2018_P0617_TTR,0
+T cell CD8 dividing,Guo_Zhang_2018_P0729_TTC,2
+T cell CD8 dividing,Guo_Zhang_2018_P0729_TTH,0
+T cell CD8 dividing,Guo_Zhang_2018_P0913_TTC,10
+T cell CD8 dividing,Guo_Zhang_2018_P0913_TTH,0
+T cell CD8 dividing,Guo_Zhang_2018_P0913_TTR,1
+T cell CD8 dividing,Guo_Zhang_2018_P0913_TTY,1
+T cell CD8 dividing,Kim_Lee_2020_LUNG_T28,32
+T cell CD8 dividing,Kim_Lee_2020_LUNG_T31,28
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,31
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,36
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,12
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,27
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,3
+T cell CD8 dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,11
+T cell CD8 dividing,Maynard_Bivona_2020_LT_S74,0
+T cell CD8 dividing,UKIM-V-2_P7_tumor_primary,4
+T cell CD8 dividing,UKIM-V-2_P11_tumor_primary,10
+T cell CD8 dividing,UKIM-V-2_P12_tumor_primary,32
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453576,8
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453577,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453578,3
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453579,59
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453580,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453581,11
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453582,29
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453583,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453584,7
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453585,3
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453586,4
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453587,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453588,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453589,2
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453590,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453591,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453592,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453593,11
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453594,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453595,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453596,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453597,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453598,2
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453599,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453600,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453601,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453602,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453603,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453604,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453605,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453606,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453607,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453608,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453609,2
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453610,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453611,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453612,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453613,1
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453614,3
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453615,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453616,0
+T cell CD8 dividing,Wu_Zhou_2021_GSM4453617,10
+T cell CD8 dividing,Zilionis_Klein_2019_p2t1,0
+T cell CD8 dividing,Zilionis_Klein_2019_p2t2,0
+T cell CD8 dividing,Zilionis_Klein_2019_p7t1,0
+T cell CD8 dividing,Zilionis_Klein_2019_p7t2,0
+T cell CD8 effector memory,Chen_Zhang_2020_NSCLC-4,632
+T cell CD8 effector memory,Chen_Zhang_2020_NSCLC-5,1516
+T cell CD8 effector memory,Chen_Zhang_2020_NSCLC-8,531
+T cell CD8 effector memory,Chen_Zhang_2020_NSCLC-9,0
+T cell CD8 effector memory,Chen_Zhang_2020_NSCLC-10,3099
+T cell CD8 effector memory,Guo_Zhang_2018_P0617_TTC,91
+T cell CD8 effector memory,Guo_Zhang_2018_P0617_TTH,5
+T cell CD8 effector memory,Guo_Zhang_2018_P0617_TTR,7
+T cell CD8 effector memory,Guo_Zhang_2018_P0729_TTC,87
+T cell CD8 effector memory,Guo_Zhang_2018_P0729_TTH,9
+T cell CD8 effector memory,Guo_Zhang_2018_P0913_TTC,158
+T cell CD8 effector memory,Guo_Zhang_2018_P0913_TTH,60
+T cell CD8 effector memory,Guo_Zhang_2018_P0913_TTR,5
+T cell CD8 effector memory,Guo_Zhang_2018_P0913_TTY,12
+T cell CD8 effector memory,Kim_Lee_2020_LUNG_T28,317
+T cell CD8 effector memory,Kim_Lee_2020_LUNG_T31,1063
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6149v2_BT1290,257
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6149v2_BT1291,272
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6149v2_BT1292,204
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6653_scrBT1430m,107
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6653_scrBT1431m,283
+T cell CD8 effector memory,Lambrechts_Thienpont_2018_6653_scrBT1432m,176
+T cell CD8 effector memory,Maynard_Bivona_2020_LT_S74,60
+T cell CD8 effector memory,UKIM-V-2_P7_tumor_primary,174
+T cell CD8 effector memory,UKIM-V-2_P11_tumor_primary,648
+T cell CD8 effector memory,UKIM-V-2_P12_tumor_primary,803
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453576,1
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453577,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453578,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453579,20
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453580,1
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453581,5
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453582,245
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453583,5
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453584,1
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453585,7
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453586,6
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453587,8
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453588,5
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453589,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453590,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453591,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453592,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453593,6
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453594,9
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453595,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453596,1
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453597,65
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453598,2
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453599,17
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453600,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453601,3
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453602,7
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453603,7
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453604,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453605,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453606,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453607,9
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453608,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453609,2
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453610,1
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453611,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453612,10
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453613,15
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453614,42
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453615,45
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453616,0
+T cell CD8 effector memory,Wu_Zhou_2021_GSM4453617,39
+T cell CD8 effector memory,Zilionis_Klein_2019_p2t1,5
+T cell CD8 effector memory,Zilionis_Klein_2019_p2t2,0
+T cell CD8 effector memory,Zilionis_Klein_2019_p7t1,30
+T cell CD8 effector memory,Zilionis_Klein_2019_p7t2,31
+T cell CD8 naive,Chen_Zhang_2020_NSCLC-4,33
+T cell CD8 naive,Chen_Zhang_2020_NSCLC-5,30
+T cell CD8 naive,Chen_Zhang_2020_NSCLC-8,11
+T cell CD8 naive,Chen_Zhang_2020_NSCLC-9,0
+T cell CD8 naive,Chen_Zhang_2020_NSCLC-10,75
+T cell CD8 naive,Guo_Zhang_2018_P0617_TTC,1
+T cell CD8 naive,Guo_Zhang_2018_P0617_TTH,11
+T cell CD8 naive,Guo_Zhang_2018_P0617_TTR,8
+T cell CD8 naive,Guo_Zhang_2018_P0729_TTC,1
+T cell CD8 naive,Guo_Zhang_2018_P0729_TTH,8
+T cell CD8 naive,Guo_Zhang_2018_P0913_TTC,3
+T cell CD8 naive,Guo_Zhang_2018_P0913_TTH,0
+T cell CD8 naive,Guo_Zhang_2018_P0913_TTR,0
+T cell CD8 naive,Guo_Zhang_2018_P0913_TTY,0
+T cell CD8 naive,Kim_Lee_2020_LUNG_T28,42
+T cell CD8 naive,Kim_Lee_2020_LUNG_T31,54
+T cell CD8 naive,Lambrechts_Thienpont_2018_6149v2_BT1290,21
+T cell CD8 naive,Lambrechts_Thienpont_2018_6149v2_BT1291,64
+T cell CD8 naive,Lambrechts_Thienpont_2018_6149v2_BT1292,9
+T cell CD8 naive,Lambrechts_Thienpont_2018_6653_scrBT1430m,34
+T cell CD8 naive,Lambrechts_Thienpont_2018_6653_scrBT1431m,53
+T cell CD8 naive,Lambrechts_Thienpont_2018_6653_scrBT1432m,27
+T cell CD8 naive,Maynard_Bivona_2020_LT_S74,2
+T cell CD8 naive,UKIM-V-2_P7_tumor_primary,53
+T cell CD8 naive,UKIM-V-2_P11_tumor_primary,39
+T cell CD8 naive,UKIM-V-2_P12_tumor_primary,138
+T cell CD8 naive,Wu_Zhou_2021_GSM4453576,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453577,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453578,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453579,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453580,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453581,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453582,6
+T cell CD8 naive,Wu_Zhou_2021_GSM4453583,4
+T cell CD8 naive,Wu_Zhou_2021_GSM4453584,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453585,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453586,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453587,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453588,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453589,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453590,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453591,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453592,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453593,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453594,1
+T cell CD8 naive,Wu_Zhou_2021_GSM4453595,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453596,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453597,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453598,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453599,5
+T cell CD8 naive,Wu_Zhou_2021_GSM4453600,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453601,3
+T cell CD8 naive,Wu_Zhou_2021_GSM4453602,1
+T cell CD8 naive,Wu_Zhou_2021_GSM4453603,1
+T cell CD8 naive,Wu_Zhou_2021_GSM4453604,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453605,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453606,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453607,5
+T cell CD8 naive,Wu_Zhou_2021_GSM4453608,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453609,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453610,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453611,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453612,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453613,3
+T cell CD8 naive,Wu_Zhou_2021_GSM4453614,8
+T cell CD8 naive,Wu_Zhou_2021_GSM4453615,3
+T cell CD8 naive,Wu_Zhou_2021_GSM4453616,0
+T cell CD8 naive,Wu_Zhou_2021_GSM4453617,21
+T cell CD8 naive,Zilionis_Klein_2019_p2t1,0
+T cell CD8 naive,Zilionis_Klein_2019_p2t2,0
+T cell CD8 naive,Zilionis_Klein_2019_p7t1,0
+T cell CD8 naive,Zilionis_Klein_2019_p7t2,0
+T cell CD8 terminally exhausted,Chen_Zhang_2020_NSCLC-4,110
+T cell CD8 terminally exhausted,Chen_Zhang_2020_NSCLC-5,881
+T cell CD8 terminally exhausted,Chen_Zhang_2020_NSCLC-8,136
+T cell CD8 terminally exhausted,Chen_Zhang_2020_NSCLC-9,1
+T cell CD8 terminally exhausted,Chen_Zhang_2020_NSCLC-10,803
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0617_TTC,8
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0617_TTH,0
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0617_TTR,0
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0729_TTC,26
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0729_TTH,0
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0913_TTC,32
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0913_TTH,6
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0913_TTR,1
+T cell CD8 terminally exhausted,Guo_Zhang_2018_P0913_TTY,2
+T cell CD8 terminally exhausted,Kim_Lee_2020_LUNG_T28,268
+T cell CD8 terminally exhausted,Kim_Lee_2020_LUNG_T31,320
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6149v2_BT1290,320
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6149v2_BT1291,397
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6149v2_BT1292,127
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6653_scrBT1430m,151
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6653_scrBT1431m,70
+T cell CD8 terminally exhausted,Lambrechts_Thienpont_2018_6653_scrBT1432m,85
+T cell CD8 terminally exhausted,Maynard_Bivona_2020_LT_S74,8
+T cell CD8 terminally exhausted,UKIM-V-2_P7_tumor_primary,15
+T cell CD8 terminally exhausted,UKIM-V-2_P11_tumor_primary,107
+T cell CD8 terminally exhausted,UKIM-V-2_P12_tumor_primary,564
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453576,5
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453577,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453578,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453579,40
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453580,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453581,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453582,118
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453583,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453584,3
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453585,3
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453586,8
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453587,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453588,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453589,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453590,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453591,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453592,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453593,6
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453594,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453595,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453596,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453597,7
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453598,2
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453599,1
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453600,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453601,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453602,7
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453603,4
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453604,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453605,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453606,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453607,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453608,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453609,3
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453610,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453611,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453612,8
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453613,5
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453614,4
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453615,2
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453616,0
+T cell CD8 terminally exhausted,Wu_Zhou_2021_GSM4453617,39
+T cell CD8 terminally exhausted,Zilionis_Klein_2019_p2t1,0
+T cell CD8 terminally exhausted,Zilionis_Klein_2019_p2t2,0
+T cell CD8 terminally exhausted,Zilionis_Klein_2019_p7t1,1
+T cell CD8 terminally exhausted,Zilionis_Klein_2019_p7t2,1
+T cell NK-like,Chen_Zhang_2020_NSCLC-4,23
+T cell NK-like,Chen_Zhang_2020_NSCLC-5,11
+T cell NK-like,Chen_Zhang_2020_NSCLC-8,63
+T cell NK-like,Chen_Zhang_2020_NSCLC-9,0
+T cell NK-like,Chen_Zhang_2020_NSCLC-10,188
+T cell NK-like,Guo_Zhang_2018_P0617_TTC,18
+T cell NK-like,Guo_Zhang_2018_P0617_TTH,1
+T cell NK-like,Guo_Zhang_2018_P0617_TTR,0
+T cell NK-like,Guo_Zhang_2018_P0729_TTC,27
+T cell NK-like,Guo_Zhang_2018_P0729_TTH,3
+T cell NK-like,Guo_Zhang_2018_P0913_TTC,19
+T cell NK-like,Guo_Zhang_2018_P0913_TTH,3
+T cell NK-like,Guo_Zhang_2018_P0913_TTR,0
+T cell NK-like,Guo_Zhang_2018_P0913_TTY,0
+T cell NK-like,Kim_Lee_2020_LUNG_T28,71
+T cell NK-like,Kim_Lee_2020_LUNG_T31,63
+T cell NK-like,Lambrechts_Thienpont_2018_6149v2_BT1290,59
+T cell NK-like,Lambrechts_Thienpont_2018_6149v2_BT1291,57
+T cell NK-like,Lambrechts_Thienpont_2018_6149v2_BT1292,26
+T cell NK-like,Lambrechts_Thienpont_2018_6653_scrBT1430m,40
+T cell NK-like,Lambrechts_Thienpont_2018_6653_scrBT1431m,29
+T cell NK-like,Lambrechts_Thienpont_2018_6653_scrBT1432m,14
+T cell NK-like,Maynard_Bivona_2020_LT_S74,4
+T cell NK-like,UKIM-V-2_P7_tumor_primary,55
+T cell NK-like,UKIM-V-2_P11_tumor_primary,86
+T cell NK-like,UKIM-V-2_P12_tumor_primary,122
+T cell NK-like,Wu_Zhou_2021_GSM4453576,0
+T cell NK-like,Wu_Zhou_2021_GSM4453577,0
+T cell NK-like,Wu_Zhou_2021_GSM4453578,0
+T cell NK-like,Wu_Zhou_2021_GSM4453579,0
+T cell NK-like,Wu_Zhou_2021_GSM4453580,0
+T cell NK-like,Wu_Zhou_2021_GSM4453581,0
+T cell NK-like,Wu_Zhou_2021_GSM4453582,12
+T cell NK-like,Wu_Zhou_2021_GSM4453583,2
+T cell NK-like,Wu_Zhou_2021_GSM4453584,0
+T cell NK-like,Wu_Zhou_2021_GSM4453585,0
+T cell NK-like,Wu_Zhou_2021_GSM4453586,3
+T cell NK-like,Wu_Zhou_2021_GSM4453587,5
+T cell NK-like,Wu_Zhou_2021_GSM4453588,1
+T cell NK-like,Wu_Zhou_2021_GSM4453589,0
+T cell NK-like,Wu_Zhou_2021_GSM4453590,0
+T cell NK-like,Wu_Zhou_2021_GSM4453591,0
+T cell NK-like,Wu_Zhou_2021_GSM4453592,0
+T cell NK-like,Wu_Zhou_2021_GSM4453593,0
+T cell NK-like,Wu_Zhou_2021_GSM4453594,12
+T cell NK-like,Wu_Zhou_2021_GSM4453595,0
+T cell NK-like,Wu_Zhou_2021_GSM4453596,0
+T cell NK-like,Wu_Zhou_2021_GSM4453597,0
+T cell NK-like,Wu_Zhou_2021_GSM4453598,0
+T cell NK-like,Wu_Zhou_2021_GSM4453599,2
+T cell NK-like,Wu_Zhou_2021_GSM4453600,0
+T cell NK-like,Wu_Zhou_2021_GSM4453601,3
+T cell NK-like,Wu_Zhou_2021_GSM4453602,5
+T cell NK-like,Wu_Zhou_2021_GSM4453603,2
+T cell NK-like,Wu_Zhou_2021_GSM4453604,0
+T cell NK-like,Wu_Zhou_2021_GSM4453605,0
+T cell NK-like,Wu_Zhou_2021_GSM4453606,1
+T cell NK-like,Wu_Zhou_2021_GSM4453607,1
+T cell NK-like,Wu_Zhou_2021_GSM4453608,0
+T cell NK-like,Wu_Zhou_2021_GSM4453609,0
+T cell NK-like,Wu_Zhou_2021_GSM4453610,0
+T cell NK-like,Wu_Zhou_2021_GSM4453611,0
+T cell NK-like,Wu_Zhou_2021_GSM4453612,6
+T cell NK-like,Wu_Zhou_2021_GSM4453613,19
+T cell NK-like,Wu_Zhou_2021_GSM4453614,4
+T cell NK-like,Wu_Zhou_2021_GSM4453615,21
+T cell NK-like,Wu_Zhou_2021_GSM4453616,0
+T cell NK-like,Wu_Zhou_2021_GSM4453617,32
+T cell NK-like,Zilionis_Klein_2019_p2t1,0
+T cell NK-like,Zilionis_Klein_2019_p2t2,0
+T cell NK-like,Zilionis_Klein_2019_p7t1,0
+T cell NK-like,Zilionis_Klein_2019_p7t2,0
+T cell regulatory,Chen_Zhang_2020_NSCLC-4,880
+T cell regulatory,Chen_Zhang_2020_NSCLC-5,1410
+T cell regulatory,Chen_Zhang_2020_NSCLC-8,322
+T cell regulatory,Chen_Zhang_2020_NSCLC-9,0
+T cell regulatory,Chen_Zhang_2020_NSCLC-10,2064
+T cell regulatory,Guo_Zhang_2018_P0617_TTC,0
+T cell regulatory,Guo_Zhang_2018_P0617_TTH,5
+T cell regulatory,Guo_Zhang_2018_P0617_TTR,14
+T cell regulatory,Guo_Zhang_2018_P0729_TTC,1
+T cell regulatory,Guo_Zhang_2018_P0729_TTH,0
+T cell regulatory,Guo_Zhang_2018_P0913_TTC,0
+T cell regulatory,Guo_Zhang_2018_P0913_TTH,8
+T cell regulatory,Guo_Zhang_2018_P0913_TTR,28
+T cell regulatory,Guo_Zhang_2018_P0913_TTY,5
+T cell regulatory,Kim_Lee_2020_LUNG_T28,172
+T cell regulatory,Kim_Lee_2020_LUNG_T31,319
+T cell regulatory,Lambrechts_Thienpont_2018_6149v2_BT1290,150
+T cell regulatory,Lambrechts_Thienpont_2018_6149v2_BT1291,253
+T cell regulatory,Lambrechts_Thienpont_2018_6149v2_BT1292,54
+T cell regulatory,Lambrechts_Thienpont_2018_6653_scrBT1430m,92
+T cell regulatory,Lambrechts_Thienpont_2018_6653_scrBT1431m,142
+T cell regulatory,Lambrechts_Thienpont_2018_6653_scrBT1432m,100
+T cell regulatory,Maynard_Bivona_2020_LT_S74,14
+T cell regulatory,UKIM-V-2_P7_tumor_primary,90
+T cell regulatory,UKIM-V-2_P11_tumor_primary,176
+T cell regulatory,UKIM-V-2_P12_tumor_primary,615
+T cell regulatory,Wu_Zhou_2021_GSM4453576,4
+T cell regulatory,Wu_Zhou_2021_GSM4453577,0
+T cell regulatory,Wu_Zhou_2021_GSM4453578,1
+T cell regulatory,Wu_Zhou_2021_GSM4453579,41
+T cell regulatory,Wu_Zhou_2021_GSM4453580,0
+T cell regulatory,Wu_Zhou_2021_GSM4453581,0
+T cell regulatory,Wu_Zhou_2021_GSM4453582,151
+T cell regulatory,Wu_Zhou_2021_GSM4453583,7
+T cell regulatory,Wu_Zhou_2021_GSM4453584,7
+T cell regulatory,Wu_Zhou_2021_GSM4453585,12
+T cell regulatory,Wu_Zhou_2021_GSM4453586,8
+T cell regulatory,Wu_Zhou_2021_GSM4453587,5
+T cell regulatory,Wu_Zhou_2021_GSM4453588,28
+T cell regulatory,Wu_Zhou_2021_GSM4453589,1
+T cell regulatory,Wu_Zhou_2021_GSM4453590,0
+T cell regulatory,Wu_Zhou_2021_GSM4453591,0
+T cell regulatory,Wu_Zhou_2021_GSM4453592,0
+T cell regulatory,Wu_Zhou_2021_GSM4453593,4
+T cell regulatory,Wu_Zhou_2021_GSM4453594,1
+T cell regulatory,Wu_Zhou_2021_GSM4453595,2
+T cell regulatory,Wu_Zhou_2021_GSM4453596,0
+T cell regulatory,Wu_Zhou_2021_GSM4453597,30
+T cell regulatory,Wu_Zhou_2021_GSM4453598,3
+T cell regulatory,Wu_Zhou_2021_GSM4453599,5
+T cell regulatory,Wu_Zhou_2021_GSM4453600,0
+T cell regulatory,Wu_Zhou_2021_GSM4453601,8
+T cell regulatory,Wu_Zhou_2021_GSM4453602,7
+T cell regulatory,Wu_Zhou_2021_GSM4453603,13
+T cell regulatory,Wu_Zhou_2021_GSM4453604,0
+T cell regulatory,Wu_Zhou_2021_GSM4453605,1
+T cell regulatory,Wu_Zhou_2021_GSM4453606,0
+T cell regulatory,Wu_Zhou_2021_GSM4453607,4
+T cell regulatory,Wu_Zhou_2021_GSM4453608,0
+T cell regulatory,Wu_Zhou_2021_GSM4453609,0
+T cell regulatory,Wu_Zhou_2021_GSM4453610,2
+T cell regulatory,Wu_Zhou_2021_GSM4453611,0
+T cell regulatory,Wu_Zhou_2021_GSM4453612,2
+T cell regulatory,Wu_Zhou_2021_GSM4453613,12
+T cell regulatory,Wu_Zhou_2021_GSM4453614,35
+T cell regulatory,Wu_Zhou_2021_GSM4453615,9
+T cell regulatory,Wu_Zhou_2021_GSM4453616,0
+T cell regulatory,Wu_Zhou_2021_GSM4453617,69
+T cell regulatory,Zilionis_Klein_2019_p2t1,12
+T cell regulatory,Zilionis_Klein_2019_p2t2,11
+T cell regulatory,Zilionis_Klein_2019_p7t1,35
+T cell regulatory,Zilionis_Klein_2019_p7t2,35
+Tumor cells LUAD,Chen_Zhang_2020_NSCLC-4,49
+Tumor cells LUAD,Chen_Zhang_2020_NSCLC-5,133
+Tumor cells LUAD,Chen_Zhang_2020_NSCLC-8,471
+Tumor cells LUAD,Chen_Zhang_2020_NSCLC-9,849
+Tumor cells LUAD,Chen_Zhang_2020_NSCLC-10,1378
+Tumor cells LUAD,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUAD,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUAD,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUAD,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUAD,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUAD,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUAD,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUAD,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUAD,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUAD,Kim_Lee_2020_LUNG_T28,622
+Tumor cells LUAD,Kim_Lee_2020_LUNG_T31,86
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6149v2_BT1290,220
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6149v2_BT1291,329
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6149v2_BT1292,312
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6653_scrBT1430m,129
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6653_scrBT1431m,4
+Tumor cells LUAD,Lambrechts_Thienpont_2018_6653_scrBT1432m,37
+Tumor cells LUAD,Maynard_Bivona_2020_LT_S74,48
+Tumor cells LUAD,UKIM-V-2_P7_tumor_primary,136
+Tumor cells LUAD,UKIM-V-2_P11_tumor_primary,642
+Tumor cells LUAD,UKIM-V-2_P12_tumor_primary,160
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453576,204
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453577,174
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453578,309
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453579,26
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453580,490
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453581,60
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453582,9
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453583,145
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453584,282
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453585,102
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453586,5
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453587,31
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453588,112
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453589,19
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453590,547
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453591,479
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453592,154
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453593,739
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453594,5
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453595,136
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453596,1097
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453597,16
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453598,234
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453599,13
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453600,88
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453601,17
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453602,3
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453603,262
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453604,0
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453605,8
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453606,96
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453607,102
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453608,99
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453609,153
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453610,30
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453611,41
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453612,5
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453613,117
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453614,193
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453615,5
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453616,354
+Tumor cells LUAD,Wu_Zhou_2021_GSM4453617,5
+Tumor cells LUAD,Zilionis_Klein_2019_p2t1,6
+Tumor cells LUAD,Zilionis_Klein_2019_p2t2,3
+Tumor cells LUAD,Zilionis_Klein_2019_p7t1,209
+Tumor cells LUAD,Zilionis_Klein_2019_p7t2,209
+Tumor cells LUAD EMT,Chen_Zhang_2020_NSCLC-4,3
+Tumor cells LUAD EMT,Chen_Zhang_2020_NSCLC-5,0
+Tumor cells LUAD EMT,Chen_Zhang_2020_NSCLC-8,0
+Tumor cells LUAD EMT,Chen_Zhang_2020_NSCLC-9,5873
+Tumor cells LUAD EMT,Chen_Zhang_2020_NSCLC-10,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUAD EMT,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUAD EMT,Kim_Lee_2020_LUNG_T28,0
+Tumor cells LUAD EMT,Kim_Lee_2020_LUNG_T31,0
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6149v2_BT1290,3
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6149v2_BT1291,4
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6149v2_BT1292,9
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6653_scrBT1430m,1
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Tumor cells LUAD EMT,Lambrechts_Thienpont_2018_6653_scrBT1432m,5
+Tumor cells LUAD EMT,Maynard_Bivona_2020_LT_S74,0
+Tumor cells LUAD EMT,UKIM-V-2_P7_tumor_primary,0
+Tumor cells LUAD EMT,UKIM-V-2_P11_tumor_primary,0
+Tumor cells LUAD EMT,UKIM-V-2_P12_tumor_primary,27
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453576,19
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453577,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453578,100
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453579,8
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453580,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453581,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453582,3
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453583,1
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453584,10
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453585,19
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453586,141
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453587,7
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453588,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453589,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453590,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453591,3
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453592,28
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453593,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453594,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453595,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453596,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453597,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453598,33
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453599,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453600,32
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453601,2
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453602,1
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453603,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453604,526
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453605,233
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453606,1
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453607,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453608,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453609,36
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453610,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453611,3
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453612,3
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453613,6
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453614,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453615,0
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453616,118
+Tumor cells LUAD EMT,Wu_Zhou_2021_GSM4453617,135
+Tumor cells LUAD EMT,Zilionis_Klein_2019_p2t1,3
+Tumor cells LUAD EMT,Zilionis_Klein_2019_p2t2,3
+Tumor cells LUAD EMT,Zilionis_Klein_2019_p7t1,1
+Tumor cells LUAD EMT,Zilionis_Klein_2019_p7t2,4
+Tumor cells LUAD MSLN,Chen_Zhang_2020_NSCLC-4,0
+Tumor cells LUAD MSLN,Chen_Zhang_2020_NSCLC-5,0
+Tumor cells LUAD MSLN,Chen_Zhang_2020_NSCLC-8,0
+Tumor cells LUAD MSLN,Chen_Zhang_2020_NSCLC-9,0
+Tumor cells LUAD MSLN,Chen_Zhang_2020_NSCLC-10,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUAD MSLN,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUAD MSLN,Kim_Lee_2020_LUNG_T28,0
+Tumor cells LUAD MSLN,Kim_Lee_2020_LUNG_T31,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Tumor cells LUAD MSLN,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Tumor cells LUAD MSLN,Maynard_Bivona_2020_LT_S74,0
+Tumor cells LUAD MSLN,UKIM-V-2_P7_tumor_primary,7
+Tumor cells LUAD MSLN,UKIM-V-2_P11_tumor_primary,4
+Tumor cells LUAD MSLN,UKIM-V-2_P12_tumor_primary,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453576,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453577,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453578,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453579,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453580,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453581,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453582,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453583,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453584,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453585,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453586,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453587,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453588,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453589,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453590,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453591,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453592,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453593,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453594,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453595,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453596,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453597,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453598,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453599,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453600,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453601,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453602,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453603,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453604,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453605,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453606,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453607,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453608,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453609,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453610,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453611,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453612,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453613,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453614,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453615,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453616,0
+Tumor cells LUAD MSLN,Wu_Zhou_2021_GSM4453617,0
+Tumor cells LUAD MSLN,Zilionis_Klein_2019_p2t1,0
+Tumor cells LUAD MSLN,Zilionis_Klein_2019_p2t2,0
+Tumor cells LUAD MSLN,Zilionis_Klein_2019_p7t1,0
+Tumor cells LUAD MSLN,Zilionis_Klein_2019_p7t2,0
+Tumor cells LUAD NE,Chen_Zhang_2020_NSCLC-4,0
+Tumor cells LUAD NE,Chen_Zhang_2020_NSCLC-5,0
+Tumor cells LUAD NE,Chen_Zhang_2020_NSCLC-8,0
+Tumor cells LUAD NE,Chen_Zhang_2020_NSCLC-9,0
+Tumor cells LUAD NE,Chen_Zhang_2020_NSCLC-10,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUAD NE,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUAD NE,Kim_Lee_2020_LUNG_T28,0
+Tumor cells LUAD NE,Kim_Lee_2020_LUNG_T31,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6149v2_BT1290,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6149v2_BT1291,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Tumor cells LUAD NE,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Tumor cells LUAD NE,Maynard_Bivona_2020_LT_S74,0
+Tumor cells LUAD NE,UKIM-V-2_P7_tumor_primary,0
+Tumor cells LUAD NE,UKIM-V-2_P11_tumor_primary,0
+Tumor cells LUAD NE,UKIM-V-2_P12_tumor_primary,7
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453576,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453577,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453578,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453579,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453580,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453581,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453582,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453583,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453584,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453585,2
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453586,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453587,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453588,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453589,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453590,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453591,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453592,1
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453593,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453594,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453595,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453596,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453597,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453598,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453599,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453600,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453601,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453602,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453603,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453604,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453605,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453606,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453607,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453608,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453609,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453610,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453611,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453612,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453613,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453614,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453615,0
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453616,3
+Tumor cells LUAD NE,Wu_Zhou_2021_GSM4453617,0
+Tumor cells LUAD NE,Zilionis_Klein_2019_p2t1,0
+Tumor cells LUAD NE,Zilionis_Klein_2019_p2t2,0
+Tumor cells LUAD NE,Zilionis_Klein_2019_p7t1,0
+Tumor cells LUAD NE,Zilionis_Klein_2019_p7t2,0
+Tumor cells LUAD mitotic,Chen_Zhang_2020_NSCLC-4,0
+Tumor cells LUAD mitotic,Chen_Zhang_2020_NSCLC-5,1
+Tumor cells LUAD mitotic,Chen_Zhang_2020_NSCLC-8,437
+Tumor cells LUAD mitotic,Chen_Zhang_2020_NSCLC-9,33
+Tumor cells LUAD mitotic,Chen_Zhang_2020_NSCLC-10,18
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUAD mitotic,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUAD mitotic,Kim_Lee_2020_LUNG_T28,44
+Tumor cells LUAD mitotic,Kim_Lee_2020_LUNG_T31,3
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6149v2_BT1290,67
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6149v2_BT1291,25
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6149v2_BT1292,22
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Tumor cells LUAD mitotic,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Tumor cells LUAD mitotic,Maynard_Bivona_2020_LT_S74,2
+Tumor cells LUAD mitotic,UKIM-V-2_P7_tumor_primary,0
+Tumor cells LUAD mitotic,UKIM-V-2_P11_tumor_primary,18
+Tumor cells LUAD mitotic,UKIM-V-2_P12_tumor_primary,10
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453576,7
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453577,9
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453578,7
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453579,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453580,202
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453581,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453582,2
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453583,9
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453584,1129
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453585,6
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453586,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453587,7
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453588,4
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453589,1
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453590,9
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453591,105
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453592,2
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453593,5
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453594,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453595,23
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453596,93
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453597,2
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453598,4
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453599,49
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453600,16
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453601,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453602,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453603,21
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453604,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453605,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453606,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453607,10
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453608,36
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453609,28
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453610,6
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453611,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453612,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453613,7
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453614,74
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453615,0
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453616,11
+Tumor cells LUAD mitotic,Wu_Zhou_2021_GSM4453617,0
+Tumor cells LUAD mitotic,Zilionis_Klein_2019_p2t1,0
+Tumor cells LUAD mitotic,Zilionis_Klein_2019_p2t2,0
+Tumor cells LUAD mitotic,Zilionis_Klein_2019_p7t1,3
+Tumor cells LUAD mitotic,Zilionis_Klein_2019_p7t2,3
+Tumor cells LUSC,Chen_Zhang_2020_NSCLC-4,4
+Tumor cells LUSC,Chen_Zhang_2020_NSCLC-5,30
+Tumor cells LUSC,Chen_Zhang_2020_NSCLC-8,7
+Tumor cells LUSC,Chen_Zhang_2020_NSCLC-9,178
+Tumor cells LUSC,Chen_Zhang_2020_NSCLC-10,2
+Tumor cells LUSC,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUSC,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUSC,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUSC,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUSC,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUSC,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUSC,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUSC,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUSC,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUSC,Kim_Lee_2020_LUNG_T28,5
+Tumor cells LUSC,Kim_Lee_2020_LUNG_T31,6
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6149v2_BT1290,11
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6149v2_BT1291,12
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6149v2_BT1292,32
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6653_scrBT1430m,45
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Tumor cells LUSC,Lambrechts_Thienpont_2018_6653_scrBT1432m,12
+Tumor cells LUSC,Maynard_Bivona_2020_LT_S74,0
+Tumor cells LUSC,UKIM-V-2_P7_tumor_primary,0
+Tumor cells LUSC,UKIM-V-2_P11_tumor_primary,45
+Tumor cells LUSC,UKIM-V-2_P12_tumor_primary,88
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453576,1094
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453577,1
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453578,2427
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453579,307
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453580,1
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453581,46
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453582,31
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453583,2
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453584,22
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453585,865
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453586,2
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453587,9
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453588,2
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453589,202
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453590,101
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453591,23
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453592,4420
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453593,67
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453594,5
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453595,7
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453596,9
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453597,7
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453598,698
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453599,5
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453600,466
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453601,7
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453602,2
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453603,49
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453604,0
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453605,195
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453606,86
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453607,0
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453608,0
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453609,27
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453610,0
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453611,40
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453612,2
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453613,3
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453614,0
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453615,1
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453616,1778
+Tumor cells LUSC,Wu_Zhou_2021_GSM4453617,13
+Tumor cells LUSC,Zilionis_Klein_2019_p2t1,18
+Tumor cells LUSC,Zilionis_Klein_2019_p2t2,18
+Tumor cells LUSC,Zilionis_Klein_2019_p7t1,2
+Tumor cells LUSC,Zilionis_Klein_2019_p7t2,3
+Tumor cells LUSC mitotic,Chen_Zhang_2020_NSCLC-4,5
+Tumor cells LUSC mitotic,Chen_Zhang_2020_NSCLC-5,16
+Tumor cells LUSC mitotic,Chen_Zhang_2020_NSCLC-8,9
+Tumor cells LUSC mitotic,Chen_Zhang_2020_NSCLC-9,132
+Tumor cells LUSC mitotic,Chen_Zhang_2020_NSCLC-10,41
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells LUSC mitotic,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells LUSC mitotic,Kim_Lee_2020_LUNG_T28,8
+Tumor cells LUSC mitotic,Kim_Lee_2020_LUNG_T31,1
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6149v2_BT1290,11
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6149v2_BT1291,23
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6149v2_BT1292,43
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6653_scrBT1430m,9
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+Tumor cells LUSC mitotic,Lambrechts_Thienpont_2018_6653_scrBT1432m,2
+Tumor cells LUSC mitotic,Maynard_Bivona_2020_LT_S74,0
+Tumor cells LUSC mitotic,UKIM-V-2_P7_tumor_primary,0
+Tumor cells LUSC mitotic,UKIM-V-2_P11_tumor_primary,18
+Tumor cells LUSC mitotic,UKIM-V-2_P12_tumor_primary,171
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453576,1191
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453577,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453578,1283
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453579,231
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453580,2
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453581,51
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453582,31
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453583,16
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453584,26
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453585,735
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453586,5
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453587,7
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453588,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453589,569
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453590,165
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453591,9
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453592,563
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453593,81
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453594,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453595,9
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453596,16
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453597,2
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453598,224
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453599,7
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453600,1232
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453601,4
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453602,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453603,17
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453604,2
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453605,13
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453606,32
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453607,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453608,7
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453609,20
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453610,0
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453611,41
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453612,1
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453613,1
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453614,1
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453615,1
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453616,919
+Tumor cells LUSC mitotic,Wu_Zhou_2021_GSM4453617,13
+Tumor cells LUSC mitotic,Zilionis_Klein_2019_p2t1,7
+Tumor cells LUSC mitotic,Zilionis_Klein_2019_p2t2,4
+Tumor cells LUSC mitotic,Zilionis_Klein_2019_p7t1,3
+Tumor cells LUSC mitotic,Zilionis_Klein_2019_p7t2,0
+Tumor cells NSCLC mixed,Chen_Zhang_2020_NSCLC-4,0
+Tumor cells NSCLC mixed,Chen_Zhang_2020_NSCLC-5,0
+Tumor cells NSCLC mixed,Chen_Zhang_2020_NSCLC-8,0
+Tumor cells NSCLC mixed,Chen_Zhang_2020_NSCLC-9,1
+Tumor cells NSCLC mixed,Chen_Zhang_2020_NSCLC-10,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0617_TTC,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0617_TTH,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0617_TTR,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0729_TTC,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0729_TTH,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0913_TTC,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0913_TTH,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0913_TTR,0
+Tumor cells NSCLC mixed,Guo_Zhang_2018_P0913_TTY,0
+Tumor cells NSCLC mixed,Kim_Lee_2020_LUNG_T28,3
+Tumor cells NSCLC mixed,Kim_Lee_2020_LUNG_T31,0
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6149v2_BT1290,1
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6149v2_BT1291,1
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6149v2_BT1292,3
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+Tumor cells NSCLC mixed,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+Tumor cells NSCLC mixed,Maynard_Bivona_2020_LT_S74,1
+Tumor cells NSCLC mixed,UKIM-V-2_P7_tumor_primary,0
+Tumor cells NSCLC mixed,UKIM-V-2_P11_tumor_primary,0
+Tumor cells NSCLC mixed,UKIM-V-2_P12_tumor_primary,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453576,251
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453577,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453578,181
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453579,32
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453580,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453581,40
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453582,4
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453583,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453584,3
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453585,11
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453586,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453587,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453588,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453589,59
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453590,822
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453591,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453592,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453593,12
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453594,64
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453595,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453596,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453597,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453598,4
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453599,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453600,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453601,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453602,15
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453603,40
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453604,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453605,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453606,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453607,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453608,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453609,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453610,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453611,8
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453612,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453613,0
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453614,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453615,1
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453616,21
+Tumor cells NSCLC mixed,Wu_Zhou_2021_GSM4453617,0
+Tumor cells NSCLC mixed,Zilionis_Klein_2019_p2t1,1
+Tumor cells NSCLC mixed,Zilionis_Klein_2019_p2t2,1
+Tumor cells NSCLC mixed,Zilionis_Klein_2019_p7t1,1
+Tumor cells NSCLC mixed,Zilionis_Klein_2019_p7t2,0
+cDC1,Chen_Zhang_2020_NSCLC-4,6
+cDC1,Chen_Zhang_2020_NSCLC-5,12
+cDC1,Chen_Zhang_2020_NSCLC-8,15
+cDC1,Chen_Zhang_2020_NSCLC-9,0
+cDC1,Chen_Zhang_2020_NSCLC-10,18
+cDC1,Guo_Zhang_2018_P0617_TTC,0
+cDC1,Guo_Zhang_2018_P0617_TTH,0
+cDC1,Guo_Zhang_2018_P0617_TTR,0
+cDC1,Guo_Zhang_2018_P0729_TTC,0
+cDC1,Guo_Zhang_2018_P0729_TTH,0
+cDC1,Guo_Zhang_2018_P0913_TTC,0
+cDC1,Guo_Zhang_2018_P0913_TTH,0
+cDC1,Guo_Zhang_2018_P0913_TTR,0
+cDC1,Guo_Zhang_2018_P0913_TTY,0
+cDC1,Kim_Lee_2020_LUNG_T28,6
+cDC1,Kim_Lee_2020_LUNG_T31,17
+cDC1,Lambrechts_Thienpont_2018_6149v2_BT1290,8
+cDC1,Lambrechts_Thienpont_2018_6149v2_BT1291,2
+cDC1,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+cDC1,Lambrechts_Thienpont_2018_6653_scrBT1430m,1
+cDC1,Lambrechts_Thienpont_2018_6653_scrBT1431m,3
+cDC1,Lambrechts_Thienpont_2018_6653_scrBT1432m,2
+cDC1,Maynard_Bivona_2020_LT_S74,0
+cDC1,UKIM-V-2_P7_tumor_primary,1
+cDC1,UKIM-V-2_P11_tumor_primary,3
+cDC1,UKIM-V-2_P12_tumor_primary,7
+cDC1,Wu_Zhou_2021_GSM4453576,2
+cDC1,Wu_Zhou_2021_GSM4453577,0
+cDC1,Wu_Zhou_2021_GSM4453578,0
+cDC1,Wu_Zhou_2021_GSM4453579,0
+cDC1,Wu_Zhou_2021_GSM4453580,0
+cDC1,Wu_Zhou_2021_GSM4453581,0
+cDC1,Wu_Zhou_2021_GSM4453582,10
+cDC1,Wu_Zhou_2021_GSM4453583,4
+cDC1,Wu_Zhou_2021_GSM4453584,2
+cDC1,Wu_Zhou_2021_GSM4453585,3
+cDC1,Wu_Zhou_2021_GSM4453586,0
+cDC1,Wu_Zhou_2021_GSM4453587,1
+cDC1,Wu_Zhou_2021_GSM4453588,0
+cDC1,Wu_Zhou_2021_GSM4453589,1
+cDC1,Wu_Zhou_2021_GSM4453590,0
+cDC1,Wu_Zhou_2021_GSM4453591,0
+cDC1,Wu_Zhou_2021_GSM4453592,0
+cDC1,Wu_Zhou_2021_GSM4453593,0
+cDC1,Wu_Zhou_2021_GSM4453594,0
+cDC1,Wu_Zhou_2021_GSM4453595,0
+cDC1,Wu_Zhou_2021_GSM4453596,0
+cDC1,Wu_Zhou_2021_GSM4453597,1
+cDC1,Wu_Zhou_2021_GSM4453598,0
+cDC1,Wu_Zhou_2021_GSM4453599,0
+cDC1,Wu_Zhou_2021_GSM4453600,0
+cDC1,Wu_Zhou_2021_GSM4453601,0
+cDC1,Wu_Zhou_2021_GSM4453602,1
+cDC1,Wu_Zhou_2021_GSM4453603,0
+cDC1,Wu_Zhou_2021_GSM4453604,0
+cDC1,Wu_Zhou_2021_GSM4453605,0
+cDC1,Wu_Zhou_2021_GSM4453606,0
+cDC1,Wu_Zhou_2021_GSM4453607,0
+cDC1,Wu_Zhou_2021_GSM4453608,0
+cDC1,Wu_Zhou_2021_GSM4453609,0
+cDC1,Wu_Zhou_2021_GSM4453610,1
+cDC1,Wu_Zhou_2021_GSM4453611,0
+cDC1,Wu_Zhou_2021_GSM4453612,0
+cDC1,Wu_Zhou_2021_GSM4453613,3
+cDC1,Wu_Zhou_2021_GSM4453614,16
+cDC1,Wu_Zhou_2021_GSM4453615,1
+cDC1,Wu_Zhou_2021_GSM4453616,0
+cDC1,Wu_Zhou_2021_GSM4453617,0
+cDC1,Zilionis_Klein_2019_p2t1,2
+cDC1,Zilionis_Klein_2019_p2t2,0
+cDC1,Zilionis_Klein_2019_p7t1,1
+cDC1,Zilionis_Klein_2019_p7t2,2
+cDC2,Chen_Zhang_2020_NSCLC-4,8
+cDC2,Chen_Zhang_2020_NSCLC-5,30
+cDC2,Chen_Zhang_2020_NSCLC-8,1128
+cDC2,Chen_Zhang_2020_NSCLC-9,0
+cDC2,Chen_Zhang_2020_NSCLC-10,228
+cDC2,Guo_Zhang_2018_P0617_TTC,0
+cDC2,Guo_Zhang_2018_P0617_TTH,0
+cDC2,Guo_Zhang_2018_P0617_TTR,0
+cDC2,Guo_Zhang_2018_P0729_TTC,0
+cDC2,Guo_Zhang_2018_P0729_TTH,0
+cDC2,Guo_Zhang_2018_P0913_TTC,0
+cDC2,Guo_Zhang_2018_P0913_TTH,0
+cDC2,Guo_Zhang_2018_P0913_TTR,0
+cDC2,Guo_Zhang_2018_P0913_TTY,0
+cDC2,Kim_Lee_2020_LUNG_T28,29
+cDC2,Kim_Lee_2020_LUNG_T31,50
+cDC2,Lambrechts_Thienpont_2018_6149v2_BT1290,79
+cDC2,Lambrechts_Thienpont_2018_6149v2_BT1291,65
+cDC2,Lambrechts_Thienpont_2018_6149v2_BT1292,55
+cDC2,Lambrechts_Thienpont_2018_6653_scrBT1430m,15
+cDC2,Lambrechts_Thienpont_2018_6653_scrBT1431m,16
+cDC2,Lambrechts_Thienpont_2018_6653_scrBT1432m,2
+cDC2,Maynard_Bivona_2020_LT_S74,4
+cDC2,UKIM-V-2_P7_tumor_primary,80
+cDC2,UKIM-V-2_P11_tumor_primary,39
+cDC2,UKIM-V-2_P12_tumor_primary,41
+cDC2,Wu_Zhou_2021_GSM4453576,16
+cDC2,Wu_Zhou_2021_GSM4453577,1
+cDC2,Wu_Zhou_2021_GSM4453578,7
+cDC2,Wu_Zhou_2021_GSM4453579,48
+cDC2,Wu_Zhou_2021_GSM4453580,12
+cDC2,Wu_Zhou_2021_GSM4453581,7
+cDC2,Wu_Zhou_2021_GSM4453582,32
+cDC2,Wu_Zhou_2021_GSM4453583,20
+cDC2,Wu_Zhou_2021_GSM4453584,43
+cDC2,Wu_Zhou_2021_GSM4453585,14
+cDC2,Wu_Zhou_2021_GSM4453586,0
+cDC2,Wu_Zhou_2021_GSM4453587,36
+cDC2,Wu_Zhou_2021_GSM4453588,65
+cDC2,Wu_Zhou_2021_GSM4453589,12
+cDC2,Wu_Zhou_2021_GSM4453590,1
+cDC2,Wu_Zhou_2021_GSM4453591,0
+cDC2,Wu_Zhou_2021_GSM4453592,0
+cDC2,Wu_Zhou_2021_GSM4453593,7
+cDC2,Wu_Zhou_2021_GSM4453594,2
+cDC2,Wu_Zhou_2021_GSM4453595,0
+cDC2,Wu_Zhou_2021_GSM4453596,5
+cDC2,Wu_Zhou_2021_GSM4453597,11
+cDC2,Wu_Zhou_2021_GSM4453598,18
+cDC2,Wu_Zhou_2021_GSM4453599,3
+cDC2,Wu_Zhou_2021_GSM4453600,2
+cDC2,Wu_Zhou_2021_GSM4453601,0
+cDC2,Wu_Zhou_2021_GSM4453602,3
+cDC2,Wu_Zhou_2021_GSM4453603,42
+cDC2,Wu_Zhou_2021_GSM4453604,9
+cDC2,Wu_Zhou_2021_GSM4453605,3
+cDC2,Wu_Zhou_2021_GSM4453606,2
+cDC2,Wu_Zhou_2021_GSM4453607,13
+cDC2,Wu_Zhou_2021_GSM4453608,0
+cDC2,Wu_Zhou_2021_GSM4453609,2
+cDC2,Wu_Zhou_2021_GSM4453610,13
+cDC2,Wu_Zhou_2021_GSM4453611,0
+cDC2,Wu_Zhou_2021_GSM4453612,28
+cDC2,Wu_Zhou_2021_GSM4453613,56
+cDC2,Wu_Zhou_2021_GSM4453614,159
+cDC2,Wu_Zhou_2021_GSM4453615,14
+cDC2,Wu_Zhou_2021_GSM4453616,3
+cDC2,Wu_Zhou_2021_GSM4453617,6
+cDC2,Zilionis_Klein_2019_p2t1,1
+cDC2,Zilionis_Klein_2019_p2t2,2
+cDC2,Zilionis_Klein_2019_p7t1,36
+cDC2,Zilionis_Klein_2019_p7t2,26
+myeloid dividing,Chen_Zhang_2020_NSCLC-4,1
+myeloid dividing,Chen_Zhang_2020_NSCLC-5,2
+myeloid dividing,Chen_Zhang_2020_NSCLC-8,212
+myeloid dividing,Chen_Zhang_2020_NSCLC-9,0
+myeloid dividing,Chen_Zhang_2020_NSCLC-10,18
+myeloid dividing,Guo_Zhang_2018_P0617_TTC,0
+myeloid dividing,Guo_Zhang_2018_P0617_TTH,0
+myeloid dividing,Guo_Zhang_2018_P0617_TTR,0
+myeloid dividing,Guo_Zhang_2018_P0729_TTC,0
+myeloid dividing,Guo_Zhang_2018_P0729_TTH,0
+myeloid dividing,Guo_Zhang_2018_P0913_TTC,0
+myeloid dividing,Guo_Zhang_2018_P0913_TTH,0
+myeloid dividing,Guo_Zhang_2018_P0913_TTR,0
+myeloid dividing,Guo_Zhang_2018_P0913_TTY,0
+myeloid dividing,Kim_Lee_2020_LUNG_T28,15
+myeloid dividing,Kim_Lee_2020_LUNG_T31,7
+myeloid dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,12
+myeloid dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,13
+myeloid dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,15
+myeloid dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,6
+myeloid dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,1
+myeloid dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+myeloid dividing,Maynard_Bivona_2020_LT_S74,7
+myeloid dividing,UKIM-V-2_P7_tumor_primary,28
+myeloid dividing,UKIM-V-2_P11_tumor_primary,32
+myeloid dividing,UKIM-V-2_P12_tumor_primary,14
+myeloid dividing,Wu_Zhou_2021_GSM4453576,22
+myeloid dividing,Wu_Zhou_2021_GSM4453577,0
+myeloid dividing,Wu_Zhou_2021_GSM4453578,8
+myeloid dividing,Wu_Zhou_2021_GSM4453579,74
+myeloid dividing,Wu_Zhou_2021_GSM4453580,115
+myeloid dividing,Wu_Zhou_2021_GSM4453581,9
+myeloid dividing,Wu_Zhou_2021_GSM4453582,18
+myeloid dividing,Wu_Zhou_2021_GSM4453583,9
+myeloid dividing,Wu_Zhou_2021_GSM4453584,18
+myeloid dividing,Wu_Zhou_2021_GSM4453585,24
+myeloid dividing,Wu_Zhou_2021_GSM4453586,3
+myeloid dividing,Wu_Zhou_2021_GSM4453587,9
+myeloid dividing,Wu_Zhou_2021_GSM4453588,15
+myeloid dividing,Wu_Zhou_2021_GSM4453589,18
+myeloid dividing,Wu_Zhou_2021_GSM4453590,23
+myeloid dividing,Wu_Zhou_2021_GSM4453591,5
+myeloid dividing,Wu_Zhou_2021_GSM4453592,0
+myeloid dividing,Wu_Zhou_2021_GSM4453593,24
+myeloid dividing,Wu_Zhou_2021_GSM4453594,0
+myeloid dividing,Wu_Zhou_2021_GSM4453595,0
+myeloid dividing,Wu_Zhou_2021_GSM4453596,4
+myeloid dividing,Wu_Zhou_2021_GSM4453597,3
+myeloid dividing,Wu_Zhou_2021_GSM4453598,24
+myeloid dividing,Wu_Zhou_2021_GSM4453599,10
+myeloid dividing,Wu_Zhou_2021_GSM4453600,3
+myeloid dividing,Wu_Zhou_2021_GSM4453601,0
+myeloid dividing,Wu_Zhou_2021_GSM4453602,0
+myeloid dividing,Wu_Zhou_2021_GSM4453603,77
+myeloid dividing,Wu_Zhou_2021_GSM4453604,10
+myeloid dividing,Wu_Zhou_2021_GSM4453605,1
+myeloid dividing,Wu_Zhou_2021_GSM4453606,0
+myeloid dividing,Wu_Zhou_2021_GSM4453607,5
+myeloid dividing,Wu_Zhou_2021_GSM4453608,3
+myeloid dividing,Wu_Zhou_2021_GSM4453609,5
+myeloid dividing,Wu_Zhou_2021_GSM4453610,1
+myeloid dividing,Wu_Zhou_2021_GSM4453611,2
+myeloid dividing,Wu_Zhou_2021_GSM4453612,17
+myeloid dividing,Wu_Zhou_2021_GSM4453613,13
+myeloid dividing,Wu_Zhou_2021_GSM4453614,154
+myeloid dividing,Wu_Zhou_2021_GSM4453615,3
+myeloid dividing,Wu_Zhou_2021_GSM4453616,5
+myeloid dividing,Wu_Zhou_2021_GSM4453617,0
+myeloid dividing,Zilionis_Klein_2019_p2t1,0
+myeloid dividing,Zilionis_Klein_2019_p2t2,0
+myeloid dividing,Zilionis_Klein_2019_p7t1,3
+myeloid dividing,Zilionis_Klein_2019_p7t2,3
+pDC,Chen_Zhang_2020_NSCLC-4,3
+pDC,Chen_Zhang_2020_NSCLC-5,14
+pDC,Chen_Zhang_2020_NSCLC-8,6
+pDC,Chen_Zhang_2020_NSCLC-9,0
+pDC,Chen_Zhang_2020_NSCLC-10,29
+pDC,Guo_Zhang_2018_P0617_TTC,0
+pDC,Guo_Zhang_2018_P0617_TTH,0
+pDC,Guo_Zhang_2018_P0617_TTR,0
+pDC,Guo_Zhang_2018_P0729_TTC,0
+pDC,Guo_Zhang_2018_P0729_TTH,0
+pDC,Guo_Zhang_2018_P0913_TTC,0
+pDC,Guo_Zhang_2018_P0913_TTH,0
+pDC,Guo_Zhang_2018_P0913_TTR,0
+pDC,Guo_Zhang_2018_P0913_TTY,0
+pDC,Kim_Lee_2020_LUNG_T28,10
+pDC,Kim_Lee_2020_LUNG_T31,10
+pDC,Lambrechts_Thienpont_2018_6149v2_BT1290,11
+pDC,Lambrechts_Thienpont_2018_6149v2_BT1291,2
+pDC,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+pDC,Lambrechts_Thienpont_2018_6653_scrBT1430m,3
+pDC,Lambrechts_Thienpont_2018_6653_scrBT1431m,3
+pDC,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+pDC,Maynard_Bivona_2020_LT_S74,2
+pDC,UKIM-V-2_P7_tumor_primary,8
+pDC,UKIM-V-2_P11_tumor_primary,3
+pDC,UKIM-V-2_P12_tumor_primary,6
+pDC,Wu_Zhou_2021_GSM4453576,2
+pDC,Wu_Zhou_2021_GSM4453577,0
+pDC,Wu_Zhou_2021_GSM4453578,3
+pDC,Wu_Zhou_2021_GSM4453579,0
+pDC,Wu_Zhou_2021_GSM4453580,0
+pDC,Wu_Zhou_2021_GSM4453581,4
+pDC,Wu_Zhou_2021_GSM4453582,20
+pDC,Wu_Zhou_2021_GSM4453583,0
+pDC,Wu_Zhou_2021_GSM4453584,2
+pDC,Wu_Zhou_2021_GSM4453585,1
+pDC,Wu_Zhou_2021_GSM4453586,2
+pDC,Wu_Zhou_2021_GSM4453587,13
+pDC,Wu_Zhou_2021_GSM4453588,0
+pDC,Wu_Zhou_2021_GSM4453589,3
+pDC,Wu_Zhou_2021_GSM4453590,1
+pDC,Wu_Zhou_2021_GSM4453591,1
+pDC,Wu_Zhou_2021_GSM4453592,0
+pDC,Wu_Zhou_2021_GSM4453593,1
+pDC,Wu_Zhou_2021_GSM4453594,0
+pDC,Wu_Zhou_2021_GSM4453595,0
+pDC,Wu_Zhou_2021_GSM4453596,1
+pDC,Wu_Zhou_2021_GSM4453597,6
+pDC,Wu_Zhou_2021_GSM4453598,6
+pDC,Wu_Zhou_2021_GSM4453599,0
+pDC,Wu_Zhou_2021_GSM4453600,0
+pDC,Wu_Zhou_2021_GSM4453601,0
+pDC,Wu_Zhou_2021_GSM4453602,0
+pDC,Wu_Zhou_2021_GSM4453603,1
+pDC,Wu_Zhou_2021_GSM4453604,0
+pDC,Wu_Zhou_2021_GSM4453605,0
+pDC,Wu_Zhou_2021_GSM4453606,0
+pDC,Wu_Zhou_2021_GSM4453607,1
+pDC,Wu_Zhou_2021_GSM4453608,0
+pDC,Wu_Zhou_2021_GSM4453609,0
+pDC,Wu_Zhou_2021_GSM4453610,0
+pDC,Wu_Zhou_2021_GSM4453611,0
+pDC,Wu_Zhou_2021_GSM4453612,0
+pDC,Wu_Zhou_2021_GSM4453613,9
+pDC,Wu_Zhou_2021_GSM4453614,11
+pDC,Wu_Zhou_2021_GSM4453615,6
+pDC,Wu_Zhou_2021_GSM4453616,0
+pDC,Wu_Zhou_2021_GSM4453617,4
+pDC,Zilionis_Klein_2019_p2t1,0
+pDC,Zilionis_Klein_2019_p2t2,0
+pDC,Zilionis_Klein_2019_p7t1,24
+pDC,Zilionis_Klein_2019_p7t2,31
+stromal dividing,Chen_Zhang_2020_NSCLC-4,1
+stromal dividing,Chen_Zhang_2020_NSCLC-5,0
+stromal dividing,Chen_Zhang_2020_NSCLC-8,0
+stromal dividing,Chen_Zhang_2020_NSCLC-9,0
+stromal dividing,Chen_Zhang_2020_NSCLC-10,3
+stromal dividing,Guo_Zhang_2018_P0617_TTC,0
+stromal dividing,Guo_Zhang_2018_P0617_TTH,0
+stromal dividing,Guo_Zhang_2018_P0617_TTR,0
+stromal dividing,Guo_Zhang_2018_P0729_TTC,0
+stromal dividing,Guo_Zhang_2018_P0729_TTH,0
+stromal dividing,Guo_Zhang_2018_P0913_TTC,0
+stromal dividing,Guo_Zhang_2018_P0913_TTH,0
+stromal dividing,Guo_Zhang_2018_P0913_TTR,0
+stromal dividing,Guo_Zhang_2018_P0913_TTY,0
+stromal dividing,Kim_Lee_2020_LUNG_T28,0
+stromal dividing,Kim_Lee_2020_LUNG_T31,1
+stromal dividing,Lambrechts_Thienpont_2018_6149v2_BT1290,2
+stromal dividing,Lambrechts_Thienpont_2018_6149v2_BT1291,1
+stromal dividing,Lambrechts_Thienpont_2018_6149v2_BT1292,0
+stromal dividing,Lambrechts_Thienpont_2018_6653_scrBT1430m,0
+stromal dividing,Lambrechts_Thienpont_2018_6653_scrBT1431m,0
+stromal dividing,Lambrechts_Thienpont_2018_6653_scrBT1432m,0
+stromal dividing,Maynard_Bivona_2020_LT_S74,3
+stromal dividing,UKIM-V-2_P7_tumor_primary,0
+stromal dividing,UKIM-V-2_P11_tumor_primary,0
+stromal dividing,UKIM-V-2_P12_tumor_primary,0
+stromal dividing,Wu_Zhou_2021_GSM4453576,13
+stromal dividing,Wu_Zhou_2021_GSM4453577,0
+stromal dividing,Wu_Zhou_2021_GSM4453578,2
+stromal dividing,Wu_Zhou_2021_GSM4453579,83
+stromal dividing,Wu_Zhou_2021_GSM4453580,0
+stromal dividing,Wu_Zhou_2021_GSM4453581,1
+stromal dividing,Wu_Zhou_2021_GSM4453582,0
+stromal dividing,Wu_Zhou_2021_GSM4453583,1
+stromal dividing,Wu_Zhou_2021_GSM4453584,21
+stromal dividing,Wu_Zhou_2021_GSM4453585,14
+stromal dividing,Wu_Zhou_2021_GSM4453586,1
+stromal dividing,Wu_Zhou_2021_GSM4453587,1
+stromal dividing,Wu_Zhou_2021_GSM4453588,0
+stromal dividing,Wu_Zhou_2021_GSM4453589,1
+stromal dividing,Wu_Zhou_2021_GSM4453590,2
+stromal dividing,Wu_Zhou_2021_GSM4453591,0
+stromal dividing,Wu_Zhou_2021_GSM4453592,2
+stromal dividing,Wu_Zhou_2021_GSM4453593,35
+stromal dividing,Wu_Zhou_2021_GSM4453594,0
+stromal dividing,Wu_Zhou_2021_GSM4453595,0
+stromal dividing,Wu_Zhou_2021_GSM4453596,1
+stromal dividing,Wu_Zhou_2021_GSM4453597,0
+stromal dividing,Wu_Zhou_2021_GSM4453598,1
+stromal dividing,Wu_Zhou_2021_GSM4453599,1
+stromal dividing,Wu_Zhou_2021_GSM4453600,36
+stromal dividing,Wu_Zhou_2021_GSM4453601,0
+stromal dividing,Wu_Zhou_2021_GSM4453602,0
+stromal dividing,Wu_Zhou_2021_GSM4453603,0
+stromal dividing,Wu_Zhou_2021_GSM4453604,12
+stromal dividing,Wu_Zhou_2021_GSM4453605,0
+stromal dividing,Wu_Zhou_2021_GSM4453606,0
+stromal dividing,Wu_Zhou_2021_GSM4453607,0
+stromal dividing,Wu_Zhou_2021_GSM4453608,0
+stromal dividing,Wu_Zhou_2021_GSM4453609,0
+stromal dividing,Wu_Zhou_2021_GSM4453610,0
+stromal dividing,Wu_Zhou_2021_GSM4453611,0
+stromal dividing,Wu_Zhou_2021_GSM4453612,0
+stromal dividing,Wu_Zhou_2021_GSM4453613,0
+stromal dividing,Wu_Zhou_2021_GSM4453614,0
+stromal dividing,Wu_Zhou_2021_GSM4453615,0
+stromal dividing,Wu_Zhou_2021_GSM4453616,21
+stromal dividing,Wu_Zhou_2021_GSM4453617,0
+stromal dividing,Zilionis_Klein_2019_p2t1,0
+stromal dividing,Zilionis_Klein_2019_p2t2,0
+stromal dividing,Zilionis_Klein_2019_p7t1,0
+stromal dividing,Zilionis_Klein_2019_p7t2,0
+transitional club/AT2,Chen_Zhang_2020_NSCLC-4,5
+transitional club/AT2,Chen_Zhang_2020_NSCLC-5,7
+transitional club/AT2,Chen_Zhang_2020_NSCLC-8,2515
+transitional club/AT2,Chen_Zhang_2020_NSCLC-9,189
+transitional club/AT2,Chen_Zhang_2020_NSCLC-10,162
+transitional club/AT2,Guo_Zhang_2018_P0617_TTC,0
+transitional club/AT2,Guo_Zhang_2018_P0617_TTH,0
+transitional club/AT2,Guo_Zhang_2018_P0617_TTR,0
+transitional club/AT2,Guo_Zhang_2018_P0729_TTC,0
+transitional club/AT2,Guo_Zhang_2018_P0729_TTH,0
+transitional club/AT2,Guo_Zhang_2018_P0913_TTC,0
+transitional club/AT2,Guo_Zhang_2018_P0913_TTH,0
+transitional club/AT2,Guo_Zhang_2018_P0913_TTR,0
+transitional club/AT2,Guo_Zhang_2018_P0913_TTY,0
+transitional club/AT2,Kim_Lee_2020_LUNG_T28,23
+transitional club/AT2,Kim_Lee_2020_LUNG_T31,19
+transitional club/AT2,Lambrechts_Thienpont_2018_6149v2_BT1290,49
+transitional club/AT2,Lambrechts_Thienpont_2018_6149v2_BT1291,28
+transitional club/AT2,Lambrechts_Thienpont_2018_6149v2_BT1292,14
+transitional club/AT2,Lambrechts_Thienpont_2018_6653_scrBT1430m,8
+transitional club/AT2,Lambrechts_Thienpont_2018_6653_scrBT1431m,19
+transitional club/AT2,Lambrechts_Thienpont_2018_6653_scrBT1432m,4
+transitional club/AT2,Maynard_Bivona_2020_LT_S74,2
+transitional club/AT2,UKIM-V-2_P7_tumor_primary,151
+transitional club/AT2,UKIM-V-2_P11_tumor_primary,24
+transitional club/AT2,UKIM-V-2_P12_tumor_primary,2
+transitional club/AT2,Wu_Zhou_2021_GSM4453576,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453577,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453578,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453579,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453580,313
+transitional club/AT2,Wu_Zhou_2021_GSM4453581,18
+transitional club/AT2,Wu_Zhou_2021_GSM4453582,39
+transitional club/AT2,Wu_Zhou_2021_GSM4453583,10
+transitional club/AT2,Wu_Zhou_2021_GSM4453584,73
+transitional club/AT2,Wu_Zhou_2021_GSM4453585,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453586,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453587,18
+transitional club/AT2,Wu_Zhou_2021_GSM4453588,3
+transitional club/AT2,Wu_Zhou_2021_GSM4453589,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453590,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453591,9
+transitional club/AT2,Wu_Zhou_2021_GSM4453592,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453593,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453594,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453595,3
+transitional club/AT2,Wu_Zhou_2021_GSM4453596,32
+transitional club/AT2,Wu_Zhou_2021_GSM4453597,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453598,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453599,8
+transitional club/AT2,Wu_Zhou_2021_GSM4453600,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453601,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453602,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453603,21
+transitional club/AT2,Wu_Zhou_2021_GSM4453604,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453605,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453606,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453607,102
+transitional club/AT2,Wu_Zhou_2021_GSM4453608,39
+transitional club/AT2,Wu_Zhou_2021_GSM4453609,6
+transitional club/AT2,Wu_Zhou_2021_GSM4453610,164
+transitional club/AT2,Wu_Zhou_2021_GSM4453611,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453612,1
+transitional club/AT2,Wu_Zhou_2021_GSM4453613,28
+transitional club/AT2,Wu_Zhou_2021_GSM4453614,36
+transitional club/AT2,Wu_Zhou_2021_GSM4453615,6
+transitional club/AT2,Wu_Zhou_2021_GSM4453616,0
+transitional club/AT2,Wu_Zhou_2021_GSM4453617,0
+transitional club/AT2,Zilionis_Klein_2019_p2t1,0
+transitional club/AT2,Zilionis_Klein_2019_p2t2,1
+transitional club/AT2,Zilionis_Klein_2019_p7t1,11
+transitional club/AT2,Zilionis_Klein_2019_p7t2,13
