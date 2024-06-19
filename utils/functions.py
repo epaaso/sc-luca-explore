@@ -213,13 +213,14 @@ def get_geo_exprs(gse_str='', data_dir='/root/datos/maestria/netopaas/lung_scRNA
 
     return metadata
 
-def download_url(args, data_dir='/root/datos/maestria/netopaas/lung_scRNA'):
+def download_url(path_url: Tuple[str, str]):
     t0 = time.time()
     #Extract url and file path from args
-    url = args[0]
-    path = args[1]
+    url = path_url[0]
+    path = path_url[1]
     try:
         # For getting ftp that does not need 
+        print(f'getting {url}')
         gsm_path, response = urllib.request.urlretrieve(url,
                                       path)
         return(url, time.time() - t0)
@@ -227,16 +228,18 @@ def download_url(args, data_dir='/root/datos/maestria/netopaas/lung_scRNA'):
         print('Exception in download_url():', e)
 
 
-def download_parallel(args):
+def download_parallel(path_urls: List[Tuple[str, str]], cpus:int=-1):
     """
     Downloads the zipped array of urls in 1st pos with paths in 2nd pos
     
     """
-    cpus = int(cpu_count()/3)
+    if cpus == -1:
+        cpus = int(cpu_count()/3)
+
     print("CPUS: ", cpus)
     
     with ThreadPool(cpus -1 ) as pool:
-        for result in pool.imap_unordered(download_url, args):
+        for result in pool.imap_unordered(download_url, path_urls):
             print('url:', result[0], 'time (s):', result[1])
 
 

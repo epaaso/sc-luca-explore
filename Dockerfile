@@ -32,17 +32,19 @@ RUN echo 'LD_LIBRARY_PATH="/opt/R/lib/R/lib:${LD_LIBRARY_PATH}"' >> ~/.bashrc
 RUN echo "/opt/R/lib/R/lib" >> /etc/ld.so.conf.d/RLibs.conf && ldconfig
 
 # R libraries
-RUN apt install -y --no-install-recommends libharfbuzz-dev libfribidi-dev
+RUN apt install -y --no-install-recommends libharfbuzz-dev libfribidi-dev libhdf5-dev
 RUN cat ~/.bashrc
 
 RUN Rscript -e "update.packages(ask=FALSE, repos='https://cran.itam.mx/')"
-RUN Rscript -e "install.packages(c('devtools', 'gam', 'RColorBrewer', 'BiocManager', 'IRkernel','png'), repos='https://cran.itam.mx/')"
+RUN Rscript -e "install.packages(c('devtools', 'gam', 'RColorBrewer', 'BiocManager', 'IRkernel','png', 'hdf5r'), repos='https://cran.itam.mx/')"
 RUN Rscript -e "IRkernel::installspec(user = FALSE)"
 RUN Rscript -e "BiocManager::install(c('sparseMatrixStats', 'SparseArray', 'DelayedMatrixStats','scuttle', 'scry', 'edgeR'))"
 RUN Rscript -e "devtools::install_github('MatteoBlla/PsiNorm')"
+RUN Rscript -e "devtools::install_github('mojaveazure/seurat-disk')"
+
 
 # Other pip packages
-RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1
+RUN pip install triku==2.1.6 rpy2==3.5.14 anndata2ri==1.3.1 openpyxl
 
 # Ikarus with sparse matrix handling
 RUN pip install git+https://github.com/epaaso/ikarus.git
