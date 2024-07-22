@@ -38,7 +38,7 @@ RUN cat ~/.bashrc
 RUN Rscript -e "update.packages(ask=FALSE, repos='https://cran.itam.mx/')"
 RUN Rscript -e "install.packages(c('devtools', 'gam', 'RColorBrewer', 'BiocManager', 'IRkernel','png', 'hdf5r'), repos='https://cran.itam.mx/')"
 RUN Rscript -e "IRkernel::installspec(user = FALSE)"
-RUN Rscript -e "BiocManager::install(c('sparseMatrixStats', 'SparseArray', 'DelayedMatrixStats','scuttle', 'scry', 'edgeR'))"
+RUN Rscript -e "BiocManager::install(c('sparseMatrixStats', 'SparseArray', 'DelayedMatrixStats','scuttle', 'scry', 'edgeR', 'DropletUtils'))"
 RUN Rscript -e "devtools::install_github('MatteoBlla/PsiNorm')"
 RUN Rscript -e "devtools::install_github('mojaveazure/seurat-disk')"
 
