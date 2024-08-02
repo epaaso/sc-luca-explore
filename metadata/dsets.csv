@@ -12,4 +12,4 @@ UKIM-V,data/12_input_adatas/batch1_3patients.h5ad,2000,100000,200,8000,30,sample
 Wu_Zhou_2021_NSCLC,data/12_input_adatas/wu_zhou_2021_nsclc.h5ad,600,30000,300,10000,30,sample,True,False,Singleron,,Wu,True,Wu_Zhou_2021,10.1038/s41467-021-22801-0,III-IV,NSCLC,no normal
 Zilionis_Klein_2019_NSCLC,data/12_input_adatas/zilionis_klein_2019_nsclc.h5ad,600,30000,200,10000,20,sample,True,False,InDrop,,Zilionis,True,Zilionis_Klein_2019,10.1016/j.immuni.2019.03.009,I-II-III-IV,NSCLC,no normal
 UKIM-V-2,data/11_own_datasets/batch2/h5ad_raw/ukim_v_batch2.h5ad,1000,60000,200,8000,30,sample,True,False,,,UKIM-V-2,True,,,I-II-III-IV,NSCLC,>5cm apart
-Zuani_2024_NSCLC,/root/datos/maestria/netopaas/Zuani2024/Zuani2024.h5ad,400,100000,180,6000,20,sample,True,False,1x-v3.1,GrCh38,Zuani,True,Zhuani_2024,10.1038/s41467-024-48700-8,I-IV,NSCLC,edges of the lungs
+Zuani_2024_NSCLC,/root/datos/maestria/netopaas/Zuani2024/Zuani2024.h5ad,400,100000,180,6000,20,sample,True,False,10x-v3.1,GrCh38,Zuani,True,Zhuani_2024,10.1038/s41467-024-48700-8,I-IV,NSCLC,edges of the lungs
