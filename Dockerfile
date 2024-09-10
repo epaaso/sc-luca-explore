@@ -9,7 +9,7 @@ RUN apt update && apt install -y --no-install-recommends nano npm nodejs gfortra
 RUN pip install scarches==0.6.1
 
 # For notebooks
-RUN pip install jupyterlab==4.2.4 jupyterlab-git ipywidgets
+RUN pip install jupyterlab==4.2.5 jupyterlab-git ipywidgets
 RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/host_home'" >> ~/.bashrc
 
 # For visualizing and builidng networks
@@ -76,10 +76,13 @@ RUN pip install papermill==2.5.0
 RUN pip install gprofiler-official==1.0.0 gseapy==1.1.1
 
 # For autotuning reference atlas, we need the main, that is not yet implemented in latest ver  1.15.0.
-RUN pip install git+https://github.com/scverse/scvi-tools@main && pip install ray[tune]==2.23.0
+RUN pip install git+https://github.com/scverse/scvi-tools@f8811ad999d470e9d589520496905ae0328b1402 && pip install ray[tune]==2.23.0
 
 # Jax Cuda for faster Nueral nets
 RUN pip install jax[cuda] pytorch==2.4.0 flax==0.8.5 chex==0.1.86
+
+# Assure pandas <3 because fo the saved models we have
+RUN pip install pandas==2.5.4
 
 # Clean for puny space savings
 RUN apt-get clean -y && apt-get autoremove -y
