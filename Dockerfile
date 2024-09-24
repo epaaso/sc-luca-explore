@@ -79,7 +79,7 @@ RUN pip install gprofiler-official==1.0.0 gseapy==1.1.1
 RUN pip install git+https://github.com/scverse/scvi-tools@f8811ad999d470e9d589520496905ae0328b1402 && pip install ray[tune]==2.23.0
 
 # Jax Cuda for faster Nueral nets
-RUN pip install jax[cuda] pytorch==2.4.0 flax==0.8.5 chex==0.1.86
+RUN pip install jax[cuda] torch==2.4.0 flax==0.8.5 chex==0.1.86
 
 # Assure pandas <3 because fo the saved models we have
 RUN pip install pandas==2.5.4
