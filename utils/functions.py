@@ -250,7 +250,7 @@ def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
     if parallel:
         print(f'Started copying {key}')
     else:
-        print(f'Comparing {key}')        
+        print(f'Comparing {key}')
     adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata
     if parallel:
         print(f'Ended copying {key}')
@@ -271,6 +271,7 @@ def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
 
 def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str, 
                                groups: Union[Literal['all'], Iterable[str]] = 'all', 
+                               subgroups: Optional[ Iterable[str]] = None,
                                use_raw: Optional[bool] = None,
                                method: Optional[Literal['logreg', 't-test', 'wilcoxon', 't-test_overestim_var']] = 'wilcoxon',
                                parallel: bool = False,
@@ -280,8 +281,9 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
 
     Parameters:
     - adata: AnnData object containing the data.
-    - groupby: The key for the observations grouping to consider.
+    - groupby: The key of the column in .obs where the annotations of the groups are
     - groups: List of groups to include in pairwise comparisons.
+    - subgroups: List of groups to restric te first element in comparison to.
     - method: The statistical method to use for the test ('t-test', 'wilcoxon', etc.).
     - n_jobs: Number of jobs to run in parallel. -1 means using all processors.
 
@@ -292,9 +294,10 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
     pairwise_results = {}
     summary_stats = {}
     results = []
-
-    comparisons = [(group1, group2) for group1 in groups for group2 in groups if group1 != group2]
-    print(comparisons)
+    if subgroups:
+        comparisons = [(group1, group2) for group1 in subgroups for group2 in groups if group1 != group2]
+    else:
+        comparisons = [(group1, group2) for group1 in groups for group2 in groups if group1 != group2]
 
     if parallel:
         with multiprocessing.Pool(n_jobs) as pool:
@@ -1050,3 +1053,101 @@ def line_regress_genes(adata, gene_a: str, gene_b: str, symbol_feature:str = 'fe
         
     except Exception as e:
         print(f'Will not plot {title} because {e}')
+
+
+def plot_training_history(history, keys):
+    """
+    Plots the training history for the specified keys in a grid layout.
+    
+    Parameters:
+    - history: dict, containing the training history.
+    - keys: list of str, the keys to plot from the history.
+    """
+    num_plots = len(keys)
+    grid_size = int(np.ceil(np.sqrt(num_plots)))
+
+    fig, axes = plt.subplots(grid_size, grid_size, figsize=(15, 15))
+    axes = axes.flatten()
+
+    for idx, key in enumerate(keys):
+        if key in history:
+            axes[idx].plot(history[key])
+            axes[idx].set_title(key)
+        else:
+            axes[idx].set_title(f"{key} not found")
+        axes[idx].grid(True)
+
+    for idx in range(num_plots, len(axes)):
+        fig.delaxes(axes[idx])
+
+    plt.tight_layout()
+    plt.show()
+
+
+def map_gene_symbols_to_ensembl(adata, output_csv_path):
+    """
+    Maps gene symbols to Ensembl gene IDs using biomaRt via rpy2 for Ensembl versions 37 and 38.
+
+    Parameters:
+    - adata: AnnData object with gene symbols in adata.var.index
+    - output_csv_path: Path to save the CSV file with 'symbol' and 'ensembl_gene_id'
+    """
+    import rpy2.robjects as ro
+    from rpy2.robjects import pandas2ri
+    from rpy2.robjects.packages import importr
+    from rpy2.robjects.vectors import StrVector, FactorVector
+
+    # Import biomaRt
+    base = importr('base')
+    utils = importr('utils')
+    biomaRt = importr('biomaRt')
+
+    # Extract gene symbols
+    gene_names = list(adata.var.index)
+    # Ensure gene names are unique and non-empty
+    gene_names = [str(gene) for gene in gene_names if gene]
+    
+    extids = StrVector(gene_names)
+
+    # Prepare adata.var DataFrame
+    adata.var['symbol'] = adata.var.index
+
+    # Define a helper function to fetch and merge Ensembl mappings
+    def fetch_and_merge_ensembl(ensembl_version='GRCh38', id_suffix=''):
+        try:
+            ensembl = biomaRt.useEnsembl(biomart="genes", dataset="hsapiens_gene_ensembl",
+                                         mirror="useast", version=ensembl_version)
+        except:
+            ensembl = biomaRt.useEnsembl(biomart="genes", dataset="hsapiens_gene_ensembl",
+                                         mirror="www", version=ensembl_version)
+        finally:
+            ensembl = biomaRt.useEnsembl(biomart="genes", dataset="hsapiens_gene_ensembl",
+                                         mirror="asia", version=ensembl_version)
+        mapping = biomaRt.getBM(attributes=StrVector(['ensembl_gene_id', 'external_gene_name']),
+                                filters='external_gene_name',
+                                values=extids,
+                                mart=ensembl)
+        mapping_df = pandas2ri.rpy2py(mapping)
+        mapping_df = mapping_df.drop_duplicates()
+        mapping_df.set_index('external_gene_name', inplace=True)
+
+        # Merge directly into adata.var
+        mapori = adata.var.join(mapping_df['ensembl_gene_id'].rename(f'ensembl_gene_id{id_suffix}'),
+                                   on='symbol')
+        adata.var = mapori.drop_duplicates('symbol')
+
+    # Fetch and merge Ensembl mappings for versions 38 and 37
+    fetch_and_merge_ensembl(ensembl_version='112', id_suffix='38')        # Ensembl 38
+    fetch_and_merge_ensembl(ensembl_version='GRCh37', id_suffix='37')    # Ensembl 37
+
+    # Combine Ensembl IDs, prioritizing Ensembl 38 over Ensembl 37
+    adata.var['ensembl_gene_id'] = adata.var['ensembl_gene_id38'].combine_first(adata.var['ensembl_gene_id37'])
+
+    # Save the mapping to CSV
+    ensembl = adata.var[['symbol', 'ensembl_gene_id']]
+    ensembl.to_csv(output_csv_path)
+
+    # Clean up temporary columns
+    adata.var.drop(columns=['ensembl_gene_id38', 'ensembl_gene_id37'], inplace=True)
+
+    return adata

@@ -18,8 +18,9 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
     Has a nb for doing annotation with label transfer, but it had worse outcomes (`nbLabelPreds`).
 - *nb_ikarus* Runs the ikarus prediction on every sample. A prediciton that uses log regression and network projection to predict tumor cells.
 - *nb_infercnv* Runs InferCNV on every sample. This infers from transcripts, places in the chromosmes where there sould be copy number variations.
-- *nb_DE* Extracts marker genes of clusters from (TODO) hardcoded cell annotations. It also enriches for Hallmark gene ontologies.
-     But the nb `DE_param` is incomplete and attempts to do pseudo-bulk differential expression.
+- *nb_DE_wilcox* Extracts marker genes of clusters from existing cell annotations with wilcox method. It also enriches for Hallmark gene ontologies. Is pretty length and convoluted and doesnt consider batch effects. Also the nb `DE_param` is incomplete and attempts to do pseudo-bulk differential expression.
+- *nb_DE_SCT* Extracts marker genes of clusters from existing cell annotations with GLM method SCTransform v2. It also enriches for Hallmark gene ontologies. This method has a parameter estimation method that corrects for lwoly expressed genes and is much faster than the lvm_DE a metho that would take advantage of our dimennsional reduction VAEs with scANVI
+   Also `test_de.py` is a script to be run in the lambda function service modal, because it requires a lot GPU RAM, and it takes aroound 35 min for 3 samples.
 - *nb_tumorUMAP* Notebook to check the tumor predictions, It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
 - *nb_refAtlas* Containts the notebook `vay_raytune` for running and inspecting various experiments of hyperparameter exploration.
      The nb `scANVImodel` has the reasoning and training of the actual model.
@@ -29,7 +30,26 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
 
 - *outputARACNE* has all the files for the generation and the output of the networks by ARACNE but also functionally enriched
 - *metadata* contains info about the studies used and data about the groups
-- *utils* contians cutsom plotting and analyiss functions
+- *utils* contains custom plotting and analyisis functions
+
+## Running
+
+We have designed a docker image that has all the necessary libs. It is however very big, because it has 
+all the R and python packages including the ones for ML. Around 15gb without infercnv and ikarus.
+
+To be able to run the notebook, you should run the container with this notebook repo
+inserted as a volume. In the next command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the
+path of the repo, and the other one is where the large data files would be stored.
+
+Yo must install the apt package `docker-nvidia` for the gpu flags to work and, of course, have working cuda.
+
+```
+docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:paga /bin/bash
+```
+
+We publish some ports to use the jupyter server.
+o
+After that just run the command `jl` inside the container and a jupyter lab server will be launched.
 
 ## Troubleshooting
 
