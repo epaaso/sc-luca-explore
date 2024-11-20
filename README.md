@@ -16,6 +16,7 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
 - *nb_annot* Annotates tissue from every study with Lung Atlas reference maps. Only healthy cells.
 - *nb_annotRefatlas* Annotates tissue form a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types.
     Has a nb for doing annotation with label transfer, but it had worse outcomes (`nbLabelPreds`).
+   And  to transfer the newly created clusters to another dataset `extendPreds_Zuani.ipynb`.
 - *nb_ikarus* Runs the ikarus prediction on every sample. A prediciton that uses log regression and network projection to predict tumor cells.
 - *nb_infercnv* Runs InferCNV on every sample. This infers from transcripts, places in the chromosmes where there sould be copy number variations.
 - *nb_DE_wilcox* Extracts marker genes of clusters from existing cell annotations with wilcox method. It also enriches for Hallmark gene ontologies. Is pretty length and convoluted and doesnt consider batch effects. Also the nb `DE_param` is incomplete and attempts to do pseudo-bulk differential expression.
@@ -24,6 +25,9 @@ The workflow for getting from the raw AnnData files to the the coabundance graph
 - *nb_tumorUMAP* Notebook to check the tumor predictions, It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
 - *nb_refAtlas* Containts the notebook `vay_raytune` for running and inspecting various experiments of hyperparameter exploration.
      The nb `scANVImodel` has the reasoning and training of the actual model.
+  It also has `Tumor_subcluster.ipyn` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss`
+  in the python scripts starting with faiss.
+  
 - *nb_graphAnalysis* Parametrized file for doing a MI (Mutual inference) graph analysis of an already provided list of edges between cell types.
 
 ### Misc
