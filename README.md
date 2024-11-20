@@ -55,7 +55,8 @@ After that just run the command `jl` inside the container and a jupyter lab serv
 
 Due to the long training and annealing times, jlab sometimes cannot connect.
 Use this to get a console to the kernel:
-`ipython console --existing /root/.local/share/jupyter/runtime/kernel-50c440a3-554d-4d98-bb90-bdda9a8923d5.json`
+`jupyter console --existing /root/.local/share/jupyter/runtime/kernel-9ff04919-e8c2-4ecf-92ce-c66b988720e5.json`
+Yo have to have installed: `pip install jupyter-console`
 
 This could be easier in a newer version of jlab. To locate the corresponding json
 you can use htop with option to not display user branches and seeing the memory it
@@ -77,4 +78,9 @@ git config --global user.name "Ernesto Paas"
 We suggest saving a key pair that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com".`
 in the docker volume (folder) that contains the repo, and then copying them to `~/.ssh/id_ed25519` etc, to be able
 to have ssh authentication with github.
+Remeber to have the ssh-agent activated `eval "$(ssh-agent -s)"` and the key added `ssh-add ~/.ssh/id_ed25519`. And that the key is read-only.
+
+```
+
+```
 
