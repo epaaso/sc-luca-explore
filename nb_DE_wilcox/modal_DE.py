@@ -304,7 +304,7 @@ def upload_files_to_volume():
 def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_stages=False,
         cell_key = 'cell_type_adjusted', stage_key = 'stage', log_layer = 'do_log1p',
         num_processes = 40, load_pair = True, load_summary = True, load_regions = True,
-        load_gsea = True, load_gsea_heatmap = True
+        load_gsea = True, load_gsea_heatmap = True, zuani_symbols_summary = False
     ):
     
     print("This code is running on a remote worker!")
@@ -326,11 +326,6 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 
     print(adata)
 
-    # query_stage = pd.read_csv(f'{backup_dir}/zuani_stage.csv')
-    # query_stage.index = adata.obs.index
-    # adata.obs['stage'] = query_stage['stage']
-    # print(adata.obs)
-
     stages = None
     if 'I-II' in time:
         stages = ['IA1', 'IB', 'IA2', 'IA3', 'IIB', 'II']
@@ -349,7 +344,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     import gc
     gc.collect()
 
-    # TODO This determines regions
+    # TODO This should determine regions
     valid_types = list(adata.obs['type_tissue'].value_counts().loc[lambda x: x > 2].index)
     types = adata.obs.type_tissue.unique()
     tumor_types = [g for g in valid_types if 'Tumor' in g]
@@ -386,20 +381,21 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
         adata.uns[f'rank_genes_groups_summary_{region}'] = np.load(
             all_path + f'_summary_{region}.npy', allow_pickle='TRUE').item()
         
-        gene_name_map = pd.read_csv(
-            f'{backup_dir}/zuani_ensembl.csv')\
-            .iloc[:,:1]
-        gene_name_map = gene_name_map.to_dict()['Unnamed: 0']
-        gene_name_map = {str(k): v for k, v in gene_name_map.items()}
-        
-        print('THE GENE MAP')
-        print(str(gene_name_map)[:100])
-        for cell_type, genes_dict in adata.uns[f'rank_genes_groups_summary_{region}'].items():
-            updated_genes_dict = {}
-            for gene, scores in genes_dict.items():
-                new_gene_name = gene_name_map.get(gene, gene)
-                updated_genes_dict[new_gene_name] = scores
-            adata.uns[f'rank_genes_groups_summary_{region}'][cell_type] = updated_genes_dict
+        if zuani_symbols_summary:
+            gene_name_map = pd.read_csv(
+                f'{backup_dir}/zuani_ensembl.csv')\
+                .iloc[:,:1]
+            gene_name_map = gene_name_map.to_dict()['Unnamed: 0']
+            gene_name_map = {str(k): v for k, v in gene_name_map.items()}
+            
+            print('THE GENE MAP')
+            print(str(gene_name_map)[:100])
+            for cell_type, genes_dict in adata.uns[f'rank_genes_groups_summary_{region}'].items():
+                updated_genes_dict = {}
+                for gene, scores in genes_dict.items():
+                    new_gene_name = gene_name_map.get(gene, gene)
+                    updated_genes_dict[new_gene_name] = scores
+                adata.uns[f'rank_genes_groups_summary_{region}'][cell_type] = updated_genes_dict
 
     # regions = ['normalall']
 
@@ -486,7 +482,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     # Hide any unused subplots
     if num_types % 2 != 0:
         fig.delaxes(axs[-1, -1])
-    plt.savefig(f'{backup_dir}/markergenes_{name}_{region}_{time}.png')
+    plt.savefig(f'{backup_dir}/markergenes_{name}_{region}_{time}.png', bbox_inches='tight')
     vol.commit()
 
     if not os.path.exists('h.all.v2023.2.Hs.symbols.gmt'):
@@ -510,12 +506,12 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             combined_dfs[region].to_csv(gsea_path)
             vol.commit()
         
-        plt.figure(figsize=(15, 8))
+        plt.figure(figsize=(15, 10))
         sns.heatmap(combined_dfs[region], cmap='viridis')
         plt.title(f'Hallmarks Scores by Cell Type for {region}')
         plt.xlabel('Hallmarks')
         plt.ylabel('Cell Types')
-        plt.savefig(f'{gsea_folder}/heatmap_{name}_{region}_{time}.png')
+        plt.savefig(f'{gsea_folder}/heatmap_{name}_{region}_{time}.png', bbox_inches='tight')
         vol.commit()
 
     return None
@@ -534,22 +530,24 @@ def main():
     #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p')
     
     future3 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV',
-                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data')
+                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data'
+                           ,load_regions=False)
     
     future4 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='I-II',
-                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data')
+                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data'
+                           ,load_regions=False)
     
-    future5 = get_de.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
-                           cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p')
+    # future5 = get_de.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
+    #                        cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p')
     
-    future6 = get_de.spawn(ext_name="Trinks_Bishoff_2021_NSCLC", name='Bishoff', time='III-IV',
-                           cell_key='cell_type_adjusted', skip_stages=True, log_layer=None)
+    # future6 = get_de.spawn(ext_name="Trinks_Bishoff_2021_NSCLC", name='Bishoff', time='III-IV',
+    #                        cell_key='cell_type_adjusted', skip_stages=True, log_layer=None)
     
     # Wait for both tasks to complete
     # future1.get()
     # future2.get()
     future3.get()
     future4.get()
-    future5.get()
-    future6.get()
+    # future5.get()
+    # future6.get()
 
