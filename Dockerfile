@@ -21,9 +21,9 @@ RUN pip install pandas==1.5.3
 RUN pip install jupyterlab jupyterlab-git ipywidgets
 RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/host_home'" >> ~/.bashrc
 
-# For visualizing and builidng networks
+# For visualizing and builidng networks, with holovies also
 RUN apt update && apt install -y --no-install-recommends libgraphviz-dev graphviz
-RUN pip install pygraphviz==1.11 networkx==3.1
+RUN pip install pygraphviz==1.11 networkx==3.1 bokeh==3.6.1 holoviews==1.20.0 datashader==0.16.3 scikit-image
 
 # R from source is better for portability
 ARG RVER=4.4.1

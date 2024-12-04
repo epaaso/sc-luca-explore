@@ -1,281 +1,371 @@
 Regulator	Target	MI	pvalue
-Mast cell	transitional club/AT2	0.32096463285892884	0.0
-Monocyte classical	pDC	0.37417295167191345	0.0
-Monocyte non-classical	NK cell	0.32062541382203635	6.289681763471666E-5
-Pericyte	Endothelial cell venous	0.35560346688042854	0.0
-T cell CD4 dividing	myeloid dividing	0.28738208649066865	0.02364106151143408
-Fibroblast peribronchial	Plasma cell	0.3221162924502984	0.0
-T cell CD8 dividing	T cell regulatory	0.5015575042794201	1.296351914703564E-10
-Mast cell	T cell CD8 activated	0.4119740601057192	1.6953327630631065E-9
-Alveolar cell type 2	cDC2	0.31073921116986397	7.323783801638228E-7
-Fibroblast alveolar	Mast cell	0.28537517865983875	0.0
-Fibroblast alveolar	Smooth muscle cell	0.29374170288018137	0.0
-T cell regulatory	T cell NK-like	0.48327650768900743	0.02364106151143408
-cDC2	pDC	0.37905583171044976	0.0
-T cell CD8 activated	T cell CD4	0.5788095750980178	0.0
-Pericyte	Fibroblast peribronchial	0.4157979526173868	0.0
-NK cell	T cell CD8 naive	0.45319503674653394	0.0
-T cell CD8 naive	NK cell	0.4611985611020845	0.0
-T cell regulatory	Monocyte classical	0.40217873164381696	3.4591773889758315E-11
-cDC2	Macrophage	0.41448719951112767	0.0
-T cell CD4	B cell	0.7021820487914832	0.0
-transitional club/AT2	Tumor cells LUAD	0.26732385024892064	0.0013733691273526416
-Monocyte non-classical	cDC2	0.29097911140291466	5.04082842808784E-4
-Mast cell	Macrophage	0.40865777143377946	0.0
-Mast cell	T cell CD8 effector memory	0.4745764299429701	0.0
-NK cell dividing	T cell CD4	0.3439785406238257	0.0
-T cell CD8 dividing	T cell CD4 dividing	0.43624944233972174	0.0
-Plasma cell	T cell CD8 activated	0.37838529135519255	5.04082842808784E-4
-Mast cell	B cell	0.41370773169527864	2.1407270736628625E-5
-T cell CD8 terminally exhausted	T cell NK-like	0.4553352110346128	0.0
-Tumor LUAD_mixed	transitional club/AT2	0.30589257068796055	0.0
-Tumor cells LUAD	transitional club/AT2	0.2758238340942618	0.0013733691273526416
-DC mature	T cell CD8 effector memory	0.3524166998406338	0.0
-NK cell	NK cell dividing	0.3430652267113867	0.0
-Monocyte classical	T cell CD8 terminally exhausted	0.36184772047068675	2.3087960432377486E-6
-Smooth muscle cell	Endothelial cell venous	0.29013683854207334	0.0
-T cell CD8 effector memory	T cell CD8 terminally exhausted	0.5804331428644893	0.0
-T cell CD4	T cell CD8 naive	0.4687648373302326	0.0
-T cell regulatory	T cell CD8 naive	0.43968906780505473	9.067746553625966E-12
-T cell CD8 effector memory	NK cell	0.7434500618571102	0.0
-T cell CD8 activated	T cell CD8 effector memory	0.6105624813696712	0.0
-Fibroblast adventitial	Fibroblast alveolar	0.29065345718429375	0.02364106151143408
-T cell CD8 effector memory	B cell dividing	0.3052073351288004	2.1407270736628625E-5
-T cell CD8 activated	T cell regulatory	0.605657986914173	0.0
-T cell CD8 naive	T cell CD8 effector memory	0.4989620031821055	0.02364106151143408
-Mast cell	Fibroblast peribronchial	0.3009564464436356	2.271611565518583E-7
-cDC1	T cell CD8 effector memory	0.4117694184571971	0.0
-pDC	T cell regulatory	0.42909848785132376	0.0
-DC mature	cDC2	0.33654341918323505	0.0
-transitional club/AT2	Mast cell	0.3202949819190271	0.0
-Mast cell	cDC2	0.43621694394729926	0.0
-T cell CD8 effector memory	DC mature	0.35908454488070674	0.0
-T cell CD4	DC mature	0.3368178684832317	0.02364106151143408
-T cell CD4 dividing	T cell CD8 dividing	0.4367852094462429	0.0
-cDC2	transitional club/AT2	0.31124742772227054	2.1407270736628625E-5
-Plasma cell	T cell regulatory	0.42059135237329387	0.0
-T cell CD8 terminally exhausted	T cell CD8 naive	0.43890467264585226	0.0
-Monocyte classical	T cell CD4	0.40548100257771214	0.0
-T cell regulatory	T cell CD8 effector memory	1.003006255263281	0.0
-Tumor LUAD_mixed	Mast cell	0.2840168212537214	0.0
-T cell regulatory	Plasma cell dividing	0.3063692400297645	7.323783801638228E-7
-cDC2	Tumor LUAD_mixed	0.28842413955952945	2.1407270736628625E-5
-Macrophage alveolar	Fibroblast peribronchial	0.30708992121658935	9.067746553625966E-12
-T cell CD8 terminally exhausted	T cell regulatory	0.604456940140121	0.0
-T cell CD8 effector memory	T cell CD4	0.9179525925306338	0.0
-T cell CD8 activated	Plasma cell	0.3836038285664392	1.8031302079779543E-4
-T cell CD8 activated	Mast cell	0.40420290600278785	6.892662829383056E-8
-DC mature	Mast cell	0.3465919111666182	0.0
-T cell regulatory	pDC	0.42935293400040175	0.0
-Macrophage	Macrophage alveolar	0.38697984078631975	0.0
-DC mature	Monocyte classical	0.32944601141595514	0.0
-B cell	T cell CD4	0.696538409951845	0.0
-T cell CD8 activated	B cell	0.5691391169373107	0.0
-Macrophage	T cell CD8 effector memory	0.3779140505070473	7.113264646751993E-6
-T cell NK-like	T cell CD8 effector memory	0.49679310775833374	0.0
-T cell NK-like	Monocyte non-classical	0.3656021750349027	0.0
-Mast cell	Macrophage alveolar	0.3827730142913485	6.289681763471666E-5
-Club	Ciliated	0.34388296126904155	0.0
-Mast cell	Tumor LUAD_mixed	0.28954227796722	0.0
-T cell regulatory	Mast cell	0.44579187324807357	0.0
-Monocyte classical	Monocyte non-classical	0.29382784607221524	0.0
-Macrophage alveolar	transitional club/AT2	0.30406242867519784	0.0
-B cell	T cell CD8 effector memory	0.6772538734734307	5.04082842808784E-4
-T cell CD4	Monocyte classical	0.3989131147742117	0.0
-Fibroblast peribronchial	Macrophage alveolar	0.3103064004858166	5.951800163828125E-9
-Plasma cell	T cell CD4 dividing	0.3925014314812584	0.0
-T cell CD8 activated	Neutrophils	0.3123656645894157	1.8031302079779543E-4
-Mast cell	T cell regulatory	0.44666835727270254	0.0
-Fibroblast peribronchial	Macrophage	0.3239414695929215	0.0
-Plasma cell	Fibroblast peribronchial	0.31252184203430755	0.0
-B cell dividing	B cell	0.3173313524710763	0.0
-Endothelial cell venous	Smooth muscle cell	0.2898496027155163	0.0
-T cell CD8 dividing	T cell CD8 terminally exhausted	0.5215737299802071	0.0
-Fibroblast alveolar	Endothelial cell venous	0.30295088356294525	0.0
-T cell CD4 dividing	pDC	0.37634216009671245	0.0
-cDC2	DC mature	0.3307797804610305	0.0
-pDC	Mast cell	0.40827398823799027	0.0
-Mast cell	Alveolar cell type 2	0.3458078747098509	0.0
-Plasma cell	T cell CD8 terminally exhausted	0.3524180095255858	0.02364106151143408
-Alveolar cell type 2	Neutrophils	0.2926648660356787	0.0
-T cell regulatory	cDC2	0.4023240549520825	0.0
-T cell regulatory	cDC1	0.4067306014281959	0.0
-T cell CD8 effector memory	NK cell dividing	0.34532236339709216	7.113264646751993E-6
-Fibroblast peribronchial	Fibroblast adventitial	0.28788457283054925	6.892662829383056E-8
-Monocyte non-classical	T cell NK-like	0.3675965089628281	0.0
-Endothelial cell venous	Monocyte classical	0.3111257052278583	9.067746553625966E-12
-Neutrophils	T cell CD4	0.3109123530848298	2.3087960432377486E-6
-T cell CD8 naive	B cell	0.3996248858401024	1.8031302079779543E-4
-Monocyte classical	cDC2	0.40501891167198767	0.0
-cDC2	T cell regulatory	0.40649861816581145	0.0
-Alveolar cell type 2	Alveolar cell type 1	0.3014484915124763	0.0
-stromal dividing	Pericyte	0.287124792139751	2.1407270736628625E-5
-Macrophage	Monocyte classical	0.45733530318772814	0.0
-myeloid dividing	Fibroblast peribronchial	0.3075237073772494	0.0013733691273526416
-Macrophage	Mast cell	0.4120801381724672	0.0
-transitional club/AT2	cDC2	0.3042347287517952	2.271611565518583E-7
-pDC	T cell CD4	0.4119832646036693	0.0
-cDC2	Endothelial cell venous	0.3235407150337103	5.04082842808784E-4
-T cell CD4	T cell regulatory	0.897187903966581	0.0
-T cell NK-like	NK cell	0.5106402000066296	0.0
-cDC1	T cell CD4 dividing	0.3818232740629836	0.0
-T cell regulatory	Plasma cell	0.4275901638048771	0.0
-cDC2	Macrophage alveolar	0.36699810276186073	0.0
-Neutrophils	Monocyte classical	0.3412962075645295	0.0
-Mast cell	Plasma cell	0.3933337743741492	0.0
-T cell regulatory	T cell CD8 activated	0.6031092923313759	0.0
-pDC	T cell CD8 dividing	0.3619291472125333	6.716849298982197E-13
-Monocyte classical	Endothelial cell venous	0.29379477142944105	0.0
-pDC	cDC1	0.35542143865866255	0.02364106151143408
-transitional club/AT2	B cell	0.3065617161760452	0.0013733691273526416
-myeloid dividing	Monocyte classical	0.35181733774664886	1.6953327630631065E-9
-pDC	cDC2	0.37341461013150656	0.0
-transitional club/AT2	Tumor LUAD_mixed	0.3088209086270188	0.0
-myeloid dividing	Macrophage	0.3709548992420902	0.0
-Macrophage alveolar	Tumor LUAD_mixed	0.2907199680641498	6.716849298982197E-13
-Plasma cell dividing	Plasma cell	0.2943023144067848	0.0
-Macrophage	cDC2	0.41379141970842015	0.0
-pDC	Monocyte classical	0.3751498801404142	0.0
-T cell CD8 activated	pDC	0.36358696452383155	0.0
-T cell CD4 dividing	T cell CD8 effector memory	0.43273658887138033	0.0
-DC mature	pDC	0.33782114110253925	0.0
-T cell CD8 effector memory	cDC1	0.41122317758886273	0.0
-T cell CD8 terminally exhausted	T cell CD8 dividing	0.5235210933240009	0.0
-NK cell	T cell NK-like	0.5063774474714197	0.0
-Ciliated	Club	0.3429162958391709	0.0
-T cell CD8 effector memory	Mast cell	0.4737130850154681	0.0
-B cell	B cell dividing	0.3124746648980136	0.0
-Fibroblast peribronchial	Mast cell	0.2993113378437072	2.3087960432377486E-6
-T cell CD4	Mast cell	0.44497118500383087	0.0
-cDC1	T cell regulatory	0.40344691810487743	0.0
-T cell CD8 effector memory	Macrophage	0.3832818799108766	6.289681763471666E-5
-Alveolar cell type 1	Alveolar cell type 2	0.3014412214713579	0.0
-Plasma cell	B cell dividing	0.2933345497446975	0.00941166440404373
-Monocyte non-classical	T cell CD8 naive	0.3274459430693674	0.0
-T cell CD4 dividing	T cell regulatory	0.4454704473419177	0.0
-T cell CD8 effector memory	Plasma cell	0.4110945254984127	0.0
-Plasma cell dividing	T cell regulatory	0.31172205400261543	1.8031302079779543E-4
-T cell CD8 effector memory	pDC	0.419866719347438	0.0
-T cell CD8 effector memory	T cell CD4 dividing	0.44094128120950343	0.0
-T cell CD8 effector memory	T cell regulatory	1.002155329621688	0.0
-cDC1	cDC2	0.3509194041298626	4.732020331132958E-10
-Endothelial cell venous	cDC2	0.31460515551566903	0.00941166440404373
-B cell	Alveolar cell type 2	0.2882571451602249	2.1407270736628625E-5
-transitional club/AT2	Alveolar cell type 2	0.3085640751778123	0.0
-Macrophage	myeloid dividing	0.37256818622040505	0.0
-Alveolar cell type 2	Mast cell	0.3483979118923949	0.0
-Fibroblast peribronchial	Endothelial cell venous	0.39532818483982546	0.0
-DC mature	T cell CD4 dividing	0.3447799825664482	0.0
-B cell dividing	T cell CD8 effector memory	0.3042351677434885	7.113264646751993E-6
-Neutrophils	NK cell	0.3173455345446447	0.02364106151143408
-Macrophage alveolar	cDC2	0.371913386641639	0.0
-Neutrophils	Alveolar cell type 2	0.3089279200720112	0.0
-cDC2	T cell CD4	0.4059964291628108	0.0
-T cell CD4	cDC1	0.4060973356532375	0.0
-T cell CD4	cDC2	0.40801997731550216	6.716849298982197E-13
-Monocyte non-classical	Monocyte classical	0.29549545104896074	4.732020331132958E-10
-cDC2	Monocyte classical	0.40957874103226666	0.0
-Mast cell	T cell CD4	0.4478590405397729	0.0
-T cell CD8 activated	cDC1	0.39278889932420996	1.296351914703564E-10
-T cell CD8 naive	Monocyte non-classical	0.32364674388214865	0.0
-Monocyte classical	myeloid dividing	0.347775254177793	0.0
-cDC1	T cell CD8 activated	0.40106716576869716	0.0
-T cell CD4	T cell CD8 activated	0.5771207603397254	0.0
-NK cell	T cell CD8 effector memory	0.7446164063023726	0.0
-NK cell dividing	T cell CD8 dividing	0.311415245355666	0.0
-T cell CD8 effector memory	Monocyte classical	0.43174538499778337	0.0
-Mast cell	Fibroblast alveolar	0.285245264437582	0.0
-NK cell dividing	T cell CD8 effector memory	0.34449947368600453	2.3087960432377486E-6
-pDC	DC mature	0.33643662147771497	0.0
-Monocyte classical	T cell regulatory	0.40506166565681456	3.4591773889758315E-11
-Alveolar cell type 2	transitional club/AT2	0.30836956154421047	0.0
-Macrophage alveolar	Mast cell	0.3721363203536483	2.3087960432377486E-6
-myeloid dividing	transitional club/AT2	0.29982893982706393	0.02364106151143408
-T cell CD8 naive	T cell CD4	0.4768215789385339	0.0
-T cell regulatory	T cell CD4	0.903621228850622	0.0
-Macrophage	T cell CD8 dividing	0.3309989413566331	0.0036442275815923297
-T cell CD8 naive	T cell NK-like	0.5366760192913754	0.0
-T cell NK-like	T cell CD8 terminally exhausted	0.44989918243107124	0.0
-Monocyte classical	T cell CD8 effector memory	0.426787088121977	0.0
-cDC2	cDC1	0.3567316951761019	5.951800163828125E-9
-Macrophage	Plasma cell	0.37240324865080315	0.0
-T cell CD8 dividing	pDC	0.3670823670704263	9.067746553625966E-12
-Pericyte	stromal dividing	0.2962080221708011	2.1407270736628625E-5
-T cell CD8 terminally exhausted	Macrophage	0.35810505982202706	0.0
-B cell	cDC1	0.38531735504276937	0.0013733691273526416
-T cell CD8 effector memory	B cell	0.7035808404742651	0.0013733691273526416
-Macrophage	T cell CD8 terminally exhausted	0.3587712573862802	0.0
-Alveolar cell type 1	T cell CD4	0.2991561920879352	1.8031302079779543E-4
-Endothelial cell venous	Fibroblast peribronchial	0.39180705680402744	0.0
-transitional club/AT2	T cell CD4	0.3100670245669166	0.0036442275815923297
-transitional club/AT2	Macrophage alveolar	0.3107658668265475	7.323783801638228E-7
-Fibroblast adventitial	Smooth muscle cell	0.2912750488712547	2.3087960432377486E-6
-T cell CD4	NK cell	0.7442381290800557	0.0
-T cell CD4 dividing	Plasma cell	0.39059458673625147	0.0
-Plasma cell	T cell CD8 effector memory	0.4099910843313733	0.0
-T cell CD4 dividing	DC mature	0.3421248611002331	0.0
-Macrophage alveolar	Macrophage	0.38625960023983796	0.0
-Tumor LUAD_mixed	Macrophage alveolar	0.2961623913386749	3.4591773889758315E-11
-Plasma cell	Macrophage	0.3734930482549987	0.0
-T cell CD8 naive	T cell CD8 terminally exhausted	0.44200438910124296	0.0
-cDC1	T cell CD4	0.40222078672544	0.0
-T cell CD8 terminally exhausted	Monocyte classical	0.3670812015495031	2.3087960432377486E-6
-T cell regulatory	T cell CD4 dividing	0.4456085752652481	0.0
-Neutrophils	T cell CD8 activated	0.3171168909980306	0.0036442275815923297
-B cell	T cell CD8 activated	0.5665583040495886	0.0
-Monocyte classical	Macrophage	0.45879469877178397	0.0
-Smooth muscle cell	Fibroblast adventitial	0.29187524500305273	7.323783801638228E-7
-NK cell dividing	NK cell	0.34853752237391383	0.0
-B cell	Mast cell	0.42458039052591967	5.04082842808784E-4
-Fibroblast peribronchial	myeloid dividing	0.30024614390494675	0.00941166440404373
-Endothelial cell venous	Pericyte	0.35273036255274953	0.0
-Macrophage	Fibroblast peribronchial	0.3145248302224888	0.0
-T cell CD4 dividing	cDC1	0.3830660320260909	0.0
-T cell CD4 dividing	cDC2	0.3843514462902682	0.0
-Endothelial cell venous	myeloid dividing	0.2890889137070177	7.113264646751993E-6
-B cell dividing	T cell regulatory	0.30301562533032406	0.0
-T cell regulatory	T cell CD8 dividing	0.5086642674364498	2.0468926553718347E-8
-T cell CD8 terminally exhausted	T cell CD8 effector memory	0.5810942809800556	0.0
-T cell CD8 dividing	Plasma cell	0.3778965423152968	0.0
-Macrophage	T cell CD4 dividing	0.37048714305685543	0.0
-T cell NK-like	T cell CD8 naive	0.5364267497812052	0.0
-pDC	T cell CD8 effector memory	0.43409266743417296	0.0
-T cell CD4	T cell CD8 effector memory	0.9163348996543844	0.0
-Monocyte classical	DC mature	0.3445147176438275	0.0
-pDC	T cell CD4 dividing	0.3823364863258408	0.0
-T cell CD4	Alveolar cell type 1	0.2866966407784766	0.02364106151143408
-T cell CD4	Alveolar cell type 2	0.2999756085511191	0.00941166440404373
-T cell CD8 naive	T cell regulatory	0.44731137063262194	0.0
-T cell CD8 dividing	NK cell dividing	0.3123658041128745	0.0
-B cell dividing	Plasma cell	0.2901429616115893	0.00941166440404373
-cDC2	Mast cell	0.43449925471099077	0.0
-Mast cell	DC mature	0.34776202026116626	0.0
-Monocyte classical	Neutrophils	0.33685641806526334	0.0
-Fibroblast peribronchial	Pericyte	0.41740928534797783	0.0
-T cell regulatory	B cell dividing	0.31896757011476357	5.951800163828125E-9
-Monocyte classical	Macrophage alveolar	0.37635127115055267	0.0
-cDC2	Alveolar cell type 2	0.30267546079824864	2.1407270736628625E-5
-cDC2	T cell CD4 dividing	0.3737162174280029	0.0
-pDC	T cell CD8 activated	0.364452389138373	0.0
-T cell CD4 dividing	Macrophage	0.36758236135633765	0.0
-Macrophage alveolar	Monocyte classical	0.3787756726761307	0.0
-Plasma cell	Endothelial cell venous	0.28551104526694887	0.00941166440404373
-T cell regulatory	T cell CD8 terminally exhausted	0.6071771821708414	0.0
-Mast cell	pDC	0.4026226040569186	0.0
-Plasma cell	Mast cell	0.39718108464031565	0.0
-Plasma cell	Plasma cell dividing	0.2980295445241275	0.0
-T cell CD4	NK cell dividing	0.3499919519136386	0.0
-Mast cell	Monocyte classical	0.4125921691385408	6.716849298982197E-13
-Smooth muscle cell	Fibroblast alveolar	0.28986408431015726	0.0
-T cell CD4	Neutrophils	0.3152516132101438	7.113264646751993E-6
-T cell CD4	pDC	0.40129169816738763	0.0
-Monocyte classical	Mast cell	0.41682105767201105	4.732020331132958E-10
-Plasma cell	T cell CD8 dividing	0.37598724069784456	0.0
-T cell CD8 dividing	Macrophage	0.3221563211119019	0.0036442275815923297
-Endothelial cell venous	Fibroblast alveolar	0.3069452536735971	2.350897254643769E-12
-T cell CD4	transitional club/AT2	0.30077677426379257	1.8031302079779543E-4
-Fibroblast adventitial	Fibroblast peribronchial	0.29002476226378066	2.1407270736628625E-5
-T cell CD8 effector memory	T cell CD8 activated	0.6183060843987143	0.0
-NK cell	T cell CD4	0.7441002776641599	0.0
-T cell CD8 effector memory	T cell NK-like	0.5036220315546608	0.0
-B cell	T cell CD8 naive	0.4020311594349568	1.8031302079779543E-4
+Monocyte classical	pDC	0.4118510699196651	0.0
+Monocyte non-classical	NK cell	0.31553449621267793	0.0
+DC mature	Alveolar cell type 2	0.3736491409850052	0.0
+Fibroblast peribronchial	Plasma cell	0.29004887998403855	0.0
+B cell	Plasma cell	0.30426471083391915	0.0
+DC mature	T cell regulatory	0.43336534785423786	1.2782134028110903E-5
+Plasma cell dividing	B cell dividing	0.27294510250709775	0.0016371417104852348
+Mast cell	T cell CD8 activated	0.36331728999481644	0.0
+Alveolar cell type 2	cDC2	0.3860172607087491	0.0
+Fibroblast alveolar	Mast cell	0.30525680923755444	0.0
+Tumor LUAD_mixed	myeloid dividing	0.28432794054645993	0.004038178568714912
+Tumor LUAD_transitional	Tumor LUAD_LUSC_mitotic	0.2997252802672865	0.0
+T cell regulatory	Macrophage	0.41134287177667905	5.0046189414842956E-11
+Monocyte classical	Tumor cells LUAD	0.3468127473746141	0.0
+cDC2	Macrophage	0.5385100269334528	0.0
+transitional club/AT2	Tumor cells LUAD	0.3706719366310009	0.0
+Mast cell	T cell CD8 effector memory	0.43115297970309685	5.389507751196732E-7
+NK cell dividing	T cell CD4	0.3256875745391167	9.509929628181979E-5
+DC mature	T cell NK-like	0.37530313755140243	1.580124771471958E-6
+Endothelial cell venous	Endothelial cell lymphatic	0.2874617404494783	0.0
+T cell CD8 activated	Tumor LUAD_LUSC_mitotic	0.3000252883191531	0.0
+Tumor LUAD_mixed	transitional club/AT2	0.30844089694506277	0.0
+Tumor cells LUAD	transitional club/AT2	0.372737275305033	0.0
+myeloid dividing	Macrophage alveolar	0.48543847973150606	0.0
+Macrophage alveolar	Alveolar cell type 2	0.3666067999231807	0.0
+ROS1+ healthy epithelial	Macrophage alveolar	0.32491746300543284	0.0
+Tumor LUAD_LUSC	myeloid dividing	0.28127096993876577	1.4565681993872204E-11
+Monocyte classical	Ciliated	0.32996814281085235	0.022869621161449416
+Alveolar cell type 2	Endothelial cell venous	0.34043233301416087	0.0
+T cell CD8 effector memory	NK cell	0.5004833280354368	0.0
+Mast cell	T cell CD8 terminally exhausted	0.30492750227563714	0.0
+T cell CD4 dividing	NK cell dividing	0.33980039310210924	0.0
+Fibroblast adventitial	Fibroblast alveolar	0.2736870465424172	1.580124771471958E-6
+T cell CD8 activated	T cell CD8 effector memory	0.6432313574313584	0.0
+Tumor cells LUAD	Mast cell	0.33560642598256735	0.0
+Mast cell	Fibroblast peribronchial	0.29290274243732906	1.699329565951757E-10
+pDC	T cell regulatory	0.48333498602181424	0.0
+DC mature	cDC2	0.5775617239505071	0.0
+T cell CD4	DC mature	0.4241477456569181	1.864033816190158E-9
+Alveolar cell type 1	Endothelial cell capillary	0.28523171052372237	0.0
+T cell CD4 dividing	T cell CD8 dividing	0.3103322685327339	1.2782134028110903E-5
+T cell CD8 activated	ROS1+ healthy epithelial	0.3581696558722741	0.0
+Tumor cells LUAD	T cell CD8 activated	0.32641198937756344	0.022869621161449416
+T cell CD8 terminally exhausted	T cell CD8 naive	0.27901601509149443	5.389507751196732E-7
+T cell CD8 terminally exhausted	Tumor LUAD_transitional	0.28326691904711615	5.67688118735532E-10
+NK cell dividing	T cell CD4 dividing	0.33775688421202954	0.0
+T cell CD8 activated	Monocyte classical	0.4100260370848158	0.0
+cDC2	Tumor LUAD_mixed	0.30497634499985776	9.509929628181979E-5
+Tumor cells LUAD	ROS1+ healthy epithelial	0.3605354305083602	0.0
+DC mature	Mast cell	0.4520199035689827	0.0
+NK cell dividing	cDC2	0.311026606867537	0.022869621161449416
+T cell regulatory	pDC	0.4881233524788697	0.0
+DC mature	Monocyte classical	0.5165037129671161	0.0
+T cell CD8 activated	B cell	0.3756909184030747	6.485009791825647E-4
+Neutrophils	Macrophage alveolar	0.2880998454314536	6.010024478086962E-9
+T cell NK-like	T cell CD8 effector memory	0.4007432701320458	0.0
+Mast cell	Macrophage alveolar	0.4206713852893314	1.902576851620097E-8
+Club	Ciliated	0.4677853555982655	0.0
+Monocyte classical	Monocyte non-classical	0.3012949737921265	4.540461076008029E-6
+Macrophage alveolar	transitional club/AT2	0.3350518590163471	0.0
+Fibroblast peribronchial	Macrophage	0.28195743319271993	2.5111481917461376E-4
+Macrophage	T cell regulatory	0.4116415314812247	1.699329565951757E-10
+pDC	T cell NK-like	0.3610460916237606	4.108269280322929E-12
+Endothelial cell venous	Smooth muscle cell	0.3086096278084421	0.0
+T cell CD8 dividing	T cell CD8 terminally exhausted	0.4848323411240118	0.0
+Fibroblast alveolar	Endothelial cell venous	0.38480975525364786	0.0
+T cell CD4 dividing	pDC	0.4592978972424389	0.0
+cDC2	DC mature	0.5717307177975463	0.0
+Mast cell	Alveolar cell type 2	0.40806291076501994	0.0
+Mast cell	Alveolar cell type 1	0.30332796312317156	0.022869621161449416
+T cell regulatory	cDC2	0.47632019233005735	0.0016371417104852348
+Monocyte non-classical	T cell NK-like	0.301847676322577	0.0
+Endothelial cell venous	Monocyte classical	0.378020825287852	0.0
+Alveolar cell type 2	Alveolar cell type 1	0.3759010893890666	0.0
+NK cell	transitional club/AT2	0.3254501050201842	0.004038178568714912
+cDC2	Endothelial cell venous	0.35829495308747467	0.0
+transitional club/AT2	Endothelial cell venous	0.32455849705056217	5.0046189414842956E-11
+Endothelial cell venous	Alveolar cell type 1	0.2963617930400995	0.0
+T cell CD4	T cell regulatory	0.6589579983928052	0.0
+Endothelial cell venous	Alveolar cell type 2	0.3336736741304366	1.120437076451708E-12
+T cell NK-like	NK cell	0.3981650425597753	0.0
+cDC1	NK cell	0.3056262395716131	5.0046189414842956E-11
+Endothelial cell lymphatic	Endothelial cell venous	0.2904995904170683	0.0
+cDC2	Macrophage alveolar	0.4784174684233851	0.0
+T cell regulatory	DC mature	0.4164058891270774	0.004038178568714912
+Mast cell	Plasma cell	0.30055577357236035	5.67688118735532E-10
+Alveolar cell type 1	Fibroblast alveolar	0.27658081134909657	0.009727170127940887
+Plasma cell	Pericyte	0.27811362431187114	9.509929628181979E-5
+Mast cell	Endothelial cell venous	0.386924107107463	0.0
+Tumor cells LUAD	Tumor LUAD_mixed	0.28844882871105093	0.0
+myeloid dividing	Monocyte classical	0.5240266728647027	0.0
+NK cell	Mast cell	0.41014624522791154	0.0
+transitional club/AT2	Tumor LUAD_mixed	0.31472868513906227	0.0
+T cell CD8 effector memory	Neutrophils	0.2978577817890418	1.120437076451708E-12
+myeloid dividing	Macrophage	0.51956196891711	0.0
+Endothelial cell venous	Endothelial cell capillary	0.2848895539257196	0.0
+Plasma cell dividing	Plasma cell	0.28540850902688525	0.0
+Macrophage	cDC1	0.28577514556258454	9.509929628181979E-5
+Macrophage	cDC2	0.5395969117614565	0.0
+T cell CD8 effector memory	cDC2	0.44760811809648526	0.0
+T cell CD8 terminally exhausted	T cell CD8 dividing	0.4844409311422661	0.0
+Macrophage alveolar	pDC	0.3725685235179947	0.0
+NK cell	T cell NK-like	0.3965608358569324	0.0
+Macrophage alveolar	Neutrophils	0.28390096420672906	1.580124771471958E-6
+Neutrophils	T cell CD8 effector memory	0.298607232047347	4.108269280322929E-12
+Alveolar cell type 1	Alveolar cell type 2	0.3738250234200922	0.0
+ROS1+ healthy epithelial	Monocyte classical	0.3300861740304595	1.4565681993872204E-11
+T cell CD4 dividing	T cell regulatory	0.4980081973633055	0.0
+Mast cell	myeloid dividing	0.45467415439441045	0.0
+Fibroblast peribronchial	Endothelial cell lymphatic	0.27010376528906643	0.0
+Tumor cells LUAD	DC mature	0.3364722126210978	0.0
+transitional club/AT2	Alveolar cell type 2	0.3975977729896862	0.0
+Alveolar cell type 2	Mast cell	0.40859704190121654	0.0
+Macrophage	myeloid dividing	0.5199526305113483	0.0
+Smooth muscle cell	Pericyte	0.27805155849836855	0.0
+Fibroblast peribronchial	Endothelial cell venous	0.29719407571981166	0.0
+myeloid dividing	Mast cell	0.456679434127189	0.0
+Macrophage alveolar	cDC2	0.47473759215481126	0.0
+cDC2	Monocyte classical	0.5416233275928327	0.0
+Tumor cells LUAD	NK cell	0.3184329481933539	0.0
+T cell CD8 terminally exhausted	Tumor LUAD_LUSC_mitotic	0.26710188135502894	5.389507751196732E-7
+DC mature	Macrophage alveolar	0.4438125873829225	0.0
+Endothelial cell lymphatic	Fibroblast adventitial	0.27573844229328065	0.0
+Macrophage alveolar	myeloid dividing	0.4840945052303889	0.0
+Plasma cell	B cell	0.3053146204031858	0.0
+cDC2	T cell NK-like	0.4165004983044174	0.0
+Monocyte classical	myeloid dividing	0.5202560136529075	0.0
+NK cell	T cell CD8 effector memory	0.5001148511472586	0.0
+Mast cell	Fibroblast alveolar	0.3079486346652307	0.0
+Endothelial cell capillary	Fibroblast alveolar	0.29943575733137806	0.0
+Alveolar cell type 2	transitional club/AT2	0.39719863591437116	0.0
+Alveolar cell type 2	Monocyte classical	0.39203797420770925	0.0
+T cell regulatory	T cell CD4	0.6599488401698065	0.0
+myeloid dividing	cDC2	0.6552101931489231	0.0
+Tumor LUAD_mixed	Tumor cells LUAD	0.28811529024427435	0.0
+Monocyte classical	T cell CD8 effector memory	0.4650107360272735	0.0
+cDC2	cDC1	0.33105191476684975	0.0
+Alveolar cell type 2	NK cell	0.37151394433846285	0.0
+cDC2	T cell CD8 effector memory	0.4514449598121701	0.0
+pDC	NK cell dividing	0.3048698496878315	5.67688118735532E-10
+Plasma cell dividing	T cell CD8 dividing	0.30361183844512635	0.0
+myeloid dividing	Tumor LUAD_LUSC	0.27166566372281997	1.802346285550982E-7
+Tumor cells LUAD	Alveolar cell type 2	0.36102140036026936	1.699329565951757E-10
+Plasma cell dividing	T cell CD8 terminally exhausted	0.28223492168745323	1.580124771471958E-6
+Fibroblast alveolar	Fibroblast peribronchial	0.27654673897543475	6.485009791825647E-4
+Endothelial cell venous	Fibroblast peribronchial	0.29366649046798643	0.0
+T cell CD8 dividing	Plasma cell dividing	0.3048729023406339	0.0
+T cell CD8 effector memory	Tumor LUAD_mixed	0.295971395608388	0.0
+Fibroblast adventitial	Smooth muscle cell	0.2821917026071862	0.0
+T cell CD4	NK cell	0.5319493854113124	0.0
+cDC2	Ciliated	0.3306337902218232	0.0
+transitional club/AT2	Ciliated	0.3072723314968662	0.0
+T cell CD8 naive	T cell CD8 terminally exhausted	0.281983406474485	1.802346285550982E-7
+NK cell	cDC1	0.31053684151041366	5.0046189414842956E-11
+NK cell	cDC2	0.4877024140093989	0.0
+NK cell dividing	pDC	0.2988070428348743	5.0046189414842956E-11
+NK cell	T cell regulatory	0.5197319638017125	0.0
+T cell regulatory	T cell CD4 dividing	0.4951017284613607	0.0
+Neutrophils	T cell CD8 activated	0.29484326513376546	0.0
+Endothelial cell venous	Mast cell	0.3893021526440066	0.0
+Smooth muscle cell	Fibroblast adventitial	0.28093698556233326	0.0
+cDC2	NK cell	0.4876457690567629	0.0
+Pericyte	Plasma cell	0.274487657151947	0.009727170127940887
+Endothelial cell venous	Pericyte	0.2942401669625598	0.0
+Macrophage	T cell CD4 dividing	0.39788015951633815	1.2782134028110903E-5
+T cell CD4	T cell NK-like	0.4186924072139654	0.0
+Tumor LUAD_mixed	T cell CD4	0.3299492681184589	0.0
+NK cell	Tumor cells LUAD	0.32809762467945947	0.0
+Ciliated	transitional club/AT2	0.3036200272113911	0.0
+Fibroblast alveolar	Endothelial cell lymphatic	0.2677077294428524	0.0
+Fibroblast peribronchial	Fibroblast alveolar	0.2731834956392109	1.802346285550982E-7
+Endothelial cell lymphatic	Fibroblast alveolar	0.2655036953040825	0.0
+Monocyte classical	Neutrophils	0.2889388288063104	1.2782134028110903E-5
+Fibroblast peribronchial	Pericyte	0.2869382652211889	0.0
+Endothelial cell venous	Fibroblast adventitial	0.2793093300881123	0.0016371417104852348
+Monocyte classical	Macrophage alveolar	0.49819011234934935	0.0
+pDC	NK cell	0.41103274808295687	0.0
+cDC2	T cell CD4 dividing	0.4433648344729342	0.0
+Smooth muscle cell	Fibroblast peribronchial	0.26504408399745777	0.0016371417104852348
+DC mature	Tumor cells LUAD	0.33231568560009256	0.0
+T cell NK-like	pDC	0.3639401555357149	1.802346285550982E-7
+Monocyte classical	ROS1+ healthy epithelial	0.3319588868671752	0.0
+Mast cell	Monocyte classical	0.47439076720061635	0.0
+Smooth muscle cell	Fibroblast alveolar	0.30398331853500765	0.0
+Endothelial cell venous	transitional club/AT2	0.3290433048938687	6.010024478086962E-9
+T cell CD8 naive	T cell CD8 activated	0.32485910156296394	0.0
+NK cell	Alveolar cell type 1	0.296955951509632	0.004038178568714912
+B cell	T cell NK-like	0.33520103231084925	1.902576851620097E-8
+NK cell	Alveolar cell type 2	0.37042986044333054	0.0
+Monocyte classical	Tumor LUAD_mitotic	0.28146437649272804	0.009727170127940887
+Fibroblast alveolar	Endothelial cell capillary	0.31434829668720893	0.0
+Endothelial cell venous	Fibroblast alveolar	0.38316918533051814	0.0
+NK cell	Monocyte classical	0.45702044433943884	0.0
+T cell CD8 effector memory	T cell CD8 activated	0.6438624408203514	0.0
+T cell CD8 effector memory	T cell NK-like	0.4022559647577791	0.0
+Pericyte	Endothelial cell venous	0.29487600968529204	0.0
+T cell CD4 dividing	myeloid dividing	0.4569394009004678	0.0
+Tumor LUAD_LUSC_mitotic	Tumor LUAD_mainly1	0.27876349960646657	0.0
+Fibroblast alveolar	Smooth muscle cell	0.3022680610542351	0.0
+T cell regulatory	T cell NK-like	0.3938837189352829	1.2782134028110903E-5
+Tumor LUAD_mixed	cDC2	0.29780700770335977	4.540461076008029E-6
+Monocyte classical	T cell CD8 activated	0.41190816826569426	0.0
+cDC2	pDC	0.43458671241358565	0.009727170127940887
+Pericyte	Fibroblast peribronchial	0.2859430146881753	0.0
+DC mature	myeloid dividing	0.5393569635004257	0.0
+T cell CD4	B cell	0.4275586174902709	0.0
+Macrophage alveolar	Tumor cells LUAD	0.3247801049172226	0.004038178568714912
+Mast cell	Macrophage	0.42611819822277397	5.911799494384695E-8
+T cell CD8 dividing	T cell CD4 dividing	0.29852619323077767	6.010024478086962E-9
+Mast cell	Tumor LUAD_mitotic	0.26405997028463746	0.0016371417104852348
+Tumor LUAD_transitional	T cell CD8 terminally exhausted	0.26818142246495513	0.0
+NK cell	Neutrophils	0.28523188212740647	6.485009791825647E-4
+DC mature	T cell CD8 effector memory	0.4415487043649097	0.0
+NK cell	NK cell dividing	0.3271062864581141	0.0
+Smooth muscle cell	Endothelial cell venous	0.3073420206484555	0.0
+T cell CD8 naive	Macrophage alveolar	0.2890761489088546	6.010024478086962E-9
+Mast cell	Tumor cells LUAD	0.334712736090472	0.0
+T cell NK-like	T cell CD4	0.41831243722677325	0.0
+T cell CD8 naive	ROS1+ healthy epithelial	0.29619352895414514	0.0
+Alveolar cell type 2	Macrophage alveolar	0.37293152708734706	0.0
+T cell CD8 activated	T cell CD8 naive	0.3199036635509377	0.0
+B cell	T cell regulatory	0.39786763885919113	0.0
+Mast cell	cDC2	0.4643244054988305	0.0
+T cell CD8 effector memory	DC mature	0.4360032950835917	0.0
+Monocyte classical	T cell CD4 dividing	0.4199038693846743	0.0
+cDC2	transitional club/AT2	0.36138648303166615	0.0
+Plasma cell	T cell regulatory	0.31735486320574735	0.0
+Ciliated	DC mature	0.32297217838020953	0.0
+T cell regulatory	T cell CD8 effector memory	0.5855577566484522	0.0
+B cell	myeloid dividing	0.34654467157683067	9.509929628181979E-5
+myeloid dividing	T cell CD4 dividing	0.4527027287141598	0.0
+NK cell	B cell	0.3748027338921148	0.022869621161449416
+T cell CD8 effector memory	T cell CD4	0.6229302798412655	0.0
+T cell CD8 activated	Mast cell	0.3660524801743769	0.0
+NK cell	pDC	0.41001158306423285	0.0
+Tumor LUAD_LUSC_mitotic	Tumor LUAD_transitional	0.2911913996083003	0.0
+Ciliated	Monocyte classical	0.32324716001549064	0.022869621161449416
+Macrophage	Macrophage alveolar	0.4529118661712448	0.0
+B cell	T cell CD4	0.42338896822329786	0.0
+ROS1+ healthy epithelial	Alveolar cell type 2	0.3495472572466708	0.0
+ROS1+ healthy epithelial	T cell CD8 naive	0.29273474468762695	0.0
+T cell NK-like	Monocyte non-classical	0.3115425722897939	0.0
+T cell regulatory	Mast cell	0.369483792625908	0.009727170127940887
+Macrophage alveolar	DC mature	0.44312149808035517	3.7347902548390266E-13
+B cell	T cell CD8 effector memory	0.41017812754484556	0.0
+T cell CD8 activated	Neutrophils	0.29340373771913975	0.0
+Ciliated	myeloid dividing	0.3458855212652443	0.0
+Monocyte classical	T cell NK-like	0.39047757634272107	1.864033816190158E-9
+Plasma cell	Fibroblast peribronchial	0.28794414485848113	0.0
+B cell dividing	B cell	0.27294814427251474	0.0
+transitional club/AT2	NK cell	0.3160971974353419	0.0016371417104852348
+myeloid dividing	B cell	0.35059961701609993	1.2782134028110903E-5
+Monocyte classical	Alveolar cell type 2	0.3925284258083657	0.0
+T cell CD8 terminally exhausted	Mast cell	0.3071101348412654	0.0
+Endothelial cell capillary	Endothelial cell venous	0.28333318390979007	0.0
+Ciliated	cDC2	0.3364635423338767	0.0
+T cell CD8 naive	B cell	0.3235109342637609	0.0
+Monocyte classical	cDC2	0.5477318432420402	0.0
+cDC2	T cell regulatory	0.48170996819759765	0.004038178568714912
+Macrophage	Monocyte classical	0.5047771302313436	0.0
+DC mature	Ciliated	0.32049747169782794	0.0
+Macrophage	Mast cell	0.4249041501353722	6.010024478086962E-9
+T cell regulatory	B cell	0.3985838534768973	0.0
+transitional club/AT2	cDC2	0.36778190921891324	0.0
+NK cell	DC mature	0.43522830794403117	0.004038178568714912
+pDC	T cell CD4	0.4986679237082957	0.0
+Monocyte classical	NK cell	0.45425138842295976	0.0
+Tumor cells LUAD	Monocyte classical	0.3451110867823211	0.0
+Endothelial cell venous	Macrophage alveolar	0.36339391633958545	0.022869621161449416
+NK cell	Monocyte non-classical	0.3154455340818372	0.0
+T cell regulatory	Plasma cell	0.3172840778812505	0.0
+Neutrophils	Monocyte classical	0.28660599128976205	0.0016371417104852348
+myeloid dividing	T cell CD8 dividing	0.3037099024085521	6.010024478086962E-9
+Endothelial cell capillary	Alveolar cell type 1	0.2892588028612975	0.0
+Tumor LUAD_mixed	T cell CD8 effector memory	0.3084057575962842	0.0
+pDC	Fibroblast peribronchial	0.2954593931230673	0.004038178568714912
+Tumor cells LUAD	Macrophage alveolar	0.32161175414431054	0.022869621161449416
+Pericyte	Smooth muscle cell	0.28152276973526813	0.0
+Monocyte classical	Endothelial cell venous	0.3803485016784431	0.0
+pDC	cDC2	0.42875730312083393	1.802346285550982E-7
+Endothelial cell lymphatic	Fibroblast peribronchial	0.27484461068497723	0.0
+cDC1	Endothelial cell venous	0.2761732440241879	0.009727170127940887
+Macrophage alveolar	Tumor LUAD_mixed	0.29369666557518403	0.0016371417104852348
+pDC	Macrophage alveolar	0.38191216820995116	0.0
+myeloid dividing	DC mature	0.5356624267339508	0.0
+Endothelial cell venous	Plasma cell	0.2906284801967921	9.509929628181979E-5
+pDC	Monocyte classical	0.3993962419309657	0.0
+T cell CD4 dividing	T cell CD8 effector memory	0.4501427039200075	0.0
+DC mature	T cell CD4	0.4316187955753011	5.0046189414842956E-11
+Alveolar cell type 1	Endothelial cell venous	0.29558535166128136	0.0
+Ciliated	Club	0.47018772724639923	0.0
+T cell CD8 effector memory	Mast cell	0.4298750190553269	4.540461076008029E-6
+B cell	B cell dividing	0.2700597497102763	0.0
+Fibroblast peribronchial	Mast cell	0.29187596336848187	1.864033816190158E-9
+Alveolar cell type 2	DC mature	0.3768150452363542	0.0
+T cell CD8 effector memory	T cell CD4 dividing	0.4575776943855402	0.0
+T cell CD8 effector memory	T cell regulatory	0.5812454577244667	0.0
+cDC1	cDC2	0.3340351572047023	0.0
+Endothelial cell venous	cDC2	0.3616524310280035	0.0
+DC mature	T cell CD4 dividing	0.4215226226759065	0.0
+cDC2	T cell CD4	0.5053304628301952	0.0
+T cell NK-like	Monocyte classical	0.3980378151625619	1.902576851620097E-8
+T cell regulatory	NK cell	0.5185129661760969	0.0
+T cell CD4	cDC2	0.5001941684037509	0.0
+T cell CD8 dividing	T cell NK-like	0.277975058864021	0.0
+Monocyte non-classical	Monocyte classical	0.2973565814458568	1.864033816190158E-9
+T cell CD8 activated	cDC2	0.4108117601640597	1.699329565951757E-10
+Alveolar cell type 2	ROS1+ healthy epithelial	0.3500400591217418	0.0
+T cell CD8 effector memory	Monocyte classical	0.4592668881049161	0.0
+cDC2	myeloid dividing	0.6557795570106922	0.0
+T cell CD8 naive	Mast cell	0.33000723262268306	0.0
+Macrophage alveolar	Mast cell	0.43249702178118365	6.010024478086962E-9
+T cell NK-like	cDC2	0.4151555582738927	0.0
+Tumor LUAD_mainly1	Tumor LUAD_LUSC_mitotic	0.2828169673184587	0.0
+T cell CD4	Tumor LUAD_mixed	0.33044829494872924	0.0
+Monocyte classical	T cell CD8 naive	0.3197007856239568	1.699329565951757E-10
+cDC1	Macrophage	0.29498406044019765	0.009727170127940887
+Fibroblast adventitial	Endothelial cell lymphatic	0.2805041919946606	0.0
+Mast cell	T cell CD8 naive	0.3309450295319696	0.0
+myeloid dividing	Ciliated	0.3545098187844089	0.0
+Tumor LUAD_mitotic	Monocyte classical	0.2818411598789436	6.485009791825647E-4
+T cell CD4 dividing	T cell CD4	0.45852622607861543	0.0
+T cell CD8 effector memory	B cell	0.407914258318746	0.0
+Fibroblast peribronchial	Smooth muscle cell	0.26082259784477607	0.022869621161449416
+transitional club/AT2	Macrophage alveolar	0.3364375196999843	0.0
+Tumor LUAD_mitotic	Mast cell	0.2714981666097746	0.022869621161449416
+ROS1+ healthy epithelial	T cell CD8 activated	0.3598139689308011	0.0
+T cell CD4 dividing	DC mature	0.42482982768839417	0.0
+Macrophage alveolar	Macrophage	0.45563819437057496	0.0
+Tumor LUAD_mixed	Macrophage alveolar	0.2916563159857276	0.009727170127940887
+B cell	T cell CD8 activated	0.38720097153854927	0.004038178568714912
+Monocyte classical	Macrophage	0.509993546262793	0.0
+NK cell dividing	NK cell	0.32503969574610786	0.0
+Macrophage	Fibroblast peribronchial	0.2888867040219439	5.389507751196732E-7
+T cell CD4 dividing	cDC2	0.4434413894628883	0.0
+Macrophage	B cell	0.3442045948170412	0.009727170127940887
+T cell CD4	T cell CD8 effector memory	0.6224038999138047	0.0
+pDC	T cell CD4 dividing	0.4623464729826465	0.0
+Monocyte classical	DC mature	0.5237590094320026	0.0
+T cell CD8 dividing	myeloid dividing	0.3058705914523201	1.120437076451708E-12
+cDC2	Mast cell	0.46614383024114797	0.0
+Tumor LUAD_LUSC_mitotic	T cell CD8 terminally exhausted	0.26390886415404824	5.389507751196732E-7
+Mast cell	DC mature	0.44444220414783964	0.0
+B cell dividing	Plasma cell dividing	0.27887122380815116	0.004038178568714912
+Alveolar cell type 2	Tumor cells LUAD	0.3708198123018874	5.0046189414842956E-11
+Macrophage alveolar	T cell CD8 naive	0.2930517047250107	9.509929628181979E-5
+T cell CD8 naive	Monocyte classical	0.30989821563585995	1.580124771471958E-6
+T cell CD4 dividing	Monocyte classical	0.4099029551458033	0.0
+T cell CD4	T cell CD4 dividing	0.46246883709616377	0.0
+cDC2	Alveolar cell type 2	0.3909985044528536	4.108269280322929E-12
+Tumor LUAD_LUSC_mitotic	T cell CD8 activated	0.3099994577786354	0.0
+DC mature	NK cell	0.43288094688484763	0.0016371417104852348
+T cell NK-like	B cell	0.3408633160127353	1.902576851620097E-8
+Macrophage alveolar	Monocyte classical	0.5001618060584223	0.0
+T cell NK-like	T cell regulatory	0.39438635185805515	0.0016371417104852348
+Plasma cell	Endothelial cell venous	0.2853021076651778	4.540461076008029E-6
+ROS1+ healthy epithelial	Tumor cells LUAD	0.35900563607870123	0.0
+Plasma cell	Plasma cell dividing	0.28418255824882466	0.0
+Plasma cell	Mast cell	0.30373666296333784	4.108269280322929E-12
+T cell CD4	NK cell dividing	0.3278019412170692	1.802346285550982E-7
+T cell NK-like	DC mature	0.37491077711107523	4.540461076008029E-6
+T cell CD8 activated	Tumor cells LUAD	0.31828836465957266	0.022869621161449416
+Macrophage alveolar	ROS1+ healthy epithelial	0.339175332102987	0.0
+Mast cell	NK cell	0.40668468635206495	0.0
+T cell NK-like	T cell CD8 dividing	0.27233741566415093	0.0
+T cell CD4	pDC	0.49534210914259935	0.0
+Monocyte classical	Mast cell	0.470018979847698	0.0
+cDC2	T cell CD8 activated	0.41367804626958726	1.699329565951757E-10
+NK cell	T cell CD4	0.5308755022826981	0.0
+B cell	T cell CD8 naive	0.3136285637213338	0.0

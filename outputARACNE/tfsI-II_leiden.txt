@@ -37,6 +37,7 @@ T cell NK-like
 T cell regulatory
 Tumor LUAD_Club
 Tumor LUAD_EMT1
+Tumor LUAD_EMT2
 Tumor LUAD_EMT3
 Tumor LUAD_LUSC
 Tumor LUAD_LUSC_mitotic
