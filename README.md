@@ -19,7 +19,7 @@ The workflow for getting from the raw AnnData files to the coabundance graphs an
 The workflow is spread across various notebooks, where one can see the figures generated in the proccess and some short explanations. 
 We plan to automatize the process with Nextflow, like they do in the repo of the [scLUCA](https://github.com/icbi-lab/luca) project.
 
-But for now al the necessary steps are contained in the notebook, though a little scrambled.
+But for now al the necessary steps are contained in the notebooks and scripts, though a little scrambled.
 
 ### Notebooks
 
