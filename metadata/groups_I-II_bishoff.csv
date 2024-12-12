@@ -6119,3 +6119,135 @@
 1765,transitional club/AT2,P041,39,Deng
 1766,transitional club/AT2,P042,121,Deng
 1767,transitional club/AT2,P043,79,Deng
+0,Alveolar cell type 1,p033t,1,Bishoff
+1,Alveolar cell type 2,p030t,12,Bishoff
+2,Alveolar cell type 2,p033t,81,Bishoff
+3,B cell,p019t,31,Bishoff
+4,B cell,p030t,1237,Bishoff
+5,B cell,p033t,375,Bishoff
+6,B cell dividing,p030t,1,Bishoff
+7,B cell dividing,p033t,1,Bishoff
+8,Ciliated,p019t,58,Bishoff
+9,Ciliated,p030t,20,Bishoff
+10,Ciliated,p033t,50,Bishoff
+11,Club,p019t,34,Bishoff
+12,Club,p030t,5,Bishoff
+13,Club,p033t,15,Bishoff
+14,DC mature,p030t,7,Bishoff
+15,DC mature,p033t,4,Bishoff
+16,Endothelial cell arterial,p030t,1,Bishoff
+17,Endothelial cell capillary,p030t,1,Bishoff
+18,Endothelial cell lymphatic,p030t,9,Bishoff
+19,Endothelial cell lymphatic,p033t,2,Bishoff
+20,Endothelial cell venous,p019t,14,Bishoff
+21,Endothelial cell venous,p030t,29,Bishoff
+22,Endothelial cell venous,p033t,18,Bishoff
+23,Fibroblast adventitial,p019t,10,Bishoff
+24,Fibroblast adventitial,p030t,3,Bishoff
+25,Fibroblast adventitial,p033t,11,Bishoff
+26,Fibroblast alveolar,p019t,29,Bishoff
+27,Fibroblast alveolar,p030t,7,Bishoff
+28,Fibroblast alveolar,p033t,2,Bishoff
+29,Fibroblast peribronchial,p019t,8,Bishoff
+30,Fibroblast peribronchial,p030t,37,Bishoff
+31,Fibroblast peribronchial,p033t,27,Bishoff
+32,Macrophage,p019t,194,Bishoff
+33,Macrophage,p030t,151,Bishoff
+34,Macrophage,p033t,261,Bishoff
+35,Macrophage alveolar,p019t,19,Bishoff
+36,Macrophage alveolar,p030t,13,Bishoff
+37,Macrophage alveolar,p033t,57,Bishoff
+38,Mast cell,p019t,23,Bishoff
+39,Mast cell,p030t,48,Bishoff
+40,Mast cell,p033t,137,Bishoff
+41,Mesothelial,p030t,1,Bishoff
+42,Mesothelial,p033t,3,Bishoff
+43,Monocyte classical,p019t,42,Bishoff
+44,Monocyte classical,p030t,54,Bishoff
+45,Monocyte classical,p033t,123,Bishoff
+46,Monocyte non-classical,p019t,2,Bishoff
+47,Monocyte non-classical,p030t,1,Bishoff
+48,Monocyte non-classical,p033t,1,Bishoff
+49,NK cell,p019t,42,Bishoff
+50,NK cell,p030t,129,Bishoff
+51,NK cell,p033t,93,Bishoff
+52,NK cell dividing,p019t,5,Bishoff
+53,NK cell dividing,p030t,8,Bishoff
+54,NK cell dividing,p033t,1,Bishoff
+55,Neutrophils,p030t,2,Bishoff
+56,Neutrophils,p033t,47,Bishoff
+57,Pericyte,p019t,1,Bishoff
+58,Pericyte,p030t,13,Bishoff
+59,Pericyte,p033t,4,Bishoff
+60,Plasma cell,p019t,22,Bishoff
+61,Plasma cell,p030t,99,Bishoff
+62,Plasma cell,p033t,472,Bishoff
+63,ROS1+ healthy epithelial,p019t,1,Bishoff
+64,ROS1+ healthy epithelial,p030t,2,Bishoff
+65,ROS1+ healthy epithelial,p033t,9,Bishoff
+66,Smooth muscle cell,p019t,2,Bishoff
+67,Smooth muscle cell,p030t,13,Bishoff
+68,Smooth muscle cell,p033t,11,Bishoff
+69,T cell CD4,p019t,161,Bishoff
+70,T cell CD4,p030t,764,Bishoff
+71,T cell CD4,p033t,567,Bishoff
+72,T cell CD4 dividing,p019t,2,Bishoff
+73,T cell CD4 dividing,p030t,24,Bishoff
+74,T cell CD4 dividing,p033t,14,Bishoff
+75,T cell CD8 activated,p019t,45,Bishoff
+76,T cell CD8 activated,p030t,721,Bishoff
+77,T cell CD8 activated,p033t,755,Bishoff
+78,T cell CD8 dividing,p019t,2,Bishoff
+79,T cell CD8 dividing,p030t,20,Bishoff
+80,T cell CD8 dividing,p033t,11,Bishoff
+81,T cell CD8 effector memory,p019t,73,Bishoff
+82,T cell CD8 effector memory,p030t,463,Bishoff
+83,T cell CD8 effector memory,p033t,903,Bishoff
+84,T cell CD8 naive,p019t,6,Bishoff
+85,T cell CD8 naive,p030t,59,Bishoff
+86,T cell CD8 terminally exhausted,p019t,3,Bishoff
+87,T cell CD8 terminally exhausted,p030t,36,Bishoff
+88,T cell CD8 terminally exhausted,p033t,17,Bishoff
+89,T cell NK-like,p019t,11,Bishoff
+90,T cell NK-like,p030t,11,Bishoff
+91,T cell NK-like,p033t,3,Bishoff
+92,T cell regulatory,p019t,25,Bishoff
+93,T cell regulatory,p030t,366,Bishoff
+94,T cell regulatory,p033t,231,Bishoff
+95,Tumor LUAD_EMT1,p030t,5,Bishoff
+96,Tumor LUAD_EMT1,p033t,2,Bishoff
+97,Tumor LUAD_LUSC,p019t,110,Bishoff
+98,Tumor LUAD_LUSC,p030t,24,Bishoff
+99,Tumor LUAD_LUSC,p033t,99,Bishoff
+100,Tumor LUAD_LUSC_mitotic,p019t,12,Bishoff
+101,Tumor LUAD_LUSC_mitotic,p033t,7,Bishoff
+102,Tumor LUAD_mitotic,p019t,30,Bishoff
+103,Tumor LUAD_mitotic,p030t,158,Bishoff
+104,Tumor LUAD_mitotic,p033t,96,Bishoff
+105,Tumor LUAD_mixed,p019t,485,Bishoff
+106,Tumor LUAD_mixed,p030t,181,Bishoff
+107,Tumor LUAD_mixed,p033t,480,Bishoff
+108,Tumor LUAD_transitional,p019t,4,Bishoff
+109,Tumor LUAD_transitional,p030t,22,Bishoff
+110,Tumor LUAD_transitional,p033t,20,Bishoff
+111,Tumor cells LUAD,p019t,7,Bishoff
+112,Tumor cells LUAD,p030t,4,Bishoff
+113,Tumor cells LUAD,p033t,14,Bishoff
+114,Tumor cells LUSC,p033t,2,Bishoff
+115,Tumor mixed_LUAD,p019t,1,Bishoff
+116,Tumor mixed_LUAD,p033t,2,Bishoff
+117,cDC1,p019t,1,Bishoff
+118,cDC1,p030t,5,Bishoff
+119,cDC1,p033t,3,Bishoff
+120,cDC2,p019t,18,Bishoff
+121,cDC2,p030t,53,Bishoff
+122,cDC2,p033t,56,Bishoff
+123,myeloid dividing,p019t,7,Bishoff
+124,myeloid dividing,p030t,14,Bishoff
+125,myeloid dividing,p033t,31,Bishoff
+126,pDC,p019t,3,Bishoff
+127,pDC,p030t,23,Bishoff
+128,pDC,p033t,16,Bishoff
+129,transitional club/AT2,p019t,14,Bishoff
+130,transitional club/AT2,p030t,5,Bishoff
+131,transitional club/AT2,p033t,67,Bishoff
