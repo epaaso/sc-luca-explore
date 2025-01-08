@@ -1,0 +1,19 @@
+T cell CD8 naive Macrophage -0.22
+stromal dividing B cell -0.2
+stromal dividing T cell CD4 -0.28
+stromal dividing T cell CD8 effector memory -0.22
+stromal dividing T cell regulatory -0.21
+T cell CD8 activated Macrophage -0.21
+Alveolar cell type 2 T cell CD4 -0.2
+Endothelial cell venous NK cell -0.2
+Monocyte classical T cell CD8 effector memory -0.24
+Monocyte classical T cell regulatory -0.22
+Tumor LUAD_LUSC T cell CD4 -0.21
+Macrophage B cell -0.29
+Macrophage T cell CD4 -0.34
+Macrophage T cell CD8 effector memory -0.26
+Macrophage T cell regulatory -0.25
+Tumor LUAD_LUSC_mitotic T cell CD4 -0.22
+Fibroblast peribronchial T cell CD4 -0.21
+T cell CD4 myeloid dividing -0.22
+myeloid dividing B cell -0.2

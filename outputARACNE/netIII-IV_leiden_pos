@@ -1,0 +1,173 @@
+Alveolar cell type 1 Alveolar cell type 2 0.39
+Alveolar cell type 1 Endothelial cell capillary 0.91
+Alveolar cell type 1 Fibroblast adventitial 0.47
+Alveolar cell type 1 Fibroblast alveolar 0.65
+Alveolar cell type 1 Mast cell 0.25
+Alveolar cell type 1 Smooth muscle cell 0.29
+Alveolar cell type 2 Endothelial cell capillary 0.2
+Alveolar cell type 2 Fibroblast adventitial 0.21
+Alveolar cell type 2 Fibroblast alveolar 0.24
+Alveolar cell type 2 Mast cell 0.34
+Alveolar cell type 2 transitional club/AT2 0.35
+B cell B cell dividing 0.38
+B cell Endothelial cell arterial 0.52
+B cell T cell CD4 0.59
+B cell T cell CD8 activated 0.33
+B cell T cell CD8 effector memory 0.26
+B cell T cell CD8 naive 0.24
+B cell T cell regulatory 0.25
+B cell dividing DC mature 0.44
+B cell dividing NK cell dividing 0.21
+B cell dividing T cell regulatory 0.23
+Ciliated Club 0.7
+DC mature Endothelial cell lymphatic 0.22
+DC mature Mast cell 0.25
+DC mature Monocyte classical 0.24
+DC mature Plasma cell 0.27
+DC mature T cell CD4 dividing 0.24
+DC mature cDC2 0.4
+DC mature pDC 0.27
+Endothelial cell arterial Endothelial cell venous 0.23
+Endothelial cell arterial Fibroblast alveolar 0.22
+Endothelial cell arterial Smooth muscle cell 0.24
+Endothelial cell arterial T cell CD4 0.22
+Endothelial cell capillary Endothelial cell venous 0.2
+Endothelial cell capillary Fibroblast adventitial 0.45
+Endothelial cell capillary Fibroblast alveolar 0.68
+Endothelial cell capillary Smooth muscle cell 0.34
+Endothelial cell capillary Tumor cells LUAD 0.2
+Endothelial cell lymphatic Endothelial cell venous 0.54
+Endothelial cell lymphatic Fibroblast adventitial 0.44
+Endothelial cell lymphatic Fibroblast alveolar 0.28
+Endothelial cell lymphatic Mast cell 0.22
+Endothelial cell lymphatic Smooth muscle cell 0.49
+Endothelial cell lymphatic T cell CD8 effector memory 0.29
+Endothelial cell lymphatic Tumor cells NSCLC mixed 0.24
+Endothelial cell venous Fibroblast alveolar 0.33
+Endothelial cell venous Fibroblast peribronchial 0.37
+Endothelial cell venous Pericyte 0.42
+Endothelial cell venous Smooth muscle cell 0.41
+Endothelial cell venous Tumor LUAD_Club 0.3
+Endothelial cell venous Tumor LUAD_mitotic 0.2
+Endothelial cell venous stromal dividing 0.37
+Fibroblast adventitial Fibroblast alveolar 0.51
+Fibroblast adventitial Mast cell 0.26
+Fibroblast adventitial Plasma cell 0.21
+Fibroblast adventitial Smooth muscle cell 0.5
+Fibroblast alveolar Fibroblast peribronchial 0.32
+Fibroblast alveolar Mast cell 0.52
+Fibroblast alveolar Pericyte 0.24
+Fibroblast alveolar Smooth muscle cell 0.48
+Fibroblast peribronchial Mast cell 0.22
+Fibroblast peribronchial Pericyte 0.43
+Fibroblast peribronchial Tumor LUAD_LUSC 0.24
+Fibroblast peribronchial Tumor LUSC_mitotic 0.31
+Fibroblast peribronchial stromal dividing 0.48
+Macrophage Macrophage alveolar 0.33
+Macrophage Monocyte classical 0.35
+Macrophage cDC2 0.34
+Macrophage myeloid dividing 0.37
+Macrophage alveolar Tumor cells LUAD MSLN 0.23
+Macrophage alveolar cDC2 0.46
+Macrophage alveolar myeloid dividing 0.24
+Macrophage alveolar transitional club/AT2 0.21
+Mast cell Plasma cell 0.27
+Mast cell Smooth muscle cell 0.3
+Mast cell cDC2 0.31
+Mast cell pDC 0.25
+Mesothelial NK cell dividing 0.27
+Mesothelial Tumor LUAD_EMT3 0.52
+Mesothelial Tumor LUAD_mainly2 0.3
+Monocyte classical Monocyte non-classical 0.37
+Monocyte classical NK cell dividing 0.27
+Monocyte classical Neutrophils 0.25
+Monocyte classical T cell CD4 dividing 0.2
+Monocyte classical Tumor LUAD_Club 0.25
+Monocyte classical pDC 0.48
+Monocyte non-classical NK cell 0.4
+Monocyte non-classical T cell CD8 naive 0.34
+Monocyte non-classical T cell NK-like 0.48
+Monocyte non-classical Tumor LUAD_mainly1 0.23
+Monocyte non-classical cDC1 0.27
+Monocyte non-classical pDC 0.28
+NK cell NK cell dividing 0.31
+NK cell T cell CD4 0.52
+NK cell T cell CD8 effector memory 0.36
+NK cell T cell CD8 naive 0.51
+NK cell T cell CD8 terminally exhausted 0.24
+NK cell T cell NK-like 0.74
+NK cell T cell regulatory 0.26
+NK cell Tumor LUAD_mainly1 0.46
+NK cell Tumor cells LUAD MSLN 0.36
+NK cell dividing Plasma cell 0.23
+NK cell dividing Plasma cell dividing 0.41
+NK cell dividing T cell CD4 dividing 0.22
+NK cell dividing T cell CD8 dividing 0.29
+NK cell dividing Tumor LUAD_mainly1 0.34
+NK cell dividing Tumor LUAD_mainly2 0.5
+NK cell dividing pDC 0.41
+Pericyte Plasma cell 0.33
+Pericyte Smooth muscle cell 0.51
+Pericyte stromal dividing 0.48
+Plasma cell Plasma cell dividing 0.38
+Plasma cell Smooth muscle cell 0.29
+Plasma cell T cell CD4 dividing 0.3
+Plasma cell T cell regulatory 0.22
+Plasma cell cDC1 0.21
+Plasma cell dividing T cell CD4 dividing 0.38
+Plasma cell dividing cDC1 0.27
+Plasma cell dividing cDC2 0.29
+Plasma cell dividing myeloid dividing 0.4
+ROS1+ healthy epithelial Tumor cells LUAD 0.83
+ROS1+ healthy epithelial Tumor cells LUAD mitotic 0.44
+ROS1+ healthy epithelial transitional club/AT2 0.69
+T cell CD4 T cell CD8 activated 0.36
+T cell CD4 T cell CD8 effector memory 0.59
+T cell CD4 T cell CD8 naive 0.46
+T cell CD4 T cell CD8 terminally exhausted 0.23
+T cell CD4 T cell NK-like 0.29
+T cell CD4 T cell regulatory 0.61
+T cell CD4 cDC1 0.21
+T cell CD4 dividing T cell CD8 dividing 0.63
+T cell CD4 dividing T cell CD8 terminally exhausted 0.32
+T cell CD4 dividing T cell regulatory 0.32
+T cell CD4 dividing cDC1 0.2
+T cell CD4 dividing myeloid dividing 0.2
+T cell CD4 dividing pDC 0.4
+T cell CD8 activated T cell CD8 effector memory 0.41
+T cell CD8 activated T cell regulatory 0.45
+T cell CD8 dividing T cell CD8 effector memory 0.21
+T cell CD8 dividing T cell CD8 naive 0.21
+T cell CD8 dividing T cell CD8 terminally exhausted 0.72
+T cell CD8 dividing T cell regulatory 0.37
+T cell CD8 dividing pDC 0.4
+T cell CD8 effector memory T cell CD8 naive 0.42
+T cell CD8 effector memory T cell CD8 terminally exhausted 0.45
+T cell CD8 effector memory T cell NK-like 0.2
+T cell CD8 effector memory T cell regulatory 0.69
+T cell CD8 effector memory Tumor LUAD_mainly2 0.25
+T cell CD8 naive T cell CD8 terminally exhausted 0.37
+T cell CD8 naive T cell NK-like 0.65
+T cell CD8 naive T cell regulatory 0.27
+T cell CD8 terminally exhausted T cell NK-like 0.27
+T cell CD8 terminally exhausted T cell regulatory 0.54
+T cell NK-like Tumor LUAD_mainly1 0.64
+T cell regulatory Tumor LUAD_mainly2 0.25
+Tumor LUAD_Club stromal dividing 0.24
+Tumor LUAD_EMT2 stromal dividing 0.44
+Tumor LUAD_LUSC Tumor LUAD_mixed 0.31
+Tumor LUAD_LUSC stromal dividing 0.21
+Tumor LUAD_LUSC_mitotic Tumor LUSC_mainly2 0.29
+Tumor LUAD_mixed Tumor cells LUSC 0.81
+Tumor LUAD_transitional Tumor mitotic_mixed 0.2
+Tumor LUSC_mainly2 Tumor LUSC_mitotic 0.32
+Tumor cells LUAD Tumor cells LUAD mitotic 0.3
+Tumor cells LUAD transitional club/AT2 0.61
+Tumor cells LUAD mitotic transitional club/AT2 0.54
+Tumor mitotic_LUSC stromal dividing 0.39
+cDC1 cDC2 0.27
+cDC1 myeloid dividing 0.25
+cDC2 myeloid dividing 0.51
+cDC2 pDC 0.28
+cDC2 transitional club/AT2 0.24
+myeloid dividing transitional club/AT2 0.21

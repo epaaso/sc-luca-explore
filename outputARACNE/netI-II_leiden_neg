@@ -1,0 +1,51 @@
+Alveolar cell type 1 B cell -0.21
+Alveolar cell type 2 B cell -0.21
+Alveolar cell type 2 T cell CD4 dividing -0.22
+Alveolar cell type 2 T cell regulatory -0.29
+B cell DC mature -0.22
+B cell Macrophage -0.21
+B cell ROS1+ healthy epithelial -0.2
+B cell Tumor cells LUAD -0.24
+B cell cDC2 -0.21
+Ciliated T cell regulatory -0.22
+Club T cell regulatory -0.26
+Endothelial cell arterial T cell CD8 activated -0.21
+Endothelial cell venous T cell regulatory -0.21
+Fibroblast peribronchial T cell CD8 effector memory -0.22
+Macrophage ROS1+ healthy epithelial -0.25
+Macrophage T cell CD8 activated -0.4
+Macrophage T cell CD8 effector memory -0.36
+Macrophage alveolar T cell CD4 -0.23
+Macrophage alveolar T cell CD8 effector memory -0.2
+Macrophage alveolar T cell regulatory -0.34
+Mast cell T cell CD8 dividing -0.23
+Mast cell T cell CD8 terminally exhausted -0.24
+Monocyte classical T cell CD4 -0.2
+Monocyte classical T cell CD8 naive -0.29
+Monocyte classical T cell regulatory -0.22
+Monocyte non-classical T cell CD8 activated -0.2
+Monocyte non-classical T cell CD8 effector memory -0.2
+Plasma cell dividing T cell CD8 activated -0.22
+ROS1+ healthy epithelial T cell CD8 naive -0.27
+ROS1+ healthy epithelial T cell regulatory -0.2
+ROS1+ healthy epithelial cDC1 -0.22
+T cell CD8 activated T cell CD8 dividing -0.23
+T cell CD8 activated T cell CD8 naive -0.38
+T cell CD8 activated T cell CD8 terminally exhausted -0.26
+T cell CD8 activated cDC1 -0.3
+T cell CD8 activated cDC2 -0.27
+T cell CD8 activated myeloid dividing -0.24
+T cell CD8 dividing Tumor cells LUAD -0.21
+T cell CD8 effector memory T cell CD8 naive -0.21
+T cell CD8 effector memory Tumor LUAD_LUSC_mitotic -0.2
+T cell CD8 effector memory Tumor cells LUAD mitotic -0.22
+T cell CD8 effector memory cDC1 -0.25
+T cell CD8 effector memory cDC2 -0.22
+T cell CD8 effector memory myeloid dividing -0.24
+T cell CD8 effector memory stromal dividing -0.22
+T cell CD8 effector memory transitional club/AT2 -0.27
+T cell CD8 naive Tumor LUAD_mainly2 -0.2
+T cell CD8 naive Tumor cells LUAD -0.26
+T cell CD8 terminally exhausted Tumor cells LUAD -0.2
+T cell regulatory transitional club/AT2 -0.3
+Tumor LUAD_mainly2 cDC1 -0.23
