@@ -37,15 +37,20 @@ image2 = image.pip_install(
     [
         "modal-client",
     ]
-).env({"PATH": "/opt/conda/bin:$PATH"}).copy_local_file(
+)\
+    .env({"PATH": "/opt/conda/bin:$PATH"}).copy_local_file(
         "/root/datos/maestria/netopaas/luca_explore/surgeries/Subcluster/query_latent.h5ad",
         "query_latent.h5ad",
-    ).run_commands(
+    )\
+        .run_commands(
     [
         '/opt/conda/bin/conda install -y -c nvidia -c rapidsai cupy cudf cugraph',
+        # It is important that cugraph is >24.12.00, otherwise the leiden function will return many clusters in large datasets
+        # '/opt/conda/bin/conda update -y -c rapidsai cugraph'
+        
         # "apt-get update",
         # "apt-get install -y libxau6 libxdmcp6 libxcb1 libx11-6 libxext6",
-        # "rm -rf /var/lib/apt/lists/*",  # Clean up apt cache to reduce image size
+        "rm -rf /var/lib/apt/lists/*",  # Clean up apt cache to reduce image size
         
     ]
     )
@@ -70,6 +75,8 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
     import cugraph
     import sys
     # import matplotlib as plt
+    print('cugraph ver:')
+    print(cugraph.__version__)
     from scipy.sparse import csr_matrix
     # Load your AnnData object
     adata = ad.read_h5ad("/query_latent.h5ad")  # Ensure this path is correct
@@ -103,6 +110,7 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
 
     # Perform the search to get nearest neighbors
     # n_neighbors = 30  # Adjust as needed
+    index.nprobe = 50  # Adjust as needed
     distances, indices = index.search(data, n_neighbors + 1)  # +1 to include self
 
     # Convert indices and distances to cuDF DataFrames
@@ -113,8 +121,8 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
     src = cudf.Series(
         np.repeat(np.arange(data.shape[0]), n_neighbors)
     )
-    dst = indices_df.iloc[:,0].reset_index(drop=True)
-    weights = distances_df.iloc[:,0].reset_index(drop=True)
+    dst = indices_df.values.reshape(-1)
+    weights = distances_df.values.reshape(-1)
 
     # Create a cuGraph Graph
     G = cugraph.Graph()
@@ -137,16 +145,18 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
     # plt.savefig('/data/foo.png')
 
     # Perform Leiden clustering
-    partitions_df, modularity = cugraph.leiden(G, resolution=resol)
+    partitions_df, modularity = cugraph.leiden(G, resolution=resol, max_iter=1000)
     print("Modularity: ", modularity)
 
     # Map the cluster labels back to the original data
     partitions_df = partitions_df.to_pandas().set_index('vertex')
     adata.obs['leiden'] = partitions_df['partition'].astype(str).values
-    print(len(adata.obs.leiden))
+
+    print('NUMCLUSTERS:')
+    print(len(adata.obs.leiden.unique()))
     return adata.obs
 
 @app.local_entrypoint()
 def main():
-    leiden_df = leiden_clustering.remote(nlist=10, n_neighbors=20, resol=0.01)
+    leiden_df = leiden_clustering.remote(nlist=100, n_neighbors=30, resol=0.5)
     leiden_df.to_csv('atlas_leiden.csv')
