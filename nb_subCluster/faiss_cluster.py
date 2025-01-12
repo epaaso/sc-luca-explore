@@ -55,6 +55,7 @@ image2 = image.pip_install(
     ]
     )
 
+# upload to volume with modal volume put DE-vol faiss-vol 
 vol = modal.Volume.from_name("faiss-vol", create_if_missing=True)
 
 # Specify that the function requires a GPU
@@ -65,7 +66,7 @@ vol = modal.Volume.from_name("faiss-vol", create_if_missing=True)
     cpu=10,
     volumes={"/data": vol}
 )
-def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
+def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_path='/data/query_latent_tumor.h5ad'):
     import anndata as ad
     # import scanpy as sc
     import numpy as np
@@ -79,12 +80,14 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
     print(cugraph.__version__)
     from scipy.sparse import csr_matrix
     # Load your AnnData object
-    adata = ad.read_h5ad("/query_latent.h5ad")  # Ensure this path is correct
-    print(adata.shape)
-    epit_types = ['Alveolar cell type 1', 'Alveolar cell type 2',  'ROS1+ healthy epithelial', 'transitional club/AT2', 'Club', 'Ciliated']
-    epit_tumor_filter = np.logical_or(adata.obs.cell_type.isin(epit_types), adata.obs.cell_type.str.contains('Tumor'))
-    adata = adata[epit_tumor_filter]
-    print(adata.shape)
+    adata = ad.read_h5ad(file_path)  # Ensure this path is correct
+
+    # Subset to only epithelial
+    # print(adata.shape)
+    # epit_types = ['Alveolar cell type 1', 'Alveolar cell type 2',  'ROS1+ healthy epithelial', 'transitional club/AT2', 'Club', 'Ciliated']
+    # epit_tumor_filter = np.logical_or(adata.obs.cell_type.isin(epit_types), adata.obs.cell_type.str.contains('Tumor'))
+    # adata = adata[epit_tumor_filter]
+    # print(adata.shape)
     
     # Ensure data is in numpy array format
     if not isinstance(adata.X, np.ndarray):
@@ -109,8 +112,7 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
     index.add(data)
 
     # Perform the search to get nearest neighbors
-    # n_neighbors = 30  # Adjust as needed
-    index.nprobe = 50  # Adjust as needed
+    index.nprobe = nprobe  # More nprobe means more accurate search
     distances, indices = index.search(data, n_neighbors + 1)  # +1 to include self
 
     # Convert indices and distances to cuDF DataFrames
@@ -158,5 +160,6 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1):
 
 @app.local_entrypoint()
 def main():
-    leiden_df = leiden_clustering.remote(nlist=100, n_neighbors=30, resol=0.5)
+    # n_probe <= nlist means more accurate neighbours
+    leiden_df = leiden_clustering.remote(nlist=100, n_neighbors=20, resol=0.3, nprobe=50)
     leiden_df.to_csv('atlas_leiden.csv')

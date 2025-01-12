@@ -30,8 +30,18 @@ But for now al the necessary steps are contained in the notebooks and scripts, t
 - *nb_annotRefatlas*: Annotates tissue from a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types. Includes a notebook for annotation with label transfer via neighbors, but it had worse outcomes (`labelTransfer`). There is also a notebook that transfers the newly created clusters to another dataset (`extendPreds_{dataset}.ipynb`).
 - *nb_ikarus*: Runs the ikarus prediction on every sample. A prediction that uses logistic regression and network projection to predict tumor cells.
 - *nb_infercnv*: Runs InferCNV on every sample. This infers from transcripts, places in the chromosomes where there should be copy number variations.
-- *nb_DE_wilcox*: Extracts marker genes of clusters from existing cell annotations with the Wilcox method. It also enriches for Hallmark gene ontologies. Its a bit bit convoluted and doesnt consider batch effects, but only because it scanpy doenst consider abundance of cell types. The notebook `DE_param` is incomplete and attempts to do pseudo-bulk differential expression with MAST. There is also a `modal_DE.py` script to run the Wilcox marker gene extraction in modal. It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
-- *nb_DE_SCT*: Extracts marker genes of clusters from existing cell annotations with the GLM method `SCTransform v2`. It also corrects for batch effects per sample and enriches for Hallmark gene ontologies. This method has a parameter estimation method that corrects for lowly expressed genes and is much faster than the `lvm_DE` method, which takes advantage of our dimensional reduction VAEs with scANVI. The `test_de.py` script is to be run in the lambda function service Modal, as it requires a lot of GPU RAM and takes around 35 minutes for 3 samples. It uses the `lvm_DE` method mentioned above.
+- *nb_DE_wilcox*: Extracts marker genes of clusters from existing cell annotations with the Wilcox method. 
+  It also enriches for Hallmark gene ontologies. Its a bit bit convoluted and doesnt consider batch effects,
+  but only because it scanpy doenst consider abundance of cell types. The notebook `DE_param` is incomplete 
+  and attempts to do pseudo-bulk differential expression with MAST.
+  There is also a `modal_DE.py` script to run the Wilcox marker gene extraction in modal. 
+  It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
+- *nb_DE_SCT*: Extracts marker genes of clusters from existing cell annotations with the GLM method `SCTransform v2`.
+  It also corrects for batch effects per sample and enriches for Hallmark gene ontologies. 
+  This method has a parameter estimation method that corrects for lowly expressed genes and is much faster
+  than the `lvm_DE` method, which takes advantage of our dimensional reduction VAEs with scANVI. 
+  The `test_de.py` script is to be run in the lambda function service Modal, 
+  as it requires a lot of GPU RAM and takes around 35 minutes for 3 samples. It uses the `lvm_DE` method mentioned above.
 - *nb_tumorUMAP*: Notebook to check the tumor predictions. It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
 - *nb_refAtlas*: Contains the notebook `vay_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel` has the reasoning and training of the actual model.
 - *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
@@ -42,6 +52,25 @@ But for now al the necessary steps are contained in the notebooks and scripts, t
 - *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
 - *metadata*: Contains information about the studies used and data about the groups.
 - *utils*: Contains custom plotting and analysis functions.
+
+### Data Dirs
+
+- *atlas_dir = '/root/datos/maestria/netopaas/luca/data/atlas/'*  Has the LUCA atlas files from Salcher et. al.  It has pretty extensive metadata.
+  We have saved some subsets, the most import being 'extended_tumor_hvg.h5ad' thatuses the extended atlas, but only has tumor samples and highly var genes.
+- *data_dir = '/root/datos/maestria/netopaas/<ds_suffix><year>/'*  Folder where all the files necessary to download the dataset to an acceptable h5ad are.
+- *ref_path = '/root/datos/maestria/netopaas/lung_scRNA/LUCA_model/'*  Contains the models trained by us, but also the ones from LUCA.
+  In particular '/hvg_integrated_scvi_scanvi_tumor_model_b128_lay4_h1024_raydefault_epocs300-300/' is the one with the highest accuracy, 
+  trained in 'nb_ref_Atlas/scANVImodel.ipynb'
+- *surgeries = '/root/datos/maestria/netopaas/luca_explore/surgeries/'* Has most of the checkpoints in our workflow.
+  - *'combined_<ds_suffix>.h5ad'* Is the adata combined with the ref atlas, for normal annotations.
+  - *'combTumor_<ds_suffix>.h5ad'* Is the adata combined with the ref atlas, for tumor annotations.
+  - *'query_<ds_suffix>.h5ad'* Is the adata of the dataset in the necessary fromat to be annotated by the model.
+  - *'filtered_<ds_suffix>.h5ad'* Is the adata of the dataset after QC filtering.
+  - *'<dataset_suffix>/'* Folder that contains the trained surgery model in 'model.pt'. Most of them also have an adata of the latent vars in 'query_latent.h5af'.
+    Sometimes a csv to convert from gen symbols to ensembl in '<ds_suffix>_ensembl.csv'
+  - *'<ds_suffix>_predicted.csv'* The cell annotations with just our Tumor LUCA model. It also has all the entries of the obs matrix, so stage and such.
+  - *'Subcluster/'* has the 
+  - *'<ds_suffix>_predicted_leiden.csv'* The cell anotations with tumor subclustering.
 
 ## Running
 
