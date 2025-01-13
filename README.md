@@ -4,7 +4,7 @@ The main objective of this project is to perform an ecological analysis of the c
 
 The chosen methodology is to annotate cell types with the help of a newly trained reference atlas. For this, we use the [scvi](https://github.com/scverse/scvi-tools) framework. We base our work on the study by [Salcher, Sturm, Horvath et al. 2022](https://pubmed.ncbi.nlm.nih.gov/36368318/), where they gathered and standardized most of the data. 
 
-Additionally, we expanded the atlas with four more datasets, optimized the hyperparameters of our deep learning model, and trained it to also predict tumor cell types. The prediction was better than with the most used metho [InferCNV](https://github.com/broadinstitute/infercnv)
+Additionally, we expanded the atlas with four more datasets, optimized the hyperparameters of our deep learning model, and trained it to also predict tumor cell types. The prediction was better than with the most used method [InferCNV](https://github.com/broadinstitute/infercnv)
 
 Subsequently, we obtained coabundance metrics. We chose the mutual inference (MI) metric, as it captures non-linear correlations in the data, and the methodology in the [ARACNE-AP](https://github.com/califano-lab/ARACNe-AP) package ensures a smaller possibility of spurious correlations.
 
@@ -72,6 +72,21 @@ But for now al the necessary steps are contained in the notebooks and scripts, t
   - *'Subcluster/'* has the 
   - *'<ds_suffix>_predicted_leiden.csv'* The cell anotations with tumor subclustering.
 
+
+### Docker images
+
+We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
+
+- netopaas/comp-onco:annot 14.6G The image below but with BioMaRt and pandas==1.5.3
+- netopaas/comp-onco:sctransform 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have padnas==1.5.3
+- netopaas/comp_onco:r4 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have padnas==1.5.3
+- netopaas/comp-onco:raytune  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
+- netopaas/scarches:raytune 19.9 G The same but with more R packages than comp-onco. This one has jax.
+- netopaas/scarches:droplet   85G This one has infercnv, ikarus and scFusion that take a lot of space. It wont be able to run raytune and sctransform and others.
+
+
+tiagopeixoto/graph-tool:latest  3.18G  For creating our beautiful circos graphs. The dependencies are hell so we have them in a separate container.
+
 ## Running
 
 We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus.
@@ -81,7 +96,7 @@ To run the notebook, you should run the container with this notebook repository 
 You must install the apt package `docker-nvidia` for the GPU flags to work and, of course, have a working CUDA installation.
 
 ```bash
-docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:paga /bin/bash
+docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:r4 /bin/bash
 ```
 
 ### Jupyter lab
@@ -112,6 +127,7 @@ This avoids losing the running kernel if you close the window you are working on
 
 ## Troubleshooting
 
+### Jupyter Kernels
 Due to the long training and annealing times, Jupyter Lab sometimes cannot connect. Use this to get a console to the kernel:
 ```bash
 jupyter console --existing /root/.local/share/jupyter/runtime/kernel-9ff04919-e8c2-4ecf-92ce-c66b988720e5.json
@@ -120,7 +136,11 @@ For this you need to have `pip install jupyter-console` installed.
 
 This could be easier in a newer version of Jupyter Lab. To locate the corresponding JSON file, you can use `htop` with the option to not display user branches and see the memory it is using.
 
+### CUDA
+
 In this image: `python:3.11.4`. It is important to install the Docker NVIDIA package to transfer your CUDA installation to the containers.
+
+### Git
 
 If you keep your repository inside the container via volumes, the user might change. We recommend configuring the SSH keys inside the container. These are the steps:
 

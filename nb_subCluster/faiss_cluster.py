@@ -55,7 +55,7 @@ image2 = image.pip_install(
     ]
     )
 
-# upload to volume with modal volume put DE-vol faiss-vol 
+# upload to volume with modal volume put faiss-vol <path>
 vol = modal.Volume.from_name("faiss-vol", create_if_missing=True)
 
 # Specify that the function requires a GPU
@@ -161,5 +161,8 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_pa
 @app.local_entrypoint()
 def main():
     # n_probe <= nlist means more accurate neighbours
-    leiden_df = leiden_clustering.remote(nlist=100, n_neighbors=20, resol=0.3, nprobe=50)
-    leiden_df.to_csv('atlas_leiden.csv')
+    # file_path = '/data/query_latent_tumor_early.h5ad'
+    file_path = '/data/query_latent_tumor_late.h5ad'
+    suffix = file_path.split('/')[-1].split('.')[0].split('_')[-1]
+    leiden_df = leiden_clustering.remote(nlist=1, n_neighbors=20, resol=0.5, nprobe=1, file_path=file_path)  
+    leiden_df.to_csv(f'/root/datos/maestria/netopaas/luca_explore/surgeries/Subcluster/atlas_{suffix}_leiden.csv')
