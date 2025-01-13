@@ -1,66 +1,53 @@
 import modal
+import subprocess
+
+subluster_path = '/root/datos/maestria/netopaas/luca_explore/surgeries/Subcluster'
 
 app = modal.App("leiden-clustering-faiss-gpu")
 
 # Define the container image with necessary dependencies
 image = (
-    modal.Image.from_registry("nvcr.io/nvidia/pytorch:23.07-py3") # This one contains cuda 12.1.1 which is compatible with fiass-gpu 1.8.0
-    .run_commands(
-        [
-            # Install Miniconda
-            "wget https://repo.anaconda.com/miniconda/Miniconda3-py311_24.9.2-0-Linux-x86_64.sh -O /tmp/miniconda.sh",
-            "bash /tmp/miniconda.sh -b -p /opt/conda",
-            "rm /tmp/miniconda.sh",
-            # Initialize Conda
-            "source /opt/conda/bin/activate",
-            # Update Conda
-            "/opt/conda/bin/conda update -y conda",
-            # Add Conda to PATH
-            "echo 'export PATH=/opt/conda/bin:$PATH' >> ~/.bashrc",
-            # Install required packages using Conda
-            "/opt/conda/bin/conda install -y python=3.11",
-            "/opt/conda/bin/conda install -y -c nvidia -c conda-forge -c defaults "
-            "anndata scanpy numpy scipy cupy",
-            "/opt/conda/bin/conda install -y -c pytorch -c nvidia faiss-gpu=1.8.0",
-            # Clean up Conda packages
-            "/opt/conda/bin/conda clean -ya",
-        ]
-    )
+    modal.Image.from_registry("netopaas/faiss:cugraph-24-12") # This one contains cuda 12.1.1 which is compatible with faiss-gpu 1.8.0
+    # .run_commands(
+    #     [
+    #         # Install Miniconda
+    #         "wget https://repo.anaconda.com/miniconda/Miniconda3-py311_24.9.2-0-Linux-x86_64.sh -O /tmp/miniconda.sh",
+    #         "bash /tmp/miniconda.sh -b -p /opt/conda",
+    #         "rm /tmp/miniconda.sh",
+    #         "source /opt/conda/bin/activate",
+    #         "/opt/conda/bin/conda update -y conda",
+    #         "echo 'export PATH=/opt/conda/bin:$PATH' >> ~/.bashrc",
+    #         "export PATH=/opt/conda/bin:$PATH",
+
+    #         # Install required packages using Conda
+    #         "/opt/conda/bin/conda install -y python=3.11",
+    #         "/opt/conda/bin/conda install -y -c nvidia -c conda-forge -c defaults "
+    #         "anndata scanpy numpy scipy",
+    #         '/opt/conda/bin/conda install -y -c nvidia -c rapidsai cupy cudf cugraph==24.12',
+
+            # '/opt/conda/bin/conda config --set solver classic',
+    #         "/opt/conda/bin/conda install -y -c pytorch -c nvidia faiss-gpu=1.8.0",
+            
+    #         '/opt/conda/bin/conda install -y -c nvidia -c rapidsai cuml',
+
+    #         # Clean up Conda packages
+    #         "/opt/conda/bin/conda clean -ya",
+    #     ]
+    # )
     .env({"PATH": "/opt/conda/bin:$PATH"})
-    .copy_local_file(
-        "/root/datos/maestria/netopaas/luca_explore/surgeries/Bishoff/query_latent.h5ad",
-        "query_latent.h5ad",
+    .run_commands(
+    [
+        "/opt/conda/bin/conda install -y modal"
+    ]
     )
 )
-
-image2 = image.pip_install(
-    [
-        "modal-client",
-    ]
-)\
-    .env({"PATH": "/opt/conda/bin:$PATH"}).copy_local_file(
-        "/root/datos/maestria/netopaas/luca_explore/surgeries/Subcluster/query_latent.h5ad",
-        "query_latent.h5ad",
-    )\
-        .run_commands(
-    [
-        '/opt/conda/bin/conda install -y -c nvidia -c rapidsai cupy cudf cugraph',
-        # It is important that cugraph is >24.12.00, otherwise the leiden function will return many clusters in large datasets
-        # '/opt/conda/bin/conda update -y -c rapidsai cugraph'
-        
-        # "apt-get update",
-        # "apt-get install -y libxau6 libxdmcp6 libxcb1 libx11-6 libxext6",
-        "rm -rf /var/lib/apt/lists/*",  # Clean up apt cache to reduce image size
-        
-    ]
-    )
 
 # upload to volume with modal volume put faiss-vol <path>
 vol = modal.Volume.from_name("faiss-vol", create_if_missing=True)
 
 # Specify that the function requires a GPU
 @app.function(
-    image=image2,
+    image=image,
     gpu="any",  # Requests any available GPU
     timeout=6000,
     cpu=10,
@@ -75,7 +62,9 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_pa
     import cudf
     import cugraph
     import sys
+    from cuml.manifold import UMAP
     # import matplotlib as plt
+
     print('cugraph ver:')
     print(cugraph.__version__)
     from scipy.sparse import csr_matrix
@@ -123,6 +112,8 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_pa
     src = cudf.Series(
         np.repeat(np.arange(data.shape[0]), n_neighbors)
     )
+
+    # Flatten the indices and distances arrays to enusre all nodes are connected
     dst = indices_df.values.reshape(-1)
     weights = distances_df.values.reshape(-1)
 
@@ -139,12 +130,49 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_pa
     )
 
     # Compute layout on the GPU
+    
     # pos_df = cugraph.force_atlas2(G)
     
     # # Visualize with matplotlib
     # plt.scatter(pos_df['x'], pos_df['y'], s=10, alpha=0.7)
     # plt.title("ForceAtlas2 Layout")
     # plt.savefig('/data/foo.png')
+
+    # Convert your numpy data to a cuDF DataFrame or a cupy array
+    data_cudf = cudf.DataFrame(data)
+
+    # Instantiate UMAP
+    umap_model = UMAP(
+        n_neighbors = n_neighbors,
+        n_components = 2,
+        # min_dist     = 0.1,
+        random_state = 42
+    )
+
+    # Fit-transform using the precomputed kNN
+    #   - 'knn_indices' and 'knn_dists' must be passed here,
+    #     so that UMAP won't recompute neighbors.
+    umap_emb = umap_model.fit_transform(
+        X=data_cudf,
+        knn_indices=dst,
+        knn_dists=weights
+    )
+
+    # 1. Convert the embedding to a NumPy array so we can store it in adata:
+    umap_emb_host = cp.asnumpy(umap_emb)
+
+    # 2. Insert the embedding into adata.obsm:
+    adata.obsm["X_umap"] = umap_emb_host
+
+    # Optionally, you can also store the UMAP parameters in adata.uns for reference:
+    umap_params = {
+        "n_neighbors": n_neighbors,
+        "n_components": 2,
+        "min_dist": 0.1,
+        "random_state": 42,
+        "method": "cuml-umap",
+    }
+    adata.uns["umap_params"] = umap_params
 
     # Perform Leiden clustering
     partitions_df, modularity = cugraph.leiden(G, resolution=resol, max_iter=1000)
@@ -156,13 +184,20 @@ def leiden_clustering(nlist=1000, n_neighbors=30, resol=0.1, nprobe= 50, file_pa
 
     print('NUMCLUSTERS:')
     print(len(adata.obs.leiden.unique()))
-    return adata.obs
+    return adata.obs, umap_emb_host, umap_params
 
 @app.local_entrypoint()
 def main():
-    # n_probe <= nlist means more accurate neighbours
+    import json
+
     # file_path = '/data/query_latent_tumor_early.h5ad'
     file_path = '/data/query_latent_tumor_late.h5ad'
     suffix = file_path.split('/')[-1].split('.')[0].split('_')[-1]
-    leiden_df = leiden_clustering.remote(nlist=1, n_neighbors=20, resol=0.5, nprobe=1, file_path=file_path)  
-    leiden_df.to_csv(f'/root/datos/maestria/netopaas/luca_explore/surgeries/Subcluster/atlas_{suffix}_leiden.csv')
+    # n_probe <= nlist means more accurate neighbours
+    leiden_df, umap_emb, umap_params = leiden_clustering.remote(nlist=1, n_neighbors=20, resol=0.5, nprobe=1, file_path=file_path)
+
+    leiden_df.to_csv(f'{subluster_path}/atlas_{suffix}_leiden.csv')
+    umap_emb.to_csv(f'{subluster_path}/atlas_{suffix}_umap.csv')
+    
+    with open(f'{subluster_path}/atlas_{suffix}_uparams', 'w') as fp:
+        json.dump(umap_params, fp)

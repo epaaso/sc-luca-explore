@@ -77,15 +77,15 @@ But for now al the necessary steps are contained in the notebooks and scripts, t
 
 We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
 
-- netopaas/comp-onco:annot 14.6G The image below but with BioMaRt and pandas==1.5.3
-- netopaas/comp-onco:sctransform 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have padnas==1.5.3
-- netopaas/comp_onco:r4 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have padnas==1.5.3
-- netopaas/comp-onco:raytune  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
-- netopaas/scarches:raytune 19.9 G The same but with more R packages than comp-onco. This one has jax.
-- netopaas/scarches:droplet   85G This one has infercnv, ikarus and scFusion that take a lot of space. It wont be able to run raytune and sctransform and others.
+- *netopaas/comp-onco:annot* 14.6G The image below but with BioMaRt and pandas==1.5.3
+- *netopaas/comp-onco:sctransform* 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have padnas==1.5.3
+- *netopaas/comp_onco:r4* 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have padnas==1.5.3
+- *netopaas/comp-onco:raytune*  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
+- *netopaas/scarches:raytune* 19.9 G The same but with more R packages than comp-onco. This one has jax.
+- *netopaas/scarches:droplet*   85G This one has infercnv, ikarus and scFusion that take a lot of space. It wont be able to run raytune and sctransform and others.
 
-
-tiagopeixoto/graph-tool:latest  3.18G  For creating our beautiful circos graphs. The dependencies are hell so we have them in a separate container.
+- *tiagopeixoto/graph-tool:latest*  3.18G  For creating our beautiful circos graphs. The dependencies are hell so we have them in a separate container.
+- *netopaas/faiss:cugraph-24-12*  For doing faiss nearest neghbours, leiden and umap much faster and using Modal. It hsa been a nightmare to keep the dependecies correct in this one.
 
 ## Running
 
