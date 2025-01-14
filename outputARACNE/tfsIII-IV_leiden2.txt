@@ -1,0 +1,55 @@
+0
+1
+10
+11
+12
+13
+14
+15
+16
+17
+18
+3
+4
+5
+6
+7
+8
+9
+B cell
+B cell dividing
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Mesothelial
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+cDC1
+cDC2
+myeloid dividing
+pDC
+stromal dividing
