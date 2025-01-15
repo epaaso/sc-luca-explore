@@ -1,5 +1,6 @@
 import os
 from typing import Iterable, List, Literal, Optional, Union
+import warnings
 import multiprocessing
 
 import numpy as np
@@ -22,6 +23,7 @@ local_dir = '/root/datos/maestria/netopaas/luca_explore/surgeries/'
 
 # Define the remote path where the data will be available in the remote function
 backup_dir = "/data"
+backup_dir = '/root/datos/maestria/netopaas/luca_explore/surgeries/'
 
 def get_gseas_df(adata: ad.AnnData, valid_types: List[str],
                  types: List[str], id_: str, load_gsea: bool = False,
@@ -95,19 +97,20 @@ def process_gene(group1, results, groups2):
 
 
 def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
-                   method:str='wilcoxon', use_raw:bool=False, parallel:bool=False):
+                   method:str='wilcoxon', use_raw:bool=False, parallel:bool=False
+                   ,n_jobs_inner:int=10):
 
     key = f'{group1}_vs_{group2}'
     if parallel:
         print(f'Started copying {key}')
     else:
         print(f'Comparing {key}')
-    adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata
+    adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata THIS IS DUMB TODO FIX, maybe using `sc.aggregate`
     if parallel:
         print(f'Ended copying {key}')
         
     rank_genes_groups(adata_temp, groupby=groupby, groups=[group1], reference=group2,
-                      method=method, use_raw=use_raw, key_added=key, n_jobs=10)
+                      method=method, use_raw=use_raw, key_added=key, n_jobs=n_jobs_inner)
 
     current_scores = adata_temp.uns[key]['scores'][group1]
 
@@ -126,7 +129,8 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
                                use_raw: Optional[bool] = None,
                                method: Optional[Literal['logreg', 't-test', 'wilcoxon', 't-test_overestim_var']] = 'wilcoxon',
                                parallel: bool = False,
-                               n_jobs: int = 2):
+                               n_jobs: int = 1,
+                               n_jobs_inner: int = 10) -> dict:
     """
     Perform pairwise comparison of marker genes between specified groups. Expects log data.
 
@@ -152,7 +156,7 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
 
     if parallel:
         with multiprocessing.Pool(n_jobs) as pool:
-            results = pool.starmap(compare_groups, [(adata, groupby, group1, group2, method, use_raw) for group1, group2 in comparisons])
+            results = pool.starmap(compare_groups, [(adata, groupby, group1, group2, method, use_raw, parallel, n_jobs_inner) for group1, group2 in comparisons])
     else:
         for comparison in comparisons:
             group1, group2 = comparison
@@ -291,8 +295,8 @@ def upload_files_to_volume():
 @app.function(
     image=scvi_image,
     # gpu='any',
-    timeout=36000,
-    # cpu=40,
+    timeout=46000,
+    cpu=40,
     volumes={backup_dir: vol}
 #    mounts=[
 #        modal.Mount.from_local_dir(
@@ -301,24 +305,27 @@ def upload_files_to_volume():
 #        )
 #    ]
 )
-def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_stages=False,
+def get_de2(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_stages=False,
         cell_key = 'cell_type_adjusted', stage_key = 'stage', log_layer = 'do_log1p',
         num_processes = 40, load_pair = True, load_summary = True, load_regions = True,
-        load_gsea = True, load_gsea_heatmap = True, zuani_symbols_summary = False
+        load_gsea = True, load_gsea_heatmap = True, zuani_symbols_summary = False,
+        tumor_is_int = False, n_jobs_inner=10, parallel_pair = False,
     ):
     
     print("This code is running on a remote worker!")
+    print(f'Marker genes for {name} at {time} are being computed...')
     
     id_ = ext_name
+    time_suffix = 'early' if 'I-II' in time else 'late'
     
     w_folder = backup_dir
     all_path = f'{w_folder}/{time}_{id_}'
     key_pair = "rank_genes_groups_tumor"
     regions = ['tumorall']
-    region = 'tumorall' # This we hardocde beacuse the beginning is not coded for using multiple regions    
+    region = 'tumorall' # This we hardocde beacuse the beginning is not coded for using multiple regions
 
     adata = ad.read_h5ad(f'{backup_dir}/filtered_{ext_name}.h5ad')
-    preds = pd.read_csv(f'{backup_dir}/{name}_predicted_leiden.csv', index_col=0)
+    preds = pd.read_csv(f'{backup_dir}/{name}_predicted_leiden_{time_suffix}.csv', index_col=0)
     preds.index = adata.obs.index
 
     adata.obs[cell_key] = preds[cell_key]
@@ -344,10 +351,16 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     import gc
     gc.collect()
 
-    # TODO This should determine regions
+    # TODO This should determine regions not only tumor groups
     valid_types = list(adata.obs['type_tissue'].value_counts().loc[lambda x: x > 2].index)
     types = adata.obs.type_tissue.unique()
-    tumor_types = [g for g in valid_types if 'Tumor' in g]
+    if not tumor_is_int:
+        tumor_types = [g for g in valid_types if 'Tumor' in g]
+    else:
+        tumor_types = [g for g in valid_types if g.isdigit()]
+
+    if len(tumor_types) == 0:
+        warnings.warn("No tumor groups found. COMPARISON WILL BE DONE FOR ALL TYPES")
 
     print("Loading Pairwise")
     if load_pair:
@@ -356,7 +369,8 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
         # Adress this: is sensitive to the population composition, which introduces an element of unpredictability to the marker sets due to variation in cell type abundances
         # Solved by using pairwise wilcoxon
         results = rank_genes_groups_pairwise(adata, 'type_tissue', method='wilcoxon', use_raw=False,
-                        groups=valid_types, subgroups=tumor_types, parallel=False)
+                        groups=valid_types, subgroups=tumor_types, parallel=parallel_pair,
+                        n_jobs=num_processes//n_jobs_inner, n_jobs_inner=n_jobs_inner)
         adata.uns[key_pair] = results
         np.save(all_path + '_tumorpair.npy', adata.uns[key_pair])
         vol.commit()
@@ -364,7 +378,13 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     adata.uns[key_pair] = np.load(all_path + '_tumorpair.npy', allow_pickle='TRUE').item()
     results = adata.uns[key_pair]
 
-    groups = [ group for group in valid_types if 'Tumor' in group]
+    if not tumor_is_int:
+        groups = [ group for group in valid_types if 'Tumor' in group]
+    else:
+        groups = [g for g in valid_types if g.isdigit()]
+
+    if len(groups) == 0:
+        raise Exception("No tumor groups found THE SUMMARIES WOULD BE EMPTY")
     scores_dict = {group: {} for group in groups}
     
     print("Loading Summary")
@@ -520,34 +540,58 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 @app.local_entrypoint()
 def main():
     # Run the remote functions concurrently
+    # We do this per dataset to avoid batch effects
     print("Starting differential expression analysis on the remote worker...")
+
+    get_de2(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
+                           cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p',
+                           load_pair = True, load_summary = True, load_regions = True,
+                            load_gsea = False, load_gsea_heatmap = False,
+                            tumor_is_int=True, n_jobs_inner=5, parallel_pair=True,
+                            num_processes=20)
     
     # Start both tasks
     # future1 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='I-II',
-    #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p')
+    #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
+    #                        load_pair = False, load_summary = False, load_regions = False,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=True)
     
     # future2 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='III-IV',
-    #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p')
+    #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
+    #                        load_pair = True, load_summary = False, load_regions = False,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=True)
     
-    future3 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV',
-                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data'
-                           ,load_regions=False)
+    # future3 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV',
+    #                        cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data',
+    #                        load_pair = False, load_summary = False, load_regions = False,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=True)
     
-    future4 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='I-II',
-                           cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data'
-                           ,load_regions=False)
+    # future4 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='I-II',
+    #                        cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data',
+    #                        load_pair = False, load_summary = False, load_regions = False,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=True)
     
-    # future5 = get_de.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
-    #                        cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p')
+    future5 = get_de2.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
+                           cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p',
+                           load_pair = False, load_summary = False, load_regions = False,
+                            load_gsea = False, load_gsea_heatmap = False,
+                            tumor_is_int=True, n_jobs_inner=5, parallel_pair=True)
     
     # future6 = get_de.spawn(ext_name="Trinks_Bishoff_2021_NSCLC", name='Bishoff', time='III-IV',
-    #                        cell_key='cell_type_adjusted', skip_stages=True, log_layer=None)
+    #                        cell_key='cell_type_adjusted', skip_stages=True, log_layer='do_log1p',
+    #                        load_pair = False, load_summary = False, load_regions = False,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=True)
     
     # Wait for both tasks to complete
     # future1.get()
     # future2.get()
-    future3.get()
-    future4.get()
-    # future5.get()
+    # future3.get()
+    # future4.get()
+    future5.get()
     # future6.get()
 

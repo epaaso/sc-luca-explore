@@ -1,22 +1,12 @@
-0
-1
-10
-11
-12
-13
-14
-15
-16
-2
-3
-4
-5
-6
-7
-8
-9
+AT1
+AT2_ROS1+
 B cell
 B cell dividing
+Ciliated
+Club_AT2_even_1
+Club_AT2_even_2
+Club_AT2_high
+Club_Ciliated
 DC mature
 Endothelial cell arterial
 Endothelial cell capillary
@@ -47,6 +37,16 @@ T cell CD8 naive
 T cell CD8 terminally exhausted
 T cell NK-like
 T cell regulatory
+Tumor LAUD_LUSC_AT2
+Tumor LUAD_AT2_high
+Tumor LUAD_AT2_mitotic
+Tumor LUAD_LUSC
+Tumor LUAD_LUSC_mitotic
+Tumor LUAD_LUSC_mitotic_even
+Tumor LUAD_mainly
+Tumor LUAD_mainly_AT2_low
+Tumor LUAD_mainly_AT2_mitotic
+Tumor LUAD_mitotic
 cDC1
 cDC2
 myeloid dividing

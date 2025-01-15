@@ -11,7 +11,7 @@ UKIM-V-2,data/11_own_datasets/batch2/h5ad_raw/ukim_v_batch2.h5ad,1000,60000,200,
 Lambrechts_2018_LUAD_6149v1,data/12_input_adatas/lambrechts_2018_luad_6149v1.h5ad,600,30000,200,10000,15,10x-3'-v1,hg19,Lambrechts,10.1038/s41591-018-0096-5,I-III,NSCLC,no sorting,no,no,>5cm apart,6, ,6,0,Nature Med
 Lambrechts_2018_LUAD_6149v2,data/12_input_adatas/lambrechts_2018_luad_6149v2.h5ad,600,30000,250,10000,20,10x-3'-v2,GrCh38,Lambrechts,10.1038/s41591-018-0096-5,I-III,NSCLC,no sorting,no,no,>5cm apart,9, ,6,3,Nature Med
 Lambrechts_2018_LUAD_6653,data/12_input_adatas/lambrechts_2018_luad_6653.h5ad,1200,40000,250,10000,20,10x-3'-v2,GrCh38,Lambrechts,10.1038/s41591-018-0096-5,I-III,NSCLC,no sorting,no,no,>5cm apart,9, ,6,3,Nature Med
-Deng_Liu_LUAD_2024,/root/datos/maestria/netopaas/Deng2024/dengEcoTyper.rds,not,not,200,6000,20,10x-v3,GrCh38,Deng,10.1016/j.xcrm.2024.101489,I-IV,LUAD,,,,no normal,49, ,43,6,
-Zuani_2024_NSCLC,/root/datos/maestria/netopaas/Zuani2024/Zuani2024.h5ad,400,100000,180,6000,20,10x-v3.1,GrCh38,Zuani,10.1038/s41467-024-48700-8,I-IV,NSCLC,,,,edges of the lungs,13, ,11,2,
+Deng_Liu_LUAD_2024,/root/datos/maestria/netopaas/Deng2024/dengEcoTyper.rds,not,not,200,6000,20,10x-v3,GrCh38,Deng,10.1016/j.xcrm.2024.101489,I-IV,LUAD,??,,,no normal,49, ,43,6,
+Zuani_2024_NSCLC,/root/datos/maestria/netopaas/Zuani2024/Zuani2024.h5ad,400,100000,180,6000,20,10x-v3.1,GrCh38,Zuani,10.1038/s41467-024-48700-8,I-IV,NSCLC,??,,,edges of the lungs,13, ,11,2,
 Hu_Zhang_2023_NSCLC,/root/datos/maestria/netopaas/Hu2023/Hu2023.h5ad,not,not,500,not,20,BD-Rhapsody,GrCh38,Hu,10.1186/s13073-023-01164-9,III,NSCLC,no sorting,no,"3x only-chemo, 11x immuno+chemo",no normal,14,Has filter for housekeeping genes doublet and ribosome,0,14,Genome Medicine
 Trinks_Bishoff_2021_NSCLC,/root/datos/maestria/netopaas/Bishoff2021/Bishoff2021.h5ad,,,,,20,,,Bishoff,doi.org/10.24433/CO.0121060.v1,III,NSCLC,,some,,>5cm apart,3,,0,3,Code Ocean

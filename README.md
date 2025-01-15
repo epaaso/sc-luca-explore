@@ -19,33 +19,52 @@ The workflow for getting from the raw AnnData files to the coabundance graphs an
 The workflow is spread across various notebooks, where one can see the figures generated in the proccess and some short explanations. 
 We plan to automatize the process with Nextflow, like they do in the repo of the [scLUCA](https://github.com/icbi-lab/luca) project.
 
-But for now al the necessary steps are contained in the notebooks and scripts, though a little scrambled.
+But for now all the necessary steps are contained in the notebooks and scripts, though a little scrambled.
 
 ### Notebooks
 
 - *get_data.ipynb*: Contains the code for exploring and downloading all possible datasets to extend the scLUCA atlas. It was important to have UMI counts and tumor stage annotation.
-- *graph_builder.ipynb*: A mashup of too many things that need to be separated. It contains the crucial parts of gathering all annotations, running the coabundance analysis, and plotting the networks.
+
 - *nb_filter*: Filters the cells and genes by predefined quality control metrics.
-- *nb_annot*: Annotates tissue from every study with Lung Atlas reference maps. Only healthy cells.
+
+- *nb_refAtlas*: Contains the notebook `vae_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel` has the reasoning and training of the actual reference atlas.
+
 - *nb_annotRefatlas*: Annotates tissue from a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types. Includes a notebook for annotation with label transfer via neighbors, but it had worse outcomes (`labelTransfer`). There is also a notebook that transfers the newly created clusters to another dataset (`extendPreds_{dataset}.ipynb`).
-- *nb_ikarus*: Runs the ikarus prediction on every sample. A prediction that uses logistic regression and network projection to predict tumor cells.
-- *nb_infercnv*: Runs InferCNV on every sample. This infers from transcripts, places in the chromosomes where there should be copy number variations.
+
+- *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
+
+- *graph_builder.ipynb*: It contains the crucial parts of gathering all annotations, running the coabundance analysis, and plotting the networks. A mashup of too many things that need to be separated.
+
 - *nb_DE_wilcox*: Extracts marker genes of clusters from existing cell annotations with the Wilcox method. 
   It also enriches for Hallmark gene ontologies. Its a bit bit convoluted and doesnt consider batch effects,
   but only because it scanpy doenst consider abundance of cell types. The notebook `DE_param` is incomplete 
   and attempts to do pseudo-bulk differential expression with MAST.
   There is also a `modal_DE.py` script to run the Wilcox marker gene extraction in modal. 
   It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
+
+- *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
+  - *sbm_cluster.ipynb* Does stochastick block modelling (thans to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
+    The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are i the nb.
+  - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph, and analyzes paris of vars that are not pearson correlated and their profile. Also for the negative ones
+  - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and such.
+  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of graph-tools
+
+### Optional Notebooks
+
 - *nb_DE_SCT*: Extracts marker genes of clusters from existing cell annotations with the GLM method `SCTransform v2`.
   It also corrects for batch effects per sample and enriches for Hallmark gene ontologies. 
   This method has a parameter estimation method that corrects for lowly expressed genes and is much faster
   than the `lvm_DE` method, which takes advantage of our dimensional reduction VAEs with scANVI. 
   The `test_de.py` script is to be run in the lambda function service Modal, 
   as it requires a lot of GPU RAM and takes around 35 minutes for 3 samples. It uses the `lvm_DE` method mentioned above.
+
+- *nb_ikarus*: Runs the ikarus prediction on every sample. A prediction that uses logistic regression and network projection to predict tumor cells.
+
+- *nb_infercnv*: Runs InferCNV on every sample. This infers from transcripts, places in the chromosomes where there should be copy number variations.
+
 - *nb_tumorUMAP*: Notebook to check the tumor predictions. It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
-- *nb_refAtlas*: Contains the notebook `vay_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel` has the reasoning and training of the actual model.
-- *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
-- *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
+
+- *nb_annot*: Annotates tissue from every study with Lung Atlas reference maps. Only healthy cells.
 
 ### Misc
 
@@ -78,14 +97,14 @@ But for now al the necessary steps are contained in the notebooks and scripts, t
 We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
 
 - *netopaas/comp-onco:annot* 14.6G The image below but with BioMaRt and pandas==1.5.3
-- *netopaas/comp-onco:sctransform* 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have padnas==1.5.3
+- *netopaas/comp-onco:sctransform* 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have pandas==1.5.3
 - *netopaas/comp_onco:r4* 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have padnas==1.5.3
 - *netopaas/comp-onco:raytune*  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
 - *netopaas/scarches:raytune* 19.9 G The same but with more R packages than comp-onco. This one has jax.
 - *netopaas/scarches:droplet*   85G This one has infercnv, ikarus and scFusion that take a lot of space. It wont be able to run raytune and sctransform and others.
 
 - *tiagopeixoto/graph-tool:latest*  3.18G  For creating our beautiful circos graphs. The dependencies are hell so we have them in a separate container.
-- *netopaas/faiss:cugraph-24-12*  For doing faiss nearest neghbours, leiden and umap much faster and using Modal. It hsa been a nightmare to keep the dependecies correct in this one.
+- *netopaas/faiss:cugraph-24-12*  For doing faiss nearest neghbours, leiden and umap much faster and using Modal. It has been a nightmare to keep the dependecies correct in this one.
 
 ## Running
 
