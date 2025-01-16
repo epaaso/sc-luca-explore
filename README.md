@@ -72,7 +72,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 
 - *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
 
-- *graph_builder.ipynb*: It contains the crucial parts of gathering all annotations, running the coabundance analysis, and plotting the networks. A mashup of too many things that need to be separated.
+- *graph_builder.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis, and plotting the networks.
 
 - *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
   - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph, and analyzes paris of vars that are not pearson correlated and their profile. Also for the negative ones.
@@ -99,9 +99,9 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   The `test_de.py` script is to be run in the lambda function service Modal,
   as it requires a lot of GPU RAM and takes around 35 minutes for 3 samples. It uses the `lvm_DE` method mentioned above.
 
-- *nb_ikarus*: Runs the ikarus prediction on every sample. A prediction that uses logistic regression and network projection to predict tumor cells.
+- *nb_ikarus*: Runs the ikarus prediction on every dataset from `ikaurs_fabric.py`. A prediction that uses logistic regression and network projection to predict tumor cells.
 
-- *nb_infercnv*: Runs InferCNV on every sample. This infers from transcripts, places in the chromosomes where there should be copy number variations.
+- *nb_infercnv*: Runs InferCNV on every dataset from `infercnv_fabric.py`. This infers from transcripts, places in the chromosomes where there should be copy number variations, hence cancer cells.
 
 - *nb_tumorUMAP*: Notebook to check the tumor predictions. It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
 
@@ -110,7 +110,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 ### Misc
 
 - *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
-- *metadata*: Contains information about the studies used and data about the groups.
+- *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`.
 - *utils*: Contains custom plotting and analysis functions.
 
 ### Data Dirs
@@ -154,7 +154,7 @@ The only data neccesary to run the workflow from scratch are:
   - *'<ds_suffix>_predicted_leiden.csv'* The cell anotations with tumor subclustering.
 
 
-### Docker images
+## Docker images
 
 We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
 
