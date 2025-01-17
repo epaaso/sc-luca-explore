@@ -72,13 +72,14 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 
 - *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
 
-- *graph_builder.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis, and plotting the networks.
+- *grouping_MI.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis by extracting MI.
 
 - *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
+  - *graph_layouts.ipynb* Leiden, Newman, n-clique, interactive, and functionally enriched visualizations of the networks for different clusterings and times.
   - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph, and analyzes paris of vars that are not pearson correlated and their profile. Also for the negative ones.
   - *sbm_cluster.ipynb* Does stochastick block modelling (thans to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
     The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
-  - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and such.
+  - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
   - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools`.
 
 - *nb_DE_wilcox*: 
