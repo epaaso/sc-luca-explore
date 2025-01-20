@@ -53,6 +53,9 @@ After that go to the Dev Containers tab in the Remote Explorer tab and choose th
 When opening a notebook, we recommend attaching to a running jupyter server, which is launched with the `jl` command in a shell in the container, like above.
 This avoids losing the running kernel if you close the window you are working on.
 
+A problem with vscode is that it does not offer a way to shutdown notebooks you'll have to do it manuall with 
+a notebook to delete not recently used kernels in `./utils/cull-kernles.ipynb`. It uses api calls.
+
 ## Folder structure
 
 The workflow is spread across various notebooks, where one can see the figures generated in the proccess and some short explanations. 
