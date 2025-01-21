@@ -41,7 +41,7 @@ ssh -p 5265 -N -f -L 5432:localhost:8888 sefirot.inmegen.gob.mx
 
 Where 5432 is the localport where you will be running the server. 8888 is the port in the remote machine where juptyer server is being forwarded to by the container.
 And -p 5265 is the por tof the remote host. You have to have and ssh-agent with your user credentials for this to work. We recommend it as it frees you of the hassle
-of inputting a password everyitme.
+of inputting a password everytime.
 
 ### VS Code
 
@@ -54,7 +54,7 @@ When opening a notebook, we recommend attaching to a running jupyter server, whi
 This avoids losing the running kernel if you close the window you are working on.
 
 A problem with vscode is that it does not offer a way to shutdown notebooks you'll have to do it manuall with 
-a notebook to delete not recently used kernels in `./utils/cull-kernles.ipynb`. It uses api calls.
+a notebook to delete not recently used kernels in `./utils/cull-kernels.ipynb`. It uses api calls.
 
 ## Folder structure
 
@@ -137,25 +137,33 @@ The only data neccesary to run the workflow from scratch are:
   In particular '/hvg_integrated_scvi_scanvi_tumor_model_b128_lay4_h1024_raydefault_epocs300-300/' is the one with the highest accuracy, 
   trained in 'nb_ref_Atlas/scANVImodel.ipynb'
 
-- *surgeries = '/root/datos/maestria/netopaas/luca_explore/surgeries/'* Has most of the checkpoints in our workflow.
+- */root/datos/maestria/netopaas/luca_explore/surgeries/* Has most of the checkpoints in our workflow.
 
-  - *'filtered_<ds_suffix>.h5ad'* Is the adata of the dataset after QC filtering.
+  - *filtered_<ds_suffix>.h5ad* Is the adata of the dataset after QC filtering.
 
-  - *'query_<ds_suffix>.h5ad'* Is the adata of the dataset in the necessary fromat to be annotated by the model.
+  - *query_<ds_suffix>.h5ad* Is the adata of the dataset in the necessary fromat to be annotated by the model.
 
-  - *'<dataset_suffix>/'* Folder that contains the trained surgery model in 'model.pt'. Most of them also have an adata of the latent vars in `query_latent.h5ad`.
+  - *<dataset_suffix>/* Folder that contains the trained surgery model in 'model.pt'. Most of them also have an adata of the latent vars in `query_latent.h5ad`.
     Sometimes a csv to convert from gen symbols to ensembl in `<ds_suffix>_ensembl.csv`
 
-  - *'<ds_suffix>_predicted.csv'* The cell annotations with just our Tumor LUCA model. It also has all the entries of the obs matrix, so stage and such.
+  - *<ds_suffix>_predicted.csv* The cell annotations with just our Tumor LUCA model. It also has all the entries of the obs matrix, so stage and such.
 
-  - *'Subcluster/'*
+  - *Subcluster/*
     - *query_latent_<tumor>_<time>.h5ad* The merged embedding of all the annotated datasets for subclustering. SUbset to tumor and respective time stages.
     - *atlas_<time>_umap.csv* The umap coords calculated online in modal.
     - *atlas_<time>_uparams.json* The umap coords params calculated online in modal. Also params for the leiden algo.
     - *atlas_<time>_leiden.csv* The subclustering assignment of cells.
     - *mapping_<time>_leiden.json* The broad cluster annotation by chekcing contingency with previous cluster names.
   
-  - *'<ds_suffix>_predicted_leiden.csv'* The cell anotations with tumor subclustering.
+  - *<ds_suffix>_predicted_leiden.csv* The cell anotations with tumor subclustering.
+
+- *<notebooks_folder>/nb_DE_wilcox* We save the marker genes and heatmap plots and its corresponding data here.
+  - *wilcoxon_DE/<time>_<dset>_[tumor]pair.npy* The DE of pairs of cells for every gene. The tumor refers means that it is subsetted to certain cells. Pretty big files
+  - *wilcoxon_DE/<time>_<dset>_<regioncompare>.npy* The DE of cells in the region against all other cells, which is also denominated in <regioncompare>.
+    This is what is used for marker genes, and subsequent GSEA.
+  - *wilcoxon_DE/markergenes_<dset>_<regioncompare>_<time>.png* The plot of the 20 highest DE genes per cell type in region.
+  - *gseapy_gsea/heatmap_<dset>_<regioncompare>_<time>.[csv][png]* Table for and heatmap plot of the enrichment of cancer hallmarks for every cell type in region.
+
 
 
 ## Docker images
