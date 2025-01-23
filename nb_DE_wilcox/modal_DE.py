@@ -1,15 +1,17 @@
 import os
-from typing import Iterable, List, Literal, Optional, Union
+from typing import Any, Iterable, List, Literal, Optional, Union
 import warnings
 import multiprocessing
 import json
 
 import numpy as np
+import numba
 import anndata as ad
 import pandas as pd
 
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.axes import Axes
 
 from scanpy.tools import rank_genes_groups
 import scanpy as sc
@@ -21,8 +23,6 @@ app = modal.App("DE - wilcox")
 local = True
 
 local_dir = '/root/datos/maestria/netopaas/luca_explore/surgeries/'
-
-
 # Define the remote path where the data will be available in the remote function
 backup_dir = "/data" if not local else local_dir
 w_folder = '/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
@@ -30,7 +30,8 @@ subcluster_dir = f'{backup_dir}/Subcluster' if local else f'{backup_dir}/Subclus
 
 def get_gseas_df(de_regions: dict, valid_types: List[str],
                  types: List[str], id_: str, load_gsea: bool = False,
-                 gsea_folder:str = 'gseapy_gsea') -> pd.DataFrame:
+                 gsea_folder:str = 'gseapy_gsea', gene_mapping: dict = None,
+                 num_threads:int = 1) -> pd.DataFrame:
     """
     Generates a combined DataFrame from GSEA results for different cell types.
 
@@ -40,6 +41,7 @@ def get_gseas_df(de_regions: dict, valid_types: List[str],
     types (List[str]): A list of cell types to be considered for analysis.
     id_ (str): Identifier used in generating the GSEA path.
     load_gsea (bool, optional): Flag to load existing GSEA results. Defaults to False.
+    gene_mapping (dict): A dictionary mapping gene names to other ones.
 
     Returns:
     pd.DataFrame: A combined DataFrame with GSEA results pivoted by cell type and hallmark.
@@ -52,14 +54,18 @@ def get_gseas_df(de_regions: dict, valid_types: List[str],
     types = set(types).intersection(set(valid_types))
     dfs = []
 
-    for type in types:
+    for typer in types:
         ranks = de_regions
-        type_path = type.replace('/','_')
+        type_path = typer.replace('/','_')
         gsea_path = f'{gsea_folder}/{type_path}_{id_}'
 
         # Generate gene scores
-        gene_scores = {gene: ranks['scores'][type][i] for i, gene
-                        in enumerate(ranks['names'][type])}
+        if gene_mapping:
+            gene_scores = {gene_mapping.get(gene, gene): ranks['scores'][typer][i] for i, gene
+                            in enumerate(ranks['names'][typer])}
+        else:
+            gene_scores = {gene: ranks['scores'][typer][i] for i, gene
+                            in enumerate(ranks['names'][typer])}
         gene_scores = pd.Series(gene_scores)
 
         # Run GSEA
@@ -68,15 +74,16 @@ def get_gseas_df(de_regions: dict, valid_types: List[str],
         else:
             pre_res = gseapy.prerank(rnk=gene_scores,
                                      gene_sets='h.all.v2023.2.Hs.symbols.gmt',
-                                     processes=20, permutation_num=100,
+                                     threads=num_threads, permutation_num=100,
                                      seed=6, no_plot=True)
+            # TODO  expose seed and permut num
             gseas = pre_res.res2d
             # We remove this because it clutters the folders and  though it has more info it is not used
             # np.save(gsea_path, gseas)
 
         data1 = {'hallmark': list(gseas['Term'].str.slice(9)), 'score': list(gseas['NES'])}
         df_celltype1 = pd.DataFrame(data1)
-        df_celltype1['cell_type'] = type
+        df_celltype1['cell_type'] = typer
         dfs.append(df_celltype1)
 
     # Combine all DataFrames
@@ -112,9 +119,10 @@ def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
     adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata THIS IS DUMB TODO FIX, maybe using `sc.aggregate`
     if parallel:
         print(f'Ended copying {key}')
-        
+    
+    numba.set_num_threads(n_jobs_inner)
     rank_genes_groups(adata_temp, groupby=groupby, groups=[group1], reference=group2,
-                      method=method, use_raw=use_raw, key_added=key, n_jobs=n_jobs_inner)
+                    method=method, use_raw=use_raw, key_added=key, n_jobs=n_jobs_inner)
 
     current_scores = adata_temp.uns[key]['scores'][group1]
 
@@ -176,14 +184,14 @@ def rank_genes_group(
     de_regions: dict,
     group_name: str,
     n_genes: int = 20,
-    gene_symbols: Optional[str] = None,
+    gene_mapping: Optional[dict] = None,
     gene_names: Optional[List[str]] = None,
     fontsize: int = 8,
     titlesize: int = 10,
     show: Optional[bool] = None,
-    ax: Optional[plt.Axes] = None,
+    ax: Optional[Axes] = None,
     **kwds,
-) -> plt.Axes:
+) -> Axes:
     """
     Visualizes the ranking of genes for a specified group from an AnnData object.
 
@@ -194,6 +202,8 @@ def rank_genes_group(
             The name of the group for which to rank genes.
         n_genes: int, optional
             The number of top genes to display (default is 20).
+        gene_mapping: Optional[dict], optional
+            A dictionary mapping gene names to other ones
         gene_names: Optional[List[str]], optional
             Explicit list of gene names to use for plotting.
         fontsize: int, optional
@@ -202,13 +212,13 @@ def rank_genes_group(
             Font size for the title (default is 10).
         show: Optional[bool], optional
             If True, show the plot immediately.
-        ax: Optional[plt.Axes], optional
+        ax: Optional[Axes], optional
             A matplotlib axes object to plot on. If None, a new figure is created.
         **kwds:
             Additional keyword arguments to pass to plotting functions.
 
     Returns:
-        plt.Axes:
+        Axes:
             The matplotlib axes with the plot.
 
     Raises:
@@ -220,12 +230,12 @@ def rank_genes_group(
 
     reference = str(de_regions['params']['reference'])
 
-    try:
-        gene_names = gene_names if gene_names is not None else de_regions['names'][group_name][:n_genes]
-        gene_mask = np.isin(de_regions['names'][group_name], gene_names)
-        scores = de_regions['scores'][group_name][gene_mask]
-    except Exception as e:
-        scores = de_regions['scores'][group_name][:n_genes]
+    gene_names = gene_names if gene_names is not None else de_regions['names'][group_name][:n_genes]
+    gene_mask = np.isin(de_regions['names'][group_name], gene_names)
+    scores = de_regions['scores'][group_name][gene_mask]
+
+    if gene_mapping:
+        gene_names = [gene_mapping.get(gene, gene) for gene in gene_names]
 
     ymin = np.min(scores)
     ymax = np.max(scores)
@@ -256,17 +266,20 @@ def rank_genes_group(
 
 
 def cond_plot(de_regions: dict, cond_types, valid_types, n_genes,
-               ax=None, fontsize=9, titlesize=14, **kwds):
+               ax: Optional[Axes] = None, fontsize=9, titlesize=14,
+                gene_mapping:dict=None, **kwds):
     if set(cond_types).issubset(valid_types):
         rank_genes_group(de_regions, cond_types[0], n_genes=n_genes,
                             ax=ax, sharey=False, show=False,
-                            fontsize=fontsize, titlesize=titlesize)
+                            fontsize=fontsize, titlesize=titlesize, gene_mapping=gene_mapping)
     else:
         # pass
         # Draw an empty plot with a message
-        ax.text(0.5, 0.5, f'Missing cells: {cond_types}', color='red',
-                    ha='center', va='center', transform=ax.transAxes) 
-        ax.axis('off')
+        if ax:
+            ax.text(0.5, 0.5, f'Missing cells: {cond_types}', color='red',
+                        ha='center', va='center', transform=ax.transAxes) 
+            ax.axis('off')
+
 
 scvi_image = modal.Image.from_registry(
     "ghcr.io/scverse/scvi-tools:py3.11-cu12-1.2.x-runtime")\
@@ -276,30 +289,6 @@ scvi_image = modal.Image.from_registry(
 # To delete mutiple files: modal volume ls --json DE-vol | jq -r '.[] | select(.Filename | test("^Tumor")) | .Filename' | xargs -I {} sh -c 'echo Deleting: {}; modal volume rm DE-vol "/{}"'
 vol = modal.Volume.from_name("DE-vol", create_if_missing=True)
 
-# TODO does notwork
-def upload_files_to_volume():
-
-    file_dict = [{'local':f'{local_dir}/{name}_predicted_leiden.csv',
-                 'remote':f'{backup_dir}/{name}_predicted_leiden.csv'},
-                 {'local':f'{local_dir}/{name}/filtered_{ext_name}.h5ad',
-                 'remote':f'{backup_dir}/filtered_{ext_name}.h5ad'},
-                 {'local':f'wilcoxon_DE/{time}_{id_}_tumorpair.npy',
-                 'remote':f'{backup_dir}/{time}_{id_}_tumorpair.npy'},]
-    
-    for file in file_dict:
-        with vol.mount() as mount_path:
-            file_path = os.path.join(mount_path, file['remote'])
-            try:
-                with open(file_path, 'rb'):
-                    continue
-            except FileNotFoundError:
-                pass
-            with open(file['local'], 'rb') as f_local:
-                with open(file_path, 'wb') as f_remote:
-                    f_remote.write(f_local.read())
-
-
-# upload_files_to_volume()
 
 ## ACTIVATE THIS TO RUN THE FUNCTION IN MODAL
 # Remote function with GPU and mounted local directory
@@ -318,83 +307,98 @@ def upload_files_to_volume():
 # )
 def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_stages=False,
         cell_key = 'cell_type_adjusted', stage_key = 'stage', log_layer = 'do_log1p',
-        num_processes = 40, load_pair = True, load_summary = True, load_regions = True,
+        num_processes = 1, load_pair = True, load_summary = True, load_regions = True,
         load_gsea = True, load_gsea_heatmap = True, zuani_symbols_summary = False,
-        tumor_is_int = False, region_mapping='', n_jobs_inner=10, parallel_pair = False,
-        no_adata = False
+        tumor_is_int = False, region_mapping='', n_jobs_inner=1, parallel_pair = False,
+        no_adata = False, pred_name=None, parallel_summary=False,
+        gene_mapping:Union[str,dict]=None, gene_feature=None
     ):
     """
     Computes differential expression analysis for cell subpopulations across
     specific timepoints and regions, with optional GSEA (Gene Set Enrichment
     Analysis) integration and marker genes.
     Parameters
-    ----------
-    ext_name : str, optional
-        External name or ID for the dataset (default "Zuani_2024_NSCLC").
-    name : str, optional
-        Study or dataset name (default "Zuani").
-    time : str, optional
-        Stage designation (e.g., "I-II" or "III-IV") to control filtering
-        (default "I-II").
-    skip_stages : bool, optional
-        If True, skip filtering by specific stages (default False).
-    cell_key : str, optional
-        Column name in external annotation (predictions) with cell identities
-        (default "cell_type_adjusted").
-    stage_key : str, optional
-        Column name in adata.obs with stage annotations (default "stage").
-    log_layer : str or bool, optional
-        Layer to log-transform, or set to 'do_log1p' to apply sc.pp.log1p on
-        the main matrix (default "do_log1p").
-    num_processes : int, optional
-        Number of parallel processes (default 40). For running mutiple pairwise comparisons at the same time. NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA
-    load_pair : bool, optional
-        Whether to load existing pairwise comparisons from file (default True).
-    load_summary : bool, optional
-        Whether to load existing DE summary from file (default True).
-    load_regions : bool, optional
-        Whether to load existing region-level results from file (default True).
-    load_gsea : bool, optional
-        Whether to load existing GSEA results from file (default True).
-    load_gsea_heatmap : bool, optional
-        Whether to load existing GSEA heatmap data from file (default True).
-    zuani_symbols_summary : bool, optional
-        If True, updates gene identifiers using a symbol map CSV (default False).
-    tumor_is_int : bool, optional
-        If True, identifies tumor subpopulations as integer labels (default False).
-    region_mapping : str, optional
-        Path to JSON file for optional region label mapping. Only renames the regions object and the plots.
-         The mapper can refer to only one cell type and it will work, leaving all the other ones as they were before (default ""). 
-    n_jobs_inner : int, optional
-        Internal parallelization for pairwise comparisons. Does not really work (default 10).
-    parallel_pair : bool, optional
-        Enables pairwise Wilcoxon parallel execution if True/ NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA (default False).
-    no_adata : bool, optional
-        If True, does not load or integrate with an AnnData object (default False).
+        ----------
+        ext_name : str, optional
+            External name or ID for the dataset (default "Zuani_2024_NSCLC").
+        name : str, optional
+            Study or dataset name (default "Zuani").
+        time : str, optional
+            Stage designation (e.g., "I-II" or "III-IV") to control filtering
+            (default "I-II").
+        skip_stages : bool, optional
+            If True, skip filtering by specific stages (default False).
+        cell_key : str, optional
+            Column name in external annotation (predictions) with cell identities
+            (default "cell_type_adjusted").
+        stage_key : str, optional
+            Column name in adata.obs with stage annotations (default "stage").
+        log_layer : str or bool, optional
+            Layer to log-transform, or set to 'do_log1p' to apply sc.pp.log1p on
+            the main matrix (default "do_log1p").
+        num_processes : int, optional
+            Number of parallel processes (default 1). For running mutiple pairwise comparisons at the same time. NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA.
+            But it is useful for the summary statistics. When parallel_summary is True it will be used but is not useful if it > number of cell types.
+            Also used in the GSEA computation.
+        load_pair : bool, optional
+            Whether to load existing pairwise comparisons from file (default True).
+        load_summary : bool, optional
+            Whether to load existing DE summary from file (default True).
+        load_regions : bool, optional
+            Whether to load existing region-level results from file (default True).
+        load_gsea : bool, optional
+            Whether to load existing GSEA results from file (default True).
+        load_gsea_heatmap : bool, optional
+            Whether to load existing GSEA heatmap data from file (default True).
+        zuani_symbols_summary : bool, optional
+            If True, updates gene identifiers using a symbol map CSV (default False).
+        tumor_is_int : bool, optional
+            If True, identifies tumor subpopulations as integer labels (default False).
+        region_mapping : str, optional
+            Path to JSON file for optional region label mapping. Only renames the regions object and the plots.
+            The mapper can refer to only one cell type and it will work, leaving all the other ones as they were before (default ""). 
+        n_jobs_inner : int, optional
+            Internal parallelization for pairwise comparisons. Does not really work (default 10).
+        parallel_pair : bool, optional
+            Enables pairwise Wilcoxon parallel execution if True/ NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA (default False).
+        no_adata : bool, optional
+            If True, does not load or integrate with an AnnData object (default False).
+        pred_name : str, optional
+            Suffix of the prediction file to use for filtering (default None).
+        parallel_summary : bool, optional
+            Enables parallel execution for summary statistics (default False).
+        gene_mapping : Union[str, dict], optional
+            obs column name or dictionary for gene name mapping (default None).
+        gene_feature : str, optional
+            Feature name to assign to adata.var.index (default None).
     Returns
     -------
-    None
-        All results are saved to disk and/or integrated into the provided AnnData
-        object according to the function parameters.
+        None
+            All results are saved to disk and/or integrated into the provided AnnData
+            object according to the function parameters.
     Notes
     -----
-    - Raises an exception if no tumor cell groups are found.
-    - Incorporates GSEA computations (Hallmark gene sets) if data is available.
-    - Logs various progress updates and may commit results to a remote storage if
-        not running locally.
-    - Supports reading and writing intermediate data to disk, enabling reusability
-        of pairwise DE comparisons, summary statistics, and region-level analyses.
-    - Adjusts the main data log transform based on the `log_layer` parameter,
-        either using in-memory sc.pp.log1p or an existing log-transformed layer.
+        - Raises an exception if no tumor cell groups are found.
+        - Incorporates GSEA computations (Hallmark gene sets) if data is available.
+        - Logs various progress updates and may commit results to a remote storage if
+            not running locally.
+        - Supports reading and writing intermediate data to disk, enabling reusability
+            of pairwise DE comparisons, summary statistics, and region-level analyses.
+        - Adjusts the main data log transform based on the `log_layer` parameter,
+            either using in-memory sc.pp.log1p or an existing log-transformed layer.
     """
 
-    if no_adata and not load_pair:
-        raise Exception("If no adata is provided, the pairwise comparison must be loaded or not used")
+    if no_adata: 
+        if not load_pair:
+            raise Exception("If no adata is provided, the pairwise comparison must be loaded or not used")
+        if isinstance(gene_mapping, str):
+            raise Exception("If no adata is provided, the gene mapping must be a dictionary or None")
     
     if not local:
         print("This code is running on a remote worker!")
     print(f'Marker genes for {name} at {time} are being computed...')
     
+    pred_name = pred_name if pred_name else name
     id_ = ext_name
     time_suffix = 'early' if 'I-II' in time else 'late'
     
@@ -403,43 +407,73 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     regions = ['tumorall']
     region = 'tumorall' # This we hardocde beacuse the beginning is not coded for using multiple regions
 
-    preds = pd.read_csv(f'{backup_dir}/{name}_predicted_leiden_{time_suffix}.csv', index_col=0)
+    preds = pd.read_csv(f'{backup_dir}/{pred_name}_predicted_leiden_{time_suffix}.csv', index_col=0)
+    if pred_name == 'Atlas':
+        preds = preds[preds.batch == id_]
 
-    # TODO This should determine regions not only tumor groups
-    valid_types = list(preds[cell_key].value_counts().loc[lambda x: x > 2].index)
-    types = preds[cell_key].unique()
-    if not tumor_is_int:
-        tumor_types = [g for g in valid_types if 'Tumor' in g]
-    else:
-        tumor_types = [g for g in valid_types if g.isdigit()]
-
-    if len(tumor_types) == 0:
-        warnings.warn("No tumor groups found. COMPARISON WILL BE DONE FOR ALL TYPES")
+    if 'I-II' in time:
+        stages = ['IA1', 'IB', 'IA2', 'IA3', 'IIB', 'II', 'I']
+    if 'III-IV' in time:
+        stages = ['IIIA', 'IIIB','III', 'III or IV', 'IV']
+    stages = None if skip_stages else stages
     
     if not no_adata:
         adata = ad.read_h5ad(f'{backup_dir}/filtered_{ext_name}.h5ad')
-        preds.index = adata.obs.index
-        adata.obs[cell_key] = preds[cell_key]
+        
+        try:
+            adata = adata[preds.index].copy()
+            adata.obs.loc[preds.index, cell_key] = preds.loc[preds.index, cell_key]
+        except:
+            Exception("The index of the predictions does not match the index of the adata")
         adata.obs['type_tissue'] = adata.obs[cell_key]
-        print(adata)
+        # print(adata)
 
-        stages = None
-        if 'I-II' in time:
-            stages = ['IA1', 'IB', 'IA2', 'IA3', 'IIB', 'II']
-        if 'III-IV' in time:
-            stages = ['IIIA', 'IIIB','III', 'III or IV', 'IV']
-        stages = None if skip_stages else stages
         adata = adata[adata.obs[stage_key].isin(stages)].copy() if stages else adata
+
+        preds = preds.loc[adata.obs.index]
 
         if log_layer == 'do_log1p':
             sc.pp.log1p(adata)
         elif log_layer:
             adata.X = adata.layers[log_layer]
-        print("CHECKING THE DATA IS LOGARITHMED") 
+        print("CHECKING THE DATA IS LOGARITHMED")
         print(adata[:10,10:20].to_df())
+        if gene_feature:
+            adata.var.index = adata.var[gene_feature]
+
+        if isinstance(gene_mapping, str):
+            gene_mapping = adata.var.loc[:, gene_mapping].to_dict()
 
         import gc
         gc.collect()
+    else:
+        import h5py
+        from anndata.experimental import read_elem
+
+        with h5py.File(f'{backup_dir}/filtered_{ext_name}.h5ad', 'r') as f:
+            # Check if 'obs' group exists (common for scRNA-seq data)
+            if 'obs' in f:
+                obs_matrix = read_elem(f['obs'])
+            else:
+                # Handle the case where 'obs' is not present
+                raise("obs matrix not found in the h5ad file.")
+
+        preds[stage_key] = obs_matrix[stage_key]
+        preds = preds[preds[stage_key].isin(stages)].copy() if stages else preds
+
+        del obs_matrix
+
+    # TODO This should determine regions not only tumor groups
+    valid_types = list(preds[cell_key].value_counts().loc[lambda x: x > 2].index)
+    types = preds[cell_key].unique()
+    if not tumor_is_int:
+        tumor_types = [g for g in valid_types if 
+            any(x in g for x in ['Tumor','Ciliated','AT2', 'AT1', 'Club'])]
+    else:
+        tumor_types = [g for g in valid_types if g.isdigit()]
+
+    if len(tumor_types) == 0:
+        warnings.warn("No tumor groups found. COMPARISON WILL BE DONE FOR ALL TYPES")
 
     if not load_summary:
         print("Loading Pairwise")
@@ -469,9 +503,14 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     
     print("Loading Summary")
     if not load_summary:
-        with multiprocessing.Pool(num_processes) as pool:
-            for group_scores in pool.starmap(process_gene,
-                                                [(group1, DE_pair, valid_types) for group1 in tumor_types]):
+        if parallel_summary:
+            with multiprocessing.Pool(num_processes) as pool:
+                for group_scores in pool.starmap(process_gene,
+                                                    [(group1, DE_pair, valid_types) for group1 in tumor_types]):
+                    DE_summary[group_scores[0]] = group_scores[1]
+        else:
+            for group1 in tumor_types:
+                group_scores = process_gene(group1, DE_pair, valid_types)
                 DE_summary[group_scores[0]] = group_scores[1]
 
         if not no_adata:
@@ -553,16 +592,18 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
                 rank_names = np.rec.array(np.concatenate((rank_names, temp_names)))
             i += 1
 
-        DE_region = {'params': {'groupby': 'type_tissue', 'reference': region,
+        DE_region: dict[str,Union[dict, np.recarray]] = {'params': {'groupby': 'type_tissue', 'reference': region,
                                 'method': 'wilcoxon', 'use_raw': False,
                                 'layer': None, 'corr_method': 'benjamini-hochberg'}}
         DE_region['names'] = rank_names
         DE_region['scores'] = rank_scores
 
+        assert isinstance(DE_region['names'], np.recarray) and isinstance(DE_region['scores'], np.recarray)
+
         if not no_adata:
             adata.uns[f'rank_genes_groups_{region}'] = DE_region
         np.save( f'{all_path}_{region}.npy',
-                 DE_region)
+                 DE_region, allow_pickle=True) # type: ignore
         if not local:
             vol.commit()
 
@@ -588,6 +629,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     types = DE_region['scores'].dtype.names
     num_types = len(types)
 
+
     fig, axs = plt.subplots((num_types + 1) // 2, 2, figsize=(16, 4.5 * ((num_types + 1) // 2)))
     n_genes = 20
     for i, type in enumerate(types):
@@ -597,7 +639,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
         col = i % 2
         cond_plot(DE_region, [type], valid_types, n_genes=n_genes,
                   ax=axs[row, col], sharey=False, key=f'rank_genes_groups_{region}', show=False,
-                  fontsize=fontsize, titlesize=titlesize)
+                  fontsize=fontsize, titlesize=titlesize, gene_mapping=gene_mapping)
     # Hide any unused subplots
     if num_types % 2 != 0:
         fig.delaxes(axs[-1, -1])
@@ -624,7 +666,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 
             combined_dfs[region] = get_gseas_df(DE_region, valid_types, types,
                 id_, load_gsea=load_gsea,
-                gsea_folder=gsea_folder)
+                gsea_folder=gsea_folder, gene_mapping=gene_mapping)
             
             combined_dfs[region].to_csv(gsea_path)
             if not local:
@@ -644,16 +686,59 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 if __name__ == '__main__':
     print('Running function locally')
 
-    get_de(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV', cell_key='cell_type_adjusted', 
-                           no_adata=True, skip_stages=True, stage_key='stage', log_layer='do_log1p',
-                           load_pair = True, load_summary = True, load_regions = True,
-                            load_gsea = False, load_gsea_heatmap = False,
-                            tumor_is_int=False, region_mapping='cell_map_late.json')
+    # get_de(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV', cell_key='cell_type_adjusted', 
+    #                        no_adata=True, skip_stages=True, stage_key='stage', log_layer='do_log1p',
+    #                        load_pair = True, load_summary = True, load_regions = True,
+    #                         load_gsea = False, load_gsea_heatmap = False,
+    #                         tumor_is_int=False, region_mapping='cell_map_late.json')
+    
+    no_adata = True
+    if not no_adata:
+        adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
+        dss = adata.obs["dataset"].unique()
+        for ds in dss:
+            if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
+                continue
+            subset = adata[adata.obs["dataset"] == ds].copy()
+            subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
+    else:
+        import h5py
+        from anndata.experimental import read_elem
 
-    # def _run_get_de(params):
-    #     get_de(**params)
+        with read_elem(h5py.File(f'{backup_dir}/filtered_{ext_name}.h5ad', 'r')) as f:
+            adata = f
 
-    # with multiprocessing.Pool(2) as pool:
+    dss = dss[5:6]
+    try:
+        del adata
+        del subset
+        import gc
+        gc.collect()
+    except:
+        pass
+    
+
+    def _run_get_de(params):
+        get_de(**params)
+
+
+
+    futures = [None] * len(dss)
+    with multiprocessing.Pool(len(dss)) as pool:
+
+        for i, ds in enumerate(dss):
+            futures[i] = pool.apply_async(_run_get_de, [{
+                "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+                "log_layer": "do_log1p", "load_pair": True, "load_summary": False, "load_regions": False,
+                "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+                "n_jobs_inner": 10, "num_processes": 10, "parallel_pair": False, "parallel_summary": False,
+                "gene_feature": "feature_name", "no_adata": True
+            }])
+
+        for future in futures:
+            future.get()
+
+
         # future1 = pool.apply_async(_run_get_de, [{
         #     "ext_name": "Hu_Zhang_2023_NSCLC", "name": "Hu", "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
         #     "log_layer": "do_log1p", "load_pair": True, "load_summary": True, "load_regions": True,
@@ -741,5 +826,6 @@ def main():
     # future4.get()
     # future5.get()
     # future6.get()
+
 
 
