@@ -19,13 +19,15 @@ The workflow for getting from the raw AnnData files to the coabundance graphs an
 
 We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus.
 
-To run the notebook, you should run the container with this notebook repository mounted as a volume. In the following command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the path of the repository, and the other path is where the large data files would be stored.
+To run the notebook, you should run the container with this notebook repository mounted as a volume. In the following command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the path where your notebooks are, and the other path is where the large data files would be stored.
 
 You must install the apt package `docker-nvidia` for the GPU flags to work and, of course, have a working CUDA installation.
 
 ```bash
-docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --publish 8888-8892:8888-8892 --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:r4 /bin/bash
+docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --shm-size=200g\
+ --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:annots /bin/bash
 ```
+`shm-size` will alow you to run multiple owrkers in scvi.
 
 ### Jupyter lab
 
@@ -170,7 +172,7 @@ The only data neccesary to run the workflow from scratch are:
 
 We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
 
-- *netopaas/comp-onco:annot* 14.6G The image below but with BioMaRt and pandas==1.5.3
+- *netopaas/comp-onco:annots* 14.6G The image below but with BioMaRt. Was tested to be able to annotate new datasets with scvi.
 - *netopaas/comp-onco:sctransform* 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have pandas==1.5.3
 - *netopaas/comp_onco:r4* 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have pandas==1.5.3
 - *netopaas/comp-onco:raytune*  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
