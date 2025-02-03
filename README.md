@@ -55,7 +55,7 @@ After that go to the Dev Containers tab in the Remote Explorer tab and choose th
 When opening a notebook, we recommend attaching to a running jupyter server, which is launched with the `jl` command in a shell in the container, like above.
 This avoids losing the running kernel if you close the window you are working on.
 
-A problem with vscode is that it does not offer a way to shutdown notebooks you'll have to do it manuall with 
+A problem with vscode is that it does not offer a way to shutdown notebooks in an external jupyter server, you'll have to do it manually with 
 a notebook to delete not recently used kernels in `./utils/cull-kernels.ipynb`. It uses api calls.
 
 ## Folder structure
@@ -76,13 +76,14 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 - *nb_annotRefatlas*: Annotates tissue from a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types. Includes a notebook for annotation with label transfer via neighbors, but it had worse outcomes (`labelTransfer`). There is also a notebook that transfers the newly created clusters to another dataset (`extendPreds_{dataset}.ipynb`).
 
 - *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
+  - `HCL.ipynb` is an attempt to do a hierarchical statisitcally siginifcant approach tu clustering. But we abandoned it because it depends on the order of addition of the dataset.
 
 - *grouping_MI.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis by extracting MI.
 
 - *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
   - *graph_layouts.ipynb* Leiden, Newman, n-clique, interactive, and functionally enriched visualizations of the networks for different clusterings and times.
-  - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph, and analyzes paris of vars that are not pearson correlated and their profile. Also for the negative ones.
-  - *sbm_cluster.ipynb* Does stochastick block modelling (thans to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
+  - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph and analyzes pairs of vars that are not pearson correlated and their profile. Also for the negative ones.
+  - *sbm_cluster.ipynb* Does stochastic block modelling (thanks to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
     The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
   - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
   - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools`.
@@ -90,10 +91,10 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 - *nb_DE_wilcox*: 
   - *<dset>_<region>.ipynb* Extracts marker genes of clusters from existing cell annotations with the Wilcox method. 
   It also enriches for Hallmark gene ontologies. Its a bit bit convoluted and doesnt consider batch effects,
-  but only because it scanpy doenst consider abundance of cell types.
+  but only because scanpy doenst consider abundance of cell types.
   - *modal_DE.py* script to run the Wilcox marker gene extraction in modal.
     It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
-    Additionally it has some flas to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
+    Additionally it has some flags to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
   - *DE_incomplete.ipynb* is incomplete and attempts to do pseudo-bulk differential expression with MAST.
 
 ### Optional (or deprecated) Notebooks
