@@ -131,7 +131,7 @@ The only data neccesary to run the workflow from scratch are:
 
 #### All dirs
 
-- */root/datos/maestria/netopaas/luca/data/atlas/*  Has the LUCA atlas files from Salcher et. al.  It has pretty extensive metadata.
+- */root/datos/maestria/netopaas/luca/data/atlas/*  Has the LUCA atlas files from Salcher et. al. It has pretty extensive metadata.
   We have saved some subsets, the most import being 'extended_tumor_hvg.h5ad' that uses the extended atlas, but only has tumor samples and highly var genes.
 
 - */root/datos/maestria/netopaas/<ds_suffix><year>/*  Folder where all the files necessary to download the dataset to an acceptable h5ad are.
@@ -159,6 +159,8 @@ The only data neccesary to run the workflow from scratch are:
     - *mapping_<time>_leiden.json* The broad cluster annotation by chekcing contingency with previous cluster names.
   
   - *<ds_suffix>_predicted_leiden.csv* The cell anotations with tumor subclustering.
+
+  - *Group_checks/* Folder where the checkpoints for concatenating the groups are saved.
 
 - *<notebooks_folder>/nb_DE_wilcox* We save the marker genes and heatmap plots and its corresponding data here.
   - *wilcoxon_DE/<time>_<dset>_[tumor]pair.npy* The DE of pairs of cells for every gene. The tumor refers means that it is subsetted to certain cells. Pretty big files
