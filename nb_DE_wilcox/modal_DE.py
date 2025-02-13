@@ -19,14 +19,13 @@ import gseapy
 
 import modal
 
-app = modal.App("DE - wilcox")
 local = True
+if not local: app = modal.App("DE - wilcox")
 
 local_dir = '/root/datos/maestria/netopaas/luca_explore/surgeries/'
 # Define the remote path where the data will be available in the remote function
 backup_dir = "/data" if not local else local_dir
 w_folder = '/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
-subcluster_dir = f'{backup_dir}/Subcluster' if local else f'{backup_dir}/Subcluster'
 
 def get_gseas_df(de_regions: dict, valid_types: List[str],
                  types: List[str], id_: str, load_gsea: bool = False,
@@ -172,7 +171,7 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
     else:
         for comparison in comparisons:
             group1, group2 = comparison
-            results.append(compare_groups(adata, groupby, group1, group2, method, use_raw, parallel))
+            results.append(compare_groups(adata, groupby, group1, group2, method, use_raw, parallel, n_jobs_inner))
 
     for key, result in results:
         pairwise_results[key] = result
@@ -280,45 +279,40 @@ def cond_plot(de_regions: dict, cond_types, valid_types, n_genes,
                         ha='center', va='center', transform=ax.transAxes) 
             ax.axis('off')
 
+if not local:
+    scvi_image = modal.Image.from_registry(
+        "ghcr.io/scverse/scvi-tools:py3.11-cu12-1.2.x-runtime")\
+        .pip_install('gprofiler-official==1.0.0', 'gseapy==1.1.1', 'GEOparse==2.0.4')\
+    .pip_install('scanpy','matplotlib', 'seaborn').pip_install('numba')
 
-scvi_image = modal.Image.from_registry(
-    "ghcr.io/scverse/scvi-tools:py3.11-cu12-1.2.x-runtime")\
-    .pip_install('gprofiler-official==1.0.0', 'gseapy==1.1.1', 'GEOparse==2.0.4')\
-.pip_install('scanpy','matplotlib', 'seaborn')
-
-# To delete mutiple files: modal volume ls --json DE-vol | jq -r '.[] | select(.Filename | test("^Tumor")) | .Filename' | xargs -I {} sh -c 'echo Deleting: {}; modal volume rm DE-vol "/{}"'
-vol = modal.Volume.from_name("DE-vol", create_if_missing=True)
+    # To delete mutiple files: modal volume ls --json DE-vol | jq -r '.[] | select(.Filename | test("^Tumor")) | .Filename' | xargs -I {} sh -c 'echo Deleting: {}; modal volume rm DE-vol "/{}"'
+    vol = modal.Volume.from_name("DE-vol", create_if_missing=True)
 
 
 ## ACTIVATE THIS TO RUN THE FUNCTION IN MODAL
 # Remote function with GPU and mounted local directory
-# @app.function(
-#     image=scvi_image,
-#     # gpu='any',
-#     timeout=46000,
-#     cpu=40,
-#     volumes={backup_dir: vol}
-# #    mounts=[
-# #        modal.Mount.from_local_dir(
-# #            local_path=local_data_dir,
-# #            remote_path=remote_data_dir
-# #        )
-# #    ]
-# )
+@app.function(
+    image=scvi_image,
+    # gpu='any',
+    timeout=86000,
+    cpu=40,
+    volumes={backup_dir: vol}
+)
 def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_stages=False,
         cell_key = 'cell_type_adjusted', stage_key = 'stage', log_layer = 'do_log1p',
         num_processes = 1, load_pair = True, load_summary = True, load_regions = True,
         load_gsea = True, load_gsea_heatmap = True, zuani_symbols_summary = False,
         tumor_is_int = False, region_mapping='', n_jobs_inner=1, parallel_pair = False,
         no_adata = False, pred_name=None, parallel_summary=False,
-        gene_mapping:Union[str,dict]=None, gene_feature=None
+        gene_mapping:Union[str,dict]=None, gene_feature=None, avoid_ensembl=False, obs_has_name=False, obs_unique=False
     ):
     """
     Computes differential expression analysis for cell subpopulations across
     specific timepoints and regions, with optional GSEA (Gene Set Enrichment
     Analysis) integration and marker genes.
+
     Parameters
-        ----------
+    ----------
         ext_name : str, optional
             External name or ID for the dataset (default "Zuani_2024_NSCLC").
         name : str, optional
@@ -358,7 +352,7 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             Path to JSON file for optional region label mapping. Only renames the regions object and the plots.
             The mapper can refer to only one cell type and it will work, leaving all the other ones as they were before (default ""). 
         n_jobs_inner : int, optional
-            Internal parallelization for pairwise comparisons. Does not really work (default 10).
+            Internal parallelization for pairwise comparisons. Works thanks to numba.set_threads() (default 10).
         parallel_pair : bool, optional
             Enables pairwise Wilcoxon parallel execution if True/ NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA (default False).
         no_adata : bool, optional
@@ -371,6 +365,12 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             obs column name or dictionary for gene name mapping (default None).
         gene_feature : str, optional
             Feature name to assign to adata.var.index (default None).
+        avoid_ensembl : bool, optional
+            If True, avoids using Ensembl by giving an error and possible column names to use (default False).
+        obs_has_name : bool, optional
+            If True, the obs index has the gene name as prefix... remove it from preds df for index harmonization (default False).
+        obs_unique : bool, optional
+            If True, makes the obs index unique (default False).
     Returns
     -------
         None
@@ -388,6 +388,10 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             either using in-memory sc.pp.log1p or an existing log-transformed layer.
     """
 
+    print(f"NUMBA THREADS {numba.get_num_threads()}")
+    print(f"NUMBA PARALLEL {numba.config.NUMBA_NUM_THREADS}")
+    print(f"NUMBA PARALLEL ENV {os.getenv('NUMBA_NUM_THREADS')}")
+    
     if no_adata: 
         if not load_pair:
             raise Exception("If no adata is provided, the pairwise comparison must be loaded or not used")
@@ -397,19 +401,11 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
     if not local:
         print("This code is running on a remote worker!")
     print(f'Marker genes for {name} at {time} are being computed...')
+    print(f"scanpy version : {sc.__version__}")
     
     pred_name = pred_name if pred_name else name
     id_ = ext_name
     time_suffix = 'early' if 'I-II' in time else 'late'
-    
-    all_path = f'{w_folder}/{time}_{id_}'
-    key_pair = "rank_genes_groups_tumor"
-    regions = ['tumorall']
-    region = 'tumorall' # This we hardocde beacuse the beginning is not coded for using multiple regions
-
-    preds = pd.read_csv(f'{backup_dir}/{pred_name}_predicted_leiden_{time_suffix}.csv', index_col=0)
-    if pred_name == 'Atlas':
-        preds = preds[preds.batch == id_]
 
     if 'I-II' in time:
         stages = ['IA1', 'IB', 'IA2', 'IA3', 'IIB', 'II', 'I']
@@ -417,17 +413,28 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
         stages = ['IIIA', 'IIIB','III', 'III or IV', 'IV']
     stages = None if skip_stages else stages
     
+    all_path = f'{w_folder}/{time}_{id_}'
+    key_pair = "rank_genes_groups_tumor"
+    regions = ['tumorall']
+    region = 'tumorall' # This we hardocde beacuse the beginning is not coded for using multiple regions
+
+    print(f"Getting preds from: {backup_dir}/{pred_name}_predicted_leiden_{time_suffix}.csv")
+    preds = pd.read_csv(f'{backup_dir}/{pred_name}_predicted_leiden_{time_suffix}.csv', index_col=0)
+    if 'Atlas' in pred_name:
+        preds = preds[preds.batch.str.contains(id_)]
+    if obs_has_name:
+        preds.index = preds.index.str.split('_').str[1:].str.join('_')
+    
     if not no_adata:
         adata = ad.read_h5ad(f'{backup_dir}/filtered_{ext_name}.h5ad')
-        
+        if obs_unique:  adata.obs_names_make_unique()
         try:
             adata = adata[preds.index].copy()
             adata.obs.loc[preds.index, cell_key] = preds.loc[preds.index, cell_key]
         except:
             Exception("The index of the predictions does not match the index of the adata")
+        
         adata.obs['type_tissue'] = adata.obs[cell_key]
-        # print(adata)
-
         adata = adata[adata.obs[stage_key].isin(stages)].copy() if stages else adata
 
         preds = preds.loc[adata.obs.index]
@@ -438,6 +445,10 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             adata.X = adata.layers[log_layer]
         print("CHECKING THE DATA IS LOGARITHMED")
         print(adata[:10,10:20].to_df())
+
+        if avoid_ensembl and adata.var.index.str.contains('ENS').sum() > 4:
+            raise Exception(f"The dataset contains Ensembl IDs. Please provide a gene feature to use from: {adata.var.columns} or a gene mapping")
+            
         if gene_feature:
             adata.var.index = adata.var[gene_feature]
 
@@ -471,12 +482,11 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             any(x in g for x in ['Tumor','Ciliated','AT2', 'AT1', 'Club'])]
     else:
         tumor_types = [g for g in valid_types if g.isdigit()]
-
     if len(tumor_types) == 0:
         warnings.warn("No tumor groups found. COMPARISON WILL BE DONE FOR ALL TYPES")
 
+    print("Loading Pairwise")
     if not load_summary:
-        print("Loading Pairwise")
         if load_pair:
             DE_pair = np.load(all_path + '_tumorpair.npy', allow_pickle='TRUE').item()
             if not no_adata:
@@ -499,9 +509,9 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 
     if len(tumor_types) == 0:
         raise Exception("No tumor groups found THE SUMMARIES WOULD BE EMPTY")
-    DE_summary = {group: {} for group in tumor_types}
     
     print("Loading Summary")
+    DE_summary = {group: {} for group in tumor_types}
     if not load_summary:
         if parallel_summary:
             with multiprocessing.Pool(num_processes) as pool:
@@ -546,7 +556,6 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             if not no_adata:
                 adata.uns[f'rank_genes_groups_summary_{region}'] = DE_summary
 
-
     print("Loading Regions")
     for region in regions:
         if load_regions:
@@ -556,47 +565,31 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
                 adata.uns[f'rank_genes_groups_{region}'] = DE_region
             continue
 
-        regioner = {cell_type: {gene: np.mean(scores) for gene, scores
-                                 in genes_dict.items()}
-                        for cell_type, genes_dict in
-                          DE_summary.items()}
-        regioner = {cell_type: sorted(genes.items(), key=lambda k: k[1], reverse=True)
-                     for cell_type, genes in regioner.items()}
+        regioner_sorted = {
+            ct: sorted(((gene, np.mean(vals)) for gene, vals in gdict.items()),
+                       key=lambda x: x[1], reverse=True)
+            for ct, gdict in DE_summary.items()
+        }
+        cell_types = list(regioner_sorted.keys())
+        arr_scores, arr_names = [], []
+        for ct in cell_types:
+            g, sc = zip(*regioner_sorted[ct])
+            arr_names.append(g)
+            arr_scores.append(sc)
 
-        types_num = len(regioner)
-        genes_num = len(next(iter(DE_summary.values())).keys())
-        scores = [[None] * genes_num for _ in range(types_num)]
-        names = [[None] * genes_num for _ in range(types_num)]
-        
-        for i, cell_type in enumerate(regioner.keys()):
-            j = 0
-            for gene, score in regioner[cell_type]:
-                scores[i][j] = score
-                names[i][j] = gene
-                j += 1
+        arr_scores = np.array(arr_scores).T
+        arr_names = np.array(arr_names).T
+        dtypes_scores = [(ct, float) for ct in cell_types]
+        dtypes_names = [(ct, 'O') for ct in cell_types]
 
-        names_zip = list(zip(*names))
-        dtypes = [(typer, float) for typer in regioner.keys()]
-        dtypes_names = [(typer, 'O') for typer in regioner.keys()]
-
-        i = 0
-        for n_scores in zip(*scores):
-            if i==0:
-                rank_scores = np.rec.array([n_scores], dtype=dtypes)
-                rank_names = np.rec.array([names_zip[i]], dtype=dtypes_names)
-            else:
-                temp_scores = np.rec.array([n_scores], dtype=dtypes)
-                rank_scores = np.rec.array(np.concatenate((rank_scores, temp_scores)))
-        
-                temp_names = np.rec.array([names_zip[i]], dtype=dtypes_names)
-                rank_names = np.rec.array(np.concatenate((rank_names, temp_names)))
-            i += 1
-
-        DE_region: dict[str,Union[dict, np.recarray]] = {'params': {'groupby': 'type_tissue', 'reference': region,
-                                'method': 'wilcoxon', 'use_raw': False,
-                                'layer': None, 'corr_method': 'benjamini-hochberg'}}
-        DE_region['names'] = rank_names
-        DE_region['scores'] = rank_scores
+        DE_region = {
+            'params': {
+                'groupby': 'type_tissue', 'reference': region, 'method': 'wilcoxon',
+                'use_raw': False, 'layer': None, 'corr_method': 'benjamini-hochberg'
+            },
+            'names': np.core.records.fromarrays(arr_names.T, dtype=dtypes_names),
+            'scores': np.core.records.fromarrays(arr_scores.T, dtype=dtypes_scores)
+        }
 
         assert isinstance(DE_region['names'], np.recarray) and isinstance(DE_region['scores'], np.recarray)
 
@@ -608,8 +601,6 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
             vol.commit()
 
     print('Plotting Marker genes')
-    
-
     if region_mapping:
         mapper = json.load(open(region_mapping))
 
@@ -628,7 +619,6 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 
     types = DE_region['scores'].dtype.names
     num_types = len(types)
-
 
     fig, axs = plt.subplots((num_types + 1) // 2, 2, figsize=(16, 4.5 * ((num_types + 1) // 2)))
     n_genes = 20
@@ -686,108 +676,134 @@ def get_de(ext_name = "Zuani_2024_NSCLC", name = 'Zuani', time = 'I-II', skip_st
 if __name__ == '__main__':
     print('Running function locally')
 
-    # get_de(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV', cell_key='cell_type_adjusted', 
-    #                        no_adata=True, skip_stages=True, stage_key='stage', log_layer='do_log1p',
-    #                        load_pair = True, load_summary = True, load_regions = True,
-    #                         load_gsea = False, load_gsea_heatmap = False,
-    #                         tumor_is_int=False, region_mapping='cell_map_late.json')
-    
-    no_adata = True
-    if not no_adata:
-        adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
-        dss = adata.obs["dataset"].unique()
-        for ds in dss:
-            if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
-                continue
-            subset = adata[adata.obs["dataset"] == ds].copy()
-            subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
-    else:
-        import h5py
-        from anndata.experimental import read_elem
+    # region Extended Atlas annots
+    # get_de(**{
+    #             "ext_name": 'Hu_Zhang_2023_NSCLC', "name": 'Hu', "pred_name": 'Subcluster_wu/Hu', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
+    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
+    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+    #         })
 
-        with read_elem(h5py.File(f'{backup_dir}/filtered_{ext_name}.h5ad', 'r')) as f:
-            adata = f
-
-    dss = dss[5:6]
-    try:
-        del adata
-        del subset
-        import gc
-        gc.collect()
-    except:
-        pass
     
 
-    def _run_get_de(params):
-        get_de(**params)
-
-
-
-    futures = [None] * len(dss)
-    with multiprocessing.Pool(len(dss)) as pool:
-
-        for i, ds in enumerate(dss):
-            futures[i] = pool.apply_async(_run_get_de, [{
-                "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
-                "log_layer": "do_log1p", "load_pair": True, "load_summary": False, "load_regions": False,
+    # get_de(**{
+    #             "ext_name": 'Trinks_Bishoff_2021_NSCLC', "name": 'Bishoff', "pred_name": 'Subcluster_wu/Bishoff', "time": "III-IV", "skip_stages": True,
+    #             "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
+    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 50, "num_processes": 30, "parallel_pair": False, "parallel_summary": True,
+    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+    #         })
+    
+    get_de(**{
+                "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
+                "log_layer": "data", "load_pair": False, "load_summary": False, "load_regions": False,
                 "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-                "n_jobs_inner": 10, "num_processes": 10, "parallel_pair": False, "parallel_summary": False,
-                "gene_feature": "feature_name", "no_adata": True
-            }])
-
-        for future in futures:
-            future.get()
+                "n_jobs_inner": 30, "num_processes": 18, "parallel_pair": False, "parallel_summary": True,
+                "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+            })
 
 
-        # future1 = pool.apply_async(_run_get_de, [{
-        #     "ext_name": "Hu_Zhang_2023_NSCLC", "name": "Hu", "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
-        #     "log_layer": "do_log1p", "load_pair": True, "load_summary": True, "load_regions": True,
-        #     "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": True, "region_mapping": False
-        # }])
+    # get_de(**{
+    #             "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
+    #             "log_layer": "data", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
+    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+    #         })
+    
+    # get_de(**{
+    #             "ext_name": 'Zuani_2024_NSCLC', "name": 'Zuani', "pred_name": 'Subcluster_wu/Zuani', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "stage",
+    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
+    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "obs_unique":True
+    #         })
+    # endregion
+    
+    
+    # region Altas annots
+    
+    # region Preamble
+    # no_adata = True
+    # if not no_adata:
+    #     adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
+    #     dss = adata.obs["dataset"].unique()
+    #     for ds in dss:
+    #         if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
+    #             continue
+    #         subset = adata[adata.obs["dataset"] == ds].copy()
+    #         subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
+    # else:
+    #     import h5py
+    #     from anndata.experimental import read_elem
 
-        # future2 = pool.apply_async(_run_get_de, [{
-        #     "ext_name": "Deng_Liu_LUAD_2024", "name": "Deng","time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
-        #     "log_layer": "data", "load_pair": True, "load_summary": True, "load_regions": True,
-        #     "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": True, "region_mapping": True
-        # }])
+    #     file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
+        
+    #     obs_matrix = read_elem(file_obj['obs'])
+    #     dss = obs_matrix['dataset'].unique()
+    #     file_obj.close()
+            
 
-        # future3 = pool.apply_async(_run_get_de, [{
-        #     "ext_name": "Deng_Liu_LUAD_2024", "name": "Deng","time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
-        #     "log_layer": "data", "load_pair": True, "load_summary": True, "load_regions": True,
-        #     "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": True, "region_mapping": False
-        # }])
+    # dss = dss[6:]
+    # try:
+    #     del adata
+    #     del subset
+    #     import gc
+    #     gc.collect()
+    # except:
+    #     pass
+    # endregion
+    # region Sequential
+    # for i, ds in enumerate(dss):
+    #     try:
+    #         get_de(**{
+    #             "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Subcluster_wu/Atlas', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
+    #             "gene_feature": "feature_name", "no_adata": False
+    #         })
+    #     except Exception as e:
+    #         print(f'Error in {ds}: {e}')
+    # endregion
 
-        # future4 = pool.apply_async(_run_get_de, [{
-        #     "ext_name": "Zuani_2024_NSCLC", "name": "Zuani","time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "stage",
-        #     "log_layer": "do_log1p", "load_pair": True, "load_summary": True, "load_regions": True,
-        #     "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": True, "region_mapping": False
-        # }])
+    # region Parallel
+    # def _run_get_de(params):
+    #     get_de(**params)
+    # futures = [None] * len(dss)
+    # with multiprocessing.Pool(len(dss)) as pool:
 
-        # future5 = pool.apply_async(_run_get_de, [{
-        #     "ext_name": "Zuani_2024_NSCLC", "name": "Zuani","time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "stage",
-        #     "log_layer": "do_log1p", "load_pair": True, "load_summary": True, "load_regions": True,
-        #     "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": True, "region_mapping": False
-        # }])
+    #     for i, ds in enumerate(dss):
+    #         futures[i] = pool.apply_async(_run_get_de, [{
+    #             "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+    #             "n_jobs_inner": 10, "num_processes": 10, "parallel_pair": False, "parallel_summary": False,
+    #             "gene_feature": "feature_name", "no_adata": False
+    #         }])
 
-        # future1.get()
-        # future2.get()
-        # future3.get()
-        # future4.get()
-        # future5.get()
+    #     for future in futures:
+    #         future.get()
+    # endregion
+    # endregion
 
-# Main entry point
-@app.local_entrypoint()
+
+## ACTIVATE THIS TO RUN THE FUNCTION IN MODAL
+# @app.local_entrypoint()
 def main():
     # Run the remote functions concurrently
     # We do this per dataset to avoid batch effects
     print("Starting differential expression analysis on the remote worker...")
     
     # Start both tasks
-    # future1 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='I-II',
-    #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
-    #                        load_pair = False, load_summary = False, load_regions = False,
-    #                         load_gsea = False, load_gsea_heatmap = False,
-    #                         tumor_is_int=True)
+    future1 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='I-II',
+                           cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
+                           load_pair = False, load_summary = False, load_regions = False,
+                            load_gsea = False, load_gsea_heatmap = False,
+                            tumor_is_int=False,
+                            pred_name='Subcluster_wu/Zuani', n_jobs_inner=30, avoid_ensembl=True, obs_has_name=True, parallel_summary=True, num_processes=30, obs_unique=True)
     
     # future2 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='III-IV',
     #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
@@ -805,7 +821,8 @@ def main():
     #                        cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data',
     #                        load_pair = False, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
-    #                         tumor_is_int=True)
+    #                         tumor_is_int=False,
+    #                         pred_name='Subcluster_wu/Deng', n_jobs_inner=30, avoid_ensembl=True, obs_has_name=True, parallel_summary=True, num_processes=30)
     
     # future5 = get_de.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
     #                        cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p',
@@ -820,7 +837,7 @@ def main():
     #                         tumor_is_int=True)
     
     # Wait for both tasks to complete
-    # future1.get()
+    future1.get()
     # future2.get()
     # future3.get()
     # future4.get()
