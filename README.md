@@ -27,7 +27,7 @@ You must install the apt package `docker-nvidia` for the GPU flags to work and, 
 docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --shm-size=200g\
  --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:annots /bin/bash
 ```
-`shm-size` will alow you to run multiple owrkers in scvi.
+`shm-size` will alow you to run multiple workers in scvi.
 
 ### Jupyter lab
 
@@ -95,6 +95,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   - *modal_DE.py* script to run the Wilcox marker gene extraction in modal.
     It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
     Additionally it has some flags to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
+  - *test_pipeline.py* are some basic test for modal_DE.py
   - *DE_incomplete.ipynb* is incomplete and attempts to do pseudo-bulk differential expression with MAST.
 
 ### Optional (or deprecated) Notebooks
