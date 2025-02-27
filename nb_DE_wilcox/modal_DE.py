@@ -379,6 +379,8 @@ class ProcessorConfig:
         Whether to load existing DE summary from file (default True).
     load_regions : bool, optional
         Whether to load existing region-level results from file (default True).
+    regions_AUC : bool, optional
+        If True, computes region-level AUCs instead of mean z-scores (default False).
     parallel_pair : bool, optional
         Enables pairwise Wilcoxon parallel execution if True/ NOT RECOMMENDED, MUST COPY THE WHOLE ANNDATA (default False).
     parallel_summary : bool, optional
@@ -396,6 +398,7 @@ class ProcessorConfig:
     load_pair: bool = False
     load_summary: bool = False
     load_regions: bool = False
+    regions_AUC: bool = False
     parallel_pair: bool = False
     parallel_summary: bool = False
     update_symbols_summary: Union[bool, str] = False
@@ -493,16 +496,18 @@ class DataLoader:
             adata.X = adata.layers[self.config.log_layer]
         
         preds = preds.loc[adata.obs.index]
-
-        if self.config.avoid_ensembl and adata.var.index.str.contains('ENS').sum() > 4:
-            raise Exception(f"The dataset contains Ensembl IDs. Please provide a gene feature to use from: {adata.var.columns} or a gene mapping")
             
         if self.config.gene_feature:
+            print(f"Setting gene feature to {self.config.gene_feature}")
             adata.var.index = adata.var[self.config.gene_feature]
+            print("First 10 genes in adata.var:")
+            print(adata.var.index[:10])
 
         if isinstance(self.common.gene_mapping, str):
             self.common.gene_mapping = adata.var.loc[:, self.common.gene_mapping].to_dict()
 
+        if self.config.avoid_ensembl and adata.var.index.str.contains('ENS').sum() > 400:
+            raise Exception(f"The dataset contains Ensembl IDs. Please provide a gene feature to use from: {adata.var.columns} or a gene mapping")
         import gc
         gc.collect()
 
@@ -585,8 +590,15 @@ class DEProcessor:
             f"{self.common.time}_{self.common.ext_name}_summary_tumorall.npy"
         )
         de_summary = {}
-        if self.config.load_summary and os.path.exists(summary_file):
-            de_summary = np.load(summary_file, allow_pickle=True).item()
+        if self.config.load_summary:
+            if not os.path.exists(summary_file):
+                logging.info(f"Summary file {summary_file} not found!"
+                             )
+                if self.config.load_pair:
+                    raise Exception("Pairwise comparisons must be loaded to compute summary")
+                logging.info("Computing summary from pairs")
+            else:
+                de_summary = np.load(summary_file, allow_pickle=True).item()
 
             if self.config.update_symbols_summary:
                 gene_name_map = pd.read_csv(
@@ -613,7 +625,7 @@ class DEProcessor:
             else:
                 for group in tumor_types:
                     grp, summary = process_gene(group, de_pair, valid_types)
-                    de_summary[group] = summary
+                    de_summary[grp] = summary
             
             np.save(summary_file, de_summary)
             if not local:
@@ -634,11 +646,45 @@ class DEProcessor:
         if self.config.load_regions and os.path.exists(region_file):
             de_region = np.load(region_file, allow_pickle=True).item()
         else:
-            regioner_sorted = {
-                ct: sorted(((gene, np.mean(vals)) for gene, vals in gdict.items()),
-                           key=lambda x: x[1], reverse=True)
-                for ct, gdict in de_summary.items()
-            }
+            if not self.config.regions_AUC:
+                regioner_sorted = {
+                    ct: sorted(((gene, np.mean(vals)) for gene, vals in gdict.items()),
+                            key=lambda x: x[1], reverse=True)
+                    for ct, gdict in de_summary.items()
+                }
+            else:
+                counts = {}
+                for ct in de_summary.keys():
+                    if adata is not None:
+                        n1 = np.sum(adata.obs["type_tissue"] == ct)
+                        n2 = np.sum(adata.obs["type_tissue"] != ct)
+                    else:
+                        n1, n2 = 1, 1  # Fallback values to avoid division by zero
+                    counts[ct] = (n1, n2)
+
+                # Replace np.mean(vals) with the mean of AUCs for each z-value in vals:
+                # For each z in vals, compute:
+                #   auc_z = ( z * sqrt(n1*n2*(n1+n2+1)/12) + (n1*n2)/2 ) / (n1*n2)
+                # Then take the mean of all auc_z for that gene.
+                regioner_sorted = {
+                    ct: sorted(
+                        (
+                            (
+                                gene,
+                                np.mean([
+                                    (z * np.sqrt(n1 * n2 * (n1 + n2 + 1) / 12) + (n1 * n2) / 2) / (n1 * n2)
+                                    for z in vals
+                                ])
+                            )
+                            for gene, vals in gdict.items()
+                        ),
+                        key=lambda x: x[1],
+                        reverse=True
+                    )
+                    for ct, gdict in de_summary.items()
+                    for n1, n2 in [counts[ct]]
+                }
+        
             cell_types = list(regioner_sorted.keys())
             arr_scores, arr_names = [], []
             for ct in cell_types:
@@ -856,7 +902,7 @@ else:
     @app.function(
         image=scvi_image,
         timeout=86000,
-        cpu=40,
+        # cpu=40,
         volumes={backup_dir: vol}
     )
     def get_de(**kwargs):
@@ -866,47 +912,43 @@ else:
 if __name__ == '__main__':
     print('Running function locally')
 
-    # region Extended Atlas annots
-    # get_de(**{
-    #             "ext_name": 'Hu_Zhang_2023_NSCLC', "name": 'Hu', "pred_name": 'Subcluster_wu/Hu', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
-    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
-    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
-    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
-    #         })    
-
-    get_de(**{
-                "ext_name": 'Trinks_Bishoff_2021_NSCLC', "name": 'Bishoff', "pred_name": 'Subcluster_wu/Bishoff', "time": "III-IV", "skip_stages": True,
-                "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
-                "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
+    common_kwargs = {"load_pair": True, "load_summary": True, "load_regions": False,
                 "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
                 "n_jobs_inner": 8, "num_processes": 8, "parallel_pair": False, "parallel_summary": True,
-                "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
-            })
+                "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "regions_AUC": True,
+                "log_layer": None}
+
+    # region Extended Atlas annots
+    # get_de(**{
+    #             "ext_name": 'Trinks_Bishoff_2021_NSCLC', "name": 'Bishoff', "pred_name": 'Subcluster_wu/Bishoff', "time": "III-IV", "skip_stages": True,
+    #             "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
+    #             "log_layer": "do_log1p", **common_kwargs
+    #         })
+
+    # get_de(**{
+    #             "ext_name": 'Hu_Zhang_2023_NSCLC', "name": 'Hu', "pred_name": 'Subcluster_wu/Hu', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
+    #             "log_layer": "do_log1p", **common_kwargs
+    #         })    
     
     # get_de(**{
     #             "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
-    #             "log_layer": "data", "load_pair": False, "load_summary": False, "load_regions": False,
-    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-    #             "n_jobs_inner": 30, "num_processes": 18, "parallel_pair": False, "parallel_summary": True,
-    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+    #             "log_layer": "data", **common_kwargs
     #         })
 
 
     # get_de(**{
     #             "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
-    #             "log_layer": "data", "load_pair": False, "load_summary": False, "load_regions": False,
-    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
-    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True
+    #             "log_layer": "data", **common_kwargs
     #         })
     
     # get_de(**{
     #             "ext_name": 'Zuani_2024_NSCLC', "name": 'Zuani', "pred_name": 'Subcluster_wu/Zuani', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "stage",
-    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
-    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
-    #             "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "obs_unique":True
+    #             "log_layer": "do_log1p", **common_kwargs, "obs_unique": True
+    #         })
+    
+    # get_de(**{
+    #             "ext_name": 'Zuani_2024_NSCLC', "name": 'Zuani', "pred_name": 'Subcluster_wu/Zuani', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "stage",
+    #             "log_layer": "do_log1p", **common_kwargs, "obs_unique": True
     #         })
     # endregion
     
@@ -914,47 +956,50 @@ if __name__ == '__main__':
     # region Altas annots
     
     # region Preamble
-    # no_adata = True
-    # if not no_adata:
-    #     adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
-    #     dss = adata.obs["dataset"].unique()
-    #     for ds in dss:
-    #         if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
-    #             continue
-    #         subset = adata[adata.obs["dataset"] == ds].copy()
-    #         subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
-    # else:
-    #     import h5py
-    #     from anndata.experimental import read_elem
+    no_adata = True
+    if not no_adata:
+        adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
+        dss = adata.obs["dataset"].unique()
+        for ds in dss:
+            if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
+                continue
+            subset = adata[adata.obs["dataset"] == ds].copy()
+            subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
+    else:
+        import h5py
+        from anndata.experimental import read_elem
 
-    #     file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
+        file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
         
-    #     obs_matrix = read_elem(file_obj['obs'])
-    #     dss = obs_matrix['dataset'].unique()
-    #     file_obj.close()
+        obs_matrix = read_elem(file_obj['obs'])
+        dss = obs_matrix['dataset'].unique()
+        file_obj.close()
             
 
-    # dss = dss[6:]
-    # try:
-    #     del adata
-    #     del subset
-    #     import gc
-    #     gc.collect()
-    # except:
-    #     pass
+    dss = [ds for ds in dss if 'Wu' in ds]
+    try:
+        del adata
+        del subset
+        import gc
+        gc.collect()
+    except:
+        pass
     # endregion
     # region Sequential
-    # for i, ds in enumerate(dss):
-    #     try:
-    #         get_de(**{
-    #             "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Subcluster_wu/Atlas', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
-    #             "log_layer": "do_log1p", "load_pair": False, "load_summary": False, "load_regions": False,
-    #             "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-    #             "n_jobs_inner": 5, "num_processes": 5, "parallel_pair": False, "parallel_summary": True,
-    #             "gene_feature": "feature_name", "no_adata": False
-    #         })
-    #     except Exception as e:
-    #         print(f'Error in {ds}: {e}')
+    for i, ds in enumerate(dss):
+        try:
+            # get_de(**{
+            #     "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Subcluster_wu/Atlas', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+            #     "log_layer": "do_log1p", **common_kwargs, "obs_has_name": False, "gene_feature": "feature_name"
+            # })
+
+            get_de(**{
+                "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Subcluster_wu/Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+                "log_layer": "do_log1p", **common_kwargs, "obs_has_name": False, "gene_feature": "feature_name"
+            })
+        except Exception as e:
+            print(f'Error in {ds}: {e}')
+
     # endregion
 
     # region Parallel

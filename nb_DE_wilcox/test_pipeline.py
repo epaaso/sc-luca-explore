@@ -119,7 +119,7 @@ def fake_de_pair():
         'logfoldchanges': np.array(
             [1.0, 2.0, 4.0]
         ),
-        'pvals': np.array(
+        'pvals_adjusted': np.array(
             [2e-3, 0.01, 0.06]
         ),
         }
