@@ -65,7 +65,7 @@ We plan to automatize the process with Nextflow, like they do in the repo of the
 
 But for now all the necessary steps are contained in the notebooks and scripts, though a little scrambled. The notebooks are explained in the order in which they should be run.
 
-### Notebooks
+### Notebooks and scripts
 
 - *get_data.ipynb*: Contains the code for exploring and downloading all possible datasets to extend the scLUCA atlas. It was important to have UMI counts and tumor stage annotation.
 
@@ -95,10 +95,11 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   - *modal_DE.py* script to run the Wilcox marker gene extraction in modal.
     It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
     Additionally it has some flags to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
-  - *test_pipeline.py* are some basic test for modal_DE.py
+  - *test_pipeline.py* are some basic tests for modal_DE.py
+  - *aggregate_markers.py* aggregate all dsets marker genes, and plot the highest. Also plot GSEA NES scores for cancer hallmarks.
   - *DE_incomplete.ipynb* is incomplete and attempts to do pseudo-bulk differential expression with MAST.
 
-### Optional (or deprecated) Notebooks
+### Optional (or deprecated) Notebooks and scripts
 
 - *nb_DE_SCT*: Extracts marker genes of clusters from existing cell annotations with the GLM method `SCTransform v2`.
   It also corrects for batch effects per sample and enriches for Hallmark gene ontologies. 
