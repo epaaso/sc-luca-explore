@@ -1,7 +1,8 @@
 import os
-from typing import List
+from typing import List, Optional
 import logging
 
+from matplotlib.axes import Axes
 import numpy as np
 import pandas as pd
 
@@ -12,6 +13,107 @@ import gseapy
 
 logging.basicConfig(level=logging.INFO)
 
+
+def rank_genes_group(
+    de_regions: dict,
+    group_name: str,
+    n_genes: int = 20,
+    gene_mapping: Optional[dict] = None,
+    gene_names: Optional[List[str]] = None,
+    fontsize: int = 8,
+    titlesize: int = 10,
+    show: Optional[bool] = None,
+    ax: Optional[Axes] = None,
+    **kwds,
+) -> Axes:
+    """
+    Visualizes the ranking of genes for a specified group from an AnnData object.
+
+    Parameters:
+        de_regions: dict
+            The dictionary containing the dataset and analysis results.
+        group_name: str
+            The name of the group for which to rank genes.
+        n_genes: int, optional
+            The number of top genes to display (default is 20).
+        gene_mapping: Optional[dict], optional
+            A dictionary mapping gene names to other ones
+        gene_names: Optional[List[str]], optional
+            Explicit list of gene names to use for plotting.
+        fontsize: int, optional
+            Font size for gene names (default is 8).
+        titlesize: int, optional
+            Font size for the title (default is 10).
+        show: Optional[bool], optional
+            If True, show the plot immediately.
+        ax: Optional[Axes], optional
+            A matplotlib axes object to plot on. If None, a new figure is created.
+        **kwds:
+            Additional keyword arguments to pass to plotting functions.
+
+    Returns:
+        Axes:
+            The matplotlib axes with the plot.
+
+    Raises:
+        ValueError:
+            If n_genes is less than 1.
+    """
+    if n_genes < 1:
+        raise ValueError(f"n_genes must be positive; received n_genes={n_genes}.")
+
+    reference = str(de_regions['params']['reference'])
+
+    gene_names = gene_names if gene_names is not None else de_regions['names'][group_name][:n_genes]
+    gene_mask = np.isin(de_regions['names'][group_name], gene_names)
+    scores = de_regions['scores'][group_name][gene_mask]
+
+    if gene_mapping:
+        gene_names = [gene_mapping.get(gene, gene) for gene in gene_names]
+
+    ymin = np.min(scores)
+    ymax = np.max(scores)
+    ymax += 0.3 * (ymax - ymin)
+
+    ax = ax if ax is not None else plt.subplot(111)
+    ax.set_ylim(ymin, ymax)
+    ax.set_xlim(-0.9, n_genes - 0.1)
+
+    for ig, gene_name in enumerate(gene_names):
+        ax.text(
+            ig, scores[ig], gene_name,
+            rotation='vertical',
+            verticalalignment='bottom',
+            horizontalalignment='center',
+            fontsize=fontsize
+        )
+
+    ax.set_title(f'{group_name} vs. {reference}', fontsize=titlesize)
+    ax.set_xticklabels([])
+    ax.set_ylabel('score')
+    ax.set_xlabel('genes')
+
+    if show:
+        plt.show()
+
+    return ax
+
+
+def cond_plot(de_regions: dict, cond_types, valid_types, n_genes,
+               ax: Optional[Axes] = None, fontsize=9, titlesize=14,
+                gene_mapping:dict=None, **kwds):
+    if set(cond_types).issubset(valid_types):
+        rank_genes_group(de_regions, cond_types[0], n_genes=n_genes,
+                            ax=ax, sharey=False, show=False,
+                            fontsize=fontsize, titlesize=titlesize, gene_mapping=gene_mapping)
+    else:
+        # pass
+        # Draw an empty plot with a message
+        if ax:
+            ax.text(0.5, 0.5, f'Missing cells: {cond_types}', color='red',
+                        ha='center', va='center', transform=ax.transAxes) 
+            ax.axis('off')
+            
 
 def get_gseas_df(de_regions: dict, valid_types: List[str],
                  types: List[str], id_: str, load_gsea: bool = False,
@@ -188,26 +290,22 @@ def plot_marker_genes(de_region, out_file, n_genes=20):
     cell_types = list(de_region["scores"].dtype.names)
     num_types = len(cell_types)
     
-    fig, axs = plt.subplots((num_types + 1) // 2, 2, figsize=(16, 4.5 * ((num_types + 1) // 2)))
+    fig, axs = plt.subplots(
+        (num_types + 1) // 2, 2, figsize=(16, 4.5 * ((num_types + 1) // 2))
+    )
     axs = axs.ravel()
-    
-    for i, ct in enumerate(cell_types):
-        gene_names = de_region["names"][ct]
-        gene_scores = de_region["scores"][ct]
-        top_genes = gene_names[:n_genes]
-        top_scores = gene_scores[:n_genes]
-        
-        axs[i].bar(range(len(top_scores)), top_scores, color='skyblue')
-        axs[i].set_title(ct)
-        axs[i].set_xticks(range(len(top_scores)))
-        axs[i].set_xticklabels(top_genes, rotation='vertical', fontsize=8)
-        axs[i].set_ylabel('Score')
-    
+    n_genes = 20
+    for i, cell_type in enumerate(cell_types):
+        cond_plot(
+        de_region, [cell_type], cell_types, n_genes=n_genes,
+        ax=axs[i], sharey=False, key="rank_genes_groups_tumorall",
+        show=False, fontsize=6, titlesize=9, gene_mapping=None
+        )
     # Remove any extra axes
-    for j in range(i + 1, len(axs)):
-        fig.delaxes(axs[j])
+    if len(axs) > num_types:
+        for j in range(num_types, len(axs)):
+            fig.delaxes(axs[j])
     
-    plt.tight_layout()
     plt.savefig(out_file, bbox_inches="tight")
     logging.info(f"Marker genes plot saved to {out_file}")
     plt.close()
@@ -257,32 +355,35 @@ if __name__ == "__main__":
     from anndata.experimental import read_elem
 
     wilcox_path = "/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE"
-    time = 'III-IV'
+    time = 'I-II'
+    average_now = False
+    output_average = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
 
-    # Get atlas dsets
-    file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
-    obs_matrix = read_elem(file_obj['obs'])
-    dss = list(obs_matrix['dataset'].unique())
-    file_obj.close()
+    if average_now:
+        # Get atlas dsets
+        file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
+        obs_matrix = read_elem(file_obj['obs'])
+        dss = list(obs_matrix['dataset'].unique())
+        file_obj.close()
 
-    # List of de_region files from various datasets (adjust these paths as needed)
-    dss.extend(['Trinks_Bishoff_2021_NSCLC', 'Deng_Liu_LUAD_2024', 'Zuani_2024_NSCLC', 'Hu_Zhang_2023_NSCLC'])
-    region_files = [ os.path.join(wilcox_path,
-                     f"{time}_{ds}_tumorall.npy")
-        for ds in dss
-    ]
-    
-    # Compute the averaged de_region object
-    averaged_de_region = average_de_regions(region_files)
-    
-    # Optionally, save the new de_region object
-    output_file = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
-    np.save(output_file, averaged_de_region, allow_pickle=True)
-    logging.info(f"Averaged de_region saved to {output_file}")
+        # List of de_region files from various datasets (adjust these paths as needed)
+        dss.extend(['Trinks_Bishoff_2021_NSCLC', 'Deng_Liu_LUAD_2024', 'Zuani_2024_NSCLC', 'Hu_Zhang_2023_NSCLC'])
+        region_files = [ os.path.join(wilcox_path,
+                        f"{time}_{ds}_tumorall.npy")
+            for ds in dss
+        ]
+        
+        # Compute the averaged de_region object
+        averaged_de_region = average_de_regions(region_files)
+        np.save(output_average, averaged_de_region, allow_pickle=True)
+        logging.info(f"Averaged de_region saved to {output_average}")
+    else:
+        averaged_de_region = np.load(output_average, allow_pickle=True).item()
+        logging.info(f"Averaged de_region loaded from {output_average}")
     
     # Plot marker genes using the new averaged de_region
-    marker_plot_file = os.path.join(os.path.dirname(output_file), f"{time}_averaged_markergenes.png")
+    marker_plot_file = os.path.join(os.path.dirname(output_average), f"{time}_averaged_markergenes.png")
     plot_marker_genes(averaged_de_region, marker_plot_file)
     
     # Plot a GSEA heatmap based on the averaged de_region scores
-    plot_gsea_heatmap(averaged_de_region)
+    # plot_gsea_heatmap(averaged_de_region)
