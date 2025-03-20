@@ -4,7 +4,7 @@ The main objective of this project is to perform an ecological analysis of the c
 
 The chosen methodology is to annotate cell types with the help of a newly trained reference atlas. For this, we use the [scvi](https://github.com/scverse/scvi-tools) framework. We base our work on the study by [Salcher, Sturm, Horvath et al. 2022](https://pubmed.ncbi.nlm.nih.gov/36368318/), where they gathered and standardized most of the data. 
 
-Additionally, we expanded the atlas with four more datasets, optimized the hyperparameters of our deep learning model, and trained it to also predict tumor cell types. The prediction was better than with the most used method [InferCNV](https://github.com/broadinstitute/infercnv)
+Additionally, we expanded the atlas with four more datasets, optimized the hyperparameters of our deep learning model, and trained it to also predict tumor cell types. The prediction was better than with the most used method [InferCNV](https://github.com/broadinstitute/infercnv).
 
 Subsequently, we obtained coabundance metrics. We chose the mutual inference (MI) metric, as it captures non-linear correlations in the data, and the methodology in the [ARACNE-AP](https://github.com/califano-lab/ARACNe-AP) package ensures a smaller possibility of spurious correlations.
 
