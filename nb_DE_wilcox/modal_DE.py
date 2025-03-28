@@ -440,7 +440,7 @@ class DEConfig:
 # endregion
 
 # -----------------------------------------------------------------------------
-# Data Loading Component
+# region Data Loading Component
 # -----------------------------------------------------------------------------
 
 class DataLoader:
@@ -539,7 +539,7 @@ class DataLoader:
         
 
 # -----------------------------------------------------------------------------
-# Processing Component
+# region Processing Component
 # -----------------------------------------------------------------------------
 
 class DEProcessor:

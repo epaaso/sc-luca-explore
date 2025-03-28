@@ -84,6 +84,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   - *graph_layouts.ipynb* Leiden, Newman, n-clique, interactive, and functionally enriched visualizations of the networks for different clusterings and times.
   - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph and analyzes pairs of vars that are not pearson correlated and their profile. Also for the negative ones.
   - *sbm_cluster.ipynb* Does stochastic block modelling (thanks to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
+  - *abund_clusters.ipynb* Leiden clustering of the abundances matrix, with lots of informative graphics of them like Degree centrality plots, Graphs, Snakey plots, Boxplots and such
     The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
   - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
   - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools`.
