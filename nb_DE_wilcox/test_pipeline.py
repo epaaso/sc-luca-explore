@@ -106,7 +106,7 @@ def fake_de_pair():
     Returns a dictionary with scores, names, logfoldchanges, and pvals for 1 region.
     """
     de_pair = {
-        'Tumor': {
+        'Tumor1_vs_Tumor2': {
         "scores": np.array(
             [1.0, 2.0, 4.0]
         ),

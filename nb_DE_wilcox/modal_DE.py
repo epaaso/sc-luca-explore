@@ -636,12 +636,13 @@ class DEProcessor:
 
         return de_summary
 
-    def compute_regions(self, adata: Optional[ad.AnnData], de_summary: dict) -> dict:
+    def compute_regions(self, adata: Optional[ad.AnnData], de_summary: dict, region_file: str=None) -> dict:
         logging.info("Computing region-level differential expression")
-        region_file = os.path.join(
-            self.common.w_folder,
-            f"{self.common.time}_{self.common.ext_name}_tumorall.npy"
-        )
+        if not region_file:
+            region_file = os.path.join(
+                self.common.w_folder,
+                f"{self.common.time}_{self.common.ext_name}_tumorall.npy"
+            )
 
         if self.config.load_regions and os.path.exists(region_file):
             de_region = np.load(region_file, allow_pickle=True).item()

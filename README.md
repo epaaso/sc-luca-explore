@@ -17,7 +17,9 @@ The workflow for getting from the raw AnnData files to the coabundance graphs an
 
 ## Running
 
-We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus.
+To see the order for running the workflow, got to the **Folder Strcuture -> Notebooks and scripts** section. There is an explanation of the notebooks in the order they sould be run
+
+We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus. So if you just want to run a notebook separately, look at the versions of the packages in the Dokcefile.
 
 To run the notebook, you should run the container with this notebook repository mounted as a volume. In the following command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the path where your notebooks are, and the other path is where the large data files would be stored.
 
@@ -97,7 +99,8 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
     It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
     Additionally it has some flags to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
   - *test_pipeline.py* are some basic tests for modal_DE.py
-  - *aggregate_markers.py* aggregate all dsets marker genes, and plot the highest. Also plot GSEA NES scores for cancer hallmarks.
+  - *aggregate_markers.py* aggregate all dsets marker genes, and plot the highest. Also plot GSEA NES scores for cancer hallmarks. 
+    Also has a function to convert all marker genes objects to a count matrix composed of AUC of the genes, useful for CellphoneDB without statistical analysis (Method 1).
   - *DE_incomplete.ipynb* is incomplete and attempts to do pseudo-bulk differential expression with MAST.
 
 ### Optional (or deprecated) Notebooks and scripts
