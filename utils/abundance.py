@@ -348,6 +348,8 @@ def plot_degree_centrality(G: nx.graph.Graph, betweenness=False, time='III-IV', 
     # 1) Compute degree centrality (returns a dict: node -> centrality)
     centrality = nx.degree_centrality(G) if not betweenness else nx.betweenness_centrality(G)
     metric = "Degree" if not betweenness else "Betweenness"
+    for node, val in centrality.items():
+        G.nodes[node][f"{metric.lower()}_centrality"] = val
     
     # 2) Sort by centrality in descending order
     sorted_centrality = sorted(centrality.items(), key=lambda x: x[1], reverse=True)
@@ -368,6 +370,9 @@ def plot_degree_centrality(G: nx.graph.Graph, betweenness=False, time='III-IV', 
     if ax is None:
         plt.tight_layout()
         plt.show()
+    return G
+
+
 
 
 def plot_degree_distribution_power_law(G):
