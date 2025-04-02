@@ -14,7 +14,7 @@ from networkx.algorithms.community import greedy_modularity_communities
 import plotly.graph_objects as go
 from collections import Counter
 
-# Annotate samples with therapy
+# Annotate samples with therapy, Wu Zhou has 7 that are not annotated
 samples_therapy = {
     'immune01': 'chemo', 'immune02': 'immuno+chemo', 'immune03': 'immuno+chemo', 'immune04': 'immuno+chemo', 'immune05': 'chemo',
     'immune06': 'immuno+chemo', 'immune07': 'immuno+chemo', 'immune08': 'chemo', 'immune09': 'immuno+chemo', 'immune10': 'immuno+chemo',
@@ -28,7 +28,7 @@ samples_therapy = {
 # Define colors for different cell categories
 color_map = {
     'immune adaptive': 'lightgreen',
-    'immune native': 'blue',
+    'immune innate': 'blue',
     'immune both': 'purple',
     'stromal': '#D2B48C',
     'epithelial': 'orange',
@@ -40,7 +40,7 @@ cell_categories = {
     'immune adaptive': ['T cell CD8 activated', 'T cell CD4', 'B cell', 'B cell dividing', 'T cell regulatory', 'T cell CD8 effector memory',
                          'T cell CD8 activated', 'cDC2', 'T cell CD8 terminally exhausted', 'T cell CD4 dividing', 'T cell CD8 dividing', 'T cell CD8 naive'],
     'immune both': ['Mast cell', 'myeloid dividing', 'pDC', 'DC mature', 'T cell NK-like', "Plasma cell", "Plasma cell dividing"],
-    'immune native': ['Monocyte classical', 'Monocyte non-classical', 'NK cell', 'Macrophage', 'Macrophage alveolar', 'NK cell dividing', 'Neutrophils', 'cDC1'],
+    'immune innate': ['Monocyte classical', 'Monocyte non-classical', 'NK cell', 'Macrophage', 'Macrophage alveolar', 'NK cell dividing', 'Neutrophils', 'cDC1'],
     'stromal': ['Fibroblast peribronchial', 'Fibroblast alveolar', 'Endothelial cell venous','Endothelial cell arterial', 'Endothelial cell lymphatic',
                  'Endothelial cell capillary', 'Smooth muscle cell', 'Pericyte', 'Fibroblast adventitial', 'stromal dividing'],
     'epithelial': ['Alveolar cell type 1', 'Alveolar cell type 2', 'Ciliated', 'Club', 'transitional club/AT2', 'ROS1+ healthy epithelial',
@@ -142,7 +142,7 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
     dataset = corr['dataset'][::-1]
 
     # Create figure with adjusted gridspec to include colorbar space
-    fig = plt.figure(figsize=(18, 12))
+    fig = plt.figure(figsize=(22, 20))
     gs = fig.add_gridspec(nrows=2, ncols=3, width_ratios=[1, 25, 0.3], height_ratios=[10, 1])
 
     ax0 = fig.add_subplot(gs[0, 0])  # Left brackets
@@ -245,7 +245,7 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
 
     plt.tight_layout()
     pos = ax_cbar.get_position()
-    pos = [pos.x0 - 0.05, pos.y0, pos.width, pos.height]  # Shift the colorbar 0.05 units to the left
+    pos = [pos.x0, pos.y0, pos.width, pos.height]  # Shift the colorbar 0.05 units to the left
     ax_cbar.set_position(pos)
     
     if show_plot:
@@ -455,7 +455,7 @@ def plot_celltype_boxplot(
     else:
         melted['cell_category'] = 'Uncategorized'
 
-    melted.sort_values('cell_category', inplace=True)
+    melted.sort_values(['cell_category', 'cell_type'], inplace=True)
     # Create the boxplot
     if not ax:
         fig, ax = plt.subplots(figsize=(12, 6))
@@ -466,12 +466,12 @@ def plot_celltype_boxplot(
         hue='cell_category',
         palette=cat_colors,
         ax=ax,
-        # legend=False
     )
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right', rotation_mode='anchor')
     ax.set_title(f"Ln(Relative Abundance) {title}")
     ax.legend(title='Cell Category', loc='upper left', bbox_to_anchor=(1, 1))
     plt.tight_layout()
+    
 
     # If a category-to-color mapping is provided, color the x‐tick labels
     if cat_colors and category_map:

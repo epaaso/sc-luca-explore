@@ -12,5 +12,12 @@
             "console": "integratedTerminal",
             "justMyCode": false
         }
-    ]
+    ],
+    "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/nb_DE_wilcox/wilcoxon_DE/**": true,
+} 
+
 }

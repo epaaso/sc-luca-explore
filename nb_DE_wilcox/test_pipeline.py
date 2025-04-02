@@ -101,6 +101,34 @@ def fake_de_regions():
 
 
 @pytest.fixture
+def fake_de_summary():
+    """
+    Returns a dictionary with cell types and all the scores for every gene
+    """
+    de_summary = {
+        'Tumor1': {
+            "GeneA": np.array(
+                [1.0, 122.0, -4.0]
+            ),
+            "GeneB": np.array(
+                [1.0, 2.0, -4.0]
+            ),
+        
+        },
+        'Tumor2': {
+            "GeneA": np.array(
+                [10., 22.0, -44.0]
+            ),
+            "GeneB": np.array(
+                [5.0, -12.0, -44.0]
+            ),
+        
+        }
+    }
+    return de_summary
+
+
+@pytest.fixture
 def fake_de_pair():
     """
     Returns a dictionary with scores, names, logfoldchanges, and pvals for 1 region.
@@ -217,7 +245,7 @@ def test_processor_determine_tumor_types(config, fake_preds):
     assert tumor_types == ["Tumor"]
 
 
-def test_processor_compute_pairwise(config, fake_preds, fake_adata):
+def test_processor_compute_pairwise(config, fake_adata):
     """
     Test that compute_pairwise either loads from an existing file or
     calls rank_genes_groups_pairwise.
@@ -239,7 +267,7 @@ def test_processor_compute_pairwise(config, fake_preds, fake_adata):
             assert de_pair == {"mock_key": "mock_value"}
 
 
-def test_processor_compute_summary(config, fake_preds, fake_adata, fake_de_pair):
+def test_processor_compute_summary(config, fake_adata, fake_de_pair):
     """
     Test that compute_summary either loads a summary or regenerates one if needed.
     We'll mock np.load to simulate a stored summary.
@@ -268,19 +296,18 @@ def test_processor_compute_summary(config, fake_preds, fake_adata, fake_de_pair)
             assert "GeneA" in de_summary["Tumor"]
 
 
-def test_processor_compute_regions(config, fake_preds, fake_adata):
+def test_processor_compute_regions(config, fake_adata, fake_de_summary):
     """
     Tests that compute_regions either loads from file or creates a new region-level
     dictionary. We'll mock np.load for the existing file scenario.
     """
     processor = DEProcessor(config.common, config.processor, config.dataloader)
-    de_summary = {"Tumor": {"GeneA": [1.0,2.0], "GeneB": [2.0,3.0]}}
 
     # Suppose a file is not found => it must create one
     with patch("os.path.exists", return_value=False):
         mock_np_save = patch("numpy.save", MagicMock())
         with mock_np_save as save_patch:
-            de_region = processor.compute_regions(fake_adata, de_summary)
+            de_region = processor.compute_regions(fake_adata, fake_de_summary)
             save_patch.assert_called_once()
             assert "Tumor" in de_region["scores"].dtype.names
 

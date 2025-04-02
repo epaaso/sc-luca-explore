@@ -655,36 +655,56 @@ class DEProcessor:
                 }
             else:
                 counts = {}
+                if adata is None:
+                    logging.warning("No adata provided, using a very dirty AUC approximation")
                 for ct in de_summary.keys():
+                    logging.info("Computing AUC for %s", ct)
                     if adata is not None:
                         n1 = np.sum(adata.obs["type_tissue"] == ct)
                         n2 = np.sum(adata.obs["type_tissue"] != ct)
-                    else:
-                        n1, n2 = 1, 1  # Fallback values to avoid division by zero
-                    counts[ct] = (n1, n2)
-
-                # Replace np.mean(vals) with the mean of AUCs for each z-value in vals:
-                # For each z in vals, compute:
-                #   auc_z = ( z * sqrt(n1*n2*(n1+n2+1)/12) + (n1*n2)/2 ) / (n1*n2)
-                # Then take the mean of all auc_z for that gene.
-                regioner_sorted = {
-                    ct: sorted(
-                        (
-                            (
-                                gene,
-                                np.mean([
-                                    (z * np.sqrt(n1 * n2 * (n1 + n2 + 1) / 12) + (n1 * n2) / 2) / (n1 * n2)
-                                    for z in vals
-                                ])
+                        counts[ct] = (n1, n2)
+                        # Replace np.mean(vals) with the mean of AUCs for each z-value in vals:
+                        # For each z in vals, compute:
+                        #   auc_z = ( z * sqrt(n1*n2*(n1+n2+1)/12) + (n1*n2)/2 ) / (n1*n2)
+                        # Then take the mean of all auc_z for that gene.
+                        regioner_sorted = {
+                            ct: sorted(
+                                (
+                                    (
+                                        gene,
+                                        np.mean([
+                                            (z * np.sqrt(n1 * n2 * (n1 + n2 + 1) / 12) + (n1 * n2) / 2) / (n1 * n2)
+                                            for z in vals
+                                        ])
+                                    )
+                                    for gene, vals in gdict.items()
+                                ),
+                                key=lambda x: x[1],
+                                reverse=True
                             )
-                            for gene, vals in gdict.items()
-                        ),
-                        key=lambda x: x[1],
-                        reverse=True
-                    )
-                    for ct, gdict in de_summary.items()
-                    for n1, n2 in [counts[ct]]
-                }
+                            for ct, gdict in de_summary.items()
+                            for n1, n2 in [counts[ct]]
+                        }
+                    else:
+                        # If we don't have n1 and n2, we do something very dirty and try to leave the scores between 0 and 1
+                        # with 0.5 meaning no effect like with AUC. For that we do this transform:
+                        # auc_z = (((z / max_val) * 0.9) + 1) / 2
+                        regioner_sorted = {
+                            ct: sorted(
+                                (
+                                    (
+                                        gene,
+                                        np.mean([(((z / abs_max) * 0.9) + 1) / 2 for z in vals])
+                                    )
+                                    for gene, vals in gdict.items()
+                                    for abs_max in [max(abs(min(vals)), abs(max(vals)))]
+                                ),
+                                key=lambda x: x[1],
+                                reverse=True
+                            )
+                            for ct, gdict in de_summary.items()
+                        }
+                
         
             cell_types = list(regioner_sorted.keys())
             arr_scores, arr_names = [], []

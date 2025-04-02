@@ -359,7 +359,7 @@ def pair_to_auc_summary(time, ext_name, wilcox_path, load_summary=False):
     config = DEConfig()
     config.processor.regions_AUC = True
     config.processor.parallel_summary = True
-    config.processor.num_processes = 4
+    config.processor.num_processes = 8
     config.common.ext_name = ext_name
     config.common.time = time
     config.__post_init__()  # Ensure defaults are applied.
@@ -381,7 +381,10 @@ def pair_to_auc_summary(time, ext_name, wilcox_path, load_summary=False):
         de_summary = processor.compute_summary(adata=None, de_pair=de_pair, tumor_types=tumor_types, valid_types=tumor_types)
     else:
         de_summary = np.load(f'{wilcox_path}/{time}_{ext_name}_summary_normalall.npy', allow_pickle=True).item()
-        
+
+    # Filter the de_summary to include only the 'B cell' type FOR TESTING
+    # de_summary = {key: de_summary[key] for key in ['B cell']}    
+
     de_regions = processor.compute_regions(adata=None, de_summary=de_summary)
     return de_regions
 
@@ -427,7 +430,6 @@ def aggregate_count_matrix(region_files, nan_gene_frac=0.5):
             df.at[row_label, gene] = score
 
     df = df.loc[:, df.isna().mean() < nan_gene_frac]
-    print(df)
     return df
 
 if __name__ == "__main__":
@@ -436,7 +438,7 @@ if __name__ == "__main__":
     from anndata.experimental import read_elem
 
     wilcox_path = "/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE"
-    time = 'I-II'
+    time = 'III-IV'
     average_now = True
     output_average = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
 
@@ -456,14 +458,13 @@ if __name__ == "__main__":
             for ds in dss
         ]
 
-        ### Convert some de_pair to AUC summary #######3
+        ### Convert some de_pair to AUC summary #######
         de_regions = pair_to_auc_summary(f'{time}', 'extended', wilcox_path, load_summary=True)
 
         ##### Aggregate all summary files to a count matrix for cellphonedb ###
         count_matrix = aggregate_count_matrix(region_files)
-        print(count_matrix.head())
 
-        count_matrix.to_csv(os.path.join(wilcox_path, f"auc_count_cellphonedb.csv"))
+        count_matrix.to_csv(os.path.join(wilcox_path, f"auc_count_cellphonedb_{time}.csv"))
         
         # # Compute the averaged de_region object
         # averaged_de_region = average_de_regions(region_files)
