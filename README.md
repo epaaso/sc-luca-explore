@@ -125,6 +125,9 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 - *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
 - *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`.
 - *utils*: Contains custom plotting and analysis functions.
+  - *abundance.py*: Scripts for visualizing the abundance of cell types, subgrouping into ectypes and plotting some ectoye netowrks
+  - *change_cells.py*: Contains the renaming of the cells defined in subclustering by functional and marker genes information
+    Renames the netowrk, the groups and the count_matrix files
 
 ### Data Dirs
 

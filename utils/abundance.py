@@ -253,6 +253,7 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
 
     return fig
 
+
 def draw_pearson_graphs(corr_types_, title, corr_threshold:float=0.25, p_threshold:float=0.05, draw:bool=True):
     """
     Draw three Pearson correlation graphs (overall, negative, and positive).
@@ -372,6 +373,70 @@ def plot_degree_centrality(G: nx.graph.Graph, betweenness=False, time='III-IV', 
         plt.show()
     return G
 
+
+def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, output_prefix: str = "samples"):
+    """
+    Reads a 'corr_types' CSV (samples x features),
+    builds a kNN graph, runs the Leiden algorithm,
+    and plots a 2D layout of the graph colored by cluster.
+
+    Args:
+        corr_types_csv: Path to CSV. Rows = samples, columns = features.
+        k: Number of nearest neighbors to connect per sample (default=10).
+        output_prefix: Prefix for output plots/files.
+    """
+    import igraph
+    import leidenalg
+    corr_types = corr_types.copy()
+    
+    # 2) Compute distance matrix (Euclidean).
+    from scipy.spatial.distance import pdist, squareform
+    dist_mat = squareform(pdist(corr_types.values, metric="euclidean"))
+
+    # 3) Build a kNN graph in igraph.
+    g = igraph.Graph()
+    samples = corr_types.index.tolist()
+    g.add_vertices(samples)  # add one vertex per sample
+
+    for i, sample_name in enumerate(samples):
+        # Sort all samples by ascending distance to the i-th sample
+        sorted_idxs = np.argsort(dist_mat[i])
+        # Skip self-distance (index i), take the next k neighbors
+        neighbors = sorted_idxs[1 : k + 1]
+        for j in neighbors:
+            # Add undirected edge (if not already existing)
+            if not g.are_adjacent(samples[i], samples[j]):
+                g.add_edge(samples[i], samples[j])
+
+    # 4) Run Leiden with default parameters
+    part = leidenalg.find_partition(g, leidenalg.RBConfigurationVertexPartition, resolution_parameter=0.6)
+    # Membership vector: cluster assignment for each vertex
+    membership = part.membership
+    g.vs["membership"] = membership
+
+    # 5) Create a 2D layout (e.g. Fruchterman–Reingold)
+    layout_2d = g.layout_fruchterman_reingold()
+    coords = np.array(layout_2d.coords)
+
+    # 6) Plot with Matplotlib, coloring points by cluster
+    plt.figure(figsize=(6, 5))
+    
+    unique_clusters = sorted(set(membership))
+    cmap = plt.get_cmap('tab20', len(unique_clusters))
+    scatter = plt.scatter(coords[:,0], coords[:,1], c=membership, cmap=cmap, s=50)
+    plt.title("Leiden Clusters")
+    plt.colorbar(scatter, label="Cluster")
+
+    # Optionally label each sample
+    for i, sample_name in enumerate(samples):
+        plt.text(coords[i,0], coords[i,1], sample_name[-6:], fontsize=7)
+
+    plt.show()
+    return g
+    # plt.savefig(f"{output_prefix}_leiden_clusters.png", bbox_inches="tight")
+    # plt.close()
+
+    # print("Done. Wrote plot to:", f"{output_prefix}_leiden_clusters.png")
 
 
 
