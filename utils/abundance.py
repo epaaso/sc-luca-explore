@@ -342,35 +342,68 @@ def draw_pearson_graphs(corr_types_, title, corr_threshold:float=0.25, p_thresho
     return G_positive
 
 
-def plot_degree_centrality(G: nx.graph.Graph, betweenness=False, time='III-IV', ax=None):
+def plot_degree_centrality(
+    G: nx.Graph,
+    betweenness=False,
+    time='III-IV',
+    ax=None
+):
     """
-    Plots a bar chart of degree centralities for all nodes in G from highest to lowest.
+    Plots a bar chart of degree or betweenness centralities for all nodes in G, grouped by category,
+    sorted within each category, and colored according to color_map.
     """
-    # 1) Compute degree centrality (returns a dict: node -> centrality)
-    centrality = nx.degree_centrality(G) if not betweenness else nx.betweenness_centrality(G)
-    metric = "Degree" if not betweenness else "Betweenness"
+    # 1) Compute degree or betweenness centrality
+    if not betweenness:
+        centrality = nx.degree_centrality(G)
+        metric = "Degree"
+    else:
+        centrality = nx.betweenness_centrality(G)
+        metric = "Betweenness"
+    
+    # Store centrality values in the graph nodes
+    centrality_attr = f"{metric.lower()}_centrality"
     for node, val in centrality.items():
-        G.nodes[node][f"{metric.lower()}_centrality"] = val
+        G.nodes[node][centrality_attr] = val
     
-    # 2) Sort by centrality in descending order
-    sorted_centrality = sorted(centrality.items(), key=lambda x: x[1], reverse=True)
+    # 2) Group nodes by their category and sort within each category
+    from collections import defaultdict
+    category_groups = defaultdict(list)
+    for node, cent in centrality.items():
+        category = cell_category_mapping(node)
+        category_groups[category].append((node, cent))
     
-    # 3) Separate node names and centrality values
-    nodes, values = zip(*sorted_centrality)
+    # Sort each category's nodes by centrality in descending order
+    for category in category_groups:
+        category_groups[category].sort(key=lambda x: x[1], reverse=True)
     
-    # 4) Create a bar plot
+    # 3) Sort categories alphabetically and concatenate nodes
+    sorted_categories = sorted(category_groups.keys())
+    sorted_centrality = []
+    for category in sorted_categories:
+        sorted_centrality.extend(category_groups[category])
+    
+    # 4) Extract nodes, values, and prepare colors
+    if sorted_centrality:
+        nodes, values = zip(*sorted_centrality)
+    else:
+        nodes, values = [], []
+    colors = [color_map[cell_category_mapping(node)] for node in nodes] if nodes else []
+    
+    # 5) Create the plot
     if ax is None:
-        fig, ax = plt.subplots(1, 1, figsize=(10, 3))
-
-    ax.bar(range(len(values)), values, color="skyblue", edgecolor="black")
+        fig, ax = plt.subplots(figsize=(10, 3))
+    
+    ax.bar(range(len(values)), values, color=colors, edgecolor="black")
     ax.set_xticks(range(len(values)))
-    ax.set_xticklabels(nodes, rotation="vertical", size=8)
+    ax.set_xticklabels(nodes, rotation=45, ha='right', rotation_mode='anchor', size=8)
     ax.set_xlabel("Nodes")
     ax.set_ylabel(f"{metric} Centrality")
     ax.set_title(f"{metric} Centrality ({time})")
+    
     if ax is None:
         plt.tight_layout()
         plt.show()
+    
     return G
 
 

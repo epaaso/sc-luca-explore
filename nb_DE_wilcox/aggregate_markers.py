@@ -439,7 +439,7 @@ if __name__ == "__main__":
 
     wilcox_path = "/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE"
     time = 'III-IV'
-    average_now = True
+    average_now = False
     output_average = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
 
     if average_now:
