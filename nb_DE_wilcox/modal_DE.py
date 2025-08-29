@@ -661,6 +661,7 @@ class DEProcessor:
                     logging.info("Computing AUC for %s", ct)
                     if adata is not None:
                         n1 = np.sum(adata.obs["type_tissue"] == ct)
+                        # TODO this is wrong! n2 should be of the size of the other cell type
                         n2 = np.sum(adata.obs["type_tissue"] != ct)
                         counts[ct] = (n1, n2)
                         # Replace np.mean(vals) with the mean of AUCs for each z-value in vals:

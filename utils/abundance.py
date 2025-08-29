@@ -11,8 +11,13 @@ import seaborn as sns
 import networkx as nx
 from networkx.algorithms.community import greedy_modularity_communities
 
-import plotly.graph_objects as go
+import holoviews as hv
 from collections import Counter
+from bokeh.models import GlyphRenderer
+from bokeh.models.glyphs import Text
+# activate your preferred backend
+if not hv.Store.current_backend:
+    hv.extension('matplotlib')
 
 # Annotate samples with therapy, Wu Zhou has 7 that are not annotated
 samples_therapy = {
@@ -113,7 +118,8 @@ def draw_graph(G, ax, title, scale1= 30, scale2=4, k=3, font_size=8):
     ax.axis('off')
 
 
-def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=False):
+def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=False,
+                            xtick_params:dict = {}, ylabel_size:int = 8):
     """
     Plot a heatmap of normalized counts for given samples. Scales with a log function and the zeros->infs
     are converted to nans.
@@ -177,7 +183,10 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
         yticklabels=data.index
     )
     ax1.set_yticks(np.arange(len(data.index)) + 0.5)
-    ax1.set_yticklabels(data.index, rotation=0, fontsize=6)
+    ax1.set_yticklabels(data.index, rotation=0, fontsize=ylabel_size)
+    xtick_params_default = {'rotation': 45, 'ha': 'right', 'rotation_mode': 'anchor', 'size': 12}
+    xtick_params = {**xtick_params_default, **xtick_params}
+    ax1.set_xticklabels(ax1.get_xticklabels(), **xtick_params)
     for label in ax1.get_yticklabels():
         if label.get_text() in samples_therapy:
             label.set_color("red")
@@ -229,7 +238,7 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
         ax.plot([start, start], [y, y - bracket_height], lw=1.5, color=color)
         ax.plot([end, end], [y, y - bracket_height], lw=1.5, color=color)
         ax.plot([start, end], [y, y], lw=1.5, color=color)
-        ax.text((start + end)/2, y - bracket_height, text, ha='center', va='top', fontsize=10)
+        ax.text((start + end)/2, y - bracket_height, text, ha='center', va='top', fontsize=14)
 
     y_level = -0.8
     end = 0
@@ -407,7 +416,7 @@ def plot_degree_centrality(
     return G
 
 
-def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, output_prefix: str = "samples"):
+def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.4, output_prefix: str = "samples"):
     """
     Reads a 'corr_types' CSV (samples x features),
     builds a kNN graph, runs the Leiden algorithm,
@@ -442,7 +451,7 @@ def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, output_prefix:
                 g.add_edge(samples[i], samples[j])
 
     # 4) Run Leiden with default parameters
-    part = leidenalg.find_partition(g, leidenalg.RBConfigurationVertexPartition, resolution_parameter=0.6)
+    part = leidenalg.find_partition(g, leidenalg.RBConfigurationVertexPartition, resolution_parameter=res)
     # Membership vector: cluster assignment for each vertex
     membership = part.membership
     g.vs["membership"] = membership
@@ -470,7 +479,6 @@ def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, output_prefix:
     # plt.close()
 
     # print("Done. Wrote plot to:", f"{output_prefix}_leiden_clusters.png")
-
 
 
 def plot_degree_distribution_power_law(G):
@@ -587,68 +595,97 @@ def plot_celltype_boxplot(
     if not ax:
         plt.show()
 
-def make_sankey_plot(g, category_map, color_map, title=None):
+
+def fix_node_colors(plot, element):
+    r = plot.state.node_renderer
+    if 'color' in r.data_source.data:
+        r.glyph.fill_color = 'color'  # Bokeh field name
+
+# ── 1  tiny hook: rotate / nudge the two label columns ────────────────
+def label_hook(offset=15, ang=(45, -45), scale=1.5):
+    """Rotate, nudge, and scale (font size) the two label columns in a Sankey plot.
+
+    Parameters
+    ----------
+    offset : int
+        Horizontal shift applied to left vs right side labels.
+    ang : tuple(int,int)
+        (left_angle, right_angle) rotations in degrees.
+    scale : float
+        Factor to multiply current font size (e.g. 1.5 makes labels 50% larger).
     """
-    Creates a two-column Sankey diagram where the nodes are categories (A/B)
-    and the flows are colored according to the source node's color.
+    return lambda p, _ : (
+        lambda lbls:
+            (lambda xs, mid:
+                [
+                    lbls[i].set_rotation(ang[x < mid]) or
+                    lbls[i].set_position((x + (-offset, 2*offset)[x >= mid], y)) or
+                    lbls[i].set_ha(('right','left')[x >= mid]) or
+                    lbls[i].set_fontsize(lbls[i].get_fontsize()*scale)
+                    for i, (x, y) in enumerate(map(lambda t: t.get_position(), lbls))
+                ]
+            )(xs := [t.get_position()[0] for t in lbls], (max(xs)+min(xs))/2)
+    )(p.handles.get('labels', []))
 
-    :param g: A graph with edges between nodes
-    :param category_map: A function mapping each node to its category
-    :param color_map: A dict mapping category name to a color code (e.g., "#FF0000")
+# ── 2  minimal Sankey builder (no colour conversion) ──────────────────
+def sankey(g, category, palette, *, title='', w=700, h=700):
+    """Backend-safe Sankey plot using only supported HoloViews options.
+
+    Parameters
+    ----------
+    g : networkx.Graph
+        Graph whose edges define flows; nodes are cell types.
+    category : callable
+        Maps node -> category string (used for aggregation & colors).
+    palette : dict
+        category -> color mapping.
+    title : str
+    w, h : int
+        Desired width/height in pixels (interpreted per backend).
     """
-    # Build a list of unique categories
-    categories = sorted({category_map(node) for node in g.nodes()})
+    flows = Counter((category(u), category(v)) for u, v in g.edges())
 
-    # Create repeated labels for two columns
-    labels = [f"{cat} (A)" for cat in categories] + [f"{cat} (B)" for cat in categories]
-    cat_index = {cat: i for i, cat in enumerate(categories)}
+    links_df = pd.DataFrame(
+        {'source': f'{s} (A)', 'target': f'{t} (B)', 'value': v, 'color': palette.get(s, 'gray')}
+        for (s, t), v in flows.items()
+    )
+    print(links_df.head())
+    labels = pd.unique(pd.concat([links_df.source, links_df.target]))
+    nodes_df = pd.DataFrame(
+        {
+        'color': [palette[l.split(' (', 1)[0]] for l in labels],
+        # 'color2': 'red',
+        'label': labels
+        },
+        index=labels,
+    )
+    nodes_df.index.name = 'index'
+    print(nodes_df.head())
+    from matplotlib.colors import ListedColormap
+    hv_cmap = ListedColormap(['green'])
+    sk = hv.Sankey((links_df, nodes_df), kdims=['source', 'target'], vdims=['value', 'color'])
 
-    # Count edges between categories
-    edge_counts = Counter()
-    for u, v in g.edges():
-        source_cat = category_map(u)
-        target_cat = category_map(v)
-        edge_counts[(source_cat, target_cat)] += 1
-
-    # Build the source, target, and value lists
-    source = []
-    target = []
-    value = []
-    offset = len(categories)
-    for (src_cat, tgt_cat), count in edge_counts.items():
-        source.append(cat_index[src_cat])           # left column
-        target.append(cat_index[tgt_cat] + offset)  # right column
-        value.append(count)
-
-    # Assign colors to each 'A' and 'B' node
-    node_colors = []
-    for cat in categories:
-        node_colors.append(color_map[cat])  # left-column color
-    for cat in categories:
-        node_colors.append(color_map[cat])  # right-column color
-
-    # Color each flow based on its source node's color
-    link_colors = [node_colors[s] for s in source]
-
-    # Create the Sankey figure
-    fig = go.Figure(data=[go.Sankey(
-        arrangement="snap",
-        node=dict(
-            pad=15,
-            thickness=20,
-            line=dict(color="black", width=0.5),
-            label=labels,
-            color=node_colors,
-            x=[0]*len(categories) + [1]*len(categories),  # two columns
-            y=[(i+0.5)/len(categories) for i in range(len(categories))] * 2
-        ),
-        link=dict(
-            source=source,
-            target=target,
-            value=value,
-            color=link_colors
+    if hv.Store.current_backend == 'bokeh':
+        sk = sk.opts(
+            title=title,
+            labels='label',
+            edge_color='color',
+            node_color='color',
+            width=w, height=h,
+            hooks=[label_hook()],
+            bgcolor='white'
         )
-    )])
-    fig.update_layout(title_text=title, font_size=10)
-
-    return fig
+    else:  # matplotlib
+        sk = sk.opts(
+            title=title,
+            labels='label',
+            edge_color='color',
+            # node_color='color',
+            color_index=2,
+            # node_cmap=hv_cmap,
+            fig_inches=w/150,
+            aspect=h/float(w),
+            hooks=[label_hook()],
+            bgcolor='white'
+        )
+    return sk
