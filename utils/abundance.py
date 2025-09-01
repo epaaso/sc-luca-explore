@@ -602,7 +602,7 @@ def fix_node_colors(plot, element):
         r.glyph.fill_color = 'color'  # Bokeh field name
 
 # ── 1  tiny hook: rotate / nudge the two label columns ────────────────
-def label_hook(offset=15, ang=(45, -45), scale=1.5):
+def label_hook(offset=15, ang=(45, -45), scale=1.6):
     """Rotate, nudge, and scale (font size) the two label columns in a Sankey plot.
 
     Parameters
@@ -619,7 +619,7 @@ def label_hook(offset=15, ang=(45, -45), scale=1.5):
             (lambda xs, mid:
                 [
                     lbls[i].set_rotation(ang[x < mid]) or
-                    lbls[i].set_position((x + (-offset, 2*offset)[x >= mid], y)) or
+                    lbls[i].set_position((x + (-1.6*offset, 1*offset)[x >= mid], y)) or
                     lbls[i].set_ha(('right','left')[x >= mid]) or
                     lbls[i].set_fontsize(lbls[i].get_fontsize()*scale)
                     for i, (x, y) in enumerate(map(lambda t: t.get_position(), lbls))
@@ -649,7 +649,7 @@ def sankey(g, category, palette, *, title='', w=700, h=700):
         {'source': f'{s} (A)', 'target': f'{t} (B)', 'value': v, 'color': palette.get(s, 'gray')}
         for (s, t), v in flows.items()
     )
-    print(links_df.head())
+    
     labels = pd.unique(pd.concat([links_df.source, links_df.target]))
     nodes_df = pd.DataFrame(
         {
@@ -660,17 +660,20 @@ def sankey(g, category, palette, *, title='', w=700, h=700):
         index=labels,
     )
     nodes_df.index.name = 'index'
-    print(nodes_df.head())
-    from matplotlib.colors import ListedColormap
-    hv_cmap = ListedColormap(['green'])
-    sk = hv.Sankey((links_df, nodes_df), kdims=['source', 'target'], vdims=['value', 'color'])
+
+    from holoviews import Dataset
+    nodes_ds = Dataset(nodes_df,
+                       kdims=['label'],              # node identifier dimension
+                       vdims=['color'])
+
+    sk = hv.Sankey((links_df, nodes_ds), kdims=['source', 'target'], vdims=['value', 'color'])
 
     if hv.Store.current_backend == 'bokeh':
         sk = sk.opts(
             title=title,
             labels='label',
             edge_color='color',
-            node_color='color',
+            node_fill_color='color',
             width=w, height=h,
             hooks=[label_hook()],
             bgcolor='white'
@@ -680,8 +683,7 @@ def sankey(g, category, palette, *, title='', w=700, h=700):
             title=title,
             labels='label',
             edge_color='color',
-            # node_color='color',
-            color_index=2,
+            node_color='color',
             # node_cmap=hv_cmap,
             fig_inches=w/150,
             aspect=h/float(w),
