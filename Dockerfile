@@ -23,7 +23,7 @@ RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/hos
 
 # For visualizing and builidng networks, with holovies also
 RUN apt update && apt install -y --no-install-recommends libgraphviz-dev graphviz
-RUN pip install pygraphviz==1.11 networkx==3.1 bokeh==3.6.1 holoviews==1.20.0 datashader==0.16.3 scikit-image
+RUN pip install pygraphviz==1.11 networkx==3.1 git+ssh://git@github.com/epaaso/holoviews.git@sankey-node datashader==0.16.3 scikit-image
 
 # R from source is better for portability
 ARG RVER=4.4.1

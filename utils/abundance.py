@@ -418,62 +418,116 @@ def plot_degree_centrality(
 
 def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.4, output_prefix: str = "samples"):
     """
-    Reads a 'corr_types' CSV (samples x features),
-    builds a kNN graph, runs the Leiden algorithm,
-    and plots a 2D layout of the graph colored by cluster.
+    Cluster samples (rows) using a kNN graph + Leiden.
 
-    Args:
-        corr_types_csv: Path to CSV. Rows = samples, columns = features.
-        k: Number of nearest neighbors to connect per sample (default=10).
-        output_prefix: Prefix for output plots/files.
+    Parameters
+    ----------
+    corr_types : pd.DataFrame
+        Rows = samples. Non‑numeric columns (e.g. 'dataset','membership') will be ignored.
+    k : int
+        Number of nearest neighbours per sample.
+    res : float
+        Leiden resolution parameter.
+    output_prefix : str
+        (Currently unused) prefix for potential output artifacts.
+
+    Returns
+    -------
+    igraph.Graph
+        Graph with vertex attribute 'membership'.
     """
     import igraph
     import leidenalg
-    corr_types = corr_types.copy()
-    
-    # 2) Compute distance matrix (Euclidean).
     from scipy.spatial.distance import pdist, squareform
-    dist_mat = squareform(pdist(corr_types.values, metric="euclidean"))
 
-    # 3) Build a kNN graph in igraph.
+    # --- 1. Copy & isolate numeric feature matrix ---------------------------
+    corr_types = corr_types.copy()
+
+    # Keep index (sample names)
+    samples = corr_types.index.astype(str)
+
+    # Select numeric columns only
+    numeric_df = corr_types.select_dtypes(include=[np.number]).copy()
+
+    dropped = set(corr_types.columns) - set(numeric_df.columns)
+    if dropped:
+        # Optional: inform user (silently skipping categorical/object columns)
+        print(f"[cluster_samples_leiden] Ignoring non-numeric columns: {sorted(dropped)}")
+
+    if numeric_df.shape[1] == 0:
+        raise ValueError("No numeric feature columns available for clustering.")
+
+    # Replace ±inf with NaN then impute simple column means
+    numeric_df = numeric_df.replace([np.inf, -np.inf], np.nan)
+    if numeric_df.isna().all(axis=1).any():
+        # Drop rows entirely NaN
+        all_nan = numeric_df.isna().all(axis=1)
+        print(f"[cluster_samples_leiden] Dropping {all_nan.sum()} samples with all-NaN features: {list(samples[all_nan])}")
+        numeric_df = numeric_df.loc[~all_nan]
+        samples = numeric_df.index.astype(str)
+
+    # Impute remaining NaNs with column means
+    if numeric_df.isna().any().any():
+        col_means = numeric_df.mean(axis=0)
+        numeric_df = numeric_df.fillna(col_means)
+
+    # --- 2. Validate sample count / k ---------------------------------------
+    n_samples = numeric_df.shape[0]
+    if n_samples < 2:
+        raise ValueError(f"Need at least 2 samples after cleaning; got {n_samples}.")
+    if k >= n_samples:
+        new_k = max(1, n_samples - 1)
+        print(f"[cluster_samples_leiden] Reducing k from {k} to {new_k} (n_samples={n_samples}).")
+        k = new_k
+
+    # --- 3. Distance matrix -------------------------------------------------
+    try:
+        dist_mat = squareform(pdist(numeric_df.values, metric="euclidean"))
+    except Exception as e:
+        raise RuntimeError(
+            "[cluster_samples_leiden] Failed computing pairwise distances. "
+            f"Numeric dtypes: {numeric_df.dtypes.to_dict()}"
+        ) from e
+
+    # --- 4. Build kNN graph -------------------------------------------------
     g = igraph.Graph()
-    samples = corr_types.index.tolist()
-    g.add_vertices(samples)  # add one vertex per sample
+    g.add_vertices(list(samples))  # vertex names
 
-    for i, sample_name in enumerate(samples):
-        # Sort all samples by ascending distance to the i-th sample
-        sorted_idxs = np.argsort(dist_mat[i])
-        # Skip self-distance (index i), take the next k neighbors
-        neighbors = sorted_idxs[1 : k + 1]
+    for i, si in enumerate(samples):
+        # argsort distances; first is self (0 distance)
+        order = np.argsort(dist_mat[i])
+        neighbors = order[1:k+1]
         for j in neighbors:
-            # Add undirected edge (if not already existing)
-            if not g.are_adjacent(samples[i], samples[j]):
-                g.add_edge(samples[i], samples[j])
+            sj = samples[j]
+            if not g.are_adjacent(si, sj):
+                g.add_edge(si, sj)
 
-    # 4) Run Leiden with default parameters
-    part = leidenalg.find_partition(g, leidenalg.RBConfigurationVertexPartition, resolution_parameter=res)
-    # Membership vector: cluster assignment for each vertex
-    membership = part.membership
-    g.vs["membership"] = membership
+    # --- 5. Leiden clustering -----------------------------------------------
+    part = leidenalg.find_partition(
+        g,
+        leidenalg.RBConfigurationVertexPartition,
+        resolution_parameter=res
+    )
+    g.vs["membership"] = part.membership
 
-    # 5) Create a 2D layout (e.g. Fruchterman–Reingold)
+    # --- 6. 2D layout + plot (optional quick viz) ---------------------------
     layout_2d = g.layout_fruchterman_reingold()
     coords = np.array(layout_2d.coords)
 
-    # 6) Plot with Matplotlib, coloring points by cluster
     plt.figure(figsize=(6, 5))
-    
-    unique_clusters = sorted(set(membership))
+    memberships = np.array(part.membership)
+    unique_clusters = sorted(set(memberships))
     cmap = plt.get_cmap('tab20', len(unique_clusters))
-    scatter = plt.scatter(coords[:,0], coords[:,1], c=membership, cmap=cmap, s=50)
+    scatter = plt.scatter(coords[:, 0], coords[:, 1], c=memberships, cmap=cmap, s=50)
     plt.title("Leiden Clusters")
     plt.colorbar(scatter, label="Cluster")
 
-    # Optionally label each sample
-    for i, sample_name in enumerate(samples):
-        plt.text(coords[i,0], coords[i,1], sample_name[-6:], fontsize=7)
+    for i, name in enumerate(samples):
+        plt.text(coords[i, 0], coords[i, 1], str(name)[-6:], fontsize=7)
 
+    plt.tight_layout()
     plt.show()
+
     return g
     # plt.savefig(f"{output_prefix}_leiden_clusters.png", bbox_inches="tight")
     # plt.close()
