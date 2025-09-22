@@ -682,45 +682,110 @@ def label_hook(offset=15, ang=(45, -45), scale=1.6):
     )(p.handles.get('labels', []))
 
 # ── 2  minimal Sankey builder (no colour conversion) ──────────────────
-def sankey(g, category, palette, *, title='', w=700, h=700):
-    """Backend-safe Sankey plot using only supported HoloViews options.
+def sankey(g, category, palette, *, title='', w=700, h=700,
+           include_intra_self=True):
+    """Bipartite Sankey: immune categories on left, (stromal|epithelial|tumoral) on right.
+
+    Adds undirected edges only once (immune -> other). Optionally also
+    represents intra-partition connectivity (immune-immune, other-other)
+    as a self edge from a category to itself (category -> category),
+    with cross-category intra edges split 0.5 to each side to avoid
+    double counting.
 
     Parameters
     ----------
-    g : networkx.Graph
-        Graph whose edges define flows; nodes are cell types.
-    category : callable
-        Maps node -> category string (used for aggregation & colors).
+    g : networkx.Graph (undirected)
+    category : callable(node)->str
+      Maps raw node name to high-level category.
     palette : dict
-        category -> color mapping.
-    title : str
-    w, h : int
-        Desired width/height in pixels (interpreted per backend).
+      category -> color
+    include_intra_self : bool
+      If True, aggregate intra-partition edges into category self-links.
     """
-    flows = Counter((category(u), category(v)) for u, v in g.edges())
+    from collections import Counter
+    from holoviews import Dataset
 
-    links_df = pd.DataFrame(
-        {'source': f'{s} (A)', 'target': f'{t} (B)', 'value': v, 'color': palette.get(s, 'gray')}
-        for (s, t), v in flows.items()
-    )
-    
-    labels = pd.unique(pd.concat([links_df.source, links_df.target]))
-    nodes_df = pd.DataFrame(
+    def is_immune(cat: str) -> bool:
+        return cat.startswith('immune')
+
+    # Aggregate inter-partition flows and intra-partition edges
+    inter_flows = Counter()
+    intra_self = Counter()
+    immune_cats, other_cats = set(), set()
+
+    for u, v in g.edges():
+        c1, c2 = category(u), category(v)
+        i1, i2 = is_immune(c1), is_immune(c2)
+
+        # Inter (immune vs other)
+        if i1 and not i2:
+            immune_cats.add(c1); other_cats.add(c2)
+            inter_flows[(c1, c2)] += 1
+        elif i2 and not i1:
+            immune_cats.add(c2); other_cats.add(c1)
+            inter_flows[(c2, c1)] += 1
+        else:
+            # Intra-partition (both immune or both other)
+            # Distribute weight to category self counts (split if different cats)
+            if c1 == c2:
+                intra_self[c1] += 1
+            else:
+                intra_self[c1] += 0.5
+                intra_self[c2] += 0.5
+            if i1:  # both immune
+                immune_cats.update([c1, c2])
+            else:   # both other
+                other_cats.update([c1, c2])
+
+    if not inter_flows and not (include_intra_self and intra_self):
+        raise ValueError("No inter-partition edges (immune ↔ other) to display.")
+
+    # Build link records
+    link_records = [
         {
-        'color': [palette[l.split(' (', 1)[0]] for l in labels],
-        # 'color2': 'red',
-        'label': labels
-        },
-        index=labels,
-    )
+            'source': s,
+            'target': t,
+            'value' : v,
+            'color' : palette.get(s, 'gray')
+        }
+        for (s, t), v in inter_flows.items()
+    ]
+
+    if include_intra_self:
+        for cat, v in intra_self.items():
+            if v > 0:
+                link_records.append({
+                    'source': cat,
+                    'target': cat,
+                    'value' : v,
+                    'color' : palette.get(cat, 'gray')
+                })
+
+    links_df = pd.DataFrame(link_records)
+
+    # Node ordering: immune (left) then other (right)
+    immune_list = sorted(immune_cats)
+    other_list = sorted(other_cats)
+    all_labels = immune_list + other_list
+
+    nodes_df = pd.DataFrame({
+        'label': all_labels,
+        'color': [palette.get(c, 'gray') for c in all_labels],
+        'side' : (['immune'] * len(immune_list)) + (['other'] * len(other_list))
+    }, index=all_labels)
     nodes_df.index.name = 'index'
 
-    from holoviews import Dataset
-    nodes_ds = Dataset(nodes_df,
-                       kdims=['label'],              # node identifier dimension
-                       vdims=['color'])
+    nodes_ds = Dataset(nodes_df, kdims=['label'], vdims=['color', 'side'])
 
-    sk = hv.Sankey((links_df, nodes_ds), kdims=['source', 'target'], vdims=['value', 'color'])
+    # Ensure 'color' present in links dataframe for both backends
+    if 'color' not in links_df.columns:
+        links_df['color'] = links_df['source'].map({c: palette.get(c, 'gray') for c in all_labels})
+
+    sk = hv.Sankey(
+        (links_df[['source', 'target', 'value', 'color']], nodes_ds),
+        kdims=['source', 'target'],
+        vdims=['value', 'color']
+    )
 
     if hv.Store.current_backend == 'bokeh':
         sk = sk.opts(
@@ -732,13 +797,12 @@ def sankey(g, category, palette, *, title='', w=700, h=700):
             hooks=[label_hook()],
             bgcolor='white'
         )
-    else:  # matplotlib
+    else:
         sk = sk.opts(
             title=title,
             labels='label',
             edge_color='color',
             node_color='color',
-            # node_cmap=hv_cmap,
             fig_inches=w/150,
             aspect=h/float(w),
             hooks=[label_hook()],
