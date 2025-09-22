@@ -9,7 +9,7 @@ RUN apt update && apt install -y --no-install-recommends nano npm nodejs gfortra
 RUN pip install scarches==0.6.1
 
 # For autotuning reference atlas, we need the main, that is not yet implemented in latest ver  1.15.0. It is implemented in 1.2.0
-RUN pip install git+https://github.com/scverse/scvi-tools@f8811ad999d470e9d589520496905ae0328b1402 && pip install ray[tune]==2.23.0
+RUN pip install scvi-tools==1.2.0 && pip install ray[tune]==2.23.0
 
 # Jax Cuda for faster Nueral nets
 RUN pip install jax[cuda] torch==2.4.0 flax==0.8.5 chex==0.1.86
@@ -23,7 +23,7 @@ RUN echo "alias jl='jupyter-lab --no-browser --ip=0.0.0.0 --allow-root /root/hos
 
 # For visualizing and builidng networks, with holovies also
 RUN apt update && apt install -y --no-install-recommends libgraphviz-dev graphviz
-RUN pip install pygraphviz==1.11 networkx==3.1 git+ssh://git@github.com/epaaso/holoviews.git@sankey-node datashader==0.16.3 scikit-image
+RUN pip install pygraphviz==1.11 networkx==3.1 "git+https://github.com/epaaso/holoviews.git@sankey-node" datashader==0.16.3 scikit-image
 
 # R from source is better for portability
 ARG RVER=4.4.1
