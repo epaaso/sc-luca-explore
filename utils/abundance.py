@@ -1,5 +1,7 @@
 import numpy as np
 import pandas as pd
+from collections import Counter
+
 from scipy.cluster.hierarchy import linkage, leaves_list
 from scipy.stats import pearsonr
 from scipy.stats import linregress
@@ -12,12 +14,6 @@ import networkx as nx
 from networkx.algorithms.community import greedy_modularity_communities
 
 import holoviews as hv
-from collections import Counter
-from bokeh.models import GlyphRenderer
-from bokeh.models.glyphs import Text
-# activate your preferred backend
-if not hv.Store.current_backend:
-    hv.extension('matplotlib')
 
 # Annotate samples with therapy, Wu Zhou has 7 that are not annotated
 samples_therapy = {
@@ -656,7 +652,8 @@ def fix_node_colors(plot, element):
         r.glyph.fill_color = 'color'  # Bokeh field name
 
 # ── 1  tiny hook: rotate / nudge the two label columns ────────────────
-def label_hook(offset=15, ang=(45, -45), scale=1.6):
+def label_hook(offset:int=15, ang:tuple[int,int]=(45, -45),
+                scale:float=1.6, intra_flows:dict[str,int] = {}):
     """Rotate, nudge, and scale (font size) the two label columns in a Sankey plot.
 
     Parameters
@@ -667,22 +664,45 @@ def label_hook(offset=15, ang=(45, -45), scale=1.6):
         (left_angle, right_angle) rotations in degrees.
     scale : float
         Factor to multiply current font size (e.g. 1.5 makes labels 50% larger).
+    intra_flows: dict(str,int)
+        Intra-category connections between nodes, if exists appends number of intra-cat 
+        nodes to node label
+
     """
     return lambda p, _ : (
         lambda lbls:
-            (lambda xs, mid:
+            (lambda xs, mid, ls:
                 [
                     lbls[i].set_rotation(ang[x < mid]) or
                     lbls[i].set_position((x + (-1.6*offset, 1*offset)[x >= mid], y)) or
                     lbls[i].set_ha(('right','left')[x >= mid]) or
-                    lbls[i].set_fontsize(lbls[i].get_fontsize()*scale)
+                    lbls[i].set_fontsize(lbls[i].get_fontsize()*scale) or
+                    lbls[i].set_text(
+                        (ls[i] + '-' + str(intra_flows.get(ls[i],'0')),
+                         lbls[i].get_text()
+                        )[intra_flows=={}]
+                         )
+
                     for i, (x, y) in enumerate(map(lambda t: t.get_position(), lbls))
                 ]
-            )(xs := [t.get_position()[0] for t in lbls], (max(xs)+min(xs))/2)
+            )(xs := [t.get_position()[0] for t in lbls], (max(xs)+min(xs))/2,
+               ls := [t.get_text().split(' - ')[0] for t in lbls] )
     )(p.handles.get('labels', []))
+
+
+def find_undirected_duplicates(graph):
+    # Treat edges as undirected by normalizing (u,v) -> (min,max)
+    if graph.is_multigraph():
+        pairs = [(min(u, v), max(u, v)) for u, v, _ in graph.edges(keys=True)]
+    else:
+        pairs = [(min(u, v), max(u, v)) for u, v in graph.edges()]
+    counts = Counter(pairs)
+    return {e: c for e, c in counts.items() if c > 1}
+
 
 # ── 2  minimal Sankey builder (no colour conversion) ──────────────────
 def sankey(g, category, palette, *, title='', w=700, h=700,
+           holo_kws:dict={},
            include_intra_self=True):
     """Bipartite Sankey: immune categories on left, (stromal|epithelial|tumoral) on right.
 
@@ -699,12 +719,16 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
       Maps raw node name to high-level category.
     palette : dict
       category -> color
+    holo_kws: dict
+      params to pass to the hv.Sankey().opts() function
     include_intra_self : bool
-      If True, aggregate intra-partition edges into category self-links.
+      If True, aggregate intra-partition edges as number after label of node.
     """
-    from collections import Counter
     from holoviews import Dataset
 
+    if find_undirected_duplicates(g):
+        raise Exception('Graph must not contain undirected duplicates')
+    
     def is_immune(cat: str) -> bool:
         return cat.startswith('immune')
 
@@ -729,10 +753,10 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
             # Distribute weight to category self counts (split if different cats)
             if c1 == c2:
                 intra_self[c1] += 1
-            else:
-                intra_self[c1] += 0.5
-                intra_self[c2] += 0.5
-            if i1:  # both immune
+            # else:
+            #     intra_self[c1] += 0.5
+            #     intra_self[c2] += 0.5
+            if i1 and i2:  # both immune
                 immune_cats.update([c1, c2])
             else:   # both other
                 other_cats.update([c1, c2])
@@ -751,15 +775,15 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
         for (s, t), v in inter_flows.items()
     ]
 
-    if include_intra_self:
-        for cat, v in intra_self.items():
-            if v > 0:
-                link_records.append({
-                    'source': cat,
-                    'target': cat,
-                    'value' : v,
-                    'color' : palette.get(cat, 'gray')
-                })
+    # if include_intra_self:        
+        # for cat, v in intra_self.items():
+        #     if v > 0:
+        #         link_records.append({
+        #             'source': cat,
+        #             'target': cat,
+        #             'value' : v,
+        #             'color' : palette.get(cat, 'gray')
+        #         })
 
     links_df = pd.DataFrame(link_records)
 
@@ -768,6 +792,7 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
     other_list = sorted(other_cats)
     all_labels = immune_list + other_list
 
+    print(all_labels)
     nodes_df = pd.DataFrame({
         'label': all_labels,
         'color': [palette.get(c, 'gray') for c in all_labels],
@@ -786,7 +811,8 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
         kdims=['source', 'target'],
         vdims=['value', 'color']
     )
-
+    if not include_intra_self:
+        intra_self = {}
     if hv.Store.current_backend == 'bokeh':
         sk = sk.opts(
             title=title,
@@ -794,8 +820,9 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
             edge_color='color',
             node_fill_color='color',
             width=w, height=h,
-            hooks=[label_hook()],
-            bgcolor='white'
+            # hooks=[label_hook()],
+            bgcolor='white',
+            **holo_kws
         )
     else:
         sk = sk.opts(
@@ -805,7 +832,8 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
             node_color='color',
             fig_inches=w/150,
             aspect=h/float(w),
-            hooks=[label_hook()],
-            bgcolor='white'
+            hooks=[label_hook(intra_flows=intra_self)],
+            bgcolor='white',
+            **holo_kws
         )
     return sk
