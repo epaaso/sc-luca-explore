@@ -8,6 +8,8 @@ from scipy.stats import linregress
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.colors as mcolors
+from matplotlib.collections import PolyCollection
 import seaborn as sns
 
 import networkx as nx
@@ -700,10 +702,107 @@ def find_undirected_duplicates(graph):
     return {e: c for e, c in counts.items() if c > 1}
 
 
+# --- helper: draw clipped left→right gradient for each ribbon path ---
+def _paint_gradients_on_ax(ax, paths, palette):
+    if not paths:
+        return
+
+    # Gather label positions to determine which ribbon belongs to which nodes
+    labels = []
+    for txt in ax.texts:
+        label = txt.get_text().strip()
+        if not label:
+            continue
+        if label == ax.get_title():
+            continue
+        x, y = txt.get_position()
+        base = label.split('-', 1)[0].strip()
+        labels.append({'text': label, 'base': base, 'x': x, 'y': y})
+
+    if not labels:
+        return
+
+    xs = np.array([lab['x'] for lab in labels])
+    split_x = 0.5 * (xs.min() + xs.max())
+    left_labels = [lab for lab in labels if lab['x'] <= split_x]
+    right_labels = [lab for lab in labels if lab['x'] > split_x]
+
+    if not right_labels:
+        right_labels = [lab for lab in labels if lab['x'] >= split_x]
+
+    if not left_labels or not right_labels:
+        return
+
+    def _lookup_color(base_label: str) -> np.ndarray:
+        candidates = (
+            base_label,
+            base_label.strip(),
+            base_label.lower(),
+            base_label.title(),
+            base_label.upper()
+        )
+        for cand in candidates:
+            if cand in palette:
+                return np.array(mcolors.to_rgba(palette[cand]))
+        return np.array(mcolors.to_rgba('gray'))
+
+    for path in paths:
+        verts = getattr(path, 'vertices', None)
+        if verts is None or len(verts) == 0:
+            continue
+
+        xs_path = verts[:, 0]
+        ys_path = verts[:, 1]
+
+        xmin = np.min(xs_path)
+        xmax = np.max(xs_path)
+
+        left_mask = np.isclose(xs_path, xmin, atol=1e-6)
+        right_mask = np.isclose(xs_path, xmax, atol=1e-6)
+
+        if not left_mask.any() or not right_mask.any():
+            continue
+
+        y_left = np.mean(ys_path[left_mask])
+        y_right = np.mean(ys_path[right_mask])
+
+        left_label = min(left_labels, key=lambda lab: abs(lab['y'] - y_left))
+        right_label = min(right_labels, key=lambda lab: abs(lab['y'] - y_right))
+
+        c1 = _lookup_color(left_label['base'])
+        c2 = _lookup_color(right_label['base'])
+
+        # small RGBA gradient image
+        W, H = 256, 4
+        t = np.linspace(0, 1, W)[None, :]
+        grad = (1 - t)[..., None]*c1 + t[..., None]*c2
+        grad = np.repeat(grad, H, axis=0)
+
+        bbox = path.get_extents()
+        xmin_bbox, xmax_bbox = bbox.xmin, bbox.xmax
+        ymin_bbox, ymax_bbox = bbox.ymin, bbox.ymax
+        if not np.isfinite([xmin_bbox, xmax_bbox, ymin_bbox, ymax_bbox]).all():
+            continue
+        if xmax_bbox <= xmin_bbox or ymax_bbox <= ymin_bbox:
+            continue
+
+        clip = mpatches.PathPatch(path, transform=ax.transData)
+        im = ax.imshow(
+            grad, origin='lower',
+            extent=[xmin_bbox, xmax_bbox, ymin_bbox, ymax_bbox],
+            interpolation='bilinear',
+            aspect='auto',
+            zorder=10000
+        )
+        im.set_clip_path(clip)
+
+
 # ── 2  minimal Sankey builder (no colour conversion) ──────────────────
 def sankey(g, category, palette, *, title='', w=700, h=700,
            holo_kws:dict={},
-           include_intra_self=True):
+           include_intra_self=True,
+           gradients: bool = True,
+           return_figure: bool | None = None):
     """Bipartite Sankey: immune categories on left, (stromal|epithelial|tumoral) on right.
 
     Adds undirected edges only once (immune -> other). Optionally also
@@ -729,6 +828,12 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
     if find_undirected_duplicates(g):
         raise Exception('Graph must not contain undirected duplicates')
     
+    backend = hv.Store.current_backend
+    is_matplotlib = backend == 'matplotlib'
+
+    if return_figure and not is_matplotlib:
+        raise ValueError("return_figure is only supported when the 'matplotlib' backend is active.")
+
     def is_immune(cat: str) -> bool:
         return cat.startswith('immune')
 
@@ -765,25 +870,18 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
         raise ValueError("No inter-partition edges (immune ↔ other) to display.")
 
     # Build link records
-    link_records = [
-        {
+    link_records = []
+    for i, ((s, t), v) in enumerate(inter_flows.items()):
+        record = {
             'source': s,
             'target': t,
             'value' : v,
-            'color' : palette.get(s, 'gray')
+            'color': ('#00000000' if gradients and is_matplotlib else palette.get(s, 'gray')),
+            'c_left':  palette.get(s, 'gray'),
+            'c_right': palette.get(t, 'gray'),
+            'eid': i,
         }
-        for (s, t), v in inter_flows.items()
-    ]
-
-    # if include_intra_self:        
-        # for cat, v in intra_self.items():
-        #     if v > 0:
-        #         link_records.append({
-        #             'source': cat,
-        #             'target': cat,
-        #             'value' : v,
-        #             'color' : palette.get(cat, 'gray')
-        #         })
+        link_records.append(record)
 
     links_df = pd.DataFrame(link_records)
 
@@ -792,7 +890,6 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
     other_list = sorted(other_cats)
     all_labels = immune_list + other_list
 
-    print(all_labels)
     nodes_df = pd.DataFrame({
         'label': all_labels,
         'color': [palette.get(c, 'gray') for c in all_labels],
@@ -802,38 +899,81 @@ def sankey(g, category, palette, *, title='', w=700, h=700,
 
     nodes_ds = Dataset(nodes_df, kdims=['label'], vdims=['color', 'side'])
 
-    # Ensure 'color' present in links dataframe for both backends
-    if 'color' not in links_df.columns:
-        links_df['color'] = links_df['source'].map({c: palette.get(c, 'gray') for c in all_labels})
-
-    sk = hv.Sankey(
-        (links_df[['source', 'target', 'value', 'color']], nodes_ds),
-        kdims=['source', 'target'],
-        vdims=['value', 'color']
-    )
-    if not include_intra_self:
-        intra_self = {}
-    if hv.Store.current_backend == 'bokeh':
+    
+    if backend == 'bokeh':
+        sk = hv.Sankey(
+            (links_df[['source', 'target', 'value', 'color']], nodes_ds),
+            kdims=['source', 'target'],
+            vdims=['value', 'color']
+        )
+        if not include_intra_self:
+            intra_self = {}
         sk = sk.opts(
             title=title,
             labels='label',
             edge_color='color',
             node_fill_color='color',
             width=w, height=h,
-            # hooks=[label_hook()],
             bgcolor='white',
             **holo_kws
         )
     else:
-        sk = sk.opts(
+        hooks = [label_hook(intra_flows=intra_self)]
+
+        def _gradient_hook(p, _):
+            ax = p.handles.get('axis')
+            if ax is None:
+                axes = p.handles.get('axes')
+                if axes:
+                    ax = axes[0]
+            if ax is None:
+                return []
+
+            paths = []
+            for child in ax.get_children():
+                if isinstance(child, mpatches.PathPatch):
+                    try:
+                        child.set_facecolor((0, 0, 0, 0))
+                        child.set_edgecolor((0, 0, 0, 0))
+                    except Exception:
+                        pass
+                    paths.append(child.get_path())
+
+            if not paths:
+                for coll in ax.collections:
+                    if isinstance(coll, PolyCollection) and hasattr(coll, 'get_paths'):
+                        try:
+                            coll.set_facecolor([(0, 0, 0, 0)] * len(coll.get_paths()))
+                            coll.set_edgecolor([(0, 0, 0, 0)] * len(coll.get_paths()))
+                        except Exception:
+                            pass
+                        paths.extend(list(coll.get_paths()))
+
+            _paint_gradients_on_ax(ax, paths, palette)
+            return []
+
+        if gradients and is_matplotlib:
+            hooks.append(_gradient_hook)
+
+        hv_sk = hv.Sankey(
+            (links_df[['source','target','value','color','c_left','c_right','eid']], nodes_ds),
+            kdims=['source','target'],
+            vdims=['value','color','c_left','c_right','eid']
+        ).opts(
             title=title,
             labels='label',
-            edge_color='color',
             node_color='color',
-            fig_inches=w/150,
-            aspect=h/float(w),
-            hooks=[label_hook(intra_flows=intra_self)],
+            edge_color='color',
+            edge_alpha=0.0 if (gradients and is_matplotlib) else 1.0,
+            edge_linewidth=0.0 if (gradients and is_matplotlib) else 1.0,
+            hooks=hooks,
             bgcolor='white',
             **holo_kws
         )
+
+        if return_figure:
+            return hv.render(hv_sk, backend='matplotlib')
+
+        return hv_sk
+        
     return sk
