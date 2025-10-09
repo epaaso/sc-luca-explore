@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 from collections import Counter
+import json
+from pathlib import Path
 
 from scipy.cluster.hierarchy import linkage, leaves_list
 from scipy.stats import pearsonr
@@ -17,39 +19,19 @@ from networkx.algorithms.community import greedy_modularity_communities
 
 import holoviews as hv
 
+_CELL_METADATA_PATH = Path(__file__).resolve().parents[1] / "metadata" / "cell_mappings.json"
+
+with _CELL_METADATA_PATH.open() as f:
+    _CELL_METADATA = json.load(f)
+
 # Annotate samples with therapy, Wu Zhou has 7 that are not annotated
-samples_therapy = {
-    'immune01': 'chemo', 'immune02': 'immuno+chemo', 'immune03': 'immuno+chemo', 'immune04': 'immuno+chemo', 'immune05': 'chemo',
-    'immune06': 'immuno+chemo', 'immune07': 'immuno+chemo', 'immune08': 'chemo', 'immune09': 'immuno+chemo', 'immune10': 'immuno+chemo',
-    'immune11': 'immuno+chemo', 'immune12': 'immuno+chemo', 'immune13': 'immuno+chemo', 'immune14': 'immuno+chemo', 'immune15': 'immuno+chemo',
-    'p2t1': 'XRT+chemo', '2019_p2t2': 'XRT+chemo',
-    'S01': 'TKI', 'S11': 'TKI', 'S56': 'TKI', 'S58': 'TKI',
-    'S71': 'TKI', 'S79': 'TKI', 'S82': 'TKI',
-    'GSM3516670': 'chemo'
-}
+samples_therapy = _CELL_METADATA["samples_therapy"]
 
 # Define colors for different cell categories
-color_map = {
-    'immune adaptive': 'lightgreen',
-    'immune innate': 'blue',
-    'immune both': 'purple',
-    'stromal': '#D2B48C',
-    'epithelial': 'orange',
-    'tumoral': 'red'
-}
+color_map = _CELL_METADATA["color_map"]
 
 # Define cell categories
-cell_categories = {
-    'immune adaptive': ['T cell CD8 activated', 'T cell CD4', 'B cell', 'B cell dividing', 'T cell regulatory', 'T cell CD8 effector memory',
-                         'T cell CD8 activated', 'cDC2', 'T cell CD8 terminally exhausted', 'T cell CD4 dividing', 'T cell CD8 dividing', 'T cell CD8 naive'],
-    'immune both': ['Mast cell', 'myeloid dividing', 'pDC', 'DC mature', 'T cell NK-like', "Plasma cell", "Plasma cell dividing"],
-    'immune innate': ['Monocyte classical', 'Monocyte non-classical', 'NK cell', 'Macrophage', 'Macrophage alveolar', 'NK cell dividing', 'Neutrophils', 'cDC1'],
-    'stromal': ['Fibroblast peribronchial', 'Fibroblast alveolar', 'Endothelial cell venous','Endothelial cell arterial', 'Endothelial cell lymphatic',
-                 'Endothelial cell capillary', 'Smooth muscle cell', 'Pericyte', 'Fibroblast adventitial', 'stromal dividing'],
-    'epithelial': ['Alveolar cell type 1', 'Alveolar cell type 2', 'Ciliated', 'Club', 'transitional club/AT2', 'ROS1+ healthy epithelial',
-                    'Mesothelial','AT1', 'AT2', 'AT2_ROS1+', 'Club_AT2_even_1','Club_AT2_even_2', 'Club_Ciliated', 'Club_AT2_high', 'Club_AT2_low',
-                    'Club/AT2','Club_AT2/1_high' ],
-}
+cell_categories = _CELL_METADATA["cell_categories"]
 
 cell_type_to_category = {}
 for category, cell_types in cell_categories.items():

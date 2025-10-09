@@ -89,7 +89,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   - *abund_clusters.ipynb* Leiden clustering of the abundances matrix, with lots of informative graphics of them like Degree centrality plots, Graphs, Snakey plots, Boxplots and such
     The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
   - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
-  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools`.
+  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools` for cells types. But for cell categories the inter categories coabundacnes plots are here.
   - *cellphone.ipynb* Cellphone circos plots and dot plots for late, early and their ecotypes
 
 - *nb_DE_wilcox*: 
@@ -124,7 +124,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 ### Misc
 
 - *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
-- *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`.
+- *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`. The file `cell_mappings.json` centralizes shared dictionaries such as therapy labels, category colors, and cell-type groupings used across notebooks.
 - *utils*: Contains custom plotting and analysis functions.
   - *abundance.py*: Scripts for visualizing the abundance of cell types, subgrouping into ectypes and plotting some ectoype netowrks
   - *change_cells.py*: Contains the renaming of the cells defined in subclustering by functional and marker genes information
