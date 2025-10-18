@@ -23,13 +23,12 @@ We have designed a Docker image that has all the necessary libraries. It is, how
 
 To run the notebook, you should run the container with this notebook repository mounted as a volume. In the following command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the path where your notebooks are, and the other path is where the large data files would be stored.
 
-You must install the apt package `docker-nvidia` for the GPU flags to work and, of course, have a working CUDA installation.
-
 ```bash
 docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --shm-size=200g\
  --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:annots /bin/bash
 ```
 `shm-size` will alow you to run multiple workers in scvi.
+You must install the apt package `docker-nvidia` for the GPU flags to work and, of course, have a working CUDA installation.
 
 ### Jupyter lab
 
@@ -49,15 +48,15 @@ of inputting a password everytime.
 
 ### VS Code
 
-You can also skip the port forwarding and work in a more integrated environment, by using the remote explorer and dev contianers feature of VScode.
+You can also skip the port forwarding and work in a more integrated environment, by using the remote explorer and dev containers feature of Vscode.
 
-Just add a new host for the remote host via shh and enter it. VScode will automatically install all the necessary packages to be able to interact with the host.
+Just add a new host for the remote host via shh and open a new Vscode window inside that host. Vscode will automatically install all the necessary packages to be able to interact with the host.
 After that go to the Dev Containers tab in the Remote Explorer tab and choose the container that you ran as per the instructions above.
 
 When opening a notebook, we recommend attaching to a running jupyter server, which is launched with the `jl` command in a shell in the container, like above.
-This avoids losing the running kernel if you close the window you are working on.
+This avoids losing the running kernel if you close the Vscode window you are working on.
 
-A problem with vscode is that it does not offer a way to shutdown notebooks in an external jupyter server, you'll have to do it manually with 
+A problem with Vscode is that it does not offer a way to shutdown notebooks in an external jupyter server, you'll have to do it manually with 
 a notebook to delete not recently used kernels in `./utils/cull-kernels.ipynb`. It uses api calls.
 
 ## Folder structure
@@ -82,14 +81,15 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 
 - *grouping_MI.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis by extracting MI.
 
-- *nb_graphAnalysis*: Parametrized file for doing a MI (Mutual Inference) graph analysis of an already provided list of edges between cell types.
+- *nb_graphAnalysis*:
+  - *graph_param.ipynb* Parametrized notebook for doing bipartite analysis of our networks. There isnt much to analyze because there arent that many varied coabundances between immune and tumoral.
   - *graph_layouts.ipynb* Leiden, Newman, n-clique, interactive, and functionally enriched visualizations of the networks for different clusterings and times.
   - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph and analyzes pairs of vars that are not pearson correlated and their profile. Also for the negative ones.
   - *sbm_cluster.ipynb* Does stochastic block modelling (thanks to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
   - *abund_clusters.ipynb* Leiden clustering of the abundances matrix, with lots of informative graphics of them like Degree centrality plots, Graphs, Snakey plots, Boxplots and such
     The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
   - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
-  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools` for cells types. But for cell categories the inter categories coabundacnes plots are here.
+  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools` for cells types. But for cell categories the inter categories coabundances plots are here.
   - *cellphone.ipynb* Cellphone circos plots and dot plots for late, early and their ecotypes
 
 - *nb_DE_wilcox*: 
