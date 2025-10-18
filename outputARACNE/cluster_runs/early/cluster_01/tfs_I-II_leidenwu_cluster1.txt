@@ -1,0 +1,94 @@
+B cell
+B cell dividing
+Ciliated
+Club_AT2/1_high
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Mesothelial
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+Tumor Club_AT2_LUAD
+Tumor LUAD_Club_AT2
+Tumor LUAD_Club_AT2/1
+Tumor LUAD_MSLN
+Tumor LUAD_NE_LUSC
+Tumor LUAD_NE_mitotic
+Tumor LUAD_mitotic
+Tumor LUSC_LUAD_mitotic
+cDC1
+cDC2
+myeloid dividing
+pDC
+stromal dividing
+B cell
+B cell dividing
+Ciliated
+Club_AT2/1_high
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Mesothelial
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+Tumor Club_AT2_LUAD
+Tumor LUAD_Club_AT2
+Tumor LUAD_Club_AT2/1
+Tumor LUAD_MSLN
+Tumor LUAD_NE_LUSC
+Tumor LUAD_NE_mitotic
+Tumor LUAD_mitotic
+Tumor LUSC_LUAD_mitotic
+cDC1
+cDC2
+myeloid dividing
+pDC
+stromal dividing
