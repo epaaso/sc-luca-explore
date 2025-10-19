@@ -1,4 +1,6 @@
 import os
+from pathlib import Path
+from typing import Optional
 
 rename_dict_early = {
     "Tumor Club_AT2_LUAD": "Tumor Secretory_LUAD",
@@ -29,8 +31,17 @@ rename_dict_late = {
 }
 
 
-def rename_cells(group_path: str, net_path: str, rename_map: dict,
-                  net_r:bool=True, group_r:bool=True, auc_r:bool=True):
+def rename_cells(
+    group_path: str,
+    net_path: str,
+    rename_map: dict,
+    *,
+    net_r: bool = True,
+    group_r: bool = True,
+    auc_r: bool = True,
+    matrix_path: Optional[str] = None,
+    matrix_r: bool = False,
+):
     """
     Renames cell references in both the network text file and in the CSV file.
     The rename_map dictionary has old->new mappings for the cell names.
@@ -84,6 +95,38 @@ def rename_cells(group_path: str, net_path: str, rename_map: dict,
 
         df.to_csv(f'{auc_path}_funcnames.csv', index=True)
 
+    if matrix_r and matrix_path is not None:
+        matrix_file = Path(f"{matrix_path}.txt")
+        if not matrix_file.exists():
+            raise FileNotFoundError(f"Matrix file not found: {matrix_file}")
+
+        with matrix_file.open('r', encoding='utf-8') as fh:
+            lines = fh.readlines()
+
+        updated_lines: list[str] = []
+        for idx, line in enumerate(lines):
+            if idx == 0:
+                updated_lines.append(line)
+                continue
+
+            stripped = line.rstrip('\n')
+            if stripped == "":
+                updated_lines.append(line)
+                continue
+
+            parts = stripped.split('\t')
+            if not parts:
+                updated_lines.append(line)
+                continue
+
+            original_name = parts[0]
+            parts[0] = rename_map.get(original_name, original_name)
+            updated_lines.append('\t'.join(parts) + '\n')
+
+        output_file = matrix_file.with_name(matrix_file.stem + "_funcnames.txt")
+        with output_file.open('w', encoding='utf-8') as fh:
+            fh.writelines(updated_lines)
+
 
 
 
@@ -96,5 +139,14 @@ if __name__ == "__main__":
     group_path = f'metadata/groups_{time}'
     net_path = f'outputARACNE/net{time}'
     auc_path = f'nb_DE_wilcox/wilcoxon_DE/auc_count_cellphonedb_{time_solo}'
+    matrix_path = f'outputARACNE/matrix{time}'
 
-    rename_cells(group_path, net_path, rename_dict, group_r=False, net_r=False)
+    rename_cells(
+        group_path,
+        net_path,
+        rename_dict,
+        group_r=False,
+        net_r=False,
+        matrix_path=matrix_path,
+        matrix_r=True,
+    )
