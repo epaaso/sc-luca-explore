@@ -2311,210 +2311,210 @@ Unnamed: 0,cell_type_adjusted,sample,0,dataset
 2309,T cell regulatory,Zilionis_Klein_2019_p4t3,106,Zilionis_Klein_2019
 2310,T cell regulatory,Zilionis_Klein_2019_p6t1,61,Zilionis_Klein_2019
 2311,T cell regulatory,Zilionis_Klein_2019_p6t2,43,Zilionis_Klein_2019
-2312,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-1,5,Chen_Zhang_2020
-2313,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-2,16,Chen_Zhang_2020
-2314,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-3,5,Chen_Zhang_2020
-2315,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-6,239,Chen_Zhang_2020
-2316,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2317,Tumor Secretory_LUAD,Chen_Zhang_2020_NSCLC-11,110,Chen_Zhang_2020
-2318,Tumor Secretory_LUAD,He_Fan_2021_LUAD1,1372,He_Fan_2021
-2319,Tumor Secretory_LUAD,He_Fan_2021_LUAD2,109,He_Fan_2021
-2320,Tumor Secretory_LUAD,He_Fan_2021_LUAD3,180,He_Fan_2021
-2321,Tumor Secretory_LUAD,He_Fan_2021_LUAD4,142,He_Fan_2021
-2322,Tumor Secretory_LUAD,He_Fan_2021_LUAD5,94,He_Fan_2021
-2323,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T06,39,Kim_Lee_2020
-2324,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T08,22,Kim_Lee_2020
-2325,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T09,95,Kim_Lee_2020
-2326,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T18,5,Kim_Lee_2020
-2327,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T19,256,Kim_Lee_2020
-2328,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T20,79,Kim_Lee_2020
-2329,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T25,182,Kim_Lee_2020
-2330,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T30,546,Kim_Lee_2020
-2331,Tumor Secretory_LUAD,Kim_Lee_2020_LUNG_T34,53,Kim_Lee_2020
-2332,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT1A,4,Lambrechts_Thienpont_2018_6149v1
-2333,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT1B,2,Lambrechts_Thienpont_2018_6149v1
-2334,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT1C,9,Lambrechts_Thienpont_2018_6149v1
-2335,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT2A,5,Lambrechts_Thienpont_2018_6149v1
-2336,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT2B,35,Lambrechts_Thienpont_2018_6149v1
-2337,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2338,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1295,19,Lambrechts_Thienpont_2018_6149v2
-2339,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1296,28,Lambrechts_Thienpont_2018_6149v2
-2340,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1297,57,Lambrechts_Thienpont_2018_6149v2
-2341,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1298,14,Lambrechts_Thienpont_2018_6149v2
-2342,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1299,117,Lambrechts_Thienpont_2018_6149v2
-2343,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6149v2_BT1300,64,Lambrechts_Thienpont_2018_6149v2
-2344,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_BT1375,82,Lambrechts_Thienpont_2018_6653
-2345,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_BT1376,26,Lambrechts_Thienpont_2018_6653
-2346,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_BT1377,18,Lambrechts_Thienpont_2018_6653
-2347,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,63,Lambrechts_Thienpont_2018_6653
-2348,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,95,Lambrechts_Thienpont_2018_6653
-2349,Tumor Secretory_LUAD,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,105,Lambrechts_Thienpont_2018_6653
-2350,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516662,5,Laughney_Massague_2020
-2351,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516663,11,Laughney_Massague_2020
-2352,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516667,17,Laughney_Massague_2020
-2353,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516669,5,Laughney_Massague_2020
-2354,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516670,16,Laughney_Massague_2020
-2355,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516672,6,Laughney_Massague_2020
-2356,Tumor Secretory_LUAD,Laughney_Massague_2020_GSM3516674,129,Laughney_Massague_2020
-2357,Tumor Secretory_LUAD,Maynard_Bivona_2020_LT_S66,55,Maynard_Bivona_2020
-2358,Tumor Secretory_LUAD,UKIM-V-2_P4_tumor_primary,16,UKIM-V-2
-2359,Tumor Secretory_LUAD,UKIM-V-2_P5_tumor_primary,5,UKIM-V-2
-2360,Tumor Secretory_LUAD,UKIM-V-2_P6_tumor_primary,21,UKIM-V-2
-2361,Tumor Secretory_LUAD,UKIM-V-2_P8_tumor_primary,5,UKIM-V-2
-2362,Tumor Secretory_LUAD,UKIM-V-2_P9_tumor_primary,83,UKIM-V-2
-2363,Tumor Secretory_LUAD,UKIM-V-2_P10_tumor_primary,37,UKIM-V-2
-2364,Tumor Secretory_LUAD,UKIM-V-2_P13_tumor_primary,33,UKIM-V-2
-2365,Tumor Secretory_LUAD,UKIM-V-2_P14_tumor_primary,862,UKIM-V-2
-2366,Tumor Secretory_LUAD,UKIM-V-2_P16_tumor_primary,47,UKIM-V-2
-2367,Tumor Secretory_LUAD,UKIM-V-2_P17_tumor_primary,5,UKIM-V-2
-2368,Tumor Secretory_LUAD,UKIM-V_P1_tumor_primary,6,UKIM-V
-2369,Tumor Secretory_LUAD,UKIM-V_P2_tumor_primary,80,UKIM-V
-2370,Tumor Secretory_LUAD,UKIM-V_P3_tumor_primary,351,UKIM-V
-2371,Tumor Secretory_LUAD,Zilionis_Klein_2019_p1t1,22,Zilionis_Klein_2019
-2372,Tumor Secretory_LUAD,Zilionis_Klein_2019_p1t2,24,Zilionis_Klein_2019
-2373,Tumor Secretory_LUAD,Zilionis_Klein_2019_p1t3,6,Zilionis_Klein_2019
-2374,Tumor Secretory_LUAD,Zilionis_Klein_2019_p1t4,14,Zilionis_Klein_2019
-2375,Tumor Secretory_LUAD,Zilionis_Klein_2019_p4t1,1,Zilionis_Klein_2019
-2376,Tumor Secretory_LUAD,Zilionis_Klein_2019_p4t2,4,Zilionis_Klein_2019
-2377,Tumor Secretory_LUAD,Zilionis_Klein_2019_p4t3,2,Zilionis_Klein_2019
-2378,Tumor Secretory_LUAD,Zilionis_Klein_2019_p6t1,14,Zilionis_Klein_2019
-2379,Tumor Secretory_LUAD,Zilionis_Klein_2019_p6t2,14,Zilionis_Klein_2019
-2380,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2381,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
-2382,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
-2383,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
-2384,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2385,Tumor Adeno_Squamous,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
-2386,Tumor Adeno_Squamous,He_Fan_2021_LUAD1,0,He_Fan_2021
-2387,Tumor Adeno_Squamous,He_Fan_2021_LUAD2,0,He_Fan_2021
-2388,Tumor Adeno_Squamous,He_Fan_2021_LUAD3,0,He_Fan_2021
-2389,Tumor Adeno_Squamous,He_Fan_2021_LUAD4,0,He_Fan_2021
-2390,Tumor Adeno_Squamous,He_Fan_2021_LUAD5,0,He_Fan_2021
-2391,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
-2392,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2393,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2394,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
-2395,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
-2396,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
-2397,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
-2398,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2399,Tumor Adeno_Squamous,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2400,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2401,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2402,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
-2403,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
-2404,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
-2405,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2406,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
-2407,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
-2408,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
-2409,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2410,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
-2411,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6149v2_BT1300,0,Lambrechts_Thienpont_2018_6149v2
-2412,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
-2413,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
-2414,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
-2415,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
-2416,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
-2417,Tumor Adeno_Squamous,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
-2418,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2419,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2420,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
-2421,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2422,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
-2423,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2424,Tumor Adeno_Squamous,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2425,Tumor Adeno_Squamous,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
-2426,Tumor Adeno_Squamous,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2427,Tumor Adeno_Squamous,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2428,Tumor Adeno_Squamous,UKIM-V-2_P6_tumor_primary,11,UKIM-V-2
-2429,Tumor Adeno_Squamous,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2430,Tumor Adeno_Squamous,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
-2431,Tumor Adeno_Squamous,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
-2432,Tumor Adeno_Squamous,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
-2433,Tumor Adeno_Squamous,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
-2434,Tumor Adeno_Squamous,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
-2435,Tumor Adeno_Squamous,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
-2436,Tumor Adeno_Squamous,UKIM-V_P1_tumor_primary,0,UKIM-V
-2437,Tumor Adeno_Squamous,UKIM-V_P2_tumor_primary,0,UKIM-V
-2438,Tumor Adeno_Squamous,UKIM-V_P3_tumor_primary,0,UKIM-V
-2439,Tumor Adeno_Squamous,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
-2440,Tumor Adeno_Squamous,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2441,Tumor Adeno_Squamous,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
-2442,Tumor Adeno_Squamous,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
-2443,Tumor Adeno_Squamous,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
-2444,Tumor Adeno_Squamous,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
-2445,Tumor Adeno_Squamous,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
-2446,Tumor Adeno_Squamous,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2447,Tumor Adeno_Squamous,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2448,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2449,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
-2450,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
-2451,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
-2452,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2453,Tumor EMT_lowProlif,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
-2454,Tumor EMT_lowProlif,He_Fan_2021_LUAD1,0,He_Fan_2021
-2455,Tumor EMT_lowProlif,He_Fan_2021_LUAD2,0,He_Fan_2021
-2456,Tumor EMT_lowProlif,He_Fan_2021_LUAD3,0,He_Fan_2021
-2457,Tumor EMT_lowProlif,He_Fan_2021_LUAD4,0,He_Fan_2021
-2458,Tumor EMT_lowProlif,He_Fan_2021_LUAD5,0,He_Fan_2021
-2459,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
-2460,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2461,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2462,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
-2463,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
-2464,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
-2465,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
-2466,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2467,Tumor EMT_lowProlif,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2468,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2469,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2470,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
-2471,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
-2472,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
-2473,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2474,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
-2475,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
-2476,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
-2477,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2478,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
-2479,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6149v2_BT1300,0,Lambrechts_Thienpont_2018_6149v2
-2480,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
-2481,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
-2482,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
-2483,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
-2484,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
-2485,Tumor EMT_lowProlif,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
-2486,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2487,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2488,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
-2489,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2490,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
-2491,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2492,Tumor EMT_lowProlif,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2493,Tumor EMT_lowProlif,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
-2494,Tumor EMT_lowProlif,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2495,Tumor EMT_lowProlif,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2496,Tumor EMT_lowProlif,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
-2497,Tumor EMT_lowProlif,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2498,Tumor EMT_lowProlif,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
-2499,Tumor EMT_lowProlif,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
-2500,Tumor EMT_lowProlif,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
-2501,Tumor EMT_lowProlif,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
-2502,Tumor EMT_lowProlif,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
-2503,Tumor EMT_lowProlif,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
-2504,Tumor EMT_lowProlif,UKIM-V_P1_tumor_primary,0,UKIM-V
-2505,Tumor EMT_lowProlif,UKIM-V_P2_tumor_primary,0,UKIM-V
-2506,Tumor EMT_lowProlif,UKIM-V_P3_tumor_primary,0,UKIM-V
-2507,Tumor EMT_lowProlif,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
-2508,Tumor EMT_lowProlif,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2509,Tumor EMT_lowProlif,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
-2510,Tumor EMT_lowProlif,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
-2511,Tumor EMT_lowProlif,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
-2512,Tumor EMT_lowProlif,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
-2513,Tumor EMT_lowProlif,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
-2514,Tumor EMT_lowProlif,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2515,Tumor EMT_lowProlif,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2312,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-1,5,Chen_Zhang_2020
+2313,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-2,16,Chen_Zhang_2020
+2314,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-3,5,Chen_Zhang_2020
+2315,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-6,239,Chen_Zhang_2020
+2316,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2317,Tumor Tumor ImmunoSup,Chen_Zhang_2020_NSCLC-11,110,Chen_Zhang_2020
+2318,Tumor Tumor ImmunoSup,He_Fan_2021_LUAD1,1372,He_Fan_2021
+2319,Tumor Tumor ImmunoSup,He_Fan_2021_LUAD2,109,He_Fan_2021
+2320,Tumor Tumor ImmunoSup,He_Fan_2021_LUAD3,180,He_Fan_2021
+2321,Tumor Tumor ImmunoSup,He_Fan_2021_LUAD4,142,He_Fan_2021
+2322,Tumor Tumor ImmunoSup,He_Fan_2021_LUAD5,94,He_Fan_2021
+2323,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T06,39,Kim_Lee_2020
+2324,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T08,22,Kim_Lee_2020
+2325,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T09,95,Kim_Lee_2020
+2326,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T18,5,Kim_Lee_2020
+2327,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T19,256,Kim_Lee_2020
+2328,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T20,79,Kim_Lee_2020
+2329,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T25,182,Kim_Lee_2020
+2330,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T30,546,Kim_Lee_2020
+2331,Tumor Tumor ImmunoSup,Kim_Lee_2020_LUNG_T34,53,Kim_Lee_2020
+2332,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT1A,4,Lambrechts_Thienpont_2018_6149v1
+2333,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT1B,2,Lambrechts_Thienpont_2018_6149v1
+2334,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT1C,9,Lambrechts_Thienpont_2018_6149v1
+2335,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT2A,5,Lambrechts_Thienpont_2018_6149v1
+2336,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT2B,35,Lambrechts_Thienpont_2018_6149v1
+2337,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2338,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1295,19,Lambrechts_Thienpont_2018_6149v2
+2339,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1296,28,Lambrechts_Thienpont_2018_6149v2
+2340,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1297,57,Lambrechts_Thienpont_2018_6149v2
+2341,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1298,14,Lambrechts_Thienpont_2018_6149v2
+2342,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1299,117,Lambrechts_Thienpont_2018_6149v2
+2343,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6149v2_BT1300,64,Lambrechts_Thienpont_2018_6149v2
+2344,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_BT1375,82,Lambrechts_Thienpont_2018_6653
+2345,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_BT1376,26,Lambrechts_Thienpont_2018_6653
+2346,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_BT1377,18,Lambrechts_Thienpont_2018_6653
+2347,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,63,Lambrechts_Thienpont_2018_6653
+2348,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,95,Lambrechts_Thienpont_2018_6653
+2349,Tumor Tumor ImmunoSup,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,105,Lambrechts_Thienpont_2018_6653
+2350,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516662,5,Laughney_Massague_2020
+2351,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516663,11,Laughney_Massague_2020
+2352,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516667,17,Laughney_Massague_2020
+2353,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516669,5,Laughney_Massague_2020
+2354,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516670,16,Laughney_Massague_2020
+2355,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516672,6,Laughney_Massague_2020
+2356,Tumor Tumor ImmunoSup,Laughney_Massague_2020_GSM3516674,129,Laughney_Massague_2020
+2357,Tumor Tumor ImmunoSup,Maynard_Bivona_2020_LT_S66,55,Maynard_Bivona_2020
+2358,Tumor Tumor ImmunoSup,UKIM-V-2_P4_tumor_primary,16,UKIM-V-2
+2359,Tumor Tumor ImmunoSup,UKIM-V-2_P5_tumor_primary,5,UKIM-V-2
+2360,Tumor Tumor ImmunoSup,UKIM-V-2_P6_tumor_primary,21,UKIM-V-2
+2361,Tumor Tumor ImmunoSup,UKIM-V-2_P8_tumor_primary,5,UKIM-V-2
+2362,Tumor Tumor ImmunoSup,UKIM-V-2_P9_tumor_primary,83,UKIM-V-2
+2363,Tumor Tumor ImmunoSup,UKIM-V-2_P10_tumor_primary,37,UKIM-V-2
+2364,Tumor Tumor ImmunoSup,UKIM-V-2_P13_tumor_primary,33,UKIM-V-2
+2365,Tumor Tumor ImmunoSup,UKIM-V-2_P14_tumor_primary,862,UKIM-V-2
+2366,Tumor Tumor ImmunoSup,UKIM-V-2_P16_tumor_primary,47,UKIM-V-2
+2367,Tumor Tumor ImmunoSup,UKIM-V-2_P17_tumor_primary,5,UKIM-V-2
+2368,Tumor Tumor ImmunoSup,UKIM-V_P1_tumor_primary,6,UKIM-V
+2369,Tumor Tumor ImmunoSup,UKIM-V_P2_tumor_primary,80,UKIM-V
+2370,Tumor Tumor ImmunoSup,UKIM-V_P3_tumor_primary,351,UKIM-V
+2371,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p1t1,22,Zilionis_Klein_2019
+2372,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p1t2,24,Zilionis_Klein_2019
+2373,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p1t3,6,Zilionis_Klein_2019
+2374,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p1t4,14,Zilionis_Klein_2019
+2375,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p4t1,1,Zilionis_Klein_2019
+2376,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p4t2,4,Zilionis_Klein_2019
+2377,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p4t3,2,Zilionis_Klein_2019
+2378,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p6t1,14,Zilionis_Klein_2019
+2379,Tumor Tumor ImmunoSup,Zilionis_Klein_2019_p6t2,14,Zilionis_Klein_2019
+2380,Tumor BasalInv,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2381,Tumor BasalInv,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
+2382,Tumor BasalInv,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
+2383,Tumor BasalInv,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
+2384,Tumor BasalInv,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2385,Tumor BasalInv,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
+2386,Tumor BasalInv,He_Fan_2021_LUAD1,0,He_Fan_2021
+2387,Tumor BasalInv,He_Fan_2021_LUAD2,0,He_Fan_2021
+2388,Tumor BasalInv,He_Fan_2021_LUAD3,0,He_Fan_2021
+2389,Tumor BasalInv,He_Fan_2021_LUAD4,0,He_Fan_2021
+2390,Tumor BasalInv,He_Fan_2021_LUAD5,0,He_Fan_2021
+2391,Tumor BasalInv,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
+2392,Tumor BasalInv,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2393,Tumor BasalInv,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2394,Tumor BasalInv,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
+2395,Tumor BasalInv,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
+2396,Tumor BasalInv,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
+2397,Tumor BasalInv,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
+2398,Tumor BasalInv,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2399,Tumor BasalInv,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2400,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2401,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2402,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
+2403,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
+2404,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
+2405,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2406,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
+2407,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
+2408,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
+2409,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2410,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
+2411,Tumor BasalInv,Lambrechts_Thienpont_2018_6149v2_BT1300,0,Lambrechts_Thienpont_2018_6149v2
+2412,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
+2413,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
+2414,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
+2415,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
+2416,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
+2417,Tumor BasalInv,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
+2418,Tumor BasalInv,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2419,Tumor BasalInv,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2420,Tumor BasalInv,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
+2421,Tumor BasalInv,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2422,Tumor BasalInv,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
+2423,Tumor BasalInv,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2424,Tumor BasalInv,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2425,Tumor BasalInv,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
+2426,Tumor BasalInv,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2427,Tumor BasalInv,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2428,Tumor BasalInv,UKIM-V-2_P6_tumor_primary,11,UKIM-V-2
+2429,Tumor BasalInv,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2430,Tumor BasalInv,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
+2431,Tumor BasalInv,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
+2432,Tumor BasalInv,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
+2433,Tumor BasalInv,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
+2434,Tumor BasalInv,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
+2435,Tumor BasalInv,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
+2436,Tumor BasalInv,UKIM-V_P1_tumor_primary,0,UKIM-V
+2437,Tumor BasalInv,UKIM-V_P2_tumor_primary,0,UKIM-V
+2438,Tumor BasalInv,UKIM-V_P3_tumor_primary,0,UKIM-V
+2439,Tumor BasalInv,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
+2440,Tumor BasalInv,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2441,Tumor BasalInv,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
+2442,Tumor BasalInv,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
+2443,Tumor BasalInv,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
+2444,Tumor BasalInv,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
+2445,Tumor BasalInv,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
+2446,Tumor BasalInv,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2447,Tumor BasalInv,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2448,Tumor EMT,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2449,Tumor EMT,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
+2450,Tumor EMT,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
+2451,Tumor EMT,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
+2452,Tumor EMT,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2453,Tumor EMT,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
+2454,Tumor EMT,He_Fan_2021_LUAD1,0,He_Fan_2021
+2455,Tumor EMT,He_Fan_2021_LUAD2,0,He_Fan_2021
+2456,Tumor EMT,He_Fan_2021_LUAD3,0,He_Fan_2021
+2457,Tumor EMT,He_Fan_2021_LUAD4,0,He_Fan_2021
+2458,Tumor EMT,He_Fan_2021_LUAD5,0,He_Fan_2021
+2459,Tumor EMT,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
+2460,Tumor EMT,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2461,Tumor EMT,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2462,Tumor EMT,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
+2463,Tumor EMT,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
+2464,Tumor EMT,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
+2465,Tumor EMT,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
+2466,Tumor EMT,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2467,Tumor EMT,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2468,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2469,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2470,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
+2471,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
+2472,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
+2473,Tumor EMT,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2474,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
+2475,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
+2476,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
+2477,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2478,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
+2479,Tumor EMT,Lambrechts_Thienpont_2018_6149v2_BT1300,0,Lambrechts_Thienpont_2018_6149v2
+2480,Tumor EMT,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
+2481,Tumor EMT,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
+2482,Tumor EMT,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
+2483,Tumor EMT,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
+2484,Tumor EMT,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
+2485,Tumor EMT,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
+2486,Tumor EMT,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2487,Tumor EMT,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2488,Tumor EMT,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
+2489,Tumor EMT,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2490,Tumor EMT,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
+2491,Tumor EMT,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2492,Tumor EMT,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2493,Tumor EMT,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
+2494,Tumor EMT,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2495,Tumor EMT,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2496,Tumor EMT,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
+2497,Tumor EMT,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2498,Tumor EMT,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
+2499,Tumor EMT,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
+2500,Tumor EMT,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
+2501,Tumor EMT,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
+2502,Tumor EMT,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
+2503,Tumor EMT,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
+2504,Tumor EMT,UKIM-V_P1_tumor_primary,0,UKIM-V
+2505,Tumor EMT,UKIM-V_P2_tumor_primary,0,UKIM-V
+2506,Tumor EMT,UKIM-V_P3_tumor_primary,0,UKIM-V
+2507,Tumor EMT,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
+2508,Tumor EMT,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2509,Tumor EMT,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
+2510,Tumor EMT,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
+2511,Tumor EMT,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
+2512,Tumor EMT,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
+2513,Tumor EMT,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
+2514,Tumor EMT,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2515,Tumor EMT,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
 2516,Tumor OxPhos_Prolif,Chen_Zhang_2020_NSCLC-1,1,Chen_Zhang_2020
 2517,Tumor OxPhos_Prolif,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
 2518,Tumor OxPhos_Prolif,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
@@ -2583,414 +2583,414 @@ Unnamed: 0,cell_type_adjusted,sample,0,dataset
 2581,Tumor OxPhos_Prolif,Zilionis_Klein_2019_p4t3,42,Zilionis_Klein_2019
 2582,Tumor OxPhos_Prolif,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
 2583,Tumor OxPhos_Prolif,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2584,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2585,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
-2586,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
-2587,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-6,9,Chen_Zhang_2020
-2588,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2589,Tumor TTF1+_Quiescent,Chen_Zhang_2020_NSCLC-11,1,Chen_Zhang_2020
-2590,Tumor TTF1+_Quiescent,He_Fan_2021_LUAD1,0,He_Fan_2021
-2591,Tumor TTF1+_Quiescent,He_Fan_2021_LUAD2,0,He_Fan_2021
-2592,Tumor TTF1+_Quiescent,He_Fan_2021_LUAD3,25,He_Fan_2021
-2593,Tumor TTF1+_Quiescent,He_Fan_2021_LUAD4,10,He_Fan_2021
-2594,Tumor TTF1+_Quiescent,He_Fan_2021_LUAD5,0,He_Fan_2021
-2595,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T06,2,Kim_Lee_2020
-2596,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2597,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2598,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T18,1,Kim_Lee_2020
-2599,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T19,9,Kim_Lee_2020
-2600,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T20,2,Kim_Lee_2020
-2601,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T25,1,Kim_Lee_2020
-2602,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T30,163,Kim_Lee_2020
-2603,Tumor TTF1+_Quiescent,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2604,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2605,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2606,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
-2607,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
-2608,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
-2609,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2610,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
-2611,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
-2612,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
-2613,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2614,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
-2615,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6149v2_BT1300,1,Lambrechts_Thienpont_2018_6149v2
-2616,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
-2617,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
-2618,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
-2619,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,1,Lambrechts_Thienpont_2018_6653
-2620,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
-2621,Tumor TTF1+_Quiescent,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
-2622,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516662,4,Laughney_Massague_2020
-2623,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516663,5,Laughney_Massague_2020
-2624,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516667,2,Laughney_Massague_2020
-2625,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2626,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
-2627,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2628,Tumor TTF1+_Quiescent,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2629,Tumor TTF1+_Quiescent,Maynard_Bivona_2020_LT_S66,3,Maynard_Bivona_2020
-2630,Tumor TTF1+_Quiescent,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2631,Tumor TTF1+_Quiescent,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2632,Tumor TTF1+_Quiescent,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
-2633,Tumor TTF1+_Quiescent,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2634,Tumor TTF1+_Quiescent,UKIM-V-2_P9_tumor_primary,2,UKIM-V-2
-2635,Tumor TTF1+_Quiescent,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
-2636,Tumor TTF1+_Quiescent,UKIM-V-2_P13_tumor_primary,1,UKIM-V-2
-2637,Tumor TTF1+_Quiescent,UKIM-V-2_P14_tumor_primary,6,UKIM-V-2
-2638,Tumor TTF1+_Quiescent,UKIM-V-2_P16_tumor_primary,5,UKIM-V-2
-2639,Tumor TTF1+_Quiescent,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
-2640,Tumor TTF1+_Quiescent,UKIM-V_P1_tumor_primary,2,UKIM-V
-2641,Tumor TTF1+_Quiescent,UKIM-V_P2_tumor_primary,0,UKIM-V
-2642,Tumor TTF1+_Quiescent,UKIM-V_P3_tumor_primary,5,UKIM-V
-2643,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
-2644,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2645,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
-2646,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p1t4,1,Zilionis_Klein_2019
-2647,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p4t1,1,Zilionis_Klein_2019
-2648,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p4t2,2,Zilionis_Klein_2019
-2649,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p4t3,4,Zilionis_Klein_2019
-2650,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p6t1,1,Zilionis_Klein_2019
-2651,Tumor TTF1+_Quiescent,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2652,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2653,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
-2654,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
-2655,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
-2656,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2657,Tumor LUAD_MSLN,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
-2658,Tumor LUAD_MSLN,He_Fan_2021_LUAD1,0,He_Fan_2021
-2659,Tumor LUAD_MSLN,He_Fan_2021_LUAD2,0,He_Fan_2021
-2660,Tumor LUAD_MSLN,He_Fan_2021_LUAD3,0,He_Fan_2021
-2661,Tumor LUAD_MSLN,He_Fan_2021_LUAD4,0,He_Fan_2021
-2662,Tumor LUAD_MSLN,He_Fan_2021_LUAD5,0,He_Fan_2021
-2663,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
-2664,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2665,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2666,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
-2667,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
-2668,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
-2669,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
-2670,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2671,Tumor LUAD_MSLN,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2672,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2673,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2674,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
-2675,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
-2676,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
-2677,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2678,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
-2679,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
-2680,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
-2681,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2682,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
-2683,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6149v2_BT1300,1,Lambrechts_Thienpont_2018_6149v2
-2684,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_BT1375,2,Lambrechts_Thienpont_2018_6653
-2685,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
-2686,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_BT1377,1,Lambrechts_Thienpont_2018_6653
-2687,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
-2688,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
-2689,Tumor LUAD_MSLN,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
-2690,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2691,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2692,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
-2693,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2694,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
-2695,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2696,Tumor LUAD_MSLN,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2697,Tumor LUAD_MSLN,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
-2698,Tumor LUAD_MSLN,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2699,Tumor LUAD_MSLN,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2700,Tumor LUAD_MSLN,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
-2701,Tumor LUAD_MSLN,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2702,Tumor LUAD_MSLN,UKIM-V-2_P9_tumor_primary,449,UKIM-V-2
-2703,Tumor LUAD_MSLN,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
-2704,Tumor LUAD_MSLN,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
-2705,Tumor LUAD_MSLN,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
-2706,Tumor LUAD_MSLN,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
-2707,Tumor LUAD_MSLN,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
-2708,Tumor LUAD_MSLN,UKIM-V_P1_tumor_primary,0,UKIM-V
-2709,Tumor LUAD_MSLN,UKIM-V_P2_tumor_primary,0,UKIM-V
-2710,Tumor LUAD_MSLN,UKIM-V_P3_tumor_primary,0,UKIM-V
-2711,Tumor LUAD_MSLN,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
-2712,Tumor LUAD_MSLN,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2713,Tumor LUAD_MSLN,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
-2714,Tumor LUAD_MSLN,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
-2715,Tumor LUAD_MSLN,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
-2716,Tumor LUAD_MSLN,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
-2717,Tumor LUAD_MSLN,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
-2718,Tumor LUAD_MSLN,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2719,Tumor LUAD_MSLN,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2720,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2721,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
-2722,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
-2723,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-6,5,Chen_Zhang_2020
-2724,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-7,259,Chen_Zhang_2020
-2725,Tumor Evasive_Prolif,Chen_Zhang_2020_NSCLC-11,106,Chen_Zhang_2020
-2726,Tumor Evasive_Prolif,He_Fan_2021_LUAD1,8,He_Fan_2021
-2727,Tumor Evasive_Prolif,He_Fan_2021_LUAD2,0,He_Fan_2021
-2728,Tumor Evasive_Prolif,He_Fan_2021_LUAD3,1,He_Fan_2021
-2729,Tumor Evasive_Prolif,He_Fan_2021_LUAD4,10,He_Fan_2021
-2730,Tumor Evasive_Prolif,He_Fan_2021_LUAD5,0,He_Fan_2021
-2731,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
-2732,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2733,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2734,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T18,57,Kim_Lee_2020
-2735,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T19,1,Kim_Lee_2020
-2736,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
-2737,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
-2738,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2739,Tumor Evasive_Prolif,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2740,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2741,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2742,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1C,1,Lambrechts_Thienpont_2018_6149v1
-2743,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2A,67,Lambrechts_Thienpont_2018_6149v1
-2744,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2B,43,Lambrechts_Thienpont_2018_6149v1
-2745,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2746,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1295,220,Lambrechts_Thienpont_2018_6149v2
-2747,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1296,595,Lambrechts_Thienpont_2018_6149v2
-2748,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1297,668,Lambrechts_Thienpont_2018_6149v2
-2749,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2750,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
-2751,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1300,2,Lambrechts_Thienpont_2018_6149v2
-2752,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
-2753,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
-2754,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
-2755,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
-2756,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
-2757,Tumor Evasive_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,1,Lambrechts_Thienpont_2018_6653
-2758,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2759,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2760,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
-2761,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2762,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516670,89,Laughney_Massague_2020
-2763,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2764,Tumor Evasive_Prolif,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2765,Tumor Evasive_Prolif,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
-2766,Tumor Evasive_Prolif,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2767,Tumor Evasive_Prolif,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2768,Tumor Evasive_Prolif,UKIM-V-2_P6_tumor_primary,22,UKIM-V-2
-2769,Tumor Evasive_Prolif,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2770,Tumor Evasive_Prolif,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
-2771,Tumor Evasive_Prolif,UKIM-V-2_P10_tumor_primary,1,UKIM-V-2
-2772,Tumor Evasive_Prolif,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
-2773,Tumor Evasive_Prolif,UKIM-V-2_P14_tumor_primary,4,UKIM-V-2
-2774,Tumor Evasive_Prolif,UKIM-V-2_P16_tumor_primary,1,UKIM-V-2
-2775,Tumor Evasive_Prolif,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
-2776,Tumor Evasive_Prolif,UKIM-V_P1_tumor_primary,10,UKIM-V
-2777,Tumor Evasive_Prolif,UKIM-V_P2_tumor_primary,5,UKIM-V
-2778,Tumor Evasive_Prolif,UKIM-V_P3_tumor_primary,0,UKIM-V
-2779,Tumor Evasive_Prolif,Zilionis_Klein_2019_p1t1,3,Zilionis_Klein_2019
-2780,Tumor Evasive_Prolif,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2781,Tumor Evasive_Prolif,Zilionis_Klein_2019_p1t3,2,Zilionis_Klein_2019
-2782,Tumor Evasive_Prolif,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
-2783,Tumor Evasive_Prolif,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
-2784,Tumor Evasive_Prolif,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
-2785,Tumor Evasive_Prolif,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
-2786,Tumor Evasive_Prolif,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2787,Tumor Evasive_Prolif,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2788,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-1,5,Chen_Zhang_2020
-2789,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-2,74,Chen_Zhang_2020
-2790,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-3,19,Chen_Zhang_2020
-2791,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-6,4,Chen_Zhang_2020
-2792,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
-2793,Tumor Evasive_HighProlif,Chen_Zhang_2020_NSCLC-11,3,Chen_Zhang_2020
-2794,Tumor Evasive_HighProlif,He_Fan_2021_LUAD1,0,He_Fan_2021
-2795,Tumor Evasive_HighProlif,He_Fan_2021_LUAD2,480,He_Fan_2021
-2796,Tumor Evasive_HighProlif,He_Fan_2021_LUAD3,27,He_Fan_2021
-2797,Tumor Evasive_HighProlif,He_Fan_2021_LUAD4,7,He_Fan_2021
-2798,Tumor Evasive_HighProlif,He_Fan_2021_LUAD5,302,He_Fan_2021
-2799,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T06,4,Kim_Lee_2020
-2800,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T08,2,Kim_Lee_2020
-2801,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2802,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T18,4,Kim_Lee_2020
-2803,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T19,1,Kim_Lee_2020
-2804,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T20,258,Kim_Lee_2020
-2805,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T25,1,Kim_Lee_2020
-2806,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T30,1,Kim_Lee_2020
-2807,Tumor Evasive_HighProlif,Kim_Lee_2020_LUNG_T34,45,Kim_Lee_2020
-2808,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
-2809,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
-2810,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
-2811,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
-2812,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT2B,1,Lambrechts_Thienpont_2018_6149v1
-2813,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2814,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
-2815,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
-2816,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
-2817,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
-2818,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
-2819,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6149v2_BT1300,2,Lambrechts_Thienpont_2018_6149v2
-2820,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_BT1375,139,Lambrechts_Thienpont_2018_6653
-2821,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_BT1376,245,Lambrechts_Thienpont_2018_6653
-2822,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_BT1377,87,Lambrechts_Thienpont_2018_6653
-2823,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,6,Lambrechts_Thienpont_2018_6653
-2824,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,3,Lambrechts_Thienpont_2018_6653
-2825,Tumor Evasive_HighProlif,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
-2826,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2827,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2828,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516667,6,Laughney_Massague_2020
-2829,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
-2830,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
-2831,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516672,34,Laughney_Massague_2020
-2832,Tumor Evasive_HighProlif,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2833,Tumor Evasive_HighProlif,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
-2834,Tumor Evasive_HighProlif,UKIM-V-2_P4_tumor_primary,6,UKIM-V-2
-2835,Tumor Evasive_HighProlif,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
-2836,Tumor Evasive_HighProlif,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
-2837,Tumor Evasive_HighProlif,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
-2838,Tumor Evasive_HighProlif,UKIM-V-2_P9_tumor_primary,1,UKIM-V-2
-2839,Tumor Evasive_HighProlif,UKIM-V-2_P10_tumor_primary,9,UKIM-V-2
-2840,Tumor Evasive_HighProlif,UKIM-V-2_P13_tumor_primary,2,UKIM-V-2
-2841,Tumor Evasive_HighProlif,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
-2842,Tumor Evasive_HighProlif,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
-2843,Tumor Evasive_HighProlif,UKIM-V-2_P17_tumor_primary,1,UKIM-V-2
-2844,Tumor Evasive_HighProlif,UKIM-V_P1_tumor_primary,0,UKIM-V
-2845,Tumor Evasive_HighProlif,UKIM-V_P2_tumor_primary,5,UKIM-V
-2846,Tumor Evasive_HighProlif,UKIM-V_P3_tumor_primary,2,UKIM-V
-2847,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
-2848,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
-2849,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p1t3,1,Zilionis_Klein_2019
-2850,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
-2851,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p4t1,3,Zilionis_Klein_2019
-2852,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p4t2,5,Zilionis_Klein_2019
-2853,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p4t3,7,Zilionis_Klein_2019
-2854,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p6t1,1,Zilionis_Klein_2019
-2855,Tumor Evasive_HighProlif,Zilionis_Klein_2019_p6t2,1,Zilionis_Klein_2019
-2856,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-1,1,Chen_Zhang_2020
-2857,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-2,2,Chen_Zhang_2020
-2858,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-3,7,Chen_Zhang_2020
-2859,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-6,67,Chen_Zhang_2020
-2860,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-7,3,Chen_Zhang_2020
-2861,Tumor Hypoxic_Prolif,Chen_Zhang_2020_NSCLC-11,76,Chen_Zhang_2020
-2862,Tumor Hypoxic_Prolif,He_Fan_2021_LUAD1,153,He_Fan_2021
-2863,Tumor Hypoxic_Prolif,He_Fan_2021_LUAD2,70,He_Fan_2021
-2864,Tumor Hypoxic_Prolif,He_Fan_2021_LUAD3,2841,He_Fan_2021
-2865,Tumor Hypoxic_Prolif,He_Fan_2021_LUAD4,6,He_Fan_2021
-2866,Tumor Hypoxic_Prolif,He_Fan_2021_LUAD5,16,He_Fan_2021
-2867,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T06,1,Kim_Lee_2020
-2868,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2869,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2870,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T18,104,Kim_Lee_2020
-2871,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T19,2,Kim_Lee_2020
-2872,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T20,33,Kim_Lee_2020
-2873,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T25,4,Kim_Lee_2020
-2874,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2875,Tumor Hypoxic_Prolif,Kim_Lee_2020_LUNG_T34,6,Kim_Lee_2020
-2876,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1A,5,Lambrechts_Thienpont_2018_6149v1
-2877,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1B,6,Lambrechts_Thienpont_2018_6149v1
-2878,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1C,3,Lambrechts_Thienpont_2018_6149v1
-2879,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2A,2,Lambrechts_Thienpont_2018_6149v1
-2880,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2B,4,Lambrechts_Thienpont_2018_6149v1
-2881,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
-2882,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1295,23,Lambrechts_Thienpont_2018_6149v2
-2883,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1296,32,Lambrechts_Thienpont_2018_6149v2
-2884,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1297,82,Lambrechts_Thienpont_2018_6149v2
-2885,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1298,15,Lambrechts_Thienpont_2018_6149v2
-2886,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1299,11,Lambrechts_Thienpont_2018_6149v2
-2887,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1300,42,Lambrechts_Thienpont_2018_6149v2
-2888,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_BT1375,45,Lambrechts_Thienpont_2018_6653
-2889,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_BT1376,31,Lambrechts_Thienpont_2018_6653
-2890,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_BT1377,4,Lambrechts_Thienpont_2018_6653
-2891,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,1,Lambrechts_Thienpont_2018_6653
-2892,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,2,Lambrechts_Thienpont_2018_6653
-2893,Tumor Hypoxic_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
-2894,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516662,6,Laughney_Massague_2020
-2895,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516663,2,Laughney_Massague_2020
-2896,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516667,16,Laughney_Massague_2020
-2897,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516669,2,Laughney_Massague_2020
-2898,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516670,3,Laughney_Massague_2020
-2899,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516672,9,Laughney_Massague_2020
-2900,Tumor Hypoxic_Prolif,Laughney_Massague_2020_GSM3516674,1,Laughney_Massague_2020
-2901,Tumor Hypoxic_Prolif,Maynard_Bivona_2020_LT_S66,222,Maynard_Bivona_2020
-2902,Tumor Hypoxic_Prolif,UKIM-V-2_P4_tumor_primary,2,UKIM-V-2
-2903,Tumor Hypoxic_Prolif,UKIM-V-2_P5_tumor_primary,11,UKIM-V-2
-2904,Tumor Hypoxic_Prolif,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
-2905,Tumor Hypoxic_Prolif,UKIM-V-2_P8_tumor_primary,1,UKIM-V-2
-2906,Tumor Hypoxic_Prolif,UKIM-V-2_P9_tumor_primary,8,UKIM-V-2
-2907,Tumor Hypoxic_Prolif,UKIM-V-2_P10_tumor_primary,2,UKIM-V-2
-2908,Tumor Hypoxic_Prolif,UKIM-V-2_P13_tumor_primary,4,UKIM-V-2
-2909,Tumor Hypoxic_Prolif,UKIM-V-2_P14_tumor_primary,22,UKIM-V-2
-2910,Tumor Hypoxic_Prolif,UKIM-V-2_P16_tumor_primary,6,UKIM-V-2
-2911,Tumor Hypoxic_Prolif,UKIM-V-2_P17_tumor_primary,1,UKIM-V-2
-2912,Tumor Hypoxic_Prolif,UKIM-V_P1_tumor_primary,1,UKIM-V
-2913,Tumor Hypoxic_Prolif,UKIM-V_P2_tumor_primary,184,UKIM-V
-2914,Tumor Hypoxic_Prolif,UKIM-V_P3_tumor_primary,9,UKIM-V
-2915,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p1t1,6,Zilionis_Klein_2019
-2916,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p1t2,13,Zilionis_Klein_2019
-2917,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p1t3,7,Zilionis_Klein_2019
-2918,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p1t4,1,Zilionis_Klein_2019
-2919,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p4t1,4,Zilionis_Klein_2019
-2920,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p4t2,5,Zilionis_Klein_2019
-2921,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p4t3,5,Zilionis_Klein_2019
-2922,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2923,Tumor Hypoxic_Prolif,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
-2924,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
-2925,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-2,2,Chen_Zhang_2020
-2926,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-3,1,Chen_Zhang_2020
-2927,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-6,145,Chen_Zhang_2020
-2928,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-7,26,Chen_Zhang_2020
-2929,Tumor NSCLC_Prolif,Chen_Zhang_2020_NSCLC-11,46,Chen_Zhang_2020
-2930,Tumor NSCLC_Prolif,He_Fan_2021_LUAD1,395,He_Fan_2021
-2931,Tumor NSCLC_Prolif,He_Fan_2021_LUAD2,7,He_Fan_2021
-2932,Tumor NSCLC_Prolif,He_Fan_2021_LUAD3,12,He_Fan_2021
-2933,Tumor NSCLC_Prolif,He_Fan_2021_LUAD4,2,He_Fan_2021
-2934,Tumor NSCLC_Prolif,He_Fan_2021_LUAD5,3,He_Fan_2021
-2935,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
-2936,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
-2937,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
-2938,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T18,626,Kim_Lee_2020
-2939,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
-2940,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
-2941,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
-2942,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
-2943,Tumor NSCLC_Prolif,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
-2944,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1A,46,Lambrechts_Thienpont_2018_6149v1
-2945,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1B,47,Lambrechts_Thienpont_2018_6149v1
-2946,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1C,30,Lambrechts_Thienpont_2018_6149v1
-2947,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2A,27,Lambrechts_Thienpont_2018_6149v1
-2948,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT2B,60,Lambrechts_Thienpont_2018_6149v1
-2949,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v1_BT1249,10,Lambrechts_Thienpont_2018_6149v1
-2950,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1295,11,Lambrechts_Thienpont_2018_6149v2
-2951,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1296,28,Lambrechts_Thienpont_2018_6149v2
-2952,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1297,27,Lambrechts_Thienpont_2018_6149v2
-2953,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1298,878,Lambrechts_Thienpont_2018_6149v2
-2954,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1299,255,Lambrechts_Thienpont_2018_6149v2
-2955,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6149v2_BT1300,1385,Lambrechts_Thienpont_2018_6149v2
-2956,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_BT1375,2,Lambrechts_Thienpont_2018_6653
-2957,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_BT1376,1,Lambrechts_Thienpont_2018_6653
-2958,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_BT1377,1,Lambrechts_Thienpont_2018_6653
-2959,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,32,Lambrechts_Thienpont_2018_6653
-2960,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,46,Lambrechts_Thienpont_2018_6653
-2961,Tumor NSCLC_Prolif,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,42,Lambrechts_Thienpont_2018_6653
-2962,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
-2963,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
-2964,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
-2965,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516669,237,Laughney_Massague_2020
-2966,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516670,1,Laughney_Massague_2020
-2967,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
-2968,Tumor NSCLC_Prolif,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
-2969,Tumor NSCLC_Prolif,Maynard_Bivona_2020_LT_S66,3,Maynard_Bivona_2020
-2970,Tumor NSCLC_Prolif,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
-2971,Tumor NSCLC_Prolif,UKIM-V-2_P5_tumor_primary,23,UKIM-V-2
-2972,Tumor NSCLC_Prolif,UKIM-V-2_P6_tumor_primary,98,UKIM-V-2
-2973,Tumor NSCLC_Prolif,UKIM-V-2_P8_tumor_primary,32,UKIM-V-2
-2974,Tumor NSCLC_Prolif,UKIM-V-2_P9_tumor_primary,9,UKIM-V-2
-2975,Tumor NSCLC_Prolif,UKIM-V-2_P10_tumor_primary,1,UKIM-V-2
-2976,Tumor NSCLC_Prolif,UKIM-V-2_P13_tumor_primary,1,UKIM-V-2
-2977,Tumor NSCLC_Prolif,UKIM-V-2_P14_tumor_primary,11,UKIM-V-2
-2978,Tumor NSCLC_Prolif,UKIM-V-2_P16_tumor_primary,1,UKIM-V-2
-2979,Tumor NSCLC_Prolif,UKIM-V-2_P17_tumor_primary,14,UKIM-V-2
-2980,Tumor NSCLC_Prolif,UKIM-V_P1_tumor_primary,110,UKIM-V
-2981,Tumor NSCLC_Prolif,UKIM-V_P2_tumor_primary,1891,UKIM-V
-2982,Tumor NSCLC_Prolif,UKIM-V_P3_tumor_primary,2,UKIM-V
-2983,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p1t1,238,Zilionis_Klein_2019
-2984,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p1t2,268,Zilionis_Klein_2019
-2985,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p1t3,144,Zilionis_Klein_2019
-2986,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p1t4,166,Zilionis_Klein_2019
-2987,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
-2988,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
-2989,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
-2990,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
-2991,Tumor NSCLC_Prolif,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2584,Tumor AT2-like,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2585,Tumor AT2-like,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
+2586,Tumor AT2-like,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
+2587,Tumor AT2-like,Chen_Zhang_2020_NSCLC-6,9,Chen_Zhang_2020
+2588,Tumor AT2-like,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2589,Tumor AT2-like,Chen_Zhang_2020_NSCLC-11,1,Chen_Zhang_2020
+2590,Tumor AT2-like,He_Fan_2021_LUAD1,0,He_Fan_2021
+2591,Tumor AT2-like,He_Fan_2021_LUAD2,0,He_Fan_2021
+2592,Tumor AT2-like,He_Fan_2021_LUAD3,25,He_Fan_2021
+2593,Tumor AT2-like,He_Fan_2021_LUAD4,10,He_Fan_2021
+2594,Tumor AT2-like,He_Fan_2021_LUAD5,0,He_Fan_2021
+2595,Tumor AT2-like,Kim_Lee_2020_LUNG_T06,2,Kim_Lee_2020
+2596,Tumor AT2-like,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2597,Tumor AT2-like,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2598,Tumor AT2-like,Kim_Lee_2020_LUNG_T18,1,Kim_Lee_2020
+2599,Tumor AT2-like,Kim_Lee_2020_LUNG_T19,9,Kim_Lee_2020
+2600,Tumor AT2-like,Kim_Lee_2020_LUNG_T20,2,Kim_Lee_2020
+2601,Tumor AT2-like,Kim_Lee_2020_LUNG_T25,1,Kim_Lee_2020
+2602,Tumor AT2-like,Kim_Lee_2020_LUNG_T30,163,Kim_Lee_2020
+2603,Tumor AT2-like,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2604,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2605,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2606,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
+2607,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
+2608,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
+2609,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2610,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
+2611,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
+2612,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
+2613,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2614,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
+2615,Tumor AT2-like,Lambrechts_Thienpont_2018_6149v2_BT1300,1,Lambrechts_Thienpont_2018_6149v2
+2616,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
+2617,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
+2618,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
+2619,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,1,Lambrechts_Thienpont_2018_6653
+2620,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
+2621,Tumor AT2-like,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
+2622,Tumor AT2-like,Laughney_Massague_2020_GSM3516662,4,Laughney_Massague_2020
+2623,Tumor AT2-like,Laughney_Massague_2020_GSM3516663,5,Laughney_Massague_2020
+2624,Tumor AT2-like,Laughney_Massague_2020_GSM3516667,2,Laughney_Massague_2020
+2625,Tumor AT2-like,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2626,Tumor AT2-like,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
+2627,Tumor AT2-like,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2628,Tumor AT2-like,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2629,Tumor AT2-like,Maynard_Bivona_2020_LT_S66,3,Maynard_Bivona_2020
+2630,Tumor AT2-like,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2631,Tumor AT2-like,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2632,Tumor AT2-like,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
+2633,Tumor AT2-like,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2634,Tumor AT2-like,UKIM-V-2_P9_tumor_primary,2,UKIM-V-2
+2635,Tumor AT2-like,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
+2636,Tumor AT2-like,UKIM-V-2_P13_tumor_primary,1,UKIM-V-2
+2637,Tumor AT2-like,UKIM-V-2_P14_tumor_primary,6,UKIM-V-2
+2638,Tumor AT2-like,UKIM-V-2_P16_tumor_primary,5,UKIM-V-2
+2639,Tumor AT2-like,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
+2640,Tumor AT2-like,UKIM-V_P1_tumor_primary,2,UKIM-V
+2641,Tumor AT2-like,UKIM-V_P2_tumor_primary,0,UKIM-V
+2642,Tumor AT2-like,UKIM-V_P3_tumor_primary,5,UKIM-V
+2643,Tumor AT2-like,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
+2644,Tumor AT2-like,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2645,Tumor AT2-like,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
+2646,Tumor AT2-like,Zilionis_Klein_2019_p1t4,1,Zilionis_Klein_2019
+2647,Tumor AT2-like,Zilionis_Klein_2019_p4t1,1,Zilionis_Klein_2019
+2648,Tumor AT2-like,Zilionis_Klein_2019_p4t2,2,Zilionis_Klein_2019
+2649,Tumor AT2-like,Zilionis_Klein_2019_p4t3,4,Zilionis_Klein_2019
+2650,Tumor AT2-like,Zilionis_Klein_2019_p6t1,1,Zilionis_Klein_2019
+2651,Tumor AT2-like,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2652,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2653,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
+2654,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
+2655,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-6,0,Chen_Zhang_2020
+2656,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2657,Tumor Mesothelin+,Chen_Zhang_2020_NSCLC-11,0,Chen_Zhang_2020
+2658,Tumor Mesothelin+,He_Fan_2021_LUAD1,0,He_Fan_2021
+2659,Tumor Mesothelin+,He_Fan_2021_LUAD2,0,He_Fan_2021
+2660,Tumor Mesothelin+,He_Fan_2021_LUAD3,0,He_Fan_2021
+2661,Tumor Mesothelin+,He_Fan_2021_LUAD4,0,He_Fan_2021
+2662,Tumor Mesothelin+,He_Fan_2021_LUAD5,0,He_Fan_2021
+2663,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
+2664,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2665,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2666,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T18,0,Kim_Lee_2020
+2667,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
+2668,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
+2669,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
+2670,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2671,Tumor Mesothelin+,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2672,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2673,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2674,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
+2675,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
+2676,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT2B,0,Lambrechts_Thienpont_2018_6149v1
+2677,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2678,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
+2679,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
+2680,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
+2681,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2682,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
+2683,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6149v2_BT1300,1,Lambrechts_Thienpont_2018_6149v2
+2684,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_BT1375,2,Lambrechts_Thienpont_2018_6653
+2685,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
+2686,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_BT1377,1,Lambrechts_Thienpont_2018_6653
+2687,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
+2688,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
+2689,Tumor Mesothelin+,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,0,Lambrechts_Thienpont_2018_6653
+2690,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2691,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2692,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
+2693,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2694,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
+2695,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2696,Tumor Mesothelin+,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2697,Tumor Mesothelin+,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
+2698,Tumor Mesothelin+,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2699,Tumor Mesothelin+,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2700,Tumor Mesothelin+,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
+2701,Tumor Mesothelin+,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2702,Tumor Mesothelin+,UKIM-V-2_P9_tumor_primary,449,UKIM-V-2
+2703,Tumor Mesothelin+,UKIM-V-2_P10_tumor_primary,0,UKIM-V-2
+2704,Tumor Mesothelin+,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
+2705,Tumor Mesothelin+,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
+2706,Tumor Mesothelin+,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
+2707,Tumor Mesothelin+,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
+2708,Tumor Mesothelin+,UKIM-V_P1_tumor_primary,0,UKIM-V
+2709,Tumor Mesothelin+,UKIM-V_P2_tumor_primary,0,UKIM-V
+2710,Tumor Mesothelin+,UKIM-V_P3_tumor_primary,0,UKIM-V
+2711,Tumor Mesothelin+,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
+2712,Tumor Mesothelin+,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2713,Tumor Mesothelin+,Zilionis_Klein_2019_p1t3,0,Zilionis_Klein_2019
+2714,Tumor Mesothelin+,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
+2715,Tumor Mesothelin+,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
+2716,Tumor Mesothelin+,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
+2717,Tumor Mesothelin+,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
+2718,Tumor Mesothelin+,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2719,Tumor Mesothelin+,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2720,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2721,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-2,0,Chen_Zhang_2020
+2722,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-3,0,Chen_Zhang_2020
+2723,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-6,5,Chen_Zhang_2020
+2724,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-7,259,Chen_Zhang_2020
+2725,Tumor_NE_Prol,Chen_Zhang_2020_NSCLC-11,106,Chen_Zhang_2020
+2726,Tumor_NE_Prol,He_Fan_2021_LUAD1,8,He_Fan_2021
+2727,Tumor_NE_Prol,He_Fan_2021_LUAD2,0,He_Fan_2021
+2728,Tumor_NE_Prol,He_Fan_2021_LUAD3,1,He_Fan_2021
+2729,Tumor_NE_Prol,He_Fan_2021_LUAD4,10,He_Fan_2021
+2730,Tumor_NE_Prol,He_Fan_2021_LUAD5,0,He_Fan_2021
+2731,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
+2732,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2733,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2734,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T18,57,Kim_Lee_2020
+2735,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T19,1,Kim_Lee_2020
+2736,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
+2737,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
+2738,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2739,Tumor_NE_Prol,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2740,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2741,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2742,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT1C,1,Lambrechts_Thienpont_2018_6149v1
+2743,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT2A,67,Lambrechts_Thienpont_2018_6149v1
+2744,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT2B,43,Lambrechts_Thienpont_2018_6149v1
+2745,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2746,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1295,220,Lambrechts_Thienpont_2018_6149v2
+2747,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1296,595,Lambrechts_Thienpont_2018_6149v2
+2748,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1297,668,Lambrechts_Thienpont_2018_6149v2
+2749,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2750,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1299,1,Lambrechts_Thienpont_2018_6149v2
+2751,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6149v2_BT1300,2,Lambrechts_Thienpont_2018_6149v2
+2752,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_BT1375,0,Lambrechts_Thienpont_2018_6653
+2753,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_BT1376,0,Lambrechts_Thienpont_2018_6653
+2754,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_BT1377,0,Lambrechts_Thienpont_2018_6653
+2755,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,0,Lambrechts_Thienpont_2018_6653
+2756,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,0,Lambrechts_Thienpont_2018_6653
+2757,Tumor_NE_Prol,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,1,Lambrechts_Thienpont_2018_6653
+2758,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2759,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2760,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
+2761,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2762,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516670,89,Laughney_Massague_2020
+2763,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2764,Tumor_NE_Prol,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2765,Tumor_NE_Prol,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
+2766,Tumor_NE_Prol,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2767,Tumor_NE_Prol,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2768,Tumor_NE_Prol,UKIM-V-2_P6_tumor_primary,22,UKIM-V-2
+2769,Tumor_NE_Prol,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2770,Tumor_NE_Prol,UKIM-V-2_P9_tumor_primary,0,UKIM-V-2
+2771,Tumor_NE_Prol,UKIM-V-2_P10_tumor_primary,1,UKIM-V-2
+2772,Tumor_NE_Prol,UKIM-V-2_P13_tumor_primary,0,UKIM-V-2
+2773,Tumor_NE_Prol,UKIM-V-2_P14_tumor_primary,4,UKIM-V-2
+2774,Tumor_NE_Prol,UKIM-V-2_P16_tumor_primary,1,UKIM-V-2
+2775,Tumor_NE_Prol,UKIM-V-2_P17_tumor_primary,0,UKIM-V-2
+2776,Tumor_NE_Prol,UKIM-V_P1_tumor_primary,10,UKIM-V
+2777,Tumor_NE_Prol,UKIM-V_P2_tumor_primary,5,UKIM-V
+2778,Tumor_NE_Prol,UKIM-V_P3_tumor_primary,0,UKIM-V
+2779,Tumor_NE_Prol,Zilionis_Klein_2019_p1t1,3,Zilionis_Klein_2019
+2780,Tumor_NE_Prol,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2781,Tumor_NE_Prol,Zilionis_Klein_2019_p1t3,2,Zilionis_Klein_2019
+2782,Tumor_NE_Prol,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
+2783,Tumor_NE_Prol,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
+2784,Tumor_NE_Prol,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
+2785,Tumor_NE_Prol,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
+2786,Tumor_NE_Prol,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2787,Tumor_NE_Prol,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2788,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-1,5,Chen_Zhang_2020
+2789,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-2,74,Chen_Zhang_2020
+2790,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-3,19,Chen_Zhang_2020
+2791,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-6,4,Chen_Zhang_2020
+2792,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-7,0,Chen_Zhang_2020
+2793,Tumor Evasive_Prolif+,Chen_Zhang_2020_NSCLC-11,3,Chen_Zhang_2020
+2794,Tumor Evasive_Prolif+,He_Fan_2021_LUAD1,0,He_Fan_2021
+2795,Tumor Evasive_Prolif+,He_Fan_2021_LUAD2,480,He_Fan_2021
+2796,Tumor Evasive_Prolif+,He_Fan_2021_LUAD3,27,He_Fan_2021
+2797,Tumor Evasive_Prolif+,He_Fan_2021_LUAD4,7,He_Fan_2021
+2798,Tumor Evasive_Prolif+,He_Fan_2021_LUAD5,302,He_Fan_2021
+2799,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T06,4,Kim_Lee_2020
+2800,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T08,2,Kim_Lee_2020
+2801,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2802,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T18,4,Kim_Lee_2020
+2803,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T19,1,Kim_Lee_2020
+2804,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T20,258,Kim_Lee_2020
+2805,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T25,1,Kim_Lee_2020
+2806,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T30,1,Kim_Lee_2020
+2807,Tumor Evasive_Prolif+,Kim_Lee_2020_LUNG_T34,45,Kim_Lee_2020
+2808,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT1A,0,Lambrechts_Thienpont_2018_6149v1
+2809,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT1B,0,Lambrechts_Thienpont_2018_6149v1
+2810,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT1C,0,Lambrechts_Thienpont_2018_6149v1
+2811,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT2A,0,Lambrechts_Thienpont_2018_6149v1
+2812,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT2B,1,Lambrechts_Thienpont_2018_6149v1
+2813,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2814,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1295,0,Lambrechts_Thienpont_2018_6149v2
+2815,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1296,0,Lambrechts_Thienpont_2018_6149v2
+2816,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1297,0,Lambrechts_Thienpont_2018_6149v2
+2817,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1298,0,Lambrechts_Thienpont_2018_6149v2
+2818,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1299,0,Lambrechts_Thienpont_2018_6149v2
+2819,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6149v2_BT1300,2,Lambrechts_Thienpont_2018_6149v2
+2820,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_BT1375,139,Lambrechts_Thienpont_2018_6653
+2821,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_BT1376,245,Lambrechts_Thienpont_2018_6653
+2822,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_BT1377,87,Lambrechts_Thienpont_2018_6653
+2823,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,6,Lambrechts_Thienpont_2018_6653
+2824,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,3,Lambrechts_Thienpont_2018_6653
+2825,Tumor Evasive_Prolif+,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
+2826,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2827,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2828,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516667,6,Laughney_Massague_2020
+2829,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516669,0,Laughney_Massague_2020
+2830,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516670,0,Laughney_Massague_2020
+2831,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516672,34,Laughney_Massague_2020
+2832,Tumor Evasive_Prolif+,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2833,Tumor Evasive_Prolif+,Maynard_Bivona_2020_LT_S66,0,Maynard_Bivona_2020
+2834,Tumor Evasive_Prolif+,UKIM-V-2_P4_tumor_primary,6,UKIM-V-2
+2835,Tumor Evasive_Prolif+,UKIM-V-2_P5_tumor_primary,0,UKIM-V-2
+2836,Tumor Evasive_Prolif+,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
+2837,Tumor Evasive_Prolif+,UKIM-V-2_P8_tumor_primary,0,UKIM-V-2
+2838,Tumor Evasive_Prolif+,UKIM-V-2_P9_tumor_primary,1,UKIM-V-2
+2839,Tumor Evasive_Prolif+,UKIM-V-2_P10_tumor_primary,9,UKIM-V-2
+2840,Tumor Evasive_Prolif+,UKIM-V-2_P13_tumor_primary,2,UKIM-V-2
+2841,Tumor Evasive_Prolif+,UKIM-V-2_P14_tumor_primary,0,UKIM-V-2
+2842,Tumor Evasive_Prolif+,UKIM-V-2_P16_tumor_primary,0,UKIM-V-2
+2843,Tumor Evasive_Prolif+,UKIM-V-2_P17_tumor_primary,1,UKIM-V-2
+2844,Tumor Evasive_Prolif+,UKIM-V_P1_tumor_primary,0,UKIM-V
+2845,Tumor Evasive_Prolif+,UKIM-V_P2_tumor_primary,5,UKIM-V
+2846,Tumor Evasive_Prolif+,UKIM-V_P3_tumor_primary,2,UKIM-V
+2847,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p1t1,0,Zilionis_Klein_2019
+2848,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p1t2,0,Zilionis_Klein_2019
+2849,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p1t3,1,Zilionis_Klein_2019
+2850,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p1t4,0,Zilionis_Klein_2019
+2851,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p4t1,3,Zilionis_Klein_2019
+2852,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p4t2,5,Zilionis_Klein_2019
+2853,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p4t3,7,Zilionis_Klein_2019
+2854,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p6t1,1,Zilionis_Klein_2019
+2855,Tumor Evasive_Prolif+,Zilionis_Klein_2019_p6t2,1,Zilionis_Klein_2019
+2856,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-1,1,Chen_Zhang_2020
+2857,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-2,2,Chen_Zhang_2020
+2858,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-3,7,Chen_Zhang_2020
+2859,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-6,67,Chen_Zhang_2020
+2860,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-7,3,Chen_Zhang_2020
+2861,Tumor Cycling-Epi2,Chen_Zhang_2020_NSCLC-11,76,Chen_Zhang_2020
+2862,Tumor Cycling-Epi2,He_Fan_2021_LUAD1,153,He_Fan_2021
+2863,Tumor Cycling-Epi2,He_Fan_2021_LUAD2,70,He_Fan_2021
+2864,Tumor Cycling-Epi2,He_Fan_2021_LUAD3,2841,He_Fan_2021
+2865,Tumor Cycling-Epi2,He_Fan_2021_LUAD4,6,He_Fan_2021
+2866,Tumor Cycling-Epi2,He_Fan_2021_LUAD5,16,He_Fan_2021
+2867,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T06,1,Kim_Lee_2020
+2868,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2869,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2870,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T18,104,Kim_Lee_2020
+2871,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T19,2,Kim_Lee_2020
+2872,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T20,33,Kim_Lee_2020
+2873,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T25,4,Kim_Lee_2020
+2874,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2875,Tumor Cycling-Epi2,Kim_Lee_2020_LUNG_T34,6,Kim_Lee_2020
+2876,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT1A,5,Lambrechts_Thienpont_2018_6149v1
+2877,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT1B,6,Lambrechts_Thienpont_2018_6149v1
+2878,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT1C,3,Lambrechts_Thienpont_2018_6149v1
+2879,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT2A,2,Lambrechts_Thienpont_2018_6149v1
+2880,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT2B,4,Lambrechts_Thienpont_2018_6149v1
+2881,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v1_BT1249,0,Lambrechts_Thienpont_2018_6149v1
+2882,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1295,23,Lambrechts_Thienpont_2018_6149v2
+2883,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1296,32,Lambrechts_Thienpont_2018_6149v2
+2884,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1297,82,Lambrechts_Thienpont_2018_6149v2
+2885,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1298,15,Lambrechts_Thienpont_2018_6149v2
+2886,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1299,11,Lambrechts_Thienpont_2018_6149v2
+2887,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6149v2_BT1300,42,Lambrechts_Thienpont_2018_6149v2
+2888,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_BT1375,45,Lambrechts_Thienpont_2018_6653
+2889,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_BT1376,31,Lambrechts_Thienpont_2018_6653
+2890,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_BT1377,4,Lambrechts_Thienpont_2018_6653
+2891,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,1,Lambrechts_Thienpont_2018_6653
+2892,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,2,Lambrechts_Thienpont_2018_6653
+2893,Tumor Cycling-Epi2,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,2,Lambrechts_Thienpont_2018_6653
+2894,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516662,6,Laughney_Massague_2020
+2895,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516663,2,Laughney_Massague_2020
+2896,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516667,16,Laughney_Massague_2020
+2897,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516669,2,Laughney_Massague_2020
+2898,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516670,3,Laughney_Massague_2020
+2899,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516672,9,Laughney_Massague_2020
+2900,Tumor Cycling-Epi2,Laughney_Massague_2020_GSM3516674,1,Laughney_Massague_2020
+2901,Tumor Cycling-Epi2,Maynard_Bivona_2020_LT_S66,222,Maynard_Bivona_2020
+2902,Tumor Cycling-Epi2,UKIM-V-2_P4_tumor_primary,2,UKIM-V-2
+2903,Tumor Cycling-Epi2,UKIM-V-2_P5_tumor_primary,11,UKIM-V-2
+2904,Tumor Cycling-Epi2,UKIM-V-2_P6_tumor_primary,0,UKIM-V-2
+2905,Tumor Cycling-Epi2,UKIM-V-2_P8_tumor_primary,1,UKIM-V-2
+2906,Tumor Cycling-Epi2,UKIM-V-2_P9_tumor_primary,8,UKIM-V-2
+2907,Tumor Cycling-Epi2,UKIM-V-2_P10_tumor_primary,2,UKIM-V-2
+2908,Tumor Cycling-Epi2,UKIM-V-2_P13_tumor_primary,4,UKIM-V-2
+2909,Tumor Cycling-Epi2,UKIM-V-2_P14_tumor_primary,22,UKIM-V-2
+2910,Tumor Cycling-Epi2,UKIM-V-2_P16_tumor_primary,6,UKIM-V-2
+2911,Tumor Cycling-Epi2,UKIM-V-2_P17_tumor_primary,1,UKIM-V-2
+2912,Tumor Cycling-Epi2,UKIM-V_P1_tumor_primary,1,UKIM-V
+2913,Tumor Cycling-Epi2,UKIM-V_P2_tumor_primary,184,UKIM-V
+2914,Tumor Cycling-Epi2,UKIM-V_P3_tumor_primary,9,UKIM-V
+2915,Tumor Cycling-Epi2,Zilionis_Klein_2019_p1t1,6,Zilionis_Klein_2019
+2916,Tumor Cycling-Epi2,Zilionis_Klein_2019_p1t2,13,Zilionis_Klein_2019
+2917,Tumor Cycling-Epi2,Zilionis_Klein_2019_p1t3,7,Zilionis_Klein_2019
+2918,Tumor Cycling-Epi2,Zilionis_Klein_2019_p1t4,1,Zilionis_Klein_2019
+2919,Tumor Cycling-Epi2,Zilionis_Klein_2019_p4t1,4,Zilionis_Klein_2019
+2920,Tumor Cycling-Epi2,Zilionis_Klein_2019_p4t2,5,Zilionis_Klein_2019
+2921,Tumor Cycling-Epi2,Zilionis_Klein_2019_p4t3,5,Zilionis_Klein_2019
+2922,Tumor Cycling-Epi2,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2923,Tumor Cycling-Epi2,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
+2924,Tumor ASP2,Chen_Zhang_2020_NSCLC-1,0,Chen_Zhang_2020
+2925,Tumor ASP2,Chen_Zhang_2020_NSCLC-2,2,Chen_Zhang_2020
+2926,Tumor ASP2,Chen_Zhang_2020_NSCLC-3,1,Chen_Zhang_2020
+2927,Tumor ASP2,Chen_Zhang_2020_NSCLC-6,145,Chen_Zhang_2020
+2928,Tumor ASP2,Chen_Zhang_2020_NSCLC-7,26,Chen_Zhang_2020
+2929,Tumor ASP2,Chen_Zhang_2020_NSCLC-11,46,Chen_Zhang_2020
+2930,Tumor ASP2,He_Fan_2021_LUAD1,395,He_Fan_2021
+2931,Tumor ASP2,He_Fan_2021_LUAD2,7,He_Fan_2021
+2932,Tumor ASP2,He_Fan_2021_LUAD3,12,He_Fan_2021
+2933,Tumor ASP2,He_Fan_2021_LUAD4,2,He_Fan_2021
+2934,Tumor ASP2,He_Fan_2021_LUAD5,3,He_Fan_2021
+2935,Tumor ASP2,Kim_Lee_2020_LUNG_T06,0,Kim_Lee_2020
+2936,Tumor ASP2,Kim_Lee_2020_LUNG_T08,0,Kim_Lee_2020
+2937,Tumor ASP2,Kim_Lee_2020_LUNG_T09,0,Kim_Lee_2020
+2938,Tumor ASP2,Kim_Lee_2020_LUNG_T18,626,Kim_Lee_2020
+2939,Tumor ASP2,Kim_Lee_2020_LUNG_T19,0,Kim_Lee_2020
+2940,Tumor ASP2,Kim_Lee_2020_LUNG_T20,0,Kim_Lee_2020
+2941,Tumor ASP2,Kim_Lee_2020_LUNG_T25,0,Kim_Lee_2020
+2942,Tumor ASP2,Kim_Lee_2020_LUNG_T30,0,Kim_Lee_2020
+2943,Tumor ASP2,Kim_Lee_2020_LUNG_T34,0,Kim_Lee_2020
+2944,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT1A,46,Lambrechts_Thienpont_2018_6149v1
+2945,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT1B,47,Lambrechts_Thienpont_2018_6149v1
+2946,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT1C,30,Lambrechts_Thienpont_2018_6149v1
+2947,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT2A,27,Lambrechts_Thienpont_2018_6149v1
+2948,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT2B,60,Lambrechts_Thienpont_2018_6149v1
+2949,Tumor ASP2,Lambrechts_Thienpont_2018_6149v1_BT1249,10,Lambrechts_Thienpont_2018_6149v1
+2950,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1295,11,Lambrechts_Thienpont_2018_6149v2
+2951,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1296,28,Lambrechts_Thienpont_2018_6149v2
+2952,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1297,27,Lambrechts_Thienpont_2018_6149v2
+2953,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1298,878,Lambrechts_Thienpont_2018_6149v2
+2954,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1299,255,Lambrechts_Thienpont_2018_6149v2
+2955,Tumor ASP2,Lambrechts_Thienpont_2018_6149v2_BT1300,1385,Lambrechts_Thienpont_2018_6149v2
+2956,Tumor ASP2,Lambrechts_Thienpont_2018_6653_BT1375,2,Lambrechts_Thienpont_2018_6653
+2957,Tumor ASP2,Lambrechts_Thienpont_2018_6653_BT1376,1,Lambrechts_Thienpont_2018_6653
+2958,Tumor ASP2,Lambrechts_Thienpont_2018_6653_BT1377,1,Lambrechts_Thienpont_2018_6653
+2959,Tumor ASP2,Lambrechts_Thienpont_2018_6653_scrBT1425_hg19,32,Lambrechts_Thienpont_2018_6653
+2960,Tumor ASP2,Lambrechts_Thienpont_2018_6653_scrBT1426_hg19,46,Lambrechts_Thienpont_2018_6653
+2961,Tumor ASP2,Lambrechts_Thienpont_2018_6653_scrBT1427_hg19,42,Lambrechts_Thienpont_2018_6653
+2962,Tumor ASP2,Laughney_Massague_2020_GSM3516662,0,Laughney_Massague_2020
+2963,Tumor ASP2,Laughney_Massague_2020_GSM3516663,0,Laughney_Massague_2020
+2964,Tumor ASP2,Laughney_Massague_2020_GSM3516667,0,Laughney_Massague_2020
+2965,Tumor ASP2,Laughney_Massague_2020_GSM3516669,237,Laughney_Massague_2020
+2966,Tumor ASP2,Laughney_Massague_2020_GSM3516670,1,Laughney_Massague_2020
+2967,Tumor ASP2,Laughney_Massague_2020_GSM3516672,0,Laughney_Massague_2020
+2968,Tumor ASP2,Laughney_Massague_2020_GSM3516674,0,Laughney_Massague_2020
+2969,Tumor ASP2,Maynard_Bivona_2020_LT_S66,3,Maynard_Bivona_2020
+2970,Tumor ASP2,UKIM-V-2_P4_tumor_primary,0,UKIM-V-2
+2971,Tumor ASP2,UKIM-V-2_P5_tumor_primary,23,UKIM-V-2
+2972,Tumor ASP2,UKIM-V-2_P6_tumor_primary,98,UKIM-V-2
+2973,Tumor ASP2,UKIM-V-2_P8_tumor_primary,32,UKIM-V-2
+2974,Tumor ASP2,UKIM-V-2_P9_tumor_primary,9,UKIM-V-2
+2975,Tumor ASP2,UKIM-V-2_P10_tumor_primary,1,UKIM-V-2
+2976,Tumor ASP2,UKIM-V-2_P13_tumor_primary,1,UKIM-V-2
+2977,Tumor ASP2,UKIM-V-2_P14_tumor_primary,11,UKIM-V-2
+2978,Tumor ASP2,UKIM-V-2_P16_tumor_primary,1,UKIM-V-2
+2979,Tumor ASP2,UKIM-V-2_P17_tumor_primary,14,UKIM-V-2
+2980,Tumor ASP2,UKIM-V_P1_tumor_primary,110,UKIM-V
+2981,Tumor ASP2,UKIM-V_P2_tumor_primary,1891,UKIM-V
+2982,Tumor ASP2,UKIM-V_P3_tumor_primary,2,UKIM-V
+2983,Tumor ASP2,Zilionis_Klein_2019_p1t1,238,Zilionis_Klein_2019
+2984,Tumor ASP2,Zilionis_Klein_2019_p1t2,268,Zilionis_Klein_2019
+2985,Tumor ASP2,Zilionis_Klein_2019_p1t3,144,Zilionis_Klein_2019
+2986,Tumor ASP2,Zilionis_Klein_2019_p1t4,166,Zilionis_Klein_2019
+2987,Tumor ASP2,Zilionis_Klein_2019_p4t1,0,Zilionis_Klein_2019
+2988,Tumor ASP2,Zilionis_Klein_2019_p4t2,0,Zilionis_Klein_2019
+2989,Tumor ASP2,Zilionis_Klein_2019_p4t3,0,Zilionis_Klein_2019
+2990,Tumor ASP2,Zilionis_Klein_2019_p6t1,0,Zilionis_Klein_2019
+2991,Tumor ASP2,Zilionis_Klein_2019_p6t2,0,Zilionis_Klein_2019
 2992,cDC1,Chen_Zhang_2020_NSCLC-1,4,Chen_Zhang_2020
 2993,cDC1,Chen_Zhang_2020_NSCLC-2,12,Chen_Zhang_2020
 2994,cDC1,Chen_Zhang_2020_NSCLC-3,15,Chen_Zhang_2020
@@ -4466,88 +4466,88 @@ Unnamed: 0,cell_type_adjusted,sample,0,dataset
 1132,T cell regulatory,P041,466,Deng
 1133,T cell regulatory,P042,805,Deng
 1134,T cell regulatory,P043,1366,Deng
-1135,Tumor Secretory_LUAD,P001,11,Deng
-1136,Tumor Secretory_LUAD,P002,236,Deng
-1137,Tumor Secretory_LUAD,P003,91,Deng
-1138,Tumor Secretory_LUAD,P004,47,Deng
-1139,Tumor Secretory_LUAD,P005,31,Deng
-1140,Tumor Secretory_LUAD,P006,45,Deng
-1141,Tumor Secretory_LUAD,P007,34,Deng
-1142,Tumor Secretory_LUAD,P008,18,Deng
-1143,Tumor Secretory_LUAD,P009,12,Deng
-1144,Tumor Secretory_LUAD,P010,45,Deng
-1145,Tumor Secretory_LUAD,P011,24,Deng
-1146,Tumor Secretory_LUAD,P012,80,Deng
-1147,Tumor Secretory_LUAD,P013,44,Deng
-1148,Tumor Secretory_LUAD,P014,22,Deng
-1149,Tumor Secretory_LUAD,P015,82,Deng
-1150,Tumor Secretory_LUAD,P016,1007,Deng
-1151,Tumor Secretory_LUAD,P017,14,Deng
-1152,Tumor Secretory_LUAD,P018,32,Deng
-1153,Tumor Secretory_LUAD,P019,15,Deng
-1154,Tumor Secretory_LUAD,P020,25,Deng
-1155,Tumor Secretory_LUAD,P021,16,Deng
-1156,Tumor Secretory_LUAD,P022,38,Deng
-1157,Tumor Secretory_LUAD,P023,22,Deng
-1158,Tumor Secretory_LUAD,P024,78,Deng
-1159,Tumor Secretory_LUAD,P025,91,Deng
-1160,Tumor Secretory_LUAD,P026,28,Deng
-1161,Tumor Secretory_LUAD,P027,29,Deng
-1162,Tumor Secretory_LUAD,P028,23,Deng
-1163,Tumor Secretory_LUAD,P029,54,Deng
-1164,Tumor Secretory_LUAD,P030,47,Deng
-1165,Tumor Secretory_LUAD,P031,26,Deng
-1166,Tumor Secretory_LUAD,P032,33,Deng
-1167,Tumor Secretory_LUAD,P033,19,Deng
-1168,Tumor Secretory_LUAD,P034,74,Deng
-1169,Tumor Secretory_LUAD,P035,28,Deng
-1170,Tumor Secretory_LUAD,P036,55,Deng
-1171,Tumor Secretory_LUAD,P037,118,Deng
-1172,Tumor Secretory_LUAD,P038,73,Deng
-1173,Tumor Secretory_LUAD,P039,4,Deng
-1174,Tumor Secretory_LUAD,P040,46,Deng
-1175,Tumor Secretory_LUAD,P041,35,Deng
-1176,Tumor Secretory_LUAD,P042,26,Deng
-1177,Tumor Secretory_LUAD,P043,88,Deng
-1178,Tumor EMT_lowProlif,P001,3,Deng
-1179,Tumor EMT_lowProlif,P002,21,Deng
-1180,Tumor EMT_lowProlif,P003,4,Deng
-1181,Tumor EMT_lowProlif,P004,5,Deng
-1182,Tumor EMT_lowProlif,P006,1,Deng
-1183,Tumor EMT_lowProlif,P007,2,Deng
-1184,Tumor EMT_lowProlif,P008,62,Deng
-1185,Tumor EMT_lowProlif,P009,1,Deng
-1186,Tumor EMT_lowProlif,P010,16,Deng
-1187,Tumor EMT_lowProlif,P012,9,Deng
-1188,Tumor EMT_lowProlif,P013,22,Deng
-1189,Tumor EMT_lowProlif,P014,44,Deng
-1190,Tumor EMT_lowProlif,P015,3,Deng
-1191,Tumor EMT_lowProlif,P016,4,Deng
-1192,Tumor EMT_lowProlif,P017,3,Deng
-1193,Tumor EMT_lowProlif,P018,18,Deng
-1194,Tumor EMT_lowProlif,P019,3,Deng
-1195,Tumor EMT_lowProlif,P020,7,Deng
-1196,Tumor EMT_lowProlif,P021,9,Deng
-1197,Tumor EMT_lowProlif,P023,35,Deng
-1198,Tumor EMT_lowProlif,P024,45,Deng
-1199,Tumor EMT_lowProlif,P025,2,Deng
-1200,Tumor EMT_lowProlif,P026,1,Deng
-1201,Tumor EMT_lowProlif,P027,5,Deng
-1202,Tumor EMT_lowProlif,P028,7,Deng
-1203,Tumor EMT_lowProlif,P029,31,Deng
-1204,Tumor EMT_lowProlif,P031,5,Deng
-1205,Tumor EMT_lowProlif,P032,15,Deng
-1206,Tumor EMT_lowProlif,P033,18,Deng
-1207,Tumor EMT_lowProlif,P034,28,Deng
-1208,Tumor EMT_lowProlif,P035,14,Deng
-1209,Tumor EMT_lowProlif,P036,16,Deng
-1210,Tumor EMT_lowProlif,P037,8,Deng
-1211,Tumor EMT_lowProlif,P038,8,Deng
-1212,Tumor EMT_lowProlif,P039,3,Deng
-1213,Tumor EMT_lowProlif,P040,8,Deng
-1214,Tumor EMT_lowProlif,P041,14,Deng
-1215,Tumor EMT_lowProlif,P042,4,Deng
-1216,Tumor EMT_lowProlif,P043,23,Deng
+1135,Tumor Tumor ImmunoSup,P001,11,Deng
+1136,Tumor Tumor ImmunoSup,P002,236,Deng
+1137,Tumor Tumor ImmunoSup,P003,91,Deng
+1138,Tumor Tumor ImmunoSup,P004,47,Deng
+1139,Tumor Tumor ImmunoSup,P005,31,Deng
+1140,Tumor Tumor ImmunoSup,P006,45,Deng
+1141,Tumor Tumor ImmunoSup,P007,34,Deng
+1142,Tumor Tumor ImmunoSup,P008,18,Deng
+1143,Tumor Tumor ImmunoSup,P009,12,Deng
+1144,Tumor Tumor ImmunoSup,P010,45,Deng
+1145,Tumor Tumor ImmunoSup,P011,24,Deng
+1146,Tumor Tumor ImmunoSup,P012,80,Deng
+1147,Tumor Tumor ImmunoSup,P013,44,Deng
+1148,Tumor Tumor ImmunoSup,P014,22,Deng
+1149,Tumor Tumor ImmunoSup,P015,82,Deng
+1150,Tumor Tumor ImmunoSup,P016,1007,Deng
+1151,Tumor Tumor ImmunoSup,P017,14,Deng
+1152,Tumor Tumor ImmunoSup,P018,32,Deng
+1153,Tumor Tumor ImmunoSup,P019,15,Deng
+1154,Tumor Tumor ImmunoSup,P020,25,Deng
+1155,Tumor Tumor ImmunoSup,P021,16,Deng
+1156,Tumor Tumor ImmunoSup,P022,38,Deng
+1157,Tumor Tumor ImmunoSup,P023,22,Deng
+1158,Tumor Tumor ImmunoSup,P024,78,Deng
+1159,Tumor Tumor ImmunoSup,P025,91,Deng
+1160,Tumor Tumor ImmunoSup,P026,28,Deng
+1161,Tumor Tumor ImmunoSup,P027,29,Deng
+1162,Tumor Tumor ImmunoSup,P028,23,Deng
+1163,Tumor Tumor ImmunoSup,P029,54,Deng
+1164,Tumor Tumor ImmunoSup,P030,47,Deng
+1165,Tumor Tumor ImmunoSup,P031,26,Deng
+1166,Tumor Tumor ImmunoSup,P032,33,Deng
+1167,Tumor Tumor ImmunoSup,P033,19,Deng
+1168,Tumor Tumor ImmunoSup,P034,74,Deng
+1169,Tumor Tumor ImmunoSup,P035,28,Deng
+1170,Tumor Tumor ImmunoSup,P036,55,Deng
+1171,Tumor Tumor ImmunoSup,P037,118,Deng
+1172,Tumor Tumor ImmunoSup,P038,73,Deng
+1173,Tumor Tumor ImmunoSup,P039,4,Deng
+1174,Tumor Tumor ImmunoSup,P040,46,Deng
+1175,Tumor Tumor ImmunoSup,P041,35,Deng
+1176,Tumor Tumor ImmunoSup,P042,26,Deng
+1177,Tumor Tumor ImmunoSup,P043,88,Deng
+1178,Tumor EMT,P001,3,Deng
+1179,Tumor EMT,P002,21,Deng
+1180,Tumor EMT,P003,4,Deng
+1181,Tumor EMT,P004,5,Deng
+1182,Tumor EMT,P006,1,Deng
+1183,Tumor EMT,P007,2,Deng
+1184,Tumor EMT,P008,62,Deng
+1185,Tumor EMT,P009,1,Deng
+1186,Tumor EMT,P010,16,Deng
+1187,Tumor EMT,P012,9,Deng
+1188,Tumor EMT,P013,22,Deng
+1189,Tumor EMT,P014,44,Deng
+1190,Tumor EMT,P015,3,Deng
+1191,Tumor EMT,P016,4,Deng
+1192,Tumor EMT,P017,3,Deng
+1193,Tumor EMT,P018,18,Deng
+1194,Tumor EMT,P019,3,Deng
+1195,Tumor EMT,P020,7,Deng
+1196,Tumor EMT,P021,9,Deng
+1197,Tumor EMT,P023,35,Deng
+1198,Tumor EMT,P024,45,Deng
+1199,Tumor EMT,P025,2,Deng
+1200,Tumor EMT,P026,1,Deng
+1201,Tumor EMT,P027,5,Deng
+1202,Tumor EMT,P028,7,Deng
+1203,Tumor EMT,P029,31,Deng
+1204,Tumor EMT,P031,5,Deng
+1205,Tumor EMT,P032,15,Deng
+1206,Tumor EMT,P033,18,Deng
+1207,Tumor EMT,P034,28,Deng
+1208,Tumor EMT,P035,14,Deng
+1209,Tumor EMT,P036,16,Deng
+1210,Tumor EMT,P037,8,Deng
+1211,Tumor EMT,P038,8,Deng
+1212,Tumor EMT,P039,3,Deng
+1213,Tumor EMT,P040,8,Deng
+1214,Tumor EMT,P041,14,Deng
+1215,Tumor EMT,P042,4,Deng
+1216,Tumor EMT,P043,23,Deng
 1217,Tumor OxPhos_Prolif,P002,1,Deng
 1218,Tumor OxPhos_Prolif,P011,1,Deng
 1219,Tumor OxPhos_Prolif,P012,4,Deng
@@ -4574,229 +4574,229 @@ Unnamed: 0,cell_type_adjusted,sample,0,dataset
 1240,Tumor OxPhos_Prolif,P041,29,Deng
 1241,Tumor OxPhos_Prolif,P042,18,Deng
 1242,Tumor OxPhos_Prolif,P043,3,Deng
-1243,Tumor TTF1+_Quiescent,P001,53,Deng
-1244,Tumor TTF1+_Quiescent,P002,2489,Deng
-1245,Tumor TTF1+_Quiescent,P003,37,Deng
-1246,Tumor TTF1+_Quiescent,P004,1969,Deng
-1247,Tumor TTF1+_Quiescent,P005,379,Deng
-1248,Tumor TTF1+_Quiescent,P006,310,Deng
-1249,Tumor TTF1+_Quiescent,P007,35,Deng
-1250,Tumor TTF1+_Quiescent,P008,410,Deng
-1251,Tumor TTF1+_Quiescent,P009,148,Deng
-1252,Tumor TTF1+_Quiescent,P010,681,Deng
-1253,Tumor TTF1+_Quiescent,P011,282,Deng
-1254,Tumor TTF1+_Quiescent,P012,1385,Deng
-1255,Tumor TTF1+_Quiescent,P013,1168,Deng
-1256,Tumor TTF1+_Quiescent,P014,553,Deng
-1257,Tumor TTF1+_Quiescent,P015,359,Deng
-1258,Tumor TTF1+_Quiescent,P016,662,Deng
-1259,Tumor TTF1+_Quiescent,P017,555,Deng
-1260,Tumor TTF1+_Quiescent,P018,216,Deng
-1261,Tumor TTF1+_Quiescent,P019,318,Deng
-1262,Tumor TTF1+_Quiescent,P020,521,Deng
-1263,Tumor TTF1+_Quiescent,P021,464,Deng
-1264,Tumor TTF1+_Quiescent,P022,256,Deng
-1265,Tumor TTF1+_Quiescent,P023,123,Deng
-1266,Tumor TTF1+_Quiescent,P024,736,Deng
-1267,Tumor TTF1+_Quiescent,P025,468,Deng
-1268,Tumor TTF1+_Quiescent,P026,918,Deng
-1269,Tumor TTF1+_Quiescent,P027,712,Deng
-1270,Tumor TTF1+_Quiescent,P028,172,Deng
-1271,Tumor TTF1+_Quiescent,P029,1919,Deng
-1272,Tumor TTF1+_Quiescent,P030,9,Deng
-1273,Tumor TTF1+_Quiescent,P031,100,Deng
-1274,Tumor TTF1+_Quiescent,P032,200,Deng
-1275,Tumor TTF1+_Quiescent,P033,229,Deng
-1276,Tumor TTF1+_Quiescent,P034,1031,Deng
-1277,Tumor TTF1+_Quiescent,P035,346,Deng
-1278,Tumor TTF1+_Quiescent,P036,165,Deng
-1279,Tumor TTF1+_Quiescent,P037,1104,Deng
-1280,Tumor TTF1+_Quiescent,P038,185,Deng
-1281,Tumor TTF1+_Quiescent,P039,81,Deng
-1282,Tumor TTF1+_Quiescent,P040,707,Deng
-1283,Tumor TTF1+_Quiescent,P041,184,Deng
-1284,Tumor TTF1+_Quiescent,P042,1786,Deng
-1285,Tumor TTF1+_Quiescent,P043,243,Deng
-1286,Tumor Evasive_Prolif,P001,7,Deng
-1287,Tumor Evasive_Prolif,P002,2,Deng
-1288,Tumor Evasive_Prolif,P003,3,Deng
-1289,Tumor Evasive_Prolif,P004,5,Deng
-1290,Tumor Evasive_Prolif,P005,1,Deng
-1291,Tumor Evasive_Prolif,P006,5,Deng
-1292,Tumor Evasive_Prolif,P007,1,Deng
-1293,Tumor Evasive_Prolif,P008,4,Deng
-1294,Tumor Evasive_Prolif,P009,2,Deng
-1295,Tumor Evasive_Prolif,P011,3,Deng
-1296,Tumor Evasive_Prolif,P012,2,Deng
-1297,Tumor Evasive_Prolif,P014,1,Deng
-1298,Tumor Evasive_Prolif,P015,6,Deng
-1299,Tumor Evasive_Prolif,P016,6,Deng
-1300,Tumor Evasive_Prolif,P017,1,Deng
-1301,Tumor Evasive_Prolif,P018,30,Deng
-1302,Tumor Evasive_Prolif,P019,4,Deng
-1303,Tumor Evasive_Prolif,P020,7,Deng
-1304,Tumor Evasive_Prolif,P021,3,Deng
-1305,Tumor Evasive_Prolif,P022,4,Deng
-1306,Tumor Evasive_Prolif,P023,3,Deng
-1307,Tumor Evasive_Prolif,P024,6,Deng
-1308,Tumor Evasive_Prolif,P025,3,Deng
-1309,Tumor Evasive_Prolif,P026,3,Deng
-1310,Tumor Evasive_Prolif,P027,5,Deng
-1311,Tumor Evasive_Prolif,P028,4,Deng
-1312,Tumor Evasive_Prolif,P029,2,Deng
-1313,Tumor Evasive_Prolif,P030,1,Deng
-1314,Tumor Evasive_Prolif,P031,3,Deng
-1315,Tumor Evasive_Prolif,P032,6,Deng
-1316,Tumor Evasive_Prolif,P034,2,Deng
-1317,Tumor Evasive_Prolif,P035,2,Deng
-1318,Tumor Evasive_Prolif,P036,9,Deng
-1319,Tumor Evasive_Prolif,P037,1,Deng
-1320,Tumor Evasive_Prolif,P038,2,Deng
-1321,Tumor Evasive_Prolif,P039,5,Deng
-1322,Tumor Evasive_Prolif,P041,5,Deng
-1323,Tumor Evasive_Prolif,P042,5,Deng
-1324,Tumor Evasive_Prolif,P043,3,Deng
-1325,Tumor Evasive_HighProlif,P004,1,Deng
-1326,Tumor Evasive_HighProlif,P009,1,Deng
-1327,Tumor Evasive_HighProlif,P012,1,Deng
-1328,Tumor Evasive_HighProlif,P018,1,Deng
-1329,Tumor Evasive_HighProlif,P019,4,Deng
-1330,Tumor Evasive_HighProlif,P023,1,Deng
-1331,Tumor Evasive_HighProlif,P024,265,Deng
-1332,Tumor Evasive_HighProlif,P031,14,Deng
-1333,Tumor Evasive_HighProlif,P032,2,Deng
-1334,Tumor Evasive_HighProlif,P033,8,Deng
-1335,Tumor Evasive_HighProlif,P034,1,Deng
-1336,Tumor Evasive_HighProlif,P037,100,Deng
-1337,Tumor Evasive_HighProlif,P040,1,Deng
-1338,Tumor Evasive_HighProlif,P041,8,Deng
-1339,Tumor Evasive_HighProlif,P042,4,Deng
-1340,Tumor Hypoxic_Prolif,P001,18,Deng
-1341,Tumor Hypoxic_Prolif,P002,7,Deng
-1342,Tumor Hypoxic_Prolif,P003,2,Deng
-1343,Tumor Hypoxic_Prolif,P004,4,Deng
-1344,Tumor Hypoxic_Prolif,P005,17,Deng
-1345,Tumor Hypoxic_Prolif,P007,3,Deng
-1346,Tumor Hypoxic_Prolif,P008,3,Deng
-1347,Tumor Hypoxic_Prolif,P009,3,Deng
-1348,Tumor Hypoxic_Prolif,P010,1,Deng
-1349,Tumor Hypoxic_Prolif,P011,1,Deng
-1350,Tumor Hypoxic_Prolif,P012,10,Deng
-1351,Tumor Hypoxic_Prolif,P013,18,Deng
-1352,Tumor Hypoxic_Prolif,P014,4,Deng
-1353,Tumor Hypoxic_Prolif,P015,5,Deng
-1354,Tumor Hypoxic_Prolif,P016,20,Deng
-1355,Tumor Hypoxic_Prolif,P017,2,Deng
-1356,Tumor Hypoxic_Prolif,P018,75,Deng
-1357,Tumor Hypoxic_Prolif,P019,14,Deng
-1358,Tumor Hypoxic_Prolif,P020,118,Deng
-1359,Tumor Hypoxic_Prolif,P021,1,Deng
-1360,Tumor Hypoxic_Prolif,P022,10,Deng
-1361,Tumor Hypoxic_Prolif,P023,9,Deng
-1362,Tumor Hypoxic_Prolif,P024,318,Deng
-1363,Tumor Hypoxic_Prolif,P025,2,Deng
-1364,Tumor Hypoxic_Prolif,P026,7,Deng
-1365,Tumor Hypoxic_Prolif,P027,3,Deng
-1366,Tumor Hypoxic_Prolif,P028,3,Deng
-1367,Tumor Hypoxic_Prolif,P029,15,Deng
-1368,Tumor Hypoxic_Prolif,P030,13,Deng
-1369,Tumor Hypoxic_Prolif,P031,7,Deng
-1370,Tumor Hypoxic_Prolif,P032,13,Deng
-1371,Tumor Hypoxic_Prolif,P033,10,Deng
-1372,Tumor Hypoxic_Prolif,P034,3,Deng
-1373,Tumor Hypoxic_Prolif,P035,17,Deng
-1374,Tumor Hypoxic_Prolif,P036,9,Deng
-1375,Tumor Hypoxic_Prolif,P037,75,Deng
-1376,Tumor Hypoxic_Prolif,P038,40,Deng
-1377,Tumor Hypoxic_Prolif,P039,7,Deng
-1378,Tumor Hypoxic_Prolif,P040,46,Deng
-1379,Tumor Hypoxic_Prolif,P041,63,Deng
-1380,Tumor Hypoxic_Prolif,P042,77,Deng
-1381,Tumor Hypoxic_Prolif,P043,27,Deng
-1382,Tumor Macrophage_Swallow,P001,9,Deng
-1383,Tumor Macrophage_Swallow,P002,4,Deng
-1384,Tumor Macrophage_Swallow,P003,6,Deng
-1385,Tumor Macrophage_Swallow,P004,2,Deng
-1386,Tumor Macrophage_Swallow,P005,3,Deng
-1387,Tumor Macrophage_Swallow,P006,14,Deng
-1388,Tumor Macrophage_Swallow,P007,3,Deng
-1389,Tumor Macrophage_Swallow,P008,2,Deng
-1390,Tumor Macrophage_Swallow,P009,1,Deng
-1391,Tumor Macrophage_Swallow,P010,2,Deng
-1392,Tumor Macrophage_Swallow,P011,3,Deng
-1393,Tumor Macrophage_Swallow,P014,4,Deng
-1394,Tumor Macrophage_Swallow,P015,9,Deng
-1395,Tumor Macrophage_Swallow,P016,20,Deng
-1396,Tumor Macrophage_Swallow,P017,2,Deng
-1397,Tumor Macrophage_Swallow,P018,10,Deng
-1398,Tumor Macrophage_Swallow,P019,2,Deng
-1399,Tumor Macrophage_Swallow,P020,3,Deng
-1400,Tumor Macrophage_Swallow,P021,6,Deng
-1401,Tumor Macrophage_Swallow,P022,8,Deng
-1402,Tumor Macrophage_Swallow,P023,2,Deng
-1403,Tumor Macrophage_Swallow,P024,8,Deng
-1404,Tumor Macrophage_Swallow,P025,1,Deng
-1405,Tumor Macrophage_Swallow,P026,3,Deng
-1406,Tumor Macrophage_Swallow,P027,1,Deng
-1407,Tumor Macrophage_Swallow,P028,5,Deng
-1408,Tumor Macrophage_Swallow,P029,9,Deng
-1409,Tumor Macrophage_Swallow,P030,3,Deng
-1410,Tumor Macrophage_Swallow,P031,1,Deng
-1411,Tumor Macrophage_Swallow,P032,5,Deng
-1412,Tumor Macrophage_Swallow,P033,1,Deng
-1413,Tumor Macrophage_Swallow,P034,5,Deng
-1414,Tumor Macrophage_Swallow,P035,1,Deng
-1415,Tumor Macrophage_Swallow,P036,1,Deng
-1416,Tumor Macrophage_Swallow,P037,3,Deng
-1417,Tumor Macrophage_Swallow,P038,2,Deng
-1418,Tumor Macrophage_Swallow,P039,4,Deng
-1419,Tumor Macrophage_Swallow,P040,5,Deng
-1420,Tumor Macrophage_Swallow,P041,2,Deng
-1421,Tumor Macrophage_Swallow,P042,1,Deng
-1422,Tumor Macrophage_Swallow,P043,3,Deng
-1423,Tumor NSCLC_Prolif,P001,77,Deng
-1424,Tumor NSCLC_Prolif,P002,450,Deng
-1425,Tumor NSCLC_Prolif,P003,131,Deng
-1426,Tumor NSCLC_Prolif,P004,165,Deng
-1427,Tumor NSCLC_Prolif,P005,797,Deng
-1428,Tumor NSCLC_Prolif,P006,72,Deng
-1429,Tumor NSCLC_Prolif,P007,35,Deng
-1430,Tumor NSCLC_Prolif,P008,53,Deng
-1431,Tumor NSCLC_Prolif,P009,558,Deng
-1432,Tumor NSCLC_Prolif,P010,73,Deng
-1433,Tumor NSCLC_Prolif,P011,848,Deng
-1434,Tumor NSCLC_Prolif,P012,164,Deng
-1435,Tumor NSCLC_Prolif,P013,52,Deng
-1436,Tumor NSCLC_Prolif,P014,120,Deng
-1437,Tumor NSCLC_Prolif,P015,684,Deng
-1438,Tumor NSCLC_Prolif,P016,63,Deng
-1439,Tumor NSCLC_Prolif,P017,99,Deng
-1440,Tumor NSCLC_Prolif,P018,41,Deng
-1441,Tumor NSCLC_Prolif,P019,27,Deng
-1442,Tumor NSCLC_Prolif,P020,30,Deng
-1443,Tumor NSCLC_Prolif,P021,33,Deng
-1444,Tumor NSCLC_Prolif,P022,79,Deng
-1445,Tumor NSCLC_Prolif,P023,20,Deng
-1446,Tumor NSCLC_Prolif,P024,59,Deng
-1447,Tumor NSCLC_Prolif,P025,117,Deng
-1448,Tumor NSCLC_Prolif,P026,232,Deng
-1449,Tumor NSCLC_Prolif,P027,33,Deng
-1450,Tumor NSCLC_Prolif,P028,61,Deng
-1451,Tumor NSCLC_Prolif,P029,277,Deng
-1452,Tumor NSCLC_Prolif,P030,61,Deng
-1453,Tumor NSCLC_Prolif,P031,6,Deng
-1454,Tumor NSCLC_Prolif,P032,14,Deng
-1455,Tumor NSCLC_Prolif,P033,22,Deng
-1456,Tumor NSCLC_Prolif,P034,93,Deng
-1457,Tumor NSCLC_Prolif,P035,28,Deng
-1458,Tumor NSCLC_Prolif,P036,216,Deng
-1459,Tumor NSCLC_Prolif,P037,36,Deng
-1460,Tumor NSCLC_Prolif,P038,44,Deng
-1461,Tumor NSCLC_Prolif,P039,36,Deng
-1462,Tumor NSCLC_Prolif,P040,11,Deng
-1463,Tumor NSCLC_Prolif,P041,41,Deng
-1464,Tumor NSCLC_Prolif,P042,17,Deng
-1465,Tumor NSCLC_Prolif,P043,33,Deng
+1243,Tumor AT2-like,P001,53,Deng
+1244,Tumor AT2-like,P002,2489,Deng
+1245,Tumor AT2-like,P003,37,Deng
+1246,Tumor AT2-like,P004,1969,Deng
+1247,Tumor AT2-like,P005,379,Deng
+1248,Tumor AT2-like,P006,310,Deng
+1249,Tumor AT2-like,P007,35,Deng
+1250,Tumor AT2-like,P008,410,Deng
+1251,Tumor AT2-like,P009,148,Deng
+1252,Tumor AT2-like,P010,681,Deng
+1253,Tumor AT2-like,P011,282,Deng
+1254,Tumor AT2-like,P012,1385,Deng
+1255,Tumor AT2-like,P013,1168,Deng
+1256,Tumor AT2-like,P014,553,Deng
+1257,Tumor AT2-like,P015,359,Deng
+1258,Tumor AT2-like,P016,662,Deng
+1259,Tumor AT2-like,P017,555,Deng
+1260,Tumor AT2-like,P018,216,Deng
+1261,Tumor AT2-like,P019,318,Deng
+1262,Tumor AT2-like,P020,521,Deng
+1263,Tumor AT2-like,P021,464,Deng
+1264,Tumor AT2-like,P022,256,Deng
+1265,Tumor AT2-like,P023,123,Deng
+1266,Tumor AT2-like,P024,736,Deng
+1267,Tumor AT2-like,P025,468,Deng
+1268,Tumor AT2-like,P026,918,Deng
+1269,Tumor AT2-like,P027,712,Deng
+1270,Tumor AT2-like,P028,172,Deng
+1271,Tumor AT2-like,P029,1919,Deng
+1272,Tumor AT2-like,P030,9,Deng
+1273,Tumor AT2-like,P031,100,Deng
+1274,Tumor AT2-like,P032,200,Deng
+1275,Tumor AT2-like,P033,229,Deng
+1276,Tumor AT2-like,P034,1031,Deng
+1277,Tumor AT2-like,P035,346,Deng
+1278,Tumor AT2-like,P036,165,Deng
+1279,Tumor AT2-like,P037,1104,Deng
+1280,Tumor AT2-like,P038,185,Deng
+1281,Tumor AT2-like,P039,81,Deng
+1282,Tumor AT2-like,P040,707,Deng
+1283,Tumor AT2-like,P041,184,Deng
+1284,Tumor AT2-like,P042,1786,Deng
+1285,Tumor AT2-like,P043,243,Deng
+1286,Tumor_NE_Prol,P001,7,Deng
+1287,Tumor_NE_Prol,P002,2,Deng
+1288,Tumor_NE_Prol,P003,3,Deng
+1289,Tumor_NE_Prol,P004,5,Deng
+1290,Tumor_NE_Prol,P005,1,Deng
+1291,Tumor_NE_Prol,P006,5,Deng
+1292,Tumor_NE_Prol,P007,1,Deng
+1293,Tumor_NE_Prol,P008,4,Deng
+1294,Tumor_NE_Prol,P009,2,Deng
+1295,Tumor_NE_Prol,P011,3,Deng
+1296,Tumor_NE_Prol,P012,2,Deng
+1297,Tumor_NE_Prol,P014,1,Deng
+1298,Tumor_NE_Prol,P015,6,Deng
+1299,Tumor_NE_Prol,P016,6,Deng
+1300,Tumor_NE_Prol,P017,1,Deng
+1301,Tumor_NE_Prol,P018,30,Deng
+1302,Tumor_NE_Prol,P019,4,Deng
+1303,Tumor_NE_Prol,P020,7,Deng
+1304,Tumor_NE_Prol,P021,3,Deng
+1305,Tumor_NE_Prol,P022,4,Deng
+1306,Tumor_NE_Prol,P023,3,Deng
+1307,Tumor_NE_Prol,P024,6,Deng
+1308,Tumor_NE_Prol,P025,3,Deng
+1309,Tumor_NE_Prol,P026,3,Deng
+1310,Tumor_NE_Prol,P027,5,Deng
+1311,Tumor_NE_Prol,P028,4,Deng
+1312,Tumor_NE_Prol,P029,2,Deng
+1313,Tumor_NE_Prol,P030,1,Deng
+1314,Tumor_NE_Prol,P031,3,Deng
+1315,Tumor_NE_Prol,P032,6,Deng
+1316,Tumor_NE_Prol,P034,2,Deng
+1317,Tumor_NE_Prol,P035,2,Deng
+1318,Tumor_NE_Prol,P036,9,Deng
+1319,Tumor_NE_Prol,P037,1,Deng
+1320,Tumor_NE_Prol,P038,2,Deng
+1321,Tumor_NE_Prol,P039,5,Deng
+1322,Tumor_NE_Prol,P041,5,Deng
+1323,Tumor_NE_Prol,P042,5,Deng
+1324,Tumor_NE_Prol,P043,3,Deng
+1325,Tumor Evasive_Prolif+,P004,1,Deng
+1326,Tumor Evasive_Prolif+,P009,1,Deng
+1327,Tumor Evasive_Prolif+,P012,1,Deng
+1328,Tumor Evasive_Prolif+,P018,1,Deng
+1329,Tumor Evasive_Prolif+,P019,4,Deng
+1330,Tumor Evasive_Prolif+,P023,1,Deng
+1331,Tumor Evasive_Prolif+,P024,265,Deng
+1332,Tumor Evasive_Prolif+,P031,14,Deng
+1333,Tumor Evasive_Prolif+,P032,2,Deng
+1334,Tumor Evasive_Prolif+,P033,8,Deng
+1335,Tumor Evasive_Prolif+,P034,1,Deng
+1336,Tumor Evasive_Prolif+,P037,100,Deng
+1337,Tumor Evasive_Prolif+,P040,1,Deng
+1338,Tumor Evasive_Prolif+,P041,8,Deng
+1339,Tumor Evasive_Prolif+,P042,4,Deng
+1340,Tumor Cycling-Epi2,P001,18,Deng
+1341,Tumor Cycling-Epi2,P002,7,Deng
+1342,Tumor Cycling-Epi2,P003,2,Deng
+1343,Tumor Cycling-Epi2,P004,4,Deng
+1344,Tumor Cycling-Epi2,P005,17,Deng
+1345,Tumor Cycling-Epi2,P007,3,Deng
+1346,Tumor Cycling-Epi2,P008,3,Deng
+1347,Tumor Cycling-Epi2,P009,3,Deng
+1348,Tumor Cycling-Epi2,P010,1,Deng
+1349,Tumor Cycling-Epi2,P011,1,Deng
+1350,Tumor Cycling-Epi2,P012,10,Deng
+1351,Tumor Cycling-Epi2,P013,18,Deng
+1352,Tumor Cycling-Epi2,P014,4,Deng
+1353,Tumor Cycling-Epi2,P015,5,Deng
+1354,Tumor Cycling-Epi2,P016,20,Deng
+1355,Tumor Cycling-Epi2,P017,2,Deng
+1356,Tumor Cycling-Epi2,P018,75,Deng
+1357,Tumor Cycling-Epi2,P019,14,Deng
+1358,Tumor Cycling-Epi2,P020,118,Deng
+1359,Tumor Cycling-Epi2,P021,1,Deng
+1360,Tumor Cycling-Epi2,P022,10,Deng
+1361,Tumor Cycling-Epi2,P023,9,Deng
+1362,Tumor Cycling-Epi2,P024,318,Deng
+1363,Tumor Cycling-Epi2,P025,2,Deng
+1364,Tumor Cycling-Epi2,P026,7,Deng
+1365,Tumor Cycling-Epi2,P027,3,Deng
+1366,Tumor Cycling-Epi2,P028,3,Deng
+1367,Tumor Cycling-Epi2,P029,15,Deng
+1368,Tumor Cycling-Epi2,P030,13,Deng
+1369,Tumor Cycling-Epi2,P031,7,Deng
+1370,Tumor Cycling-Epi2,P032,13,Deng
+1371,Tumor Cycling-Epi2,P033,10,Deng
+1372,Tumor Cycling-Epi2,P034,3,Deng
+1373,Tumor Cycling-Epi2,P035,17,Deng
+1374,Tumor Cycling-Epi2,P036,9,Deng
+1375,Tumor Cycling-Epi2,P037,75,Deng
+1376,Tumor Cycling-Epi2,P038,40,Deng
+1377,Tumor Cycling-Epi2,P039,7,Deng
+1378,Tumor Cycling-Epi2,P040,46,Deng
+1379,Tumor Cycling-Epi2,P041,63,Deng
+1380,Tumor Cycling-Epi2,P042,77,Deng
+1381,Tumor Cycling-Epi2,P043,27,Deng
+1382,Tumor Inf_Inv-Sq,P001,9,Deng
+1383,Tumor Inf_Inv-Sq,P002,4,Deng
+1384,Tumor Inf_Inv-Sq,P003,6,Deng
+1385,Tumor Inf_Inv-Sq,P004,2,Deng
+1386,Tumor Inf_Inv-Sq,P005,3,Deng
+1387,Tumor Inf_Inv-Sq,P006,14,Deng
+1388,Tumor Inf_Inv-Sq,P007,3,Deng
+1389,Tumor Inf_Inv-Sq,P008,2,Deng
+1390,Tumor Inf_Inv-Sq,P009,1,Deng
+1391,Tumor Inf_Inv-Sq,P010,2,Deng
+1392,Tumor Inf_Inv-Sq,P011,3,Deng
+1393,Tumor Inf_Inv-Sq,P014,4,Deng
+1394,Tumor Inf_Inv-Sq,P015,9,Deng
+1395,Tumor Inf_Inv-Sq,P016,20,Deng
+1396,Tumor Inf_Inv-Sq,P017,2,Deng
+1397,Tumor Inf_Inv-Sq,P018,10,Deng
+1398,Tumor Inf_Inv-Sq,P019,2,Deng
+1399,Tumor Inf_Inv-Sq,P020,3,Deng
+1400,Tumor Inf_Inv-Sq,P021,6,Deng
+1401,Tumor Inf_Inv-Sq,P022,8,Deng
+1402,Tumor Inf_Inv-Sq,P023,2,Deng
+1403,Tumor Inf_Inv-Sq,P024,8,Deng
+1404,Tumor Inf_Inv-Sq,P025,1,Deng
+1405,Tumor Inf_Inv-Sq,P026,3,Deng
+1406,Tumor Inf_Inv-Sq,P027,1,Deng
+1407,Tumor Inf_Inv-Sq,P028,5,Deng
+1408,Tumor Inf_Inv-Sq,P029,9,Deng
+1409,Tumor Inf_Inv-Sq,P030,3,Deng
+1410,Tumor Inf_Inv-Sq,P031,1,Deng
+1411,Tumor Inf_Inv-Sq,P032,5,Deng
+1412,Tumor Inf_Inv-Sq,P033,1,Deng
+1413,Tumor Inf_Inv-Sq,P034,5,Deng
+1414,Tumor Inf_Inv-Sq,P035,1,Deng
+1415,Tumor Inf_Inv-Sq,P036,1,Deng
+1416,Tumor Inf_Inv-Sq,P037,3,Deng
+1417,Tumor Inf_Inv-Sq,P038,2,Deng
+1418,Tumor Inf_Inv-Sq,P039,4,Deng
+1419,Tumor Inf_Inv-Sq,P040,5,Deng
+1420,Tumor Inf_Inv-Sq,P041,2,Deng
+1421,Tumor Inf_Inv-Sq,P042,1,Deng
+1422,Tumor Inf_Inv-Sq,P043,3,Deng
+1423,Tumor ASP2,P001,77,Deng
+1424,Tumor ASP2,P002,450,Deng
+1425,Tumor ASP2,P003,131,Deng
+1426,Tumor ASP2,P004,165,Deng
+1427,Tumor ASP2,P005,797,Deng
+1428,Tumor ASP2,P006,72,Deng
+1429,Tumor ASP2,P007,35,Deng
+1430,Tumor ASP2,P008,53,Deng
+1431,Tumor ASP2,P009,558,Deng
+1432,Tumor ASP2,P010,73,Deng
+1433,Tumor ASP2,P011,848,Deng
+1434,Tumor ASP2,P012,164,Deng
+1435,Tumor ASP2,P013,52,Deng
+1436,Tumor ASP2,P014,120,Deng
+1437,Tumor ASP2,P015,684,Deng
+1438,Tumor ASP2,P016,63,Deng
+1439,Tumor ASP2,P017,99,Deng
+1440,Tumor ASP2,P018,41,Deng
+1441,Tumor ASP2,P019,27,Deng
+1442,Tumor ASP2,P020,30,Deng
+1443,Tumor ASP2,P021,33,Deng
+1444,Tumor ASP2,P022,79,Deng
+1445,Tumor ASP2,P023,20,Deng
+1446,Tumor ASP2,P024,59,Deng
+1447,Tumor ASP2,P025,117,Deng
+1448,Tumor ASP2,P026,232,Deng
+1449,Tumor ASP2,P027,33,Deng
+1450,Tumor ASP2,P028,61,Deng
+1451,Tumor ASP2,P029,277,Deng
+1452,Tumor ASP2,P030,61,Deng
+1453,Tumor ASP2,P031,6,Deng
+1454,Tumor ASP2,P032,14,Deng
+1455,Tumor ASP2,P033,22,Deng
+1456,Tumor ASP2,P034,93,Deng
+1457,Tumor ASP2,P035,28,Deng
+1458,Tumor ASP2,P036,216,Deng
+1459,Tumor ASP2,P037,36,Deng
+1460,Tumor ASP2,P038,44,Deng
+1461,Tumor ASP2,P039,36,Deng
+1462,Tumor ASP2,P040,11,Deng
+1463,Tumor ASP2,P041,41,Deng
+1464,Tumor ASP2,P042,17,Deng
+1465,Tumor ASP2,P043,33,Deng
 1466,cDC1,P001,2,Deng
 1467,cDC1,P002,16,Deng
 1468,cDC1,P003,9,Deng
@@ -5248,69 +5248,69 @@ Unnamed: 0,cell_type_adjusted,sample,0,dataset
 274,T cell regulatory,P22_T1,9,Zuani
 275,T cell regulatory,P24_T1,505,Zuani
 276,T cell regulatory,P8_T2,1022,Zuani
-277,Tumor Secretory_LUAD,P15_T2,66,Zuani
-278,Tumor Secretory_LUAD,P17_T2,62,Zuani
-279,Tumor Secretory_LUAD,P17_T3,47,Zuani
-280,Tumor Secretory_LUAD,P18_T2,29,Zuani
-281,Tumor Secretory_LUAD,P19_T2,20,Zuani
-282,Tumor Secretory_LUAD,P21_T1,117,Zuani
-283,Tumor Secretory_LUAD,P21_T2,33,Zuani
-284,Tumor Secretory_LUAD,P22_T1,177,Zuani
-285,Tumor Secretory_LUAD,P24_T1,79,Zuani
-286,Tumor Secretory_LUAD,P8_T2,100,Zuani
-287,Tumor EMT_lowProlif,P18_T2,4,Zuani
-288,Tumor EMT_lowProlif,P19_T2,2,Zuani
-289,Tumor EMT_lowProlif,P8_T2,1,Zuani
+277,Tumor Tumor ImmunoSup,P15_T2,66,Zuani
+278,Tumor Tumor ImmunoSup,P17_T2,62,Zuani
+279,Tumor Tumor ImmunoSup,P17_T3,47,Zuani
+280,Tumor Tumor ImmunoSup,P18_T2,29,Zuani
+281,Tumor Tumor ImmunoSup,P19_T2,20,Zuani
+282,Tumor Tumor ImmunoSup,P21_T1,117,Zuani
+283,Tumor Tumor ImmunoSup,P21_T2,33,Zuani
+284,Tumor Tumor ImmunoSup,P22_T1,177,Zuani
+285,Tumor Tumor ImmunoSup,P24_T1,79,Zuani
+286,Tumor Tumor ImmunoSup,P8_T2,100,Zuani
+287,Tumor EMT,P18_T2,4,Zuani
+288,Tumor EMT,P19_T2,2,Zuani
+289,Tumor EMT,P8_T2,1,Zuani
 290,Tumor OxPhos_Prolif,P21_T1,1,Zuani
 291,Tumor OxPhos_Prolif,P24_T1,15,Zuani
 292,Tumor OxPhos_Prolif,P8_T2,1,Zuani
-293,Tumor TTF1+_Quiescent,P15_T2,22,Zuani
-294,Tumor TTF1+_Quiescent,P17_T2,2,Zuani
-295,Tumor TTF1+_Quiescent,P17_T3,1,Zuani
-296,Tumor TTF1+_Quiescent,P19_T2,2,Zuani
-297,Tumor TTF1+_Quiescent,P21_T1,5,Zuani
-298,Tumor TTF1+_Quiescent,P21_T2,4,Zuani
-299,Tumor TTF1+_Quiescent,P22_T1,24,Zuani
-300,Tumor TTF1+_Quiescent,P24_T1,21,Zuani
-301,Tumor TTF1+_Quiescent,P8_T2,11,Zuani
-302,Tumor LUAD_MSLN,P24_T1,1,Zuani
-303,Tumor Evasive_Prolif,P15_T2,7,Zuani
-304,Tumor Evasive_Prolif,P17_T2,415,Zuani
-305,Tumor Evasive_Prolif,P17_T3,448,Zuani
-306,Tumor Evasive_Prolif,P18_T2,70,Zuani
-307,Tumor Evasive_Prolif,P19_T2,48,Zuani
-308,Tumor Evasive_Prolif,P24_T1,23,Zuani
-309,Tumor Evasive_Prolif,P8_T2,208,Zuani
-310,Tumor Evasive_HighProlif,P15_T2,1,Zuani
-311,Tumor Evasive_HighProlif,P17_T2,3,Zuani
-312,Tumor Evasive_HighProlif,P18_T2,1,Zuani
-313,Tumor Evasive_HighProlif,P19_T2,1,Zuani
-314,Tumor Evasive_HighProlif,P21_T1,2,Zuani
-315,Tumor Evasive_HighProlif,P21_T2,3,Zuani
-316,Tumor Evasive_HighProlif,P24_T1,61,Zuani
-317,Tumor Hypoxic_Prolif,P15_T2,52,Zuani
-318,Tumor Hypoxic_Prolif,P16_T2,8,Zuani
-319,Tumor Hypoxic_Prolif,P17_T2,332,Zuani
-320,Tumor Hypoxic_Prolif,P17_T3,374,Zuani
-321,Tumor Hypoxic_Prolif,P18_T2,61,Zuani
-322,Tumor Hypoxic_Prolif,P19_T2,20,Zuani
-323,Tumor Hypoxic_Prolif,P21_T1,10,Zuani
-324,Tumor Hypoxic_Prolif,P21_T2,6,Zuani
-325,Tumor Hypoxic_Prolif,P22_T1,5,Zuani
-326,Tumor Hypoxic_Prolif,P24_T1,18431,Zuani
-327,Tumor Hypoxic_Prolif,P8_T2,1673,Zuani
-328,Tumor Macrophage_Swallow,P8_T2,1,Zuani
-329,Tumor NSCLC_Prolif,P15_T2,555,Zuani
-330,Tumor NSCLC_Prolif,P16_T2,3,Zuani
-331,Tumor NSCLC_Prolif,P17_T2,4291,Zuani
-332,Tumor NSCLC_Prolif,P17_T3,6568,Zuani
-333,Tumor NSCLC_Prolif,P18_T2,104,Zuani
-334,Tumor NSCLC_Prolif,P19_T2,73,Zuani
-335,Tumor NSCLC_Prolif,P21_T1,112,Zuani
-336,Tumor NSCLC_Prolif,P21_T2,2,Zuani
-337,Tumor NSCLC_Prolif,P22_T1,1,Zuani
-338,Tumor NSCLC_Prolif,P24_T1,139,Zuani
-339,Tumor NSCLC_Prolif,P8_T2,381,Zuani
+293,Tumor AT2-like,P15_T2,22,Zuani
+294,Tumor AT2-like,P17_T2,2,Zuani
+295,Tumor AT2-like,P17_T3,1,Zuani
+296,Tumor AT2-like,P19_T2,2,Zuani
+297,Tumor AT2-like,P21_T1,5,Zuani
+298,Tumor AT2-like,P21_T2,4,Zuani
+299,Tumor AT2-like,P22_T1,24,Zuani
+300,Tumor AT2-like,P24_T1,21,Zuani
+301,Tumor AT2-like,P8_T2,11,Zuani
+302,Tumor Mesothelin+,P24_T1,1,Zuani
+303,Tumor_NE_Prol,P15_T2,7,Zuani
+304,Tumor_NE_Prol,P17_T2,415,Zuani
+305,Tumor_NE_Prol,P17_T3,448,Zuani
+306,Tumor_NE_Prol,P18_T2,70,Zuani
+307,Tumor_NE_Prol,P19_T2,48,Zuani
+308,Tumor_NE_Prol,P24_T1,23,Zuani
+309,Tumor_NE_Prol,P8_T2,208,Zuani
+310,Tumor Evasive_Prolif+,P15_T2,1,Zuani
+311,Tumor Evasive_Prolif+,P17_T2,3,Zuani
+312,Tumor Evasive_Prolif+,P18_T2,1,Zuani
+313,Tumor Evasive_Prolif+,P19_T2,1,Zuani
+314,Tumor Evasive_Prolif+,P21_T1,2,Zuani
+315,Tumor Evasive_Prolif+,P21_T2,3,Zuani
+316,Tumor Evasive_Prolif+,P24_T1,61,Zuani
+317,Tumor Cycling-Epi2,P15_T2,52,Zuani
+318,Tumor Cycling-Epi2,P16_T2,8,Zuani
+319,Tumor Cycling-Epi2,P17_T2,332,Zuani
+320,Tumor Cycling-Epi2,P17_T3,374,Zuani
+321,Tumor Cycling-Epi2,P18_T2,61,Zuani
+322,Tumor Cycling-Epi2,P19_T2,20,Zuani
+323,Tumor Cycling-Epi2,P21_T1,10,Zuani
+324,Tumor Cycling-Epi2,P21_T2,6,Zuani
+325,Tumor Cycling-Epi2,P22_T1,5,Zuani
+326,Tumor Cycling-Epi2,P24_T1,18431,Zuani
+327,Tumor Cycling-Epi2,P8_T2,1673,Zuani
+328,Tumor Inf_Inv-Sq,P8_T2,1,Zuani
+329,Tumor ASP2,P15_T2,555,Zuani
+330,Tumor ASP2,P16_T2,3,Zuani
+331,Tumor ASP2,P17_T2,4291,Zuani
+332,Tumor ASP2,P17_T3,6568,Zuani
+333,Tumor ASP2,P18_T2,104,Zuani
+334,Tumor ASP2,P19_T2,73,Zuani
+335,Tumor ASP2,P21_T1,112,Zuani
+336,Tumor ASP2,P21_T2,2,Zuani
+337,Tumor ASP2,P22_T1,1,Zuani
+338,Tumor ASP2,P24_T1,139,Zuani
+339,Tumor ASP2,P8_T2,381,Zuani
 340,cDC1,P15_T2,5,Zuani
 341,cDC1,P17_T2,85,Zuani
 342,cDC1,P17_T3,85,Zuani

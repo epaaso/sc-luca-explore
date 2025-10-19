@@ -3,31 +3,32 @@ from pathlib import Path
 from typing import Optional
 
 rename_dict_early = {
-    "Tumor Club_AT2_LUAD": "Tumor Secretory_LUAD",
-    "Tumor LUAD": "Tumor Adeno_Squamous",
-    "Tumor LUAD_AT1/2": "Tumor EMT_lowProlif",
+    "Tumor Club_AT2_LUAD": "Tumor Tumor ImmunoSup",
+    "Tumor LUAD": "Tumor BasalInv",
+    "Tumor LUAD_AT1/2": "Tumor EMT",
     "Tumor LUAD_Club_AT2": "Tumor OxPhos_Prolif",
-    "Tumor LUAD_Club_AT2/1": "Tumor TTF1+_Quiescent",
-    "Tumor LUAD_NE_LUSC": "Tumor Evasive_Prolif",
-    "Tumor LUAD_NE_mitotic": "Tumor Evasive_HighProlif",
-    "Tumor LUAD_mitotic": "Tumor Hypoxic_Prolif",
-    "Tumor LUSC": "Tumor Macrophage_Swallow",
-    "Tumor LUSC_LUAD_mitotic": "Tumor NSCLC_Prolif"
+    "Tumor LUAD_Club_AT2/1": "Tumor AT2-like",
+    "Tumor LUAD_MSLN": "Tumor Mesothelin+",
+    "Tumor LUAD_NE_LUSC": "Tumor_NE_Prol",
+    "Tumor LUAD_NE_mitotic": "Tumor Evasive_Prolif+",
+    "Tumor LUAD_mitotic": "Tumor Cycling-Epi2",
+    "Tumor LUSC": "Tumor Inf_Inv-Sq",
+    "Tumor LUSC_LUAD_mitotic": "Tumor ASP2"
 }
 
 rename_dict_late = {
-    "Tumor AT2/1_LUAD": "Tumor Secretory_TAM",
-    "Tumor Club/AT2_MSLN": "Tumor MSLN_Warburg_TherResist",
-    "Tumor LUAD2": "Tumor Prolif_Stem",
-    "Tumor LUAD_EMT": "Tumor EMT_lncRNA_Prolif",
-    "Tumor LUAD_LUSC_mitotic": "Tumor NSCLC_HighProlif",
-    "Tumor LUAD_MSLN_LUSC": "Tumor NSCLC_Metabolic",
-    "Tumor LUAD_ROS1+": "Tumor Differentiated_DrugResp",
-    "Tumor LUAD_mitotic": "Tumor Differentiated_Prolif",
-    "Tumor LUSC": "Tumor Macrophage_Swallow",
-    "Tumor LUSC_LUAD_NE": "Tumor LUSC_Hypoxia",
-    "Tumor LUSC_mitotic_NE": "Tumor HighProlif_ImmuneCold",
-    "Tumor NSCLC_mixed": "Tumor NSCLC_Basal_Inflammatory"
+    "Tumor AT2/1_LUAD": "Tumor IS_Secretory",
+    "Tumor Club/AT2_MSLN": "Tumor Mesothelin+_Sec",
+    "Tumor LUAD2": "Tumor HP_LUAD",
+    "Tumor LUAD_EMT": "Tumor EMT",
+    "Tumor LUAD_LUSC_mitotic": "Tumor ASP",
+    "Tumor LUAD_MSLN_LUSC": "Tumor Glyco+",
+    "Tumor LUAD_ROS1+": "Tumor ROS1+",
+    "Tumor LUAD_mitotic": "Tumor Cycling_Epi",
+    "Tumor LUSC": "Tumor ImEv_Sq",
+    "Tumor LUSC_LUAD_NE": "Tumor Plastic_AS_NE",
+    "Tumor LUSC_mitotic_NE": "Tumor NE_HPA",
+    "Tumor NSCLC_mixed": "Tumor Inv_Stem"
 }
 
 
@@ -145,8 +146,8 @@ if __name__ == "__main__":
         group_path,
         net_path,
         rename_dict,
-        group_r=False,
-        net_r=False,
+        group_r=True,
+        net_r=True,
         matrix_path=matrix_path,
         matrix_r=True,
     )
