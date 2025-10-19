@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List, Optional, Sequence, Tuple
@@ -49,6 +50,20 @@ class StageConfig:
     name: str
     membership_csv: Path
     time_label: str
+
+
+@dataclass(frozen=True)
+class ClusterAnalysisResult:
+    pearson_graph: nx.Graph
+    pearson_negative: nx.Graph
+    pearson_positive: nx.Graph
+    corr_types: pd.DataFrame
+    counts_plus1: pd.DataFrame
+    corr_plus1_norm: pd.DataFrame
+    dataset_map: pd.Series
+    pearson_df: pd.DataFrame
+    pearson_p_values_df: pd.DataFrame
+    matrix_counts: pd.DataFrame
 
 
 STAGE_CONFIGS = {
@@ -112,6 +127,11 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         action="store_true",
         help="Reduce logging verbosity to warnings only.",
     )
+    parser.add_argument(
+        "--plot-nonlinear",
+        action="store_true",
+        help="Generate scatter plots for MI-only edges using sample_scatter-style visuals.",
+    )
 
     return parser.parse_args(argv)
 
@@ -173,7 +193,7 @@ def plot_corr_networks_cluster(
     corr_threshold: float,
     p_threshold: float,
     cluster_dir: Path,
-) -> Optional[Tuple[nx.Graph, nx.Graph, nx.Graph]]:
+) -> Optional[ClusterAnalysisResult]:
     groups_path = METADATA_DIR / f"groups_{stage.time_label}.csv"
     if not groups_path.exists():
         raise FileNotFoundError(f"Groups file not found: {groups_path}")
@@ -225,23 +245,34 @@ def plot_corr_networks_cluster(
         pearson_df, pearson_p_values_df, corr_threshold, p_threshold
     )
 
-    # save_pearson_outputs(
-    #     cluster_dir,
-    #     stage,
-    #     cluster_id,
-    #     corr_types,
-    #     counts_plus1,
-    #     corr_plus1_norm,
-    #     dataset_map,
-    #     pearson_df,
-    #     pearson_p_values_df,
-    #     matrix_counts,
-    #     G,
-    #     G_negative,
-    #     G_positive,
-    # )
+    save_pearson_outputs(
+        cluster_dir,
+        stage,
+        cluster_id,
+        corr_types,
+        counts_plus1,
+        corr_plus1_norm,
+        dataset_map,
+        pearson_df,
+        pearson_p_values_df,
+        matrix_counts,
+        G,
+        G_negative,
+        G_positive,
+    )
 
-    return G, G_negative, G_positive
+    return ClusterAnalysisResult(
+        pearson_graph=G,
+        pearson_negative=G_negative,
+        pearson_positive=G_positive,
+        corr_types=corr_types,
+        counts_plus1=counts_plus1,
+        corr_plus1_norm=corr_plus1_norm,
+        dataset_map=dataset_map,
+        pearson_df=pearson_df,
+        pearson_p_values_df=pearson_p_values_df,
+        matrix_counts=matrix_counts,
+    )
 
 
 def compute_pearson_matrices(corr_types: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
@@ -466,6 +497,159 @@ def export_edge_set(
     df.to_csv(path, index=False)
 
 
+def plot_nonlinear_scatter(
+    stage: StageConfig,
+    cluster_id: int,
+    edges: Sequence[Tuple[str, str]],
+    analysis: ClusterAnalysisResult,
+    G_MI: nx.Graph,
+    cluster_dir: Path,
+    batch_size: int = 12,
+) -> None:
+    if not edges:
+        logging.info("Stage %s cluster %d: no non-linear edges to plot", stage.name, cluster_id)
+        return
+
+    corr_types = analysis.corr_types.copy()
+    counts_plus1 = analysis.counts_plus1.reindex(corr_types.index)
+    corr_plus1_norm = analysis.corr_plus1_norm.reindex(corr_types.index)
+    dataset_series = analysis.dataset_map.reindex(corr_types.index).fillna("unknown")
+
+    unique_datasets = pd.unique(dataset_series)
+    cmap = plt.get_cmap("tab20", max(len(unique_datasets), 1))
+    color_mapping = {dataset: cmap(i) for i, dataset in enumerate(unique_datasets)}
+    dataset_colors = dataset_series.map(color_mapping)
+
+    pearson_df = analysis.pearson_df
+    pearson_p_df = analysis.pearson_p_values_df
+
+    edges_sorted = [(min(u, v), max(u, v)) for u, v in edges]
+    edges_sorted = sorted(set(edges_sorted))
+
+    variants = [
+        {"key": "hist2d", "title": "2D Histogram of log10(counts + 1) 1s removed", "needs_legend": False},
+        {"key": "logscatter", "title": "Scatter of normalized log10(counts + 1)", "needs_legend": True},
+        {"key": "scatter", "title": "Scatter of normalized counts", "needs_legend": True},
+    ]
+
+    for variant in variants:
+        for batch_index in range(0, len(edges_sorted), batch_size):
+            batch = edges_sorted[batch_index : batch_index + batch_size]
+            if not batch:
+                continue
+
+            n_edges = len(batch)
+            ncols = 4
+            nrows = max(1, math.ceil(n_edges / ncols))
+            fig, axes = plt.subplots(nrows, ncols, figsize=(4 * ncols, 3.5 * nrows))
+            if isinstance(axes, np.ndarray):
+                axes_iter = axes.ravel()
+            else:
+                axes_iter = np.array([axes])
+
+            for ax, (var1, var2) in zip(axes_iter, batch):
+                corr = pearson_df.loc[var1, var2] if var1 in pearson_df.index and var2 in pearson_df.columns else np.nan
+                pval = pearson_p_df.loc[var1, var2] if var1 in pearson_p_df.index and var2 in pearson_p_df.columns else np.nan
+                mi_data = G_MI.get_edge_data(var1, var2) or G_MI.get_edge_data(var2, var1)
+                mi = mi_data.get("MI") if mi_data and "MI" in mi_data else np.nan
+
+                if variant["key"] == "hist2d":
+                    if var1 not in counts_plus1.columns or var2 not in counts_plus1.columns:
+                        logging.warning(
+                            "Stage %s cluster %d: variables %s/%s missing from counts_plus1",
+                            stage.name,
+                            cluster_id,
+                            var1,
+                            var2,
+                        )
+                        ax.axis("off")
+                        continue
+
+                    x_vals = np.log10(counts_plus1[var1].to_numpy())
+                    y_vals = np.log10(counts_plus1[var2].to_numpy())
+                    mask = (x_vals == 0) & (y_vals == 0)
+                    x_vals = x_vals[~mask]
+                    y_vals = y_vals[~mask]
+
+                    if x_vals.size == 0 or y_vals.size == 0:
+                        ax.axis("off")
+                        ax.set_title("No data", fontsize=9)
+                        continue
+
+                    ax.hist2d(x_vals, y_vals, bins=30, cmap="viridis")
+                    ax.set_xlabel(f"log10({var1} + 1)")
+                    ax.set_ylabel(f"log10({var2} + 1)")
+
+                elif variant["key"] == "logscatter":
+                    if var1 not in corr_plus1_norm.columns or var2 not in corr_plus1_norm.columns:
+                        logging.warning(
+                            "Stage %s cluster %d: variables %s/%s missing from corr_plus1_norm",
+                            stage.name,
+                            cluster_id,
+                            var1,
+                            var2,
+                        )
+                        ax.axis("off")
+                        continue
+
+                    x_vals = corr_plus1_norm[var1].to_numpy()
+                    y_vals = corr_plus1_norm[var2].to_numpy()
+                    colors = dataset_colors.to_numpy()
+
+                    ax.scatter(x_vals, y_vals, s=6, c=colors)
+                    ax.set_xscale("log")
+                    ax.set_yscale("log")
+                    ax.set_xlabel(var1)
+                    ax.set_ylabel(var2)
+
+                else:  # scatter of normalized counts
+                    if var1 not in corr_types.columns or var2 not in corr_types.columns:
+                        logging.warning(
+                            "Stage %s cluster %d: variables %s/%s missing from corr_types",
+                            stage.name,
+                            cluster_id,
+                            var1,
+                            var2,
+                        )
+                        ax.axis("off")
+                        continue
+
+                    colors = dataset_colors.to_numpy()
+                    ax.scatter(corr_types[var1].to_numpy(), corr_types[var2].to_numpy(), s=6, c=colors)
+                    ax.set_xlabel(var1)
+                    ax.set_ylabel(var2)
+
+                ax.set_title(f"P corr: {corr:.2f}, pval: {pval:.4f}, MI: {mi:.2f}", fontsize=9)
+
+            for ax in axes_iter[n_edges:]:
+                ax.axis("off")
+
+            fig.suptitle(variant["title"], fontsize=14, y=1.02)
+
+            if variant["needs_legend"]:
+                handles = [
+                    plt.Line2D([0], [0], marker="o", color="w", markerfacecolor=color, markersize=6, label=dataset)
+                    for dataset, color in color_mapping.items()
+                ]
+                fig.legend(handles=handles, loc="center right", ncol=1, fontsize="small")
+                fig.tight_layout(rect=[0.05, 0.05, 0.85, 0.95])
+            else:
+                fig.tight_layout()
+
+            part = batch_index // batch_size + 1
+            suffix = variant["key"]
+            outfile = cluster_dir / f"nonlinear_{suffix}_{stage.time_label}_cluster{cluster_id}_part{part}.png"
+            fig.savefig(outfile, dpi=180)
+            logging.info(
+                "Stage %s cluster %d: saved %s plot (%d pairs) to %s",
+                stage.name,
+                cluster_id,
+                variant["key"],
+                len(batch),
+                outfile.name,
+            )
+            plt.close(fig)
+
 def process_cluster(
     stage: StageConfig,
     cluster_id: int,
@@ -484,7 +668,7 @@ def process_cluster(
         )
         return
 
-    result = plot_corr_networks_cluster(
+    analysis = plot_corr_networks_cluster(
         stage,
         cluster_id,
         cluster_samples,
@@ -493,11 +677,11 @@ def process_cluster(
         cluster_dir=cluster_dir,
     )
 
-    if result is None:
+    if analysis is None:
         logging.warning("Stage %s cluster %d: skipping remainder due to insufficient data", stage.name, cluster_id)
         return
 
-    G_pear, _, _ = result
+    G_pear = analysis.pearson_graph
 
     non_linear_edges, non_signif_edges, G_MI = get_nonlinear_edges(stage, cluster_id, cluster_dir, G_pear)
 
@@ -523,6 +707,16 @@ def process_cluster(
         p_threshold=args.p_threshold,
         export=True,
     )
+
+    if args.plot_nonlinear:
+        plot_nonlinear_scatter(
+            stage,
+            cluster_id,
+            list(non_linear_edges),
+            analysis,
+            G_MI,
+            cluster_dir,
+        )
 
     logging.info(
         "Stage %s cluster %d: annotated %d MI edges",

@@ -98,8 +98,14 @@ def draw_graph(G, ax, title, scale1= 30, scale2=4, k=3, font_size=8):
     ax.axis('off')
 
 
-def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=False,
-                            xtick_params:dict = {}, ylabel_size:int = 8):
+def plot_abundance_heatmap(
+    corr_: pd.DataFrame,
+    show_plot: bool = True,
+    cluster_samples: bool = False,
+    xtick_params: dict = {},
+    ylabel_size: int = 8,
+    figsize: tuple = (22, 20),
+):
     """
     Plot a heatmap of normalized counts for given samples. Scales with a log function and the zeros->infs
     are converted to nans.
@@ -128,7 +134,7 @@ def plot_abundance_heatmap(corr_:pd.DataFrame, show_plot=True, cluster_samples=F
     dataset = corr['dataset'][::-1]
 
     # Create figure with adjusted gridspec to include colorbar space
-    fig = plt.figure(figsize=(22, 20))
+    fig = plt.figure(figsize=figsize)
     gs = fig.add_gridspec(nrows=2, ncols=3, width_ratios=[1, 25, 0.3], height_ratios=[10, 1])
 
     ax0 = fig.add_subplot(gs[0, 0])  # Left brackets
@@ -581,6 +587,7 @@ def plot_celltype_boxplot(
     title: str=None,
     category_map = None, 
     cat_colors: dict = None,
+    xlabel_color:str = None,
     ax: plt.Axes = None
 ):
     """
@@ -613,6 +620,8 @@ def plot_celltype_boxplot(
         ax=ax,
     )
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right', rotation_mode='anchor')
+    if xlabel_color:
+        ax.yaxis.set_tick_params( labelcolor=xlabel_color)
     ax.set_title(f"Ln(Relative Abundance) {title}")
     ax.legend(title='Cell Category', loc='upper left', bbox_to_anchor=(1, 1))
     plt.tight_layout()

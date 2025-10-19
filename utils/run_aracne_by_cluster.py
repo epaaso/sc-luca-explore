@@ -12,9 +12,9 @@ Example usage (dry run for cluster 0 early stage):
 
     python utils/run_aracne_by_cluster.py --stages early --clusters 0 --dry-run
 
-Run all stages and clusters with 500 bootstraps and 5 GiB of JVM memory:
+Run all stages and clusters with 200 bootstraps and 2 GiB of JVM memory:
 
-    python utils/run_aracne_by_cluster.py --bootstraps 500 --java-memory 5G
+    python utils/run_aracne_by_cluster.py --bootstraps 200 --java-memory 1G
 
 Note: Running ARACNe with 500 bootstraps per cluster can take a long time.
 """
@@ -51,13 +51,13 @@ STAGE_CONFIGS = {
     "early": StageConfig(
         name="early",
         membership_csv=Path("nb_graphAnalysis/output/membership_by_cluster_early.csv"),
-        matrix_path=DEFAULT_OUTPUT_ROOT / "matrixI-II_leidenwu.txt",
+        matrix_path=DEFAULT_OUTPUT_ROOT / "matrixI-II_leidenwu_funcnames.txt",
         time_label="I-II_leidenwu",
     ),
     "late": StageConfig(
         name="late",
         membership_csv=Path("nb_graphAnalysis/output/membership_by_cluster_late.csv"),
-        matrix_path=DEFAULT_OUTPUT_ROOT / "matrixIII-IV_leidenwu.txt",
+        matrix_path=DEFAULT_OUTPUT_ROOT / "matrixIII-IV_leidenwu_funcnames.txt",
         time_label="III-IV_leidenwu",
     ),
 }
