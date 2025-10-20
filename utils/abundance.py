@@ -105,6 +105,7 @@ def plot_abundance_heatmap(
     xtick_params: dict = {},
     ylabel_size: int = 8,
     figsize: tuple = (22, 20),
+    group_by_membership: bool = False,
 ):
     """
     Plot a heatmap of normalized counts for given samples. Scales with a log function and the zeros->infs
@@ -130,8 +131,18 @@ def plot_abundance_heatmap(
     if 'sample' in corr.columns:
         corr.set_index('sample', inplace=True)
     corr.index = [sample.split('_')[-1] for sample in corr.index]
-    corr.sort_values('dataset', inplace=True)
-    dataset = corr['dataset'][::-1]
+    grouping_column = 'membership' if group_by_membership and 'membership' in corr.columns else 'dataset'
+    if grouping_column not in corr.columns:
+        raise ValueError(
+            f"Grouping column '{grouping_column}' not found in corr dataframe columns: {corr.columns.tolist()}"
+        )
+
+    sort_columns = [grouping_column]
+    if grouping_column != 'dataset' and 'dataset' in corr.columns:
+        sort_columns.append('dataset')
+    corr.sort_values(sort_columns, inplace=True)
+
+    group_series = corr[grouping_column][::-1]
 
     # Create figure with adjusted gridspec to include colorbar space
     fig = plt.figure(figsize=figsize)
@@ -143,7 +154,12 @@ def plot_abundance_heatmap(
     ax3 = fig.add_subplot(gs[1, 1])  # Bottom brackets
 
     # Plot heatmap with colorbar in the dedicated axis
-    data = np.log(corr.drop(columns='dataset'))
+    columns_to_drop = {grouping_column}
+    if 'dataset' in corr.columns:
+        columns_to_drop.add('dataset')
+    if 'membership' in corr.columns:
+        columns_to_drop.add('membership')
+    data = np.log(corr.drop(columns=list(columns_to_drop)))
     data = data.replace(-np.inf, np.nan).replace(np.inf, np.nan)
     # Reorder columns as before...
     ordered_cell_types = []
@@ -188,25 +204,28 @@ def plot_abundance_heatmap(
     # Find positions where the dataset changes
     positions = []
     start = 0
-    current_dataset = dataset.iloc[0]
-    for i, dataset_ in enumerate(dataset):
-        if dataset_ != current_dataset:
-            positions.append((start, i - 1, current_dataset))
+    current_group = group_series.iloc[0]
+    for i, group_value in enumerate(group_series):
+        if group_value != current_group:
+            positions.append((start, i - 1, current_group))
             start = i
-            current_dataset = dataset_
-    positions.append((start, len(dataset) - 1, current_dataset))
+            current_group = group_value
+    positions.append((start, len(group_series) - 1, current_group))
 
     # Create a mapping of dataset names to colors
-    unique_datasets = dataset.unique()
-    colors = plt.get_cmap('tab20', len(unique_datasets))
-    color_mapping = {dataset: colors(i) for i, dataset in enumerate(unique_datasets)}
+    unique_groups = group_series.unique()
+    colors = plt.get_cmap('tab20', len(unique_groups))
+    color_mapping = {group: colors(i) for i, group in enumerate(unique_groups)}
 
     # Draw brackets on ax0
-    for (start, end, dataset) in positions:
+    for (start, end, group_value) in positions:
         y_start = len(corr.index) - start
         y_end = len(corr.index) - end - 1
-        ax0.plot([0, 0], [y_start, y_end], color=color_mapping[dataset], linewidth=2)
-        ax0.text(0, (y_start + y_end) / 2, dataset[-18:], va='center', ha='right', fontsize=8)
+        ax0.plot([0, 0], [y_start, y_end], color=color_mapping[group_value], linewidth=2)
+        label_text = str(group_value)
+        if grouping_column == 'dataset':
+            label_text = label_text[-18:]
+        ax0.text(0, (y_start + y_end) / 2, label_text, va='center', ha='right', fontsize=8)
 
 
     ############################ CELL TYPE BRACKETS ###############################

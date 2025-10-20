@@ -129,6 +129,9 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
   - *abundance.py*: Scripts for visualizing the abundance of cell types, subgrouping into ectypes and plotting some ectoype netowrks
   - *change_cells.py*: Contains the renaming of the cells defined in subclustering by functional and marker genes information
     Renames the netowrk, the groups and the count_matrix files
+  - *postprocess_cluster_networks.py*: Recreates the Pearson-vs-MI analysis from the notebook for every cluster, annotates ARACNe networks with Pearson stats, exports nonlinear edge tables, and can render the trio of scatter/heatmap plots used to inspect MI-only pairs.
+  - *run_aracne_by_cluster.py*: Prepares per-cluster count matrices and transcription factor lists, runs ARACNe-AP with the chosen bootstrap parameters, and writes the consolidated mutual-information networks ready for downstream annotation.
+  - *circos_cluster_plots.py*: Loads the annotated cluster networks, fits stochastic block models with graph-tool, and regenerates the circos-style blockmodel visualizations along with cached block states.
 
 ### Data Dirs
 
