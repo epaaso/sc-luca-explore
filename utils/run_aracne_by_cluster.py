@@ -14,7 +14,7 @@ Example usage (dry run for cluster 0 early stage):
 
 Run all stages and clusters with 200 bootstraps and 2 GiB of JVM memory:
 
-    python utils/run_aracne_by_cluster.py --bootstraps 200 --java-memory 1G
+    python utils/run_aracne_by_cluster.py --bootstraps 100 --java-memory 1G
 
 Note: Running ARACNe with 500 bootstraps per cluster can take a long time.
 """

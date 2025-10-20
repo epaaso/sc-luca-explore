@@ -127,11 +127,6 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         action="store_true",
         help="Reduce logging verbosity to warnings only.",
     )
-    parser.add_argument(
-        "--plot-nonlinear",
-        action="store_true",
-        help="Generate scatter plots for MI-only edges using sample_scatter-style visuals.",
-    )
 
     return parser.parse_args(argv)
 
@@ -194,7 +189,7 @@ def plot_corr_networks_cluster(
     p_threshold: float,
     cluster_dir: Path,
 ) -> Optional[ClusterAnalysisResult]:
-    groups_path = METADATA_DIR / f"groups_{stage.time_label}.csv"
+    groups_path = METADATA_DIR / f"groups_{stage.time_label}_funcnames.csv"
     if not groups_path.exists():
         raise FileNotFoundError(f"Groups file not found: {groups_path}")
 
@@ -245,21 +240,22 @@ def plot_corr_networks_cluster(
         pearson_df, pearson_p_values_df, corr_threshold, p_threshold
     )
 
-    save_pearson_outputs(
-        cluster_dir,
-        stage,
-        cluster_id,
-        corr_types,
-        counts_plus1,
-        corr_plus1_norm,
-        dataset_map,
-        pearson_df,
-        pearson_p_values_df,
-        matrix_counts,
-        G,
-        G_negative,
-        G_positive,
-    )
+    # TODO this would need to filter the corrs
+    # save_pearson_outputs(
+    #     cluster_dir,
+    #     stage,
+    #     cluster_id,
+    #     corr_types,
+    #     counts_plus1,
+    #     corr_plus1_norm,
+    #     dataset_map,
+    #     pearson_df,
+    #     pearson_p_values_df,
+    #     matrix_counts,
+    #     G,
+    #     G_negative,
+    #     G_positive,
+    # )
 
     return ClusterAnalysisResult(
         pearson_graph=G,
@@ -310,11 +306,7 @@ def build_pearson_graphs(
             v = cols[j]
             weight = float(pearson_df.iloc[i, j])
             pval = float(pearson_p_df.iloc[i, j])
-            if abs(weight) >= corr_threshold and pval <= p_threshold:
-                G.add_edge(u, v, weight=round(weight, 2), pvalue=pval)
-
-    nodes_without_edges = [node for node, degree in G.degree() if degree == 0]
-    G.remove_nodes_from(nodes_without_edges)
+            G.add_edge(u, v, weight=weight, pvalue=pval)
 
     G.graph["corr_threshold"] = corr_threshold
     G.graph["p_threshold"] = p_threshold
@@ -345,41 +337,22 @@ def save_pearson_outputs(
     cluster_dir.mkdir(parents=True, exist_ok=True)
 
     time_label = stage.time_label
-    pearson_df.to_csv(cluster_dir / f"pearson_{time_label}_cluster{cluster_id}.csv")
-    pearson_p_values_df.to_csv(cluster_dir / f"pearson_p_values_{time_label}_cluster{cluster_id}.csv")
-
-    corr_types_out = corr_types.copy()
-    corr_types_out.insert(0, SAMPLE_KEY, corr_types_out.index)
-    corr_types_out.insert(1, "dataset", dataset_map.loc[corr_types.index].tolist())
-    corr_types_out.to_csv(cluster_dir / f"corr_types_{time_label}_cluster{cluster_id}.csv", index=False)
-
-    counts_plus1_out = counts_plus1.copy()
-    counts_plus1_out.insert(0, SAMPLE_KEY, counts_plus1_out.index)
-    counts_plus1_out.insert(1, "dataset", dataset_map.loc[counts_plus1.index].tolist())
-    counts_plus1_out.to_csv(cluster_dir / f"counts_plus1_{time_label}_cluster{cluster_id}.csv", index=False)
-
-    corr_plus1_norm_out = corr_plus1_norm.copy()
-    corr_plus1_norm_out.insert(0, SAMPLE_KEY, corr_plus1_norm_out.index)
-    corr_plus1_norm_out.insert(1, "dataset", dataset_map.loc[corr_plus1_norm.index].tolist())
-    corr_plus1_norm_out.to_csv(
-        cluster_dir / f"corr_plus1_norm_{time_label}_cluster{cluster_id}.csv", index=False
-    )
 
     counts_with_dataset = matrix_counts.copy()
     counts_with_dataset.insert(0, SAMPLE_KEY, counts_with_dataset.index)
     counts_with_dataset.insert(1, "dataset", dataset_map.loc[matrix_counts.index].tolist())
 
-    feature_cols = [col for col in counts_with_dataset.columns if col not in {SAMPLE_KEY, "dataset"}]
-    zeros_per_dataset = counts_with_dataset.groupby("dataset")[feature_cols].apply(lambda df: (df > 0).sum())
-    zeros_per_dataset_T = zeros_per_dataset.T
-    ax = zeros_per_dataset_T.plot(kind="bar", stacked=True, figsize=(14, 9))
-    ax.set_ylabel("# Samples")
-    ax.set_title("# Samples with Cell Type")
-    ax.legend(title="Dataset", bbox_to_anchor=(1.05, 1), loc="upper left")
-    plt.xticks(rotation=90)
-    plt.tight_layout()
-    plt.savefig(cluster_dir / f"0_samples_{time_label}_cluster{cluster_id}.png", dpi=200)
-    plt.close()
+    # feature_cols = [col for col in counts_with_dataset.columns if col not in {SAMPLE_KEY, "dataset"}]
+    # zeros_per_dataset = counts_with_dataset.groupby("dataset")[feature_cols].apply(lambda df: (df > 0).sum())
+    # zeros_per_dataset_T = zeros_per_dataset.T
+    # ax = zeros_per_dataset_T.plot(kind="bar", stacked=True, figsize=(14, 9))
+    # ax.set_ylabel("# Samples")
+    # ax.set_title("# Samples with Cell Type")
+    # ax.legend(title="Dataset", bbox_to_anchor=(1.05, 1), loc="upper left")
+    # plt.xticks(rotation=90)
+    # plt.tight_layout()
+    # plt.savefig(cluster_dir / f"0_samples_{time_label}_cluster{cluster_id}.png", dpi=200)
+    # plt.close()
 
     fig, axes = plt.subplots(1, 3, figsize=(22, 9))
     draw_graph(G, axes[0], f"Pearson Corr {time_label}")
@@ -390,65 +363,78 @@ def save_pearson_outputs(
     plt.close()
 
 
-def get_nonlinear_edges(
+def load_mi_graph(
     stage: StageConfig,
     cluster_id: int,
     cluster_dir: Path,
-    G_pear: nx.Graph,
-) -> Tuple[set[Tuple[str, str]], set[Tuple[str, str]], nx.Graph]:
+) -> nx.Graph:
     net_path = cluster_dir / f"net_{stage.time_label}_cluster{cluster_id}.txt"
     if not net_path.exists():
         raise FileNotFoundError(f"ARACNe network not found: {net_path}")
 
     G_MI = nx.read_edgelist(net_path, data=(("MI", float), ("p", float)), delimiter="\t")
-    edges_MI = {(min(u, v), max(u, v)) for u, v in G_MI.edges()}
-    edges_pear = {(min(u, v), max(u, v)) for u, v in G_pear.edges()}
-
-    non_linear_edges = edges_MI - edges_pear
-    non_signif_edges = edges_pear - edges_MI
-    threshold = G_pear.graph.get("corr_threshold", float("nan"))
     logging.info(
-        "Stage %s cluster %d: MI edges %d, Pearson edges %d, non-linear %d",
+        "Stage %s cluster %d: loaded MI network with %d edges",
         stage.name,
         cluster_id,
-        len(edges_MI),
-        len(edges_pear),
-        len(non_linear_edges),
+        G_MI.number_of_edges(),
     )
-    if not np.isnan(threshold):
-        logging.info(
-            "Stage %s cluster %d: corr threshold %.3f", stage.name, cluster_id, threshold
-        )
-
-    return non_linear_edges, non_signif_edges, G_MI
+    return G_MI
 
 
-def add_pearson_edges(
+def annotate_mi_graph(
     stage: StageConfig,
     cluster_id: int,
     cluster_dir: Path,
     G_MI: nx.Graph,
+    pearson_df: pd.DataFrame,
+    pearson_p_df: pd.DataFrame,
     corr_threshold: float,
     p_threshold: float,
     export: bool = True,
-) -> nx.Graph:
-    pearson_path = cluster_dir / f"pearson_{stage.time_label}_cluster{cluster_id}.csv"
-    pearson_p_path = cluster_dir / f"pearson_p_values_{stage.time_label}_cluster{cluster_id}.csv"
-    if not pearson_path.exists() or not pearson_p_path.exists():
-        raise FileNotFoundError(
-            f"Pearson outputs missing for cluster {cluster_id}: {pearson_path} / {pearson_p_path}"
+) -> Tuple[nx.Graph, pd.DataFrame]:
+    net_path = cluster_dir / f"net_{stage.time_label}_cluster{cluster_id}.txt"
+    if not net_path.exists():
+        raise FileNotFoundError(f"MI network missing for cluster {cluster_id}: {net_path}")
+
+    df_edges = pd.read_csv(net_path, sep="\t", header=None, engine="python")
+    if df_edges.shape[1] < 4:
+        raise ValueError(
+            f"Expected at least 4 columns in MI network {net_path}, got {df_edges.shape[1]}"
         )
 
-    pearson_df = pd.read_csv(pearson_path, index_col=0)
-    pearson_p_df = pd.read_csv(pearson_p_path, index_col=0)
+    base_cols = ["source", "target", "MI", "p"]
+    extra_cols = [f"extra_{i}" for i in range(df_edges.shape[1] - len(base_cols))]
+    df_edges.columns = base_cols + extra_cols
 
-    for u, v in G_MI.edges():
-        if u not in pearson_df.index or v not in pearson_df.columns:
-            continue
-        corr = float(pearson_df.loc[u, v])
-        pval = float(pearson_p_df.loc[u, v])
+    def canonical_pair(u: str, v: str) -> tuple[str, str]:
+        return tuple(sorted((u, v)))
 
-        if pval <= p_threshold:
+    df_edges["_edge_key"] = [canonical_pair(s, t) for s, t in zip(df_edges["source"], df_edges["target"])]
+    df_edges = df_edges.loc[~df_edges["_edge_key"].duplicated(keep="first")].copy()
+
+    def lookup_stats(u: str, v: str) -> tuple[float, float]:
+        if u in pearson_df.index and v in pearson_df.columns:
+            return float(pearson_df.loc[u, v]), float(pearson_p_df.loc[u, v])
+        if v in pearson_df.index and u in pearson_df.columns:
+            return float(pearson_df.loc[v, u]), float(pearson_p_df.loc[v, u])
+        logging.debug(
+            "Pearson stats missing for edge (%s, %s); defaulting to corr=0.0, p=1.0",
+            u,
+            v,
+        )
+        return 0.0, 1.0
+
+    pearson_values = []
+    pvalue_values = []
+    sign_values = []
+
+    for row in df_edges.itertuples(index=False):
+        corr, pval = lookup_stats(row.source, row.target)
+
+        if np.isnan(corr) or np.isnan(pval):
+            sign = "neither"
+        elif pval <= p_threshold:
             if corr <= -corr_threshold:
                 sign = "negative_significant"
             elif corr >= corr_threshold:
@@ -458,43 +444,41 @@ def add_pearson_edges(
         else:
             sign = "neither"
 
-        G_MI[u][v]["pearson"] = corr
-        G_MI[u][v]["pvalue"] = pval
-        G_MI[u][v]["sign"] = sign
+        pearson_values.append(corr)
+        pvalue_values.append(pval)
+        sign_values.append(sign)
+
+        u, v = row.source, row.target
+        if G_MI.has_edge(u, v):
+            edge_u, edge_v = u, v
+        elif G_MI.has_edge(v, u):
+            edge_u, edge_v = v, u
+        else:
+            edge_u = edge_v = None
+
+        if edge_u is not None:
+            G_MI[edge_u][edge_v]["pearson"] = corr
+            G_MI[edge_u][edge_v]["pvalue"] = pval
+            G_MI[edge_u][edge_v]["sign"] = sign
+
+    df_edges["pearson"] = pearson_values
+    df_edges["pvalue"] = pvalue_values
+    df_edges["sign"] = sign_values
+    df_edges.drop(columns="_edge_key", inplace=True)
 
     if export:
         export_path = cluster_dir / f"net_{stage.time_label}_cluster{cluster_id}_MI_pearson.txt"
-        nx.write_edgelist(
-            G_MI,
+        out_cols = base_cols + extra_cols + ["pearson", "pvalue", "sign"]
+        df_edges.to_csv(
             export_path,
-            data=["MI", "p", "pearson", "pvalue", "sign"],
-            delimiter="\t",
+            sep="\t",
+            header=False,
+            index=False,
+            columns=out_cols,
+            float_format="%.15g",
         )
 
-    return G_MI
-
-
-def export_edge_set(
-    edges: Iterable[Tuple[str, str]],
-    graph: nx.Graph,
-    path: Path,
-    *,
-    attrs: Optional[Iterable[str]] = None,
-) -> None:
-    records = []
-    for u, v in edges:
-        data = graph.get_edge_data(u, v, default={})
-        record = {"source": u, "target": v}
-        if attrs is None:
-            for key, value in data.items():
-                record[key] = value
-        else:
-            for key in attrs:
-                record[key] = data.get(key)
-        records.append(record)
-
-    df = pd.DataFrame(records)
-    df.to_csv(path, index=False)
+    return G_MI, df_edges
 
 
 def plot_nonlinear_scatter(
@@ -681,42 +665,41 @@ def process_cluster(
         logging.warning("Stage %s cluster %d: skipping remainder due to insufficient data", stage.name, cluster_id)
         return
 
-    G_pear = analysis.pearson_graph
+    G_MI = load_mi_graph(stage, cluster_id, cluster_dir)
 
-    non_linear_edges, non_signif_edges, G_MI = get_nonlinear_edges(stage, cluster_id, cluster_dir, G_pear)
-
-    export_edge_set(
-        non_linear_edges,
-        G_MI,
-        cluster_dir / f"nonlinear_edges_{stage.time_label}_cluster{cluster_id}.csv",
-        attrs=["MI", "p"],
-    )
-    export_edge_set(
-        non_signif_edges,
-        G_pear,
-        cluster_dir / f"pearson_only_edges_{stage.time_label}_cluster{cluster_id}.csv",
-        attrs=["weight", "pvalue"],
-    )
-
-    G_MI_annotated = add_pearson_edges(
+    G_MI_annotated, annotated_df = annotate_mi_graph(
         stage,
         cluster_id,
         cluster_dir,
         G_MI,
+        analysis.pearson_df,
+        analysis.pearson_p_values_df,
         corr_threshold=args.corr_threshold,
         p_threshold=args.p_threshold,
         export=True,
     )
 
-    if args.plot_nonlinear:
-        plot_nonlinear_scatter(
-            stage,
-            cluster_id,
-            list(non_linear_edges),
-            analysis,
-            G_MI,
-            cluster_dir,
-        )
+    non_linear_edges = {
+        tuple(sorted((row.source, row.target)))
+        for row in annotated_df.itertuples(index=False)
+        if row.sign == "neither"
+    }
+
+    logging.info(
+        "Stage %s cluster %d: %d edges labelled as non-linear (sign == neither)",
+        stage.name,
+        cluster_id,
+        len(non_linear_edges),
+    )
+
+    plot_nonlinear_scatter(
+        stage,
+        cluster_id,
+        sorted(non_linear_edges),
+        analysis,
+        G_MI_annotated,
+        cluster_dir,
+    )
 
     logging.info(
         "Stage %s cluster %d: annotated %d MI edges",
