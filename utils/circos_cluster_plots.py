@@ -247,7 +247,7 @@ def paint_net_from_state(
     g: gt.Graph,
     time: str,
     *,
-    width_divisor: float = 3.0,
+    width_divisor: float = 8.0,
     margin: float = 0.25,
     remove_neg: bool = False,
     output_dir: Path | str | None = None,
