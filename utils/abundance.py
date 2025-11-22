@@ -184,6 +184,7 @@ def plot_abundance_heatmap(
         cbar_kws={'label': 'Ln(Normalized Counts)'},
         yticklabels=data.index
     )
+    
     ax1.set_yticks(np.arange(len(data.index)) + 0.5)
     ax1.set_yticklabels(data.index, rotation=0, fontsize=ylabel_size)
     xtick_params_default = {'rotation': 45, 'ha': 'right', 'rotation_mode': 'anchor', 'size': 12}
@@ -225,7 +226,16 @@ def plot_abundance_heatmap(
         label_text = str(group_value)
         if grouping_column == 'dataset':
             label_text = label_text[-18:]
-        ax0.text(0, (y_start + y_end) / 2, label_text, va='center', ha='right', fontsize=8)
+        ax0.text(
+            0,
+            (y_start + y_end) / 2,
+            label_text,
+            va='center',
+            ha='right',
+            fontsize=16,
+            rotation=60,
+            rotation_mode='anchor'
+        )
 
 
     ############################ CELL TYPE BRACKETS ###############################
@@ -243,7 +253,7 @@ def plot_abundance_heatmap(
         ax.plot([start, start], [y, y - bracket_height], lw=1.5, color=color)
         ax.plot([end, end], [y, y - bracket_height], lw=1.5, color=color)
         ax.plot([start, end], [y, y], lw=1.5, color=color)
-        ax.text((start + end)/2, y - bracket_height, text, ha='center', va='top', fontsize=14)
+        ax.text((start + end)/2, y - bracket_height, text, ha='center', va='top', fontsize=18)
 
     y_level = -0.8
     end = 0
@@ -259,8 +269,11 @@ def plot_abundance_heatmap(
 
     plt.tight_layout()
     pos = ax_cbar.get_position()
-    pos = [pos.x0, pos.y0, pos.width, pos.height]  # Shift the colorbar 0.05 units to the left
+    pos = [pos.x0 -0.05, pos.y0, pos.width, pos.height]  # Shift the colorbar 0.05 units to the left
     ax_cbar.set_position(pos)
+    ax_cbar.yaxis.label.set_size(20)
+    ax_cbar.tick_params(axis='both', labelsize=18)
+    
     
     if show_plot:
         plt.show()
