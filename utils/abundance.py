@@ -91,7 +91,7 @@ def draw_graph(G, ax, title, scale1= 30, scale2=4, k=3, font_size=8):
     )
 
     legend_handles = [mpatches.Patch(color=color, label=category) for category, color in color_map.items()]
-    ax.legend(handles=legend_handles, loc='best', fontsize=8)
+    ax.legend(handles=legend_handles, loc='best', fontsize=10)
     # plt.show()
 
     ax.set_title(title)
@@ -434,7 +434,14 @@ def plot_degree_centrality(
     return G
 
 
-def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.4, output_prefix: str = "samples"):
+def cluster_samples_leiden(
+    corr_types: pd.DataFrame,
+    k: int = 10,
+    res: float = 0.4,
+    output_prefix: str = "samples",
+    show_pca: bool = False,
+    n_top_pcs: int = 5,
+):
     """
     Cluster samples (rows) using a kNN graph + Leiden.
 
@@ -448,6 +455,12 @@ def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.
         Leiden resolution parameter.
     output_prefix : str
         (Currently unused) prefix for potential output artifacts.
+    show_pca : bool
+        If True, compute PCA on the numeric matrix, show a 2D PCA scatter
+        (PC1 vs PC2, colored by Leiden cluster), and print the top
+        `n_top_pcs` principal component scores for each sample.
+    n_top_pcs : int
+        Number of leading principal components for which to print scores.
 
     Returns
     -------
@@ -530,6 +543,7 @@ def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.
 
     # --- 6. 2D layout + plot (optional quick viz) ---------------------------
     layout_2d = g.layout_fruchterman_reingold()
+
     coords = np.array(layout_2d.coords)
 
     plt.figure(figsize=(6, 5))
@@ -545,6 +559,51 @@ def cluster_samples_leiden(corr_types: pd.DataFrame, k: int = 10, res:float = 0.
 
     plt.tight_layout()
     plt.show()
+
+    # --- 7. Optional PCA diagnostics ---------------------------------------
+    if show_pca:
+        try:
+            from sklearn.decomposition import PCA
+        except ImportError:
+            print("[cluster_samples_leiden] sklearn not installed; skipping PCA plot and scores.")
+        else:
+            # Fit PCA on the same numeric matrix used for distances
+            pca = PCA()
+            pcs = pca.fit_transform(numeric_df.values)
+
+            # 3D PCA plot (PC1, PC2, PC3) colored by Leiden membership
+            if pcs.shape[1] >= 3:
+                from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+                fig = plt.figure(figsize=(7, 6))
+                ax = fig.add_subplot(111, projection="3d")
+                scatter_pca = ax.scatter(
+                    pcs[:, 0],
+                    pcs[:, 1],
+                    pcs[:, 2],
+                    c=memberships,
+                    cmap=cmap,
+                    s=50,
+                )
+                ax.set_xlabel("PC1")
+                ax.set_ylabel("PC2")
+                ax.set_zlabel("PC3")
+                ax.set_title("PCA of Samples (PC1–PC3)")
+                fig.colorbar(scatter_pca, label="Cluster")
+                for i, name in enumerate(samples):
+                    ax.text(pcs[i, 0], pcs[i, 1], pcs[i, 2], str(name)[-6:], fontsize=6)
+                plt.tight_layout()
+                plt.show()
+
+            # Print PC scores for top n_top_pcs factors
+            max_pcs = min(n_top_pcs, pcs.shape[1])
+            pcs_df = pd.DataFrame(
+                pcs[:, :max_pcs],
+                index=samples,
+                columns=[f"PC{i+1}" for i in range(max_pcs)],
+            )
+            print("[cluster_samples_leiden] Top principal component scores:")
+            print(pcs_df)
 
     return g
     # plt.savefig(f"{output_prefix}_leiden_clusters.png", bbox_inches="tight")
@@ -614,12 +673,142 @@ def plot_degree_distribution_power_law(G):
     plt.show()
 
 
+def plot_pca_from_corr_types(
+    corr_types: pd.DataFrame,
+    n_top_celltypes: int = 5,
+    membership_col: str = "membership",
+    cmap_name: str = "tab20",
+):
+    """Sample-level PCA on cell-type abundances, colored by membership.
+
+    Points are **samples**, coordinates are principal components computed
+    from the cell-type abundance matrix, and colors reflect the given
+    membership column. Additionally, the function prints and returns the
+    top cell types (features) driving the first three PCs.
+
+    Parameters
+    ----------
+    corr_types : pd.DataFrame
+        Rows = samples, columns = cell types + optional metadata.
+        Must contain `membership_col` for coloring.
+    n_top_celltypes : int
+        Number of top-loading cell types to report per PC.
+    membership_col : str
+        Column to use for group/membership coloring.
+    cmap_name : str
+        Matplotlib colormap name to use for membership groups.
+
+    Returns
+    -------
+    pd.DataFrame
+        Long-format table of top cell types for the first three PCs with
+        their loadings.
+    """
+    if membership_col not in corr_types.columns:
+        raise ValueError(
+            f"Column '{membership_col}' not found in corr_types; "
+            "required for coloring samples."
+        )
+
+    # Copy and keep only numeric (cell-type) columns; drop membership from features
+    df = corr_types.copy()
+    memberships = df[membership_col].to_numpy()
+    samples = df.index.astype(str)
+
+    numeric_df = df.select_dtypes(include=[np.number]).copy()
+    if membership_col in numeric_df.columns:
+        numeric_df = numeric_df.drop(columns=[membership_col])
+
+    if numeric_df.shape[1] == 0:
+        raise ValueError("No numeric cell type columns available for PCA.")
+
+    # Clean infinities / NaNs
+    numeric_df = numeric_df.replace([np.inf, -np.inf], np.nan)
+    if numeric_df.isna().all(axis=1).any():
+        all_nan = numeric_df.isna().all(axis=1)
+        print(
+            f"[plot_pca_from_corr_types] Dropping {all_nan.sum()} samples with all-NaN values: "
+            f"{list(numeric_df.index[all_nan])}"
+        )
+        numeric_df = numeric_df.loc[~all_nan]
+        memberships = memberships[~all_nan]
+        samples = numeric_df.index.astype(str)
+
+    if numeric_df.isna().any().any():
+        col_means = numeric_df.mean(axis=0)
+        numeric_df = numeric_df.fillna(col_means)
+
+    try:
+        from sklearn.decomposition import PCA
+    except ImportError:
+        raise ImportError(
+            "scikit-learn is required for plot_pca_from_corr_types. Install via 'pip install scikit-learn'."
+        )
+
+    # X: samples × cell types
+    X = numeric_df.values
+    cell_types = numeric_df.columns.to_list()
+
+    pca = PCA()
+    pcs = pca.fit_transform(X)  # sample scores
+
+    # 3D PCA plot (PC1, PC2, PC3) where each point is a sample
+    if pcs.shape[1] >= 3:
+        unique_clusters = sorted(pd.unique(memberships))
+        cmap = plt.get_cmap(cmap_name, len(unique_clusters))
+
+        from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+        fig = plt.figure(figsize=(7, 6))
+        ax = fig.add_subplot(111, projection="3d")
+        scatter = ax.scatter(
+            pcs[:, 0],
+            pcs[:, 1],
+            pcs[:, 2],
+            c=memberships,
+            cmap=cmap,
+            s=50,
+        )
+        ax.set_xlabel("PC1")
+        ax.set_ylabel("PC2")
+        ax.set_zlabel("PC3")
+        ax.set_title("PCA of Samples (PC1–PC3)")
+        fig.colorbar(scatter, label="Cluster")
+        for i, name in enumerate(samples):
+            ax.text(pcs[i, 0], pcs[i, 1], pcs[i, 2], str(name)[-6:], fontsize=6)
+        plt.tight_layout()
+        plt.show()
+
+    # Feature contributions (loadings) are in pca.components_.T
+    loadings = pca.components_.T  # shape: cell_types × PCs
+    n_pcs = min(3, loadings.shape[1])
+    records = []
+    for pc_idx in range(n_pcs):
+        pc_loadings = loadings[:, pc_idx]
+        order = np.argsort(-np.abs(pc_loadings))[:n_top_celltypes]
+        for rank, idx_ in enumerate(order, start=1):
+            records.append(
+                {
+                    "PC": f"PC{pc_idx+1}",
+                    "rank": rank,
+                    "cell_type": cell_types[idx_],
+                    "loading": pc_loadings[idx_],
+                }
+            )
+
+    top_df = pd.DataFrame.from_records(records, columns=["PC", "rank", "cell_type", "loading"])
+    print("[plot_pca_from_corr_types] Top cell types per PC (by absolute loading):")
+    print(top_df)
+
+    return top_df
+
 def plot_celltype_boxplot(
     corr_types: pd.DataFrame, 
     title: str=None,
     category_map = None, 
     cat_colors: dict = None,
     xlabel_color:str = None,
+    log_scale: bool = True,
     ax: plt.Axes = None
 ):
     """
@@ -631,7 +820,8 @@ def plot_celltype_boxplot(
     melted = corr_types.melt(var_name='cell_type', value_name='abundance', ignore_index=False)
     melted.reset_index(inplace=True)
     melted.rename(columns={'index': 'sample'}, inplace=True)
-    melted['abundance'] = np.log(melted['abundance'])
+    if log_scale:
+        melted['abundance'] = np.log(melted['abundance'])
 
     # If we have categories for each cell type, add a 'cell_category' column
     if category_map:
@@ -654,7 +844,7 @@ def plot_celltype_boxplot(
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha='right', rotation_mode='anchor')
     if xlabel_color:
         ax.yaxis.set_tick_params( labelcolor=xlabel_color)
-    ax.set_title(f"Ln(Relative Abundance) {title}")
+    ax.set_title(f"{'Ln(Relative Abundance)' if log_scale else 'Relative Abundance'} {title}")
     ax.legend(title='Cell Category', loc='upper left', bbox_to_anchor=(1, 1))
     plt.tight_layout()
     

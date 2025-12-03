@@ -72,7 +72,7 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 
 - *nb_filter*: Filters the cells and genes by predefined quality control metrics.
 
-- *nb_refAtlas*: Contains the notebook `vae_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel` has the reasoning and training of the actual reference atlas.
+- *nb_refAtlas*: Contains the notebook `vae_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel_WuBatch` has the reasoning and training of the actual reference atlas, used everywhere else.
 
 - *nb_annotRefatlas*: Annotates tissue from a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types. Includes a notebook for annotation with label transfer via neighbors, but it had worse outcomes (`labelTransfer`). There is also a notebook that transfers the newly created clusters to another dataset (`extendPreds_{dataset}.ipynb`).
 
