@@ -17,7 +17,7 @@ The workflow for getting from the raw AnnData files to the coabundance graphs an
 
 ## Running
 
-To see the order for running the workflow, got to the **Folder Strcuture -> Notebooks and scripts** section. There is an explanation of the notebooks in the order they sould be run
+To see the order for running the workflow, got to the **Folder Structure -> Notebooks and scripts** section. There is an explanation of the notebooks in the order they sould be run
 
 We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus. So if you just want to run a notebook separately, look at the versions of the packages in the Dokcefile.
 
@@ -126,12 +126,13 @@ But for now all the necessary steps are contained in the notebooks and scripts, 
 - *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
 - *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`. The file `cell_mappings.json` centralizes shared dictionaries such as therapy labels, category colors, and cell-type groupings used across notebooks.
 - *utils*: Contains custom plotting and analysis functions.
-  - *abundance.py*: Scripts for visualizing the abundance of cell types, subgrouping into ectypes and plotting some ectoype netowrks
+  - *abundance.py*: Functions for visualizing the abundance of cell types, subgrouping into ecotypes and plotting some ecotype networks. Is used a lot by `abund_clusters.ipynb`.
   - *change_cells.py*: Contains the renaming of the cells defined in subclustering by functional and marker genes information
     Renames the netowrk, the groups and the count_matrix files
   - *postprocess_cluster_networks.py*: Recreates the Pearson-vs-MI analysis from the notebook for every cluster, annotates ARACNe networks with Pearson stats, exports nonlinear edge tables, and can render the trio of scatter/heatmap plots used to inspect MI-only pairs.
   - *run_aracne_by_cluster.py*: Prepares per-cluster count matrices and transcription factor lists, runs ARACNe-AP with the chosen bootstrap parameters, and writes the consolidated mutual-information networks ready for downstream annotation.
   - *circos_cluster_plots.py*: Loads the annotated cluster networks, fits stochastic block models with graph-tool, and regenerates the circos-style blockmodel visualizations along with cached block states.
+  - *plot_cell_pair.py*: Plots scatter plots of cell pairs correlations for a specific cluster/stage, comparing linear vs log scales. Option `--no-plus1` allows plotting raw counts. Output filename is auto-generated if not provided.
 
 ### Data Dirs
 
@@ -224,3 +225,4 @@ git config --global user.name "Ernesto Paas"
 ```
 
 We suggest saving a key pair that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com"` in the Docker volume (folder) that contains the repository, and then copying them to `~/.ssh/id_ed25519` etc., to have SSH authentication with GitHub. Remember to have the SSH agent activated `eval "$(ssh-agent -s)"` and the key added `ssh-add ~/.ssh/id_ed25519`. Ensure that the key is read-only.
+
