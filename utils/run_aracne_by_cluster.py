@@ -60,6 +60,12 @@ STAGE_CONFIGS = {
         matrix_path=DEFAULT_OUTPUT_ROOT / "matrixIII-IV_leidenwu_funcnames.txt",
         time_label="III-IV_leidenwu",
     ),
+    "late2": StageConfig(
+        name="late",
+        membership_csv=Path("nb_graphAnalysis/output/membership_by_cluster_late2.csv"),
+        matrix_path=DEFAULT_OUTPUT_ROOT / "matrixIII-IV_leidenwu_funcnames.txt",
+        time_label="III-IV_leidenwu",
+    ),
 }
 
 

@@ -77,6 +77,11 @@ STAGE_CONFIGS = {
         membership_csv=REPO_ROOT / "nb_graphAnalysis/output/membership_by_cluster_late.csv",
         time_label="III-IV_leidenwu",
     ),
+    "late2": StageConfig(
+        name="late",
+        membership_csv=REPO_ROOT / "nb_graphAnalysis/output/membership_by_cluster_late2.csv",
+        time_label="III-IV_leidenwu",
+    ),
 }
 
 
@@ -397,7 +402,17 @@ def annotate_mi_graph(
     if not net_path.exists():
         raise FileNotFoundError(f"MI network missing for cluster {cluster_id}: {net_path}")
 
-    df_edges = pd.read_csv(net_path, sep="\t", header=None, engine="python")
+    try:
+        df_edges = pd.read_csv(net_path, sep="\t", header=None, engine="python")
+    except pd.errors.EmptyDataError:
+        logging.warning(
+            "Stage %s cluster %d: MI network file is empty %s",
+            stage.name,
+            cluster_id,
+            net_path,
+        )
+        return G_MI, pd.DataFrame()
+
     if df_edges.shape[1] < 4:
         raise ValueError(
             f"Expected at least 4 columns in MI network {net_path}, got {df_edges.shape[1]}"

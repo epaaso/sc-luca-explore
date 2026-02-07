@@ -1,0 +1,90 @@
+B cell
+B cell dividing
+Ciliated
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+Tumor IS_Secretory
+Tumor Mesothelin+_Sec
+Tumor EMT
+Tumor Glyco+
+Tumor ROS1+
+Tumor Cycling_Epi
+Tumor Plastic_AS_NE
+Tumor NE_HPA
+Tumor Inv_Stem
+cDC1
+cDC2
+myeloid dividing
+pDC
+B cell
+B cell dividing
+Ciliated
+DC mature
+Endothelial cell arterial
+Endothelial cell capillary
+Endothelial cell lymphatic
+Endothelial cell venous
+Fibroblast adventitial
+Fibroblast alveolar
+Fibroblast peribronchial
+Macrophage
+Macrophage alveolar
+Mast cell
+Monocyte classical
+Monocyte non-classical
+NK cell
+NK cell dividing
+Neutrophils
+Pericyte
+Plasma cell
+Plasma cell dividing
+Smooth muscle cell
+T cell CD4
+T cell CD4 dividing
+T cell CD8 activated
+T cell CD8 dividing
+T cell CD8 effector memory
+T cell CD8 naive
+T cell CD8 terminally exhausted
+T cell NK-like
+T cell regulatory
+Tumor IS_Secretory
+Tumor Mesothelin+_Sec
+Tumor EMT
+Tumor Glyco+
+Tumor ROS1+
+Tumor Cycling_Epi
+Tumor Plastic_AS_NE
+Tumor NE_HPA
+Tumor Inv_Stem
+cDC1
+cDC2
+myeloid dividing
+pDC

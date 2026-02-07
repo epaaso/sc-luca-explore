@@ -1,0 +1,91 @@
+types	p030t	BD_immune14	Zilionis_Klein_2019_p3t1	Zilionis_Klein_2019_p3t2	Zilionis_Klein_2019_p3t3	Zilionis_Klein_2019_p5t2	BD_immune02	Lambrechts_Thienpont_2018_6653_scrBT1431m
+B cell	1217.0	1644.0	766.0	888.0	724.0	320.0	1881.0	685.0
+B cell dividing	0.0	29.0	0.0	0.0	0.0	0.0	2.0	17.0
+Ciliated	20.0	147.0	4.0	4.0	5.0	3.0	11.0	2.0
+DC mature	6.0	10.0	0.0	2.0	2.0	2.0	0.0	0.0
+Endothelial cell arterial	0.0	0.0	9.0	7.0	9.0	2.0	0.0	0.0
+Endothelial cell capillary	0.0	0.0	7.0	3.0	8.0	5.0	0.0	0.0
+Endothelial cell lymphatic	9.0	10.0	2.0	0.0	0.0	0.0	0.0	0.0
+Endothelial cell venous	30.0	18.0	33.0	24.0	37.0	29.0	2.0	22.0
+Fibroblast adventitial	4.0	0.0	4.0	4.0	0.0	3.0	0.0	2.0
+Fibroblast alveolar	9.0	9.0	17.0	10.0	9.0	4.0	0.0	2.0
+Fibroblast peribronchial	33.0	3.0	13.0	17.0	12.0	14.0	0.0	0.0
+Macrophage	134.0	74.0	59.0	79.0	85.0	139.0	23.0	64.0
+Macrophage alveolar	31.0	153.0	35.0	24.0	31.0	66.0	14.0	8.0
+Mast cell	50.0	54.0	43.0	58.0	51.0	12.0	7.0	41.0
+Monocyte classical	61.0	125.0	80.0	73.0	84.0	55.0	61.0	29.0
+Monocyte non-classical	0.0	16.0	0.0	0.0	2.0	0.0	5.0	0.0
+NK cell	124.0	183.0	38.0	43.0	40.0	4.0	48.0	51.0
+NK cell dividing	4.0	3.0	2.0	2.0	0.0	0.0	0.0	0.0
+Neutrophils	2.0	170.0	138.0	163.0	122.0	3.0	229.0	0.0
+Pericyte	9.0	0.0	0.0	2.0	2.0	8.0	0.0	5.0
+Plasma cell	84.0	78.0	71.0	65.0	90.0	92.0	37.0	75.0
+Plasma cell dividing	0.0	0.0	0.0	0.0	2.0	0.0	0.0	3.0
+Smooth muscle cell	16.0	0.0	2.0	6.0	5.0	2.0	0.0	0.0
+T cell CD4	772.0	697.0	383.0	472.0	345.0	315.0	823.0	710.0
+T cell CD4 dividing	25.0	23.0	0.0	0.0	0.0	0.0	9.0	0.0
+T cell CD8 activated	627.0	544.0	136.0	108.0	80.0	27.0	579.0	3.0
+T cell CD8 dividing	20.0	16.0	0.0	0.0	0.0	0.0	2.0	3.0
+T cell CD8 effector memory	428.0	952.0	55.0	61.0	46.0	105.0	985.0	283.0
+T cell CD8 naive	57.0	0.0	0.0	0.0	2.0	0.0	11.0	53.0
+T cell CD8 terminally exhausted	20.0	26.0	0.0	3.0	0.0	2.0	0.0	70.0
+T cell NK-like	14.0	34.0	0.0	0.0	2.0	0.0	28.0	29.0
+T cell regulatory	463.0	411.0	46.0	47.0	34.0	47.0	431.0	142.0
+Tumor IS_Secretory	25.0	65.0	46.0	52.0	57.0	5.0	8.0	15.0
+Tumor Mesothelin+_Sec	3.0	6.0	0.0	3.0	0.0	97.0	102.0	16.0
+Tumor EMT	7.0	0.0	0.0	0.0	0.0	0.0	0.0	5.0
+Tumor Glyco+	203.0	0.0	0.0	0.0	0.0	112.0	0.0	0.0
+Tumor ROS1+	131.0	6.0	5.0	3.0	9.0	9.0	0.0	0.0
+Tumor Cycling_Epi	0.0	0.0	0.0	0.0	0.0	3.0	10.0	0.0
+Tumor Plastic_AS_NE	2.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+Tumor NE_HPA	5.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+Tumor Inv_Stem	128.0	0.0	90.0	102.0	113.0	0.0	0.0	0.0
+cDC1	4.0	5.0	4.0	5.0	5.0	0.0	0.0	3.0
+cDC2	44.0	15.0	31.0	43.0	53.0	42.0	24.0	16.0
+myeloid dividing	18.0	8.0	0.0	0.0	3.0	7.0	5.0	0.0
+pDC	18.0	8.0	8.0	4.0	8.0	11.0	5.0	3.0
+B cell	1217.0	1644.0	766.0	888.0	724.0	320.0	1881.0	685.0
+B cell dividing	0.0	29.0	0.0	0.0	0.0	0.0	2.0	17.0
+Ciliated	20.0	147.0	4.0	4.0	5.0	3.0	11.0	2.0
+DC mature	6.0	10.0	0.0	2.0	2.0	2.0	0.0	0.0
+Endothelial cell arterial	0.0	0.0	9.0	7.0	9.0	2.0	0.0	0.0
+Endothelial cell capillary	0.0	0.0	7.0	3.0	8.0	5.0	0.0	0.0
+Endothelial cell lymphatic	9.0	10.0	2.0	0.0	0.0	0.0	0.0	0.0
+Endothelial cell venous	30.0	18.0	33.0	24.0	37.0	29.0	2.0	22.0
+Fibroblast adventitial	4.0	0.0	4.0	4.0	0.0	3.0	0.0	2.0
+Fibroblast alveolar	9.0	9.0	17.0	10.0	9.0	4.0	0.0	2.0
+Fibroblast peribronchial	33.0	3.0	13.0	17.0	12.0	14.0	0.0	0.0
+Macrophage	134.0	74.0	59.0	79.0	85.0	139.0	23.0	64.0
+Macrophage alveolar	31.0	153.0	35.0	24.0	31.0	66.0	14.0	8.0
+Mast cell	50.0	54.0	43.0	58.0	51.0	12.0	7.0	41.0
+Monocyte classical	61.0	125.0	80.0	73.0	84.0	55.0	61.0	29.0
+Monocyte non-classical	0.0	16.0	0.0	0.0	2.0	0.0	5.0	0.0
+NK cell	124.0	183.0	38.0	43.0	40.0	4.0	48.0	51.0
+NK cell dividing	4.0	3.0	2.0	2.0	0.0	0.0	0.0	0.0
+Neutrophils	2.0	170.0	138.0	163.0	122.0	3.0	229.0	0.0
+Pericyte	9.0	0.0	0.0	2.0	2.0	8.0	0.0	5.0
+Plasma cell	84.0	78.0	71.0	65.0	90.0	92.0	37.0	75.0
+Plasma cell dividing	0.0	0.0	0.0	0.0	2.0	0.0	0.0	3.0
+Smooth muscle cell	16.0	0.0	2.0	6.0	5.0	2.0	0.0	0.0
+T cell CD4	772.0	697.0	383.0	472.0	345.0	315.0	823.0	710.0
+T cell CD4 dividing	25.0	23.0	0.0	0.0	0.0	0.0	9.0	0.0
+T cell CD8 activated	627.0	544.0	136.0	108.0	80.0	27.0	579.0	3.0
+T cell CD8 dividing	20.0	16.0	0.0	0.0	0.0	0.0	2.0	3.0
+T cell CD8 effector memory	428.0	952.0	55.0	61.0	46.0	105.0	985.0	283.0
+T cell CD8 naive	57.0	0.0	0.0	0.0	2.0	0.0	11.0	53.0
+T cell CD8 terminally exhausted	20.0	26.0	0.0	3.0	0.0	2.0	0.0	70.0
+T cell NK-like	14.0	34.0	0.0	0.0	2.0	0.0	28.0	29.0
+T cell regulatory	463.0	411.0	46.0	47.0	34.0	47.0	431.0	142.0
+Tumor IS_Secretory	25.0	65.0	46.0	52.0	57.0	5.0	8.0	15.0
+Tumor Mesothelin+_Sec	3.0	6.0	0.0	3.0	0.0	97.0	102.0	16.0
+Tumor EMT	7.0	0.0	0.0	0.0	0.0	0.0	0.0	5.0
+Tumor Glyco+	203.0	0.0	0.0	0.0	0.0	112.0	0.0	0.0
+Tumor ROS1+	131.0	6.0	5.0	3.0	9.0	9.0	0.0	0.0
+Tumor Cycling_Epi	0.0	0.0	0.0	0.0	0.0	3.0	10.0	0.0
+Tumor Plastic_AS_NE	2.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+Tumor NE_HPA	5.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+Tumor Inv_Stem	128.0	0.0	90.0	102.0	113.0	0.0	0.0	0.0
+cDC1	4.0	5.0	4.0	5.0	5.0	0.0	0.0	3.0
+cDC2	44.0	15.0	31.0	43.0	53.0	42.0	24.0	16.0
+myeloid dividing	18.0	8.0	0.0	0.0	3.0	7.0	5.0	0.0
+pDC	18.0	8.0	8.0	4.0	8.0	11.0	5.0	3.0
