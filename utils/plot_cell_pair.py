@@ -115,7 +115,8 @@ def plot_pair(df, cell1, cell2, output_path, dataset_map, axis_label):
     color_map = {d: cmap(i) for i, d in enumerate(unique_datasets)}
     colors = datasets.map(color_map)
     
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
+    fig, axes = plt.subplots(2, 2, figsize=(14, 12))
+    ((ax1, ax2), (ax3, ax4)) = axes
     
     # Plot 1: Log Y, Linear X
     sc1 = ax1.scatter(x, y, c=colors, alpha=0.7, s=30, edgecolor='k', linewidth=0.3)
@@ -134,6 +135,24 @@ def plot_pair(df, cell1, cell2, output_path, dataset_map, axis_label):
     ax2.set_ylabel(f"{cell2} ({axis_label})")
     ax2.set_title(f"{cell1} vs {cell2}\n(Log X-axis)")
     ax2.grid(True, which="both", ls="-", alpha=0.2)
+
+    # Plot 3: Linear X, Linear Y
+    sc3 = ax3.scatter(x, y, c=colors, alpha=0.7, s=30, edgecolor='k', linewidth=0.3)
+    ax3.set_xscale('linear')
+    ax3.set_yscale('linear')
+    ax3.set_xlabel(f"{cell1} ({axis_label})")
+    ax3.set_ylabel(f"{cell2} ({axis_label})")
+    ax3.set_title(f"{cell1} vs {cell2}\n(Linear)")
+    ax3.grid(True, which="both", ls="-", alpha=0.2)
+
+    # Plot 4: Log X, Log Y
+    sc4 = ax4.scatter(x, y, c=colors, alpha=0.7, s=30, edgecolor='k', linewidth=0.3)
+    ax4.set_xscale('log')
+    ax4.set_yscale('log')
+    ax4.set_xlabel(f"{cell1} ({axis_label}) [Log]")
+    ax4.set_ylabel(f"{cell2} ({axis_label}) [Log]")
+    ax4.set_title(f"{cell1} vs {cell2}\n(Log-Log)")
+    ax4.grid(True, which="both", ls="-", alpha=0.2)
     
     # Add legend
     if unique_datasets:
