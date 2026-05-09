@@ -6,47 +6,36 @@ options(warn=-1)
 
 # Local and global paths, where the local input is passed as an argument 
 sampleName <- args[1] # Pass the CellRanger file as an argument 
-globalPath <- "/root/datos/maestria/netopaas/Zuani2024/" # REPLACE WITH YOUR PATH TO THE TOP DIRECTORY CONTAINING ALL CELLRANGER OUTPUTS
-samplePath <- paste(globalPath, sampleName, sep="")
+globalPath <- args[2] # REPLACE WITH YOUR PATH TO THE TOP DIRECTORY CONTAINING ALL CELLRANGER OUTPUTS
+samplePath <- paste(globalPath, sampleName, sep="/")
 
-fname <- paste(globalPath, sampleName, sep="")
+fname <- paste(globalPath, sampleName, sep="/")
 
 pltPath <- paste(globalPath, '/drop_plots/', sep="") # PATH FOR PLOTS
 if (!dir.exists(pltPath)) {
     print(paste("Creating folder", pltPath))
-    dir.create(file.path(pltPath)) 
+    dir.create(pltPath, recursive=TRUE, showWarnings=FALSE)
 }
 
 # We will store the results in each CellRanger directory, in a new subdirector called outputEmptyDrops
-fname2 <- paste(globalPath, "/outputEmptyDrops", sep="")
-fname2 <- paste(fname2, sampleName, sep='/')
+fname2 <- file.path(globalPath, "outputEmptyDrops", sampleName)
 print(fname2)
 # fname2 <- paste(globalPath, subdirPath, sep="")
 if (dir.exists(fname2)) {
     print("Folder /outputEmptyDrops already exist!")
 } else {
     print(paste("Creating folder ", fname2))
-    dir.create(file.path(fname2)) 
+    dir.create(fname2, recursive=TRUE, showWarnings=FALSE)
 }
 
-library(knitr)
-
-opts_chunk$set(error=FALSE, message=FALSE, warning=FALSE)
-opts_chunk$set(dpi=300, dev="png", dev.args=list(pointsize=15))
-options(bitmapType="cairo")
-
-# Install DropletUtils via the BiocManager
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager", repos=cranMirror)
-
-# if (!requireNamespace("DropletUtils", quietly = TRUE))
-#   BiocManager::install("DropletUtils")
-library(DropletUtils)
+if (!dir.exists(fname2)) {
+    stop(paste("Could not create output folder:", fname2))
+}
 
 suppressPackageStartupMessages(library(DropletUtils))
 
 # Read from the 10X counts matrix
-sce   <- read10xCounts(fname, col.names=TRUE, type='prefix')
+sce   <- read10xCounts(paste0(fname,"-"), col.names=TRUE, type='prefix')
 set.seed(100)
 
 # Cell barcode ranking
