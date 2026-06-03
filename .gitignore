@@ -12,3 +12,11 @@ out/
 nb_tumorUMAP/gseapy_gsea/*
 cache/root-datos-maestria-netopaas-Zuani2024-outputEmptyDrops-P15_T2--matrix.h5ad
 cache/**
+
+# Nextflow runtime state and logs
+.nextflow/
+.nextflow.log*
+work/
+**/.nextflow/
+**/.nextflow.log*
+**/work/
