@@ -1,0 +1,5 @@
+interacting_pair,partner_a,partner_b,gene_a,gene_b,directionality,classification,interacting_cells,significant_mean
+APLN_APLNR,simple:Q9ULZ1,simple:P35414,APLN,APLNR,Ligand-Receptor,Signaling by Apelin,Tumor Cycling_Epi|Tumor Cycling_Epi,0.507
+RARRES2_CMKLR1,simple:Q99969,simple:Q99788,RARRES2,CMKLR1,Ligand-Receptor,Signaling by Retinoid acid,Tumor Cycling_Epi|Tumor Cycling_Epi,0.509
+RARRES2_CCRL2,simple:Q99969,simple:O00421,RARRES2,CCRL2,Ligand-Receptor,Signaling by Retinoid acid,Tumor Cycling_Epi|Tumor Cycling_Epi,0.504
+NGF_NGFR,simple:P01138,simple:P08138,NGF,NGFR,Ligand-Receptor,Signaling by Beta-nerve growth factor,Tumor Cycling_Epi|Tumor Cycling_Epi,0.527

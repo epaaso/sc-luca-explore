@@ -437,46 +437,37 @@ if __name__ == "__main__":
     import h5py
     from anndata.experimental import read_elem
 
-    wilcox_path = "/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE"
-    time = 'III-IV'
-    average_now = False
-    output_average = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
-
-    if average_now:
-        # Get atlas dsets
-        file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
-        obs_matrix = read_elem(file_obj['obs'])
-        dss = list(obs_matrix['dataset'].unique())
-        file_obj.close()
-
-        # List of de_region files from various datasets (adjust these paths as needed)
-        dss.extend(['Trinks_Bishoff_2021_NSCLC', 'Deng_Liu_LUAD_2024', 'Zuani_2024_NSCLC', 'Hu_Zhang_2023_NSCLC',
-                    'extended'
-                    ])
-        region_files = [ os.path.join(wilcox_path,
-                        f"{time}_{ds}_tumorall.npy")
-            for ds in dss
-        ]
-
-        ### Convert some de_pair to AUC summary #######
-        de_regions = pair_to_auc_summary(f'{time}', 'extended', wilcox_path, load_summary=True)
-
+    wilcox_path = "/home/epaaso/REPOS/sc-luca-explore/nb_DE_wilcox/wilcoxon_DE"
+    
+    for time in ['I-II', 'III-IV']:
+        output_average = os.path.join(wilcox_path, f"{time}_averaged_tumorall.npy")
+        print(f"Processing {time}")
+        
+        dss = []
+        for f in os.listdir(wilcox_path):
+            if f.startswith(f"{time}_") and f.endswith("_summary_tumorall.npy"):
+                ds = f.replace(f"{time}_", "").replace("_summary_tumorall.npy", "")
+                dss.append(ds)
+                
+        print(f"Found datasets for {time}: {dss}")
+        
+        if not dss:
+            print(f"Skipping {time} because no datasets were found.")
+            continue
+            
+        region_files = [ os.path.join(wilcox_path, f"{time}_{ds}_tumorall.npy") for ds in dss ]
+        
+        # We don't need 'extended' since we process all available summaries
+        
         ##### Aggregate all summary files to a count matrix for cellphonedb ###
         count_matrix = aggregate_count_matrix(region_files)
-
         count_matrix.to_csv(os.path.join(wilcox_path, f"auc_count_cellphonedb_{time}.csv"))
         
-        # # Compute the averaged de_region object
-        # averaged_de_region = average_de_regions(region_files)
-        # np.save(output_average, averaged_de_region, allow_pickle=True)
-        # logging.info(f"Averaged de_region saved to {output_average}")
-    else:
-        averaged_de_region = np.load(output_average, allow_pickle=True).item()
-        logging.info(f"Averaged de_region loaded from {output_average}")
-    
-    # Plot marker genes using the new averaged de_region
-    # marker_plot_file = os.path.join(os.path.dirname(output_average), f"{time}_averaged_markergenes.png")
-    # plot_marker_genes(averaged_de_region, marker_plot_file)
-    
-    # Plot a GSEA heatmap based on the averaged de_region scores
-    # plot_gsea_heatmap(averaged_de_region)
+        # Compute the averaged de_region object
+        averaged_de_region = average_de_regions(region_files)
+        np.save(output_average, averaged_de_region, allow_pickle=True)
+        logging.info(f"Averaged de_region saved to {output_average}")
+        
+        # Plot marker genes using the new averaged de_region
+        marker_plot_file = os.path.join(os.path.dirname(output_average), f"{time}_averaged_markergenes.png")
+        plot_marker_genes(averaged_de_region, marker_plot_file)

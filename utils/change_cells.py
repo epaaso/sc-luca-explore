@@ -42,6 +42,7 @@ def rename_cells(
     auc_r: bool = True,
     matrix_path: Optional[str] = None,
     matrix_r: bool = False,
+    auc_path: Optional[str] = None,
 ):
     """
     Renames cell references in both the network text file and in the CSV file.
@@ -131,23 +132,31 @@ def rename_cells(
 
 
 
-# Example usage: call the rename function with our paths and dictionary
 if __name__ == "__main__":
-    time = 'I-II_leidenwu'
-    time_solo = time.split('_')[0]
-    rename_dict = rename_dict_early if 'I-II' in time else rename_dict_late
+    for time in ['I-II_leidenwu', 'III-IV_leidenwu']:
+        print(f"Renaming for {time}...")
+        time_solo = time.split('_')[0]
+        rename_dict = rename_dict_early if 'I-II' in time else rename_dict_late
 
-    group_path = f'metadata/groups_{time}'
-    net_path = f'outputARACNE/net{time}'
-    auc_path = f'nb_DE_wilcox/wilcoxon_DE/auc_count_cellphonedb_{time_solo}'
-    matrix_path = f'outputARACNE/matrix{time}'
+        group_path = f'metadata/groups_{time}'
+        net_path = f'outputARACNE/net_{time}'
+        auc_path = f'nb_DE_wilcox/wilcoxon_DE/auc_count_cellphonedb_{time_solo}'
+        matrix_path = f'outputARACNE/matrix_{time}'
 
-    rename_cells(
-        group_path,
-        net_path,
-        rename_dict,
-        group_r=True,
-        net_r=True,
-        matrix_path=matrix_path,
-        matrix_r=True,
-    )
+        # Ensure files exist before calling rename_cells to avoid crashes
+        auc_r = os.path.exists(f'{auc_path}.csv')
+        net_r = os.path.exists(f'{net_path}.txt')
+        group_r = os.path.exists(f'{group_path}.csv')
+        matrix_r = os.path.exists(f'{matrix_path}.txt')
+
+        rename_cells(
+            group_path,
+            net_path,
+            rename_dict,
+            group_r=group_r,
+            net_r=net_r,
+            matrix_path=matrix_path,
+            matrix_r=matrix_r,
+            auc_r=auc_r,
+            auc_path=auc_path
+        )

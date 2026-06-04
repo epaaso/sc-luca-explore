@@ -26,10 +26,10 @@ if not local:
     import modal
     app = modal.App("DE - wilcox")
 
-local_dir = '/root/datos/maestria/netopaas/luca_explore/surgeries/'
+local_dir = '/datos/migccl/neto_maestria/luca_explore/surgeries/'
 # Define the remote path where the data will be available in the remote function
 backup_dir = "/data" if not local else local_dir
-w_folder = '/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
+w_folder = '/home/epaaso/REPOS/sc-luca-explore/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
 
 if not local:
     scvi_image = modal.Image.from_registry(
@@ -320,7 +320,7 @@ class CommonConfig:
     name: str = "Zuani"
     time: str = "I-II"
     backup_dir = "/data" if not local else local_dir
-    w_folder = '/root/host_home/luca/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
+    w_folder = '/home/epaaso/REPOS/sc-luca-explore/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
     gene_mapping: Union[str, Dict, None] = None
 
 @dataclass
@@ -636,7 +636,7 @@ class DEProcessor:
 
         return de_summary
 
-    def compute_regions(self, adata: Optional[ad.AnnData], de_summary: dict, region_file: str=None) -> dict:
+    def compute_regions(self, adata: Optional[ad.AnnData], de_summary: dict, valid_types: List[str], region_file: str=None) -> dict:
         logging.info("Computing region-level differential expression")
         if not region_file:
             region_file = os.path.join(
@@ -654,57 +654,44 @@ class DEProcessor:
                     for ct, gdict in de_summary.items()
                 }
             else:
-                counts = {}
+                regioner_sorted = {}
                 if adata is None:
                     logging.warning("No adata provided, using a very dirty AUC approximation")
-                for ct in de_summary.keys():
-                    logging.info("Computing AUC for %s", ct)
-                    if adata is not None:
-                        n1 = np.sum(adata.obs["type_tissue"] == ct)
-                        # TODO this is wrong! n2 should be of the size of the other cell type
-                        n2 = np.sum(adata.obs["type_tissue"] != ct)
-                        counts[ct] = (n1, n2)
-                        # Replace np.mean(vals) with the mean of AUCs for each z-value in vals:
-                        # For each z in vals, compute:
-                        #   auc_z = ( z * sqrt(n1*n2*(n1+n2+1)/12) + (n1*n2)/2 ) / (n1*n2)
-                        # Then take the mean of all auc_z for that gene.
-                        regioner_sorted = {
-                            ct: sorted(
+                    for ct, gdict in de_summary.items():
+                        regioner_sorted[ct] = sorted(
+                            (
                                 (
-                                    (
-                                        gene,
-                                        np.mean([
-                                            (z * np.sqrt(n1 * n2 * (n1 + n2 + 1) / 12) + (n1 * n2) / 2) / (n1 * n2)
-                                            for z in vals
-                                        ])
-                                    )
-                                    for gene, vals in gdict.items()
-                                ),
-                                key=lambda x: x[1],
-                                reverse=True
-                            )
-                            for ct, gdict in de_summary.items()
-                            for n1, n2 in [counts[ct]]
-                        }
-                    else:
-                        # If we don't have n1 and n2, we do something very dirty and try to leave the scores between 0 and 1
-                        # with 0.5 meaning no effect like with AUC. For that we do this transform:
-                        # auc_z = (((z / max_val) * 0.9) + 1) / 2
-                        regioner_sorted = {
-                            ct: sorted(
+                                    gene,
+                                    np.mean([(((z / abs_max) * 0.9) + 1) / 2 for z in vals])
+                                )
+                                for gene, vals in gdict.items()
+                                for abs_max in [max(abs(min(vals)), abs(max(vals))) or 1.0]
+                            ),
+                            key=lambda x: x[1],
+                            reverse=True
+                        )
+                else:
+                    counts = {g: np.sum(adata.obs["type_tissue"] == g) for g in valid_types}
+                    for ct, gdict in de_summary.items():
+                        logging.info("Computing AUC for %s", ct)
+                        n1 = counts[ct]
+                        groups2 = [g for g in valid_types if g != ct]
+                        n2s = [counts[g2] for g2 in groups2]
+                        
+                        regioner_sorted[ct] = sorted(
+                            (
                                 (
-                                    (
-                                        gene,
-                                        np.mean([(((z / abs_max) * 0.9) + 1) / 2 for z in vals])
-                                    )
-                                    for gene, vals in gdict.items()
-                                    for abs_max in [max(abs(min(vals)), abs(max(vals)))]
-                                ),
-                                key=lambda x: x[1],
-                                reverse=True
-                            )
-                            for ct, gdict in de_summary.items()
-                        }
+                                    gene,
+                                    np.mean([
+                                        (z * np.sqrt(n1 * n2 * (n1 + n2 + 1) / 12) + (n1 * n2) / 2) / (n1 * n2)
+                                        for z, n2 in zip(vals, n2s)
+                                    ])
+                                )
+                                for gene, vals in gdict.items()
+                            ),
+                            key=lambda x: x[1],
+                            reverse=True
+                        )
                 
         
             cell_types = list(regioner_sorted.keys())
@@ -856,7 +843,7 @@ class DEPipeline:
 
         de_pair = self.processor.compute_pairwise(adata, valid_types, tumor_types)
         de_summary = self.processor.compute_summary(adata, de_pair, valid_types, tumor_types)
-        de_region = self.processor.compute_regions(adata, de_summary)
+        de_region = self.processor.compute_regions(adata, de_summary, valid_types)
 
         self.visualizer.plot_marker_genes(de_region, valid_types)
         self.visualizer.plot_gsea(de_region, valid_types)
@@ -934,7 +921,7 @@ else:
 if __name__ == '__main__':
     print('Running function locally')
 
-    common_kwargs = {"load_pair": True, "load_summary": True, "load_regions": False,
+    common_kwargs = {"load_pair": False, "load_summary": False, "load_regions": False,
                 "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
                 "n_jobs_inner": 8, "num_processes": 8, "parallel_pair": False, "parallel_summary": True,
                 "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "regions_AUC": True,
@@ -978,34 +965,10 @@ if __name__ == '__main__':
     # region Altas annots
     
     # region Preamble
-    no_adata = True
-    if not no_adata:
-        adata = sc.read_h5ad("/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad")
-        dss = adata.obs["dataset"].unique()
-        for ds in dss:
-            if os.path.exists(f'{backup_dir}/filtered_{ds}.h5ad'):
-                continue
-            subset = adata[adata.obs["dataset"] == ds].copy()
-            subset.write(f'{backup_dir}/filtered_{ds}.h5ad')
-    else:
-        import h5py
-        from anndata.experimental import read_elem
-
-        file_obj = h5py.File('/root/datos/maestria/netopaas/luca/data/atlas/extended_tumor_hvg.h5ad', 'r')
-        
-        obs_matrix = read_elem(file_obj['obs'])
-        dss = obs_matrix['dataset'].unique()
-        file_obj.close()
-            
-
-    dss = [ds for ds in dss if 'Wu' in ds]
-    try:
-        del adata
-        del subset
-        import gc
-        gc.collect()
-    except:
-        pass
+    import os
+    dss = [fname.replace('filtered_', '').replace('.h5ad', '') for fname in os.listdir(backup_dir) if fname.startswith('filtered_') and fname.endswith('.h5ad')]
+    import gc
+    gc.collect()
     # endregion
     # region Sequential
     for i, ds in enumerate(dss):
@@ -1016,7 +979,7 @@ if __name__ == '__main__':
             # })
 
             get_de(**{
-                "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Subcluster_wu/Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
+                "ext_name": ds, "name": '-'.join(ds.split('_')[0:4:3]), "pred_name": 'Atlas', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "uicc_stage",
                 "log_layer": "do_log1p", **common_kwargs, "obs_has_name": False, "gene_feature": "feature_name"
             })
         except Exception as e:
@@ -1058,7 +1021,7 @@ def main():
                            load_pair = False, load_summary = False, load_regions = False,
                             load_gsea = False, load_gsea_heatmap = False,
                             tumor_is_int=False,
-                            pred_name='Subcluster_wu/Zuani', n_jobs_inner=30, avoid_ensembl=True,
+                            pred_name='Zuani', n_jobs_inner=30, avoid_ensembl=True,
                               obs_has_name=True, parallel_summary=True, num_processes=30, obs_unique=True)
     
     # future2 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='III-IV',
