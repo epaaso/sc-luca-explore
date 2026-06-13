@@ -1,228 +1,112 @@
-# Coabundance networks of NSCLC lung tumor cells from scRNAseq data
-
-The main objective of this project is to perform an ecological analysis of the cell types in NSCLC lung tumor tissues from scRNA-seq data, in both early and late tumor stages.
-
-The chosen methodology is to annotate cell types with the help of a newly trained reference atlas. For this, we use the [scvi](https://github.com/scverse/scvi-tools) framework. We base our work on the study by [Salcher, Sturm, Horvath et al. 2022](https://pubmed.ncbi.nlm.nih.gov/36368318/), where they gathered and standardized most of the data. 
-
-Additionally, we expanded the atlas with four more datasets, optimized the hyperparameters of our deep learning model, and trained it to also predict tumor cell types. The prediction was better than with the most used method [InferCNV](https://github.com/broadinstitute/infercnv).
-
-Subsequently, we obtained coabundance metrics. We chose the mutual inference (MI) metric, as it captures non-linear correlations in the data, and the methodology in the [ARACNE-AP](https://github.com/califano-lab/ARACNe-AP) package ensures a smaller possibility of spurious correlations.
-
-After that, we obtained various visualizations of the networks and extracted mesoscopic and global properties of the graphs.
-
-The workflow for getting from the raw AnnData files to the coabundance graphs and their analysis can be seen in the figure below:
-
-![ScRNAseq Workflow](Workflow_dark.png "scRNA-seq Workflow")
-
-
-## Running
-
-To see the order for running the workflow, got to the **Folder Structure -> Notebooks and scripts** section. There is an explanation of the notebooks in the order they sould be run
-
-We have designed a Docker image that has all the necessary libraries. It is, however, very large because it includes all the R and Python packages, including those for ML. It is around 15GB without InferCNV and Ikarus. So if you just want to run a notebook separately, look at the versions of the packages in the Dokcefile.
-
-To run the notebook, you should run the container with this notebook repository mounted as a volume. In the following command, `$HOME/2021-SC-HCA-LATAM/CONTAINER` is the path where your notebooks are, and the other path is where the large data files would be stored.
-
-```bash
-docker run --interactive --runtime=nvidia --gpus all --tty --name comp_onco --shm-size=200g\
- --volume $HOME/2021-SC-HCA-LATAM/CONTAINER:/root/host_home --volume /datos:/root/datos --workdir /root/host_home/ netopaas/comp-onco:annots /bin/bash
-```
-`shm-size` will alow you to run multiple workers in scvi.
-You must install the apt package `docker-nvidia` for the GPU flags to work and, of course, have a working CUDA installation.
-
-### Jupyter lab
-
-We publish some ports to use the Jupyter server.
-
-After that, just run the command `jl` inside the container, and a Jupyter Lab server will be launched.
-
-To acces it from a local computer you can do some port forwarding with something akin to this command:
-
-```bash
-ssh -p 5265 -N -f -L 5432:localhost:8888 sefirot.inmegen.gob.mx
-```
-
-Where 5432 is the localport where you will be running the server. 8888 is the port in the remote machine where juptyer server is being forwarded to by the container.
-And -p 5265 is the por tof the remote host. You have to have and ssh-agent with your user credentials for this to work. We recommend it as it frees you of the hassle
-of inputting a password everytime.
-
-### VS Code
-
-You can also skip the port forwarding and work in a more integrated environment, by using the remote explorer and dev containers feature of Vscode.
-
-Just add a new host for the remote host via shh and open a new Vscode window inside that host. Vscode will automatically install all the necessary packages to be able to interact with the host.
-After that go to the Dev Containers tab in the Remote Explorer tab and choose the container that you ran as per the instructions above.
-
-When opening a notebook, we recommend attaching to a running jupyter server, which is launched with the `jl` command in a shell in the container, like above.
-This avoids losing the running kernel if you close the Vscode window you are working on.
-
-A problem with Vscode is that it does not offer a way to shutdown notebooks in an external jupyter server, you'll have to do it manually with 
-a notebook to delete not recently used kernels in `./utils/cull-kernels.ipynb`. It uses api calls.
-
-## Folder structure
-
-The workflow is spread across various notebooks, where one can see the figures generated in the proccess and some short explanations. 
-We plan to automatize the process with Nextflow, like they do in the repo of the [scLUCA](https://github.com/icbi-lab/luca) project.
-
-But for now all the necessary steps are contained in the notebooks and scripts, though a little scrambled. The notebooks are explained in the order in which they should be run.
-
-### Notebooks and scripts
-
-- *get_data.ipynb*: Contains the code for exploring and downloading all possible datasets to extend the scLUCA atlas. It was important to have UMI counts and tumor stage annotation.
-
-- *nb_filter*: Filters the cells and genes by predefined quality control metrics.
-
-- *nb_refAtlas*: Contains the notebook `vae_raytune` for running and inspecting various experiments of hyperparameter exploration. The notebook `scANVImodel_WuBatch` has the reasoning and training of the actual reference atlas, used everywhere else.
-
-- *nb_annotRefatlas*: Annotates tissue from a new study by doing surgery and has integrated quality plots. Also annotates broad tumor cell types. Includes a notebook for annotation with label transfer via neighbors, but it had worse outcomes (`labelTransfer`). There is also a notebook that transfers the newly created clusters to another dataset (`extendPreds_{dataset}.ipynb`).
-
-- *nb_subCluster*: It includes `Tumor_subcluster.ipynb` that redefines the atlas with new unsupervised tumor cells. Some attempts to accelerate this with `faiss` (GPU accel) are in the python scripts starting with faiss.
-  - `HCL.ipynb` is an attempt to do a hierarchical statisitcally siginifcant approach tu clustering. But we abandoned it because it depends on the order of addition of the dataset.
-
-- *grouping_MI.ipynb*: It contains the crucial parts of gathering all annotations, grouping them by samples and cell type, running the coabundance analysis by extracting MI.
-
-- *nb_graphAnalysis*:
-  - *graph_param.ipynb* Parametrized notebook for doing bipartite analysis of our networks. There isnt much to analyze because there arent that many varied coabundances between immune and tumoral.
-  - *graph_layouts.ipynb* Leiden, Newman, n-clique, interactive, and functionally enriched visualizations of the networks for different clusterings and times.
-  - *pearson_compare.ipynb* Adds pearson correlation information to the existing MI graph and analyzes pairs of vars that are not pearson correlated and their profile. Also for the negative ones.
-  - *sbm_cluster.ipynb* Does stochastic block modelling (thanks to the impressive package `graph-tools`) of the network and outputs the most beautifual circos plot layouts of the graphs. Also very informative.
-  - *abund_clusters.ipynb* Leiden clustering of the abundances matrix, with lots of informative graphics of them like Degree centrality plots, Graphs, Snakey plots, Boxplots and such
-    The dependecies of `graph-tools` are a hassle, so we recommend running it in their container. Instructions are in the nb.
-  - *graph_param.ipynb* Extract more mesoscopic features of the graph, like redundancy and degree plots...
-  - *circos.ipynb*  Circos plots with igraph, not neccesary with the help of `graph-tools` for cells types. But for cell categories the inter categories coabundances plots are here.
-  - *cellphone.ipynb* Cellphone circos plots and dot plots for late, early and their ecotypes
-
-- *nb_DE_wilcox*: 
-  - *<dset>_<region>.ipynb* Extracts marker genes of clusters from existing cell annotations with the Wilcox method. 
-  It also enriches for Hallmark gene ontologies. Its a bit bit convoluted and doesnt consider batch effects,
-  but only because scanpy doenst consider abundance of cell types.
-  - *modal_DE.py* script to run the Wilcox marker gene extraction in modal.
-    It generalizes well for all datasets, but one has to upload the files to the volume manually for now.
-    Additionally it has some flags to run it locally. We prefer this to the notebooks.. that are only left there for the figures and explanations of older runs.
-  - *test_pipeline.py* are some basic tests for modal_DE.py
-  - *aggregate_markers.py* aggregate all dsets marker genes, and plot the highest. Also plot GSEA NES scores for cancer hallmarks. 
-    Also has a function to convert all marker genes objects to a count matrix composed of AUC of the genes, useful for CellphoneDB without statistical analysis (Method 1).
-  - *DE_incomplete.ipynb* is incomplete and attempts to do pseudo-bulk differential expression with MAST.
-
-### Optional (or deprecated) Notebooks and scripts
-
-- *nb_DE_SCT*: Extracts marker genes of clusters from existing cell annotations with the GLM method `SCTransform v2`.
-  It also corrects for batch effects per sample and enriches for Hallmark gene ontologies. 
-  This method has a parameter estimation method that corrects for lowly expressed genes and is much faster
-  than the `lvm_DE` method, which takes advantage of our dimensional reduction VAEs with scANVI.
-  The `test_de.py` script is to be run in the lambda function service Modal,
-  as it requires a lot of GPU RAM and takes around 35 minutes for 3 samples. It uses the `lvm_DE` method mentioned above.
-
-- *nb_ikarus*: Runs the ikarus prediction on every dataset from `ikaurs_fabric.py`. A prediction that uses logistic regression and network projection to predict tumor cells.
-
-- *nb_infercnv*: Runs InferCNV on every dataset from `infercnv_fabric.py`. This infers from transcripts, places in the chromosomes where there should be copy number variations, hence cancer cells.
-
-- *nb_tumorUMAP*: Notebook to check the tumor predictions. It has the DE part integrated. `Tumor_Annot.ipynb` contains explanations of the methods used.
-
-- *nb_annot*: Annotates tissue from every study with Lung Atlas reference maps. Only healthy cells.
-
-### Misc
-
-- *outputARACNE*: Contains all the files for the generation and output of the networks by ARACNE, including functional enrichment.
-- *metadata*: Contains information about the studies used `dsets.csv` and data about the number of cells per sample `groups_**`. The file `cell_mappings.json` centralizes shared dictionaries such as therapy labels, category colors, and cell-type groupings used across notebooks.
-- *utils*: Contains custom plotting and analysis functions.
-  - *abundance.py*: Functions for visualizing the abundance of cell types, subgrouping into ecotypes and plotting some ecotype networks. Is used a lot by `abund_clusters.ipynb`.
-  - *change_cells.py*: Contains the renaming of the cells defined in subclustering by functional and marker genes information
-    Renames the netowrk, the groups and the count_matrix files
-  - *postprocess_cluster_networks.py*: Recreates the Pearson-vs-MI analysis from the notebook for every cluster, annotates ARACNe networks with Pearson stats, exports nonlinear edge tables, and can render the trio of scatter/heatmap plots used to inspect MI-only pairs.
-  - *run_aracne_by_cluster.py*: Prepares per-cluster count matrices and transcription factor lists, runs ARACNe-AP with the chosen bootstrap parameters, and writes the consolidated mutual-information networks ready for downstream annotation.
-  - *circos_cluster_plots.py*: Loads the annotated cluster networks, fits stochastic block models with graph-tool, and regenerates the circos-style blockmodel visualizations along with cached block states.
-  - *plot_cell_pair.py*: Plots scatter plots of cell pairs correlations for a specific cluster/stage, comparing linear vs log scales. Option `--no-plus1` allows plotting raw counts. Output filename is auto-generated if not provided.
-
-### Data Dirs
-
-#### Neccesary input
-
-The only data neccesary to run the workflow from scratch are:
-- `/root/datos/maestria/netopaas/luca/data/atlas/extended.h5ad` Which can be gotten from https://cellxgene.cziscience.com/collections/edb893ee-4066-4128-9aec-5eb2b03f8287
-- `/root/datos/maestria/netopaas/<ds_suffix><year>/` The datasets downloaded in the noteboook `get_data.ipynb`. We tried lots but stayed with only Bishoff, Hu, Zuani and Deng.
-- Also the metadata in `metadata/dsets.csv` describes all the datasets and one can check the inclusion criteria for the analysis in there.
-
-#### All dirs
-
-- */root/datos/maestria/netopaas/luca/data/atlas/*  Has the LUCA atlas files from Salcher et. al. It has pretty extensive metadata.
-  We have saved some subsets, the most import being 'extended_tumor_hvg.h5ad' that uses the extended atlas, but only has tumor samples and highly var genes.
-
-- */root/datos/maestria/netopaas/<ds_suffix><year>/*  Folder where all the files necessary to download the dataset to an acceptable h5ad are.
-
-- */root/datos/maestria/netopaas/lung_scRNA/LUCA_model/*  Contains the models trained by us, but also the ones from LUCA.
-  In particular '/hvg_integrated_scvi_scanvi_tumor_model_b128_lay4_h1024_raydefault_epocs300-300/' is the one with the highest accuracy, 
-  trained in 'nb_ref_Atlas/scANVImodel.ipynb'
-
-- */root/datos/maestria/netopaas/luca_explore/surgeries/* Has most of the checkpoints in our workflow.
-
-  - *filtered_<ds_suffix>.h5ad* Is the adata of the dataset after QC filtering.
-
-  - *query_<ds_suffix>.h5ad* Is the adata of the dataset in the necessary fromat to be annotated by the model.
-
-  - *<dataset_suffix>/* Folder that contains the trained surgery model in 'model.pt'. Most of them also have an adata of the latent vars in `query_latent.h5ad`.
-    Sometimes a csv to convert from gen symbols to ensembl in `<ds_suffix>_ensembl.csv`
-
-  - *<ds_suffix>_predicted.csv* The cell annotations with just our Tumor LUCA model. It also has all the entries of the obs matrix, so stage and such.
-
-  - *Subcluster/*
-    - *query_latent_<tumor>_<time>.h5ad* The merged embedding of all the annotated datasets for subclustering. SUbset to tumor and respective time stages.
-    - *atlas_<time>_umap.csv* The umap coords calculated online in modal.
-    - *atlas_<time>_uparams.json* The umap coords params calculated online in modal. Also params for the leiden algo.
-    - *atlas_<time>_leiden.csv* The subclustering assignment of cells.
-    - *mapping_<time>_leiden.json* The broad cluster annotation by chekcing contingency with previous cluster names.
-  
-  - *<ds_suffix>_predicted_leiden.csv* The cell anotations with tumor subclustering.
-
-  - *Group_checks/* Folder where the checkpoints for concatenating the groups are saved.
-
-- *<notebooks_folder>/nb_DE_wilcox* We save the marker genes and heatmap plots and its corresponding data here.
-  - *wilcoxon_DE/<time>_<dset>_[tumor]pair.npy* The DE of pairs of cells for every gene. The tumor refers means that it is subsetted to certain cells. Pretty big files
-  - *wilcoxon_DE/<time>_<dset>_<regioncompare>.npy* The DE of cells in the region against all other cells, which is also denominated in <regioncompare>.
-    This is what is used for marker genes, and subsequent GSEA.
-  - *wilcoxon_DE/markergenes_<dset>_<regioncompare>_<time>.png* The plot of the 20 highest DE genes per cell type in region.
-  - *gseapy_gsea/heatmap_<dset>_<regioncompare>_<time>.[csv][png]* Table for and heatmap plot of the enrichment of cancer hallmarks for every cell type in region.
-
-
-
-## Docker images
-
-We have kept some varied docker images because of compatiblity issues. They are orderd from newest to oldest.
-
-- *netopaas/comp-onco:annots* 14.6G The image below but with BioMaRt. Was tested to be able to annotate new datasets with scvi.
-- *netopaas/comp-onco:sctransform* 16G Added support for sctransform, our only candidate for batch effect correction a the expression level. Does not have biomaRt. Does not have pandas==1.5.3
-- *netopaas/comp_onco:r4* 14.1G   Newer R version to be able to convert from and to SeuratObject and Anndata. Does not have biomart. Does not have pandas==1.5.3
-- *netopaas/comp-onco:raytune*  13.6G  Some fixes to be able to run the hyperparameter optimization tool raytune. This one does not have cuda aware jax.
-- *netopaas/scarches:raytune* 19.9 G The same but with more R packages than comp-onco. This one has jax.
-- *netopaas/scarches:droplet*   85G This one has infercnv, ikarus and scFusion that take a lot of space. It wont be able to run raytune and sctransform and others.
-
-- *tiagopeixoto/graph-tool:latest*  3.18G  For creating our beautiful circos graphs. The dependencies are hell so we have them in a separate container.
-- *netopaas/faiss:cugraph-24-12*  For doing faiss nearest neghbours, leiden and umap much faster and using Modal. It has been a nightmare to keep the dependecies correct in this one.
-
-
-## Troubleshooting
-
-### Jupyter Kernels
-Due to the long training and annealing times, Jupyter Lab sometimes cannot connect. Use this to get a console to the kernel:
-```bash
-jupyter console --existing /root/.local/share/jupyter/runtime/kernel-9ff04919-e8c2-4ecf-92ce-c66b988720e5.json
-```
-For this you need to have `pip install jupyter-console` installed.
-
-This could be easier in a newer version of Jupyter Lab. To locate the corresponding JSON file, you can use `htop` with the option to not display user branches and see the memory it is using.
-
-### CUDA
-
-It is important to install the Docker NVIDIA package to transfer your CUDA installation to the containers.
-
-### Git
-
-If you keep your repository inside the container via volumes, the user might change. We recommend configuring the SSH keys inside the container. These are the steps:
-
-```bash
-git config --global user.email ernesto.paas@ciencias.unam.mx
-git config --global user.name "Ernesto Paas"
-```
-
-We suggest saving a key pair that can be generated with the command `ssh-keygen -t ed25519 -C "your_email@example.com"` in the Docker volume (folder) that contains the repository, and then copying them to `~/.ssh/id_ed25519` etc., to have SSH authentication with GitHub. Remember to have the SSH agent activated `eval "$(ssh-agent -s)"` and the key added `ssh-add ~/.ssh/id_ed25519`. Ensure that the key is read-only.
-
+# LUCA Single-Cell Exploration
+
+Exploratory notebooks and reproducible scripts for the LUCA single-cell
+pipeline. Run commands from the repository root. Repository paths are defined
+in `shared/paths.py`; full marker and CellPhoneDB production runs remain on
+external storage.
+
+## Canonical Workflow
+
+1. **Data acquisition: `nb_dataAcquisition`**
+   - Entrypoints: `get_data.ipynb`, `run_EmptyDrop.R`, `run_EmptyDrop_batch.R`
+   - Prerequisites: dataset manifests and source download credentials
+   - Produces: downloaded/raw data and EmptyDrops matrices on external storage
+   - Command: `jupyter lab nb_dataAcquisition/get_data.ipynb`
+
+2. **Quality filtering: `nb_filters`**
+   - Entrypoint: `filter_param.ipynb` and dataset notebooks
+   - Prerequisite: acquired count matrices
+   - Produces: filtered AnnData files on external storage
+   - Command: `jupyter lab nb_filters/filter_param.ipynb`
+
+3. **Reference atlas training: `nb_refAtlas`**
+   - Entrypoint: `scANVImodel.ipynb`
+   - Prerequisite: filtered reference datasets
+   - Produces: trained atlas model on external storage
+   - Command: `jupyter lab nb_refAtlas/scANVImodel.ipynb`
+
+4. **Dataset annotation: `nb_annotRefatlas`**
+   - Entrypoint: `labelTransfer.ipynb` and dataset notebooks
+   - Prerequisites: filtered datasets and reference atlas
+   - Produces: transferred cell-type annotations on external storage
+   - Command: `jupyter lab nb_annotRefatlas/labelTransfer.ipynb`
+
+5. **Tumor subclustering: `nb_subCluster`**
+   - Entrypoint: `Tumor_subcluster.ipynb`
+   - Prerequisite: annotated tumor cells
+   - Produces: tumor subcluster predictions on external storage
+   - Command: `jupyter lab nb_subCluster/Tumor_subcluster.ipynb`
+
+6. **Global coabundance and ARACNe generation: `nb_graphGeneration`**
+   - Entrypoint: `grouping_MI.ipynb`
+   - Prerequisite: cell annotations and sample metadata
+   - Produces: `results/graph_generation/global/`
+   - Command: `jupyter lab nb_graphGeneration/grouping_MI.ipynb`
+
+7. **Patient/ecotype clustering: `nb_ecotypeClustering`**
+   - Entrypoint: `abund_clusters.ipynb`
+   - Prerequisite: global coabundance matrices
+   - Produces: `results/ecotype_clustering/`
+   - Command: `jupyter lab nb_ecotypeClustering/abund_clusters.ipynb`
+
+8. **Per-cluster ARACNe and Pearson post-processing: `nb_graphGeneration`**
+   - Entrypoints: `run_aracne_by_cluster.py`, `postprocess_cluster_networks.py`
+   - Prerequisites: global matrices and ecotype membership CSVs
+   - Produces: `results/graph_generation/cluster_runs/`
+   - Commands:
+     ```bash
+     python nb_graphGeneration/run_aracne_by_cluster.py --dry-run
+     python nb_graphGeneration/run_aracne_by_cluster.py
+     python nb_graphGeneration/postprocess_cluster_networks.py
+     ```
+
+9. **Graph layouts and downstream analysis: `nb_graphAnalysis`**
+   - Entrypoints: `graph_layouts.ipynb`, `sbm_cluster.ipynb`, `circos.ipynb`
+   - Prerequisite: global and per-cluster graph outputs
+   - Produces: `results/graph_analysis/`
+   - Command: `jupyter lab nb_graphAnalysis/graph_layouts.ipynb`
+
+10. **Cluster-specific marker extraction: `nb_DE_wilcox`**
+    - Entrypoint: `run_marker_extraction.py`
+    - Prerequisites: annotated AnnData files and ecotype membership CSVs
+    - Produces: full external marker runs; compact summaries in
+      `results/marker_genes/`
+    - Commands:
+      ```bash
+      python nb_DE_wilcox/run_marker_extraction.py --dry-run
+      python nb_DE_wilcox/run_marker_extraction.py \
+        --contrast normal-vs-normal --contrast tumor-vs-all
+      ```
+
+11. **Dataset-consensus CellPhoneDB: `nb_cellphoneDB`**
+    - Entrypoint: `run_cellphone_dataset_consensus.py`
+    - Prerequisites: external marker runs, cluster graphs, and memberships
+    - Produces: full external CellPhoneDB runs; compact summaries in
+      `results/cellphonedb/`
+    - Commands:
+      ```bash
+      python nb_cellphoneDB/run_cellphone_dataset_consensus.py --dry-run
+      python nb_cellphoneDB/run_cellphone_dataset_consensus.py all
+      ```
+
+## Shared Code And Results
+
+- `shared/paths.py`: canonical repository and external production paths
+- `shared/functions.py`: helpers used across workflow phases
+- `tools/cull-kernels.ipynb`: operational kernel cleanup
+- `results/`: all tracked generated results
+- `metadata/`: intentional static metadata and mappings
+
+## Optional And Deprecated Workflows
+
+- `nb_infercnv/`: optional InferCNV analysis
+- `nb_ikarus/`: optional Ikarus analysis
+- `nb_DE_SCT/`: optional SCT differential expression; tracked output is in
+  `results/optional/de_sct/`
+- `nb_tumorUMAP/`: optional tumor UMAP checks
+- `nb_annot/`: older annotation notebooks
+- Deprecated marker and global/AUC-as-expression CellPhoneDB outputs remain
+  archived and are not restored.
+
+The immutable June 12, 2026 marker/LR archive is documented in
+`results/README.md`.

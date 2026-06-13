@@ -9,7 +9,7 @@ from unittest.mock import patch, MagicMock
 
 # Import your classes and configs from your main module:
 from nb_DE_wilcox.modal_DE import (
-    DEConfig, DataLoader, DEProcessor, DEVisualizer
+    DEConfig, DataLoader, DEProcessor, DEVisualizer, rank_genes_groups_pairwise
 )
 
 # --------------------------------------------------------------------------
@@ -17,7 +17,7 @@ from nb_DE_wilcox.modal_DE import (
 # --------------------------------------------------------------------------
 
 @pytest.fixture
-def config():
+def config(tmp_path):
     """
     Returns a DEConfig object pre-populated with the parameter overrides
     you specified:
@@ -35,6 +35,8 @@ def config():
     cfg.common.name = "Bishoff"
     cfg.dataloader.pred_name = "Subcluster_wu/Bishoff"
     cfg.common.time = "III-IV"
+    cfg.common.w_folder = str(tmp_path / "marker-output")
+    os.makedirs(cfg.common.w_folder)
     cfg.dataloader.skip_stages = True
     cfg.dataloader.cell_key = "cell_type_adjusted"
     cfg.dataloader.stage_key = "Pathological stage"
@@ -113,7 +115,7 @@ def fake_de_summary():
             "GeneB": np.array(
                 [1.0, 2.0, -4.0]
             ),
-        
+
         },
         'Tumor2': {
             "GeneA": np.array(
@@ -122,7 +124,7 @@ def fake_de_summary():
             "GeneB": np.array(
                 [5.0, -12.0, -44.0]
             ),
-        
+
         }
     }
     return de_summary
@@ -173,9 +175,28 @@ def test_dataloader_load_predictions(config, fake_preds):
         expected_path = os.path.join(config.common.backup_dir,
                                      f"{config.dataloader.pred_name}_predicted_leiden_{expected_suffix}.csv")
         mocked_read.assert_called_once_with(expected_path, index_col=0)
-    
+
     # Since pred_name includes "Bishoff", no "Atlas" filtering is expected.
     assert len(preds) == 3, "Fake preds should have 3 rows"
+
+
+def test_dataloader_load_atlas_predictions_uses_source_dataset_name(config):
+    config.common.ext_name = "UKIM-V_cluster_0"
+    config.common.file_ext_name = "UKIM-V"
+    config.dataloader.pred_name = "Atlas"
+    fake_preds = pd.DataFrame(
+        {
+            "cell_type_adjusted": ["Tumor", "Tumor", "Tumor"],
+            "batch": ["UKIM-V_P1", "UKIM-V-2_P4", "Chen_Zhang_2020_NSCLC-1"],
+        },
+        index=["ukim-v-cell", "ukim-v-2-cell", "chen-cell"],
+    )
+
+    loader = DataLoader(config.common, config.dataloader)
+    with patch("pandas.read_csv", return_value=fake_preds):
+        preds = loader.load_predictions()
+
+    assert preds.index.tolist() == ["ukim-v-cell"]
 
 
 def test_dataloader_load_anndata(config, fake_preds, fake_adata):
@@ -191,7 +212,7 @@ def test_dataloader_load_anndata(config, fake_preds, fake_adata):
         stages = loader.determine_stages()  # might be None
         adata = loader.load_anndata(fake_preds, stages)
         # Check the AnnData reading path
-        expected_h5ad = os.path.join(config.common.backup_dir, 
+        expected_h5ad = os.path.join(config.common.backup_dir,
                                      f"filtered_{config.common.ext_name}.h5ad")
         mock_read.assert_called_once_with(expected_h5ad)
 
@@ -225,7 +246,7 @@ def test_dataloader_filter_preds_noadata(config, fake_preds):
             "Pathological stage": ["IIIA", "IV", "III"]  # matching our 2 cells
         }, index=["cell_1", "cell_2", "cell_3"])):
             new_preds = loader.filter_preds_noadata(fake_preds, stages)
-            # If skip_stages=False and time="III-IV", stages might be 
+            # If skip_stages=False and time="III-IV", stages might be
             # ['IIIA', 'IIIB','III', 'III or IV', 'IV'] => so both cells pass
             assert len(new_preds) == 3, "Expect both cells to pass stage filter for III-IV"
 
@@ -234,15 +255,92 @@ def test_dataloader_filter_preds_noadata(config, fake_preds):
 # DEProcessor Tests
 # --------------------------------------------------------------------------
 
-def test_processor_determine_tumor_types(config, fake_preds):
-    """
-    Test that we can identify tumor types from the preds DataFrame.
-    """
+def test_processor_determine_tumor_marker_types(config, fake_preds):
     processor = DEProcessor(config.common, config.processor, config.dataloader)
-    valid_types, tumor_types = processor.determine_tumor_types(fake_preds)
-    # Our fake_preds had "Tumor" in cell_type_adjusted, so that's a valid & tumor type.
-    assert "Tumor" in valid_types
-    assert tumor_types == ["Tumor"]
+    comparison_types, target_types = processor.determine_marker_types(fake_preds)
+
+    assert comparison_types == ["Tumor"]
+    assert target_types == ["Tumor"]
+
+
+def test_processor_normal_vs_normal_compares_only_normal_types(config):
+    config.processor.contrast = "normal-vs-normal"
+    preds = pd.DataFrame(
+        {
+            config.dataloader.cell_key: (
+                ["Tumor"] * 3
+                + ["AT2"] * 3
+                + ["Macrophage"] * 3
+                + ["T cell"] * 3
+            )
+        }
+    )
+    processor = DEProcessor(config.common, config.processor, config.dataloader)
+
+    comparison_types, target_types = processor.determine_marker_types(preds)
+
+    assert set(comparison_types) == {"Macrophage", "T cell"}
+    assert target_types == comparison_types
+
+
+def test_processor_normal_vs_all_targets_normal_types(config):
+    config.processor.contrast = "normal-vs-all"
+    preds = pd.DataFrame(
+        {config.dataloader.cell_key: ["Tumor"] * 3 + ["Macrophage"] * 3 + ["T cell"] * 3}
+    )
+    processor = DEProcessor(config.common, config.processor, config.dataloader)
+
+    comparison_types, target_types = processor.determine_marker_types(preds)
+
+    assert set(comparison_types) == {"Tumor", "Macrophage", "T cell"}
+    assert set(target_types) == {"Macrophage", "T cell"}
+
+
+def test_normal_pairwise_sampling_is_configurable(config):
+    config.processor.max_cells_per_type = 2000
+
+    assert config.processor.max_cells_per_type == 2000
+
+
+def test_processor_compute_pairwise_uses_selected_reference_scope(config, fake_adata):
+    processor = DEProcessor(config.common, config.processor, config.dataloader)
+    comparison_types = ["Macrophage", "T cell"]
+
+    with (
+        patch("nb_DE_wilcox.modal_DE.rank_genes_groups_pairwise", return_value={}) as rank_pairwise,
+        patch("numpy.save"),
+    ):
+        processor.compute_pairwise(fake_adata, comparison_types, comparison_types)
+
+    assert rank_pairwise.call_args.kwargs["groups"] == comparison_types
+    assert rank_pairwise.call_args.kwargs["subgroups"] == comparison_types
+
+
+def test_pairwise_wilcoxon_derives_reverse_comparison(fake_adata):
+    forward = {
+        "scores": np.array([3.0, -2.0]),
+        "names": np.array(["GeneA", "GeneB"]),
+        "pvals": np.array([0.01, 0.02]),
+        "logfoldchanges": np.array([1.5, -1.0]),
+        "pvals_adj": np.array([0.02, 0.03]),
+    }
+
+    with patch(
+        "nb_DE_wilcox.modal_DE.compare_groups",
+        return_value=("A_vs_B", forward),
+    ) as compare:
+        pairs = rank_genes_groups_pairwise(
+            fake_adata,
+            "type_tissue",
+            groups=["A", "B"],
+            subgroups=["A", "B"],
+            method="wilcoxon",
+        )
+
+    compare.assert_called_once()
+    assert pairs["B_vs_A"]["names"].tolist() == ["GeneB", "GeneA"]
+    assert pairs["B_vs_A"]["scores"].tolist() == [2.0, -3.0]
+    assert pairs["B_vs_A"]["logfoldchanges"].tolist() == [1.0, -1.5]
 
 
 def test_processor_compute_pairwise(config, fake_adata):
@@ -279,7 +377,7 @@ def test_processor_compute_summary(config, fake_adata, fake_de_pair):
         de_summary = processor.compute_summary(fake_adata, fake_de_pair, ["Tumor"], ["Tumor"])
         assert "Tumor" in de_summary
         assert "GeneA" in de_summary["Tumor"]
-        
+
 
     config.processor.load_summary = True
     with patch("os.path.exists", return_value=True):
@@ -307,9 +405,13 @@ def test_processor_compute_regions(config, fake_adata, fake_de_summary):
     with patch("os.path.exists", return_value=False):
         mock_np_save = patch("numpy.save", MagicMock())
         with mock_np_save as save_patch:
-            de_region = processor.compute_regions(fake_adata, fake_de_summary)
+            de_region = processor.compute_regions(
+                fake_adata,
+                fake_de_summary,
+                ["Tumor1", "Tumor2"],
+            )
             save_patch.assert_called_once()
-            assert "Tumor" in de_region["scores"].dtype.names
+            assert de_region["scores"].dtype.names == ("Tumor1", "Tumor2")
 
 
 # --------------------------------------------------------------------------

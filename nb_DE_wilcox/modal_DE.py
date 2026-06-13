@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 import logging
 import multiprocessing
 import json
+import re
 
 import numpy as np
 import numba
@@ -27,9 +28,22 @@ if not local:
     app = modal.App("DE - wilcox")
 
 local_dir = '/datos/migccl/neto_maestria/luca_explore/surgeries/'
+default_marker_output_root = (
+    "/datos/migccl/neto_maestria/luca_explore/analysis_runs/"
+    "marker_lr_consensus/marker_genes"
+)
 # Define the remote path where the data will be available in the remote function
 backup_dir = "/data" if not local else local_dir
-w_folder = '/home/epaaso/REPOS/sc-luca-explore/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
+w_folder = default_marker_output_root if local else backup_dir
+_PAIRWISE_ADATA = None
+
+MARKER_CONTRASTS = {
+    "normal-vs-normal": ("normal", "normal"),
+    "normal-vs-all": ("all", "normal"),
+    "tumor-vs-tumor": ("tumor", "tumor"),
+    "tumor-vs-all": ("all", "tumor"),
+    "all-vs-all": ("all", "all"),
+}
 
 if not local:
     scvi_image = modal.Image.from_registry(
@@ -108,13 +122,24 @@ def process_gene(group1, results, groups2):
     scores = {}
     genes = next(iter(results.items()))[1]['names']
     comparisons = [(group1, group2) for group2 in groups2 if group1 != group2]
-    
+
+    # Pre-build dictionary lookup for each comparison to speed up lookup from O(N) to O(1)
+    comp_lookups = {}
+    for comparison in comparisons:
+        comp_key = f'{comparison[0]}_vs_{comparison[1]}'
+        if comp_key in results:
+            names = results[comp_key]['names']
+            vals = results[comp_key]['scores']
+            comp_lookups[comp_key] = dict(zip(names, vals))
+
     for gene in genes:
         comparison_scores = []
         for comparison in comparisons:
             comp_key = f'{comparison[0]}_vs_{comparison[1]}'
-            gene_index = np.where(results[comp_key]['names'] == gene)[0]
-            comparison_scores.append(results[comp_key]['scores'][gene_index][0])
+            if comp_key in comp_lookups and gene in comp_lookups[comp_key]:
+                comparison_scores.append(comp_lookups[comp_key][gene])
+            else:
+                comparison_scores.append(0.0)
         scores[gene] = comparison_scores
     return group1, scores
 
@@ -131,24 +156,39 @@ def compare_groups(adata: ad.AnnData, groupby: str, group1: str, group2: str,
     adata_temp = adata.copy() if parallel else adata # Make a copy to avoid modifying the shared adata THIS IS DUMB TODO FIX, maybe using `sc.aggregate`
     if parallel:
         print(f'Ended copying {key}')
-    
+
     numba.set_num_threads(n_jobs_inner)
     rank_genes_groups(adata_temp, groupby=groupby, groups=[group1], reference=group2,
                     method=method, use_raw=use_raw, key_added=key, n_jobs=n_jobs_inner)
 
-    current_scores = adata_temp.uns[key]['scores'][group1]
-
-    return key, {
-        'scores': current_scores,
-        'names': adata_temp.uns[key]['names'][group1],
-        'pvals': adata_temp.uns[key]['pvals'][group1],
-        'logfoldchanges': adata_temp.uns[key]['logfoldchanges'][group1],
-        'pvals_adj': adata_temp.uns[key]['pvals_adj'][group1]
+    result = {
+        field: np.asarray(adata_temp.uns[key][field][group1]).copy()
+        for field in ['scores', 'names', 'pvals', 'logfoldchanges', 'pvals_adj']
     }
+    del adata_temp.uns[key]
+    return key, result
+
+
+def _init_pairwise_worker(adata: ad.AnnData) -> None:
+    global _PAIRWISE_ADATA
+    _PAIRWISE_ADATA = adata
+
+
+def _compare_groups_worker(groupby, group1, group2, method, use_raw, n_jobs_inner):
+    return compare_groups(
+        _PAIRWISE_ADATA,
+        groupby,
+        group1,
+        group2,
+        method,
+        use_raw,
+        False,
+        n_jobs_inner,
+    )
 
 
 def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str, 
-                               groups: Union[Literal['all'], Iterable[str]] = 'all', 
+                               groups: Union[Literal['all'], Iterable[str]] = 'all',
                                subgroups: Optional[ Iterable[str]] = None,
                                use_raw: Optional[bool] = None,
                                method: Optional[Literal['logreg', 't-test', 'wilcoxon', 't-test_overestim_var']] = 'wilcoxon',
@@ -171,16 +211,35 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
     """
 
     pairwise_results = {}
-    summary_stats = {}
     results = []
-    if subgroups:
+    symmetric_wilcoxon = (
+        method == "wilcoxon"
+        and subgroups is not None
+        and set(groups) == set(subgroups)
+    )
+    if symmetric_wilcoxon:
+        groups = list(groups)
+        comparisons = [
+            (groups[i], groups[j])
+            for i in range(len(groups))
+            for j in range(i + 1, len(groups))
+        ]
+    elif subgroups:
         comparisons = [(group1, group2) for group1 in subgroups for group2 in groups if group1 != group2]
     else:
         comparisons = [(group1, group2) for group1 in groups for group2 in groups if group1 != group2]
 
     if parallel:
-        with multiprocessing.Pool(n_jobs) as pool:
-            results = pool.starmap(compare_groups, [(adata, groupby, group1, group2, method, use_raw, parallel, n_jobs_inner) for group1, group2 in comparisons])
+        worker_args = [
+            (groupby, group1, group2, method, use_raw, n_jobs_inner)
+            for group1, group2 in comparisons
+        ]
+        with multiprocessing.Pool(
+            n_jobs,
+            initializer=_init_pairwise_worker,
+            initargs=(adata,),
+        ) as pool:
+            results = pool.starmap(_compare_groups_worker, worker_args)
     else:
         for comparison in comparisons:
             group1, group2 = comparison
@@ -188,6 +247,16 @@ def rank_genes_groups_pairwise(adata: ad.AnnData, groupby: str,
 
     for key, result in results:
         pairwise_results[key] = result
+        if symmetric_wilcoxon:
+            group1, group2 = key.split("_vs_", maxsplit=1)
+            reverse_order = slice(None, None, -1)
+            pairwise_results[f"{group2}_vs_{group1}"] = {
+                "scores": -result["scores"][reverse_order],
+                "names": result["names"][reverse_order],
+                "pvals": result["pvals"][reverse_order],
+                "logfoldchanges": -result["logfoldchanges"][reverse_order],
+                "pvals_adj": result["pvals_adj"][reverse_order],
+            }
 
     return pairwise_results
 
@@ -289,7 +358,7 @@ def cond_plot(de_regions: dict, cond_types, valid_types, n_genes,
         # Draw an empty plot with a message
         if ax:
             ax.text(0.5, 0.5, f'Missing cells: {cond_types}', color='red',
-                        ha='center', va='center', transform=ax.transAxes) 
+                        ha='center', va='center', transform=ax.transAxes)
             ax.axis('off')
 
 
@@ -314,13 +383,14 @@ class CommonConfig:
         (default "I-II").
     gene_mapping : Union[str, dict], optional
         obs column name or dictionary for gene name mapping (default None).
-    
+
     """
     ext_name: str = "Zuani_2024_NSCLC"
+    file_ext_name: str = ""
     name: str = "Zuani"
     time: str = "I-II"
     backup_dir = "/data" if not local else local_dir
-    w_folder = '/home/epaaso/REPOS/sc-luca-explore/nb_DE_wilcox/wilcoxon_DE' if local else backup_dir
+    w_folder: str = default_marker_output_root if local else backup_dir
     gene_mapping: Union[str, Dict, None] = None
 
 @dataclass
@@ -363,6 +433,8 @@ class DataLoaderConfig:
     log_layer: Union[str, bool] = "do_log1p"
     gene_feature: Optional[str] = None
     avoid_ensembl: bool = False
+    cluster_id: Optional[int] = None
+    membership_csv: Optional[str] = None
 
 @dataclass
 class ProcessorConfig:
@@ -404,6 +476,8 @@ class ProcessorConfig:
     update_symbols_summary: Union[bool, str] = False
     num_processes: int = 1
     n_jobs_inner: int = 1
+    contrast: str = "tumor-vs-all"
+    max_cells_per_type: Optional[int] = None
 
 @dataclass
 class VisualizerConfig:
@@ -422,6 +496,7 @@ class VisualizerConfig:
     region_mapping: str = ""
     load_gsea: bool = True
     load_gsea_heatmap: bool = True
+    skip_visualization: bool = False
 
 @dataclass
 class DEConfig:
@@ -457,7 +532,14 @@ class DataLoader:
         logging.info(f"Loading predictions from {pred_file}")
         preds = pd.read_csv(pred_file, index_col=0)
         if "Atlas" in self.config.pred_name:
-            preds = preds[preds.batch.str.contains(self.common.ext_name)]
+            source_name = self.common.file_ext_name or self.common.ext_name
+            batch_pattern = rf"^{re.escape(source_name)}(?:_|$)"
+            preds = preds[preds.batch.astype(str).str.contains(batch_pattern, regex=True, na=False)]
+            logging.info(
+                "Filtered Atlas predictions for source dataset '%s': %d cells",
+                source_name,
+                len(preds),
+            )
         if self.config.obs_has_name:
             preds.index = preds.index.str.split('_').str[1:].str.join('_')
         return preds
@@ -472,14 +554,45 @@ class DataLoader:
     def load_anndata(self, preds: pd.DataFrame, stages: Optional[List[str]]) -> ad.AnnData:
         if self.config.no_adata:
             return None
-        adata_file = os.path.join(self.common.backup_dir, f"filtered_{self.common.ext_name}.h5ad")
+        file_ext = self.common.file_ext_name if self.common.file_ext_name else self.common.ext_name
+        adata_file = os.path.join(self.common.backup_dir, f"filtered_{file_ext}.h5ad")
         logging.info(f"Loading AnnData from {adata_file}")
         adata = ad.read_h5ad(adata_file)
         if self.config.obs_unique:
             adata.obs_names_make_unique()
+        preds.index = preds.index.astype(str)
+
+        # Helper to find the sample/patient column in adata.obs
+        sample_col = None
+        for col in ['sample', 'Sample', 'Patient', 'Patient Number', 'orig.ident', 'patient_id']:
+            if col in adata.obs:
+                sample_col = col
+                break
+
+        if not preds.index.isin(adata.obs_names).any():
+            if sample_col is not None:
+                appended_index = adata.obs_names + '_' + adata.obs[sample_col].astype(str)
+                if preds.index.isin(appended_index).any():
+                    adata.obs_names = appended_index
+
+        if not preds.index.isin(adata.obs_names).any():
+            alt_index = preds.index.str.split('_').str[0]
+            if alt_index.isin(adata.obs_names).any():
+                preds.index = alt_index
+            else:
+                alt_index2 = preds.index.str.split('_').str[1:].str.join('_')
+                if alt_index2.isin(adata.obs_names).any():
+                    preds.index = alt_index2
+                elif len(preds) == len(adata):
+                    preds.index = adata.obs_names
+
+        common_index = preds.index.intersection(adata.obs_names)
+        if len(common_index) == 0:
+            raise Exception("Zero overlap between predictions index and adata index")
+
         try:
-            adata = adata[preds.index].copy()
-            adata.obs.loc[preds.index, self.config.cell_key] = preds.loc[preds.index, self.config.cell_key]
+            adata = adata[common_index].copy()
+            adata.obs.loc[common_index, self.config.cell_key] = preds.loc[common_index, self.config.cell_key]
         except Exception as e:
             raise Exception("Mismatch between predictions index and adata index") from e
 
@@ -489,14 +602,53 @@ class DataLoader:
         if stages is not None:
             adata = adata[adata.obs[self.config.stage_key].isin(stages)].copy()
 
+        if self.config.membership_csv and self.config.cluster_id is not None:
+            membership = pd.read_csv(self.config.membership_csv)
+            cluster_samples = set(membership[membership['membership'] == self.config.cluster_id]['sample'].tolist())
+            all_membership_samples = set(membership['sample'].tolist())
+
+            # Dynamically identify the membership sample matching column in adata.obs
+            matching_col = None
+            if sample_col is not None:
+                col_vals = set(adata.obs[sample_col].dropna().astype(str).unique())
+                if col_vals.intersection(all_membership_samples):
+                    matching_col = sample_col
+
+            if matching_col is None:
+                # Search candidate columns
+                for col in ['sample', 'Sample', 'Patient', 'Patient Number', 'orig.ident', 'patient_id']:
+                    if col in adata.obs:
+                        col_vals = set(adata.obs[col].dropna().astype(str).unique())
+                        if col_vals.intersection(all_membership_samples):
+                            matching_col = col
+                            break
+
+            if matching_col is None:
+                # Search all columns in adata.obs for overlap
+                for col in adata.obs.columns:
+                    col_vals = set(adata.obs[col].dropna().astype(str).unique())
+                    if col_vals.intersection(all_membership_samples):
+                        matching_col = col
+                        break
+
+            if matching_col is not None:
+                adata = adata[adata.obs[matching_col].astype(str).isin(cluster_samples)].copy()
+                logging.info(f"Filtered adata to cluster {self.config.cluster_id} using column '{matching_col}': {adata.shape[0]} cells remain.")
+            else:
+                logging.warning("Could not find any column in adata.obs matching membership samples, unable to filter by cluster.")
+
+        if adata is None or adata.shape[0] == 0:
+            logging.warning("AnnData is empty after filtering!")
+            return adata
+
         # Apply log transformation.
         if self.config.log_layer == "do_log1p":
             sc.pp.log1p(adata)
         elif self.config.log_layer:
             adata.X = adata.layers[self.config.log_layer]
-        
+
         preds = preds.loc[adata.obs.index]
-            
+
         if self.config.gene_feature:
             print(f"Setting gene feature to {self.config.gene_feature}")
             adata.var.index = adata.var[self.config.gene_feature]
@@ -513,11 +665,11 @@ class DataLoader:
 
         logging.info("Data after log transformation:\n%s", adata[:10, 10:20].to_df().head())
         return adata
-    
+
     def filter_preds_noadata(self, preds: pd.DataFrame, stages: Optional[List[str]]) -> pd.DataFrame:
         if stages is None and not isinstance(self.common.gene_mapping, str):
             return preds
-        
+
         import h5py
         from anndata.experimental import read_elem
         adata_file = os.path.join(self.common.backup_dir, f"filtered_{self.common.ext_name}.h5ad")
@@ -528,7 +680,7 @@ class DataLoader:
             else:
                 # Handle the case where 'obs' is not present
                 raise("obs matrix not found in the h5ad file.")
-            
+
         if isinstance(self.common.gene_mapping, str):
             self.common.gene_mapping = obs_matrix.loc[:, self.common.gene_mapping].to_dict()
 
@@ -536,7 +688,7 @@ class DataLoader:
         preds = preds[preds[self.config.stage_key].isin(stages)].copy() if stages else preds
 
         del obs_matrix
-        
+
 
 # -----------------------------------------------------------------------------
 # region Processing Component
@@ -548,8 +700,13 @@ class DEProcessor:
         self.config = proc_config
         self.dl_config = dl_config
 
-    def determine_tumor_types(self, preds: pd.DataFrame) -> Tuple[List[str], List[str]]:
-        valid_types = list(preds[self.dl_config.cell_key].value_counts().loc[lambda x: x > 2].index)
+    def determine_marker_types(self, preds: pd.DataFrame, adata: Optional[ad.AnnData] = None) -> Tuple[List[str], List[str]]:
+        if adata is not None and "type_tissue" in adata.obs:
+            counts = adata.obs["type_tissue"].value_counts()
+            valid_types = list(counts.loc[lambda x: x > 2].index)
+        else:
+            valid_types = list(preds[self.dl_config.cell_key].value_counts().loc[lambda x: x > 2].index)
+
         if not self.config.tumor_is_int:
             tumor_types = [
                 g for g in valid_types
@@ -558,24 +715,39 @@ class DEProcessor:
         else:
             tumor_types = [g for g in valid_types if g.isdigit()]
 
-        if len(tumor_types) == 0:
-            raise Exception("No tumor groups found THE SUMMARIES WOULD BE EMPTY")
-        return valid_types, tumor_types
+        if self.config.contrast not in MARKER_CONTRASTS:
+            raise ValueError(
+                f"Unknown marker contrast {self.config.contrast!r}; "
+                f"choose from {sorted(MARKER_CONTRASTS)}"
+            )
+        comparison_scope, target_scope = MARKER_CONTRASTS[self.config.contrast]
+        normal_types = [g for g in valid_types if g not in tumor_types]
+        scopes = {"all": valid_types, "normal": normal_types, "tumor": tumor_types}
+        comparison_types = scopes[comparison_scope]
+        target_types = scopes[target_scope]
 
-    def compute_pairwise(self, adata: ad.AnnData, valid_types: List[str], tumor_types: List[str]) -> dict:
+        if len(target_types) == 0 or len(comparison_types) < 2:
+            logging.warning(
+                "Not enough groups for pairwise marker scope '%s'. Comparison types: %s",
+                self.config.contrast,
+                comparison_types,
+            )
+        return comparison_types, target_types
+
+    def compute_pairwise(self, adata: ad.AnnData, comparison_types: List[str], target_types: List[str]) -> dict:
         logging.info("Computing pairwise differential expression")
         de_pair = {}
         if not self.config.load_summary:
             pair_file = os.path.join(
                 self.common.w_folder,
-                f"{self.common.time}_{self.common.ext_name}_tumorpair.npy"
+                f"{self.common.time}_{self.common.ext_name}_pairwise.npy"
             )
             if self.config.load_pair and os.path.exists(pair_file):
                 de_pair = np.load(pair_file, allow_pickle=True).item()
             else:
                 de_pair = rank_genes_groups_pairwise(
                     adata, "type_tissue", method="wilcoxon", use_raw=False,
-                    groups=valid_types, subgroups=tumor_types,
+                    groups=comparison_types, subgroups=target_types,
                     parallel=self.config.parallel_pair,
                     n_jobs=self.config.num_processes // self.config.n_jobs_inner,
                     n_jobs_inner=self.config.n_jobs_inner
@@ -583,11 +755,11 @@ class DEProcessor:
                 np.save(pair_file, de_pair)
         return de_pair
 
-    def compute_summary(self, adata: Optional[ad.AnnData], de_pair: dict, valid_types: List[str], tumor_types: List[str]) -> dict:
+    def compute_summary(self, adata: Optional[ad.AnnData], de_pair: dict, comparison_types: List[str], target_types: List[str]) -> dict:
         logging.info("Computing summary differential expression")
         summary_file = os.path.join(
             self.common.w_folder,
-            f"{self.common.time}_{self.common.ext_name}_summary_tumorall.npy"
+            f"{self.common.time}_{self.common.ext_name}_summary.npy"
         )
         de_summary = {}
         if self.config.load_summary:
@@ -606,7 +778,7 @@ class DEProcessor:
                     .iloc[:,:1]
                 gene_name_map = gene_name_map.to_dict()['Unnamed: 0']
                 gene_name_map = {str(k): v for k, v in gene_name_map.items()}
-            
+
                 logging.info('THE GENE MAP')
                 logging.info(str(gene_name_map)[:100])
                 for cell_type, genes_dict in de_summary.items():
@@ -620,13 +792,13 @@ class DEProcessor:
             if self.config.parallel_summary:
                 with multiprocessing.Pool(self.config.num_processes) as pool:
                     for group_scores in pool.starmap(process_gene,
-                            [(group1, de_pair, valid_types) for group1 in tumor_types]):
+                            [(group1, de_pair, comparison_types) for group1 in target_types]):
                         de_summary[group_scores[0]] = group_scores[1]
             else:
-                for group in tumor_types:
-                    grp, summary = process_gene(group, de_pair, valid_types)
+                for group in target_types:
+                    grp, summary = process_gene(group, de_pair, comparison_types)
                     de_summary[grp] = summary
-            
+
             np.save(summary_file, de_summary)
             if not local:
                 vol.commit()
@@ -641,7 +813,7 @@ class DEProcessor:
         if not region_file:
             region_file = os.path.join(
                 self.common.w_folder,
-                f"{self.common.time}_{self.common.ext_name}_tumorall.npy"
+                f"{self.common.time}_{self.common.ext_name}_auc.npy"
             )
 
         if self.config.load_regions and os.path.exists(region_file):
@@ -677,7 +849,7 @@ class DEProcessor:
                         n1 = counts[ct]
                         groups2 = [g for g in valid_types if g != ct]
                         n2s = [counts[g2] for g2 in groups2]
-                        
+
                         regioner_sorted[ct] = sorted(
                             (
                                 (
@@ -692,8 +864,8 @@ class DEProcessor:
                             key=lambda x: x[1],
                             reverse=True
                         )
-                
-        
+
+
             cell_types = list(regioner_sorted.keys())
             arr_scores, arr_names = [], []
             for ct in cell_types:
@@ -768,7 +940,7 @@ class DEVisualizer:
         if len(axs) > num_types:
             for j in range(num_types, len(axs)):
                 fig.delaxes(axs[j])
-        
+
         out_file = os.path.join(
             self.common.w_folder,
             f"markergenes_{self.common.name}_tumorall_{self.common.time}.png"
@@ -806,7 +978,7 @@ class DEVisualizer:
             )}
             combined_dfs[region].to_csv(gsea_path)
 
-        
+
         plt.figure(figsize=(15, 10))
         sns.heatmap(combined_dfs[region], cmap="viridis")
         plt.title(f"Hallmarks Scores by Cell Type for {region}")
@@ -837,16 +1009,42 @@ class DEPipeline:
         preds = self.loader.load_predictions()
         stages = self.loader.determine_stages()
         adata = self.loader.load_anndata(preds, stages)
-        if not adata:
-            preds = self.loader.filter_preds_noadata(preds, stages)
-        valid_types, tumor_types = self.processor.determine_tumor_types(preds)
+        if adata is None or adata.shape[0] == 0:
+            logging.warning("AnnData is empty or None. Skipping differential expression pipeline.")
+            return
 
-        de_pair = self.processor.compute_pairwise(adata, valid_types, tumor_types)
-        de_summary = self.processor.compute_summary(adata, de_pair, valid_types, tumor_types)
-        de_region = self.processor.compute_regions(adata, de_summary, valid_types)
+        comparison_types, target_types = self.processor.determine_marker_types(preds, adata)
+        if len(comparison_types) < 2 or len(target_types) == 0:
+            logging.warning("Not enough cell types or marker target groups to run differential expression. Skipping.")
+            return
 
-        self.visualizer.plot_marker_genes(de_region, valid_types)
-        self.visualizer.plot_gsea(de_region, valid_types)
+        if self.config.processor.contrast == "normal-vs-normal":
+            adata = adata[adata.obs["type_tissue"].isin(comparison_types)].copy()
+            logging.info("Restricted pairwise input to %d normal cells", adata.n_obs)
+            max_cells = self.config.processor.max_cells_per_type
+            if max_cells:
+                rng = np.random.default_rng(42)
+                selected = []
+                labels = adata.obs["type_tissue"].to_numpy()
+                for cell_type in comparison_types:
+                    positions = np.flatnonzero(labels == cell_type)
+                    if len(positions) > max_cells:
+                        positions = rng.choice(positions, max_cells, replace=False)
+                    selected.extend(positions)
+                adata = adata[np.sort(selected)].copy()
+                logging.info(
+                    "Balanced pairwise input to at most %d cells per type: %d cells",
+                    max_cells,
+                    adata.n_obs,
+                )
+
+        de_pair = self.processor.compute_pairwise(adata, comparison_types, target_types)
+        de_summary = self.processor.compute_summary(adata, de_pair, comparison_types, target_types)
+        de_region = self.processor.compute_regions(adata, de_summary, comparison_types)
+
+        if not self.config.visualizer.skip_visualization:
+            self.visualizer.plot_marker_genes(de_region, comparison_types)
+            self.visualizer.plot_gsea(de_region, comparison_types)
         logging.info("Pipeline finished successfully")
 
 # -----------------------------------------------------------------------------
@@ -859,13 +1057,13 @@ def _get_de_impl(**kwargs):
 
     This function initializes the pipeline using a composite configuration that
     aggregates parameters from several configuration classes:
-    
+
     - CommonConfig: General settings (e.g., dataset names, paths, runtime flags).
     - DataLoaderConfig: Parameters related to loading predictions and AnnData.
     - ProcessorConfig: Settings for data processing and differential expression
       computation.
     - VisualizerConfig: Parameters for generating plots and visualizations.
-    
+
     Parameters
     ----------
     kwargs : dict
@@ -879,7 +1077,7 @@ def _get_de_impl(**kwargs):
     Examples
     --------
     >>> get_de(ext_name="Dataset_X", time="I-II", cell_key="cell_type")
-    
+
     See Also
     --------
     DataLoaderConfig, ProcessorConfig, VisualizerConfig
@@ -899,9 +1097,39 @@ def _get_de_impl(**kwargs):
         elif hasattr(config.visualizer, key):
             setattr(config.visualizer, key, value)
 
+    config.common.file_ext_name = config.common.ext_name
+    if config.dataloader.cluster_id is not None:
+        config.common.ext_name = f"{config.common.ext_name}_cluster_{config.dataloader.cluster_id}"
+        config.common.name = f"{config.common.name}_cluster_{config.dataloader.cluster_id}"
+
     config.__post_init__()  # Ensure defaults are applied.
+    config.common.w_folder = os.path.join(
+        config.common.w_folder, config.processor.contrast
+    )
+    os.makedirs(config.common.w_folder, exist_ok=True)
+    manifest_path = os.path.join(
+        config.common.w_folder,
+        f"{config.common.time}_{config.common.ext_name}_manifest.json",
+    )
+    with open(manifest_path, "w") as manifest_file:
+        json.dump(
+            {
+                "dataset": config.common.file_ext_name,
+                "stage": config.common.time,
+                "cluster": config.dataloader.cluster_id,
+                "contrast": config.processor.contrast,
+                "output_directory": config.common.w_folder,
+            },
+            manifest_file,
+            indent=2,
+        )
     pipeline = DEPipeline(config)
     pipeline.run()
+    with open(manifest_path, "r") as manifest_file:
+        manifest = json.load(manifest_file)
+    manifest["status"] = "complete"
+    with open(manifest_path, "w") as manifest_file:
+        json.dump(manifest, manifest_file, indent=2)
 
 if local:
     # Local definition without the Modal decorator.
@@ -918,14 +1146,14 @@ else:
         return _get_de_impl(**kwargs)
 
 
+common_kwargs = {"load_pair": False, "load_summary": False, "load_regions": False,
+            "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
+            "n_jobs_inner": 6, "num_processes": 6, "parallel_pair": False, "parallel_summary": True,
+            "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "regions_AUC": True,
+            "log_layer": None}
+
 if __name__ == '__main__':
     print('Running function locally')
-
-    common_kwargs = {"load_pair": False, "load_summary": False, "load_regions": False,
-                "load_gsea": False, "load_gsea_heatmap": False, "tumor_is_int": False, "region_mapping": False,
-                "n_jobs_inner": 8, "num_processes": 8, "parallel_pair": False, "parallel_summary": True,
-                "gene_feature": None, "no_adata": False, "avoid_ensembl": True, "obs_has_name":True, "regions_AUC": True,
-                "log_layer": None}
 
     # region Extended Atlas annots
     # get_de(**{
@@ -937,8 +1165,8 @@ if __name__ == '__main__':
     # get_de(**{
     #             "ext_name": 'Hu_Zhang_2023_NSCLC', "name": 'Hu', "pred_name": 'Subcluster_wu/Hu', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Clinical Stage",
     #             "log_layer": "do_log1p", **common_kwargs
-    #         })    
-    
+    #         })
+
     # get_de(**{
     #             "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
     #             "log_layer": "data", **common_kwargs
@@ -949,21 +1177,21 @@ if __name__ == '__main__':
     #             "ext_name": 'Deng_Liu_LUAD_2024', "name": 'Deng', "pred_name": 'Subcluster_wu/Deng', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "Pathological stage",
     #             "log_layer": "data", **common_kwargs
     #         })
-    
+
     # get_de(**{
     #             "ext_name": 'Zuani_2024_NSCLC', "name": 'Zuani', "pred_name": 'Subcluster_wu/Zuani', "time": "III-IV", "cell_key": "cell_type_adjusted", "stage_key": "stage",
     #             "log_layer": "do_log1p", **common_kwargs, "obs_unique": True
     #         })
-    
+
     # get_de(**{
     #             "ext_name": 'Zuani_2024_NSCLC', "name": 'Zuani', "pred_name": 'Subcluster_wu/Zuani', "time": "I-II", "cell_key": "cell_type_adjusted", "stage_key": "stage",
     #             "log_layer": "do_log1p", **common_kwargs, "obs_unique": True
     #         })
     # endregion
-    
-    
+
+
     # region Altas annots
-    
+
     # region Preamble
     import os
     dss = [fname.replace('filtered_', '').replace('.h5ad', '') for fname in os.listdir(backup_dir) if fname.startswith('filtered_') and fname.endswith('.h5ad')]
@@ -1014,47 +1242,47 @@ def main():
     # Run the remote functions concurrently
     # We do this per dataset to avoid batch effects
     print("Starting differential expression analysis on the remote worker...")
-    
+
     # Start both tasks
     future1 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='I-II',
                            cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
                            load_pair = False, load_summary = False, load_regions = False,
                             load_gsea = False, load_gsea_heatmap = False,
                             tumor_is_int=False,
-                            pred_name='Zuani', n_jobs_inner=30, avoid_ensembl=True,
-                              obs_has_name=True, parallel_summary=True, num_processes=30, obs_unique=True)
-    
+                            pred_name='Zuani', n_jobs_inner=6, avoid_ensembl=True,
+                              obs_has_name=True, parallel_summary=True, num_processes=6, obs_unique=True)
+
     # future2 = get_de.spawn(ext_name="Zuani_2024_NSCLC", name='Zuani', time='III-IV',
     #                        cell_key='cell_type_adjusted', stage_key='stage', log_layer='do_log1p',
     #                        load_pair = True, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
     #                         tumor_is_int=True)
-    
+
     # future3 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='III-IV',
     #                        cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data',
     #                        load_pair = False, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
     #                         tumor_is_int=True)
-    
+
     # future4 = get_de.spawn(ext_name="Deng_Liu_LUAD_2024", name='Deng', time='I-II',
     #                        cell_key='cell_type_adjusted', stage_key='Pathological stage', log_layer='data',
     #                        load_pair = False, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
     #                         tumor_is_int=False,
     #                         pred_name='Subcluster_wu/Deng', n_jobs_inner=30, avoid_ensembl=True, obs_has_name=True, parallel_summary=True, num_processes=30)
-    
+
     # future5 = get_de.spawn(ext_name="Hu_Zhang_2023_NSCLC", name='Hu', time='III-IV',
     #                        cell_key='cell_type_adjusted', stage_key='Clinical Stage', log_layer='do_log1p',
     #                        load_pair = False, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
     #                         tumor_is_int=True, n_jobs_inner=5, parallel_pair=True)
-    
+
     # future6 = get_de.spawn(ext_name="Trinks_Bishoff_2021_NSCLC", name='Bishoff', time='III-IV',
     #                        cell_key='cell_type_adjusted', skip_stages=True, log_layer='do_log1p',
     #                        load_pair = False, load_summary = False, load_regions = False,
     #                         load_gsea = False, load_gsea_heatmap = False,
     #                         tumor_is_int=True)
-    
+
     # Wait for both tasks to complete
     future1.get()
     # future2.get()
@@ -1062,6 +1290,3 @@ def main():
     # future4.get()
     # future5.get()
     # future6.get()
-
-
-

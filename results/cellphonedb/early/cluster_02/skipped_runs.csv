@@ -1,0 +1,31 @@
+time,cluster,dataset,reason,traceback
+I-II,2,He_Fan_2021,Only 1 patients available; at least 3 required,"Traceback (most recent call last):
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 530, in main
+    output = prepare_run(
+        time, cluster, dataset, args.auc_threshold, args.patient_cap,
+        args.seed, args.min_cells, args.min_patients,
+    )
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 280, in prepare_run
+    raise ValueError(f""Only {patient_count} patients available; at least 3 required"")
+ValueError: Only 1 patients available; at least 3 required
+"
+I-II,2,Kim_Lee_2020,Only 1 patients available; at least 3 required,"Traceback (most recent call last):
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 530, in main
+    output = prepare_run(
+        time, cluster, dataset, args.auc_threshold, args.patient_cap,
+        args.seed, args.min_cells, args.min_patients,
+    )
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 280, in prepare_run
+    raise ValueError(f""Only {patient_count} patients available; at least 3 required"")
+ValueError: Only 1 patients available; at least 3 required
+"
+I-II,2,Laughney_Massague_2020,Only 2 patients available; at least 3 required,"Traceback (most recent call last):
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 530, in main
+    output = prepare_run(
+        time, cluster, dataset, args.auc_threshold, args.patient_cap,
+        args.seed, args.min_cells, args.min_patients,
+    )
+  File ""/datos/home/epaaso/REPOS/sc-luca-explore/run_cellphone_dataset_consensus.py"", line 280, in prepare_run
+    raise ValueError(f""Only {patient_count} patients available; at least 3 required"")
+ValueError: Only 2 patients available; at least 3 required
+"

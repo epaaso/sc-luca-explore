@@ -3,15 +3,22 @@
 **/.ipynb_checkpoints/**
 surgeries/**
 out/
-# outputARACNE/
 **.pyc
 **/*.gmt
 **.npz
 **.npz.npy
 **.npy
-nb_tumorUMAP/gseapy_gsea/*
+**/*.h5ad
+**/*.log
 cache/root-datos-maestria-netopaas-Zuani2024-outputEmptyDrops-P15_T2--matrix.h5ad
 cache/**
+
+# Marker/LR production runs belong in external storage.
+results/graph_generation/cluster_runs/**/statistical_analysis_*
+results/graph_generation/cluster_runs/**/metadata_*.tsv
+results/graph_generation/cluster_runs/**/normalised_log_counts_*.h5ad
+results/graph_generation/cluster_runs/**/extracted_lr_pairs_all.csv
+analysis_runs/
 
 # Nextflow runtime state and logs
 .nextflow/

@@ -1,0 +1,75 @@
+dataset,cell_type
+Deng_Liu_LUAD_2024,AT1
+Deng_Liu_LUAD_2024,AT2_ROS1+
+Deng_Liu_LUAD_2024,B cell
+Deng_Liu_LUAD_2024,B cell dividing
+Deng_Liu_LUAD_2024,Ciliated
+Deng_Liu_LUAD_2024,Club_AT2_even_1
+Deng_Liu_LUAD_2024,Club_AT2_even_2
+Deng_Liu_LUAD_2024,Club_AT2_high
+Deng_Liu_LUAD_2024,Club_Ciliated
+Deng_Liu_LUAD_2024,DC mature
+Deng_Liu_LUAD_2024,Endothelial cell arterial
+Deng_Liu_LUAD_2024,Endothelial cell capillary
+Deng_Liu_LUAD_2024,Endothelial cell lymphatic
+Deng_Liu_LUAD_2024,Endothelial cell venous
+Deng_Liu_LUAD_2024,Fibroblast adventitial
+Deng_Liu_LUAD_2024,Fibroblast alveolar
+Deng_Liu_LUAD_2024,Fibroblast peribronchial
+Deng_Liu_LUAD_2024,Macrophage
+Deng_Liu_LUAD_2024,Macrophage alveolar
+Deng_Liu_LUAD_2024,Mast cell
+Deng_Liu_LUAD_2024,Monocyte classical
+Deng_Liu_LUAD_2024,Monocyte non-classical
+Deng_Liu_LUAD_2024,NK cell
+Deng_Liu_LUAD_2024,NK cell dividing
+Deng_Liu_LUAD_2024,Neutrophils
+Deng_Liu_LUAD_2024,Pericyte
+Deng_Liu_LUAD_2024,Plasma cell
+Deng_Liu_LUAD_2024,Plasma cell dividing
+Deng_Liu_LUAD_2024,Smooth muscle cell
+Deng_Liu_LUAD_2024,T cell CD4
+Deng_Liu_LUAD_2024,T cell CD4 dividing
+Deng_Liu_LUAD_2024,T cell CD8 activated
+Deng_Liu_LUAD_2024,T cell CD8 dividing
+Deng_Liu_LUAD_2024,T cell CD8 effector memory
+Deng_Liu_LUAD_2024,T cell CD8 naive
+Deng_Liu_LUAD_2024,T cell CD8 terminally exhausted
+Deng_Liu_LUAD_2024,T cell NK-like
+Deng_Liu_LUAD_2024,T cell regulatory
+Deng_Liu_LUAD_2024,Tumor LAUD_LUSC_AT2
+Deng_Liu_LUAD_2024,Tumor LUAD_AT2_mitotic
+Deng_Liu_LUAD_2024,Tumor LUAD_LUSC
+Deng_Liu_LUAD_2024,Tumor LUAD_LUSC_mitotic
+Deng_Liu_LUAD_2024,Tumor LUAD_mainly
+Deng_Liu_LUAD_2024,Tumor LUAD_mainly_AT2_low
+Deng_Liu_LUAD_2024,Tumor LUAD_mainly_AT2_mitotic
+Deng_Liu_LUAD_2024,Tumor LUAD_mitotic
+Deng_Liu_LUAD_2024,cDC1
+Deng_Liu_LUAD_2024,cDC2
+Deng_Liu_LUAD_2024,myeloid dividing
+Deng_Liu_LUAD_2024,pDC
+UKIM-V-2,B cell
+UKIM-V-2,Fibroblast peribronchial
+UKIM-V-2,Macrophage
+UKIM-V-2,Macrophage alveolar
+UKIM-V-2,Mast cell
+UKIM-V-2,Monocyte classical
+UKIM-V-2,Monocyte non-classical
+UKIM-V-2,NK cell
+UKIM-V-2,Neutrophils
+UKIM-V-2,Plasma cell
+UKIM-V-2,T cell CD4
+UKIM-V-2,T cell CD4 dividing
+UKIM-V-2,T cell CD8 dividing
+UKIM-V-2,T cell CD8 effector memory
+UKIM-V-2,T cell CD8 naive
+UKIM-V-2,T cell CD8 terminally exhausted
+UKIM-V-2,T cell NK-like
+UKIM-V-2,T cell regulatory
+UKIM-V-2,Tumor LUAD_LUSC
+UKIM-V-2,Tumor LUAD_LUSC_mitotic_even
+UKIM-V-2,Tumor LUAD_mainly
+UKIM-V-2,cDC2
+UKIM-V-2,myeloid dividing
+UKIM-V-2,pDC

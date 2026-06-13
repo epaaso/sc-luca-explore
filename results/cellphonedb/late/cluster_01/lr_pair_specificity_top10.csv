@@ -1,0 +1,11 @@
+interacting_pair,best_sender_cell_type,best_receiver_cell_type,supporting_datasets,eligible_datasets,prevalence,activity,ligand_deg,receptor_deg,datasets,time,cluster,activity_cluster_0,eligible_cluster_0,testable_other_clusters,max_other_activity,specificity
+CCL19_CCR7,DC mature,DC mature,3.0,3,1.0,0.8990121547200746,True,True,Chen_Zhang_2020;Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,1,1,0.0,0.8990121547200746
+COL24A1_integrin_a1b1_complex,pDC,Pericyte,2.0,2,1.0,0.8490886322530989,True,False,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,4,1,0.0,0.8490886322530989
+BST2_LILRA4,Pericyte,pDC,2.0,2,1.0,0.8350466465660497,True,True,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,3,1,0.0,0.8350466465660497
+APP_PLXNA4,Pericyte,pDC,2.0,2,1.0,0.7815686277215852,True,True,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,2,1,0.0,0.7815686277215852
+COL9A3_integrin_a1b1_complex,Plasma cell,Pericyte,2.0,2,1.0,0.72439110001205,False,False,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,4,1,0.0,0.72439110001205
+CXCL8_CXCR2,Neutrophils,Neutrophils,4.0,4,1.0,0.9843379900724601,True,True,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC;Maynard_Bivona_2020;Zilionis_Klein_2019,III-IV,1,0.26728691149109657,5,1,0.26728691149109657,0.7170510785813635
+NECTIN3_TIGIT,Pericyte,T cell regulatory,2.0,2,1.0,0.6915553957298644,False,True,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.0,2,1,0.0,0.6915553957298644
+COL18A1_integrin_a11b1_complex,Pericyte,Fibroblast peribronchial,2.0,2,1.0,0.9065472817375144,True,False,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.22736124634858812,3,1,0.22736124634858812,0.6791860353889263
+WNT5B_FRZB,DC mature,Pericyte,2.0,2,1.0,0.6777763489478283,True,True,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.006424148606811146,5,1,0.006424148606811146,0.6713522003410172
+COL1A1_integrin_a1b1_complex,Fibroblast peribronchial,Pericyte,2.0,2,1.0,0.9994588405203956,True,False,Deng_Liu_LUAD_2024;Hu_Zhang_2023_NSCLC,III-IV,1,0.33322514335172565,3,1,0.33322514335172565,0.66623369716867

@@ -1,0 +1,124 @@
+dataset,cell_type
+Lambrechts_Thienpont_2018_6149v1,B cell
+Lambrechts_Thienpont_2018_6149v1,Club_AT2_even_1
+Lambrechts_Thienpont_2018_6149v1,Fibroblast adventitial
+Lambrechts_Thienpont_2018_6149v1,Fibroblast peribronchial
+Lambrechts_Thienpont_2018_6149v1,Macrophage
+Lambrechts_Thienpont_2018_6149v1,Macrophage alveolar
+Lambrechts_Thienpont_2018_6149v1,Mast cell
+Lambrechts_Thienpont_2018_6149v1,Monocyte classical
+Lambrechts_Thienpont_2018_6149v1,Monocyte non-classical
+Lambrechts_Thienpont_2018_6149v1,NK cell
+Lambrechts_Thienpont_2018_6149v1,Plasma cell
+Lambrechts_Thienpont_2018_6149v1,T cell CD4
+Lambrechts_Thienpont_2018_6149v1,T cell CD8 dividing
+Lambrechts_Thienpont_2018_6149v1,T cell CD8 effector memory
+Lambrechts_Thienpont_2018_6149v1,T cell CD8 naive
+Lambrechts_Thienpont_2018_6149v1,T cell CD8 terminally exhausted
+Lambrechts_Thienpont_2018_6149v1,T cell NK-like
+Lambrechts_Thienpont_2018_6149v1,T cell regulatory
+Lambrechts_Thienpont_2018_6149v1,Tumor LUAD_LUSC
+Lambrechts_Thienpont_2018_6149v1,Tumor LUAD_LUSC_mitotic_even
+Lambrechts_Thienpont_2018_6149v1,Tumor LUAD_mainly
+Lambrechts_Thienpont_2018_6149v1,cDC2
+Lambrechts_Thienpont_2018_6149v2,AT1
+Lambrechts_Thienpont_2018_6149v2,B cell
+Lambrechts_Thienpont_2018_6149v2,Ciliated
+Lambrechts_Thienpont_2018_6149v2,Club_AT2_even_1
+Lambrechts_Thienpont_2018_6149v2,Club_Ciliated
+Lambrechts_Thienpont_2018_6149v2,Endothelial cell capillary
+Lambrechts_Thienpont_2018_6149v2,Endothelial cell venous
+Lambrechts_Thienpont_2018_6149v2,Fibroblast alveolar
+Lambrechts_Thienpont_2018_6149v2,Fibroblast peribronchial
+Lambrechts_Thienpont_2018_6149v2,Macrophage
+Lambrechts_Thienpont_2018_6149v2,Macrophage alveolar
+Lambrechts_Thienpont_2018_6149v2,Mast cell
+Lambrechts_Thienpont_2018_6149v2,Monocyte classical
+Lambrechts_Thienpont_2018_6149v2,Monocyte non-classical
+Lambrechts_Thienpont_2018_6149v2,NK cell
+Lambrechts_Thienpont_2018_6149v2,Pericyte
+Lambrechts_Thienpont_2018_6149v2,Plasma cell
+Lambrechts_Thienpont_2018_6149v2,Plasma cell dividing
+Lambrechts_Thienpont_2018_6149v2,T cell CD4
+Lambrechts_Thienpont_2018_6149v2,T cell CD4 dividing
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 activated
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 dividing
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 effector memory
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 naive
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 terminally exhausted
+Lambrechts_Thienpont_2018_6149v2,T cell NK-like
+Lambrechts_Thienpont_2018_6149v2,T cell regulatory
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_AT2_mitotic
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_LUSC
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_LUSC_mitotic
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_LUSC_mitotic_even
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_mainly
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_mainly_AT2_low
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_mitotic
+Lambrechts_Thienpont_2018_6149v2,cDC1
+Lambrechts_Thienpont_2018_6149v2,cDC2
+Lambrechts_Thienpont_2018_6149v2,pDC
+Zilionis_Klein_2019,B cell
+Zilionis_Klein_2019,Club_AT2_even_1
+Zilionis_Klein_2019,Endothelial cell venous
+Zilionis_Klein_2019,Fibroblast peribronchial
+Zilionis_Klein_2019,Macrophage
+Zilionis_Klein_2019,Macrophage alveolar
+Zilionis_Klein_2019,Mast cell
+Zilionis_Klein_2019,Monocyte classical
+Zilionis_Klein_2019,NK cell
+Zilionis_Klein_2019,Neutrophils
+Zilionis_Klein_2019,Plasma cell
+Zilionis_Klein_2019,T cell CD4
+Zilionis_Klein_2019,T cell CD4 dividing
+Zilionis_Klein_2019,T cell CD8 activated
+Zilionis_Klein_2019,T cell CD8 effector memory
+Zilionis_Klein_2019,T cell CD8 terminally exhausted
+Zilionis_Klein_2019,T cell regulatory
+Zilionis_Klein_2019,Tumor LUAD_LUSC
+Zilionis_Klein_2019,Tumor LUAD_LUSC_mitotic_even
+Zilionis_Klein_2019,cDC2
+Zilionis_Klein_2019,myeloid dividing
+Zilionis_Klein_2019,pDC
+Zuani_2024_NSCLC,AT1
+Zuani_2024_NSCLC,B cell
+Zuani_2024_NSCLC,B cell dividing
+Zuani_2024_NSCLC,Ciliated
+Zuani_2024_NSCLC,Club_AT2_even_1
+Zuani_2024_NSCLC,Club_AT2_even_2
+Zuani_2024_NSCLC,Club_Ciliated
+Zuani_2024_NSCLC,DC mature
+Zuani_2024_NSCLC,Endothelial cell venous
+Zuani_2024_NSCLC,Fibroblast peribronchial
+Zuani_2024_NSCLC,Macrophage
+Zuani_2024_NSCLC,Macrophage alveolar
+Zuani_2024_NSCLC,Mast cell
+Zuani_2024_NSCLC,Monocyte classical
+Zuani_2024_NSCLC,Monocyte non-classical
+Zuani_2024_NSCLC,NK cell
+Zuani_2024_NSCLC,NK cell dividing
+Zuani_2024_NSCLC,Neutrophils
+Zuani_2024_NSCLC,Plasma cell
+Zuani_2024_NSCLC,Plasma cell dividing
+Zuani_2024_NSCLC,T cell CD4
+Zuani_2024_NSCLC,T cell CD4 dividing
+Zuani_2024_NSCLC,T cell CD8 activated
+Zuani_2024_NSCLC,T cell CD8 dividing
+Zuani_2024_NSCLC,T cell CD8 effector memory
+Zuani_2024_NSCLC,T cell CD8 naive
+Zuani_2024_NSCLC,T cell CD8 terminally exhausted
+Zuani_2024_NSCLC,T cell NK-like
+Zuani_2024_NSCLC,T cell regulatory
+Zuani_2024_NSCLC,Tumor LAUD_LUSC_AT2
+Zuani_2024_NSCLC,Tumor LUAD_AT2_mitotic
+Zuani_2024_NSCLC,Tumor LUAD_LUSC
+Zuani_2024_NSCLC,Tumor LUAD_LUSC_mitotic
+Zuani_2024_NSCLC,Tumor LUAD_LUSC_mitotic_even
+Zuani_2024_NSCLC,Tumor LUAD_mainly
+Zuani_2024_NSCLC,Tumor LUAD_mainly_AT2_low
+Zuani_2024_NSCLC,Tumor LUAD_mainly_AT2_mitotic
+Zuani_2024_NSCLC,Tumor LUAD_mitotic
+Zuani_2024_NSCLC,cDC1
+Zuani_2024_NSCLC,cDC2
+Zuani_2024_NSCLC,myeloid dividing
+Zuani_2024_NSCLC,pDC

@@ -1,0 +1,144 @@
+dataset,cell_type
+Hu_Zhang_2023_NSCLC,AT2
+Hu_Zhang_2023_NSCLC,B cell
+Hu_Zhang_2023_NSCLC,B cell dividing
+Hu_Zhang_2023_NSCLC,Ciliated
+Hu_Zhang_2023_NSCLC,DC mature
+Hu_Zhang_2023_NSCLC,Endothelial cell venous
+Hu_Zhang_2023_NSCLC,Fibroblast peribronchial
+Hu_Zhang_2023_NSCLC,Macrophage
+Hu_Zhang_2023_NSCLC,Macrophage alveolar
+Hu_Zhang_2023_NSCLC,Mast cell
+Hu_Zhang_2023_NSCLC,Monocyte classical
+Hu_Zhang_2023_NSCLC,Monocyte non-classical
+Hu_Zhang_2023_NSCLC,NK cell
+Hu_Zhang_2023_NSCLC,NK cell dividing
+Hu_Zhang_2023_NSCLC,Neutrophils
+Hu_Zhang_2023_NSCLC,Pericyte
+Hu_Zhang_2023_NSCLC,Plasma cell
+Hu_Zhang_2023_NSCLC,T cell CD4
+Hu_Zhang_2023_NSCLC,T cell CD4 dividing
+Hu_Zhang_2023_NSCLC,T cell CD8 activated
+Hu_Zhang_2023_NSCLC,T cell CD8 dividing
+Hu_Zhang_2023_NSCLC,T cell CD8 effector memory
+Hu_Zhang_2023_NSCLC,T cell CD8 naive
+Hu_Zhang_2023_NSCLC,T cell CD8 terminally exhausted
+Hu_Zhang_2023_NSCLC,T cell NK-like
+Hu_Zhang_2023_NSCLC,T cell regulatory
+Hu_Zhang_2023_NSCLC,Tumor AT2_LUAD
+Hu_Zhang_2023_NSCLC,Tumor LUAD
+Hu_Zhang_2023_NSCLC,Tumor LUAD_AT2_Club
+Hu_Zhang_2023_NSCLC,Tumor LUAD_mitotic_LUSC
+Hu_Zhang_2023_NSCLC,Tumor LUSC_LUAD_mitotic
+Hu_Zhang_2023_NSCLC,Tumor NSCLC_mixed
+Hu_Zhang_2023_NSCLC,cDC1
+Hu_Zhang_2023_NSCLC,cDC2
+Hu_Zhang_2023_NSCLC,myeloid dividing
+Hu_Zhang_2023_NSCLC,pDC
+Hu_Zhang_2023_NSCLC,stromal dividing
+Kim_Lee_2020,B cell
+Kim_Lee_2020,Ciliated
+Kim_Lee_2020,Endothelial cell venous
+Kim_Lee_2020,Fibroblast peribronchial
+Kim_Lee_2020,Macrophage
+Kim_Lee_2020,Macrophage alveolar
+Kim_Lee_2020,Mast cell
+Kim_Lee_2020,Monocyte classical
+Kim_Lee_2020,NK cell
+Kim_Lee_2020,Plasma cell
+Kim_Lee_2020,T cell CD4
+Kim_Lee_2020,T cell CD8 activated
+Kim_Lee_2020,T cell CD8 dividing
+Kim_Lee_2020,T cell CD8 effector memory
+Kim_Lee_2020,T cell CD8 naive
+Kim_Lee_2020,T cell CD8 terminally exhausted
+Kim_Lee_2020,T cell NK-like
+Kim_Lee_2020,T cell regulatory
+Kim_Lee_2020,Tumor AT2_LUAD
+Kim_Lee_2020,Tumor LUAD
+Kim_Lee_2020,Tumor LUAD_AT2_Club
+Kim_Lee_2020,Tumor LUSC_LUAD_mitotic
+Kim_Lee_2020,cDC2
+Kim_Lee_2020,myeloid dividing
+Lambrechts_Thienpont_2018_6149v2,AT2
+Lambrechts_Thienpont_2018_6149v2,B cell
+Lambrechts_Thienpont_2018_6149v2,Ciliated
+Lambrechts_Thienpont_2018_6149v2,Endothelial cell venous
+Lambrechts_Thienpont_2018_6149v2,Fibroblast alveolar
+Lambrechts_Thienpont_2018_6149v2,Fibroblast peribronchial
+Lambrechts_Thienpont_2018_6149v2,Macrophage
+Lambrechts_Thienpont_2018_6149v2,Macrophage alveolar
+Lambrechts_Thienpont_2018_6149v2,Mast cell
+Lambrechts_Thienpont_2018_6149v2,Monocyte classical
+Lambrechts_Thienpont_2018_6149v2,Monocyte non-classical
+Lambrechts_Thienpont_2018_6149v2,NK cell
+Lambrechts_Thienpont_2018_6149v2,Pericyte
+Lambrechts_Thienpont_2018_6149v2,Plasma cell
+Lambrechts_Thienpont_2018_6149v2,T cell CD4
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 dividing
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 effector memory
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 naive
+Lambrechts_Thienpont_2018_6149v2,T cell CD8 terminally exhausted
+Lambrechts_Thienpont_2018_6149v2,T cell NK-like
+Lambrechts_Thienpont_2018_6149v2,T cell regulatory
+Lambrechts_Thienpont_2018_6149v2,Tumor AT2_LUAD
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_AT2_Club
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_mitotic
+Lambrechts_Thienpont_2018_6149v2,Tumor LUAD_mitotic_LUSC
+Lambrechts_Thienpont_2018_6149v2,Tumor LUSC_LUAD_mitotic
+Lambrechts_Thienpont_2018_6149v2,Tumor NSCLC_mixed
+Lambrechts_Thienpont_2018_6149v2,cDC2
+Lambrechts_Thienpont_2018_6149v2,myeloid dividing
+Maynard_Bivona_2020,AT2
+Maynard_Bivona_2020,AT2_AT1
+Maynard_Bivona_2020,B cell
+Maynard_Bivona_2020,Endothelial cell capillary
+Maynard_Bivona_2020,Endothelial cell venous
+Maynard_Bivona_2020,Fibroblast adventitial
+Maynard_Bivona_2020,Fibroblast alveolar
+Maynard_Bivona_2020,Fibroblast peribronchial
+Maynard_Bivona_2020,Macrophage
+Maynard_Bivona_2020,Macrophage alveolar
+Maynard_Bivona_2020,Mast cell
+Maynard_Bivona_2020,Monocyte classical
+Maynard_Bivona_2020,NK cell
+Maynard_Bivona_2020,Neutrophils
+Maynard_Bivona_2020,Pericyte
+Maynard_Bivona_2020,Plasma cell
+Maynard_Bivona_2020,Smooth muscle cell
+Maynard_Bivona_2020,T cell CD4
+Maynard_Bivona_2020,T cell CD4 dividing
+Maynard_Bivona_2020,T cell CD8 dividing
+Maynard_Bivona_2020,T cell CD8 effector memory
+Maynard_Bivona_2020,T cell CD8 naive
+Maynard_Bivona_2020,T cell CD8 terminally exhausted
+Maynard_Bivona_2020,T cell regulatory
+Maynard_Bivona_2020,Tumor AT2_LUAD
+Maynard_Bivona_2020,Tumor LUAD
+Maynard_Bivona_2020,Tumor LUSC_LUAD_mitotic
+Maynard_Bivona_2020,cDC2
+Maynard_Bivona_2020,myeloid dividing
+Maynard_Bivona_2020,pDC
+Zilionis_Klein_2019,AT2
+Zilionis_Klein_2019,B cell
+Zilionis_Klein_2019,Endothelial cell venous
+Zilionis_Klein_2019,Fibroblast peribronchial
+Zilionis_Klein_2019,Macrophage
+Zilionis_Klein_2019,Macrophage alveolar
+Zilionis_Klein_2019,Mast cell
+Zilionis_Klein_2019,Monocyte classical
+Zilionis_Klein_2019,NK cell
+Zilionis_Klein_2019,Neutrophils
+Zilionis_Klein_2019,Plasma cell
+Zilionis_Klein_2019,T cell CD4
+Zilionis_Klein_2019,T cell CD8 activated
+Zilionis_Klein_2019,T cell CD8 effector memory
+Zilionis_Klein_2019,T cell regulatory
+Zilionis_Klein_2019,Tumor AT2_LUAD
+Zilionis_Klein_2019,Tumor LUAD
+Zilionis_Klein_2019,Tumor LUAD_AT2_Club
+Zilionis_Klein_2019,Tumor LUAD_mitotic_LUSC
+Zilionis_Klein_2019,Tumor LUSC_mitotic_LUAD
+Zilionis_Klein_2019,cDC2
+Zilionis_Klein_2019,pDC
